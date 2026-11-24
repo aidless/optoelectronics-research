@@ -1,0 +1,152 @@
+{
+  "direction": "医疗光子 / 生物医学光子学",
+  "latest_breakthroughs": [
+    {
+      "date": "2026-11-19",
+      "title": "Conavi Medical OCTIV 混合冠脉成像系统完成美国首台商业化装机，FDA 510(k) 已获批",
+      "detail": "2026-11-19 StockTitan（Conavi Medical 更新稿）披露：OCTIV 混合冠脉成像系统（整合 OCT + 血管内超声 IVUS）在美国完成首台商业化装机，已获 FDA 510(k) 批准，上市前两周完成约 25 例临床使用；公司日本 Lifeline 信贷额度展期 5 年（2027-04→2032-04），并获安大略省 Life Sciences Scale-Up Fund 175 万美元拨款（其中 125 万美元在 FDA 批准后兑现，协议上限 250 万美元）；同行评议病例报告显示混合成像改变了冠脉介入治疗决策。这是 2026 下半年冠脉腔内光子成像从监管批准走向商业落地的重要一步。（二手公司新闻稿聚合，细节以官方后续披露为准）",
+      "url": "https://www.stocktitan.net/news/CNVIF/conavi-medical-highlights-commercial-launch-and-significant-growth-vb5k4qqycrdl.html"
+    },
+    {
+      "date": "2026-11-18",
+      "title": "Neola Medical Q3 报告：近红外光无创肺监测获 FDA 突破性设备认定后进入 TAP Pilot",
+      "detail": "2026-11-18 Neola Medical（隆德大学衍生公司）Q3 报告：其 Neola® 系统 2026 年 9 月获 FDA 突破性设备认定（Breakthrough Device Designation），采用近红外光（near-infrared light）无创、连续监测早产儿肺部，可检测气胸与肺塌陷；季度结束后公司进入 FDA TAP（Technology Access Program）Pilot。财务：Q3 运营亏损 SEK -3,332k，期末现金流 SEK 17,051k，每股 -0.03 SEK。重要提示：突破性设备认定不等同于上市批准。（公司官方报告；旁证 med-tech.world 2026-09-08、Nordic Life Science 2026-09-06 均明确 near-infrared light 与“认定≠批准”）",
+      "url": "https://neolamedical.com/mfn_news/neola-medical-q3-report-2026-fda-breakthrough-device-designation-strengthens-u-s-regulatory-pathway"
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Global Strategic Business Report 2026：生物光子市场 2032 年将达 1306 亿美元",
+      "detail": "2026-11-03 ResearchAndMarkets / GlobeNewswire（都柏林）发布《Biophotonics: Global Strategic Business Report 2026》：全球生物光子市场预计到 2032 年达 US$130.6B；Roche、GE Healthcare、Horiba、IPG Photonics 为主要参与者；驱动因素为微创/无创医疗程序需求上升与监管批准增加。这是 2026 下半年出现的新市场口径，与此前 MRFR、GVR、Mordor 口径不同，不可直接数字相减比较。",
+      "url": "https://finance.yahoo.com/healthcare/articles/biophotonics-global-strategic-business-report-144500184.html"
+    },
+    {
+      "date": "2026-10-26",
+      "title": "剑桥大学 10 美元卷积光谱仪（Nature Photonics）：可穿戴级无创血糖/血乳酸监测新路径",
+      "detail": "剑桥大学工程系与衍生公司 GlitterinTech 研发的光学卷积光谱仪（论文题 Optical convolutional spectrometer，作者 Chunhui Yao、Prof Qixiang Cheng、Prof Richard Penty，发表于 Nature Photonics）：覆盖 1200–1700nm 近红外，<1 秒完成测量；对塑料、药物、咖啡、面粉、茶分类成功率 100%，浓度测量精度约 0.01%；在模拟生理环境下测得皮肤水分、血醇、血乳酸、血糖，并对一名受试者进行长时间无创血糖追踪；工作温度 -20°C 至 80°C，可大规模制造、面向可穿戴医疗与智能工业。（论文与 Phys.org 初次报道在 2026 年 6 月，ScienceDaily 于 2026-10-26 再度报道，剑桥官方新闻页 2026-10-23 更新；此处以最新报道日归档，论文本体属 2026 年成果）",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Happy Ring 智能戒指获 FDA 510(k)：首款无需袖带、无需外部校准的持续被动血压可穿戴",
+      "detail": "动脉网 2026-10-14（信源：器械之家）报道：Happy Ring 智能戒指获 FDA 510(k) 批准，宣称全球首款无需充气袖带、无需外部校准即可持续、被动提供临床级血压测量的可穿戴设备；此前已获准睡眠呼吸暂停筛查；公司于 2026 年 8 月完成 7500 万美元融资；同期 FDA 发布无袖带血压设备临床性能测试指南草案。该消息来自二手行业聚合媒体，具体型号、510(k) 编号与临床验证数据 ⚠ 公开资料未覆盖（需以 FDA 510(k) 数据库原始记录核验）。",
+      "url": "https://www.vbdata.cn/intelDetail/1118328"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "Biophotonics Market Report 2026：AI 成像与精准诊断成为主线",
+      "detail": "2026-10-14 ResearchAndMarkets / GlobeNewswire 发布《Biophotonics Market Report 2026 - Size, Share, Trends and Forecast to 2030》：以“利用 AI 成像与精准诊断”为主线，点名 Thermo Fisher、Philips、ZEISS、Olympus 为主要厂商。与 11 月 Global Strategic Business Report 一起，反映 2026 下半年市场研究机构密集以 AI + 精准诊断重构生物光子赛道叙事。",
+      "url": "https://www.globenewswire.com/news-release/2026/10/14/3380369/28124/en/biophotonics-market-report-2026-size-share-trends-and-forecast-to-2030-capitalize-on-ai-imaging-and-precision-diagnostics-with-thermo-fisher-philips-zeiss-and-olympus.html"
+    },
+    {
+      "date": "2026-09-24",
+      "title": "ZEISS 在 EURETINA 2026 扩展 Retina Workflow：ALTA DUO 300 与头戴 3D 手术显示 CR3",
+      "detail": "2026-09-24 蔡司医疗（Jena）在维也纳 EURETINA 2026（欧洲视网膜专家学会）大会宣布 ZEISS Retina Workflow 系列扩展：推出 ZEISS ALTA DUO 300（OCT 与多模态成像系统）及与 HMDmd 合作的 CR3 头戴式 3D 数字显示手术可视化系统（FDA 注册、CE 认证，Kopin 供货），覆盖视网膜影像、手术可视化与数字化诊疗流程。这是 2026 下半年 OCT 光子成像平台化的代表性产品动作。",
+      "url": "https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2026/euretina.html"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "Nature Communications：硅光光声血压传感器（SPADE）实现全可穿戴血压监测（基线成果完成号题核验）",
+      "detail": "2026-09-17 Nature Communications 卷 17 文章 10931，论文题 Silicon-photonics optoacoustic sensor for fully wearable blood pressure monitoring（硅光光声传感器用于全可穿戴血压监测）；NEP 2 mPa/√Hz、带宽 125 MHz、100 Hz 采样。本次检索已 web_fetch 验证号-题一致，确认旧报告所述 SPADE 成果真实存在，构成硅光健康监测 2026 下半年的核心论文证据。（该条属旧基线本身，列为下半年确认项）",
+      "url": "https://www.nature.com/articles/s41467-026-77580-3"
+    },
+    {
+      "date": "2026-09-14",
+      "title": "FDA 批准 Ameluz 红光光动力疗法治疗浅表基底细胞癌：美国首个获批治疗皮肤癌的 PDT",
+      "detail": "2026-09-14 Biofrontera 宣布 FDA 批准 Ameluz®（10% 盐酸氨基乙酰丙酸凝胶）联合 RhodoLED 红光光动力疗法（PDT）治疗浅表基底细胞癌（sBCC），经 sNDA 路径扩适应症；成为美国首个且唯一获批用于治疗皮肤癌的光动力疗法。CURE、ASCO Post、Dermatology Times、AIM at Skin Cancer Foundation 等多源一致确认批准日期 2026-09-14。这是红光光子治疗在肿瘤适应症上的里程碑式扩容。",
+      "url": "https://www.biospace.com/press-releases/biofrontera-announces-fda-approval-of-ameluz-red-light-pdt-for-the-treatment-of-superficial-basal-cell-carcinoma"
+    },
+    {
+      "date": "2026-09",
+      "title": "斯坦福：超快电子 + 激光在电离半导体中探测到意外强光学信号，指向医学成像与传感改进",
+      "detail": "2026-09 斯坦福大学新闻：研究者用高能电子与激光在电离半导体中探测到出人意料的强光学信号，相关发现有望改进医学成像与传感技术。为基础光子学层面对生物医学成像/传感的底层支撑进展。（校方新闻，论文层面细节 ⚠ 公开资料未覆盖）",
+      "url": "https://news.stanford.edu/stories/2026/09/ultrafast-electrons-optical-response-sensing-imaging"
+    }
+  ],
+  "baseline_updates": [
+    {
+      "old_claim": "MRFR：生物光子市场 2025 年 643 亿美元→2035 年 1608 亿美元，CAGR 9.6%",
+      "new_status": "2026 下半年多家机构给出不同口径新预测：GVR（grandviewresearch）2025 年 829 亿→2026 年 913 亿美元→2033 年 1802 亿美元、CAGR 10.2%（2026–2033），北美 2025 年占 37.5%；Mordor 2026 年 757.4 亿→2031 年 1231.7 亿美元、CAGR 10.21%，亚太增速最快；Global Strategic Business Report 2026（11-03）给出 2032 年 1306 亿美元。GMI 2026-11 新报告（ID GMI9733）预测 2026–2035。注意各机构市场规模定义与统计口径不同，数字不可直接横向相减，MRFR 基线仍成立但仅为多家口径之一。",
+      "url": "https://www.grandviewresearch.com/industry-analysis/biophotonics-market",
+      "date": "2026-11-03"
+    },
+    {
+      "old_claim": "OCT 市场 2025 年 25 亿→2033 年 85 亿美元 CAGR 16.5%；蔡司医疗 FY2024/25 营收 22.28 亿欧元",
+      "new_status": "2026 下半年产品端持续加码：ZEISS 于 2026-09-24 EURETINA 推出 ALTA DUO 300（OCT + 多模态成像）与头戴 3D 手术显示 CR3，覆盖从诊断到手术的可视化闭环；Conavi OCTIV 冠脉混合 OCT/IVUS 系统 FDA 510(k) 已批并于 2026-11 完成美国首台商业化装机。旧市场规模数字未获 2026 下半年新口径替代，⚠ 公开资料未覆盖更新版 OCT 专项市场规模。",
+      "url": "https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2026/euretina.html",
+      "date": "2026-09-24"
+    },
+    {
+      "old_claim": "蔡司中国产品线（含术中 OCT）— 基线未列 NMPA 获批；Zeiss FY2024/25 数据为 2025-12 口径",
+      "new_status": "ZEISS ARTEVO 750/850 眼科手术显微镜（ARTEVO 750 含术中 OCT）获中国 NMPA 批准（2026-02-02 官方新闻确认）。该事件发生于上半年、不属 Q3–Q4 新突破，但构成对旧基线中蔡司中国产品线事实的补充更新。",
+      "url": "https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2026/nmpa-approval-for-artevo-750-and-artevo-850.html",
+      "date": "2026-02-02"
+    },
+    {
+      "old_claim": "Nature Communications 2026-09 硅光光声血压传感器 SPADE（NEP 2mPa/√Hz）；上海交大新生儿连续血压 MAE 9.67/6.17mmHg",
+      "new_status": "号题已核验：Nature Communications 2026-09-17 卷 17 文章 10931，题 Silicon-photonics optoacoustic sensor for fully wearable blood pressure monitoring，NEP 2 mPa/√Hz、带宽 125 MHz、100 Hz 采样；上海交大 NEO-BP 三波长 PPG 腕带 42 名新生儿/110.66 小时，SBP/DBP MAE 9.67/6.17 mmHg（SQI≥0.85 时 8.22/4.98）。下半年未见更大规模多中心临床更新，⚠ 人体大规模临床样本数公开资料未覆盖。",
+      "url": "https://www.nature.com/articles/s41467-026-77580-3",
+      "date": "2026-09-17"
+    },
+    {
+      "old_claim": "PhotonDelta/InnoPIC 无创血糖（SiN PIC + 拉曼 + SPAD + AI）",
+      "new_status": "InnoPIC/PhotonDelta 的 SiN 拉曼+SPAD+AI 无创血糖方案仍为 2025-08-26 公布的竞赛/孵化阶段概念，本次检索未见其 2026 下半年临床或产品里程碑；同期出现替代性新路径：剑桥 Nature Photonics 卷积光谱仪（10-26 重报，模拟生理环境下测血糖并做单受试者长时追踪）。灵析生物 LingSense 于 2026-05-18 硅谷发布 MARD<8.0% CGM 与张元亭团队无袖带动态血压（属上半年，仅作背景）。",
+      "url": "https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical",
+      "date": "2026-10-26"
+    }
+  ],
+  "status_latest": "截至 2026-11-23，医疗光子/生物医学光子学在 2026 下半年呈现三条主线并进。①监管与临床落地密集兑现：Neola 近红外早产儿肺监测 9 月获 FDA 突破性设备认定并进入 TAP Pilot（11-18 Q3 报告）；Biofrontera Ameluz 红光 PDT 9 月 14 日获 FDA 批准用于浅表基底细胞癌，成为美国首个治疗皮肤癌的 PDT；Happy Ring 智能戒指 10 月获 FDA 510(k)（二手报道，编号待核）；Conavi OCTIV 混合冠脉成像系统 11 月完成美国首台商业装机（FDA 510(k) 已批，上市前两周约 25 例）。②光子成像平台向 OCT + 多模态 + 头戴可视化整合：蔡司在 EURETINA 2026 推出 ALTA DUO 300 与 CR3 头戴 3D 显示。③可穿戴/硅光健康监测从论文走向器件化：剑桥 10 美元卷积光谱仪（Nature Photonics，1200–1700nm、<1 秒、0.01% 浓度精度、单受试者无创血糖追踪）、硅光光声血压 SPADE（Nature Communications 2026-09-17，NEP 2 mPa/√Hz、125 MHz、100 Hz）与上海交大新生儿连续血压（42 例/110.66 小时，MAE 9.67/6.17 mmHg）构成硬技术底座。市场侧多家机构 2026 下半年密集更新：GVR 2026 年 913 亿美元/CAGR 10.2%、Mordor 2026 年 757.4 亿美元/CAGR 10.21%、Global Strategic 2032 年 1306 亿美元，AI 成像与精准诊断成为共同叙事（口径不一，不可直接比较）。",
+  "outlook_refresh": "展望 2026 年底至未来 2–3 年：①无袖带血压与无创血糖是可穿戴光子最大的价值池，但也是监管最谨慎的赛道——FDA 已发布无袖带血压临床性能测试指南草案，预计后续产品将按统一性能标准而非单点宣发竞争；②硅光/光子集成（SiN PIC、拉曼+SPAD、光声）与 AI 光谱解耦结合，是血糖/乳酸等复杂生化量从“概念验证”迈向“临床级”的关键路径，SPADE、卷积光谱仪、InnoPIC 分别代表光声、宽带光谱、拉曼三条技术路线；③OCT 从单一诊断设备向“成像 + 手术可视化 + 数字化流程”平台扩张（蔡司 Retina Workflow、Conavi 混合腔内成像），眼科与冠脉是先行场景；④新生儿/ICU 等脆弱人群的连续无创监测（Neola、上海交大 NEO-BP）因临床刚需明确，预计成为突破性认定与伦理友好型临床试验的优先方向；⑤市场层面建议以多口径区间（2032 年约 1306 亿美元至 2033 年约 1802 亿美元）而非单一 CAGR 作为规划基准。",
+  "risks": "①证据等级风险：Happy Ring FDA 510(k) 来自二手聚合媒体（动脉网/器械之家），具体 510(k) 编号、型号与临床验证数据 ⚠ 公开资料未覆盖，落地前须查 FDA 510(k) 原始数据库；②监管语义风险：突破性设备认定 ≠ 上市批准（Neola 明确如此），但二手报道常混用，易被市场误读；③口径不可比风险：MRFR/GVR/Mordor/ResearchAndMarkets 对各家“生物光子市场”定义不同，2025 年 643 亿/829 亿与 2026 年 757 亿/913 亿不能直接相减或当增长率；④临床证据缺口：SPADE、剑桥光谱仪、InnoPIC 的人体大规模多中心临床样本数 ⚠ 公开资料未覆盖，血糖类可穿戴 MARD、长期植入/佩戴安全性仍需验证；⑤硅光健康监测芯片独立市场规模 ⚠ 公开资料未覆盖，产业规模多被并入广义生物光子市场，测算易夸大；⑥商业化风险：Neola Q3 运营亏损 SEK -3,332k，现金流 SEK 17,051k，早期光子医疗企业仍依赖融资与认定路径，存在资金与转化周期风险；⑦来源时效风险：剑桥光谱仪论文与初次报道在 2026 上半年（6 月），10 月为再报道，归档时已标注但解读时须避免误当 Q3 首发。",
+  "key_claims": [
+    {
+      "claim": "Neola 近红外无创早产儿肺监测 2026 年 9 月获 FDA 突破性设备认定，11 月进入 FDA TAP Pilot；认定不等于批准。",
+      "url": "https://neolamedical.com/mfn_news/neola-medical-q3-report-2026-fda-breakthrough-device-designation-strengthens-u-s-regulatory-pathway",
+      "date": "2026-11-18"
+    },
+    {
+      "claim": "Conavi OCTIV 混合冠脉成像系统 FDA 510(k) 获批，2026-11 完成美国首台商业化装机，上市前两周约 25 例临床。",
+      "url": "https://www.stocktitan.net/news/CNVIF/conavi-medical-highlights-commercial-launch-and-significant-growth-vb5k4qqycrdl.html",
+      "date": "2026-11-19"
+    },
+    {
+      "claim": "2026-11-03 ResearchAndMarkets 报告：生物光子市场 2032 年将达 1306 亿美元，Roche/GE Healthcare/Horiba/IPG Photonics 领先。",
+      "url": "https://finance.yahoo.com/healthcare/articles/biophotonics-global-strategic-business-report-144500184.html",
+      "date": "2026-11-03"
+    },
+    {
+      "claim": "剑桥大学 10 美元卷积光谱仪（Nature Photonics）覆盖 1200–1700nm、<1 秒测量、浓度精度约 0.01%、物质分类成功率 100%，在模拟生理环境中测血糖/乳酸并做单受试者长时无创血糖追踪。",
+      "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm",
+      "date": "2026-10-26"
+    },
+    {
+      "claim": "Happy Ring 智能戒指 2026-10 获 FDA 510(k)，号称首款无需袖带与外部校准的持续被动临床级血压可穿戴；来源为二手行业媒体，编号待核。",
+      "url": "https://www.vbdata.cn/intelDetail/1118328",
+      "date": "2026-10-14"
+    },
+    {
+      "claim": "ZEISS 在 EURETINA 2026 推出 ALTA DUO 300（OCT + 多模态成像）与 CR3 头戴 3D 手术显示，扩展 Retina Workflow。",
+      "url": "https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2026/euretina.html",
+      "date": "2026-09-24"
+    },
+    {
+      "claim": "FDA 于 2026-09-14 批准 Ameluz 红光 PDT 治疗浅表基底细胞癌，成为美国首个获批治疗皮肤癌的光动力疗法。",
+      "url": "https://www.biospace.com/press-releases/biofrontera-announces-fda-approval-of-ameluz-red-light-pdt-for-the-treatment-of-superficial-basal-cell-carcinoma",
+      "date": "2026-09-14"
+    },
+    {
+      "claim": "硅光光声血压传感器 SPADE 论文经核验为 Nature Communications 2026-09-17 卷 17 文章 10931，NEP 2 mPa/√Hz、带宽 125 MHz、100 Hz 采样，全可穿戴血压监测。",
+      "url": "https://www.nature.com/articles/s41467-026-77580-3",
+      "date": "2026-09-17"
+    },
+    {
+      "claim": "GVR 口径：生物光子市场 2025 年 829 亿美元、2026 年 913 亿美元、2033 年 1802 亿美元，CAGR 10.2%（2026–2033），北美 2025 年占 37.5%；与 MRFR/Mordor 口径不可直接比较。",
+      "url": "https://www.grandviewresearch.com/industry-analysis/biophotonics-market",
+      "date": "2026-09"
+    },
+    {
+      "claim": "2026-10-14 ResearchAndMarkets 生物光子市场报告将 AI 成像与精准诊断列为主线，点名 Thermo Fisher、Philips、ZEISS、Olympus 为主要厂商。",
+      "url": "https://www.globenewswire.com/news-release/2026/10/14/3380369/28124/en/biophotonics-market-report-2026-size-share-trends-and-forecast-to-2030-capitalize-on-ai-imaging-and-precision-diagnostics-with-thermo-fisher-philips-zeiss-and-olympus.html",
+      "date": "2026-10-14"
+    }
+  ]
+}

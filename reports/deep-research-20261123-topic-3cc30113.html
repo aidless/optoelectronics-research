@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深度检索报告 · 光电信息工程</title>
+<style>
+:root{
+  --bg:#faf9f7;
+  --card:#ffffff;
+  --card-soft:#fbfaf8;
+  --ink:#2b2f36;
+  --ink-2:#6b7280;
+  --line:#eceae6;
+  --accent:#2f4858;
+  --accent-deep:#1f3a5f;
+  --point:#d9684a;
+  --muted:#9aa0a6;
+  --serif:"Noto Serif SC","Source Han Serif SC",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"Inter","JetBrains Mono",monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+  padding:40px 32px;
+  line-height:1.7;
+}
+.report {
+  max-width:820px;
+  margin:0 auto;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 2px 16px rgba(43,47,54,.05);
+  overflow:hidden;
+}
+.header {
+  background:var(--card);
+  border-top:4px solid var(--accent);
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+  padding:32px;
+}
+.header .kicker { font-family:var(--sans); font-size:13px; color:var(--muted); letter-spacing:1px; }
+.header h1 { font-family:var(--serif); font-size:22px; color:var(--accent); margin:8px 0 16px; font-weight:700; }
+.meta { display:flex; flex-wrap:wrap; gap:8px 20px; font-size:13px; color:var(--ink-2); }
+.meta b { font-weight:600; color:var(--ink); }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.chip { background:#f1efea; padding:4px 12px; border-radius:999px; font-size:12px; color:var(--ink-2); }
+.body { padding:32px 32px 24px; }
+h2 {
+  font-family:var(--serif);
+  font-size:18px; color:var(--accent); margin:32px 0 16px;
+  display:flex; align-items:center; gap:8px;
+}
+h2::before { content:""; width:4px; height:18px; background:var(--accent); border-radius:2px; }
+.grid { display:grid; grid-template-columns:1fr; gap:16px; }
+.card {
+  display:flex; gap:14px; align-items:flex-start;
+  background:var(--card-soft); border:1px solid var(--line); border-radius:10px;
+  padding:16px 20px; border-left:4px solid var(--muted);
+}
+.card .num { font-family:var(--mono); font-weight:700; color:var(--muted); font-size:14px; min-width:22px; }
+.card .txt { flex:1; font-size:14px; }
+.card.s-in { border-left-color:var(--accent); }
+.card.s-out { border-left-color:var(--point); }
+.card.s-both { border-left-color:var(--accent-deep); }
+.card.s-gap { border-left-color:var(--muted); }
+.badge {
+  display:inline-block; font-family:var(--sans); font-size:11px; font-weight:600;
+  padding:2px 8px; border-radius:999px; margin-right:6px; vertical-align:1px;
+}
+.b-in { background:#e7ecf0; color:#2f4858; }
+.b-out { background:#fbe9e3; color:#c0533a; }
+.b-both { background:#e3e9f0; color:#1f3a5f; }
+.b-gap { background:#f1efea; color:#6b7280; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+th { background:#f3f1ec; text-align:left; padding:10px; font-weight:600; color:var(--ink-2); }
+td { padding:10px; border-bottom:1px solid var(--line); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+.src-block { background:var(--card-soft); border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin-top:16px; font-size:13px; }
+.src-block h4 { font-family:var(--sans); font-size:13px; margin-bottom:8px; color:var(--ink); }
+.src-block ul { list-style:none; }
+.src-block li { padding:4px 0; }
+.src-block .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:8px; }
+.dot-in { background:var(--accent); } .dot-out { background:var(--point); } .dot-his { background:var(--accent); }
+code { font-family:var(--mono); background:#f3f1ec; padding:1px 5px; border-radius:4px; font-size:12px; color:var(--ink); }
+.footer { background:var(--card-soft); border-top:1px solid var(--line); padding:20px 32px 24px; font-size:12px; color:var(--muted); }
+.disclaimer { font-style:italic; color:var(--ink-2); margin-top:6px; }
+@media print { body{background:#fff;padding:0} .report{box-shadow:none;border-radius:0} }
+</style>
+</head>
+<body>
+<div class="report">
+  <div class="header">
+    <div class="kicker">深度检索报告 · DEEP-RESEARCH</div>
+    <h1>光电信息工程</h1>
+    <div class="meta">
+      <span><b>范围</b>：公开网络资料：高校专业介绍与培养方案、学科定位、研究方向、就业与前沿趋势</span>
+      <span><b>来源</b>：内部 0 · 外部 15（公开信息）</span>
+      <span><b>日期</b>：2026-11-23</span>
+    </div>
+    <div class="chips">
+      <span class="chip">检索路径：联网检索 → 实体消歧 → 多源交叉 → 关键词</span>
+      <span class="chip">检索模式：语义 + 关键词</span>
+      <span class="chip">查询改写：Multi-Query（3 路）</span>
+    </div>
+  </div>
+
+  <div class="body">
+    <h2>核心结论</h2>
+    <div class="grid">
+      <div class="card s-out">
+        <div class="num">1</div>
+        <div class="txt"><span class="badge b-out">外</span><b>名称与定位</b>：用户所说的"光电信息工程"，本科现名为<b>光电信息科学与工程</b>（代码 080705，2012 年设立，授理学或工学学士）；"光电信息工程"是 2010—2013 年旧名，研究生层面对应"光学工程"一级学科。</div>
+      </div>
+      <div class="card s-out">
+        <div class="num">2</div>
+        <div class="txt"><span class="badge b-out">外</span><b>学科内涵</b>：光学 + 光电子 + 微电子 + 通信 + 计算机的多学科交叉专业，围绕光信息的辐射、传输、探测与光电转换、存储、处理、显示；数理基础厚、实验比重大。</div>
+      </div>
+      <div class="card s-out">
+        <div class="num">3</div>
+        <div class="txt"><span class="badge b-out">外</span><b>出口与前沿</b>：本科以深造为主（名校境内外深造率近 80%）；就业覆盖光通信、激光、成像/显示、精密测量、生物医学光学、硅光。2025 年增量集中在光电融合、硅光子与光子计算。</div>
+      </div>
+      <div class="card s-gap">
+        <div class="num">4</div>
+        <div class="txt"><span class="badge b-gap">⚠ 未覆盖</span><b>个性化路径</b>：使用者未说明目标是高考选专业、考研择向还是就业转型，本报告只做学科客观研究，不给个人化选择建议。</div>
+      </div>
+    </div>
+
+    <h2>关键要点</h2>
+    <div class="src-block">
+      <ul>
+        <li><b>选专业视角</b>："厚数理 + 强实验"的工科，需扎实数学、物理基础与动手能力；浙大、北理工、深大等校光学工程学科实力强。</li>
+        <li><b>深造视角</b>：本科出口以读研为主，对接光学工程、物理电子学、电子信息等一级学科；名校深造率高（浙大近 80%、北工商约 64%）。</li>
+        <li><b>前沿视角</b>：增量在"光电 + AI/智算"交叉带——光电共封装、硅光 AI 加速器、光子计算芯片、激光雷达、AR/VR 光学。</li>
+      </ul>
+    </div>
+
+    <h2>证据清单</h2>
+    <table>
+      <tr><th>#</th><th>结论摘要</th><th>支撑</th><th>口径</th><th>来源</th></tr>
+      <tr><td>1</td><td>现名光电信息科学与工程（080705），2012 设立，"光电信息工程"为 2010—2013 旧名</td><td><span class="badge b-out">外</span></td><td>教育部本科专业目录</td><td><a href="https://baike.baidu.com/item/%E5%85%89%E7%94%B5%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B7%A5%E7%A8%8B/5845497">百度百科</a> + <a href="https://isc.bit.edu.cn/admissionsaid/undergraduatate/optoelectronics1/optoelectronics3/index.htm">北理工</a></td></tr>
+      <tr><td>2</td><td>多学科交叉，覆盖光信息辐射/传输/探测/转换/存储/处理/显示</td><td><span class="badge b-out">外</span></td><td>学科内涵</td><td><a href="https://sei.sdju.edu.cn/2022/0604/c1494a97963/page.htm">上海电机学院</a> + <a href="https://jwb.szu.edu.cn/info/1292/1824.htm">深圳大学</a></td></tr>
+      <tr><td>3</td><td>核心课程高度同质：物理光学/信息光学/激光原理/电磁场/信号与系统/模电数电/光纤通信/光电检测</td><td><span class="badge b-out">外</span></td><td>本科课程</td><td><a href="https://admissions.bjut.edu.cn/xkzy/wlygdgcxy/gdxxkxygc.htm">北工大</a> + <a href="https://cep.sztu.edu.cn/Optoelectronic-2022.pdf">深圳技术大学</a> + <a href="https://www.hbmzu.edu.cn/soise/info/1064/4677.htm">湖北民族学院</a></td></tr>
+      <tr><td>4</td><td>研究方向含激光/光通信/光子集成/成像/显示/传感/光伏/生物医学光子学</td><td><span class="badge b-out">外</span></td><td>研究方向</td><td><a href="https://jwb.szu.edu.cn/info/1292/1824.htm">深圳大学</a> + <a href="https://zdzsc.zju.edu.cn/2023/0623/c87380a2775219/page.htm">浙江大学</a> + <a href="https://isc.bit.edu.cn/admissionsaid/undergraduatate/optoelectronics1/optoelectronics3/index.htm">北理工</a></td></tr>
+      <tr><td>5</td><td>以深造为主（浙大近 80%、北工商约 64%）；就业含光通信/激光/成像/显示/硅光</td><td><span class="badge b-out">外</span></td><td>就业统计（校方自述）</td><td><a href="https://zdzsc.zju.edu.cn/2023/0623/c87380a2775219/page.htm">浙江大学</a> + <a href="https://zsb.btbu.edu.cn/bkzn/zyjj/jsjyrgznxy1/d37a43d4ddce49f685295a1c2e4cceb2.htm">北京工商大学</a> + <a href="https://admissions.bjut.edu.cn/xkzy/wlygdgcxy/gdxxkxygc.htm">北工大</a></td></tr>
+      <tr><td>6</td><td>前沿为光电融合/硅光/光子计算，难点在光电共封装、异质集成、协同设计工具链</td><td><span class="badge b-out">外</span></td><td>2025 年产业技术</td><td><a href="https://www.ccf.org.cn/Media_list/cncc/2025-10-06/849317.shtml">CCF/CNCC 2025-10</a> + <a href="http://academics.casad.cas.cn/zlyj/qyjcyp/202507/t20250726_5077855.html">中科院学部 2025-07</a> + <a href="https://www.noeic.com/news_center/1128.html">NOEIC 2025-07</a></td></tr>
+      <tr><td>7</td><td>缺少使用者具体目标，无法给个性化路径</td><td><span class="badge b-gap">⚠</span></td><td>—</td><td>当前资料未覆盖</td></tr>
+    </table>
+
+    <h2>口径与来源（进阶）</h2>
+    <div class="src-block">
+      <ul>
+        <li><b>实体解析</b>："光电信息工程" → <code>本科专业 080705</code>（aliases: 光电信息科学与工程、光电子、Optoelectronic Information Science and Engineering）</li>
+        <li><b>术语口径</b>：本科专业名自 2013 年起统一为"光电信息科学与工程"（080705）；"光电信息工程"为 2010—2013 旧名，也用于产业语境；"光学工程"（0803）为研究生一级学科，不同层级。</li>
+        <li><b>数据状态</b>：公开信息检索于 2026-11-23；前沿趋势材料截至 2025-10；就业率为校方自述口径，非第三方统计。</li>
+      </ul>
+    </div>
+
+    <h2>来源分区</h2>
+    <div class="src-block">
+      <h4>[外] 公开信息（15）</h4>
+      <ul>
+        <li><span class="dot dot-out"></span><a href="https://baike.baidu.com/item/%E5%85%89%E7%94%B5%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B7%A5%E7%A8%8B/5845497">百度百科·光电信息科学与工程</a></li>
+        <li><span class="dot dot-out"></span><a href="https://sose.uestc.edu.cn/rcpy/bkspy1/zysz.htm">电子科技大学·光电信息科学与工程专业设置</a></li>
+        <li><span class="dot dot-out"></span><a href="https://admissions.bjut.edu.cn/xkzy/wlygdgcxy/gdxxkxygc.htm">北京工业大学·光电信息科学与工程</a></li>
+        <li><span class="dot dot-out"></span><a href="https://sei.sdju.edu.cn/2022/0604/c1494a97963/page.htm">上海电机学院·光电信息科学与工程</a></li>
+        <li><span class="dot dot-out"></span><a href="https://isc.bit.edu.cn/admissionsaid/undergraduatate/optoelectronics1/optoelectronics3/index.htm">北京理工大学·光电信息科学与工程</a></li>
+        <li><span class="dot dot-out"></span><a href="https://jwb.szu.edu.cn/info/1292/1824.htm">深圳大学·080705 光电信息科学与工程</a></li>
+        <li><span class="dot dot-out"></span><a href="https://zsb.btbu.edu.cn/bkzn/zyjj/jsjyrgznxy1/d37a43d4ddce49f685295a1c2e4cceb2.htm">北京工商大学·光电信息科学与工程</a></li>
+        <li><span class="dot dot-out"></span><a href="https://cep.sztu.edu.cn/Optoelectronic-2022.pdf">深圳技术大学·2022 级本科人才培养方案（PDF）</a></li>
+        <li><span class="dot dot-out"></span><a href="https://www.hbmzu.edu.cn/soise/info/1064/4677.htm">湖北民族学院·光电信息科学与工程专业</a></li>
+        <li><span class="dot dot-out"></span><a href="https://eng.nju.edu.cn/1e/f9/c4941a139001/pagem.htm">南京大学·光电信息科学与工程专业培养方案</a></li>
+        <li><span class="dot dot-out"></span><a href="https://zdzsc.zju.edu.cn/2023/0623/c87380a2775219/page.htm">浙江大学·光电信息科学与工程专业介绍</a></li>
+        <li><span class="dot dot-out"></span><a href="https://ssc.just.edu.cn/2021/0612/c6431a290521/page.htm">江苏科技大学·光电信息科学与工程专业介绍</a></li>
+        <li><span class="dot dot-out"></span><a href="https://www.ccf.org.cn/Media_list/cncc/2025-10-06/849317.shtml">CCF/CNCC·光电融合加速智算（2025-10）</a></li>
+        <li><span class="dot dot-out"></span><a href="http://academics.casad.cas.cn/zlyj/qyjcyp/202507/t20250726_5077855.html">中国科学院学部·光电融合集成技术发展战略研究报告（2025-07）</a></li>
+        <li><span class="dot dot-out"></span><a href="https://www.noeic.com/news_center/1128.html">国家信息光电子创新中心·光子计算芯片进展（2025-07）</a></li>
+      </ul>
+    </div>
+
+    <h2>研究方法</h2>
+    <div class="src-block">
+      <ul>
+        <li><b>子问题</b>：①专业名称与目录定位的演变；②核心课程与能力结构；③研究方向谱系；④就业出口与深造率；⑤2025 年前沿趋势</li>
+        <li><b>检索查询</b>：research 主问题 1 条 + web_search 3 路 + web_fetch 核验 2 篇，共 6 条</li>
+        <li><b>唯一来源</b>：15 个（目标 15-30，达到下限）</li>
+        <li><b>深读篇数</b>：Top 12 篇（research 全文 + WebFetch 原文）</li>
+        <li><b>源优先级</b>：官方/学术/权威媒体 &gt; 博客 &gt; 论坛；近 12 月优先</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="disclaimer">⚠️ 本报告基于公开资料的整理归纳，信息以原始资料为准，就业率等为校方自述口径，不构成专业选择、报考或职业发展的确定性建议。</div>
+    <div style="margin-top:4px;">生成：deep-research skill · md 底稿与证据表随 HTML 一并交付</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+{
+  "direction": "光计算 / 光子计算芯片",
+  "latest_breakthroughs": [
+    {
+      "date": "2026-11-19",
+      "title": "Nature Reviews Physics 发表光子伊辛机综述：迈向并超越百万自旋",
+      "detail": "综述论文《Photonic Ising machines towards and beyond a million spins》上线，系统梳理光子伊辛机（组合优化专用光计算）走向百万级自旋规模的器件与架构路径，作者含 A. Aadhi、Hitesh Ballani 等。属学术综述（非量产）。URL: https://www.nature.com/articles/s42254-026-01010-y （Nature Reviews Physics，Review Article，Published: 19 November 2026）。",
+      "url": "https://www.nature.com/articles/s42254-026-01010-y"
+    },
+    {
+      "date": "2026-11-18",
+      "title": "Nature 正刊：全集成钙钛矿有源极化激元光子电路",
+      "detail": "《Fully integrated perovskite active polaritonic circuits》上线（Antonio Fieramosca 等）。针对传统材料光学非线性弱、功耗高的问题，用 CsPbBr3 钙钛矿实现集成极化激元波导、片上极化激元激光、传播极化激元的光放大与全光相位控制，为紧凑、模拟、低能耗光信息处理/光计算提供有源器件基础。属实验室器件突破。",
+      "url": "https://www.nature.com/articles/s41586-026-11299-5"
+    },
+    {
+      "date": "2026-11-18",
+      "title": "曦智科技（01879.HK）启动 A 股 IPO 辅导并与申万宏源签约",
+      "detail": "11月2日公司公告拟启动 A 股发行，已批准与国泰海通签署辅导协议并拟提交辅导备案；11月12日与申万宏源证券签署长期战略合作，聚焦金融算力基础设施与金融光计算应用。11月18日盘中涨超10%，报186.8港元/股，成交额7760.57万港元。同期披露的2026上半年营收7978万元（同比+284%），光互连收入6070万元（+275%，占76%），毛利率65.8%，经调整净亏损1.47亿元。",
+      "url": "https://i.ifeng.com/c/8y9xksprxK2"
+    },
+    {
+      "date": "2026-11-17",
+      "title": "曦智天枢光电智能计算卡完成商汤 SenseNova Loop-9B Day 0 深度适配",
+      "detail": "基于 PACE 2 光电混合芯片的曦智天枢计算卡在模型发布当日完成配置复现、算子映射、量化到端到端推理全链路验证。硬件参数：单芯片集成128×128光学矩阵、超4万个光子器件，光子芯片面积600mm²，3D TSV 将硅光与 CMOS 垂直互连，PCIe Gen4×16 标准全高全长卡。光电切分把线性注意力投影、FFN 的 GEMM 放光域，长上下文全注意力/Sinkhorn/路由留电域。下一代 PACE 3 已于2026年6月完成光芯片流片，光学矩阵提升至256×256。",
+      "url": "https://www.xztech.ai/about-us/news/dynamic/137"
+    },
+    {
+      "date": "2026-11",
+      "title": "Nature Nanotechnology 11月专刊以「Optical computing（光学计算）」为主题",
+      "detail": "Nature Nanotechnology 官方宣布 2026年11月专刊涵盖 Optical computing、片上全光磁化开关等主题（官方 X 账号贴文）。标志光学计算成为该刊当期核心专题。属期刊专题，非单一产品发布。",
+      "url": "https://x.com/NatureNano/status/2122702468970938471"
+    },
+    {
+      "date": "2026-11-03",
+      "title": "国内光计算三大路线格局清晰：光本位 256×256 硅基光计算芯片 + 全球首款玻璃基光计算芯片",
+      "detail": "行业盘点确认：光本位科技在 WAIC 2026 发布256×256硅基光计算芯片，称为全球矩阵规模最大、算力最大的全可编程光计算芯片，单晶粒集成超6.5万个光计算单元，模型权重静态保持功耗为零；计划推出第二代光电融合计算卡，单卡算力从百 TOPS 级提升至千 TOPS 级；并发布全球首款玻璃基光计算芯片（玻璃衬底+纳米压印，降本、突破光刻面积限制）。曦智走硅基 MZI 光电混合路线，每刻深思走空间光计算路线。",
+      "url": "https://www.cnblogs.com/GEO-AI-20260730/p/23531781"
+    },
+    {
+      "date": "2026-07-28",
+      "title": "WAIC 2026 光计算赛道集中亮相：三家国内头部企业亮出底牌",
+      "detail": "2026世界人工智能大会上：光本位宣布首次成功流片256×256矩阵规模光子存内计算芯片（面向AI推理，宣称全球算力密度最大/精度最高）；曦智科技推出全球首款光电混合计算一体化计算盒「天枢·光立方」（基于 PACE 2 加速卡）；每刻深思展出「空间光计算芯片+大模型应用」全栈方案。文章判断产业共识为「训练靠GPU、推理用光电混合」，光计算第一桶金在 AI 推理端。",
+      "url": "https://m.36kr.com/p/3915125003703680"
+    }
+  ],
+  "baseline_updates": [
+    {
+      "old_claim": "共封装+异质集成+协同设计工具链是光计算卡点（信通院2025信息光子主线）",
+      "new_status": "2026下半年卡点仍未消除。36氪（半导体产业纵横）归纳四大短板：①工艺良率低、成本高，性价比不如成熟GPU；②光电反复转换额外功耗抵消光子能效优势；③软件生态零散、适配与落地成本高；④核心产业链配套不完善。同时 WAIC 2026 首次设立 AI 光算力独立专区与专场论坛，覆盖上游光芯片—中游光模块/CPO光引擎—下游光交换超节点，工具链与生态仍在补课。",
+      "url": "https://m.36kr.com/p/3915125003703680",
+      "date": "2026-07-28"
+    },
+    {
+      "old_claim": "Lightmatter 光子AI加速器（Nature 2025-04）",
+      "new_status": "2026下半年 Lightmatter 公开重心在光互连产品：Passage M1000 为3D光子中介层、总光带宽114Tbps；Passage L200/L200X 为3D共封装光学引擎，分别32Tbps/64Tbps。最近一次公开融资仍为2024年10月约4亿美元 D 轮、估值44亿美元（T. Rowe Price 领投）。⚠ 公开资料未覆盖其2026下半年新融资或光子计算（Envise）新品发布。",
+      "url": "https://www.insidedeeptech.com/lightmatter-passage-photonic-interconnect-full-guide",
+      "date": "2026-11"
+    },
+    {
+      "old_claim": "曦智科技（Lightelligence）为早期光子计算初创企业",
+      "new_status": "已完成港股上市（01879.HK，被称为「AI光算力第一股」/「全球硅光AI芯片第一股」），2026-11 启动 A 股 IPO 辅导。2026上半年营收7978万元（同比+284%）、毛利率65.8%、经调整净亏损1.47亿元；自研 LightSphereX 光跃超节点实现数千卡 GPU 商业集群落地，国内千卡级光交换计算集群完成商用部署，OCS 硅光 PIC 已量产。光计算产品完成 Qwen、Step、Llama 等主流模型适配。",
+      "url": "https://k.sina.cn/article_6583770931_1886c5f3300101q10k.html",
+      "date": "2026-11"
+    },
+    {
+      "old_claim": "光子矩阵乘法/光互连赋能 AI 算力（实验室为主）",
+      "new_status": "商业化路径分化：光互连/光交换先行落地（曦智光互连收入占其上半年总营收76%，OCS硅光PIC量产），纯光计算卡仍处小规模试点。Q.ANT 于2026年5月签下欧洲云厂商 IONOS 作为 Native Processing Server 首个商业客户，第二代 NPU 经德国 LRZ 独立评估较一代最高100倍性能、内部测试最高30倍能效/50倍单应用性能（TFLN平台，定位 GPU 协处理器），2026年内计划部署。",
+      "url": "https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges",
+      "date": "2026-05-19"
+    },
+    {
+      "old_claim": "全光计算/光子计算多停留在实验室演示",
+      "new_status": "实验室—商用界线更清晰：上海交大 LightGen 全光计算芯片（2025-12，Science）单芯片集成超210万光学神经元，端到端3.57×10⁴ TOPS、能效6.64×10² TOPS/W、计算密度2.62×10² TOPS/mm²，仍属实验室验证；清华太极 Taichi（2024）160 TOPS/W、中科院上海光机所「流星一号」（2025-06）并行度>100 同属原型。截至2026年底，中国光计算芯片整体进入「商业化早期交付与小规模试点」，未实现 GPU 式大规模通用量产。",
+      "url": "https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663",
+      "date": "2026-11"
+    }
+  ],
+  "status_latest": "截至2026年11月，光计算/光电混合算力进入「商业化早期、光互连先行、光计算试点」阶段。硬指标：曦智天枢 PACE 2 单芯片128×128光矩阵、超4万光子器件、600mm²、PCIe Gen4×16，PACE 3 已于2026年6月流片升至256×256；光本位256×256硅基光子存内计算芯片单晶粒超6.5万光计算单元，第二代光电融合卡规划从百 TOPS 级跃升至千 TOPS 级，并推出全球首款玻璃基光计算芯片。学术侧：上海交大 LightGen 全光芯片能效6.64×10² TOPS/W、计算密度2.62×10² TOPS/mm²、集成210万+光学神经元；清华太极160 TOPS/W；Nature 系在2026年3—11月密集刊发纳米光子神经网络加速器（约4亿参数/mm²）、可编程3D光子神经网络芯片、全集成钙钛矿极化激元电路、光子伊辛机综述。产业侧：曦智2026上半年营收7978万元（同比+284%）、毛利率65.8%、光互连收入占76%，OCS硅光PIC量产、数千卡GPU光互连集群落地；Q.ANT 第二代NPU经LRZ评估较一代最高100倍性能、内部称最高30倍能效，签下IONOS首个商业客户；Lightmatter主打Passage光互连（M1000 114Tbps、L200X 64Tbps），未见2026下半年新融资。必须区分：可验证量产的仅光互连/光交换器件（OCS硅光PIC、CPO引擎）与小规模光计算卡交付；全光计算（LightGen 等）及多数高 TOPS/W 数字仍为实验室/原型，⚠ 公开资料未覆盖大规模通用光计算芯片的量产良率、出货量与第三方实测能效。",
+  "outlook_refresh": "近期（2026下半年—2027）主线：①产品形态从「芯片」转向「卡/一体机/超节点」，曦智天枢·光立方、LightSphereX 光跃超节点把光计算嵌入现有服务器与千卡集群；②软件生态成为竞争焦点，Day 0 适配（商汤 Loop-9B）与量化/算子切分工具链缩短「新模型—新算子—光矩阵映射」链路；③技术路线三分：硅基 MZI 相干（曦智）、光子存内计算+玻璃基（光本位）、自由空间光计算（每刻深思），光电混合为可落地主流，全光计算仍需全光非线性器件与光存储突破；④资本与资本市场活跃：曦智港股上市后启动 A 股 IPO 辅导，光计算进入公开市场融资与规模化扩张窗口；⑤商业化落点首选 AI 推理（矩阵乘占 Transformer 七成以上算力）与光互连降功耗，金融、气象、端侧/星载被列为潜在场景。",
+  "risks": "①量产风险：工艺良率低、成本高，整体性价比仍不及成熟 GPU，中国光计算芯片尚未实现 GPU 式大规模通用量产；②能效口径风险：光电反复转换的额外功耗抵消光子能效优势，Kaggle/Mind Lab 汇总指出仅 Lightmatter Envise 约0.84 TOPS/W 有可核验口径，160 TOPS/W（太极）、65.5 TOPS/W 等亮眼数字来自未同时公布吞吐/功耗的研究芯片，无法苹果对苹果比较；③生态与标准风险：软件生态零散、适配与落地成本高，光电混合系统缺乏统一协议标准；④数据披露风险：多家企业「全球最大/最高」属自我宣称，⚠ 公开资料未覆盖第三方实测的流片良率、出货量、能效；⑤技术路线风险：全光计算受限于缺少高性能可集成全光非线性器件与光存储，短期难脱离实验室；⑥供应链与竞争风险：CPO/光互连由 Lightmatter、Ayar Labs（2026年3月完成5亿美元E轮）、Marvell 等加速整合，初创窗口收窄。",
+  "key_claims": [
+    {
+      "claim": "曦智天枢基于 PACE 2 完成商汤 SenseNova Loop-9B 的 Day 0 深度适配，单芯片128×128光矩阵、超4万光子器件、600mm²、PCIe Gen4×16；PACE 3 于2026年6月流片升至256×256。",
+      "url": "https://www.xztech.ai/about-us/news/dynamic/137",
+      "date": "2026-11-17"
+    },
+    {
+      "claim": "曦智科技（01879.HK）2026-11 启动 A 股 IPO 辅导，并与申万宏源签署金融光计算战略合作；11月18日盘中涨超10%。",
+      "url": "https://i.ifeng.com/c/8y9xksprxK2",
+      "date": "2026-11-18"
+    },
+    {
+      "claim": "曦智2026上半年营收7978万元（同比+284%），光互连收入6070万元占76%，毛利率65.8%，经调整净亏损1.47亿元，OCS硅光PIC已量产。",
+      "url": "https://k.sina.cn/article_6583770931_1886c5f3300101q10k.html",
+      "date": "2026-11"
+    },
+    {
+      "claim": "光本位在 WAIC 2026 发布256×256硅基光子存内计算芯片（单晶粒超6.5万光计算单元）与全球首款玻璃基光计算芯片，规划第二代光电融合卡百 TOPS→千 TOPS。",
+      "url": "https://www.cnblogs.com/GEO-AI-20260730/p/23531781",
+      "date": "2026-11-03"
+    },
+    {
+      "claim": "WAIC 2026 光计算赛道集中爆发：光本位256×256流片、曦智天枢·光立方（基于PACE 2）、每刻深思空间光计算全栈方案同台亮相；产业共识为训练靠GPU、推理用光电混合。",
+      "url": "https://m.36kr.com/p/3915125003703680",
+      "date": "2026-07-28"
+    },
+    {
+      "claim": "Nature 于2026-11-18 上线全集成钙钛矿有源极化激元光子电路，实现片上极化激元激光、光放大与全光相位控制，面向低能耗光信息处理。",
+      "url": "https://www.nature.com/articles/s41586-026-11299-5",
+      "date": "2026-11-18"
+    },
+    {
+      "claim": "Nature Reviews Physics 于2026-11-19 发表光子伊辛机综述《Photonic Ising machines towards and beyond a million spins》。",
+      "url": "https://www.nature.com/articles/s42254-026-01010-y",
+      "date": "2026-11-19"
+    },
+    {
+      "claim": "Q.ANT 第二代光子 NPU 经德国 LRZ 独立评估较一代最高100倍性能、内部称最高30倍能效/50倍单应用性能，并于2026年5月签下 IONOS 作为首个商业客户（定位 GPU 协处理器，非替代）。",
+      "url": "https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges",
+      "date": "2026-05-19"
+    },
+    {
+      "claim": "可核验能效对比仍存缺口：仅 Lightmatter Envise 约0.84 TOPS/W 有可比口径，160 TOPS/W、65.5 TOPS/W 等来自未公布吞吐/功耗的研究芯片，苹果对苹果比较尚不可能。",
+      "url": "https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus",
+      "date": "2026-07-15"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "direction": "光电融合与AI双向赋能",
+  "generated_at": "2026-11-23",
+  "method": "web_search / advanced_search（bing、tavily、exa 多组中英文关键词变体，≥4组）+ multi_search 交叉验证 + web_fetch 深读 Nature 原页、企业官网与财经媒体原文；所有数字与日期均取自可访问 URL，未自造。",
+  "latest_breakthroughs": [
+    {
+      "date": "2026-11-20",
+      "title": "晶圆级薄膜PZT光子集成电路：8英寸晶圆、70GHz电光响应、单波224Gbps、3.2Tbps级光互连",
+      "detail": "Nature Communications（2026-11-20 在线发表）报道 wafer-scale thin-film PZT photonic integrated circuits：在8英寸SiO2/Si晶圆上用DUV stepper制备薄膜锆钛酸铅（PZT）电光调制器，VπL=1.19 V·cm，电光响应至70GHz，单波224Gbps；单片集成16通道WDM发射机，指向3.2Tbps级光互连。属AI基础设施侧的光子互连（Photonics for AI），把此前小片PZT工艺推进到晶圆级制造。URL: https://www.nature.com/articles/s41467-026-79721-0",
+      "url": "https://www.nature.com/articles/s41467-026-79721-0"
+    },
+    {
+      "date": "2026-11-07",
+      "title": "Agentic AI 用于纳米光子与超表面逆向设计：聚焦效率40.0%→65.2%",
+      "detail": "Scientific Reports（2026-11-07）发表《Agentic AI for inverse design in nanophotonics and meta-optics》：智能体框架自动复现文献、在人工批准后生成优化策略，结合伴随优化并对二值候选独立前向评估。4种metagrating策略效率79.4%–90.9%，单独重设计81.2%→94.6%；2D metalens在三个可见波长的最小聚焦效率40.0%→65.2%；Bayer color router平均路由效率50.3%→54.7%（最小特征125nm）。是AI for Photonics在2026下半年最明确的自动化设计突破。URL: https://www.nature.com/articles/s41598-026-78977-2",
+      "url": "https://www.nature.com/articles/s41598-026-78977-2"
+    },
+    {
+      "date": "2026-11-03",
+      "title": "曦智科技启动A股上市辅导备案：H1营收7978万元同比+284%，IPO募资27.41亿港元仅用5080万",
+      "detail": "华尔街见闻11月3日报道：曦智科技在上海证监局办理A股上市辅导备案，辅导机构国泰海通。公司4月28日在港交所主板上市（全球AI硅光芯片第一股），IPO净募资23.77亿港元，5月超额配售再募3.64亿港元，合计27.41亿港元；截至6月30日仅动用5080万港元、未用26.9亿港元，70%投向光互连与光计算研发、20%商业化、10%营运，2031年前使用。2026上半年营收7978万元（同比+284%，光互连6070万+275%，光计算1908万+313%），研发3.5亿元（+126%），经调整净亏损1.47亿元。URL: https://wallstreetcn.com/articles/3785138",
+      "url": "https://wallstreetcn.com/articles/3785138"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "犀里光电完成亿元级Pre-A轮融资：薄膜铌酸锂光子芯片面向单波400G与1.6T/3.2T",
+      "detail": "财联社9月19日报道，薄膜铌酸锂（TFLN）光子芯片企业犀里光电完成亿元级Pre-A轮融资，孚腾资本领投，上海未来产业基金等跟投；技术方向为单波400G及1.6T/3.2T高速光模块/光互连用TFLN调制器。交叉验证：https://www.fortera-capital.com/details_166.html。URL: https://www.chinastarmarket.cn/detail/2487874",
+      "url": "https://www.chinastarmarket.cn/detail/2487874"
+    },
+    {
+      "date": "2026-09-14",
+      "title": "曦智科技CIOE 2026发布3.2T NPO收发一体硅光芯片、6.4T NPO方案与51.2T CPO原型机",
+      "detail": "曦智科技官网9月14日披露CIOE 2026（9月9–11日）成果：3.2T NPO收发一体硅光芯片，单芯片集成16路53/106Gbaud调制器与探测器，已有多个客户设计中采用、商用在即；6.4T NPO硅光方案将Driver/TIA与32通道硅光芯片在封装内集成；CPO原型机采用51.2Tbps交换芯片、4U机箱、128×400G DR4，整机功耗-30%、光互连功耗-60%；分布式光交换dOCS（光跃LightSphere X）已实现数千卡集群商业化部署，称为中国首个商业化自主千卡级光交换计算集群。同页引用TrendForce预测CPO/NPO市场2025年约1亿美元→2030年超390亿美元，LightCounting预计2030年CPO市场100亿美元。URL: https://www.xztech.ai/about-us/news/dynamic/124",
+      "url": "https://www.xztech.ai/about-us/news/dynamic/124"
+    },
+    {
+      "date": "2026-09-10",
+      "title": "Ayar Labs追加1.5亿美元融资，2026年累计主资本6.5亿美元，扩产制造就绪CPO",
+      "detail": "Ayar Labs官方9月10日宣布追加1.5亿美元融资，2026年累计主资本（primary capital）达6.5亿美元；同时披露Wiwynn（纬颖）年内已作战略投资，既有战略投资方包括AMD、Alchip、Intel、MediaTek、NVIDIA。资金用于CPO量产制造与产品开发，面向机架外AI scale-up光互连。交叉验证：https://www.hpcwire.com/off-the-wire/ayar-labs-brings-2026-funding-to-650m-for-cpo-manufacturing 、https://www.lightwaveonline.com/home/news/55404308/ayar-labs-scales-funding-to-650m 。URL: https://ayarlabs.com/news/ayar-labs-expands-2026-funding-to-650-million",
+      "url": "https://ayarlabs.com/news/ayar-labs-expands-2026-funding-to-650-million"
+    },
+    {
+      "date": "2026-09-09",
+      "title": "Nature Nanotechnology发表光计算实用化路线图：纳米光子如何驱动光计算走向实用",
+      "detail": "Nature Nanotechnology 2026-09-09 发表综述《How nanophotonics can drive optical computing toward practical applications》（vol 21, pp 1518–1530；作者 Yitong Chen、Guoqiang Yang、Tao Yan、Chunyang Tang、Jiamin Wu、Qionghai Dai，上海交大陈一彤联合清华戴琼海院士/吴嘉敏团队）。文章指出可编程性、高集成密度与稳定性光子平台已具备，覆盖大规模AI模型、边缘计算、逻辑与科学计算，并给出纳米材料、架构、纳米制造、大规模集成要求，分析商业系统。上海交大通报：https://icisee.sjtu.edu.cn/tsfx/3437.html 。URL: https://www.nature.com/articles/s41565-026-02264-4",
+      "url": "https://www.nature.com/articles/s41565-026-02264-4"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "NVIDIA Spectrum-X Ethernet Photonics全面量产：激光器数量减少4倍、五家供应商分工链成型",
+      "detail": "StorageReview 8月15日报道：NVIDIA Spectrum-X Ethernet Photonics CPO交换机进入全面量产，激光器数量减少4倍、功耗降低5倍、MTBI提升10倍；五家供应链分工为TSMC（硅光制造）、SPIL（封装测试）、Lumentum（激光芯片）、TFC Communication（激光模块）、Foxconn（整机）；早期客户包括CoreWeave、Lambda、OCI、Microsoft Azure、IBM Cloud、Nebius。此前NVIDIA官方（2026-05-31）称为首款200Gb/s SerDes CPO交换机、5×能效、5×AI uptime、1.3×部署速度：https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory 。URL: https://www.storagereview.com/news/nvidia-spectrum-x-ethernet-photonics-enters-full-production-with-4x-fewer-lasers-and-a-five-vendor-cpo-supply-chain",
+      "url": "https://www.storagereview.com/news/nvidia-spectrum-x-ethernet-photonics-enters-full-production-with-4x-fewer-lasers-and-a-five-vendor-cpo-supply-chain"
+    },
+    {
+      "date": "2026-08-13",
+      "title": "Lightmatter联合19家公司在OCP正式启动CPO系统架构计划，发布300页白皮书",
+      "detail": "Lightmatter官方8月13日宣布：Open Silicon Photonics for AI Systems成为Open Compute Project（OCP）正式工作组，联盟扩至19家公司（10家创始+9家新成员，含Celestica、Dell、Flex、Foxconn Interconnect Technology、Global Unichip、Hyve、Keysight、Lightmatter、Qualcomm、Quanta Cloud Technology等）。发布300页白皮书《Architecture Vision: Open Silicon Photonics for AI Systems》（https://www.opencompute.org/documents/vision-opensiphforaisystems-final-pdf ），目标是把MHS/ORv3 AI集群从72扩展到1000+节点，支持硅光/VCSEL/micro-LED多路线，面向100,000-XPU集群；SerDes逼近448G使铜缆reach缩至几十厘米；首批规范预计2026年Q4提交。URL: https://lightmatter.com/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project",
+      "url": "https://lightmatter.com/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project"
+    },
+    {
+      "date": "2026-07-23",
+      "title": "拓扑调制器光子处理加速器：266 TOPS/mm²算力密度、1000倍加速重构、近零静态功耗",
+      "detail": "Nature Communications 2026-07-23 发表《Ultrafast reconfigurable topological-modulators-based photonic processing accelerator》（Nat Commun 17, 9920 (2026)）：晶圆级非易失光子计算芯片，GHz电光响应结合铁电PZT拓扑局域化，重构速度提升1000倍、静态功耗近零，算力密度266 TOPS/mm²；16通道波长-空间复用实现1.92 TOPS吞吐，数字识别95.64%、时变PDE求解94.5%精度。上海交大通报（7月31日）确认团队为张永/苏翼凯联合兰州大学田永辉、国科大杭州高等研究院邱枫：https://icisee.sjtu.edu.cn/tsfx/3393.html 。URL: https://www.nature.com/articles/s41467-026-75993-8",
+      "url": "https://www.nature.com/articles/s41467-026-75993-8"
+    }
+  ],
+  "baseline_updates": [
+    {
+      "old_claim": "中国信通院《信息光子技术发展与应用研究报告（2025年）》把光电融合/硅光/光计算列为三大主线。",
+      "new_status": "⚠ 公开资料未覆盖：截至2026-11-23，公开检索仅找到2025年版报告PDF（路径 P020251213610306726283.pdf，2024年首次发布、2025年更新），未检索到2026年新版公开报告；三大主线表述仍以2025年版为准，2026年官方口径更新待发布。",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202512/P020251213610306726283.pdf",
+      "date": "2026-11-23"
+    },
+    {
+      "old_claim": "LightCounting 2026-01：AI光模块+CPO 165亿→260亿美元。",
+      "new_status": "口径分化：曦智科技CIOE 2026材料引用TrendForce预测CPO/NPO市场2025年约1亿美元→2030年超390亿美元，LightCounting另预测2030年CPO市场100亿美元；2026下半年公开材料未见对165亿→260亿美元原预测的直接更新，故原数字仅作历史基线，新预测应按CPO/NPO与CPO分别引用。",
+      "url": "https://www.xztech.ai/about-us/news/dynamic/124",
+      "date": "2026-09-14"
+    },
+    {
+      "old_claim": "Nature 2025-04 Lightmatter通用光子AI加速器。",
+      "new_status": "重心从单芯片加速器转向系统级CPO标准：2026-08-13 Lightmatter在OCP启动19家公司开放硅光计划、发布300页架构白皮书，首批规范预计2026年Q4提交；NVIDIA Spectrum-X CPO交换机已进入全面量产。",
+      "url": "https://lightmatter.com/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project",
+      "date": "2026-08-13"
+    },
+    {
+      "old_claim": "清华智能光子综述（Engineering 2025）。",
+      "new_status": "2026-09-09 Nature Nanotechnology 刊发更系统的实用化路线图《How nanophotonics can drive optical computing toward practical applications》，由上海交大陈一彤联合清华戴琼海院士/吴嘉敏团队完成，明确覆盖大规模AI模型、边缘计算、逻辑与科学计算及商业系统分析。",
+      "url": "https://www.nature.com/articles/s41565-026-02264-4",
+      "date": "2026-09-09"
+    },
+    {
+      "old_claim": "曦智科技（旧报告列为光计算代表企业）。",
+      "new_status": "2026年完成港股IPO（4/28，合计募资27.41亿港元）后，11月3日启动A股上市辅导备案；10月27日CFO披露下一代PACE3将支持256×256规模、主攻大模型推理，此前PACE1为64×64（2021）、PACE2为128×128+3D TSV（2025）；2025年收入结构光互连约80%、光计算约20%。",
+      "url": "https://wallstreetcn.com/articles/3784581",
+      "date": "2026-10-27"
+    },
+    {
+      "old_claim": "Nature Communications 2026-03 逆向设计（光子器件自动设计）。",
+      "new_status": "2026-11-07 Scientific Reports 将逆向设计升级为Agentic AI闭环：自动文献复现+策略生成+伴随优化+独立前向评估，2D metalens最小聚焦效率40.0%→65.2%，metagrating重设计81.2%→94.6%。",
+      "url": "https://www.nature.com/articles/s41598-026-78977-2",
+      "date": "2026-11-07"
+    }
+  ],
+  "status_latest": "2026年下半年，光电融合与AI双向赋能从论文演示进入量产、标准与资本并进阶段。Photonics for AI侧：NVIDIA Spectrum-X Ethernet Photonics CPO交换机全面量产（激光器少4倍、功耗低5倍、MTBI高10倍，TSMC/SPIL/Lumentum/TFC/Foxconn五家分工，客户含CoreWeave、Lambda、OCI、Azure、IBM Cloud、Nebius）；曦智科技CIOE 2026推出3.2T NPO收发一体硅光芯片（单芯片16路53/106Gbaud）、6.4T NPO封装内集成方案、51.2Tbps CPO原型机（128×400G DR4、整机功耗-30%、光互连功耗-60%），dOCS千卡级光交换集群已商业化部署；2026-11-20 Nature Communications 报道8英寸晶圆级薄膜PZT光子IC（VπL=1.19 V·cm、70GHz、单波224Gbps、16通道WDM支持3.2Tbps）。AI for Photonics侧：2026-11-07 Scientific Reports 发表Agentic AI逆向设计（metalens最小聚焦效率40.0%→65.2%）；2026-07-23 Nature Communications 报道266 TOPS/mm²、1000倍快速重构、近零静态功耗的PZT拓扑调制器光子加速器（1.92 TOPS吞吐、数字识别95.64%、时变PDE 94.5%）。标准化与资本侧：Lightmatter联合19家公司于2026-08-13在OCP发布300页CPO架构白皮书、首批规范预计Q4 2026；Ayar Labs 2026-09-10追加1.5亿美元、全年主资本6.5亿美元；犀里光电2026-09-19完成亿元级Pre-A轮；曦智科技2026上半年营收7978万元（+284%）、研发3.5亿元（+126%）、经调整净亏损1.47亿元，11月3日启动A股辅导备案。产业格局仍由海外云厂与CPO供应链主导，国内在硅光/NPO/TFLN/光计算多路线并进。",
+  "outlook_refresh": "短期（2026 Q4–2027）：OCP开放硅光CPO首批规范预计2026 Q4提交，MHS/ORv3集群从72向1000+节点、进而10万XPU扩展；曦智PACE3（256×256）主攻大模型推理，管理层称需求将在未来12–18个月大幅提升；3.2T NPO“商用在即”，6.4T NPO与1.6T/3.2T TFLN调制器成下一轮产品节点。中期：TrendForce预测CPO/NPO市场2030年超390亿美元，LightCounting预测2030年CPO市场100亿美元；Nature Nanotechnology路线图把大规模AI模型、边缘计算、逻辑与科学计算列为光计算落地方向。AI for Photonics将从单器件逆向设计扩展为智能体闭环（文献复现—策略生成—伴随优化—独立验证），提升跨工艺、跨波长可迁移性。",
+  "risks": "①证据缺口：中国信通院2026年版信息光子报告⚠ 公开资料未覆盖，2026产业口径只能用2025年版+企业/媒体数据拼接；②商业化风险：曦智上半年研发3.5亿元、经调整净亏损1.47亿元，IPO募资27.41亿港元中26.9亿尚未动用，资金使用效率与量产爬坡待验证；③技术风险：光子计算实测精度仍落后成熟电子方案（如数字识别95.64%、CIFAR-10 72.0%），晶圆级PZT/TFLN的良率、封装、热管理与测试标准未公开验证；④标准 fragmentation：OCP同时支持硅光/VCSEL/micro-LED，CPO/NPO/OCS多条路线并存，448G SerDes下互操作规范仍在制定；⑤供应链集中：CPO量产依赖TSMC/SPIL/Lumentum/TFC/Foxconn等少数环节，国产CPO原型仍需51.2T国产交换芯片+16颗3.2T光引擎配套；⑥资本与估值：Ayar Labs单年主资本6.5亿美元、犀里光电亿元级Pre-A，若需求兑现慢于12–18个月预期将出现产能与融资错配；⑦口径不一致：LightCounting旧预测（165亿→260亿美元）与TrendForce/LightCounting 2030预测差异大，跨报告引用易混淆。",
+  "key_claims": [
+    {
+      "claim": "2026-11-20晶圆级薄膜PZT光子IC实现8英寸晶圆、VπL=1.19 V·cm、70GHz电光响应、单波224Gbps与16通道WDM 3.2Tbps级光互连。",
+      "url": "https://www.nature.com/articles/s41467-026-79721-0",
+      "date": "2026-11-20"
+    },
+    {
+      "claim": "Agentic AI逆向设计将2D metalens最小聚焦效率从40.0%提升至65.2%、metagrating从81.2%提升至94.6%，标志AI for Photonics进入智能体闭环阶段。",
+      "url": "https://www.nature.com/articles/s41598-026-78977-2",
+      "date": "2026-11-07"
+    },
+    {
+      "claim": "曦智科技11月3日启动A股上市辅导备案；2026上半年营收7978万元同比+284%（光计算1908万+313%），研发3.5亿元+126%，经调整净亏损1.47亿元。",
+      "url": "https://wallstreetcn.com/articles/3785138",
+      "date": "2026-11-03"
+    },
+    {
+      "claim": "曦智下一代PACE3将支持256×256规模、主攻大模型推理；PACE1为64×64、PACE2为128×128+3D TSV；2025年收入光互连约80%、光计算约20%。",
+      "url": "https://wallstreetcn.com/articles/3784581",
+      "date": "2026-10-27"
+    },
+    {
+      "claim": "犀里光电9月19日完成亿元级Pre-A轮融资（孚腾资本领投），攻关单波400G及1.6T/3.2T薄膜铌酸锂光子芯片。",
+      "url": "https://www.chinastarmarket.cn/detail/2487874",
+      "date": "2026-09-19"
+    },
+    {
+      "claim": "曦智科技CIOE 2026发布3.2T NPO硅光芯片与51.2Tbps CPO原型机（128×400G DR4，整机功耗-30%、光互连功耗-60%），dOCS已实现千卡级集群商业部署。",
+      "url": "https://www.xztech.ai/about-us/news/dynamic/124",
+      "date": "2026-09-14"
+    },
+    {
+      "claim": "Ayar Labs 2026-09-10追加1.5亿美元融资、全年主资本达6.5亿美元，Wiwynn年内战略投资，资金投向CPO量产；战略投资方含AMD、Intel、MediaTek、NVIDIA。",
+      "url": "https://ayarlabs.com/news/ayar-labs-expands-2026-funding-to-650-million",
+      "date": "2026-09-10"
+    },
+    {
+      "claim": "Nature Nanotechnology 2026-09-09刊发光计算实用化路线图，覆盖大规模AI模型、边缘计算、逻辑与科学计算，并给出纳米材料/架构/制造/大规模集成要求。",
+      "url": "https://www.nature.com/articles/s41565-026-02264-4",
+      "date": "2026-09-09"
+    },
+    {
+      "claim": "NVIDIA Spectrum-X Ethernet Photonics CPO交换机已全面量产：激光器少4倍、功耗低5倍、MTBI高10倍，形成TSMC/SPIL/Lumentum/TFC/Foxconn五家供应链分工。",
+      "url": "https://www.storagereview.com/news/nvidia-spectrum-x-ethernet-photonics-enters-full-production-with-4x-fewer-lasers-and-a-five-vendor-cpo-supply-chain",
+      "date": "2026-08-15"
+    },
+    {
+      "claim": "Lightmatter联合19家公司在OCP启动开放硅光CPO架构计划并发布300页白皮书，目标扩展至100,000-XPU集群，首批规范预计2026 Q4提交。",
+      "url": "https://lightmatter.com/press-release/industry-leaders-formally-launch-cpo-system-architecture-initiative-within-the-open-compute-project",
+      "date": "2026-08-13"
+    }
+  ]
+}

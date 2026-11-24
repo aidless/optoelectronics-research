@@ -1,0 +1,91 @@
+{
+  "direction": "光电融合与AI双向赋能（AI for Photonics × Photonics for AI）",
+  "definition": "光电融合与AI双向赋能是人工智能与光子/光电子技术相互驱动的新兴交叉赛道：一条主线是“AI for photonics”，用深度学习与机器学习做光子器件逆向设计、正向建模、光刻/封测/良率优化与智能感知；另一条主线是“photonics for AI”，用光子芯片、光互连、共封装光学(CPO)和光计算为AI算力提供高带宽、低时延、低功耗的硬件底座。中国信通院《信息光子技术发展与应用研究报告（2025年）》已将“信息光子与人工智能互哺发展、双向赋能”列为独立章节，并把光电融合定性为全新赛道。",
+  "tech_core": "AI for photonics侧：用神经网络学习“结构参数—光学响应”的正向映射作为FDTD等物理解算器的代理模型，再以生成模型/强化学习/拓扑优化做逆向设计，实现目标导向的器件结构搜索，把传统耗时参数扫描变成数据驱动的快速收敛；同时把AI用于光刻OPC、缺陷检测、标定校准与良率预测。Photonics for AI侧：利用光的低延迟传播、波分复用(WDM)大带宽与并行性，在硅光子上用马赫-曾德尔干涉仪(MZI)网络、微环谐振器阵列或衍射/超表面实现矩阵—向量乘加，并以光互连/CPO把光引擎贴近XPU与交换机，突破电I/O的带宽与能效瓶颈。两条主线通过电子—光子设计自动化(EPDA)闭环交汇：AI设计的光子器件再用于加速AI计算。",
+  "status_2025_2026": "2025—2026年赛道进入产业与学术双验证阶段。市场/规模：中国信通院报告称全球光子技术产品市场规模已超8000亿美元、并向万亿美元迈进，光电融合处于多样化发展阶段。LightCounting（2026-01）估算AI集群以太网光模块与CPO市场2025年达165亿美元、2026年达260亿美元，连续两年增速60%，光连接支出占五大云厂商资本开支比例从2025年2.7%升至2026年3.1%。光子计算里程碑：2025年4月《Nature》同期刊发两篇光子计算芯片论文——Lightmatter的通用光子AI加速器（4个128×128矩阵，可运行自然语言处理与图像处理神经网络，精度与传统电子处理器相当）和曦智科技Lightelligence的PACE光子加速器（逾16000个光子元件、64×64矩阵，求解伊辛问题）。国内产业化：曦智科技官网披露PACE系列集成超10000个光子器件、支持64×64矩阵运算，特定算法上比高端GPU快数百倍，并已获首个客户产生收入，产品延伸至光互连（Risewave、Photowave、光跃超节点LP64/OP32）；Yahoo财经转载报道称其为“全球AI硅光芯片第一股”，2025年在中国独立Scale-up光互连供应商中收入排名第一、份额约88.3%，光互连方案已部署至3个千卡级GPU集群（报道URL见key_claims，页面正文需以浏览器访问确认）。CPO方面：Lightmatter 2025年推出 Passage M1000 光子超级芯片（总光带宽114 Tbps、单域支持数千GPU互连）与 Passage L200 3D共封装光学引擎（32/64 Tbps两档，宣称训练速度提升8倍，计划2026年上市，代工/封装伙伴包括格芯、日月光、Amkor）（MIT科技评论中文网，2025-04）。AI逆向设计侧：Nature Communications（2026-03）报道逆向设计纳米光子神经网络加速器，计算密度约4亿参数/mm²；早期验证中神经网络代理模型相对FDTD仿真有约1830倍加速（PhotoniX, 2021，属历史基准数据）。",
+  "key_players": [
+    "中国信息通信研究院（CAICT，《信息光子技术发展与应用研究报告（2025年）》发布方）",
+    "清华大学金国藩-曹良才团队（Engineering 2025智能光子综述，AI+超构光学/全息）",
+    "曦智科技 Lightelligence（中国，PACE光电混合计算加速卡、光跃光互连超节点，已完成商用化）",
+    "Lightmatter（美国，Passage M1000光子超级芯片、L200 3D CPO，Nature 2025通用光子AI加速器）",
+    "LightCounting / 市场研究机构（AI光模块与CPO市场规模与预测）",
+    "格芯 GlobalFoundries / 日月光 ASE / Amkor（硅光Fotonix平台与先进封装，Lightmatter量产伙伴）",
+    "NVIDIA / Broadcom / Meta / Microsoft（CPO交换机与AI集群光互连需求侧，LightCounting点名的部署方）"
+  ],
+  "employment_roles": [
+    "光子器件逆向设计/机器学习工程师（代理模型、生成模型、拓扑优化、FDTD在环）",
+    "硅光子/光电共封装(CPO)工程师（波导、微环/MZI、WDM、光纤耦合与封装测试）",
+    "光电融合EDA/EPDA工具开发工程师（器件-电路-架构跨层建模与协同仿真）",
+    "光互连与AI集群网络工程师（800G/1.6T光模块、scale-up光网络、NVLink/UALink）",
+    "半导体智能制造AI工程师（光刻OPC、缺陷检测、良率预测、工艺参数寻优）",
+    "光计算软件栈/算法工程师（算子映射、精度校准、光电混合训练与推理）"
+  ],
+  "skills": [
+    "机器学习/深度学习（CNN、GAN、扩散模型、强化学习、贝叶斯优化）与Python/PyTorch",
+    "电磁仿真与光子器件建模（FDTD、FEM、 eigenmode、Lumerical等）及代理模型加速",
+    "硅光子学与集成工艺（波导、MZI、微环、WDM、GlobalFoundries Fotonix类平台）",
+    "电子-光子设计自动化(EPDA)与跨层协同仿真（器件/电路/架构级）",
+    "光通信与光互连（光模块、CPO、scale-up/scale-out网络、带宽-能效权衡）",
+    "半导体制造与良率工程（光刻OPC、缺陷检测、统计过程控制SPC）",
+    "计算机体系结构并行编程（GPU/TPU基线、矩阵运算映射、性能基准测试）"
+  ],
+  "future_outlook": "未来3—5年（2026—2030）光电融合将从单点器件/模块走向系统级协同：AI for photonics侧，EPDA工具链会把逆向设计从单器件扩展到大规模光子集成电路的布局布线与光电协同仿真，并把AI深度嵌入光刻、封测与良率环节，缩短流片迭代周期；photonics for AI侧，CPO与3D光子互连（M1000/L200类）将在2026年后随格芯等代工平台进入量产，光互连从scale-out向scale-up渗透，LightCounting预计CPO在scale-up的采用可能超预期并拉动2028—2031年市场增长，光计算则先在伊辛求解、特定推理算子等场景商业化，再争取通用AI负载。产业格局上，云厂商资本开支（Meta、Oracle计划2026年翻倍）是核心需求引擎，中国信通院判断光电融合将聚焦先进计算与AI领域发力；但光学I/O标准、软件生态、光电协同仿真工具成熟度仍是规模化前提。",
+  "risks": "技术与生态风险：光子计算精度/动态范围受限、光电转换与激光功耗“conversion tax”、器件对制造误差与温度敏感、光计算软件栈与算子映射生态不成熟，通用AI负载下相对GPU的系统级优势尚未被充分证明；光电协同仿真设计仍需突破（信通院）。供应链风险：VCSEL/InP激光器、先进硅光代工与3D封装产能紧张，LightCounting预计相关短缺到2026年年中才缓解，可能造成2026下半年阶段性需求转弱。商业与时间风险：Lightmatter L200量产上市、曦智光互连规模化均处兑现期，Cignal AI等分析师提示CPO是“必然方向”但落地节奏取决于超大规模客户；市场规模数字（8000亿美元光子产品、CPO 2030年约47亿美元增量等）为机构测算，口径差异大。数据风险：部分份额/部署数字来自转载报道而非一手公告，引用前应以公司招股书/公告原文复核。",
+  "key_claims": [
+    {
+      "claim": "中国信通院《信息光子技术发展与应用研究报告（2025年）》：全球光子技术产品市场规模已超8000亿美元、向万亿美元迈进；构建光传感/光连接/光算存/光显示四大体系，信息光子与AI“互哺发展、双向赋能”，光电融合成为全新赛道，光算连存一体等新范式加速构建，光电协同仿真设计仍需突破。",
+      "url": "https://www.sohu.com/a/990345036_121864792",
+      "date": "2026-02-26"
+    },
+    {
+      "claim": "中国信通院上述报告在发现报告平台登记的发布信息为2025-12-13、作者王英杰、92页；报告原文PDF可直接下载（本条给出报告元数据页与PDF直链）。",
+      "url": "https://www.fxbaogao.com/detail/5188203",
+      "date": "2025-12-13"
+    },
+    {
+      "claim": "LightCounting（2026年1月）：AI集群用以太网光模块（100G起）与CPO市场2025年达165亿美元、2026年预计260亿美元，两年均60%增长；光连接占五大云厂商资本开支比例由2025年2.7%升至2026年3.1%，2031年达4.1%；scale-up用CPO采用若超预期将拉动2028—2031年增长。",
+      "url": "https://www.lightcounting.com/newsletter/en/january-2026-optics-for-ai-clusters-366",
+      "date": "2026-01"
+    },
+    {
+      "claim": "《Nature》2025年4月9日刊发 Lightmatter 团队的 Universal photonic artificial intelligence acceleration：作者含Sufi R. Ahmed、Nicholas C. Harris等（Lightmatter、OpenAI），即4个128×128矩阵光子处理器、可运行NLP与图像神经网络的通用光子AI加速器。",
+      "url": "https://www.nature.com/articles/s41586-025-08854-x",
+      "date": "2025-04-09"
+    },
+    {
+      "claim": "中国科学院/科技日报2025-12-29年终盘点：2025年4月《自然》两篇光子计算芯片论文——新加坡Lightelligence的PACE光子加速器（逾16000个光子元件、64×64矩阵、求解伊辛问题）与Lightmatter的光子处理器（4个128×128矩阵，性能/能耗优于电子芯片，精度相当）。",
+      "url": "https://www.cas.cn/zt/kjzt/2025kjpd/pd3/202512/t20251229_5094526.shtml",
+      "date": "2025-12-29"
+    },
+    {
+      "claim": "MIT科技评论中文网（2025-04）：Lightmatter 发布 Passage M1000（总光带宽114 Tbps、面积超4000 mm²、单域支持数千GPU互连，采用格芯Fotonix硅光平台）与 Passage L200 3D共封装光学（32/64 Tbps，宣称训练速度提升8倍，2026年上市，伙伴含格芯、日月光、Amkor）。",
+      "url": "https://mittrchina.com/news/detail/14649",
+      "date": "2025-04"
+    },
+    {
+      "claim": "清华大学金国藩院士、曹良才团队在《Engineering》2025年3月刊发表智能光子综述：明确AI for photonics（正向建模与逆向设计加速光学设计）与Photonics for AI（光子计算平台）两大核心方向；引用研究称AI模型训练算力需求每3—4个月翻倍，并展望光计算芯片在Specific任务上算力较商用电子芯片提升3个数量级、能效提升6个数量级。",
+      "url": "https://news.sciencenet.cn/htmlpaper/2025/5/2025516112519217133053.shtm",
+      "date": "2025-05-16"
+    },
+    {
+      "claim": "曦智科技官网：PACE光电混合计算加速卡集成超10000个光子器件、支持64×64矩阵运算，在特定算法上比当时高端GPU快数百倍，已获首个客户并产生收入，标志光计算业务商业化；官网同时列出Risewave/Photowave光互连产品和光跃超节点LP64/OP32。（页面含2026年更新的产品图，具体里程碑日期未标注。）",
+      "url": "https://www.xztech.ai/about-us/company-profile",
+      "date": "未标注"
+    },
+    {
+      "claim": "Nature Communications（2026-03-04）发表“Inverse-designed nanophotonic neural network accelerators for ultra-compact optical computing”：基于3D FDTD的波基逆向设计、每个亚波长体素为可训练自由度，计算密度约4亿参数/mm²；文中给出逆向设计优化耗时（MNIST约29.7小时，RTX4090+5090并行降至19.7小时）。",
+      "url": "https://www.nature.com/articles/s41467-026-68648-1",
+      "date": "2026-03-04"
+    },
+    {
+      "claim": "PhotoniX（Springer Nature）综述“Intelligent designs in nanophotonics”：早期验证中ANN代理模型相对FDTD仿真约1830倍加速（精度约93.2%），是AI加速光子器件仿真的经典量化证据（2021年历史基准，非2025—2026新数据）。",
+      "url": "https://link.springer.com/article/10.1186/s43074-021-00044-y",
+      "date": "2021"
+    },
+    {
+      "claim": "Yahoo财经转载报道称：曦智科技光互连方案已部署至3个千卡级GPU集群，2025年在中国独立Scale-up光互连供应商中收入排名第一、市占率约88.3%，并于2026年AWE与壁仞、中兴合作实现128卡商用版光跃超节点落地、适配国内主流大模型（该数据为转载来源，建议以招股书原文复核）。",
+      "url": "https://hk.finance.yahoo.com/news/%E5%85%A8%E7%90%83ai%E7%9F%BD%E5%85%89%E6%99%B6%E7%89%87%E7%AC%AC-%E8%82%A1-%E6%9B%A6%E6%99%BA%E7%A7%91%E6%8A%80%E8%A7%A3%E9%8E%96ai%E7%AE%97%E5%8A%9B%E9%97%9C%E9%8D%B5%E7%93%B6%E9%A0%B8-065643513.html",
+      "date": "未标注"
+    }
+  ]
+}

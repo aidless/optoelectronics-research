@@ -1,0 +1,78 @@
+{
+  "direction": "光伏与光电转换 / 太阳能电池",
+  "definition": "光伏（Photovoltaic, PV）与光电转换赛道指利用半导体光生伏特效应将太阳辐射直接转换为电能的材料、器件、组件与系统产业，核心产品为太阳能电池片及光伏组件。按技术路线分为晶硅（PERC、TOPCon、HJT、BC/HPBC）与薄膜（CdTe、CIGS、钙钛矿）以及晶硅-钙钛矿叠层等下一代路线。该赛道横跨上游多晶硅/硅片、中游电池组件制造与下游电站系统，是2025-2026年全球可再生能源新增装机的最大单一来源。",
+  "tech_core": "器件核心是p-n结或异质结的内建电场分离光生载流子：光子激发电子-空穴对，经选择性接触与钝化层收集，产生光生电压与电流。当前量产主流为n型TOPCon（隧穿氧化层钝化接触），量产效率约24-25%，实验室认证已达27.79%（晶科，ISFH认证，2025-11）。HJT（异质结）与BC（背接触）分别以高钝化质量和正面无栅线遮挡提升效率；钙钛矿-晶硅叠层通过宽带隙钙钛矿吸收短波、窄带隙硅吸收长波，突破单结Shockley-Queisser 33.7%极限，理论效率可达43%，实验室认证已达35.5%（隆基，ESTI认证，2026-07）。",
+  "status_2025_2026": "装机端：IRENA《2026年可再生能源装机容量统计》显示，2025年全球太阳能新增装机511 GW（其中光伏510 GW、聚光太阳能1 GW），占全球新增可再生能源692 GW的约75%，同比增长27.2%，创自然年口径新高（IRENA，2026-04，https://www.pv-magazine.com/2026/04/02/global-solar-additions-reached-record-511-gw-in-2025-says-irena/）。技术端：n型TOPCon已占晶硅电池产能90%以上，2025年硅电池年产量约600 GW（EurekAlert，2025，https://www.eurekalert.org/news-releases/1118253）；PERC加速退出，HJT、BC（HPBC、ABC）在高端与分布式市场差异化竞争。效率纪录：隆基2025-04-16将晶硅-钙钛矿叠层电池效率推至34.85%（NREL认证），2026-07-14再创35.5%（ESTI认证），并在近工业尺寸下实现34.3%（261 cm²）与32.2%（274 cm²）、叠层组件31.4%与29.4%（隆基官网，2026-07）。晶科2025-11-27以27.79%刷新n型TOPCon世界纪录（ISFH认证），2025-12-01将钙钛矿-硅叠层提至34.76%（NPVM认证），2026年又将TOPCon基钙钛矿叠层推至35.24%（中科院上海微系统所认证，为其第34次效率/功率世界纪录）。产业化：Oxford PV于2024-09向美国公用事业客户交付首批24.5%商用叠层组件（energy-solutions.co，2026更新），标志叠层从实验室走向商业化初期。",
+  "key_players": [
+    "隆基绿能 LONGi（中国，HPBC与晶硅-钙钛矿叠层，叠层世界纪录34.85%→35.5%）",
+    "晶科能源 JinkoSolar（中国，TOPCon Tiger Neo与TOPCon基钙钛矿叠层，27.79%/35.24%）",
+    "通威股份 Tongwei（中国，多晶硅与电池片一体化龙头）",
+    "天合光能 Trina Solar（中国，Vertex N系列TOPCon组件）",
+    "晶澳科技 JA Solar（中国，n型Bycium+电池与组件）",
+    "爱旭股份 Aiko Solar（中国，ABC背接触电池）",
+    "Oxford PV（英国/德国，钙钛矿-硅叠层组件商业化先行者，24.5%商用组件）",
+    "美国国家可再生能源实验室 NREL（美国，Best Research-Cell Efficiency官方效率纪录认证机构；2026年相关页面以NLR名义维护，https://www.nlr.gov/pv/cell-efficiency）"
+  ],
+  "employment_roles": [
+    "电池工艺工程师（TOPCon/HJT/BC/钙钛矿沉积与钝化工艺开发）",
+    "器件研发科学家（叠层电池、界面工程、稳定性与衰减机理）",
+    "组件与封装工程师（叠层组件可靠性、封装材料与层压工艺）",
+    "设备与产线工程师（PECVD/PVD/镀膜/激光设备调试与良率提升）",
+    "测试与认证工程师（效率标定、IEC可靠性、第三方认证对接）",
+    "光伏系统/电站与电力交易工程师（系统设计、并网、储能配置）"
+  ],
+  "skills": [
+    "半导体物理与器件（p-n结、载流子复合、能带与选择性接触）",
+    "薄膜沉积与钝化工艺（PECVD、PVD、ALD、蒸镀、狭缝涂布）",
+    "晶硅电池路线工艺（TOPCon隧穿氧化层、HJT异质结、BC背接触）",
+    "钙钛矿材料与叠层器件（带隙调控、界面钝化、2T/4T叠层结构）",
+    "表征与测试（I-V、EQE、PL/TRPL、稳态与瞬态、效率标定）",
+    "组件封装与可靠性（IEC 61215/61730、湿热与PID测试、25年质保）",
+    "数据分析与工艺建模（Python、DOE、TCAD/AFORS-HET仿真）",
+    "产业链与成本分析（LCOE、产能与供需、银浆/铟/铅等关键材料）"
+  ],
+  "future_outlook": "未来3-5年（2026-2030）主线为两条：一是n型晶硅（TOPCon为主体、BC/HJT高端分化）继续降本增效，量产效率向25%+推进；二是钙钛矿-晶硅叠层从MW/百MW中试走向GW级量产，效率纪录已在两年内从34.85%跃升至35.5%（隆基，2026-07），组件效率达31.4%（隆基官网，2026-07），并向43%理论极限逼近。IRENA等机构预计光伏将继续贡献可再生能源新增装机的最大份额（2025年已达511 GW，IRENA 2026-04）。判断叠层能否规模化的关键窗口是TOPCon兼容叠层能否在2027年前后取得>32%认证效率并证明GW级良率与25年稳定性（PatSnap，2026-04，https://www.patsnap.com/resources/blog/articles/perovskite-silicon-tandem-solar-cells-hit-34-in-2026）。",
+  "risks": "①稳定性验证缺口：目前公开最长运行数据约1000小时，而组件质保要求25年，叠层长期可靠性尚未获实测验证（PatSnap，2026）。②铅（Pb）法规：欧盟及美国部分州对含铅钙钛矿的限制可能抬升合规与回收成本（PatSnap，2026）。③GW级制造良率与成本：叠层产线良率、设备投资与银/铟等关键材料供应仍未在GW尺度验证（IRENA太阳能pv供应链成本工具，2026-02）。④产能过剩与价格战：晶硅主链产能扩张快于需求，组件价格与厂商盈利承压（IRENA，2026-04）。⑤技术路线替代风险：TOPCon持续提效可能延后叠层的经济性拐点。⚠ 公开资料未覆盖：各路线精确的度电成本（LCOE）与2027年后GW级叠层实际出货量尚无权威公开数据。",
+  "key_claims": [
+    {
+      "claim": "隆基于2026-07-14宣布其晶硅-钙钛矿叠层电池效率达35.5%，由欧洲太阳能测试装置（ESTI）认证，再创世界纪录；此前路线进展为33.9%（2023-11）、34.6%（2024-06）、34.85%、35.2%。",
+      "url": "https://www.longi.com/en/news/crystalline-silicon-perovskite-tandem-solar-cell-new-world-efficiency-2026",
+      "date": "2026-07-14"
+    },
+    {
+      "claim": "隆基于2025-04-16实现两端晶硅-钙钛矿叠层电池34.85%转换效率，经美国NREL认证；该结果同时被Martin Green团队《Solar Cell Efficiency Tables》第66版收录。",
+      "url": "https://www.longi.com/en/news/silicon-perovskite-tandem-solar-cells-new-world-efficiency",
+      "date": "2025-04-16"
+    },
+    {
+      "claim": "晶科能源将n型TOPCon基钙钛矿叠层电池效率提升至35.24%，由中科院上海微系统所认证，为5个月内从34.82%的再次突破，也是其第34次电池效率/组件功率世界纪录。",
+      "url": "https://www.jinkosolar.com/en/site/newsdetail/3179",
+      "date": "2026-11"
+    },
+    {
+      "claim": "晶科能源于2025-11-27以27.79%刷新n型TOPCon电池世界纪录，由德国ISFH认证；此前同年6月同型号182mm电池已达27.02%（NPVM认证）。",
+      "url": "https://www.pv-magazine.com/2025/11/27/jinkosolar-achieves-world-record-efficiency-of-27-79-for-topcon-solar-cell",
+      "date": "2025-11-27"
+    },
+    {
+      "claim": "IRENA数据显示2025年全球太阳能新增装机达511 GW（光伏510 GW+聚光太阳能1 GW），占692 GW可再生能源新增装机约75%，同比增长27.2%，创自然年新高。",
+      "url": "https://www.pv-magazine.com/2026/04/02/global-solar-additions-reached-record-511-gw-in-2025-says-irena/",
+      "date": "2026-04-02"
+    },
+    {
+      "claim": "2025年硅太阳能电池年产量约600 GW，n型TOPCon已占晶硅电池产能90%以上，成为绝对主流路线。",
+      "url": "https://www.eurekalert.org/news-releases/1118253",
+      "date": "2025"
+    },
+    {
+      "claim": "NREL维护的Best Research-Cell Efficiency Chart是各类光伏技术最高认证效率的国际权威纪录（1976年至今）；2026年相关官方页面以NLR（National Laboratory of the Rockies）名义维护。",
+      "url": "https://www.nlr.gov/pv/cell-efficiency",
+      "date": "未标注"
+    },
+    {
+      "claim": "晶科能源于2025-12-01将钙钛矿-硅叠层电池效率从34.22%提升至34.76%，由中国国家光伏质检中心（NPVM）确认；Longi在同期仍以34.85%保持该技术路线世界纪录。",
+      "url": "https://www.pv-magazine.com/2025/12/01/jinkosolar-achieves-34-76-efficiency-for-perovskite-silicon-tandem-solar-cells",
+      "date": "2025-12-01"
+    }
+  ]
+}

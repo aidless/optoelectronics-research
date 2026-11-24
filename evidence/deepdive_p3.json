@@ -1,0 +1,250 @@
+{
+  "direction": "P3 光计算能效口径",
+  "generated_at": "2026-11-24",
+  "gaps": [
+    {
+      "gap": "缺口1：'160 TOPS/W'、'65.5 TOPS/W' 这两个光计算能效数字分别对应哪款芯片/哪篇论文？原始出处？是否公布吞吐+功耗？",
+      "queries_tried": [
+        "\"160 TOPS/W\" photonic chip Science Taichi Tsinghua",
+        "\"160 TOPS/W\" 光计算 芯片 能效 论文",
+        "\"65.5 TOPS/W\" optical computing chip paper",
+        "\"65.5 TOPS\" photonic processor power consumption",
+        "Lightmatter Envise 65.5 TOPS 78 W 1.6 W ResNet-18"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "160 TOPS/W = 清华大学'太极'(Taichi)光子计算芯片，论文 'Large-scale photonic chiplet Taichi empowers 160-TOPS/W artificial general intelligence'，Xu Z 等，Science 384:202-9, DOI 10.1126/science.adl1203, PMID 38603505；同篇给出面积效率 879 T MACS/mm²、百万神经元量级、1000类分类 Omniglot 91.89%。",
+          "url": "https://doi.org/10.1126/science.adl1203",
+          "date": "2024-04-12",
+          "strength": "一手(期刊原文DOI+清华官方交叉验证);Science 原文被Cloudflare挡,经清华官网/北京市科委/NSR引文交叉确认"
+        },
+        {
+          "claim": "清华官网对'太极'的表述：面积效率 879 T MACS/mm²、能量效率 160 TOPS/W；属机构发布值，未在同源处给出整机功耗或系统边界定义。",
+          "url": "https://www.tsinghua.edu.cn/info/1175/110690.htm",
+          "date": "2024-04-12",
+          "strength": "一手(机构官方发布);系统边界/整机功耗缺失"
+        },
+        {
+          "claim": "重大纠偏：'65.5 TOPS/W' 并非独立能效数字。一手 NSR 综述原文：Envise 'Operating at 65.5 TOPS while consuming only 1.6 W of optical and 78 W of electrical power ... 97.8% of FP32 accuracy on CIFAR-10 using ResNet-18'。65.5 是吞吐量(TOPS)，除以 78 W 电功耗得约 0.84 TOPS/W。立项书把 65.5 当作与 160 并列的能效值属误标。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/",
+          "date": "2026-05-27",
+          "strength": "一手(同行评议综述,含曦智团队作者);逐字原文核对"
+        },
+        {
+          "claim": "中文综述交叉印证：平均吞吐 65.5 TOPS(500 MHz)、峰值 262 TOPS(2 GHz)、能效 0.81 TOPS/W(average)——再次表明 65.5 为吞吐而非能效。",
+          "url": "https://www.researching.cn/ArticlePdf/m00098/2026/47/6/060401.pdf",
+          "date": "2026",
+          "strength": "未验证(PDF抓取失败,仅得摘要)"
+        },
+        {
+          "claim": "二手技术解析：Envise 每秒 65.5 trillion 16-bit operations,功耗约 78 W 电 + 1.6 W 光。",
+          "url": "https://tspasemiconductor.substack.com/p/lightmatter-passage-a-comprehensive",
+          "date": "2025",
+          "strength": "二手(技术博客,与NSR一手数据一致)"
+        }
+      ],
+      "verdict": "160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。",
+      "note": "一手出处为 Sci/NSR;Science 与 PubMed 原文页受 Cloudflare/反爬阻挡,采用清华官网+北京市科委+NSR 引文三重交叉核对。近12个月证据 NSR 2026-05 优先。"
+    },
+    {
+      "gap": "缺口2：Lightmatter Envise 约 0.84 TOPS/W 的原始出处核对（论文/白皮书/官方），确认'唯一可核验口径'是否站得住",
+      "queries_tried": [
+        "Lightmatter Envise 0.84 TOPS/W original source paper whitepaper",
+        "\"Universal photonic artificial intelligence acceleration\" Nature 2025 Envise",
+        "Lightmatter Envise TOPS per watt 65.5 78 W efficiency"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "Envise 原始性能数据出自 Nature 2025-04-09 'Universal photonic artificial intelligence acceleration', Ahmed SR 等(Lightmatter), Nature 640:368-374, DOI 10.1038/s41586-025-08854-x, PubMed 40205212;4×128×128 PTC、12nm CMOS、ABFP 数值格式、QAT。已逐字核对 Nature 摘要页。",
+          "url": "https://www.nature.com/articles/s41586-025-08854-x",
+          "date": "2025-04-09",
+          "strength": "一手(期刊原文摘要逐字核对)"
+        },
+        {
+          "claim": "0.84 TOPS/W = 65.5 TOPS ÷ 78 W 电功耗(NSR 综述原始数字);中文综述给 0.81 TOPS/W(average)。0.84 是可从一手数据复算的口径,不是厂商直接披露的 TOPS/W 字面数字。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/",
+          "date": "2026-05-27",
+          "strength": "一手数据+复算(分母口径为电功耗78W,未计1.6W光功耗)"
+        },
+        {
+          "claim": "Lightmatter 官方博客 'A New Kind of Computer' 介绍 Envise 架构与发布。",
+          "url": "https://lightmatter.com/blog/a-new-kind-of-computer",
+          "date": "2025-04-09",
+          "strength": "一手(厂商官方,但未给 TOPS/W 字面值)"
+        },
+        {
+          "claim": "冲突数据:mirrorfrog 称 Envise 30 TOPS/W(INT8,4 POPS,TDP 65W),与 0.84 差 30 倍以上,口径不明。",
+          "url": "https://mirrorfrog.com/lightmatter-envise/",
+          "date": "2025",
+          "strength": "未验证(单源,口径冲突,不采纳)"
+        }
+      ],
+      "verdict": "0.84 TOPS/W 站得住,一手出处是 Nature 2025 论文(经 NSR 原始吞吐量+功耗数据复算),非二手 Kaggle 聚合。但须限定:'唯一可核验口径'应表述为'可从一手披露的 65.5 TOPS/78W 复算的口径',而非厂商直接给出的 TOPS/W 字面值;0.81–0.84 随分母是否计光功耗浮动。",
+      "note": "0.84 字面值最早在二手聚合(Kaggle 数据集)出现,一手 Nature 论文未逐字写 0.84;此为复算值,务必在立项书标注口径。"
+    },
+    {
+      "gap": "缺口3：清华 LightGen 全光计算芯片 3.57×10^4 TOPS、6.64×10^2 TOPS/W、2.62×10^2 TOPS/mm²、210万光学神经元——找原始论文(Science?)核对数字",
+      "queries_tried": [
+        "LightGen all-optical chip Science 3.57e4 TOPS 6.64e2 TOPS/W 2.62e2",
+        "LightGen 全光计算芯片 Science 210万光学神经元 上海交大",
+        "All-optical synthesis chip large-scale intelligent semantic vision generation Science DOI"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "LightGen 原始论文:'All-optical synthesis chip for large-scale intelligent semantic vision generation', Science 2025-12-18/19, DOI 10.1126/science.adv7434。作者为上海交通大学集成电路学院陈一彤课题组;清华戴琼海/吴嘉敏团队为合作方。用户任务清单'清华 LightGen'表述不准确,应为上海交大。",
+          "url": "https://doi.org/10.1126/science.adv7434",
+          "date": "2025-12-18",
+          "strength": "一手(期刊DOI)+清华官网转述交叉验证;Science 原文页被Cloudflare挡,数字来自转述未逐字核对原文"
+        },
+        {
+          "claim": "LightGen 数字:面积 136.5 mm²、>210万光学神经元、端到端 3.57×10^4 TOPS、能效 6.64×10^2 TOPS/W、计算密度 2.62×10^2 TOPS/mm²,三项比 NVIDIA A100 高两个数量级;理想输入条件下理论算力提升7个数量级、能效8个数量级。技术路线 LNOI+InP 非硅材料、3D 堆叠封装、全光闭环。",
+          "url": "https://baike.baidu.com/item/LightGen/67112849",
+          "date": "2025-12",
+          "strength": "二手(百科/新闻转述,非原文逐字;数字在多个转述源一致)"
+        },
+        {
+          "claim": "清华官网转述：实测系统级算力与能效均较国际顶尖芯片提升两个数量级以上。",
+          "url": "https://www.tsinghua.edu.cn/info/1182/128225.htm",
+          "date": "2026-09-14",
+          "strength": "一手(机构官方转述)"
+        },
+        {
+          "claim": "EurekAlert 科研新闻稿报道 LightGen 全光生成式AI芯片成果。",
+          "url": "https://www.eurekalert.org/news-releases/1109809",
+          "date": "2025-12",
+          "strength": "二手(科研新闻稿;正文抓取受限)"
+        }
+      ],
+      "verdict": "找到原始论文 Science 2025-12, DOI 10.1126/science.adv7434,数字(3.57×10^4 TOPS/6.64×10^2 TOPS/W/2.62×10^2 TOPS/mm²/210万神经元)在多个转述源一致且方向正确,但未逐字核对原文(Science 页被挡)。重大澄清:LightGen 是上海交大陈一彤团队成果,非清华;清华团队为合作方且另发量化标准论文。",
+      "note": "立项书如写'清华 LightGen'需更正为'上海交大 LightGen';具体数字引用应标注'据 Science 论文转述,未逐字核对原文'。"
+    },
+    {
+      "gap": "缺口4：Q.ANT 的'比 GPU 高 X 倍'类宣称的具体口径与原始出处",
+      "queries_tried": [
+        "Q.ANT photonic processor faster than GPU 100x claim source",
+        "Q.ANT LRZ second generation NPU benchmark 50x 30x energy efficiency whitepaper",
+        "Q.ANT 比GPU 高 100倍 光子处理器 口径"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "Q.ANT 官方新闻稿(2026-03-17):'up to 90x lower power consumption per workload and up to 100x greater data center capacity'(光子架构总体潜力);LRZ 实测(对比自家第一代 NPU):矩阵乘 >50x、ResNet-18 推理 25x、典型负载能耗 6x lower。全部为相对倍数,无绝对 TOPS/W。",
+          "url": "https://qant.com/press-releases/higher-performance-less-energy-q-ant-deploys-second-generation-photonic-processors-at-supercomputing-center-lrz",
+          "date": "2026-03-17",
+          "strength": "一手(厂商官方新闻稿)"
+        },
+        {
+          "claim": "立项书所引 Q.ANT 新闻(2026-05-19):LRZ 独立评估最高 100x 性能、内部测试最高 30x 能效/50x 单应用性能;产品定位 GPU 协处理器而非替代。",
+          "url": "https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges",
+          "date": "2026-05-19",
+          "strength": "一手(厂商官方)"
+        },
+        {
+          "claim": "Q.ANT 白皮书 PDF(2025-11):'Up to 30x higher energy efficiency and 50x performance gains per application'。",
+          "url": "https://qant.com/wp-content/uploads/2025/11/20251111_QANT-Photonic-AI-Accelerator-Gen-2.pdf",
+          "date": "2025-11",
+          "strength": "一手(厂商白皮书)"
+        },
+        {
+          "claim": "LRZ 官方实测页:Q.ANT 系统功耗 350–420W、卡 25–100W,对比 GPU 达 1000W。给出绝对功耗但无 TOPS/W。",
+          "url": "https://www.lrz.de/en/news/detail/photonic-computers-in-real-world-test",
+          "date": "2026",
+          "strength": "一手(第三方机构 LRZ 官方)"
+        }
+      ],
+      "verdict": "Q.ANT '比GPU高X倍'口径 = 相对倍数:100x 是'数据中心容量潜力'(非实测能效),30x 能效/50x 性能为对自家第一代或单应用内部测试;LRZ 第三方实测主要为对一代 NPU 的倍数(>50x 矩阵乘、25x ResNet-18、6x 能效),且给出绝对功耗(系统350–420W)。无任何绝对 TOPS/W,与立项书表述一致,无需改口径。",
+      "note": "注意区分'对GPU潜力宣称'与'对一代实测',立项书引用时勿混用;100x 不可写作实测能效倍数。"
+    },
+    {
+      "gap": "缺口5：曦智 PACE 系列具体出货量、是否有第三方实测能效",
+      "queries_tried": [
+        "曦智科技 PACE 出货量 招股书 片数 全球第一",
+        "Lightelligence PACE shipment volume third-party measured energy efficiency TOPS/W",
+        "曦智 光计算芯片 客户数 出货 第三方实测 能效"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "招股书口径:2024 与 2025 年曦智光计算芯片累计出货量均位居全球第一(排名宣称,无绝对片数/卡数)。",
+          "url": "https://finance.ifeng.com/c/8sKMERSrEQR",
+          "date": "2026-04-14",
+          "strength": "二手(媒体引招股书,仅排名无绝对数)"
+        },
+        {
+          "claim": "36氪同口径报道曦智光计算芯片出货量全球第一。",
+          "url": "https://m.36kr.com/p/3785865036111108",
+          "date": "2026",
+          "strength": "二手(媒体转述,与上源同源)"
+        },
+        {
+          "claim": "客户数:2023 新增11、2024 新增10、2025 新增22。",
+          "url": "https://www.huxiu.com/article/4850630.html",
+          "date": "2026",
+          "strength": "二手(媒体报道)"
+        },
+        {
+          "claim": "PACE 技术数据来自厂商/合作方:PACE Nature 论文(64×64 矩阵、16000 光子器件);NSR 综述给 PACE 3ns/cycle、7.61-bit、Ising 问题比商用 GPU 快两个数量级——均为厂商/合作方数据,未见独立第三方实测 TOPS/W。",
+          "url": "https://www.xztech.ai/community/papers/3",
+          "date": "2025",
+          "strength": "二手(厂商转载论文;非独立第三方实测)"
+        }
+      ],
+      "verdict": "确认未覆盖:公开资料只有'累计出货量全球第一'的排名宣称,无具体出货片数/卡数;第三方独立实测能效(TOPS/W)未找到,现有 PACE能耗/性能数据均为厂商或合作方来源。",
+      "note": "found=false 针对'具体出货量数字+第三方实测能效'两项;排名宣称属部分命中但非可核验绝对数。近12个月中文财经源已检索,无绝对出货数。"
+    },
+    {
+      "gap": "缺口6(最重要)：是否有标准组织(OIF/IEEE/JEDEC/信通院等)在做'光计算能效口径/基准'标准化？P3'方法学空位'是否仍成立？",
+      "queries_tried": [
+        "IEEE standard metrics energy efficiency machine learning hardware P1959 P1960",
+        "optical computing energy efficiency benchmark standard OIF JEDEC IEEE photonics",
+        "光计算 能效 口径 基准 标准化 信通院 IEEE",
+        "Nature Nanotechnology optical computing quantitative standard metrics 2026"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "IEEE P1959 'Draft Standard for Metrics for Energy Efficiency in Machine Learning Hardware Architectures and Systems':Active PAR,PAR 批准 2024-11-12,IEEE Communications Society/Green ICT SC,EECH 工作组,Chair Sara Biyabani。范围含 CPU/GPU/FPGA/专用处理器/加速器/内存/存储/互连的 ML 能效指标定义,覆盖 edge 到数据中心;明确'Creation of benchmarks is not in scope'。这是对 P3 立项依据最有冲击的一条。",
+          "url": "https://standards.ieee.org/ieee/1959/11831/",
+          "date": "2024-11-12",
+          "strength": "一手(IEEE 官方标准项目页)"
+        },
+        {
+          "claim": "IEEE P1960 'Guide for Energy Efficiency in Machine Learning Hardware Architectures and Systems',同一工作组,Active。",
+          "url": "https://standards.ieee.org/ieee/1960/11832/",
+          "date": "2024",
+          "strength": "一手(IEEE 官方标准项目页)"
+        },
+        {
+          "claim": "Nature Nanotechnology 2026-09-09 'How nanophotonics can drive optical computing toward practical applications',DOI 10.1038/s41565-026-02264-4(清华戴琼海/吴嘉敏 + 上海交大陈一彤):提出光计算走向实际应用的'量化标准'方法体系(性能评估→系统实现)。属学术论文方法学,非标准组织标准,但直接冲击 P3'方法学空位'主张。",
+          "url": "https://doi.org/10.1038/s41565-026-02264-4",
+          "date": "2026-09-09",
+          "strength": "一手(期刊论文DOI)+清华官网新闻交叉验证"
+        },
+        {
+          "claim": "arXiv 2604.10841 'Harnessing Photonics for Machine Intelligence'(2026-04-12,Hanqing Zhu 等,UT Austin):用 SimPhony 跨层建模框架 benchmark 光子 AI 加速器,'Rather than relying on isolated figures of merit for the photonic core'。",
+          "url": "https://arxiv.org/abs/2604.10841",
+          "date": "2026-04-12",
+          "strength": "未验证(单源,仅检索结果,未深读原文)"
+        },
+        {
+          "claim": "信通院 CAICT《光计算技术与产业发展研究报告》(2023-11):标准化处于起步阶段,ISO/IEC JTC1、IEEE、ITU-T、TC578 主要做术语定义,IEC TC90 做光量子器件——针对光量子计算,非光计算能效口径。",
+          "url": "https://www.caict.ac.cn/kxyj/qwfb/ztbg/202311/P020231122389415230856.pdf",
+          "date": "2023-11",
+          "strength": "一手(官方研究报告PDF)"
+        },
+        {
+          "claim": "OIF:Energy Efficient Photonic Interconnects for AI Compute Scale-up 白皮书 + 3.2T CPO 协议(互连侧);JEDEC 做硅光可靠性标准。均为互连/可靠性,非计算能效口径。",
+          "url": "https://www.oiforum.com/wp-content/uploads/OIF-EEI-COI-WP-01.0.pdf",
+          "date": "2025",
+          "strength": "一手(OIF 官方白皮书);与计算能效口径不直接相关"
+        }
+      ],
+      "verdict": "没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。",
+      "note": "最重要结论。IEEE P1959 的 'benchmarks not in scope' 措辞对 P3 既是风险也是机会:通用标准不覆盖基准,恰为 P3 留出基准层空间,但'口径'层已被通用标准占位。"
+    }
+  ],
+  "overall": "6 个缺口中 5 个找到一手出处,1 个(缺口5 具体出货量+第三方实测能效)确认未覆盖。核心纠偏有两条:①'65.5 TOPS/W'实为 Envise 吞吐量 65.5 TOPS 的误标,其能效为 0.81–0.84 TOPS/W(NSR 2026 一手证实),立项核心'对立证据'须改写;②LightGen 是上海交大而非清华团队成果(Science 2025-12, DOI 10.1126/science.adv7434)。最重要的立项依据调整来自缺口6:IEEE P1959/P1960 通用 ML 硬件能效指标草案(Active PAR,2024-11-12,明确不做 benchmark)与 Nature Nanotech 2026-09 光计算量化标准方法学已出现,P3'方法学空位'不能再按空白论证,须转向'光计算专用分层口径+含转换开销记账的可复现基准'差异化定位并与通用标准对接。160 TOPS/W(清华太极,Science 2024)与 Envise 0.84 TOPS/W(Nature 2025 复算口径)两项锚点均有可靠一手出处,但都缺整机功耗/系统边界的明确定义——正是 P3 可切入的方法学缝隙。所有 Science/PubMed 原文页受 Cloudflare/反爬阻挡,以官网、同行评议综述、白皮书交叉核对;单源/仅摘要项已在 strength 标'未验证'。"
+}

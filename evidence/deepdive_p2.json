@@ -1,0 +1,186 @@
+{
+  "direction": "P2 III-V激光异质集成",
+  "generated_at": "2026-11-24",
+  "gaps": [
+    {
+      "gap": "200G以上高速激光芯片高端产能约90%集中于住友电工/JX金属/AXT/Coherent四家——一手出处或行业权威报告",
+      "queries_tried": [
+        "200G以上高速激光芯片 高端产能 90% 住友电工 JX金属 AXT Coherent",
+        "\"90%\" high-end laser chip capacity Sumitomo Electric JX Metal AXT Coherent 200G",
+        "100G 200G EML 光芯片 高端产能 90% 住友电工 JX金属 AXT Coherent 四家",
+        "InP substrate high speed laser chip 90 percent capacity four suppliers Sumitomo JX AXT Coherent",
+        "InP substrate 90% laser chip capacity Sumitomo JX AXT Coherent high-speed 200G",
+        "200G laser chip supply concentration four companies market share"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "TrendForce 2025-12-08 新闻稿：EML 仅少数供应商可得，列举 Lumentum、Coherent（Finisar）、Mitsubishi、Sumitomo、Broadcom；NVIDIA 预占大量 EML 产能，交期拉长至 2027 年以后。该权威口径列出 5 家且未含 JX 金属/AXT，也未给出 90% 数字，与待核主张的机构构成冲突。",
+          "url": "https://trendforce.com/presscenter/news/20251208-12823.html",
+          "date": "2025-12-08",
+          "strength": "机构新闻稿（一手发布，二手数据）；未验证（单源）"
+        },
+        {
+          "claim": "钛媒体《光芯解码-企业突围篇》给出高端光芯片由海外头部寡头主导的定性判断，检索摘要未出现 90% 或四家名单，未深读全文。",
+          "url": "https://www.tmtpost.com/8090088.html",
+          "date": "",
+          "strength": "仅搜索摘要，未验证"
+        }
+      ],
+      "verdict": "确认仍未覆盖",
+      "note": "两轮关键词重试（中英各角度）均未找到给出『200G 以上高端产能约 90%』及『住友电工/JX 金属/AXT/Coherent 四家』这一具体组合的一手或权威出处。可见的是不同且互相冲突的供应商名单（TrendForce 五家 vs 本地 JSON 四家 vs 本地另一口径 Lumentum/Coherent/博通）。立项书 A2 应继续标『未挂 URL、不可采信为定论』，不得把两个口径合并。"
+    },
+    {
+      "gap": "异质集成 III-V 激光器在硅基上的界面缺陷密度—阈值电流—老化退化率的定量关系",
+      "queries_tried": [
+        "heterogeneous integration III-V laser on silicon defect density threshold current degradation rate quantitative",
+        "硅基异质集成 III-V 激光器 界面缺陷密度 阈值电流 老化退化率 定量关系",
+        "threading dislocation density threshold current degradation rate heterogeneous III-V silicon laser quantitative correlation",
+        "缺陷密度 阈值电流 老化 退化率 硅基 III-V 激光器 定量 SPIE"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "OICE 2026 会议论文（8 英寸 Si3N4 PIC + III-V 增益芯片）：500 次热循环后出现两种退化区制——界面应力累积主导的阈值电流缓慢漂移，以及键合层边缘分层触发的突变失效；FEM 在 −40~+125°C 下给出界面角部 von Mises 应力达 312 MPa；Weibull 特征寿命 η=1840 次热循环。",
+          "url": "https://doi.org/10.1117/12.3123229",
+          "date": "2026-08-11",
+          "strength": "一手（SPIE 会议论文摘要，经 OpenAlex/Crossref 元数据验号；全文闭源）"
+        },
+        {
+          "claim": "ICEPT 2026 论文：多应力加速老化（TC −40/+85/+105/+125°C；HTOL 结温 60/85/105°C）+ 3D FEM + PL-DOP/FIB-SEM 交叉验证；Paris-law 裂纹扩展模型复现实验裂纹演化在 ±8.5% 内；Weibull β=3.0–3.8；Coffin-Manson/Arrhenius 外推 Ea=0.72 eV、使用条件 MTTF>100,000 h；BCB 厚度 2.5–5.5 µm、角部减应力 18%，B10 寿命 390→>900 次热循环。",
+          "url": "https://doi.org/10.1109/icept71373.2026.11690061",
+          "date": "2026-08-01",
+          "strength": "一手（IEEE 会议论文摘要，经 OpenAlex/Crossref 验号；全文闭源）"
+        },
+        {
+          "claim": "综述：键合型 III-V/Si 激光器与常规激光器共享外延相关退化机制（非辐射复合中心、掺杂扩散）；硅上 InAs 量子点激光器寿命强烈受 extended defects（主要是贯穿有源区的失配位错）密度限制，阻挡层可大幅削弱该影响。",
+          "url": "https://doi.org/10.3390/electronics10222734",
+          "date": "2021-11-09",
+          "strength": "一手综述（对既有文献的二手归纳；MDPI 正文页被 Access Denied，摘要经 OpenAlex 取得）"
+        },
+        {
+          "claim": "Buffolo 等 2018 年论文对异质 III-V/Si 环形镜激光器做恒流加速老化，识别阈值电流上升等共同退化机制（PDF 正文抓取失败，仅搜索摘要）。",
+          "url": "https://doi.org/10.1016/j.microrel.2018.06.058",
+          "date": "2018-09-01",
+          "strength": "未验证（仅摘要式证据，PDF 未取全文）"
+        }
+      ],
+      "verdict": "找到一手出处",
+      "note": "仍无单一文献同时把『缺陷密度（cm^-2）』作为自变量给出缺陷密度—阈值电流—老化退化率两组拟合及置信区间；已找到的是同方向的相邻一手证据：界面应力/裂纹密度—阈值漂移—加速老化寿命（Weibull、Ea、MTTF）以及位错密度—量子点激光器寿命的定性结论。可支撑立项书 G2 作为『审慎探索』，但不能写成已完成的三者联动关系。"
+    },
+    {
+      "gap": "台积电 COUPE 平台 2026 下半年具体产能（晶圆片数/月产能）",
+      "queries_tried": [
+        "TSMC COUPE 2026 second half capacity wafers per month",
+        "台积电 COUPE 2026下半年 产能 晶圆片 月产能",
+        "TSMC PIC capacity expansion 2026 Q4 15000 wafers COUPE",
+        "TSMC COUPE 2H26 capacity Commercial Times institutional investors"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "工商时报：法人估计台积电 PIC 月产能由约 500 片升至 2026Q2 1 万片、2026Q4 1.5 万片、2028 年至少 2.5 万片；按每片 648 die 计，年化 PIC 产出 400 万→7800 万→1.94 亿颗，考虑 SoIC 良率 50% 与实际组装良率后光引擎出货估计约 39 万/778 万/4860 万颗。2026–2027 COUPE 主要量产客户可能为 NVIDIA、Broadcom、AMD。",
+          "url": "https://www.ctee.com.tw/news/20260708700075-439901",
+          "date": "2026-07-08",
+          "strength": "二手（原始媒体报道法人估算，非台积电官方披露）"
+        },
+        {
+          "claim": "TrendForce News 转述同一 Commercial Times 估算：TSMC PIC capacity 500 → 10,000 wafers/month (2026Q2) → 15,000 (2026Q4) → ≥25,000 (2028)；并提醒 PIC 产能增加不等于 CPO 立即放量，仍需 SoIC 整合、光电测试、光引擎封装、FAU 耦合与系统验证。",
+          "url": "https://www.trendforce.com/news/2026/07/08/news-tsmc-pic-capacity-seen-surging-to-25k-wafersmonth-by-2028-nvidia-broadcom-eyed-as-early-coupe-customers",
+          "date": "2026-07-08",
+          "strength": "二手（机构媒体转述法人估算，未验证）"
+        }
+      ],
+      "verdict": "仅二手或估算",
+      "note": "2026 下半年具体数字已找到：2026Q4 约 15,000 片/月（PIC 总体产能，非 COUPE 专属产线）。两源指向同一 Commercial Times 原始报道，不构成独立交叉验证；未见台积电官方对 COUPE 月产能的正式披露。立项书『公开资料未覆盖』应改为『仅有法人估算，无官方口径』。"
+    },
+    {
+      "gap": "硅基异质集成激光器的可靠性/寿命公开数据（MTTF、老化测试）",
+      "queries_tried": [
+        "heterogeneous integrated III-V silicon laser reliability lifetime MTTF accelerated aging test",
+        "硅基异质集成激光器 可靠性 寿命 MTTF 老化测试",
+        "Reliability of III-V/Si heterogeneously integrated lasers 0.1 FIT 55000 lasers SPIE 2025"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "Intel（SPIE Silicon Photonics XX, 2025）：集成 InP 混合激光器消除解理面光学灾变损伤、III-V 再生长界面缺陷与装配 ESD 失效；45,000 小时高温工作寿命测试（32 颗）退化可忽略；>55,000 颗加速寿命测试得到失效率 <0.1 FIT；对 >600 万颗混合激光器 3 年现场数据做 100% 失效分析，验证为 0.05 FIT。",
+          "url": "https://doi.org/10.1117/12.3043449",
+          "date": "2025-03-20",
+          "strength": "一手（Intel 作者会议论文，摘要经 OpenAlex/Crossref 验号；全文闭源）"
+        },
+        {
+          "claim": "ICEPT 2026：III-V-on-Si 键合界面多应力加速老化 + FEM 联合验证，Weibull β=3.0–3.8，Ea=0.72 eV，使用条件 MTTF>100,000 h，B10 寿命 390→>900 次热循环。",
+          "url": "https://doi.org/10.1109/icept71373.2026.11690061",
+          "date": "2026-08-01",
+          "strength": "一手（会议论文摘要，OpenAlex 验号；全文闭源）"
+        },
+        {
+          "claim": "中文综述转述：硅基 InAs 量子点激光器在 80°C 下表现良好可靠性，最佳样品估算寿命超过 22 年（PDF 抓取失败，仅搜索摘要）。",
+          "url": "https://www.researching.cn/ArticlePdf/m00001/2025/52/16/1603014.pdf",
+          "date": "2025",
+          "strength": "未验证（综述转述，仅搜索摘要）"
+        }
+      ],
+      "verdict": "找到一手出处",
+      "note": "立项书 §2.3 关于『异质集成激光器可靠性/寿命公开数据未覆盖』的表述已被 Intel 2025 一手数据推翻：有 HTOL 时长、FIT 率、现场样本量与失效分析口径。注意口径限制：Intel 器件是晶圆键合/混合集成并经过 100% 老化筛选，不能外推到所有异质集成路径。"
+    },
+    {
+      "gap": "InP 激光器 2025 占光芯片市场 58%、2031 预测 46%（约 69 亿美元）的原始出处核对",
+      "queries_tried": [
+        "LightCounting May 2026 InP lasers 58% 2025 46% 2031 $6.9 billion optical chip market",
+        "site:lightcounting.com may 2026 silicon photonics InP laser 58% 46%"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "LightCounting 原文：收发器/AOC/LPO/LRO/NPO/CPO 用光芯片市场 2025 年约 40 亿美元，2031 年约 150 亿美元；硅光芯片 2025 占 1/3、2031 占 42%（63 亿美元）；InP 激光器（含 CW 激光、可调谐激光与相干用 InP PIC）为最大细分，2025 占 58%，2031 仍占 46%（69 亿美元），含 EML 贡献。预测已计入 NPO/CPO 新产品开发用激光消耗与有限良率。",
+          "url": "https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377",
+          "date": "2026-05",
+          "strength": "一手（机构原始通讯全文，web_fetch 深读核实）"
+        }
+      ],
+      "verdict": "找到一手出处",
+      "note": "立项书 A3 逐字核对无误：58%（2025 实测估计）与 46%/69 亿美元（2031 预测）均出现在原文。仍须遵守 canon：2031 数值为机构预测，不能写成已实现数据。"
+    },
+    {
+      "gap": "外部激光源 ELS vs 片上集成光源的 CPO 链路预算/可靠性对比公开数据",
+      "queries_tried": [
+        "external laser source ELS versus on-chip integrated laser CPO link budget reliability comparison",
+        "CPO external laser source vs integrated laser source insertion loss power budget reliability data",
+        "NVIDIA co-packaged optics external laser source reliability integrated laser link budget technical blog",
+        "CPO external laser source ELS field replaceable reliability laser temperature 15x link loss budget"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "Lumentum 厂商博客（2026-06-17）：ELS/ELSFP 通过把激光器与交换 ASIC 物理分离获得面板可维护性与热隔离；其泵浦激光平台累计近 50 万颗、>200 亿器件小时、<1 FIT 且 2014 年以来零激光二极管现场失效；生产型 UHP 器件加速寿命测试累计 >1 亿器件小时、零失效。引用 Broadcom 在 Meta 累计 100 万 400G 等效端口器件小时无 flap，以及 LightCounting 关于 CPO 系统 AI 集群韧性提升 10 倍的报道。",
+          "url": "https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance",
+          "date": "2026-06-17",
+          "strength": "一手（厂商自报测试数据与引用，未独立验证）"
+        },
+        {
+          "claim": "工程分析：把激光器集成进 SiPho 芯片可获得最低插损与最高功耗收益，但产业因热问题（交换 ASIC 数百瓦、波长/功率/寿命对温度敏感）与可维护性问题（激光器是光系统前三大失效模式之一，片上失效需更换整个封装）选择 ELS；ELSFP 规范使激光器可前面板热插拔。",
+          "url": "https://www.viksnewsletter.com/p/why-cpo-uses-external-lasers",
+          "date": "2025-11-09",
+          "strength": "二手分析（付费墙，公开前段已深读；观点性，非实测数据）"
+        },
+        {
+          "claim": "OIF 共封装实施协议：ELS 可改善 CPO 交换机可靠性，失效激光可在面板更换而无需停机，且物理分离改善激光器热环境。",
+          "url": "https://oiforum.com/wp-content/uploads/OIF-Co-Packaging-FD-01.0.pdf",
+          "date": "2022-02-10",
+          "strength": "一手标准文本（仅搜索摘要，PDF 未深读）"
+        },
+        {
+          "claim": "Lumentum 白皮书搜索摘要给出对比量级：去掉 10–15 英寸电走线可省约 22 dB 信号损耗，CPO 每端口功耗约 30 W→约 9 W（约 3.5 倍改善）；PDF 正文抓取失败，数字未深读复核。",
+          "url": "https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf",
+          "date": "2026-06-10",
+          "strength": "未验证（仅搜索摘要，PDF 未取全文）"
+        }
+      ],
+      "verdict": "找到一手出处",
+      "note": "找到的是分立的可靠性一手数据与架构层面对比依据，未找到同一测试平台下 ELS 与片上集成光源的 head-to-head 链路预算+老化数据。厂商自报 FIT/器件小时属一手但需标注利益关系；22 dB/3.5x 等链路预算数字仅搜索摘要级，不可当已验证结论。"
+    }
+  ],
+  "overall": "6 个缺口逐条联网核实：4 条找到一手出处（G2 相邻一手证据、G4 Intel 2025 可靠性数据、G5 LightCounting 原文、G6 厂商/标准一手数据），1 条仅二手估算（G3 台积电 PIC 2026Q4 约 15,000 片/月，源自法人估计、非官方），1 条确认仍未覆盖（G1『200G 高端产能 90% 集中于住友/JX/AXT/Coherent 四家』，两轮中英检索无一手出处，且权威口径给出冲突名单）。最重要的新证据是 Intel SPIE 2025 论文：>55,000 颗加速寿命测试 <0.1 FIT、>600 万颗现场 3 年 100% 失效分析验证 0.05 FIT、32 颗 45,000 h HTOL 退化可忽略——直接推翻立项书§2.3『异质集成激光器可靠性/寿命公开数据未覆盖』的旧表述，但仅适用于其晶圆键合+100% 老化筛选口径。次要新证据：2026 年两篇会议论文给出界面应力/裂纹—阈值漂移—Weibull/MTTF/Ea 的定量链条（η=1840 次热循环；MTTF>100,000 h，Ea=0.72 eV），把立项书 G2 从零证据提升为审慎探索。"
+}

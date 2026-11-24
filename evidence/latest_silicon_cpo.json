@@ -1,0 +1,115 @@
+{
+  "direction": "硅光子 / CPO / 高速光模块",
+  "generated_at": "2026-11-23",
+  "method": "web_search + advanced_search(exa/tavily) 多组中英文关键词 + web_fetch 深读原始页面；所有数字取自可访问URL原文，未自造。",
+  "latest_breakthroughs": [
+    {
+      "date": "2026-11-19",
+      "title": "CPO市场2026年约9.5亿美元，2036年达204亿美元（CAGR 32.4%）",
+      "detail": "ResearchAndMarkets 发布 CPO 市场2026-2036预测：2026年市场规模约9.5亿美元，2036年达204亿美元，CAGR 32.4%。驱动力为交换平台向51.2/102.4 Tbps升级、AI集群/超大规模数据中心互联需求。同时列明瓶颈：异构集成推高成本、良率、散热（光器件贴近发热ASIC）、测试/标准/互操作性仍处早期。",
+      "url": "https://www.globenewswire.com/news-release/2026/11/19/3406896/28124/en/co-packaged-optics-cpo-market-analysis-and-forecast-2026-2036-ai-data-center-demand-drives-32-4-cagr-creating-a-20-4-billion-market-by-2036.html"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Lambda在SC26披露：NVIDIA Quantum-X CPO交换机已在加拿大魁北克超1万张Blackwell Ultra GPU集群投产运行",
+      "detail": "SC26（芝加哥）上 Lambda 与 NVIDIA 宣布全球首个CPO在AI云环境的规模化商用部署：Quantum-X Photonics 交换机连接魁北克数据中心1万余张 GB300 NVL72 架构 Blackwell Ultra GPU。采用 Q3450-LD 交换机，144×800Gb/s 端口（115.2 Tb/s 无阻塞），18个可现场更换外部激光源ELS。实测对比可插拔：机架级网络延迟降3.8%、Pod级降最多10.1%；光引擎中位运行温度36°C（可插拔为51°C，降15°C），组件可靠性提升最多15倍、激光器数量少4倍。",
+      "url": "https://casrai.org/news/lambda-nvidia-photonics-co-packaged-optics-sc26-2026"
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Tower半导体与旭创（Innolight）扩大NPO合作，中际旭创NPO器件已用Tower PH18M工艺进入早期量产",
+      "detail": "Tower Semiconductor 与中际旭创（Innolight）宣布扩大合作推进近封装光学（NPO）。合作利用Tower的200mm与300mm硅光平台；Innolight 基于 Tower PH18M 工艺的首款NPO器件已在其加州工厂进入早期量产（early production），另有多个产品在 Tower 300mm 平台完成流片。显示国产光模块龙头在NPO路线的量产卡位。",
+      "url": "https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "中际旭创2026Q3财报：单季营收277.69亿元(+171.83%)、归母净利85.87亿元(+173.74%)，前三季695.47亿/222.38亿",
+      "detail": "中际旭创(300308)10月29日发布三季报：2026Q3营收277.69亿元(同比+171.83%，环比增长)，归母净利85.87亿元(同比+173.74%)；前三季营收695.47亿元(+178.13%)，归母净利222.38亿元(+211.81%)，扣非221.10亿元(+212.12%)。机构指2026年千亿营收目标加速兑现。2025年公司全球光互连收入规模第一、市占率21.2%，高速数通光互连细分份额28.1%。野村大幅上调其2026-2027营收预期44%-53%、净利预期64%-75%，目标价375→612元。",
+      "url": "https://emweb.eastmoney.com/pc_hsf10/pages/index.html?code=300308.html"
+    },
+    {
+      "date": "2026-10",
+      "title": "OCP全球峰会：LightCounting（Vlad Kozlov）发布CPO/NPO端口分年预测",
+      "detail": "LightCounting在2026 OCP Global Summit给出NPO/CPO端口出货预测（单位：百万端口）：2027 NPO~2.0 + CPO~2.5 ≈4.5；2028 ~7.5 + ~9 ≈16.5；2029 ~22 + ~20 ≈42；2030 ~44 + ~47 ≈91；2031 ~97.5 + ~91.5 ≈189。CPO端口在2030年前后接近并超过NPO，2031年总量逼近1.9亿端口，标志CPO从示范走向规模化的量化拐点。",
+      "url": "https://www.simpletechtrend.com/en/post/ocp-2026-lightcounting-cpo-npo-forecast-scenarios-en"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "Kyocera联合东北大学：激光退火直接把光隔离器集成到硅光芯片，背反射降约95%",
+      "detail": "日本京瓷（Kyocera）与东北大学开发激光退火技术，把光隔离器直接集成到硅光芯片上，将背向反射光减少约95%，改善硅光光互连的信号稳定性、能效与可靠性，针对AI数据中心光互连。属硅光关键无源器件（隔离器）集成的工艺突破。",
+      "url": "https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "NLM Photonics与SilOriX签JDA：硅-有机混合调制器+电光材料，推下一代光子集成电路",
+      "detail": "NLM Photonics 与 SilOriX 于2026-09-21签署联合开发协议，推进高速、低功耗光通信的下一代PIC。合作结合SilOriX的硅-有机混合(SOH)调制器设计与NLM的Selerion-HTX电光材料，目标提升调制性能、带宽与能效，并支持可扩展硅光制造。属材料/器件层技术突破。",
+      "url": "https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries"
+    },
+    {
+      "date": "2026-08-12",
+      "title": "NVIDIA Spectrum-X Ethernet Photonics正式进入全面量产(full production)",
+      "detail": "NVIDIA官方（YouTube频道2026-08-12发布）宣布 Spectrum-X Ethernet Photonics 进入全面量产，面向下一代scale-out网络基础设施。结合7月集邦口径，Spectrum-X CPO由NVIDIA与TSMC联合开发、采用COUPE先进封装、处理能力达400 Tb/s，2026下半年进一步扩产。标志CPO交换芯片由小量出货转全面量产。",
+      "url": "https://www.youtube.com/watch?v=CNM6Mmqrfeg"
+    },
+    {
+      "date": "2026-07-29",
+      "title": "TrendForce：NVIDIA/博通CPO交换机正式跨入量产，小量出货，三大瓶颈浮现",
+      "detail": "集邦7月27日研究：NVIDIA新一代Spectrum-X CPO交换机已出货给部分合作伙伴；博通51.2T Bailly CPO交换机持续小量出货并进入量产，由台达电、Micas Networks协助导入，功耗最多降70%，Meta等超大规模数据中心已完成部署验证。Spectrum-X CPO由NVIDIA与TSMC共研、用COUPE封装、400 Tb/s。三大放量瓶颈：光引擎（激光+调制器集成、良率与散热）、硅光晶圆代工与后段封装、先进封装产能（COUPE与AI/HPC芯片争抢2.5D/3D产能）。集邦判断CPO放量期在2027-2028年。",
+      "url": "https://chiplet-marketplace.com/insights/news/nvidia-broadcom-cpo-switches"
+    },
+    {
+      "date": "2026-07-01",
+      "title": "GlobalFoundries获美商务部约3亿美元CHIPS研发意向，加速硅光/NPO/CPO",
+      "detail": "GlobalFoundries与美国商务部签署意向书，预计获3亿美元CHIPS研发资助，加速下一代硅光发展，聚焦先进光学材料、晶圆技术、3D混合键合以支持NPO与CPO，强化美国AI/HPC本土制造。另：Tower半导体7月宣布在日本扩产300mm硅光/SiGe/先进封装（日本政府支持）；Aeva 8月成立Optical Connectivity业务并与某超大规模客户签首个商用协议（2027部署）。",
+      "url": "https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries"
+    }
+  ],
+  "baseline_updates": [
+    {
+      "old_claim": "LightCounting 2026-05：硅光调制器收发器销售额首超400亿美元总市场一半；光芯片2025约40亿→2031年150亿美元",
+      "new_status": "维持/确认（旧事实更新）。LightCounting 2026年5月报告原文确认：2026年是硅光调制器收发器销售额首超整体400亿美元市场50%的年份；光芯片市场2025约40亿(4 billion)美元→2031约150亿(15 billion)美元，近4倍。补充：硅光芯片2025占光芯片1/3，2031将贡献42%(63亿美元)；InP激光2025占58%，2031仍占46%(69亿美元)；收发器+AOC+NPO+CPO 2031年近800亿美元。报告提示上行风险：若scale-up域超千卡、机架内用光替代铜，则超预期。",
+      "url": "https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377",
+      "date": "2026-05"
+    },
+    {
+      "old_claim": "CPO在AI数据中心光模块渗透率约0.5%，规模部署窗口2028-2030",
+      "new_status": "部分刷新（关键变化）：实际部署已提前到来。2026-07 CPO交换机进入量产小量出货；2026-11-16 Lambda在SC26披露CPO已在1万+Blackwell Ultra GPU集群投产运行，为全球首个CPO规模化商用部署。同时新增量化预测：CPO端口出货2027约250万→2029约2000万→2031约9150万；总NPO+CPO端口2031约1.89亿。判断'规模放量'仍在2027-2028（TrendForce），但'首批规模部署'已由0.5%渗透率提前至2026H2。",
+      "url": "https://casrai.org/news/lambda-nvidia-photonics-co-packaged-optics-sc26-2026",
+      "date": "2026-11-16"
+    },
+    {
+      "old_claim": "台积电COUPE、GlobalFoundries收购AMF、英伟达Spectrum-X/Quantum-X CPO交换机",
+      "new_status": "确认并推进。台积电COUPE：2026进入量产，且已用于NVIDIA Spectrum-X CPO（400 Tb/s，与TSMC共研，2026H2扩产）。博通51.2T Bailly CPO与台达电/Micas导入量产、Meta完成验证。GlobalFoundries：除既有AMF收购外，2026-07再获美商务部约3亿美元CHIPS硅光研发意向，并持续扩硅光产能。英伟达Spectrum-X：2026-08官方宣布全面量产；Quantum-X：已通过Lambda在1万+GPU集群投产（详见SC26条目）。",
+      "url": "https://www.youtube.com/watch?v=CNM6Mmqrfeg",
+      "date": "2026-08-12"
+    }
+  ],
+  "status_latest": "截至2026-11，硅光+CPO+高速光模块产业已从'技术验证/小量出货'跨入'量产+首批规模部署'阶段，但放量拐点仍在2027-2028。关键数字：(1)LightCounting——2026为硅光收发器销售额首超400亿美元市场50%的'硅光元年'，光芯片2025约40亿→2031约150亿美元；2031硅光芯片占光芯片42%(63亿美元)，InP激光占46%(69亿美元)，收发器+AOC+NPO+CPO合计2031近800亿美元。(2)CPO市场2026约9.5亿美元→2036约204亿美元，CAGR 32.4%(ResearchAndMarkets, 2026-11-19)。(3)NVIDIA Spectrum-X CPO(台积电COUPE, 400 Tb/s)2026-08全面量产；博通51.2T Bailly CPO小量出货、Meta已验证；2026-11-16 Lambda在加拿大魁北克用Quantum-X CPO连接1万+Blackwell Ultra GPU(GB300 NVL72)，为全球首个CPO规模化商用部署(延迟降3.8%~10.1%、光引擎温度36°C vs 51°C、可靠性升最多15倍)。(4)国产链：中际旭创2026Q3营收277.69亿元(+171.83%)、归母净利85.87亿元(+173.74%)，前三季695.47亿/222.38亿；其NPO器件已用Tower PH18M工艺进入早期量产，野村上调目标价至612元。(5)产能与投资：GlobalFoundries获约3亿美元CHIPS硅光研发意向(2026-07)；Tower在日本扩300mm硅光(2026-07)。主要瓶颈为光引擎良率、硅光晶圆/后段封装精度与产能、先进封装(COUPE)与AI/HPC争产能。",
+  "outlook_refresh": "CPO/NPO从'是否会发生'转为'何时放量'：TrendForce判断CPO交换机放量期在2027-2028年，垂直整合（自握硅光设计+光引擎制造+先进封装）成为制胜要素；Google等自研光学元件、云厂商以长协锁产能并入股上游硅光。LightCounting端口预测：NPO+CPO合计2027约450万→2029约4200万→2031约1.89亿端口，CPO约2030年接近/超过NPO。技术路线：硅光CPO(台积电COUPE 3D堆叠)为2026主力、主攻1.6T；薄膜铌酸锂CPO为3.2T+中长期高端路线(约2028后规模化)。NPO作为更利于传统光模块厂商主导的过渡路线受中际旭创等力推，机构预计其'明年下半年率先受益'。材料侧：InP激光在2031仍占光芯片46%(69亿美元)，硅光不取代InP激光反而拉动CW激光需求；NLM+SilOriX(硅-有机混合调制器)、京瓷+东北大学(隔离器片上集成)等推进下一代PIC材料与器件。",
+  "risks": [
+    "良率与可靠性：光引擎集成激光/调制器，良率要求极高、散热压力大，仅少数供应商能量产；CPO可现场维护性曾是商用障碍，NVIDIA用可插拔外部激光源(ELS)缓解，但激光器仍是故障点。",
+    "先进封装产能竞争：CPO高度依赖台积电COUPE等2.5D/3D封装，与AI芯片/HPC争抢有限产能，短期供给弹性低、放量受限。",
+    "供应链与物料紧张：LightCounting预计EML与CW激光器芯片短缺将制约市场增长至2026年底；硅光晶圆代工与后段封装建产能周期长。",
+    "技术经济与标准：异构集成推高成本、影响良率；散热(光器件贴近发热ASIC)、测试基础设施、互操作性与标准化仍处早期，可能延缓跨厂商放量。",
+    "路线不确定：CPO vs NPO vs 可插拔路线并存，若scale-up机架内继续以铜为主、光仅用于多机架，则CPO渗透与规模可能低于当前乐观预期(LightCounting已提示此保守假设)。",
+    "估值与预期差：中际旭创等龙头股价已计入高增长预期(野村目标价612元)，若CPO/NPO放量节奏或物料供给不及预期，存在业绩预期下修风险。"
+  ],
+  "key_claims": [
+    {"claim": "2026是硅光元年：硅光调制器收发器销售额首超400亿美元整体市场的50%", "url": "https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377", "date": "2026-05"},
+    {"claim": "光芯片市场2025约40亿美元→2031约150亿美元；2031硅光芯片占光芯片42%(63亿)、InP激光占46%(69亿)，收发器+AOC+NPO+CPO 2031近800亿美元", "url": "https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377", "date": "2026-05"},
+    {"claim": "CPO市场2026约9.5亿美元→2036约204亿美元，CAGR 32.4%", "url": "https://www.globenewswire.com/news-release/2026/11/19/3406896/28124/en/co-packaged-optics-cpo-market-analysis-and-forecast-2026-2036-ai-data-center-demand-drives-32-4-cagr-creating-a-20-4-billion-market-by-2036.html", "date": "2026-11-19"},
+    {"claim": "NVIDIA Spectrum-X CPO(台积电COUPE, 400 Tb/s)2026-08进入全面量产", "url": "https://www.youtube.com/watch?v=CNM6Mmqrfeg", "date": "2026-08-12"},
+    {"claim": "TrendForce：NVIDIA/博通CPO交换机2026-07正式量产小量出货，放量期在2027-2028；三大瓶颈为光引擎良率、硅光产能、先进封装", "url": "https://chiplet-marketplace.com/insights/news/nvidia-broadcom-cpo-switches", "date": "2026-07-29"},
+    {"claim": "博通51.2T Bailly CPO由台达电/Micas导入量产，功耗最多降70%，Meta等超大规模完成部署验证", "url": "https://chiplet-marketplace.com/insights/news/nvidia-broadcom-cpo-switches", "date": "2026-07-29"},
+    {"claim": "2026-11-16 SC26：Lambda+NVIDIA实现全球首个CPO规模化商用部署，Quantum-X CPO连接1万+Blackwell Ultra GPU；延迟降3.8%(机架)~10.1%(Pod)，光引擎36°C vs 51°C，可靠性升最多15倍", "url": "https://casrai.org/news/lambda-nvidia-photonics-co-packaged-optics-sc26-2026", "date": "2026-11-16"},
+    {"claim": "中际旭创2026Q3营收277.69亿元(+171.83%)、归母净利85.87亿元(+173.74%)，前三季695.47亿/222.38亿，千亿营收目标加速兑现", "url": "https://emweb.eastmoney.com/pc_hsf10/pages/index.html?code=300308.html", "date": "2026-10-29"},
+    {"claim": "LightCounting端口预测：NPO+CPO合计2027约450万→2029约4200万→2031约1.89亿端口，CPO约2030年接近/超过NPO", "url": "https://www.simpletechtrend.com/en/post/ocp-2026-lightcounting-cpo-npo-forecast-scenarios-en", "date": "2026-10"},
+    {"claim": "GlobalFoundries获美商务部约3亿美元CHIPS研发意向(2026-07)加速硅光/NPO/CPO；中际旭创NPO器件已用Tower PH18M工艺进入早期量产(2026-11-03)", "url": "https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries", "date": "2026-11-03"}
+  ],
+  "uncovered": [
+    "⚠ 公开资料未覆盖：2026Q3/Q4 具体'量产良率/单位成本'的权威硬数字（多为机构估算，如新易盛1.6T CPO良率99%、50万只订单等来自股吧/自媒体，未采信）。",
+    "⚠ 公开资料未覆盖：CPO在AI数据中心光模块渗透率'0.5%→最新X%'的权威口径更新；LightCounting/TrendForce公开摘要仅给定性'跨入量产'与端口预测，未披露精确渗透率百分比。",
+    "⚠ 公开资料未覆盖：台积电COUPE 2026下半年'产能具体晶圆片数/扩产幅度'的官方数字。",
+    "⚠ 公开资料未覆盖：薄膜铌酸锂CPO 3.2T的2026下半年实测商用数据（多为'2028后规模化'的路线判断）。"
+  ]
+}

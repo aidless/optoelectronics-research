@@ -1,0 +1,229 @@
+{
+  "direction": "P1 CPO封装良率",
+  "generated_at": "2026-11-24",
+  "gaps": [
+    {
+      "gap": "CPO/近封装光引擎 2026 年量产的良率硬数字（如光引擎良率%、FAU对位良率）",
+      "queries_tried": [
+        "CPO optical engine yield rate 2026 percentage co-packaged optics manufacturing",
+        "co-packaged optics yield 良率 光引擎 2026 量产",
+        "silicon photonics optical engine yield 60% 70% 80% 90% CPO manufacturing yield data point",
+        "site:trendforce.com CPO optical engine yield bottleneck 2026"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "台积电 COUPE 硅光平台一手会议资料给出硅光芯片测试良率 10%–70%，光纤—硅芯片耦合损耗 >±2.5 dB，晶圆级中心共振波长漂移控制在 1.5 nm；这是提案标注『公开资料未覆盖』的良率硬数字迄今最接近原始出处的量化。注意：口径为硅光芯片测试良率，非光引擎整机良率。",
+          "url": "https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf",
+          "date": "2025-10-14",
+          "strength": "evidence-backed"
+        },
+        {
+          "claim": "FAU『穿线工序』良率：Senko/Sumitomo/Corning/FOCI 等厂商在人工+设备协作模式下，24/36 芯高密度产品稳定量产良率卡在 70%–75%；天孚通信(TFC)产线稳定量产良率 90%–95%。来源为行业媒体引用闭门供应链会议纪要，非厂商一手披露。",
+          "url": "https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html",
+          "date": "2026-09-22",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "光子芯片制造典型良率 30%–70%（依平台/复杂度/成熟度而变）；集成电路代工数据。",
+          "url": "https://photondelta.com/blog/what-is-the-yield-rate-for-photonic-chip-manufacturing",
+          "date": "2026-03-13",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "TrendForce 官方新闻稿确认『光引擎高制造良率与有效热管理』是放量三大瓶颈之首，但通篇未给出任何具体良率百分比。",
+          "url": "https://trendforce.com/presscenter/news/20260727-13151.html",
+          "date": "2026-07-27",
+          "strength": "evidence-backed"
+        }
+      ],
+      "verdict": "找到一手出处",
+      "note": "一手原始出处=瑞士光子学协会发布的 imec/台积电 COUPE 讲座原始 PDF（Emma Xu, 2025-10-14），给出硅光芯片测试良率 10%–70%、耦合损耗 >±2.5 dB、共振波长漂移 1.5 nm。但『光引擎（PIC+EIC+激光+耦合）整机良率百分比』这一具体口径在近12个月公开资料中仍未找到一手数字，只能以芯片测试良率与 FAU 穿线良率（70–75%/90–95%，二手）间接替代。建议提案改写为『硅光芯片测试良率 10–70%（一手会议资料）+ FAU 穿线良率二手区间』，不再笼统写『光引擎良率硬数字公开未覆盖』。"
+    },
+    {
+      "gap": "CPO 光模块单位成本 / 与可插拔的成本对比数字",
+      "queries_tried": [
+        "co-packaged optics cost per module vs pluggable optics 2026 dollars",
+        "CPO cost per port comparison pluggable optics transceiver dollar 2025 2026 analysis",
+        "Nvidia CPO switch optical engine BOM cost breakdown semiconductor analysis",
+        "CPO 光模块 成本 可插拔 对比 美元 2026"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "ELS（外置激光源）模块整模块约 USD 500，其中组件成本近 USD 350，单个 CW 激光芯片约 USD 32（占成本支出一半）；Broadcom VCSEL-NPO 量产成本可达 USD 0.1/GB。来源：行业媒体引用 OFC 2026 与供应链研究，属二手估算。",
+          "url": "https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html",
+          "date": "2026-09-22",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "第一代 CPO 每端口成本仍高于大批量可插拔方案，价差随出货量增长才收窄；转引 TrendForce 判断。",
+          "url": "https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide",
+          "date": "2026",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "可插拔光模块当前每端口成本可能低于新兴 CPO 实施方案，但随带宽扩展信号损耗与热密度使可插拔趋于极限（定性，无数字）。",
+          "url": "https://www.molex.com/en-us/blog/co-packaged-optics-vs-pluggable",
+          "date": "2026",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "SemiAnalysis CPO Book 含 Nvidia Quantum X800-Q3450 CPO（72 个 1.6T 光引擎）与收发器成本对比细节，页面抓取超时未取到具体数字，仅确认来源存在。",
+          "url": "https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling",
+          "date": "2026",
+          "strength": "二手估算"
+        }
+      ],
+      "verdict": "仅二手或估算",
+      "note": "找到了 ELS 模块 ~USD500、CW 激光芯片 ~USD32、VCSEL-NPO USD0.1/GB 等具体成本数字，但均为行业媒体/供应链转述，无厂商一手 BOM 或权威机构原始报告可核；CPO vs 可插拔的每端口成本对比只有定性判断（CPO 一代仍更贵），无一手精确比值。按纪律标『未验证』。"
+    },
+    {
+      "gap": "CPO 在当前 800G/1.6T 光模块中的渗透率精确百分比（2026 口径）",
+      "queries_tried": [
+        "CPO penetration rate 800G 1.6T optical modules 2026 percentage LightCounting Yole",
+        "CPO share of optical transceiver market 2026 percent TrendForce",
+        "硅光 CPO 渗透率 2026 百分比 800G 1.6T",
+        "LightCounting silicon photonics modulator share 2026 50% CPO penetration"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "TrendForce 估计 CPO 约占 2026 年 AI 数据中心光模块的 0.5%，到 2030 年升至约 35%。这是检索到的唯一 CPO 渗透率精确百分比，但为技术指南站转引，未找到 TrendForce 原始报告页。",
+          "url": "https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide",
+          "date": "2026",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "LightCounting 2026 年 5 月报告：2026 年采用硅光调制器的光模块销售额将首次超过该类市场总额（约 40 亿美元）的 50%——注意这是『硅光渗透率』而非 CPO 渗透率，口径不可混用。",
+          "url": "https://news.futunn.com/en/post/74584585/will-the-race-for-next-generation-optical-modules-avoid-a",
+          "date": "2026-05",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "约 50% 的当前 800G 模块采用硅光技术，400G 中 20%–30%（ICCSZ 口径）——同样是硅光而非 CPO 渗透率。",
+          "url": "https://www.hyc-system.com/news/Industry/7178.html",
+          "date": "2026",
+          "strength": "二手估算"
+        }
+      ],
+      "verdict": "仅二手或估算",
+      "note": "找到一个精确数字：CPO 占 2026 AI 数据中心光模块约 0.5%（转引 TrendForce，2030→35%），但仅单一二手来源、未验证，且口径是『AI 数据中心光模块』而非窄义『800G/1.6T 模块中的 CPO 占比』。大量搜索命中的 50% 是硅光调制器渗透率，必须与 CPO 严格区分，切勿混引。"
+    },
+    {
+      "gap": "FAU 保偏光纤阵列自动对位 vs 手工对位的节拍、精度分布、一致性公开数据（\"对位<0.1°、熟练工1-2个/天\"是否有原始出处）",
+      "queries_tried": [
+        "FAU polarization maintaining fiber array alignment 0.1 degree skilled worker per day",
+        "fiber array unit FAU automated alignment vs manual alignment cycle time accuracy polarization maintaining",
+        "FAU 保偏光纤阵列 自动对位 手工 节拍 0.1度 熟练工 一天",
+        "OFC 2025 V-groove positional accuracy sub-micron coupling loss FAU active alignment"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "公开厂商口径：AI 引导主动对位平台可做到 6 自由度、亚微米公差、单件 <90 秒，相对手工对位 3× 吞吐提升（称经美国某光子组装厂测试，但无一手测试报告链接）。",
+          "url": "https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one",
+          "date": "2026",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "PI F-141/NovAlign 自动对位系统：对准算法首次找光与信号优化时间『比常规方法快达两个数量级』，4/6 自由度、40 mm XYZ 行程、12° 光轴旋转（厂商新闻稿，无独立对照测量）。",
+          "url": "https://www.laserfocusworld.com/directory/fiber-optic-optoelectronic-components-equipment-systems/automatic-alignment-systems-fiber-optic/press-release/55389004/pi-americas-physik-instrumente-fau-alignment-faster-cost-optimized",
+          "date": "2025-01-24",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "OFC 2025 光子封装研讨会共识（转引）：实现 sub-0.5 dB/facet 耦合需要 V 槽位置精度优于 ±0.5 µm、端面粗糙度 Ra<1 nm；生产级 FAU 位置公差 ±0.5 µm。这是位置精度口径，不是角度口径。",
+          "url": "https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one",
+          "date": "2025",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "Fiber-Mart FAU 工艺页：保偏 FAU 每根光纤需精确旋转，将偏振轴误差控制在 ±1° 以内——与提案『<0.1°』相差一个数量级，且页面被 Cloudflare 拦截仅取到搜索摘要。",
+          "url": "https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html",
+          "date": "2026",
+          "strength": "二手估算"
+        }
+      ],
+      "verdict": "仅二手或估算",
+      "note": "钉死结论：『对位 <0.1°、熟练工 1–2 个/天』这两句原始数字经两轮以上中英文换词检索，未找到任何一手公开 URL，且公开口径（保偏偏振轴 ±1°、V 槽位置 ±0.5 µm）与之量级冲突——该数字继续保留为本地证据文件来源、标 plausible-inference。但缺口本身问的『自动 vs 手工对比数据』找到间接公开读数：<90 秒/件、3× 吞吐、快两个数量级、位置精度 ±0.5 µm，均为厂商/行业口径，缺严格的可复算对照实验，标未验证。"
+    },
+    {
+      "gap": "三明治键合（PIC+EIC+硅基板）应力/晶圆翘曲到插损/波长漂移的可复算敏感系数",
+      "queries_tried": [
+        "hybrid bonding PIC EIC silicon interposer warpage stress insertion loss wavelength shift coefficient",
+        "hybrid bonding wafer warpage stress silicon photonics wavelength shift nm insertion loss dB sensitivity measurement",
+        "bonding induced strain silicon photonics ring resonator wavelength shift nm per MPa",
+        "TSMC COUPE SoIC EIC PIC bonding warpage resonance drift 1.5nm"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "台积电 COUPE 平台规格：12 英寸 65 nm 硅光，10 µm 对准容差对应 0.3 dB 垂直耦合损耗，76 GHz 微环调制器，晶圆级中心共振波长漂移控制 1.5 nm——是规格/控制目标，非『应力→漂移』可复算敏感系数。",
+          "url": "https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf",
+          "date": "2025-10-14",
+          "strength": "evidence-backed"
+        },
+        {
+          "claim": "键合应变量化（非 CPO 专用、2017 年）：X 射线测 96 mm 长方向最大 Omega 角位移 0.188°，对应 41.68 µm 弓形、150 mm 晶圆约 64.12 µm 翘曲，用于提取键合诱导应变。可作为翘曲测量方法参考，但不给出应力→插损/波长漂移的耦合系数。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5445873",
+          "date": "2017",
+          "strength": "evidence-backed"
+        },
+        {
+          "claim": "InP DFB 激光器与硅光晶圆级倒装混合集成：sub-300 nm 对准精度支撑 <2 dB 耦合效率，FDTD 仿真给出对准公差—耦合损耗关系（2022 年，非近12个月）。",
+          "url": "https://doi.org/10.1109/jstqe.2022.3223641",
+          "date": "2022-01-01",
+          "strength": "evidence-backed"
+        },
+        {
+          "claim": "IEEE HIR 9.0 Photonics CPO 路线图（2026-05）与 Ansys CPO 多物理场 Lumerical 互操作 webinar（封装翘曲 Shadow Moiré 测量、-55~260°C 热循环建模）确认业界在做应力/翘曲建模，但未公开可直接复算的应力→插损/波长漂移敏感系数。",
+          "url": "https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf",
+          "date": "2026-05-18",
+          "strength": "evidence-backed"
+        }
+      ],
+      "verdict": "确认仍未覆盖",
+      "note": "两轮检索后钉死：公开资料给出相关量（1.5 nm 共振漂移控制目标、0.188°→41.68 µm 弓形→64.12 µm 翘曲、sub-300 nm→<2 dB 耦合、10 µm→0.3 dB），但没有任何来源给出『键合应力/晶圆翘曲 → 插损 dB / 波长漂移 nm』的可复算敏感系数（如 nm/MPa、dB/µm warp）。与提案原判断一致：这正是项目的科学空白，敏感系数须由本项目实测标定。"
+    },
+    {
+      "gap": "光电协同在测平台的吞吐基准（\"单台日测个位数晶圆\"有无一手出处）",
+      "queries_tried": [
+        "wafer level optical electrical co-test throughput wafers per day photonic integrated circuit test benchmark",
+        "silicon photonics wafer test throughput dies per second electro-optical co-test benchmark",
+        "光电协同在测平台 吞吐 日测晶圆 个位数 光电同测",
+        "ficonTEC Advantest CPO wafer level test throughput wafers per day"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "ficonTEC 300 mm 双面光电晶圆测试仪（2025-03，兼容现有 ATE：顶部 DC/高速电测 + 底部六轴光学校准探针、自动上下片、真空温控 chuck、原位 FAU 校准），宣称『high-throughput』但未给出每日晶圆吞吐数字。",
+          "url": "https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate",
+          "date": "2025-03",
+          "strength": "evidence-backed"
+        },
+        {
+          "claim": "SemiVision 深度分析（2026-07-27，基于 Advantest SEMICON Taiwan SiPh Summit 2025 演讲）：CPO 最大瓶颈是缺乏可重复、自动化、标准化、经济可行的光电混合测试体系；提出 Known Good Optical Engine 与测试左移（PIC 晶圆级→EIC-PIC 晶圆级→光引擎 die 级→系统级），指出三大缺口（光探针无标准、FAU 连接器处理多靠手工、光仪器依赖机架堆叠）。全文无『日测个位数晶圆』或 wafers/day 基准数字。",
+          "url": "https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit",
+          "date": "2026-07-27",
+          "strength": "evidence-backed"
+        },
+        {
+          "claim": "专利/技术情报站给出方向性目标：标准 PIC 单 die 测试时间 <1 秒（wafer-level SiPh throughput 改进目标），可作为『目标值』参考，非已实现的一手基准。",
+          "url": "https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput",
+          "date": "2026",
+          "strength": "二手估算"
+        },
+        {
+          "claim": "JENOPTIK 电子-光子测试路线图 webinar 材料：晶圆级同时电/光测试、每芯片无主动对准时间（plug & play 对接标准 IC 探针台），同样无吞吐绝对值。",
+          "url": "https://www.jenoptik.com/-/media/websitedocuments/optics/microoptics/presentation-webinar-ufo-probe.pdf",
+          "date": "2024-03-13",
+          "strength": "evidence-backed"
+        }
+      ],
+      "verdict": "确认仍未覆盖",
+      "note": "两轮检索后钉死：『单台高端设备日测仅个位数晶圆』未找到任何一手出处或 wafers/day 公开基准。公开资料只到『high-throughput 光电同测设备已商用（ficonTEC 300mm 双面测试）』+『测试左移/Known Good Optical Engine 是产业共识（Advantest/SemiVision）』+『<1s/die 目标值』这一层，没有可引用的吞吐硬数字。该数字继续保留为本地证据文件来源、标 plausible-inference，基线只能自建。"
+    }
+  ],
+  "overall": "6 个缺口中，1 个找到一手原始出处（缺口1：台积电 COUPE/imec 讲座 PDF 给出硅光芯片测试良率 10%–70%、耦合损耗 >±2.5 dB、共振漂移 1.5 nm），3 个仅找到二手或行业估算（缺口2 成本、缺口3 渗透率 0.5%、缺口4 自动对位 3×/<90s），2 个经两轮换词检索确认仍未覆盖（缺口5 键合应力→插损/波长漂移可复算敏感系数、缺口6 光电同测日测晶圆吞吐基准）——后两者与提案原判断一致，是本项目真正需要用实测数据填补的科学空白。关键警示：搜索中大量命中的『50%』是硅光调制器渗透率而非 CPO 渗透率，『±1°』是保偏 FAU 偏振轴误差而非提案的 <0.1°，均不可混引。缺口1 可按一手证据改写提案中『良率硬数字公开未覆盖』的笼统表述，但需把口径限定为硅光芯片测试良率，光引擎整机良率仍未见一手数字。"
+}

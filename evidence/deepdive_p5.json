@@ -1,0 +1,269 @@
+{
+  "direction": "P5 新型电光材料晶圆级集成",
+  "generated_at": "2026-11-24",
+  "gaps": [
+    {
+      "gap": "G1 核对 Nature Communications 2026-11-20 晶圆级薄膜 PZT 光子 IC 原文 DOI/标题；并查是否披露晶圆级良率、批间均匀性、CMOS 兼容性数据",
+      "queries_tried": [
+        "Nature Communications 2026 wafer-scale thin-film PZT photonic integrated circuit VpiL 1.19 V cm 70 GHz 224 Gbps",
+        "s41467-026-79721-0 PZT wafer-scale modulator",
+        "8-inch wafer PZT electro-optic modulator 16-channel WDM 3.2 Tbps Nature Communications",
+        "PZT 1.19 V cm 70 GHz wafer yield uniformity batch Nature Communications supplementary"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "原文标题与 DOI 核验一致：'Wafer-scale thin-film PZT photonic integrated circuits enabling multi-terabit optical transmission'，Nature Communications，DOI 10.1038/s41467-026-79721-0，Published 20 November 2026（early-release 已接受稿，带永久 DOI）；第一作者 Zehao Guan / Yujun Xie，通讯 Feng Qiu / Guangming Zhao / Ming Li；单位 中科院半导体所、国科大、杭高院、聚禾电光(杭州)",
+          "url": "https://www.nature.com/articles/s41467-026-79721-0",
+          "date": "2026-11-20",
+          "strength": "一手·已核验（原文页 + CrossMark + DOI 一致；DexScience 二次核 22 条事实）"
+        },
+        {
+          "claim": "原文摘要确认核心数字：8 英寸 SiO2/Si、化学溶液沉积+磁控溅射、DUV stepper 晶圆级制造；低传输损耗与低面内光学各向异性支撑 AWG；铁电畴工程激活 Pockels；MZM VπL=1.19 V·cm、EO 响应至 70 GHz、速率至 224 Gbps；单片集成 16 通道 WDM 发射机指向 3.2-Tbps 级",
+          "url": "https://www.nature.com/articles/s41467-026-79721-0",
+          "date": "2026-11-20",
+          "strength": "一手·已核验（原文 Abstract 逐字）"
+        },
+        {
+          "claim": "资助与平台：CAS 战略先导专项 XDB1440000、NSFC 62505312、国家重点研发 2025YFA1411700；器件在中科院半导体所共享工艺平台制备；CC BY-NC-ND 4.0；附 Source Data XLSX、Transparent Peer Review file、Supplementary Information",
+          "url": "https://www.nature.com/articles/s41467-026-79721-0",
+          "date": "2026-11-20",
+          "strength": "一手·已核验（原文 Acknowledgements/Funding/Additional information）"
+        },
+        {
+          "claim": "可访问正文中'均匀性'仅为定性表述（'Uniform, high-quality PZT thin films'、'low in-plane optical anisotropy'），未见晶圆级良率百分比、片内/片间 VπL 分布、批间均匀性标准差或后段 CMOS 温度预算/污染控制数据；全文 PDF（37MB）与 Supplementary/Source Data 经 web_fetch 被反爬拦截，无法逐字复核补充材料——需人工下载核验",
+          "url": "https://www.nature.com/articles/s41467-026-79721-0",
+          "date": "2026-11-20",
+          "strength": "一手·部分核验（定量良率/均匀性/CMOS 项在可访问文本中确认未披露；补充材料未读到，标未验证）"
+        },
+        {
+          "claim": "二次报道口径：3.2 Tbps 为'aggregate laboratory capacity, not a deployed'（实验室聚合容量，非已部署）；再次强调 early-release 版本可能被编辑",
+          "url": "https://newtqnia.com/en/news/360-an-8-inch-pzt-photonics-platform-reaches-32-tbps-across-16-channels",
+          "date": "2026-11-21",
+          "strength": "二手·未验证"
+        }
+      ],
+      "verdict": "DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核）",
+      "note": "立项书 A1/B1 的数字无需修改。新增可引用事实：原文为 early-release accepted 版本、作者/单位/基金号、附 Source Data 与透明评审文件。注意把 3.2 Tbps 表述为'指向/实验室聚合'而非已部署，与立项书禁用声明一致。"
+    },
+    {
+      "gap": "G2 晶圆级 PZT/TFLN 调制器的良率、片内/片间均匀性公开数据（P5 核心研究空间，确认是否真的没人公开）",
+      "queries_tried": [
+        "wafer-scale PZT thin film modulator yield uniformity wafer-level 2026",
+        "PZT thin film photonic wafer uniformity mapping yield statistics VpiL distribution across wafer",
+        "thin film lithium niobate modulator wafer level yield uniformity statistical distribution measurement",
+        "wafer-scale ferroelectric PZT electro-optic modulator device yield uniformity data"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "重要反证——TFLN 晶圆级良率/均匀性已有公开定量数据：imec/根特大学在 4 片完整 200 mm 硅光晶圆上用微转移印刷(MTP)集成预图形化 TFLN 调制器，3σ 贴装精度低至 420 nm、印刷良率 >95%；600 个相位调制器(组成 300 个幅度调制器)插损 <2 dB；Vπ=4 V(推挽)、带宽 >70 GHz；全部后段(BEOL)工艺在 imec TRANSVERSE 中试线完成",
+          "url": "https://arxiv.org/html/2605.28971",
+          "date": "2026-06-15",
+          "strength": "一手·预印本原文（arXiv:2605.28971v2）"
+        },
+        {
+          "claim": "重要反证——已有面向晶圆级 heterogeneous LN 调制器的'变异感知(variability-aware)'设计与统计方法：用 TRANSVERSE 中试线的实测工艺偏差数据，做相关分析+Sobol 方差分解，联合优化 Vπ/插损/3dB 带宽对工艺波动的鲁棒性；适用于晶圆键合、die-to-wafer 与铌酸锂钽酸盐",
+          "url": "https://arxiv.org/html/2605.28765",
+          "date": "2026-05-31",
+          "strength": "一手·预印本原文（arXiv:2605.28765v2，Ghent-imec）"
+        },
+        {
+          "claim": "PZT 薄膜厚度均匀性定量线索（非器件级）：某 PZT 光子论文补充材料称'The thickness uniformity of the PZT thin film across the wafer was quantitatively assessed using ellipsometry, revealing a non-uniformity of less than 15 nm'（另一篇 s41467-025-61536-0 的 ESM）；该补充 PDF 被反爬拦截，仅见检索片段",
+          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-61536-0/MediaObjects/41467_2025_61536_MOESM1_ESM.pdf",
+          "date": "2025-07-03",
+          "strength": "单源·未验证（仅检索片段，PDF 未取到）"
+        },
+        {
+          "claim": "比较基线：更早的 4/6 英寸单片 LN PIC 工作明确把'在大面积上均匀、高通量地实现低损耗'列为待解挑战（2020），佐证晶圆级均匀性是长期公开难题",
+          "url": "https://arxiv.org/html/2007.06498",
+          "date": "2020-08-26",
+          "strength": "一手·旧源（>12个月，仅作背景）"
+        }
+      ],
+      "verdict": "立项书'公开资料未覆盖'的判断需修正：TFLN 异质集成(MTP)晶圆级良率(>95%)与均匀性/变异建模已公开；但 PZT 单片 8 英寸的器件级 VπL/带宽/插损全片分布、良率百分比、批间标准差仍未找到公开数据——P5 核心研究空间对 PZT 仍成立，对 TFLN 部分被抢占",
+      "note": "建议立项书把缺口从'PZT/TFLN 都未覆盖'收窄为'PZT 器件级均匀性/良率未公开；TFLN 已有 imec 中试线晶圆级良率基线'。P5 差异化应转向：PZT 铁电畴工程器件的晶圆级一致性 + 良率-成本模型，而非笼统的'没人做过晶圆级良率'。"
+    },
+    {
+      "gap": "G3 TFLN 单波 400G、1.6T/3.2T 的 2026 下半年实测/商用数据（犀里光电 Pre-A 之外有无实测）",
+      "queries_tried": [
+        "TFLN thin film lithium niobate single wavelength 400G 1.6T 3.2T modulator measured 2026",
+        "薄膜铌酸锂 单波400G 1.6T 3.2T 实测 2026 光模块",
+        "3.2T TFLN IM/DD 225 GBaud OFC measured result"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "硅光异质集成 TFLN 单波 400Gbps 差分调制芯片（CIOE 现场展示）：8 英寸晶圆级硅光异质集成 TFLN 工艺 + 成熟 CMOS 硅光 + Die-to-Wafer 键合；实测 3dB EO 带宽 >110 GHz、Vπ~3 V；差分驱动兼容现有硅光 driver；可从单波 200G/1.6T 演进至单波 400G/3.2T。厂商：苏州易缆微半导体",
+          "url": "https://www.eet-china.com/mp/a440906.html",
+          "date": "2025-09-25",
+          "strength": "一手·厂商披露经媒体转载（日期为 2025-09，非 2026 H2；单源，未验证）"
+        },
+        {
+          "claim": "TFLN 已实测承载 3.2T：Ciena+HyperLight+McGill 在 OFC 2025 post-deadline（Th4B.1）报告 8 通道 O 波段 IM/DD，225 GBaud PAM4 经 TFLN 调制器、3 nm CMOS SerDes 驱动，FR8 与 DR8 两种配置、2 km 光纤、低于 HD-FEC 门限，净 3.2 Tbps；PAM8 下达 4.2 Tbps。FR8 用封装 125 GHz 参考调制器，DR8 用集成 8 调制器芯片",
+          "url": "https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1",
+          "date": "2025-03",
+          "strength": "一手·同行评审会议论文（OFC 2025 post-deadline）+ Ciena 官方新闻稿佐证"
+        },
+        {
+          "claim": "Ciena 官方新闻稿佐证上述 3.2T/448G-per-lane IM-DD 2km 结果及测试细节",
+          "url": "https://www.ciena.com/about/newsroom/press-releases/ciena-hyperlight-and-mcgill-university-achieve-first-3.2tbs-448gbs-per-lane-imdd-2km-transmission",
+          "date": "2025-03",
+          "strength": "一手·机构公告（站点 Cloudflare 拦截，正文经 Hengtong 引述）"
+        },
+        {
+          "claim": "HyperLight 2026-03 推出 145 GHz 封装强度调制器，面向 448 Gbps/通道 IM-DD 与 260 GBaud 相干开发",
+          "url": "https://www.businesswire.com/news/home/20260312319685/en/HyperLight-Introduces-145-GHz-Reference-Modulators-to-Enable-448Gbps-per-Lane-Datacom-and-260GBaud-Telecom-Development",
+          "date": "2026-03-12",
+          "strength": "一手·厂商公告（原页 HTTP 403，经 Hengtong 引述；未验证）"
+        },
+        {
+          "claim": "产业盘点：铌奥光电 1.6T DR8/800G DR4 用 TFLN 调制器 3dB 带宽标称 70 GHz，3.2T DR8 标称 110 GHz；中国移动把 400G 调制器件分三类：InP >160 GBd PAM4、硅光 MZM >90 GHz、TFLN >110 GHz",
+          "url": "https://zhuanlan.zhihu.com/p/2096186564032336971",
+          "date": "2026-09",
+          "strength": "二手·未验证"
+        },
+        {
+          "claim": "OFC 2026 分析：TFLN 到达 1.6T/3.2T 的'inflection point'；行业判断 3.2T 属中长期高端路线、约 2028 后规模化",
+          "url": "https://www.simpletechtrend.com/en/post/ofc2026-tfln-scaling-1-6t-deployment-analysis-en",
+          "date": "2026",
+          "strength": "二手·未验证（正文抓取被截断）"
+        }
+      ],
+      "verdict": "犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据",
+      "note": "立项书'该 3.2T 的 2026 下半年实测商用数据公开资料未覆盖'应改写为：实验级 3.2T 已有公开结果(2025)，商用量产级 2026 H2 数据未覆盖。注意易缆微报道日期是 2025-09，不要写成 2026 H2；这些数字均属 TFLN，不与 PZT 混写。"
+    },
+    {
+      "gap": "G4 硅基载流子耗尽型调制器同口径 Vπ·L/带宽/插损硬数字（立项书标'缺同口径硅基对照'）",
+      "queries_tried": [
+        "silicon carrier depletion modulator Vpi L bandwidth insertion loss 2026 measured numbers",
+        "silicon photonics depletion mode MZM VpiL 1.0 V cm 3dB bandwidth insertion loss",
+        "silicon carrier depletion Mach Zehnder modulator VpiL 2 V cm 30 GHz insertion loss 2025 2026 measured",
+        "silicon modulator VpiL 2-5 V cm bandwidth insertion loss carrier depletion review numbers"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "同口径对照硬数字（Nature Communications 2026-10-22 原文 Introduction 逐字）：传统载流子耗尽 p-n 相移器 VπL 典型 2–5 V·cm，需毫米级电极；长电极 RF 传播损耗 + RC + EO 相速失配把带宽限制到 <50 GHz",
+          "url": "https://www.nature.com/articles/s41467-026-78128-1",
+          "date": "2026-10-22",
+          "strength": "一手·已核验（原文 Introduction；Nature Commun vol 17, article 10446 (2026)）"
+        },
+        {
+          "claim": "同文给出对照基线器件（硅光子晶体慢光调制器）：器件长 320 µm，140 Gb/s OOK、能耗 26 fJ/bit、FinFET 兼容 CMOS 驱动电压；PAM4 无 DSP 180 Gb/s、加 11-tap 均衡 200 Gb/s——证明硅基可借 EO 均衡器/慢光缓解带宽-效率折衷",
+          "url": "https://www.nature.com/articles/s41467-026-78128-1",
+          "date": "2026-10-22",
+          "strength": "一手·已核验（原文 Abstract）"
+        },
+        {
+          "claim": "硅基载流子耗尽 SOI 平台先进值：220-nm SOI 载流子耗尽 VπL <1 V·cm、EO 带宽 >30 GHz、消光比 >20 dB；全硅 MZM 带宽 >100 GHz",
+          "url": "https://arxiv.org/html/2510.25530",
+          "date": "2025-12-18",
+          "strength": "一手·预印本原文（arXiv:2510.25530）"
+        },
+        {
+          "claim": "插损硬数字：CMOS 兼容 foundry 的超紧凑硅调制器，carrier-depletion 谐振调制器插损 IL=2.8 dB、Q=2930、3dB 带宽 0.53 nm；文中引 2022 年 carrier-depletion 谐振调制器 EO 带宽 >67 GHz",
+          "url": "https://www.nature.com/articles/s41467-025-67826-x",
+          "date": "2025-12-18",
+          "strength": "一手·期刊原文（Open access）"
+        },
+        {
+          "claim": "150 Gbaud O 波段硅微环调制器：L 形 PN 结调制效率 51 pm/V，为常规横向 PN 结的约 2 倍",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42071730",
+          "date": "2026-04-06",
+          "strength": "一手·PubMed 摘要"
+        },
+        {
+          "claim": "低寄生电阻载流子耗尽微环调制器工作频率 >100 GHz（Optics Letters, doi 10.1364/ol.614071）",
+          "url": "https://doi.org/10.1364/ol.614071",
+          "date": "2026-10-09",
+          "strength": "一手·期刊 DOI（未逐字读正文）"
+        }
+      ],
+      "verdict": "立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用",
+      "note": "建议在 2.1 路线对比表补一列硅基同口径硬数字并标注来源与日期。注意口径：PZT 的 VπL=1.19 V·cm 与硅基 2–5 V·cm 都是 MZM 半波电压长度积，可比；但硅微环用 pm/V 效率与 VπL 不同量纲，勿混。"
+    },
+    {
+      "gap": "G5 薄膜电光材料（PZT/TFLN/有机 SOH）与 CMOS 后段工艺兼容性的公开研究进展",
+      "queries_tried": [
+        "PZT thin film electro-optic modulator CMOS backend of line BEOL compatibility temperature lead contamination 2026",
+        "thin film lithium niobate CMOS compatible foundry back end integration 2026",
+        "organic SOH silicon organic hybrid electro optic modulator wafer scale 2026 CMOS backend compatible"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "TFLN 与 CMOS 不兼容的公开原因与规避路径（imec 原文逐字）：'TFLN is not compatible with CMOS fabrication, primarily because of lithium contamination concerns within silicon foundries'；解法=异质集成，MTP 在 SiPho 后段(BEOL)进行、50 nm 键合层、金属电极在 CMOS 晶圆制造后做后处理，全部 BEOL 在 imec TRANSVERSE 中试线完成",
+          "url": "https://arxiv.org/html/2605.28971",
+          "date": "2026-06-15",
+          "strength": "一手·预印本原文（arXiv:2605.28971v2）"
+        },
+        {
+          "claim": "有机 SOH 在代工光子工艺中的可扩展极化：铁电向列液晶-on-silicon 在 foundry photonic process 中实现 DC-to-GHz 微环调制，针对'EO 聚合物缺乏可扩展极化方法'这一痛点",
+          "url": "https://arxiv.org/html/2602.20406v1",
+          "date": "2026-07-12",
+          "strength": "一手·预印本原文（arXiv:2602.20406v1）"
+        },
+        {
+          "claim": "垂直硅-有机混合(SOH) EO 调制器：无背栅实现 3dB 带宽 >110 GHz，同 Pockels 系数下 VπL 比经典 SOH 降低 2 倍（根特大学）",
+          "url": "https://photonics.intec.ugent.be/download/pub_5537.pdf",
+          "date": "2026-10-11",
+          "strength": "一手·会议/机构 PDF（未逐字读正文）"
+        },
+        {
+          "claim": "NLM Photonics 与 SilOriX 2026-09-21 签 JDA：SilOriX 硅-有机混合(SOH)调制器设计 + NLM Selerion-HTX 电光材料，目标提升性能/带宽/能效并支持可扩展硅光制造（立项书已引用，作为交叉印证）",
+          "url": "https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries",
+          "date": "2026-09-21",
+          "strength": "二手·未验证（厂商新闻稿转载）"
+        },
+        {
+          "claim": "AlN-on-insulator(AlNOI)通过高温退火增强 EO 响应、无载流子调制，作为 CMOS 友好替代路线之一",
+          "url": "https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349",
+          "date": "2026-04-27",
+          "strength": "一手·期刊摘要"
+        }
+      ],
+      "verdict": "有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据",
+      "note": "立项书 2.5 缺口 1 表述基本成立但需细化：TFLN/SOH 有公开的 BEOL 兼容路径，PZT 的 CMOS 后段兼容(温度预算/污染控制/金属化)仍属空白——这正是 P5 创新点 1 的落点。"
+    },
+    {
+      "gap": "G6 除 PZT/TFLN 外，2026 下半年有无新电光材料体系（BaTiO3、AlN、有机）达到晶圆级——判断技术路线宽度",
+      "queries_tried": [
+        "BaTiO3 AlN organic electro-optic modulator wafer scale 2026 integrated photonics",
+        "wafer-scale barium titanate BTO electro-optic modulator 2026 200mm integration",
+        "thin film lithium tantalate wafer-scale modulator 2026 300mm foundry",
+        "aluminum nitride AlN electro-optic modulator wafer scale 2026 Pockels"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "薄膜铌酸锂钽酸盐(TFLT)成为 2026 H2 强新兴体系：悬浮钽酸锂 MZM 实现 460 Gbit/s 净数据率（arXiv:2607.17436）；另有面向紫外波段的集成 EO 调制器（arXiv:2605.02758，2026-11-19）；imec 明确其变异感知方法可外推到异质钽酸锂行波调制器",
+          "url": "https://arxiv.org/pdf/2607.17436",
+          "date": "2026-11-22",
+          "strength": "一手·预印本原文"
+        },
+        {
+          "claim": "BaTiO3(BTO)综述（NUS/NJU，arXiv:2609.16616）：超大 Pockels 系数、低光损、兼容异质集成；外延生长/晶向控制/畴工程/可扩展集成已使薄膜 BTO EO 性能接近体材料——但为综述，非 2026 H2 全晶圆量产演示",
+          "url": "https://arxiv.org/html/2609.16616",
+          "date": "2026-09-15",
+          "strength": "一手·预印本综述原文"
+        },
+        {
+          "claim": "溶液法 BaTiO3 单片 EO 调制器（软纳米压印，ECIO 2026 M1A.5）与溶液衍生 BTO 波导（arXiv:2601.14938）——低成本可规模化路线，但仍器件级",
+          "url": "https://opg.optica.org/abstract.cfm?uri=ECIO-2026-M1A.5",
+          "date": "2026-06-15",
+          "strength": "一手·会议摘要"
+        },
+        {
+          "claim": "AlN/AlNOI 靠高温退火增强 EO（2026-04-27）；有机 SOH 与铁电向列液晶-on-Si 在代工工艺推进（见 G5）——新体系活跃但未达 PZT(8 英寸)/MTP-TFLN(200 mm)那种全晶圆量产级公开演示",
+          "url": "https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349",
+          "date": "2026-04-27",
+          "strength": "一手·期刊摘要"
+        }
+      ],
+      "verdict": "2026 H2 确有新体系活跃：钽酸锂(TFLT, 460 Gbit/s, 2026-11)最强并正向晶圆级靠近；BTO(溶液法+纳米压印/综述)、AlN(退火增强EO)、铁电向列液晶/有机 SOH 均有进展。但没有一个在 2026 H2 达到 PZT 8 英寸或 MTP-TFLN 200 mm 那种'全晶圆量产级'公开演示",
+      "note": "立项技术路线宽度：主线 PZT/TFLN 仍最成熟；建议在'路线宽度'段落新增钽酸锂作为值得跟踪的第三路线（有 2026-11 高速实测），BTO/AlN/有机列为前瞻。所有数字保持按材料体系分开，不与 PZT 混写。"
+    }
+  ],
+  "overall": "本轮联网深挖（6 缺口，各换关键词≤2轮，Top3-5 原文深读）结论：Nature Communications 晶圆级 PZT 光子 IC 的标题/DOI(10.1038/s41467-026-79721-0)/核心数字已一手核验为真，但原文可访问正文未披露晶圆级良率、批间均匀性、CMOS 兼容定量数据（补充材料需人工下载）。立项书四处'公开资料未覆盖'需修正：①晶圆级良率/均匀性——TFLN 异质集成已有 imec 中试线公开基线(200mm、印刷良率>95%、3σ 420nm、600 调制器插损<2dB、Vπ=4V、>70GHz)，PZT 器件级分布仍空白；②3.2T TFLN——实验级净 3.2Tbps 已有 OFC 2025 同行评审结果(Ciena/HyperLight/McGill)、单波 400G 实测芯片(易缆微>110GHz/Vπ~3V)，仅量产商用级 2026 H2 数据仍缺；③同口径硅基对照硬数字已补齐(VπL 2–5 V·cm/<1 V·cm、带宽<50GHz/>100GHz、插损2.8dB)；④CMOS 后段兼容——TFLN 因锂污染不兼容、用 MTP-BEOL 规避，有机 SOH 已在代工工艺解决可扩展极化，PZT 含铅/高温兼容仍空白。新体系方面钽酸锂(460 Gbit/s, 2026-11)是最强第三路线。最重要一条新证据：G2 的 imec arXiv:2605.28971——TFLN 晶圆级良率与均匀性已被公开(4×200mm、印刷良率>95%)，直接推翻立项书'良率普遍未公开'的前提，P5 差异化须收窄到 PZT 铁电畴器件的晶圆级一致性+良率-成本模型。取证限制：Nature 全文PDF/Supplementary、Ciena 官网、BusinessWire  hyperLight 原页、部分补充PDF被反爬/付费墙拦截，相关内容按单源'未验证'标注，未臆造。"
+}

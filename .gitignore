@@ -1,0 +1,10 @@
+# 忽略规则
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+.DS_Store

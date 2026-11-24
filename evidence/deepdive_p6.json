@@ -1,0 +1,207 @@
+{
+  "direction": "P6 硅光健康监测临床验证",
+  "generated_at": "2026-11-24",
+  "method": "web_search/web_fetch/advanced_search 真实检索；每缺口换关键词≤2轮；WebFetch 深读一手原文；单源标未验证；突破性设备认定≠上市批准。",
+  "gaps": [
+    {
+      "gap": "SPADE 硅光光声血压、剑桥卷积光谱仪、InnoPIC 等路线的人体大规模多中心临床样本数（P6 核心研究空间）",
+      "queries_tried": [
+        "SPADE silicon photonics optoacoustic blood pressure sensor clinical trial patients multicenter",
+        "SPADE optoacoustic blood pressure \"healthy volunteers\" \"n =\" subjects distal forearm",
+        "\"convolutional spectrometer\" glucose Cambridge participants clinical trial patients",
+        "InnoPIC integrated photonics continuous glucose monitoring clinical trial 2026"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "SPADE 论文本体仅在健康志愿者前臂做器件级验证（原文：'tested on the distal forearm of healthy volunteers'），未见人体大规模（>100例）或多中心临床队列；补充材料中的 '20 in phase 1 / 65 in phase 2' 系对照设备 NOVA 肱动脉基准验证，非 SPADE 自身临床样本。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13680363/",
+          "date": "2026-09-17（Nature Communications 卷17 文章10931；PMC 2026-11-04）",
+          "strength": "一手-期刊原文（PMC/Nature Communications，DOI 10.1038/s41467-026-77580-3）"
+        },
+        {
+          "claim": "剑桥卷积光谱仪（Nature Photonics，2026-04-15）血糖部分为模拟生理环境 + 单名受试者长期追踪（n=1），无大规模人体临床；ScienceDaily 为 2026-10-22 再报道。",
+          "url": "https://www.nature.com/articles/s41566-026-01891-6",
+          "date": "2026-04-15（原文）；2026-10-22（ScienceDaily 再报道 https://www.sciencedaily.com/releases/2026/10/261022081312.htm）",
+          "strength": "一手-期刊原文（Nature Photonics）+ 二手再报道"
+        },
+        {
+          "claim": "InnoPIC（SiN PIC+拉曼+SPAD+AI 无创连续血糖）仍为竞赛孵化/概念阶段，未见 2026 下半年任何临床或产品里程碑。",
+          "url": "https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical",
+          "date": "2025-08-26",
+          "strength": "一手-项目方原文（PhotonDelta）"
+        },
+        {
+          "claim": "相邻路线参照：Happy Ring 无袖带血压 510(k) 临床为 85 例（见 Gap4），仍 <100 例；未改变本缺口结论。",
+          "url": "https://fda.innolitics.com/device/K254000",
+          "date": "2026-09-03（FDA 决定）",
+          "strength": "一手-FDA 510(k) 原始决定书全文"
+        }
+      ],
+      "verdict": "确认未覆盖：未发现 SPADE/剑桥光谱/InnoPIC 任一路线的 >100 例或多中心人体临床样本；实际公开样本为健康志愿者小队列、n=1 追踪、概念阶段。P6 以'人体大规模临床证据缺失'为核心研究空间的立论成立。",
+      "note": "SPADE 补充材料出现的 20/65 例为对照设备 NOVA 的验证，引用时须避免张冠李戴；本缺口为'确认无'型，found=false 指大规模临床数据未找到，而非未检索。"
+    },
+    {
+      "gap": "无创血糖设备的上市时间表 / FDA 或 NMPA 审批进展（2026 下半年最新）",
+      "queries_tried": [
+        "non-invasive glucose monitoring device FDA approval 2026 timeline 510(k) de novo market launch",
+        "无创血糖 上市 时间 FDA NMPA 审批 2026 获批 进展"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "NMPA 已批准乐普医疗指环式无创血糖仪（NeoGlu 01 / GluRing）上市，为公司公告的国内首款'无创+连续监测'三类医疗器械；注册证编号 国械注准20243072020；适用范围为非胰岛素治疗 2 型糖尿病成人、需指尖血校准（间隔≤30天），明确'不能替代现有指尖血糖监测'。",
+          "url": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=10526383&stockid=300003",
+          "date": "2026-11-12（公司公告）；获批时间报道为 2026-06（每经网）",
+          "strength": "一手-上市公司公告（Sina 转载）"
+        },
+        {
+          "claim": "中国医药报/每经网证实该指环式无创血糖仪 2026-06 获国家药监局批准，2026-08-06 京东首发上市；国内此前至少 2 款无创血糖仪取得三类证（博邦芳舟、精策医疗等）。",
+          "url": "https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html",
+          "date": "2026-07-11（获批报道）；2026-08-05（京东首发）",
+          "strength": "一手-行业官媒 + 二手财经媒体交叉印证"
+        },
+        {
+          "claim": "FDA 端 2026-08-25 以 De Novo 授权 Abbott Libre Duo 10 Day（首个连续双葡萄糖-酮体可穿戴，2岁+）。",
+          "url": "http://fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
+          "date": "2026-08-25",
+          "strength": "一手-FDA 官方新闻稿"
+        },
+        {
+          "claim": "FDA 2026-09-24 授予 Biolinq Shine 510(k) OTC 无针 CGM（22岁+，前臂经皮/皮内微针阵列）。注意：上述 FDA 产品均为 CGM（含经皮传感），与'纯光学无创血糖'不是同一技术类别，不可混为一谈。",
+          "url": "https://healio.com/news/endocrinology/20261002/fda-grants-510k-clearance-for-otc-sale-of-needlefree-cgm",
+          "date": "2026-10-02（报道）；批准 2026-09-24",
+          "strength": "二手-专业媒体报道（单源，FDA 编号未直接核库）"
+        }
+      ],
+      "verdict": "已补：立项书标注'未覆盖'的无创血糖上市时间表有实质进展——NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市；FDA 侧 2026 下半年为 De Novo/510(k) 的 CGM 类进展。须严格区分'纯光学无创'与'经皮/无针 CGM'。",
+      "note": "乐普公告注册证号含'2024'字段但公告发布于 2026-11，年份字段口径以 NMPA 原始注册库为准（本次未直连 NMPA 库，标未验证）；MARD 仍高于指尖血，临床精度争议未解。"
+    },
+    {
+      "gap": "硅光健康监测芯片的独立市场规模数据（立项书标未覆盖）",
+      "queries_tried": [
+        "silicon photonics healthcare biomedical chip market size 2032 forecast USD million photonics health monitoring",
+        "\"silicon photonics\" healthcare monitoring chip market size 2026 wearable sensor dedicated segment forecast"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "广义硅光市场有多家口径（不可直接比较）：MarketsandMarkets USD 2.16B(2024)→9.65B(2030)、CAGR 29.5%；ResearchAndMarkets USD 3.78B(2026)→10.55B(2032)、CAGR 18.5%。均为整体硅光（数据中心主导），非健康监测芯片独立规模。",
+          "url": "https://marketsandmarkets.com/Market-Reports/silicon-photonics-116.html",
+          "date": "2026-11-21（页面更新）",
+          "strength": "一手-市场研究机构报告页（口径不一，不可相减）"
+        },
+        {
+          "claim": "相邻细分：硅光 IC 传感器市场 USD 1.4B(2025)→7.2B(2034)、CAGR 19%（marketintelo）；硅光成像系统市场 USD 124.45M(2025)→541.75M(2031)、CAGR 28.12%（Mordor）——最接近但仍非'健康监测芯片'专门口径。",
+          "url": "https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market",
+          "date": "2026-06-24（marketintelo）；2026-09-10（Mordor）",
+          "strength": "二手-市场研究机构报告摘要（单源未验证）"
+        },
+        {
+          "claim": "立项书原引用的生物光子学整体市场 USD 130.6B(2032)（ResearchAndMarkets, 2026-11-03）为 umbrella 口径，涵盖 Roche/GE 等大型影像与诊断，不能充当硅光健康监测芯片规模。",
+          "url": "https://finance.yahoo.com/news/biophotonics-global-strategic-business-report-144500628.html",
+          "date": "2026-11-03",
+          "strength": "二手-新闻稿聚合（立项书已自标仅作背景）"
+        }
+      ],
+      "verdict": "确认未覆盖：未找到'硅光健康监测芯片'这一独立品类的权威市场规模数据；公开的只有整硅光/硅光传感器/生物光子学的 umbrella 或相邻口径，且各家数值差异巨大（2030/2032 预测从 5.87B 到 16.85B 不等），不可直接相减或充当独立规模。",
+      "note": "found=false 指专门品类规模未找到；相邻市场数据作为背景列出，按立项书纪律不作立论依据、不做规模测算。"
+    },
+    {
+      "gap": "Happy Ring 无袖带血压智能戒指的 FDA 510(k) 编号核验（立项书的'编号待核'反面教材）",
+      "queries_tried": [
+        "Happy Ring smart ring blood pressure FDA 510(k) K number clearance 2026"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "核验成功：编号 K254000， trade name 'Happy Health Blood Pressure Monitor'，申请人 Happy Health, Inc.，产品码 DXN（21 CFR 870.1130，Class II），决定 SESE（实质等同），决定日 2026-09-03，Traditional 510(k)，SaMD。FDA 原始 510(k) 数据库可查。",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000",
+          "date": "2026-09-03",
+          "strength": "一手-FDA 510(k) 原始数据库"
+        },
+        {
+          "claim": "510(k) 摘要全文：临床按 ISO 81060-2:2018+A1+A2，85 名受试者（无剔除）、850 次测定，全部用有创动脉内压对照；criterion1 平均误差 DBP 0.12 / SBP 0.81 mmHg，SD 3.16 / 6.09；criterion2 SD 1.55 / 2.76。适应症：22–50 岁、点测、仅测量与显示不做诊断，不用于运动或低灌注状态、心律失常/孕妇等禁忌。硬件为 Happy Ring K240236；主谓词 K250415（Aktiia G0）、参考 K201302（LiveOne LM1P）。",
+          "url": "https://fda.innolitics.com/device/K254000",
+          "date": "2026-09-03（决定书/Summary 编制 2026-08-31）",
+          "strength": "一手-FDA 510(k) 决定书与摘要全文（Innolitics 镜像）"
+        },
+        {
+          "claim": "独立分析指出口号与批准范围有落差：实际批准范围为软件点测、测量显示、不做诊断，且禁用于运动/低灌注——'首款无袖带免校准持续被动血压'的营销措辞被 FDA 记录收窄。",
+          "url": "https://sahha.ai/blog/fda-cleared-vs-approved-wearables",
+          "date": "2026-10-13",
+          "strength": "二手-行业分析（单源未验证，但与 FDA 原文一致）"
+        }
+      ],
+      "verdict": "已补并纠正：编号 K254000 属实，且 FDA 原始数据库给出完整临床数据（85 例/850 次/动脉内金标准）。立项书'编号待核'的反面教材应升级为'编号已核=K254000，且批准范围窄于宣传'——它不再是'无法核验'，而是'核验后发现证据边界清晰'。",
+      "note": "此为本次深挖最重要新证据：把立项书中唯一的'编号待核'项变成可引用的一手监管事实，同时强化'营销措辞≠批准范围'的证据纪律。"
+    },
+    {
+      "gap": "Neola 早产儿肺监测 FDA 突破性设备认定 → 是否已进入正式临床/获批（认定≠上市批准边界）",
+      "queries_tried": [
+        "Neola Medical breakthrough device designation FDA 2026 clinical trial IDE approval premature infant lung monitoring",
+        "Neola Medical FDA IDE investigational device exemption clinical study approval 2026 market authorization CE mark"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "FDA 于 2026-09-04 授予 Neola® 突破性设备认定（用于早产儿无创连续肺监测、支持及时检测气胸/肺塌陷）。公司明确措辞为'strengthening our U.S. regulatory pathway'、'advance the next critical steps toward market authorization'——即认定只是通道资格，非上市批准。",
+          "url": "https://neolamedical.com/mfn_news/neola-medical-receives-fda-breakthrough-device-designation",
+          "date": "2026-09-04",
+          "strength": "一手-公司公告原文（Q3 报告 2026-11-18 复核）"
+        },
+        {
+          "claim": "首个临床 pilot 研究结果（2026-04-21 公布）：仅 10 名早产儿（胎龄≥28周、体重1000–3000g），单中心（瑞典 Borås 的 Södra Älvsborgs Sjukhus NICU），结论为'安全性与耐受性良好'，属早期开发的安全性研究，非有效性确证。",
+          "url": "https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development",
+          "date": "2026-04-21",
+          "strength": "一手-公司公告原文"
+        },
+        {
+          "claim": "公司计划就临床与监管策略与 FDA 沟通，'在监管反馈的前提下'拟于 2027 年中在美国启动早产儿临床研究——说明美国正式临床尚未启动、更无 PMA/510(k) 获批。",
+          "url": "https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development",
+          "date": "2026-04-21",
+          "strength": "一手-公司公告原文"
+        }
+      ],
+      "verdict": "已核边界：突破性设备认定（2026-09-04）≠上市批准。现有临床证据仅 10 例单中心安全性 pilot；美国正式临床拟 2027 年中启动（视 FDA 反馈），无任何获批。立项书'认定只是通道资格、仍处认定与试验通道阶段'的表述准确，应保留并补上 10 例 pilot 与 2027 时间表。",
+      "note": "严禁把突破性认定写成'获批上市'；TAP Pilot 为认定后的优先审评/沟通通道，与批准无关。"
+    },
+    {
+      "gap": "多波长 PPG 无创血压的跨人群泛化数据（肤色/灌注/运动分层误差），有无更大样本公开研究",
+      "queries_tried": [
+        "multi-wavelength PPG cuffless blood pressure skin tone perfusion exercise stratified error generalization study larger cohort 2025 2026",
+        "cuffless blood pressure PPG skin tone Fitzpatrick perfusion motion artifact stratified error large cohort 100 subjects 2025 2026"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "NEO-BP 原文（Adv Sci 2026-07-27，DOI 10.1002/advs.76775）：42 名新生儿、9378 片段、G+R+IR 模型 MAE 9.67/6.17 mmHg；'estimation errors increased under lower signal quality and stronger motion'，分层为回顾性描述性亚组分析。无肤色分层（新生儿队列），样本量小、单场景。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542",
+          "date": "2026-07-27",
+          "strength": "一手-期刊原文（Advanced Science，PMC 全文核读）"
+        },
+        {
+          "claim": "新增相关研究：'Multi-Wavelength PPG Amplitude Ratio Features for Cuffless Blood Pressure Estimation: An Exploratory Study'，Sensors 2026, 26(21):6897，DOI 10.3390/s26216897——标题即标注 exploratory，未提供大规模跨人群分层误差。",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/43029695",
+          "date": "2026-10-30",
+          "strength": "一手-期刊摘要（PubMed 索引，正文未深读，标未验证）"
+        },
+        {
+          "claim": "跨肤色泛化的旁证来自 rPPG 领域：性能'degrades systematically across skin tones'，在头动/光照变化/非实验室条件下加剧（Nowara 等三数据集 73 人 meta 分析）。提示跨人群泛化是全行业未解问题，但非多波长 PPG 血压的大样本分层研究。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13372377",
+          "date": "2026-06-16",
+          "strength": "一手-期刊原文（综述/meta 分析）"
+        },
+        {
+          "claim": "综述性证据：npj Digital Medicine 'Towards trustworthy AI-driven cuffless blood pressure monitoring'（2026-06-25）系统讨论 PPG 无袖带血压的可信度/泛化缺口；arxiv 单搏动耳 PPG+ECG（2607.27076, 2026-07-30）亦以运动/姿态伪影为待解问题。",
+          "url": "https://nature.com/articles/s41746-026-02898-7",
+          "date": "2026-06-25",
+          "strength": "一手-期刊/预印本原文"
+        }
+      ],
+      "verdict": "确认未覆盖：未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究。现有最强证据仍是 NEO-BP 的 42 例新生儿单中心回顾性亚组分析；新增的 Sensors 2026 为探索性研究，rPPG 的肤色退化提示问题普遍存在。立项书'跨人群泛化尚未验证'的判断成立。",
+      "note": "found=false 指'更大样本分层公开研究'未找到；已补入 2026 下半年新论文作为研究动态，但不改变缺口结论。"
+    }
+  ],
+  "overall": "6 个缺口全部逐条联网核实：3 项找到了可填补的一手出处（Gap2 无创血糖 NMPA/FDA 进展、Gap4 Happy Ring = FDA 510(k) K254000 完整临床数据、Gap5 Neola 认定边界+10例pilot+2027美国临床计划），3 项确认未覆盖（Gap1 大规模多中心临床样本、Gap3 硅光健康监测芯片独立市场规模、Gap6 大样本跨人群分层误差）。最重要的新证据是 Happy Ring 编号 K254000 在 FDA 原始数据库核验成功并给出 85 例/850 次动脉内对照临床数据——立项书的'编号待核'反面教材应改写为'编号已核、批准范围窄于宣传'。P6 核心立论（人体大规模临床证据缺失=研究空间）经检索依然成立；无创血糖上市时间表一项需从'未覆盖'更新为'已有 NMPA 获批产品、FDA 侧为 CGM 类进展'。全文坚持突破性设备认定≠上市批准、单源标未验证、市场口径不可相减。"
+}

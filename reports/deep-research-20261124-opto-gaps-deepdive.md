@@ -1,0 +1,661 @@
+# 六大光电研究方向——公开资料缺口深挖报告
+生成日期：2026-11-24　｜　范围：对六份立项书中标注为「公开资料未覆盖」或存在口径分歧的条目逐条联网核实
+## 研究方法
+本报告为 deep-research-pro 外部检索闭环的产物。对每个缺口换关键词重试不超过两轮，到顶仍未找到即判「确认未覆盖」；深读各方向 Top 3-5 篇公开资料；每条主张均附出处链接（即方括号外链标记后紧跟的来源，例：[外]（出处：https://www.nature.com/articles/s41467-026-79721-0）示例主张（2026-11-20）。）；单一来源标「未验证」；近 12 个月资料优先；缺口绝不补写、不臆造。找不到一手出处时如实写「确认未覆盖」，不把二手估算升格为事实。
+六个方向共深挖 **35 个缺口**：找到一手出处 **10** 条，确认仍未覆盖 **10** 条，汇集唯一来源 **112** 个。
+## 关键要点
+1. 六个方向的立项证据大多站得住，但有四处必须纠偏：P3「65.5 TOPS/W」实为 Envise 吞吐量 65.5 TOPS 的误标（能效 0.81–0.84 TOPS/W）、LightGen 为上海交大成果非清华；P5「晶圆级良率未公开」前提被 imec 中试线数据推翻；P6 Happy Ring FDA 510(k)=K254000 编号已核实但批准范围窄于宣传。
+2. 立项书中真正的科学空白经两轮换词检索确认保留：P1 键合应力→插损/波长漂移可复算敏感系数、光电同测日测晶圆吞吐基准；P6 人体大规模多中心临床样本数。这些必须由本项目实测填补。
+3. P3「方法学空位」不能按空白论证：IEEE P1959/P1960 通用 ML 能效标准与 Nature Nanotech 光计算量化方法学已出现，须转向「光计算专用分层口径 + 转换开销记账基准」差异化定位并对接通用标准。
+
+## 核心结论
+**P1 CPO封装良率**：6 个缺口中，1 个找到一手原始出处（缺口1：台积电 COUPE/imec 讲座 PDF 给出硅光芯片测试良率 10%–70%、耦合损耗 >±2.5 dB、共振漂移 1.5 nm），3 个仅找到二手或行业估算（缺口2 成本、缺口3 渗透率 0.5%、缺口4 自动对位 3×/<90s），2 个经两轮换词检索确认仍未覆盖（缺口5 键合应力→插损/波长漂移可复算敏感系数、缺口6 光电同测日测晶圆吞吐基准）——后两者与提案原判断一致，是本项目真正需要用实测数据填补的科学空白。关键警示：搜索中大量命中的『50%』是硅光调制器渗透率而非 CPO 渗透率，『±1°』是保偏 FAU 偏振轴误差而非提案的 <0.1°，均不可混引。缺口1 可按一手证据改写提案中『良率硬数字公开未覆盖』的笼统表述，但需把口径限定为硅光芯片测试良率，光引擎整机良率仍未见一手数字。
+**P2 III-V激光异质集成**：6 个缺口逐条联网核实：4 条找到一手出处（G2 相邻一手证据、G4 Intel 2025 可靠性数据、G5 LightCounting 原文、G6 厂商/标准一手数据），1 条仅二手估算（G3 台积电 PIC 2026Q4 约 15,000 片/月，源自法人估计、非官方），1 条确认仍未覆盖（G1『200G 高端产能 90% 集中于住友/JX/AXT/Coherent 四家』，两轮中英检索无一手出处，且权威口径给出冲突名单）。最重要的新证据是 Intel SPIE 2025 论文：>55,000 颗加速寿命测试 <0.1 FIT、>600 万颗现场 3 年 100% 失效分析验证 0.05 FIT、32 颗 45,000 h HTOL 退化可忽略——直接推翻立项书§2.3『异质集成激光器可靠性/寿命公开数据未覆盖』的旧表述，但仅适用于其晶圆键合+100% 老化筛选口径。次要新证据：2026 年两篇会议论文给出界面应力/裂纹—阈值漂移—Weibull/MTTF/Ea 的定量链条（η=1840 次热循环；MTTF>100,000 h，Ea=0.72 eV），把立项书 G2 从零证据提升为审慎探索。
+**P3 光计算能效口径**：6 个缺口中 5 个找到一手出处,1 个(缺口5 具体出货量+第三方实测能效)确认未覆盖。核心纠偏有两条:①'65.5 TOPS/W'实为 Envise 吞吐量 65.5 TOPS 的误标,其能效为 0.81–0.84 TOPS/W(NSR 2026 一手证实),立项核心'对立证据'须改写;②LightGen 是上海交大而非清华团队成果(Science 2025-12, DOI 10.1126/science.adv7434)。最重要的立项依据调整来自缺口6:IEEE P1959/P1960 通用 ML 硬件能效指标草案(Active PAR,2024-11-12,明确不做 benchmark)与 Nature Nanotech 2026-09 光计算量化标准方法学已出现,P3'方法学空位'不能再按空白论证,须转向'光计算专用分层口径+含转换开销记账的可复现基准'差异化定位并与通用标准对接。160 TOPS/W(清华太极,Science 2024)与 Envise 0.84 TOPS/W(Nature 2025 复算口径)两项锚点均有可靠一手出处,但都缺整机功耗/系统边界的明确定义——正是 P3 可切入的方法学缝隙。所有 Science/PubMed 原文页受 Cloudflare/反爬阻挡,以官网、同行评议综述、白皮书交叉核对;单源/仅摘要项已在 strength 标'未验证'。
+**P4 AI逆向设计光子器件**：5 个缺口逐条联网核实，4 个找到一手出处、1 个（G4 信通院 2026 版）确认未覆盖。G1 原论文题名/8 位作者/DOI/日期/四项效率数字全部核实无误，且为 early-access 版本；其后续流片实测版本两轮检索未命中。G2 需改写：别的团队已有逆向设计超表面的同口径仿真—实测对照（仿真 50.4% vs 实测 50.2%，FWHM 1.53 vs 1.56 μm），'差距无法量化'已不成立，但智能体框架器件本身仍无实测。G3 找到跨求解器迁移、跨三器件 >90% 图形转移保真度、跨尺度实验实现等相邻案例，'LLM/Agent + 超表面→片上器件 + 实测效率'三者齐备者确认未覆盖。G5 竞品明确：MetaChat/MCP-LLM/arXiv:2611.08127 均已公开可复现框架，其中 arXiv:2611.08127 已内建二值化与 ±10 nm 鲁棒性，P4 新颖性必须落在'统一筛选判据+实测边界+跨器件迁移'。全部外部结论附 URL；单源或仅搜索摘要者均标未验证；未补写、未臆造。深读来源：Nature 原页、PMC12152600、PMC12717938、PMC12577674、arXiv 2611.08127 HTML、C114 原文。
+**P5 新型电光材料晶圆级集成**：本轮联网深挖（6 缺口，各换关键词≤2轮，Top3-5 原文深读）结论：Nature Communications 晶圆级 PZT 光子 IC 的标题/DOI(10.1038/s41467-026-79721-0)/核心数字已一手核验为真，但原文可访问正文未披露晶圆级良率、批间均匀性、CMOS 兼容定量数据（补充材料需人工下载）。立项书四处'公开资料未覆盖'需修正：①晶圆级良率/均匀性——TFLN 异质集成已有 imec 中试线公开基线(200mm、印刷良率>95%、3σ 420nm、600 调制器插损<2dB、Vπ=4V、>70GHz)，PZT 器件级分布仍空白；②3.2T TFLN——实验级净 3.2Tbps 已有 OFC 2025 同行评审结果(Ciena/HyperLight/McGill)、单波 400G 实测芯片(易缆微>110GHz/Vπ~3V)，仅量产商用级 2026 H2 数据仍缺；③同口径硅基对照硬数字已补齐(VπL 2–5 V·cm/<1 V·cm、带宽<50GHz/>100GHz、插损2.8dB)；④CMOS 后段兼容——TFLN 因锂污染不兼容、用 MTP-BEOL 规避，有机 SOH 已在代工工艺解决可扩展极化，PZT 含铅/高温兼容仍空白。新体系方面钽酸锂(460 Gbit/s, 2026-11)是最强第三路线。最重要一条新证据：G2 的 imec arXiv:2605.28971——TFLN 晶圆级良率与均匀性已被公开(4×200mm、印刷良率>95%)，直接推翻立项书'良率普遍未公开'的前提，P5 差异化须收窄到 PZT 铁电畴器件的晶圆级一致性+良率-成本模型。取证限制：Nature 全文PDF/Supplementary、Ciena 官网、BusinessWire  hyperLight 原页、部分补充PDF被反爬/付费墙拦截，相关内容按单源'未验证'标注，未臆造。
+**P6 硅光健康监测临床验证**：6 个缺口全部逐条联网核实：3 项找到了可填补的一手出处（Gap2 无创血糖 NMPA/FDA 进展、Gap4 Happy Ring = FDA 510(k) K254000 完整临床数据、Gap5 Neola 认定边界+10例pilot+2027美国临床计划），3 项确认未覆盖（Gap1 大规模多中心临床样本、Gap3 硅光健康监测芯片独立市场规模、Gap6 大样本跨人群分层误差）。最重要的新证据是 Happy Ring 编号 K254000 在 FDA 原始数据库核验成功并给出 85 例/850 次动脉内对照临床数据——立项书的'编号待核'反面教材应改写为'编号已核、批准范围窄于宣传'。P6 核心立论（人体大规模临床证据缺失=研究空间）经检索依然成立；无创血糖上市时间表一项需从'未覆盖'更新为'已有 NMPA 获批产品、FDA 侧为 CGM 类进展'。全文坚持突破性设备认定≠上市批准、单源标未验证、市场口径不可相减。
+## 缺口逐条核实
+### 一、P1 CPO封装良率
+#### 缺口 1：CPO/近封装光引擎 2026 年量产的良率硬数字（如光引擎良率%、FAU对位良率）
+已查询：CPO optical engine yield rate 2026 percentage co-packaged optics manufacturing；co-packaged optics yield 良率 光引擎 2026 量产；silicon photonics optical engine yield 60% 70% 80% 90% CPO manufacturing yield data point；site:trendforce.com CPO optical engine yield bottleneck 2026。
+**裁决：找到一手出处**（found=True）
+- [外]（出处：https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf）台积电 COUPE 硅光平台一手会议资料给出硅光芯片测试良率 10%–70%，光纤—硅芯片耦合损耗 >±2.5 dB，晶圆级中心共振波长漂移控制在 1.5 nm；这是提案标注『公开资料未覆盖』的良率硬数字迄今最接近原始出处的量化。注意：口径为硅光芯片测试良率，非光引擎整机良率。（2025-10-14，evidence-backed）
+- [外]（出处：https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html）FAU『穿线工序』良率：Senko/Sumitomo/Corning/FOCI 等厂商在人工+设备协作模式下，24/36 芯高密度产品稳定量产良率卡在 70%–75%；天孚通信(TFC)产线稳定量产良率 90%–95%。来源为行业媒体引用闭门供应链会议纪要，非厂商一手披露。（2026-09-22，二手估算）
+- [外]（出处：https://photondelta.com/blog/what-is-the-yield-rate-for-photonic-chip-manufacturing）光子芯片制造典型良率 30%–70%（依平台/复杂度/成熟度而变）；集成电路代工数据。（2026-03-13，二手估算）
+- [外]（出处：https://trendforce.com/presscenter/news/20260727-13151.html）TrendForce 官方新闻稿确认『光引擎高制造良率与有效热管理』是放量三大瓶颈之首，但通篇未给出任何具体良率百分比。（2026-07-27，evidence-backed）
+说明：一手原始出处=瑞士光子学协会发布的 imec/台积电 COUPE 讲座原始 PDF（Emma Xu, 2025-10-14），给出硅光芯片测试良率 10%–70%、耦合损耗 >±2.5 dB、共振波长漂移 1.5 nm。但『光引擎（PIC+EIC+激光+耦合）整机良率百分比』这一具体口径在近12个月公开资料中仍未找到一手数字，只能以芯片测试良率与 FAU 穿线良率（70–75%/90–95%，二手）间接替代。建议提案改写为『硅光芯片测试良率 10–70%（一手会议资料）+ FAU 穿线良率二手区间』，不再笼统写『光引擎良率硬数字公开未覆盖』。
+#### 缺口 2：CPO 光模块单位成本 / 与可插拔的成本对比数字
+已查询：co-packaged optics cost per module vs pluggable optics 2026 dollars；CPO cost per port comparison pluggable optics transceiver dollar 2025 2026 analysis；Nvidia CPO switch optical engine BOM cost breakdown semiconductor analysis；CPO 光模块 成本 可插拔 对比 美元 2026。
+**裁决：仅二手或估算**（found=True）
+- [外]（出处：https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html）ELS（外置激光源）模块整模块约 USD 500，其中组件成本近 USD 350，单个 CW 激光芯片约 USD 32（占成本支出一半）；Broadcom VCSEL-NPO 量产成本可达 USD 0.1/GB。来源：行业媒体引用 OFC 2026 与供应链研究，属二手估算。（2026-09-22，二手估算）
+- [外]（出处：https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide）第一代 CPO 每端口成本仍高于大批量可插拔方案，价差随出货量增长才收窄；转引 TrendForce 判断。（2026，二手估算）
+- [外]（出处：https://www.molex.com/en-us/blog/co-packaged-optics-vs-pluggable）可插拔光模块当前每端口成本可能低于新兴 CPO 实施方案，但随带宽扩展信号损耗与热密度使可插拔趋于极限（定性，无数字）。（2026，二手估算）
+- [外]（出处：https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling）SemiAnalysis CPO Book 含 Nvidia Quantum X800-Q3450 CPO（72 个 1.6T 光引擎）与收发器成本对比细节，页面抓取超时未取到具体数字，仅确认来源存在。（2026，二手估算）
+说明：找到了 ELS 模块 ~USD500、CW 激光芯片 ~USD32、VCSEL-NPO USD0.1/GB 等具体成本数字，但均为行业媒体/供应链转述，无厂商一手 BOM 或权威机构原始报告可核；CPO vs 可插拔的每端口成本对比只有定性判断（CPO 一代仍更贵），无一手精确比值。按纪律标『未验证』。
+#### 缺口 3：CPO 在当前 800G/1.6T 光模块中的渗透率精确百分比（2026 口径）
+已查询：CPO penetration rate 800G 1.6T optical modules 2026 percentage LightCounting Yole；CPO share of optical transceiver market 2026 percent TrendForce；硅光 CPO 渗透率 2026 百分比 800G 1.6T；LightCounting silicon photonics modulator share 2026 50% CPO penetration。
+**裁决：仅二手或估算**（found=True）
+- [外]（出处：https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide）TrendForce 估计 CPO 约占 2026 年 AI 数据中心光模块的 0.5%，到 2030 年升至约 35%。这是检索到的唯一 CPO 渗透率精确百分比，但为技术指南站转引，未找到 TrendForce 原始报告页。（2026，二手估算）
+- [外]（出处：https://news.futunn.com/en/post/74584585/will-the-race-for-next-generation-optical-modules-avoid-a）LightCounting 2026 年 5 月报告：2026 年采用硅光调制器的光模块销售额将首次超过该类市场总额（约 40 亿美元）的 50%——注意这是『硅光渗透率』而非 CPO 渗透率，口径不可混用。（2026-05，二手估算）
+- [外]（出处：https://www.hyc-system.com/news/Industry/7178.html）约 50% 的当前 800G 模块采用硅光技术，400G 中 20%–30%（ICCSZ 口径）——同样是硅光而非 CPO 渗透率。（2026，二手估算）
+说明：找到一个精确数字：CPO 占 2026 AI 数据中心光模块约 0.5%（转引 TrendForce，2030→35%），但仅单一二手来源、未验证，且口径是『AI 数据中心光模块』而非窄义『800G/1.6T 模块中的 CPO 占比』。大量搜索命中的 50% 是硅光调制器渗透率，必须与 CPO 严格区分，切勿混引。
+#### 缺口 4：FAU 保偏光纤阵列自动对位 vs 手工对位的节拍、精度分布、一致性公开数据（"对位<0.1°、熟练工1-2个/天"是否有原始出处）
+已查询：FAU polarization maintaining fiber array alignment 0.1 degree skilled worker per day；fiber array unit FAU automated alignment vs manual alignment cycle time accuracy polarization maintaining；FAU 保偏光纤阵列 自动对位 手工 节拍 0.1度 熟练工 一天；OFC 2025 V-groove positional accuracy sub-micron coupling loss FAU active alignment。
+**裁决：仅二手或估算**（found=True）
+- [外]（出处：https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one）公开厂商口径：AI 引导主动对位平台可做到 6 自由度、亚微米公差、单件 <90 秒，相对手工对位 3× 吞吐提升（称经美国某光子组装厂测试，但无一手测试报告链接）。（2026，二手估算）
+- [外]（出处：https://www.laserfocusworld.com/directory/fiber-optic-optoelectronic-components-equipment-systems/automatic-alignment-systems-fiber-optic/press-release/55389004/pi-americas-physik-instrumente-fau-alignment-faster-cost-optimized）PI F-141/NovAlign 自动对位系统：对准算法首次找光与信号优化时间『比常规方法快达两个数量级』，4/6 自由度、40 mm XYZ 行程、12° 光轴旋转（厂商新闻稿，无独立对照测量）。（2025-01-24，二手估算）
+- [外]（出处：https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one）OFC 2025 光子封装研讨会共识（转引）：实现 sub-0.5 dB/facet 耦合需要 V 槽位置精度优于 ±0.5 µm、端面粗糙度 Ra<1 nm；生产级 FAU 位置公差 ±0.5 µm。这是位置精度口径，不是角度口径。（2025，二手估算）
+- [外]（出处：https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html）Fiber-Mart FAU 工艺页：保偏 FAU 每根光纤需精确旋转，将偏振轴误差控制在 ±1° 以内——与提案『<0.1°』相差一个数量级，且页面被 Cloudflare 拦截仅取到搜索摘要。（2026，二手估算）
+说明：钉死结论：『对位 <0.1°、熟练工 1–2 个/天』这两句原始数字经两轮以上中英文换词检索，未找到任何一手公开 URL，且公开口径（保偏偏振轴 ±1°、V 槽位置 ±0.5 µm）与之量级冲突——该数字继续保留为本地证据文件来源、标 plausible-inference。但缺口本身问的『自动 vs 手工对比数据』找到间接公开读数：<90 秒/件、3× 吞吐、快两个数量级、位置精度 ±0.5 µm，均为厂商/行业口径，缺严格的可复算对照实验，标未验证。
+#### 缺口 5：三明治键合（PIC+EIC+硅基板）应力/晶圆翘曲到插损/波长漂移的可复算敏感系数
+已查询：hybrid bonding PIC EIC silicon interposer warpage stress insertion loss wavelength shift coefficient；hybrid bonding wafer warpage stress silicon photonics wavelength shift nm insertion loss dB sensitivity measurement；bonding induced strain silicon photonics ring resonator wavelength shift nm per MPa；TSMC COUPE SoIC EIC PIC bonding warpage resonance drift 1.5nm。
+**裁决：确认仍未覆盖**（found=False）
+- [外]（出处：https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf）台积电 COUPE 平台规格：12 英寸 65 nm 硅光，10 µm 对准容差对应 0.3 dB 垂直耦合损耗，76 GHz 微环调制器，晶圆级中心共振波长漂移控制 1.5 nm——是规格/控制目标，非『应力→漂移』可复算敏感系数。（2025-10-14，evidence-backed）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC5445873）键合应变量化（非 CPO 专用、2017 年）：X 射线测 96 mm 长方向最大 Omega 角位移 0.188°，对应 41.68 µm 弓形、150 mm 晶圆约 64.12 µm 翘曲，用于提取键合诱导应变。可作为翘曲测量方法参考，但不给出应力→插损/波长漂移的耦合系数。（2017，evidence-backed）
+- [外]（出处：https://doi.org/10.1109/jstqe.2022.3223641）InP DFB 激光器与硅光晶圆级倒装混合集成：sub-300 nm 对准精度支撑 <2 dB 耦合效率，FDTD 仿真给出对准公差—耦合损耗关系（2022 年，非近12个月）。（2022-01-01，evidence-backed）
+- [外]（出处：https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf）IEEE HIR 9.0 Photonics CPO 路线图（2026-05）与 Ansys CPO 多物理场 Lumerical 互操作 webinar（封装翘曲 Shadow Moiré 测量、-55~260°C 热循环建模）确认业界在做应力/翘曲建模，但未公开可直接复算的应力→插损/波长漂移敏感系数。（2026-05-18，evidence-backed）
+说明：两轮检索后钉死：公开资料给出相关量（1.5 nm 共振漂移控制目标、0.188°→41.68 µm 弓形→64.12 µm 翘曲、sub-300 nm→<2 dB 耦合、10 µm→0.3 dB），但没有任何来源给出『键合应力/晶圆翘曲 → 插损 dB / 波长漂移 nm』的可复算敏感系数（如 nm/MPa、dB/µm warp）。与提案原判断一致：这正是项目的科学空白，敏感系数须由本项目实测标定。
+#### 缺口 6：光电协同在测平台的吞吐基准（"单台日测个位数晶圆"有无一手出处）
+已查询：wafer level optical electrical co-test throughput wafers per day photonic integrated circuit test benchmark；silicon photonics wafer test throughput dies per second electro-optical co-test benchmark；光电协同在测平台 吞吐 日测晶圆 个位数 光电同测；ficonTEC Advantest CPO wafer level test throughput wafers per day。
+**裁决：确认仍未覆盖**（found=False）
+- [外]（出处：https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate）ficonTEC 300 mm 双面光电晶圆测试仪（2025-03，兼容现有 ATE：顶部 DC/高速电测 + 底部六轴光学校准探针、自动上下片、真空温控 chuck、原位 FAU 校准），宣称『high-throughput』但未给出每日晶圆吞吐数字。（2025-03，evidence-backed）
+- [外]（出处：https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit）SemiVision 深度分析（2026-07-27，基于 Advantest SEMICON Taiwan SiPh Summit 2025 演讲）：CPO 最大瓶颈是缺乏可重复、自动化、标准化、经济可行的光电混合测试体系；提出 Known Good Optical Engine 与测试左移（PIC 晶圆级→EIC-PIC 晶圆级→光引擎 die 级→系统级），指出三大缺口（光探针无标准、FAU…（2026-07-27，evidence-backed）
+- [外]（出处：https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput）专利/技术情报站给出方向性目标：标准 PIC 单 die 测试时间 <1 秒（wafer-level SiPh throughput 改进目标），可作为『目标值』参考，非已实现的一手基准。（2026，二手估算）
+- [外]（出处：https://www.jenoptik.com/-/media/websitedocuments/optics/microoptics/presentation-webinar-ufo-probe.pdf）JENOPTIK 电子-光子测试路线图 webinar 材料：晶圆级同时电/光测试、每芯片无主动对准时间（plug & play 对接标准 IC 探针台），同样无吞吐绝对值。（2024-03-13，evidence-backed）
+说明：两轮检索后钉死：『单台高端设备日测仅个位数晶圆』未找到任何一手出处或 wafers/day 公开基准。公开资料只到『high-throughput 光电同测设备已商用（ficonTEC 300mm 双面测试）』+『测试左移/Known Good Optical Engine 是产业共识（Advantest/SemiVision）』+『<1s/die 目标值』这一层，没有可引用的吞吐硬数字。该数字继续保留为本地证据文件来源、标 plausible-inference，基线只能自建。
+### 二、P2 III-V激光异质集成
+#### 缺口 1：200G以上高速激光芯片高端产能约90%集中于住友电工/JX金属/AXT/Coherent四家——一手出处或行业权威报告
+已查询：200G以上高速激光芯片 高端产能 90% 住友电工 JX金属 AXT Coherent；"90%" high-end laser chip capacity Sumitomo Electric JX Metal AXT Coherent 200G；100G 200G EML 光芯片 高端产能 90% 住友电工 JX金属 AXT Coherent 四家；InP substrate high speed laser chip 90 percent capacity four suppliers Sumitomo JX AXT Coherent；InP substrate 90% laser chip capacity Sumitomo JX AXT Coherent high-speed 200G；200G laser chip supply concentration four companies market share。
+**裁决：确认仍未覆盖**（found=False）
+- [外]（出处：https://trendforce.com/presscenter/news/20251208-12823.html）TrendForce 2025-12-08 新闻稿：EML 仅少数供应商可得，列举 Lumentum、Coherent（Finisar）、Mitsubishi、Sumitomo、Broadcom；NVIDIA 预占大量 EML 产能，交期拉长至 2027 年以后。该权威口径列出 5 家且未含 JX 金属/AXT，也未给出 90% 数字，与待核主张的机构构成冲突。（2025-12-08，机构新闻稿（一手发布，二手数据）；未验证（单源））
+- [外]（出处：https://www.tmtpost.com/8090088.html）钛媒体《光芯解码-企业突围篇》给出高端光芯片由海外头部寡头主导的定性判断，检索摘要未出现 90% 或四家名单，未深读全文。（，仅搜索摘要，未验证）
+说明：两轮关键词重试（中英各角度）均未找到给出『200G 以上高端产能约 90%』及『住友电工/JX 金属/AXT/Coherent 四家』这一具体组合的一手或权威出处。可见的是不同且互相冲突的供应商名单（TrendForce 五家 vs 本地 JSON 四家 vs 本地另一口径 Lumentum/Coherent/博通）。立项书 A2 应继续标『未挂 URL、不可采信为定论』，不得把两个口径合并。
+#### 缺口 2：异质集成 III-V 激光器在硅基上的界面缺陷密度—阈值电流—老化退化率的定量关系
+已查询：heterogeneous integration III-V laser on silicon defect density threshold current degradation rate quantitative；硅基异质集成 III-V 激光器 界面缺陷密度 阈值电流 老化退化率 定量关系；threading dislocation density threshold current degradation rate heterogeneous III-V silicon laser quantitative correlation；缺陷密度 阈值电流 老化 退化率 硅基 III-V 激光器 定量 SPIE。
+**裁决：找到一手出处**（found=True）
+- [外]（出处：https://doi.org/10.1117/12.3123229）OICE 2026 会议论文（8 英寸 Si3N4 PIC + III-V 增益芯片）：500 次热循环后出现两种退化区制——界面应力累积主导的阈值电流缓慢漂移，以及键合层边缘分层触发的突变失效；FEM 在 −40~+125°C 下给出界面角部 von Mises 应力达 312 MPa；Weibull 特征寿命 η=1840 次热循环。（2026-08-11，一手（SPIE 会议论文摘要，经 OpenAlex/Crossref 元数据验号；全文闭源））
+- [外]（出处：https://doi.org/10.1109/icept71373.2026.11690061）ICEPT 2026 论文：多应力加速老化（TC −40/+85/+105/+125°C；HTOL 结温 60/85/105°C）+ 3D FEM + PL-DOP/FIB-SEM 交叉验证；Paris-law 裂纹扩展模型复现实验裂纹演化在 ±8.5% 内；Weibull β=3.0–3.8；Coffin-Manson/Arrhenius 外推 Ea=0.72 eV、使用条件 MTTF>100,…（2026-08-01，一手（IEEE 会议论文摘要，经 OpenAlex/Crossref 验号；全文闭源））
+- [外]（出处：https://doi.org/10.3390/electronics10222734）综述：键合型 III-V/Si 激光器与常规激光器共享外延相关退化机制（非辐射复合中心、掺杂扩散）；硅上 InAs 量子点激光器寿命强烈受 extended defects（主要是贯穿有源区的失配位错）密度限制，阻挡层可大幅削弱该影响。（2021-11-09，一手综述（对既有文献的二手归纳；MDPI 正文页被 Access Denied，摘要经 OpenAlex 取得））
+- [外]（出处：https://doi.org/10.1016/j.microrel.2018.06.058）Buffolo 等 2018 年论文对异质 III-V/Si 环形镜激光器做恒流加速老化，识别阈值电流上升等共同退化机制（PDF 正文抓取失败，仅搜索摘要）。（2018-09-01，未验证（仅摘要式证据，PDF 未取全文））
+说明：仍无单一文献同时把『缺陷密度（cm^-2）』作为自变量给出缺陷密度—阈值电流—老化退化率两组拟合及置信区间；已找到的是同方向的相邻一手证据：界面应力/裂纹密度—阈值漂移—加速老化寿命（Weibull、Ea、MTTF）以及位错密度—量子点激光器寿命的定性结论。可支撑立项书 G2 作为『审慎探索』，但不能写成已完成的三者联动关系。
+#### 缺口 3：台积电 COUPE 平台 2026 下半年具体产能（晶圆片数/月产能）
+已查询：TSMC COUPE 2026 second half capacity wafers per month；台积电 COUPE 2026下半年 产能 晶圆片 月产能；TSMC PIC capacity expansion 2026 Q4 15000 wafers COUPE；TSMC COUPE 2H26 capacity Commercial Times institutional investors。
+**裁决：仅二手或估算**（found=True）
+- [外]（出处：https://www.ctee.com.tw/news/20260708700075-439901）工商时报：法人估计台积电 PIC 月产能由约 500 片升至 2026Q2 1 万片、2026Q4 1.5 万片、2028 年至少 2.5 万片；按每片 648 die 计，年化 PIC 产出 400 万→7800 万→1.94 亿颗，考虑 SoIC 良率 50% 与实际组装良率后光引擎出货估计约 39 万/778 万/4860 万颗。2026–2027 COUPE 主要量产客户可能为 NVIDI…（2026-07-08，二手（原始媒体报道法人估算，非台积电官方披露））
+- [外]（出处：https://www.trendforce.com/news/2026/07/08/news-tsmc-pic-capacity-seen-surging-to-25k-wafersmonth-by-2028-nvidia-broadcom-eyed-as-early-coupe-customers）TrendForce News 转述同一 Commercial Times 估算：TSMC PIC capacity 500 → 10,000 wafers/month (2026Q2) → 15,000 (2026Q4) → ≥25,000 (2028)；并提醒 PIC 产能增加不等于 CPO 立即放量，仍需 SoIC 整合、光电测试、光引擎封装、FAU 耦合与系统验证。（2026-07-08，二手（机构媒体转述法人估算，未验证））
+说明：2026 下半年具体数字已找到：2026Q4 约 15,000 片/月（PIC 总体产能，非 COUPE 专属产线）。两源指向同一 Commercial Times 原始报道，不构成独立交叉验证；未见台积电官方对 COUPE 月产能的正式披露。立项书『公开资料未覆盖』应改为『仅有法人估算，无官方口径』。
+#### 缺口 4：硅基异质集成激光器的可靠性/寿命公开数据（MTTF、老化测试）
+已查询：heterogeneous integrated III-V silicon laser reliability lifetime MTTF accelerated aging test；硅基异质集成激光器 可靠性 寿命 MTTF 老化测试；Reliability of III-V/Si heterogeneously integrated lasers 0.1 FIT 55000 lasers SPIE 2025。
+**裁决：找到一手出处**（found=True）
+- [外]（出处：https://doi.org/10.1117/12.3043449）Intel（SPIE Silicon Photonics XX, 2025）：集成 InP 混合激光器消除解理面光学灾变损伤、III-V 再生长界面缺陷与装配 ESD 失效；45,000 小时高温工作寿命测试（32 颗）退化可忽略；>55,000 颗加速寿命测试得到失效率 <0.1 FIT；对 >600 万颗混合激光器 3 年现场数据做 100% 失效分析，验证为 0.05 FIT。（2025-03-20，一手（Intel 作者会议论文，摘要经 OpenAlex/Crossref 验号；全文闭源））
+- [外]（出处：https://doi.org/10.1109/icept71373.2026.11690061）ICEPT 2026：III-V-on-Si 键合界面多应力加速老化 + FEM 联合验证，Weibull β=3.0–3.8，Ea=0.72 eV，使用条件 MTTF>100,000 h，B10 寿命 390→>900 次热循环。（2026-08-01，一手（会议论文摘要，OpenAlex 验号；全文闭源））
+- [外]（出处：https://www.researching.cn/ArticlePdf/m00001/2025/52/16/1603014.pdf）中文综述转述：硅基 InAs 量子点激光器在 80°C 下表现良好可靠性，最佳样品估算寿命超过 22 年（PDF 抓取失败，仅搜索摘要）。（2025，未验证（综述转述，仅搜索摘要））
+说明：立项书 §2.3 关于『异质集成激光器可靠性/寿命公开数据未覆盖』的表述已被 Intel 2025 一手数据推翻：有 HTOL 时长、FIT 率、现场样本量与失效分析口径。注意口径限制：Intel 器件是晶圆键合/混合集成并经过 100% 老化筛选，不能外推到所有异质集成路径。
+#### 缺口 5：InP 激光器 2025 占光芯片市场 58%、2031 预测 46%（约 69 亿美元）的原始出处核对
+已查询：LightCounting May 2026 InP lasers 58% 2025 46% 2031 $6.9 billion optical chip market；site:lightcounting.com may 2026 silicon photonics InP laser 58% 46%。
+**裁决：找到一手出处**（found=True）
+- [外]（出处：https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377）LightCounting 原文：收发器/AOC/LPO/LRO/NPO/CPO 用光芯片市场 2025 年约 40 亿美元，2031 年约 150 亿美元；硅光芯片 2025 占 1/3、2031 占 42%（63 亿美元）；InP 激光器（含 CW 激光、可调谐激光与相干用 InP PIC）为最大细分，2025 占 58%，2031 仍占 46%（69 亿美元），含 EML 贡献。预测已计入 …（2026-05，一手（机构原始通讯全文，web_fetch 深读核实））
+说明：立项书 A3 逐字核对无误：58%（2025 实测估计）与 46%/69 亿美元（2031 预测）均出现在原文。仍须遵守 canon：2031 数值为机构预测，不能写成已实现数据。
+#### 缺口 6：外部激光源 ELS vs 片上集成光源的 CPO 链路预算/可靠性对比公开数据
+已查询：external laser source ELS versus on-chip integrated laser CPO link budget reliability comparison；CPO external laser source vs integrated laser source insertion loss power budget reliability data；NVIDIA co-packaged optics external laser source reliability integrated laser link budget technical blog；CPO external laser source ELS field replaceable reliability laser temperature 15x link loss budget。
+**裁决：找到一手出处**（found=True）
+- [外]（出处：https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance）Lumentum 厂商博客（2026-06-17）：ELS/ELSFP 通过把激光器与交换 ASIC 物理分离获得面板可维护性与热隔离；其泵浦激光平台累计近 50 万颗、>200 亿器件小时、<1 FIT 且 2014 年以来零激光二极管现场失效；生产型 UHP 器件加速寿命测试累计 >1 亿器件小时、零失效。引用 Broadcom 在 Meta 累计 100 万 400G 等效端口器件小时无 f…（2026-06-17，一手（厂商自报测试数据与引用，未独立验证））
+- [外]（出处：https://www.viksnewsletter.com/p/why-cpo-uses-external-lasers）工程分析：把激光器集成进 SiPho 芯片可获得最低插损与最高功耗收益，但产业因热问题（交换 ASIC 数百瓦、波长/功率/寿命对温度敏感）与可维护性问题（激光器是光系统前三大失效模式之一，片上失效需更换整个封装）选择 ELS；ELSFP 规范使激光器可前面板热插拔。（2025-11-09，二手分析（付费墙，公开前段已深读；观点性，非实测数据））
+- [外]（出处：https://oiforum.com/wp-content/uploads/OIF-Co-Packaging-FD-01.0.pdf）OIF 共封装实施协议：ELS 可改善 CPO 交换机可靠性，失效激光可在面板更换而无需停机，且物理分离改善激光器热环境。（2022-02-10，一手标准文本（仅搜索摘要，PDF 未深读））
+- [外]（出处：https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf）Lumentum 白皮书搜索摘要给出对比量级：去掉 10–15 英寸电走线可省约 22 dB 信号损耗，CPO 每端口功耗约 30 W→约 9 W（约 3.5 倍改善）；PDF 正文抓取失败，数字未深读复核。（2026-06-10，未验证（仅搜索摘要，PDF 未取全文））
+说明：找到的是分立的可靠性一手数据与架构层面对比依据，未找到同一测试平台下 ELS 与片上集成光源的 head-to-head 链路预算+老化数据。厂商自报 FIT/器件小时属一手但需标注利益关系；22 dB/3.5x 等链路预算数字仅搜索摘要级，不可当已验证结论。
+### 三、P3 光计算能效口径
+#### 缺口 1：缺口1：'160 TOPS/W'、'65.5 TOPS/W' 这两个光计算能效数字分别对应哪款芯片/哪篇论文？原始出处？是否公布吞吐+功耗？
+已查询："160 TOPS/W" photonic chip Science Taichi Tsinghua；"160 TOPS/W" 光计算 芯片 能效 论文；"65.5 TOPS/W" optical computing chip paper；"65.5 TOPS" photonic processor power consumption；Lightmatter Envise 65.5 TOPS 78 W 1.6 W ResNet-18。
+**裁决：160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。**（found=True）
+- [外]（出处：https://doi.org/10.1126/science.adl1203）160 TOPS/W = 清华大学'太极'(Taichi)光子计算芯片，论文 'Large-scale photonic chiplet Taichi empowers 160-TOPS/W artificial general intelligence'，Xu Z 等，Science 384:202-9, DOI 10.1126/science.adl1203, PMID 38603505；同篇…（2024-04-12，一手(期刊原文DOI+清华官方交叉验证);Science 原文被Cloudflare挡,经清华官网/北京市科委/NSR引文交叉确认）
+- [外]（出处：https://www.tsinghua.edu.cn/info/1175/110690.htm）清华官网对'太极'的表述：面积效率 879 T MACS/mm²、能量效率 160 TOPS/W；属机构发布值，未在同源处给出整机功耗或系统边界定义。（2024-04-12，一手(机构官方发布);系统边界/整机功耗缺失）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/）重大纠偏：'65.5 TOPS/W' 并非独立能效数字。一手 NSR 综述原文：Envise 'Operating at 65.5 TOPS while consuming only 1.6 W of optical and 78 W of electrical power ... 97.8% of FP32 accuracy on CIFAR-10 using ResNet-18'。65.5 是…（2026-05-27，一手(同行评议综述,含曦智团队作者);逐字原文核对）
+- [外]（出处：https://www.researching.cn/ArticlePdf/m00098/2026/47/6/060401.pdf）中文综述交叉印证：平均吞吐 65.5 TOPS(500 MHz)、峰值 262 TOPS(2 GHz)、能效 0.81 TOPS/W(average)——再次表明 65.5 为吞吐而非能效。（2026，未验证(PDF抓取失败,仅得摘要)）
+- [外]（出处：https://tspasemiconductor.substack.com/p/lightmatter-passage-a-comprehensive）二手技术解析：Envise 每秒 65.5 trillion 16-bit operations,功耗约 78 W 电 + 1.6 W 光。（2025，二手(技术博客,与NSR一手数据一致)）
+说明：一手出处为 Sci/NSR;Science 与 PubMed 原文页受 Cloudflare/反爬阻挡,采用清华官网+北京市科委+NSR 引文三重交叉核对。近12个月证据 NSR 2026-05 优先。
+#### 缺口 2：缺口2：Lightmatter Envise 约 0.84 TOPS/W 的原始出处核对（论文/白皮书/官方），确认'唯一可核验口径'是否站得住
+已查询：Lightmatter Envise 0.84 TOPS/W original source paper whitepaper；"Universal photonic artificial intelligence acceleration" Nature 2025 Envise；Lightmatter Envise TOPS per watt 65.5 78 W efficiency。
+**裁决：0.84 TOPS/W 站得住,一手出处是 Nature 2025 论文(经 NSR 原始吞吐量+功耗数据复算),非二手 Kaggle 聚合。但须限定:'唯一可核验口径'应表述为'可从一手披露的 65.5 TOPS/78W 复算的口径',而非厂商直接给出的 TOPS/W 字面值;0.81–0.84 随分母是否计光功耗浮动。**（found=True）
+- [外]（出处：https://www.nature.com/articles/s41586-025-08854-x）Envise 原始性能数据出自 Nature 2025-04-09 'Universal photonic artificial intelligence acceleration', Ahmed SR 等(Lightmatter), Nature 640:368-374, DOI 10.1038/s41586-025-08854-x, PubMed 40205212;4×128×128 PTC、…（2025-04-09，一手(期刊原文摘要逐字核对)）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/）0.84 TOPS/W = 65.5 TOPS ÷ 78 W 电功耗(NSR 综述原始数字);中文综述给 0.81 TOPS/W(average)。0.84 是可从一手数据复算的口径,不是厂商直接披露的 TOPS/W 字面数字。（2026-05-27，一手数据+复算(分母口径为电功耗78W,未计1.6W光功耗)）
+- [外]（出处：https://lightmatter.com/blog/a-new-kind-of-computer）Lightmatter 官方博客 'A New Kind of Computer' 介绍 Envise 架构与发布。（2025-04-09，一手(厂商官方,但未给 TOPS/W 字面值)）
+- [外]（出处：https://mirrorfrog.com/lightmatter-envise/）冲突数据:mirrorfrog 称 Envise 30 TOPS/W(INT8,4 POPS,TDP 65W),与 0.84 差 30 倍以上,口径不明。（2025，未验证(单源,口径冲突,不采纳)）
+说明：0.84 字面值最早在二手聚合(Kaggle 数据集)出现,一手 Nature 论文未逐字写 0.84;此为复算值,务必在立项书标注口径。
+#### 缺口 3：缺口3：清华 LightGen 全光计算芯片 3.57×10^4 TOPS、6.64×10^2 TOPS/W、2.62×10^2 TOPS/mm²、210万光学神经元——找原始论文(Science?)核对数字
+已查询：LightGen all-optical chip Science 3.57e4 TOPS 6.64e2 TOPS/W 2.62e2；LightGen 全光计算芯片 Science 210万光学神经元 上海交大；All-optical synthesis chip large-scale intelligent semantic vision generation Science DOI。
+**裁决：找到原始论文 Science 2025-12, DOI 10.1126/science.adv7434,数字(3.57×10^4 TOPS/6.64×10^2 TOPS/W/2.62×10^2 TOPS/mm²/210万神经元)在多个转述源一致且方向正确,但未逐字核对原文(Science 页被挡)。重大澄清:LightGen 是上海交大陈一彤团队成果,非清华;清华团队为合作方且另发量化标准论文。**（found=True）
+- [外]（出处：https://doi.org/10.1126/science.adv7434）LightGen 原始论文:'All-optical synthesis chip for large-scale intelligent semantic vision generation', Science 2025-12-18/19, DOI 10.1126/science.adv7434。作者为上海交通大学集成电路学院陈一彤课题组;清华戴琼海/吴嘉敏团队为合作方。用户任务清单'清华 Li…（2025-12-18，一手(期刊DOI)+清华官网转述交叉验证;Science 原文页被Cloudflare挡,数字来自转述未逐字核对原文）
+- [外]（出处：https://baike.baidu.com/item/LightGen/67112849）LightGen 数字:面积 136.5 mm²、>210万光学神经元、端到端 3.57×10^4 TOPS、能效 6.64×10^2 TOPS/W、计算密度 2.62×10^2 TOPS/mm²,三项比 NVIDIA A100 高两个数量级;理想输入条件下理论算力提升7个数量级、能效8个数量级。技术路线 LNOI+InP 非硅材料、3D 堆叠封装、全光闭环。（2025-12，二手(百科/新闻转述,非原文逐字;数字在多个转述源一致)）
+- [外]（出处：https://www.tsinghua.edu.cn/info/1182/128225.htm）清华官网转述：实测系统级算力与能效均较国际顶尖芯片提升两个数量级以上。（2026-09-14，一手(机构官方转述)）
+- [外]（出处：https://www.eurekalert.org/news-releases/1109809）EurekAlert 科研新闻稿报道 LightGen 全光生成式AI芯片成果。（2025-12，二手(科研新闻稿;正文抓取受限)）
+说明：立项书如写'清华 LightGen'需更正为'上海交大 LightGen';具体数字引用应标注'据 Science 论文转述,未逐字核对原文'。
+#### 缺口 4：缺口4：Q.ANT 的'比 GPU 高 X 倍'类宣称的具体口径与原始出处
+已查询：Q.ANT photonic processor faster than GPU 100x claim source；Q.ANT LRZ second generation NPU benchmark 50x 30x energy efficiency whitepaper；Q.ANT 比GPU 高 100倍 光子处理器 口径。
+**裁决：Q.ANT '比GPU高X倍'口径 = 相对倍数:100x 是'数据中心容量潜力'(非实测能效),30x 能效/50x 性能为对自家第一代或单应用内部测试;LRZ 第三方实测主要为对一代 NPU 的倍数(>50x 矩阵乘、25x ResNet-18、6x 能效),且给出绝对功耗(系统350–420W)。无任何绝对 TOPS/W,与立项书表述一致,无需改口径。**（found=True）
+- [外]（出处：https://qant.com/press-releases/higher-performance-less-energy-q-ant-deploys-second-generation-photonic-processors-at-supercomputing-center-lrz）Q.ANT 官方新闻稿(2026-03-17):'up to 90x lower power consumption per workload and up to 100x greater data center capacity'(光子架构总体潜力);LRZ 实测(对比自家第一代 NPU):矩阵乘 >50x、ResNet-18 推理 25x、典型负载能耗 6x lower。全部为相对倍数,无绝对…（2026-03-17，一手(厂商官方新闻稿)）
+- [外]（出处：https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges）立项书所引 Q.ANT 新闻(2026-05-19):LRZ 独立评估最高 100x 性能、内部测试最高 30x 能效/50x 单应用性能;产品定位 GPU 协处理器而非替代。（2026-05-19，一手(厂商官方)）
+- [外]（出处：https://qant.com/wp-content/uploads/2025/11/20251111_QANT-Photonic-AI-Accelerator-Gen-2.pdf）Q.ANT 白皮书 PDF(2025-11):'Up to 30x higher energy efficiency and 50x performance gains per application'。（2025-11，一手(厂商白皮书)）
+- [外]（出处：https://www.lrz.de/en/news/detail/photonic-computers-in-real-world-test）LRZ 官方实测页:Q.ANT 系统功耗 350–420W、卡 25–100W,对比 GPU 达 1000W。给出绝对功耗但无 TOPS/W。（2026，一手(第三方机构 LRZ 官方)）
+说明：注意区分'对GPU潜力宣称'与'对一代实测',立项书引用时勿混用;100x 不可写作实测能效倍数。
+#### 缺口 5：缺口5：曦智 PACE 系列具体出货量、是否有第三方实测能效
+已查询：曦智科技 PACE 出货量 招股书 片数 全球第一；Lightelligence PACE shipment volume third-party measured energy efficiency TOPS/W；曦智 光计算芯片 客户数 出货 第三方实测 能效。
+**裁决：确认未覆盖:公开资料只有'累计出货量全球第一'的排名宣称,无具体出货片数/卡数;第三方独立实测能效(TOPS/W)未找到,现有 PACE能耗/性能数据均为厂商或合作方来源。**（found=False）
+- [外]（出处：https://finance.ifeng.com/c/8sKMERSrEQR）招股书口径:2024 与 2025 年曦智光计算芯片累计出货量均位居全球第一(排名宣称,无绝对片数/卡数)。（2026-04-14，二手(媒体引招股书,仅排名无绝对数)）
+- [外]（出处：https://m.36kr.com/p/3785865036111108）36氪同口径报道曦智光计算芯片出货量全球第一。（2026，二手(媒体转述,与上源同源)）
+- [外]（出处：https://www.huxiu.com/article/4850630.html）客户数:2023 新增11、2024 新增10、2025 新增22。（2026，二手(媒体报道)）
+- [外]（出处：https://www.xztech.ai/community/papers/3）PACE 技术数据来自厂商/合作方:PACE Nature 论文(64×64 矩阵、16000 光子器件);NSR 综述给 PACE 3ns/cycle、7.61-bit、Ising 问题比商用 GPU 快两个数量级——均为厂商/合作方数据,未见独立第三方实测 TOPS/W。（2025，二手(厂商转载论文;非独立第三方实测)）
+说明：found=false 针对'具体出货量数字+第三方实测能效'两项;排名宣称属部分命中但非可核验绝对数。近12个月中文财经源已检索,无绝对出货数。
+#### 缺口 6：缺口6(最重要)：是否有标准组织(OIF/IEEE/JEDEC/信通院等)在做'光计算能效口径/基准'标准化？P3'方法学空位'是否仍成立？
+已查询：IEEE standard metrics energy efficiency machine learning hardware P1959 P1960；optical computing energy efficiency benchmark standard OIF JEDEC IEEE photonics；光计算 能效 口径 基准 标准化 信通院 IEEE；Nature Nanotechnology optical computing quantitative standard metrics 2026。
+**裁决：没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。**（found=True）
+- [外]（出处：https://standards.ieee.org/ieee/1959/11831/）IEEE P1959 'Draft Standard for Metrics for Energy Efficiency in Machine Learning Hardware Architectures and Systems':Active PAR,PAR 批准 2024-11-12,IEEE Communications Society/Green ICT SC,EECH 工作组,Chai…（2024-11-12，一手(IEEE 官方标准项目页)）
+- [外]（出处：https://standards.ieee.org/ieee/1960/11832/）IEEE P1960 'Guide for Energy Efficiency in Machine Learning Hardware Architectures and Systems',同一工作组,Active。（2024，一手(IEEE 官方标准项目页)）
+- [外]（出处：https://doi.org/10.1038/s41565-026-02264-4）Nature Nanotechnology 2026-09-09 'How nanophotonics can drive optical computing toward practical applications',DOI 10.1038/s41565-026-02264-4(清华戴琼海/吴嘉敏 + 上海交大陈一彤):提出光计算走向实际应用的'量化标准'方法体系(性能评估→系统实现)。属学术…（2026-09-09，一手(期刊论文DOI)+清华官网新闻交叉验证）
+- [外]（出处：https://arxiv.org/abs/2604.10841）arXiv 2604.10841 'Harnessing Photonics for Machine Intelligence'(2026-04-12,Hanqing Zhu 等,UT Austin):用 SimPhony 跨层建模框架 benchmark 光子 AI 加速器,'Rather than relying on isolated figures of merit for the pho…（2026-04-12，未验证(单源,仅检索结果,未深读原文)）
+- [外]（出处：https://www.caict.ac.cn/kxyj/qwfb/ztbg/202311/P020231122389415230856.pdf）信通院 CAICT《光计算技术与产业发展研究报告》(2023-11):标准化处于起步阶段,ISO/IEC JTC1、IEEE、ITU-T、TC578 主要做术语定义,IEC TC90 做光量子器件——针对光量子计算,非光计算能效口径。（2023-11，一手(官方研究报告PDF)）
+- [外]（出处：https://www.oiforum.com/wp-content/uploads/OIF-EEI-COI-WP-01.0.pdf）OIF:Energy Efficient Photonic Interconnects for AI Compute Scale-up 白皮书 + 3.2T CPO 协议(互连侧);JEDEC 做硅光可靠性标准。均为互连/可靠性,非计算能效口径。（2025，一手(OIF 官方白皮书);与计算能效口径不直接相关）
+说明：最重要结论。IEEE P1959 的 'benchmarks not in scope' 措辞对 P3 既是风险也是机会:通用标准不覆盖基准,恰为 P3 留出基准层空间,但'口径'层已被通用标准占位。
+### 四、P4 AI逆向设计光子器件
+#### 缺口 1：G1｜Scientific Reports 2026-11-07 Agentic AI 逆向设计论文：核对原题名/DOI/作者，并查是否存在后续流片实测版本
+已查询："Agentic AI for inverse design in nanophotonics and meta-optics" Scientific Reports；s41598-026-78977-2；agentic AI inverse design metasurface 40.0% 65.2% metagrating 81.2% 94.6%；Kang Chung agentic AI inverse design metasurface fabrication experimental measurement follow-up 2026；"Agentic AI for inverse design" fabricated measured efficiency metalens；site:nature.com agentic AI nanophotonics inverse design fabricated device measured；"s41598-026-78977-2" fabrication measured；"Agentic AI for inverse design" Kang Chung fabricated experimental measured device arxiv 2026；"Haejun Chung" agentic inverse design fabrication measured metasurface follow-up；site:arxiv.org agentic inverse design nanophotonics fabrication experiment Chung 2026。
+**裁决：一手出处已钉死：题名、8 位作者、DOI、日期与四项效率数字均与立项书一致，可把 [1] 升级为'已二次核验'。'后续流片实测版本'确认未覆盖。注意原文为 early-access 版本，定稿前宜复核最终版。**（found=True）
+- [外]（出处：https://www.nature.com/articles/s41598-026-78977-2）原文题名/作者/日期/DOI 全部核实：Agentic AI for inverse design in nanophotonics and meta-optics；作者 Chanik Kang（共同一作）、Jinseong Bae（共同一作）、Munseong Bae、Junseo Han、Hyewon Suk、Jiwoo Kim、Ikbeom Jang、Haejun Chung（通讯）；Sci…（2026-11-07，一手来源（Nature 原页全文深读 + Crossref DOI + web_search/advanced_search 三方交叉印证））
+- [外]（出处：https://www.nature.com/articles/s41598-026-78977-2）摘要原句核实立项书全部四项数字：四种 metagrating 策略自同一初始化得 79.4–90.9% 最终衍射效率；按峰值优化目标与按最终二值效率筛选得到不同排序；单独 metagrating 重设计 81.2%→94.6%；二维 metalens 三个可见波长最小聚焦效率相对对称化复现参考 40.0%→65.2%（matched lossless evaluation）；Bayer color…（2026-11-07，一手来源（原文 Abstract 逐句）；仿真值，非实测；多引擎搜索摘要同文交叉印证）
+- [外]（出处：https://www.nature.com/articles/s41598-026-78977-2）两轮检索未找到该论文的任何后续流片实测版本，也未找到其他团队对该框架器件的实测复现；原文方法止于 'separate forward evaluation of binary candidates'（数值前向评估）。（2026-11-24，确认未覆盖（两轮 10 组关键词，仅命中原文本身；单源判断，标未验证））
+说明：相邻线索（仅搜索摘要、未深读/未验证）：Chung 组 arXiv:2609.28000《Inverse-Designed Chiral Metasurfaces for Enhanced Helical Dichroism》(2026-09-23) 与 PMC13673514《Neural Adjoint Inverse Design of Three-Dimensional Nanophotonic Devices》(2026-10-16)，均非该 Sci Rep 论文的流片实测后续，不作为补证。
+#### 缺口 2：G2｜智能体逆向设计超表面从仿真效率到流片实测效率的差距：是否有已发表的实测数据（哪怕别的团队）
+已查询：metasurface inverse design simulation to fabrication measured focusing efficiency gap published 2025 2026；inverse designed metalens experimental efficiency versus simulated efficiency measured；adjoint optimized metagrating fabricated measured diffraction efficiency 2026；machine learning inverse design metasurface experimental verification efficiency。
+**裁决：需分层改写立项书的'公开资料未覆盖'：对 Sci Rep 该智能体框架器件确实未覆盖；但'逆向设计超表面的仿真—实测差距'本身已有公开实测数据（50.4% 仿真 vs 50.2% 实测，差距约 0.2 个百分点，FWHM 1.53 vs 1.56 μm）。不能笼统写未覆盖。**（found=True）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC12152600）已发表的同口径仿真—实测对照（非 LLM/Agent 驱动，但是逆向设计超表面）：objective-first 逆设计 + 双光子聚合 3D 打印的近红外高 NA 消色差 metalens；1510–1610 nm 波段内仿真平均聚焦效率 50.4%、实测平均 50.2%（文中 Discussion 另写实测 50.4%，实测区间 48–54%）；仿真平均 FWHM 1.53 μm vs 实测 …（2025-05-11，一手来源（原文 Results/Experiments/Fig.4 深读）；单篇论文，标未验证（无第二篇独立复现））
+- [外]（出处：https://arxiv.org/abs/2610.05021）另一篇已实验实现的深度学习大规模自由曲面超表面逆设计：预测光场比所训练电磁求解器快四个数量级以上，实验实现自由曲面 metagrating（衍射角达 75°）及毫米尺度、跨度 >1000 波长、1.6 billion 自由度的自由曲面全息超表面。属'仿真→实测'闭环案例，但摘要未给 sim-vs-measured 效率数字。（2026-10-04，一手来源（arXiv 摘要页深读）；单源未验证；未给效率对照数值）
+说明：两篇案例均非 LLM/Agent 驱动，不能替 P4 支撑'智能体设计实测'主张；只能用来证明'实测差距可被量化'在方法上可行，并为 P4 提供可引用的误差归因维度（容差/基底/光斑散射）。
+#### 缺口 3：G3｜跨工艺/跨波长/跨器件（超表面→片上器件）可迁移性的实测验证：找公开案例
+已查询：inverse design metasurface cross-process cross-wavelength cross-device transfer fabricated measured experimental demonstration 2025 2026；transferable inverse design from metasurface to photonic integrated device measured experiment；LLM agent inverse design fabricated measured metalens metagrating transfer process。
+**裁决：找到相邻公开案例：跨求解器/跨物理问题迁移（仿真）、跨三种逆设计器件的 >90% 图形转移保真度（工艺实测）、跨尺度跨波长实验实现。但未见'LLM/Agent 驱动 + 超表面→片上器件 + 实测效率对照'三者齐备的公开案例；立项书针对该具体命题的'公开资料未覆盖'确认成立。**（found=True）
+- [外]（出处：https://arxiv.org/abs/2611.08127）跨求解器 + 跨问题迁移（仿真层，非实测）：agent-driven cross-validated pipeline 用 RCWA 与 Meep FDTD 互验；metagrating v4 s2 的 x 偏振 η+1 为 RCWA 80.6% / FDTD 80.1%，y 偏振 63.6% / 62.8%；优化截断处 y 偏振曾高估 5.1%，加谐波到 [70,12] 后降至 0.8%。金属透…（2026-11-05，一手来源（arXiv HTML 全文深读，Table 1 + S12）；单源未验证；仅仿真，无流片实测）
+- [外]（出处：https://arxiv.org/abs/2609.13460）跨器件/跨工艺的工艺保真度实测：通用两步纳米制造流程对三种不同的逆向设计纳米光子器件，在不做任何器件专属工艺优化的条件下逐一达到 >90% 的图形转移保真度。这是'同一工艺迁移到多个逆设计器件'的公开案例，但对象未明确为超表面→片上器件，也未给光学效率实测对照。（2026-09-11，一手来源（arXiv 摘要页深读）；单源未验证）
+- [外]（出处：https://arxiv.org/abs/2610.05021）跨尺度/跨波长实验实现：同一深度学习逆设计框架实验实现自由曲面 metagrating（衍射角至 75°）与毫米尺度自由曲面全息超表面（>1000 波长、1.6 billion 自由度），展示设计方法跨器件尺度与波长的可迁移性；摘要未给两类的实测效率对照表。（2026-10-04，一手来源（arXiv 摘要页深读）；单源未验证）
+说明：建议把立项书 G3 从笼统未覆盖改为：'跨器件工艺保真度已有案例（>90%，3 种器件），但跨器件类别的光学效率实测迁移仍公开资料未覆盖'，避免被审稿人用 arXiv:2609.13460 反驳。
+#### 缺口 4：G4｜中国信通院《信息光子技术发展与应用研究报告》2026 年版是否已发布（立项书标'截至2026-11-23仅2025版可得'）
+已查询：中国信通院 信息光子技术发展与应用研究报告 2026年；信息光子技术发展与应用研究报告 2026 版 发布 信通院；site:caict.ac.cn 信息光子技术发展与应用研究报告 2026；"信息光子技术发展与应用研究报告（2026年）"；caict 白皮书 2025年12月 信息光子技术发展与应用研究报告；"信息光子技术发展与应用研究报告（2025年）" 发布 2026中国信通院深度观察报告会。
+**裁决：截至 2026-11-24 的公开检索未见《信息光子技术发展与应用研究报告（2026年）》发布；最新可得仍为 2025 年版（2025-12-13 索引 / 2025-12-15 发布报道）。立项书'截至2026-11-23仅2025版可得'确认成立。**（found=False）
+- [外]（出处：https://caict.ac.cn/kxyj/qwfb/bps/index_1.htm）信通院白皮书发布索引中可见《信息光子技术发展与应用研究报告（2025年）》，日期 2025-12-13；索引中未见 2026 年版条目。（2025-12-13，官方站点索引（搜索结果摘要）/单源未验证；直接 WebFetch 触发访问防护（事件ID 6136-4008-1401）与证书校验失败，未能深读原页）
+- [外]（出处：https://m.c114.com.cn/w5472-1302264.html）行业媒体原文：在'2026 中国信通院深度观察报告会'上，《信息光子技术发展与应用研究报告（2025年）》正式发布，聚焦空芯光纤（2024 年 0.11 dB/km 首次低于实芯单模光纤 0.1397 dB/km，2025 年我国企业刷新至 0.05 dB/km）。页面正文时间为 2025-12-15（搜索摘要曾显示 2026-11-22，以正文为准）；未见 2026 年版发布报道。（2025-12-15，二手媒体原文深读/未验证；与官方索引摘要互证但非官方一手）
+说明：信心有限：信通院官网栏目页抓取被访问防护与证书问题拦截，结论基于官方索引搜索摘要 + 权威行业媒体原文两条，均标未验证。建议官网恢复后复核再定稿。
+#### 缺口 5：G5｜其他团队做 LLM/Agent 驱动光子器件逆向设计的可复现工作（判断 P4 是否已有竞品抢占、新颖性）
+已查询："Agentic AI for inverse design in nanophotonics and meta-optics" Scientific Reports；agentic AI inverse design metasurface 40.0% 65.2% metagrating 81.2% 94.6%；MCP-enabled LLM for meta-optics inverse design differentiable solver；multi-agentic framework real-time autonomous freeform metasurface design MetaChat；agent-driven cross-validated inverse-design pipeline dielectric metasurfaces reproducible code；"Haejun Chung" agentic inverse design fabrication measured metasurface follow-up；LLM agent inverse design fabricated measured metalens metagrating transfer process。
+**裁决：P4 不是无人区，框架层已有明确竞品：MetaChat（Sci Adv，代码+数据开源）、MCP-LLM（Nanophotonics 2025-12）、arXiv:2611.08127（2026-11，已把二值化与 ±10 nm 鲁棒性内建）。新颖性必须从'做智能体闭环'收缩到'最终二值结构性能为统一筛选判据 + 经流片实测界定的仿真—实测差距 + 跨器件迁移'；这三项目标在已查工作中确认未覆盖。**（found=True）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC12577674/）MetaChat：多智能体框架（AIM 设计智能体 + 材料专家智能体 + FiLM WaveY-Net 毫秒级代理求解器），自动设计多目标多波长 metalens/deflector；Stanford 101 题纳光子基准，GPT-4o 作为驱动模型得 81%；代码开源 https://github.com/jonfanlab/metachat ，数据 Zenodo https://doi.or…（2025，一手来源（PMC 全文深读 + 代码/Zenodo 链接）；单源未验证）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC12717938/）MCP-enabled LLM for meta-optics inverse design：LLM 通过 Model Context Protocol 调用可微求解器 TorchRDIT（仅 5 个 API 的极简服务器），在 Huygens meta-atom 任务上做 100 次试验；结构化提示在设计质量、工作流效率、计算成本与错误减少上均优于自然语言提示；并做 RAG 基线对比。Nanop…（2025-12-04，一手来源（PMC 全文深读）；单源未验证；出版商页被 Cloudflare 验证拦截）
+- [外]（出处：https://arxiv.org/abs/2611.08127）An Agent-Driven, Cross-Validated Inverse-Design Pipeline for Dielectric Metasurfaces：智能体驱动 + RCWA/FDTD 交叉验证 + 精确 ±10 nm 边缘位移鲁棒优化 + 分析清单（能量守恒、高截断收敛、二值化、最差情况、最小特征、损耗通道、局部最优）；从 metagrating/meta-atom 库/me…（2026-11-05，一手来源（arXiv abs + HTML 全文深读）；单源未验证）
+- [外]（出处：https://www.nature.com/articles/s41598-026-78977-2）Sci Rep 论文本身亦为可复现竞品：公开了文献复现—人工批准策略—伴随优化—二值候选独立前向评估四模块及工作流评估规模（5/7/5）。（2026-11-07，一手来源（Nature 原页深读，见 G1））
+说明：arXiv:2611.08127 对 P4 威胁最大：它已覆盖可制造性内建与跨求解器交叉验证，立项书应对照其 ±10 nm 边缘位移、agree/marginal/disagree 判定协议写差异化，否则'创新点2'可能被认为已被抢占。
+### 五、P5 新型电光材料晶圆级集成
+#### 缺口 1：G1 核对 Nature Communications 2026-11-20 晶圆级薄膜 PZT 光子 IC 原文 DOI/标题；并查是否披露晶圆级良率、批间均匀性、CMOS 兼容性数据
+已查询：Nature Communications 2026 wafer-scale thin-film PZT photonic integrated circuit VpiL 1.19 V cm 70 GHz 224 Gbps；s41467-026-79721-0 PZT wafer-scale modulator；8-inch wafer PZT electro-optic modulator 16-channel WDM 3.2 Tbps Nature Communications；PZT 1.19 V cm 70 GHz wafer yield uniformity batch Nature Communications supplementary。
+**裁决：DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核）**（found=True）
+- [外]（出处：https://www.nature.com/articles/s41467-026-79721-0）原文标题与 DOI 核验一致：'Wafer-scale thin-film PZT photonic integrated circuits enabling multi-terabit optical transmission'，Nature Communications，DOI 10.1038/s41467-026-79721-0，Published 20 November 2026（earl…（2026-11-20，一手·已核验（原文页 + CrossMark + DOI 一致；DexScience 二次核 22 条事实））
+- [外]（出处：https://www.nature.com/articles/s41467-026-79721-0）原文摘要确认核心数字：8 英寸 SiO2/Si、化学溶液沉积+磁控溅射、DUV stepper 晶圆级制造；低传输损耗与低面内光学各向异性支撑 AWG；铁电畴工程激活 Pockels；MZM VπL=1.19 V·cm、EO 响应至 70 GHz、速率至 224 Gbps；单片集成 16 通道 WDM 发射机指向 3.2-Tbps 级（2026-11-20，一手·已核验（原文 Abstract 逐字））
+- [外]（出处：https://www.nature.com/articles/s41467-026-79721-0）资助与平台：CAS 战略先导专项 XDB1440000、NSFC 62505312、国家重点研发 2025YFA1411700；器件在中科院半导体所共享工艺平台制备；CC BY-NC-ND 4.0；附 Source Data XLSX、Transparent Peer Review file、Supplementary Information（2026-11-20，一手·已核验（原文 Acknowledgements/Funding/Additional information））
+- [外]（出处：https://www.nature.com/articles/s41467-026-79721-0）可访问正文中'均匀性'仅为定性表述（'Uniform, high-quality PZT thin films'、'low in-plane optical anisotropy'），未见晶圆级良率百分比、片内/片间 VπL 分布、批间均匀性标准差或后段 CMOS 温度预算/污染控制数据；全文 PDF（37MB）与 Supplementary/Source Data 经 web_fetch 被反爬…（2026-11-20，一手·部分核验（定量良率/均匀性/CMOS 项在可访问文本中确认未披露；补充材料未读到，标未验证））
+- [外]（出处：https://newtqnia.com/en/news/360-an-8-inch-pzt-photonics-platform-reaches-32-tbps-across-16-channels）二次报道口径：3.2 Tbps 为'aggregate laboratory capacity, not a deployed'（实验室聚合容量，非已部署）；再次强调 early-release 版本可能被编辑（2026-11-21，二手·未验证）
+说明：立项书 A1/B1 的数字无需修改。新增可引用事实：原文为 early-release accepted 版本、作者/单位/基金号、附 Source Data 与透明评审文件。注意把 3.2 Tbps 表述为'指向/实验室聚合'而非已部署，与立项书禁用声明一致。
+#### 缺口 2：G2 晶圆级 PZT/TFLN 调制器的良率、片内/片间均匀性公开数据（P5 核心研究空间，确认是否真的没人公开）
+已查询：wafer-scale PZT thin film modulator yield uniformity wafer-level 2026；PZT thin film photonic wafer uniformity mapping yield statistics VpiL distribution across wafer；thin film lithium niobate modulator wafer level yield uniformity statistical distribution measurement；wafer-scale ferroelectric PZT electro-optic modulator device yield uniformity data。
+**裁决：立项书'公开资料未覆盖'的判断需修正：TFLN 异质集成(MTP)晶圆级良率(>95%)与均匀性/变异建模已公开；但 PZT 单片 8 英寸的器件级 VπL/带宽/插损全片分布、良率百分比、批间标准差仍未找到公开数据——P5 核心研究空间对 PZT 仍成立，对 TFLN 部分被抢占**（found=True）
+- [外]（出处：https://arxiv.org/html/2605.28971）重要反证——TFLN 晶圆级良率/均匀性已有公开定量数据：imec/根特大学在 4 片完整 200 mm 硅光晶圆上用微转移印刷(MTP)集成预图形化 TFLN 调制器，3σ 贴装精度低至 420 nm、印刷良率 >95%；600 个相位调制器(组成 300 个幅度调制器)插损 <2 dB；Vπ=4 V(推挽)、带宽 >70 GHz；全部后段(BEOL)工艺在 imec TRANSVERSE 中试…（2026-06-15，一手·预印本原文（arXiv:2605.28971v2））
+- [外]（出处：https://arxiv.org/html/2605.28765）重要反证——已有面向晶圆级 heterogeneous LN 调制器的'变异感知(variability-aware)'设计与统计方法：用 TRANSVERSE 中试线的实测工艺偏差数据，做相关分析+Sobol 方差分解，联合优化 Vπ/插损/3dB 带宽对工艺波动的鲁棒性；适用于晶圆键合、die-to-wafer 与铌酸锂钽酸盐（2026-05-31，一手·预印本原文（arXiv:2605.28765v2，Ghent-imec））
+- [外]（出处：https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-61536-0/MediaObjects/41467_2025_61536_MOESM1_ESM.pdf）PZT 薄膜厚度均匀性定量线索（非器件级）：某 PZT 光子论文补充材料称'The thickness uniformity of the PZT thin film across the wafer was quantitatively assessed using ellipsometry, revealing a non-uniformity of less than 15 nm'（另一篇 …（2025-07-03，单源·未验证（仅检索片段，PDF 未取到））
+- [外]（出处：https://arxiv.org/html/2007.06498）比较基线：更早的 4/6 英寸单片 LN PIC 工作明确把'在大面积上均匀、高通量地实现低损耗'列为待解挑战（2020），佐证晶圆级均匀性是长期公开难题（2020-08-26，一手·旧源（>12个月，仅作背景））
+说明：建议立项书把缺口从'PZT/TFLN 都未覆盖'收窄为'PZT 器件级均匀性/良率未公开；TFLN 已有 imec 中试线晶圆级良率基线'。P5 差异化应转向：PZT 铁电畴工程器件的晶圆级一致性 + 良率-成本模型，而非笼统的'没人做过晶圆级良率'。
+#### 缺口 3：G3 TFLN 单波 400G、1.6T/3.2T 的 2026 下半年实测/商用数据（犀里光电 Pre-A 之外有无实测）
+已查询：TFLN thin film lithium niobate single wavelength 400G 1.6T 3.2T modulator measured 2026；薄膜铌酸锂 单波400G 1.6T 3.2T 实测 2026 光模块；3.2T TFLN IM/DD 225 GBaud OFC measured result。
+**裁决：犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据**（found=True）
+- [外]（出处：https://www.eet-china.com/mp/a440906.html）硅光异质集成 TFLN 单波 400Gbps 差分调制芯片（CIOE 现场展示）：8 英寸晶圆级硅光异质集成 TFLN 工艺 + 成熟 CMOS 硅光 + Die-to-Wafer 键合；实测 3dB EO 带宽 >110 GHz、Vπ~3 V；差分驱动兼容现有硅光 driver；可从单波 200G/1.6T 演进至单波 400G/3.2T。厂商：苏州易缆微半导体（2025-09-25，一手·厂商披露经媒体转载（日期为 2025-09，非 2026 H2；单源，未验证））
+- [外]（出处：https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1）TFLN 已实测承载 3.2T：Ciena+HyperLight+McGill 在 OFC 2025 post-deadline（Th4B.1）报告 8 通道 O 波段 IM/DD，225 GBaud PAM4 经 TFLN 调制器、3 nm CMOS SerDes 驱动，FR8 与 DR8 两种配置、2 km 光纤、低于 HD-FEC 门限，净 3.2 Tbps；PAM8 下达 4.2 Tbps…（2025-03，一手·同行评审会议论文（OFC 2025 post-deadline）+ Ciena 官方新闻稿佐证）
+- [外]（出处：https://www.ciena.com/about/newsroom/press-releases/ciena-hyperlight-and-mcgill-university-achieve-first-3.2tbs-448gbs-per-lane-imdd-2km-transmission）Ciena 官方新闻稿佐证上述 3.2T/448G-per-lane IM-DD 2km 结果及测试细节（2025-03，一手·机构公告（站点 Cloudflare 拦截，正文经 Hengtong 引述））
+- [外]（出处：https://www.businesswire.com/news/home/20260312319685/en/HyperLight-Introduces-145-GHz-Reference-Modulators-to-Enable-448Gbps-per-Lane-Datacom-and-260GBaud-Telecom-Development）HyperLight 2026-03 推出 145 GHz 封装强度调制器，面向 448 Gbps/通道 IM-DD 与 260 GBaud 相干开发（2026-03-12，一手·厂商公告（原页 HTTP 403，经 Hengtong 引述；未验证））
+- [外]（出处：https://zhuanlan.zhihu.com/p/2096186564032336971）产业盘点：铌奥光电 1.6T DR8/800G DR4 用 TFLN 调制器 3dB 带宽标称 70 GHz，3.2T DR8 标称 110 GHz；中国移动把 400G 调制器件分三类：InP >160 GBd PAM4、硅光 MZM >90 GHz、TFLN >110 GHz（2026-09，二手·未验证）
+- [外]（出处：https://www.simpletechtrend.com/en/post/ofc2026-tfln-scaling-1-6t-deployment-analysis-en）OFC 2026 分析：TFLN 到达 1.6T/3.2T 的'inflection point'；行业判断 3.2T 属中长期高端路线、约 2028 后规模化（2026，二手·未验证（正文抓取被截断））
+说明：立项书'该 3.2T 的 2026 下半年实测商用数据公开资料未覆盖'应改写为：实验级 3.2T 已有公开结果(2025)，商用量产级 2026 H2 数据未覆盖。注意易缆微报道日期是 2025-09，不要写成 2026 H2；这些数字均属 TFLN，不与 PZT 混写。
+#### 缺口 4：G4 硅基载流子耗尽型调制器同口径 Vπ·L/带宽/插损硬数字（立项书标'缺同口径硅基对照'）
+已查询：silicon carrier depletion modulator Vpi L bandwidth insertion loss 2026 measured numbers；silicon photonics depletion mode MZM VpiL 1.0 V cm 3dB bandwidth insertion loss；silicon carrier depletion Mach Zehnder modulator VpiL 2 V cm 30 GHz insertion loss 2025 2026 measured；silicon modulator VpiL 2-5 V cm bandwidth insertion loss carrier depletion review numbers。
+**裁决：立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用**（found=True）
+- [外]（出处：https://www.nature.com/articles/s41467-026-78128-1）同口径对照硬数字（Nature Communications 2026-10-22 原文 Introduction 逐字）：传统载流子耗尽 p-n 相移器 VπL 典型 2–5 V·cm，需毫米级电极；长电极 RF 传播损耗 + RC + EO 相速失配把带宽限制到 <50 GHz（2026-10-22，一手·已核验（原文 Introduction；Nature Commun vol 17, article 10446 (2026)））
+- [外]（出处：https://www.nature.com/articles/s41467-026-78128-1）同文给出对照基线器件（硅光子晶体慢光调制器）：器件长 320 µm，140 Gb/s OOK、能耗 26 fJ/bit、FinFET 兼容 CMOS 驱动电压；PAM4 无 DSP 180 Gb/s、加 11-tap 均衡 200 Gb/s——证明硅基可借 EO 均衡器/慢光缓解带宽-效率折衷（2026-10-22，一手·已核验（原文 Abstract））
+- [外]（出处：https://arxiv.org/html/2510.25530）硅基载流子耗尽 SOI 平台先进值：220-nm SOI 载流子耗尽 VπL <1 V·cm、EO 带宽 >30 GHz、消光比 >20 dB；全硅 MZM 带宽 >100 GHz（2025-12-18，一手·预印本原文（arXiv:2510.25530））
+- [外]（出处：https://www.nature.com/articles/s41467-025-67826-x）插损硬数字：CMOS 兼容 foundry 的超紧凑硅调制器，carrier-depletion 谐振调制器插损 IL=2.8 dB、Q=2930、3dB 带宽 0.53 nm；文中引 2022 年 carrier-depletion 谐振调制器 EO 带宽 >67 GHz（2025-12-18，一手·期刊原文（Open access））
+- [外]（出处：https://pubmed.ncbi.nlm.nih.gov/42071730）150 Gbaud O 波段硅微环调制器：L 形 PN 结调制效率 51 pm/V，为常规横向 PN 结的约 2 倍（2026-04-06，一手·PubMed 摘要）
+- [外]（出处：https://doi.org/10.1364/ol.614071）低寄生电阻载流子耗尽微环调制器工作频率 >100 GHz（Optics Letters, doi 10.1364/ol.614071）（2026-10-09，一手·期刊 DOI（未逐字读正文））
+说明：建议在 2.1 路线对比表补一列硅基同口径硬数字并标注来源与日期。注意口径：PZT 的 VπL=1.19 V·cm 与硅基 2–5 V·cm 都是 MZM 半波电压长度积，可比；但硅微环用 pm/V 效率与 VπL 不同量纲，勿混。
+#### 缺口 5：G5 薄膜电光材料（PZT/TFLN/有机 SOH）与 CMOS 后段工艺兼容性的公开研究进展
+已查询：PZT thin film electro-optic modulator CMOS backend of line BEOL compatibility temperature lead contamination 2026；thin film lithium niobate CMOS compatible foundry back end integration 2026；organic SOH silicon organic hybrid electro optic modulator wafer scale 2026 CMOS backend compatible。
+**裁决：有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据**（found=True）
+- [外]（出处：https://arxiv.org/html/2605.28971）TFLN 与 CMOS 不兼容的公开原因与规避路径（imec 原文逐字）：'TFLN is not compatible with CMOS fabrication, primarily because of lithium contamination concerns within silicon foundries'；解法=异质集成，MTP 在 SiPho 后段(BEOL)进行、50 nm 键…（2026-06-15，一手·预印本原文（arXiv:2605.28971v2））
+- [外]（出处：https://arxiv.org/html/2602.20406v1）有机 SOH 在代工光子工艺中的可扩展极化：铁电向列液晶-on-silicon 在 foundry photonic process 中实现 DC-to-GHz 微环调制，针对'EO 聚合物缺乏可扩展极化方法'这一痛点（2026-07-12，一手·预印本原文（arXiv:2602.20406v1））
+- [外]（出处：https://photonics.intec.ugent.be/download/pub_5537.pdf）垂直硅-有机混合(SOH) EO 调制器：无背栅实现 3dB 带宽 >110 GHz，同 Pockels 系数下 VπL 比经典 SOH 降低 2 倍（根特大学）（2026-10-11，一手·会议/机构 PDF（未逐字读正文））
+- [外]（出处：https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries）NLM Photonics 与 SilOriX 2026-09-21 签 JDA：SilOriX 硅-有机混合(SOH)调制器设计 + NLM Selerion-HTX 电光材料，目标提升性能/带宽/能效并支持可扩展硅光制造（立项书已引用，作为交叉印证）（2026-09-21，二手·未验证（厂商新闻稿转载））
+- [外]（出处：https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349）AlN-on-insulator(AlNOI)通过高温退火增强 EO 响应、无载流子调制，作为 CMOS 友好替代路线之一（2026-04-27，一手·期刊摘要）
+说明：立项书 2.5 缺口 1 表述基本成立但需细化：TFLN/SOH 有公开的 BEOL 兼容路径，PZT 的 CMOS 后段兼容(温度预算/污染控制/金属化)仍属空白——这正是 P5 创新点 1 的落点。
+#### 缺口 6：G6 除 PZT/TFLN 外，2026 下半年有无新电光材料体系（BaTiO3、AlN、有机）达到晶圆级——判断技术路线宽度
+已查询：BaTiO3 AlN organic electro-optic modulator wafer scale 2026 integrated photonics；wafer-scale barium titanate BTO electro-optic modulator 2026 200mm integration；thin film lithium tantalate wafer-scale modulator 2026 300mm foundry；aluminum nitride AlN electro-optic modulator wafer scale 2026 Pockels。
+**裁决：2026 H2 确有新体系活跃：钽酸锂(TFLT, 460 Gbit/s, 2026-11)最强并正向晶圆级靠近；BTO(溶液法+纳米压印/综述)、AlN(退火增强EO)、铁电向列液晶/有机 SOH 均有进展。但没有一个在 2026 H2 达到 PZT 8 英寸或 MTP-TFLN 200 mm 那种'全晶圆量产级'公开演示**（found=True）
+- [外]（出处：https://arxiv.org/pdf/2607.17436）薄膜铌酸锂钽酸盐(TFLT)成为 2026 H2 强新兴体系：悬浮钽酸锂 MZM 实现 460 Gbit/s 净数据率（arXiv:2607.17436）；另有面向紫外波段的集成 EO 调制器（arXiv:2605.02758，2026-11-19）；imec 明确其变异感知方法可外推到异质钽酸锂行波调制器（2026-11-22，一手·预印本原文）
+- [外]（出处：https://arxiv.org/html/2609.16616）BaTiO3(BTO)综述（NUS/NJU，arXiv:2609.16616）：超大 Pockels 系数、低光损、兼容异质集成；外延生长/晶向控制/畴工程/可扩展集成已使薄膜 BTO EO 性能接近体材料——但为综述，非 2026 H2 全晶圆量产演示（2026-09-15，一手·预印本综述原文）
+- [外]（出处：https://opg.optica.org/abstract.cfm?uri=ECIO-2026-M1A.5）溶液法 BaTiO3 单片 EO 调制器（软纳米压印，ECIO 2026 M1A.5）与溶液衍生 BTO 波导（arXiv:2601.14938）——低成本可规模化路线，但仍器件级（2026-06-15，一手·会议摘要）
+- [外]（出处：https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349）AlN/AlNOI 靠高温退火增强 EO（2026-04-27）；有机 SOH 与铁电向列液晶-on-Si 在代工工艺推进（见 G5）——新体系活跃但未达 PZT(8 英寸)/MTP-TFLN(200 mm)那种全晶圆量产级公开演示（2026-04-27，一手·期刊摘要）
+说明：立项技术路线宽度：主线 PZT/TFLN 仍最成熟；建议在'路线宽度'段落新增钽酸锂作为值得跟踪的第三路线（有 2026-11 高速实测），BTO/AlN/有机列为前瞻。所有数字保持按材料体系分开，不与 PZT 混写。
+### 六、P6 硅光健康监测临床验证
+#### 缺口 1：SPADE 硅光光声血压、剑桥卷积光谱仪、InnoPIC 等路线的人体大规模多中心临床样本数（P6 核心研究空间）
+已查询：SPADE silicon photonics optoacoustic blood pressure sensor clinical trial patients multicenter；SPADE optoacoustic blood pressure "healthy volunteers" "n =" subjects distal forearm；"convolutional spectrometer" glucose Cambridge participants clinical trial patients；InnoPIC integrated photonics continuous glucose monitoring clinical trial 2026。
+**裁决：确认未覆盖：未发现 SPADE/剑桥光谱/InnoPIC 任一路线的 >100 例或多中心人体临床样本；实际公开样本为健康志愿者小队列、n=1 追踪、概念阶段。P6 以'人体大规模临床证据缺失'为核心研究空间的立论成立。**（found=False）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13680363/）SPADE 论文本体仅在健康志愿者前臂做器件级验证（原文：'tested on the distal forearm of healthy volunteers'），未见人体大规模（>100例）或多中心临床队列；补充材料中的 '20 in phase 1 / 65 in phase 2' 系对照设备 NOVA 肱动脉基准验证，非 SPADE 自身临床样本。（2026-09-17（Nature Communications 卷17 文章10931；PMC 2026-11-04），一手-期刊原文（PMC/Nature Communications，DOI 10.1038/s41467-026-77580-3））
+- [外]（出处：https://www.nature.com/articles/s41566-026-01891-6）剑桥卷积光谱仪（Nature Photonics，2026-04-15）血糖部分为模拟生理环境 + 单名受试者长期追踪（n=1），无大规模人体临床；ScienceDaily 为 2026-10-22 再报道。（2026-04-15（原文）；2026-10-22（ScienceDaily 再报道 https://www.sciencedaily.com/releases/2026/10/261022081312.htm），一手-期刊原文（Nature Photonics）+ 二手再报道）
+- [外]（出处：https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical）InnoPIC（SiN PIC+拉曼+SPAD+AI 无创连续血糖）仍为竞赛孵化/概念阶段，未见 2026 下半年任何临床或产品里程碑。（2025-08-26，一手-项目方原文（PhotonDelta））
+- [外]（出处：https://fda.innolitics.com/device/K254000）相邻路线参照：Happy Ring 无袖带血压 510(k) 临床为 85 例（见 Gap4），仍 <100 例；未改变本缺口结论。（2026-09-03（FDA 决定），一手-FDA 510(k) 原始决定书全文）
+说明：SPADE 补充材料出现的 20/65 例为对照设备 NOVA 的验证，引用时须避免张冠李戴；本缺口为'确认无'型，found=false 指大规模临床数据未找到，而非未检索。
+#### 缺口 2：无创血糖设备的上市时间表 / FDA 或 NMPA 审批进展（2026 下半年最新）
+已查询：non-invasive glucose monitoring device FDA approval 2026 timeline 510(k) de novo market launch；无创血糖 上市 时间 FDA NMPA 审批 2026 获批 进展。
+**裁决：已补：立项书标注'未覆盖'的无创血糖上市时间表有实质进展——NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市；FDA 侧 2026 下半年为 De Novo/510(k) 的 CGM 类进展。须严格区分'纯光学无创'与'经皮/无针 CGM'。**（found=True）
+- [外]（出处：http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=10526383&stockid=300003）NMPA 已批准乐普医疗指环式无创血糖仪（NeoGlu 01 / GluRing）上市，为公司公告的国内首款'无创+连续监测'三类医疗器械；注册证编号 国械注准20243072020；适用范围为非胰岛素治疗 2 型糖尿病成人、需指尖血校准（间隔≤30天），明确'不能替代现有指尖血糖监测'。（2026-11-12（公司公告）；获批时间报道为 2026-06（每经网），一手-上市公司公告（Sina 转载））
+- [外]（出处：https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html）中国医药报/每经网证实该指环式无创血糖仪 2026-06 获国家药监局批准，2026-08-06 京东首发上市；国内此前至少 2 款无创血糖仪取得三类证（博邦芳舟、精策医疗等）。（2026-07-11（获批报道）；2026-08-05（京东首发），一手-行业官媒 + 二手财经媒体交叉印证）
+- [外]（出处：http://fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar）FDA 端 2026-08-25 以 De Novo 授权 Abbott Libre Duo 10 Day（首个连续双葡萄糖-酮体可穿戴，2岁+）。（2026-08-25，一手-FDA 官方新闻稿）
+- [外]（出处：https://healio.com/news/endocrinology/20261002/fda-grants-510k-clearance-for-otc-sale-of-needlefree-cgm）FDA 2026-09-24 授予 Biolinq Shine 510(k) OTC 无针 CGM（22岁+，前臂经皮/皮内微针阵列）。注意：上述 FDA 产品均为 CGM（含经皮传感），与'纯光学无创血糖'不是同一技术类别，不可混为一谈。（2026-10-02（报道）；批准 2026-09-24，二手-专业媒体报道（单源，FDA 编号未直接核库））
+说明：乐普公告注册证号含'2024'字段但公告发布于 2026-11，年份字段口径以 NMPA 原始注册库为准（本次未直连 NMPA 库，标未验证）；MARD 仍高于指尖血，临床精度争议未解。
+#### 缺口 3：硅光健康监测芯片的独立市场规模数据（立项书标未覆盖）
+已查询：silicon photonics healthcare biomedical chip market size 2032 forecast USD million photonics health monitoring；"silicon photonics" healthcare monitoring chip market size 2026 wearable sensor dedicated segment forecast。
+**裁决：确认未覆盖：未找到'硅光健康监测芯片'这一独立品类的权威市场规模数据；公开的只有整硅光/硅光传感器/生物光子学的 umbrella 或相邻口径，且各家数值差异巨大（2030/2032 预测从 5.87B 到 16.85B 不等），不可直接相减或充当独立规模。**（found=False）
+- [外]（出处：https://marketsandmarkets.com/Market-Reports/silicon-photonics-116.html）广义硅光市场有多家口径（不可直接比较）：MarketsandMarkets USD 2.16B(2024)→9.65B(2030)、CAGR 29.5%；ResearchAndMarkets USD 3.78B(2026)→10.55B(2032)、CAGR 18.5%。均为整体硅光（数据中心主导），非健康监测芯片独立规模。（2026-11-21（页面更新），一手-市场研究机构报告页（口径不一，不可相减））
+- [外]（出处：https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market）相邻细分：硅光 IC 传感器市场 USD 1.4B(2025)→7.2B(2034)、CAGR 19%（marketintelo）；硅光成像系统市场 USD 124.45M(2025)→541.75M(2031)、CAGR 28.12%（Mordor）——最接近但仍非'健康监测芯片'专门口径。（2026-06-24（marketintelo）；2026-09-10（Mordor），二手-市场研究机构报告摘要（单源未验证））
+- [外]（出处：https://finance.yahoo.com/news/biophotonics-global-strategic-business-report-144500628.html）立项书原引用的生物光子学整体市场 USD 130.6B(2032)（ResearchAndMarkets, 2026-11-03）为 umbrella 口径，涵盖 Roche/GE 等大型影像与诊断，不能充当硅光健康监测芯片规模。（2026-11-03，二手-新闻稿聚合（立项书已自标仅作背景））
+说明：found=false 指专门品类规模未找到；相邻市场数据作为背景列出，按立项书纪律不作立论依据、不做规模测算。
+#### 缺口 4：Happy Ring 无袖带血压智能戒指的 FDA 510(k) 编号核验（立项书的'编号待核'反面教材）
+已查询：Happy Ring smart ring blood pressure FDA 510(k) K number clearance 2026。
+**裁决：已补并纠正：编号 K254000 属实，且 FDA 原始数据库给出完整临床数据（85 例/850 次/动脉内金标准）。立项书'编号待核'的反面教材应升级为'编号已核=K254000，且批准范围窄于宣传'——它不再是'无法核验'，而是'核验后发现证据边界清晰'。**（found=True）
+- [外]（出处：https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000）核验成功：编号 K254000， trade name 'Happy Health Blood Pressure Monitor'，申请人 Happy Health, Inc.，产品码 DXN（21 CFR 870.1130，Class II），决定 SESE（实质等同），决定日 2026-09-03，Traditional 510(k)，SaMD。FDA 原始 510(k) 数据库可查。（2026-09-03，一手-FDA 510(k) 原始数据库）
+- [外]（出处：https://fda.innolitics.com/device/K254000）510(k) 摘要全文：临床按 ISO 81060-2:2018+A1+A2，85 名受试者（无剔除）、850 次测定，全部用有创动脉内压对照；criterion1 平均误差 DBP 0.12 / SBP 0.81 mmHg，SD 3.16 / 6.09；criterion2 SD 1.55 / 2.76。适应症：22–50 岁、点测、仅测量与显示不做诊断，不用于运动或低灌注状态、心律失常/孕妇等…（2026-09-03（决定书/Summary 编制 2026-08-31），一手-FDA 510(k) 决定书与摘要全文（Innolitics 镜像））
+- [外]（出处：https://sahha.ai/blog/fda-cleared-vs-approved-wearables）独立分析指出口号与批准范围有落差：实际批准范围为软件点测、测量显示、不做诊断，且禁用于运动/低灌注——'首款无袖带免校准持续被动血压'的营销措辞被 FDA 记录收窄。（2026-10-13，二手-行业分析（单源未验证，但与 FDA 原文一致））
+说明：此为本次深挖最重要新证据：把立项书中唯一的'编号待核'项变成可引用的一手监管事实，同时强化'营销措辞≠批准范围'的证据纪律。
+#### 缺口 5：Neola 早产儿肺监测 FDA 突破性设备认定 → 是否已进入正式临床/获批（认定≠上市批准边界）
+已查询：Neola Medical breakthrough device designation FDA 2026 clinical trial IDE approval premature infant lung monitoring；Neola Medical FDA IDE investigational device exemption clinical study approval 2026 market authorization CE mark。
+**裁决：已核边界：突破性设备认定（2026-09-04）≠上市批准。现有临床证据仅 10 例单中心安全性 pilot；美国正式临床拟 2027 年中启动（视 FDA 反馈），无任何获批。立项书'认定只是通道资格、仍处认定与试验通道阶段'的表述准确，应保留并补上 10 例 pilot 与 2027 时间表。**（found=True）
+- [外]（出处：https://neolamedical.com/mfn_news/neola-medical-receives-fda-breakthrough-device-designation）FDA 于 2026-09-04 授予 Neola® 突破性设备认定（用于早产儿无创连续肺监测、支持及时检测气胸/肺塌陷）。公司明确措辞为'strengthening our U.S. regulatory pathway'、'advance the next critical steps toward market authorization'——即认定只是通道资格，非上市批准。（2026-09-04，一手-公司公告原文（Q3 报告 2026-11-18 复核））
+- [外]（出处：https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development）首个临床 pilot 研究结果（2026-04-21 公布）：仅 10 名早产儿（胎龄≥28周、体重1000–3000g），单中心（瑞典 Borås 的 Södra Älvsborgs Sjukhus NICU），结论为'安全性与耐受性良好'，属早期开发的安全性研究，非有效性确证。（2026-04-21，一手-公司公告原文）
+- [外]（出处：https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development）公司计划就临床与监管策略与 FDA 沟通，'在监管反馈的前提下'拟于 2027 年中在美国启动早产儿临床研究——说明美国正式临床尚未启动、更无 PMA/510(k) 获批。（2026-04-21，一手-公司公告原文）
+说明：严禁把突破性认定写成'获批上市'；TAP Pilot 为认定后的优先审评/沟通通道，与批准无关。
+#### 缺口 6：多波长 PPG 无创血压的跨人群泛化数据（肤色/灌注/运动分层误差），有无更大样本公开研究
+已查询：multi-wavelength PPG cuffless blood pressure skin tone perfusion exercise stratified error generalization study larger cohort 2025 2026；cuffless blood pressure PPG skin tone Fitzpatrick perfusion motion artifact stratified error large cohort 100 subjects 2025 2026。
+**裁决：确认未覆盖：未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究。现有最强证据仍是 NEO-BP 的 42 例新生儿单中心回顾性亚组分析；新增的 Sensors 2026 为探索性研究，rPPG 的肤色退化提示问题普遍存在。立项书'跨人群泛化尚未验证'的判断成立。**（found=False）
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542）NEO-BP 原文（Adv Sci 2026-07-27，DOI 10.1002/advs.76775）：42 名新生儿、9378 片段、G+R+IR 模型 MAE 9.67/6.17 mmHg；'estimation errors increased under lower signal quality and stronger motion'，分层为回顾性描述性亚组分析。无肤色分层（新生儿队列…（2026-07-27，一手-期刊原文（Advanced Science，PMC 全文核读））
+- [外]（出处：https://pubmed.ncbi.nlm.nih.gov/43029695）新增相关研究：'Multi-Wavelength PPG Amplitude Ratio Features for Cuffless Blood Pressure Estimation: An Exploratory Study'，Sensors 2026, 26(21):6897，DOI 10.3390/s26216897——标题即标注 exploratory，未提供大规模跨人群分层误差。（2026-10-30，一手-期刊摘要（PubMed 索引，正文未深读，标未验证））
+- [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13372377）跨肤色泛化的旁证来自 rPPG 领域：性能'degrades systematically across skin tones'，在头动/光照变化/非实验室条件下加剧（Nowara 等三数据集 73 人 meta 分析）。提示跨人群泛化是全行业未解问题，但非多波长 PPG 血压的大样本分层研究。（2026-06-16，一手-期刊原文（综述/meta 分析））
+- [外]（出处：https://nature.com/articles/s41746-026-02898-7）综述性证据：npj Digital Medicine 'Towards trustworthy AI-driven cuffless blood pressure monitoring'（2026-06-25）系统讨论 PPG 无袖带血压的可信度/泛化缺口；arxiv 单搏动耳 PPG+ECG（2607.27076, 2026-07-30）亦以运动/姿态伪影为待解问题。（2026-06-25，一手-期刊/预印本原文）
+说明：found=false 指'更大样本分层公开研究'未找到；已补入 2026 下半年新论文作为研究动态，但不改变缺口结论。
+
+## 口径与来源
+证据表 5 列：方向 = 立项书所属方向；缺口裁决 = 联网核实结论（找到一手出处 / 仅二手或估算 / 确认仍未覆盖）；主张摘要 = 可引用结论；来源 = URL。数据状态沿用各 JSON 的 strength 字段：evidence-backed / 一手（可追溯原文）、二手估算（行业媒体转述，标未验证）、plausible-inference（本地证据文件的推断值，无一手 URL）。「口径与来源」仅描述证据强度与列含义，不新增任何事实主张。
+## 证据清单
+| # | 方向 | 缺口裁决 | 主张摘要 | 来源 |
+| --- | --- | --- | --- | --- |
+| 1 | P1 CPO封装良率 | 找到一手出处 | 台积电 COUPE 硅光平台一手会议资料给出硅光芯片测试良率 10%–70%，光纤—硅芯片耦合损耗 &gt;±2.5 dB，晶圆级中心共振波长漂移控制在 1.5 nm | [来源](https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf) |
+| 2 | P1 CPO封装良率 | 找到一手出处 | FAU『穿线工序』良率：Senko/Sumitomo/Corning/FOCI 等厂商在人工+设备协作模式下，24/36 芯高密度产品稳定量产良率卡在 70%– | [来源](https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html) |
+| 3 | P1 CPO封装良率 | 找到一手出处 | 光子芯片制造典型良率 30%–70%（依平台/复杂度/成熟度而变）；集成电路代工数据。 | [来源](https://photondelta.com/blog/what-is-the-yield-rate-for-photonic-chip-manufacturing) |
+| 4 | P1 CPO封装良率 | 找到一手出处 | TrendForce 官方新闻稿确认『光引擎高制造良率与有效热管理』是放量三大瓶颈之首，但通篇未给出任何具体良率百分比。 | [来源](https://trendforce.com/presscenter/news/20260727-13151.html) |
+| 5 | P1 CPO封装良率 | 仅二手或估算 | ELS（外置激光源）模块整模块约 USD 500，其中组件成本近 USD 350，单个 CW 激光芯片约 USD 32（占成本支出一半）；Broadcom VC | [来源](https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html) |
+| 6 | P1 CPO封装良率 | 仅二手或估算 | 第一代 CPO 每端口成本仍高于大批量可插拔方案，价差随出货量增长才收窄；转引 TrendForce 判断。 | [来源](https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide) |
+| 7 | P1 CPO封装良率 | 仅二手或估算 | 可插拔光模块当前每端口成本可能低于新兴 CPO 实施方案，但随带宽扩展信号损耗与热密度使可插拔趋于极限（定性，无数字）。 | [来源](https://www.molex.com/en-us/blog/co-packaged-optics-vs-pluggable) |
+| 8 | P1 CPO封装良率 | 仅二手或估算 | SemiAnalysis CPO Book 含 Nvidia Quantum X800-Q3450 CPO（72 个 1.6T 光引擎）与收发器成本对比细节，页 | [来源](https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling) |
+| 9 | P1 CPO封装良率 | 仅二手或估算 | TrendForce 估计 CPO 约占 2026 年 AI 数据中心光模块的 0.5%，到 2030 年升至约 35%。这是检索到的唯一 CPO 渗透率精确百 | [来源](https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide) |
+| 10 | P1 CPO封装良率 | 仅二手或估算 | LightCounting 2026 年 5 月报告：2026 年采用硅光调制器的光模块销售额将首次超过该类市场总额（约 40 亿美元）的 50%——注意这是『 | [来源](https://news.futunn.com/en/post/74584585/will-the-race-for-next-generation-optical-modules-avoid-a) |
+| 11 | P1 CPO封装良率 | 仅二手或估算 | 约 50% 的当前 800G 模块采用硅光技术，400G 中 20%–30%（ICCSZ 口径）——同样是硅光而非 CPO 渗透率。 | [来源](https://www.hyc-system.com/news/Industry/7178.html) |
+| 12 | P1 CPO封装良率 | 仅二手或估算 | 公开厂商口径：AI 引导主动对位平台可做到 6 自由度、亚微米公差、单件 &lt;90 秒，相对手工对位 3× 吞吐提升（称经美国某光子组装厂测试，但无一手测试报告链 | [来源](https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one) |
+| 13 | P1 CPO封装良率 | 仅二手或估算 | PI F-141/NovAlign 自动对位系统：对准算法首次找光与信号优化时间『比常规方法快达两个数量级』，4/6 自由度、40 mm XYZ 行程、12°  | [来源](https://www.laserfocusworld.com/directory/fiber-optic-optoelectronic-components-equipment-systems/automatic-alignment-systems-fiber-optic/press-release/55389004/pi-americas-physik-instrumente-fau-alignment-faster-cost-optimized) |
+| 14 | P1 CPO封装良率 | 仅二手或估算 | OFC 2025 光子封装研讨会共识（转引）：实现 sub-0.5 dB/facet 耦合需要 V 槽位置精度优于 ±0.5 µm、端面粗糙度 Ra&lt;1 nm； | [来源](https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one) |
+| 15 | P1 CPO封装良率 | 仅二手或估算 | Fiber-Mart FAU 工艺页：保偏 FAU 每根光纤需精确旋转，将偏振轴误差控制在 ±1° 以内——与提案『&lt;0.1°』相差一个数量级，且页面被 Clo | [来源](https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html) |
+| 16 | P1 CPO封装良率 | 确认仍未覆盖 | 台积电 COUPE 平台规格：12 英寸 65 nm 硅光，10 µm 对准容差对应 0.3 dB 垂直耦合损耗，76 GHz 微环调制器，晶圆级中心共振波长漂 | [来源](https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf) |
+| 17 | P1 CPO封装良率 | 确认仍未覆盖 | 键合应变量化（非 CPO 专用、2017 年）：X 射线测 96 mm 长方向最大 Omega 角位移 0.188°，对应 41.68 µm 弓形、150 mm | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC5445873) |
+| 18 | P1 CPO封装良率 | 确认仍未覆盖 | InP DFB 激光器与硅光晶圆级倒装混合集成：sub-300 nm 对准精度支撑 &lt;2 dB 耦合效率，FDTD 仿真给出对准公差—耦合损耗关系（2022 年 | [来源](https://doi.org/10.1109/jstqe.2022.3223641) |
+| 19 | P1 CPO封装良率 | 确认仍未覆盖 | IEEE HIR 9.0 Photonics CPO 路线图（2026-05）与 Ansys CPO 多物理场 Lumerical 互操作 webinar（封装 | [来源](https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf) |
+| 20 | P1 CPO封装良率 | 确认仍未覆盖 | ficonTEC 300 mm 双面光电晶圆测试仪（2025-03，兼容现有 ATE：顶部 DC/高速电测 + 底部六轴光学校准探针、自动上下片、真空温控 ch | [来源](https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate) |
+| 21 | P1 CPO封装良率 | 确认仍未覆盖 | SemiVision 深度分析（2026-07-27，基于 Advantest SEMICON Taiwan SiPh Summit 2025 演讲）：CPO  | [来源](https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit) |
+| 22 | P1 CPO封装良率 | 确认仍未覆盖 | 专利/技术情报站给出方向性目标：标准 PIC 单 die 测试时间 &lt;1 秒（wafer-level SiPh throughput 改进目标），可作为『目标值 | [来源](https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput) |
+| 23 | P1 CPO封装良率 | 确认仍未覆盖 | JENOPTIK 电子-光子测试路线图 webinar 材料：晶圆级同时电/光测试、每芯片无主动对准时间（plug &amp; play 对接标准 IC 探针台），同样 | [来源](https://www.jenoptik.com/-/media/websitedocuments/optics/microoptics/presentation-webinar-ufo-probe.pdf) |
+| 24 | P2 III-V激光异质集成 | 确认仍未覆盖 | TrendForce 2025-12-08 新闻稿：EML 仅少数供应商可得，列举 Lumentum、Coherent（Finisar）、Mitsubishi、 | [来源](https://trendforce.com/presscenter/news/20251208-12823.html) |
+| 25 | P2 III-V激光异质集成 | 确认仍未覆盖 | 钛媒体《光芯解码-企业突围篇》给出高端光芯片由海外头部寡头主导的定性判断，检索摘要未出现 90% 或四家名单，未深读全文。 | [来源](https://www.tmtpost.com/8090088.html) |
+| 26 | P2 III-V激光异质集成 | 找到一手出处 | OICE 2026 会议论文（8 英寸 Si3N4 PIC + III-V 增益芯片）：500 次热循环后出现两种退化区制——界面应力累积主导的阈值电流缓慢漂移 | [来源](https://doi.org/10.1117/12.3123229) |
+| 27 | P2 III-V激光异质集成 | 找到一手出处 | ICEPT 2026 论文：多应力加速老化（TC −40/+85/+105/+125°C；HTOL 结温 60/85/105°C）+ 3D FEM + PL-D | [来源](https://doi.org/10.1109/icept71373.2026.11690061) |
+| 28 | P2 III-V激光异质集成 | 找到一手出处 | 综述：键合型 III-V/Si 激光器与常规激光器共享外延相关退化机制（非辐射复合中心、掺杂扩散）；硅上 InAs 量子点激光器寿命强烈受 extended d | [来源](https://doi.org/10.3390/electronics10222734) |
+| 29 | P2 III-V激光异质集成 | 找到一手出处 | Buffolo 等 2018 年论文对异质 III-V/Si 环形镜激光器做恒流加速老化，识别阈值电流上升等共同退化机制（PDF 正文抓取失败，仅搜索摘要）。 | [来源](https://doi.org/10.1016/j.microrel.2018.06.058) |
+| 30 | P2 III-V激光异质集成 | 仅二手或估算 | 工商时报：法人估计台积电 PIC 月产能由约 500 片升至 2026Q2 1 万片、2026Q4 1.5 万片、2028 年至少 2.5 万片；按每片 648 | [来源](https://www.ctee.com.tw/news/20260708700075-439901) |
+| 31 | P2 III-V激光异质集成 | 仅二手或估算 | TrendForce News 转述同一 Commercial Times 估算：TSMC PIC capacity 500 → 10,000 wafers/m | [来源](https://www.trendforce.com/news/2026/07/08/news-tsmc-pic-capacity-seen-surging-to-25k-wafersmonth-by-2028-nvidia-broadcom-eyed-as-early-coupe-customers) |
+| 32 | P2 III-V激光异质集成 | 找到一手出处 | Intel（SPIE Silicon Photonics XX, 2025）：集成 InP 混合激光器消除解理面光学灾变损伤、III-V 再生长界面缺陷与装配  | [来源](https://doi.org/10.1117/12.3043449) |
+| 33 | P2 III-V激光异质集成 | 找到一手出处 | ICEPT 2026：III-V-on-Si 键合界面多应力加速老化 + FEM 联合验证，Weibull β=3.0–3.8，Ea=0.72 eV，使用条件  | [来源](https://doi.org/10.1109/icept71373.2026.11690061) |
+| 34 | P2 III-V激光异质集成 | 找到一手出处 | 中文综述转述：硅基 InAs 量子点激光器在 80°C 下表现良好可靠性，最佳样品估算寿命超过 22 年（PDF 抓取失败，仅搜索摘要）。 | [来源](https://www.researching.cn/ArticlePdf/m00001/2025/52/16/1603014.pdf) |
+| 35 | P2 III-V激光异质集成 | 找到一手出处 | LightCounting 原文：收发器/AOC/LPO/LRO/NPO/CPO 用光芯片市场 2025 年约 40 亿美元，2031 年约 150 亿美元；硅 | [来源](https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377) |
+| 36 | P2 III-V激光异质集成 | 找到一手出处 | Lumentum 厂商博客（2026-06-17）：ELS/ELSFP 通过把激光器与交换 ASIC 物理分离获得面板可维护性与热隔离；其泵浦激光平台累计近 5 | [来源](https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance) |
+| 37 | P2 III-V激光异质集成 | 找到一手出处 | 工程分析：把激光器集成进 SiPho 芯片可获得最低插损与最高功耗收益，但产业因热问题（交换 ASIC 数百瓦、波长/功率/寿命对温度敏感）与可维护性问题（激光 | [来源](https://www.viksnewsletter.com/p/why-cpo-uses-external-lasers) |
+| 38 | P2 III-V激光异质集成 | 找到一手出处 | OIF 共封装实施协议：ELS 可改善 CPO 交换机可靠性，失效激光可在面板更换而无需停机，且物理分离改善激光器热环境。 | [来源](https://oiforum.com/wp-content/uploads/OIF-Co-Packaging-FD-01.0.pdf) |
+| 39 | P2 III-V激光异质集成 | 找到一手出处 | Lumentum 白皮书搜索摘要给出对比量级：去掉 10–15 英寸电走线可省约 22 dB 信号损耗，CPO 每端口功耗约 30 W→约 9 W（约 3.5  | [来源](https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf) |
+| 40 | P3 光计算能效口径 | 160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。 | 160 TOPS/W = 清华大学&#x27;太极&#x27;(Taichi)光子计算芯片，论文 &#x27;Large-scale photonic chiplet Taichi empo | [来源](https://doi.org/10.1126/science.adl1203) |
+| 41 | P3 光计算能效口径 | 160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。 | 清华官网对&#x27;太极&#x27;的表述：面积效率 879 T MACS/mm²、能量效率 160 TOPS/W；属机构发布值，未在同源处给出整机功耗或系统边界定义。 | [来源](https://www.tsinghua.edu.cn/info/1175/110690.htm) |
+| 42 | P3 光计算能效口径 | 160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。 | 重大纠偏：&#x27;65.5 TOPS/W&#x27; 并非独立能效数字。一手 NSR 综述原文：Envise &#x27;Operating at 65.5 TOPS while con | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/) |
+| 43 | P3 光计算能效口径 | 160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。 | 中文综述交叉印证：平均吞吐 65.5 TOPS(500 MHz)、峰值 262 TOPS(2 GHz)、能效 0.81 TOPS/W(average)——再次表 | [来源](https://www.researching.cn/ArticlePdf/m00098/2026/47/6/060401.pdf) |
+| 44 | P3 光计算能效口径 | 160 TOPS/W 有明确芯片(清华太极)与一手论文(Science 2024, DOI 10.1126/science.adl1203),但未公布整机功耗/系统边界;65.5 经一手 NSR 综述证实是 Envise 吞吐量(65.5 TOPS)而非 65.5 TOPS/W 能效,其能效为 0.81–0.84 TOPS/W。立项核心'对立证据'需改写:65.5 不能作为独立能效值与 160 并列。 | 二手技术解析：Envise 每秒 65.5 trillion 16-bit operations,功耗约 78 W 电 + 1.6 W 光。 | [来源](https://tspasemiconductor.substack.com/p/lightmatter-passage-a-comprehensive) |
+| 45 | P3 光计算能效口径 | 0.84 TOPS/W 站得住,一手出处是 Nature 2025 论文(经 NSR 原始吞吐量+功耗数据复算),非二手 Kaggle 聚合。但须限定:'唯一可核验口径'应表述为'可从一手披露的 65.5 TOPS/78W 复算的口径',而非厂商直接给出的 TOPS/W 字面值;0.81–0.84 随分母是否计光功耗浮动。 | Envise 原始性能数据出自 Nature 2025-04-09 &#x27;Universal photonic artificial intelligence ac | [来源](https://www.nature.com/articles/s41586-025-08854-x) |
+| 46 | P3 光计算能效口径 | 0.84 TOPS/W 站得住,一手出处是 Nature 2025 论文(经 NSR 原始吞吐量+功耗数据复算),非二手 Kaggle 聚合。但须限定:'唯一可核验口径'应表述为'可从一手披露的 65.5 TOPS/78W 复算的口径',而非厂商直接给出的 TOPS/W 字面值;0.81–0.84 随分母是否计光功耗浮动。 | 0.84 TOPS/W = 65.5 TOPS ÷ 78 W 电功耗(NSR 综述原始数字);中文综述给 0.81 TOPS/W(average)。0.84 是 | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/) |
+| 47 | P3 光计算能效口径 | 0.84 TOPS/W 站得住,一手出处是 Nature 2025 论文(经 NSR 原始吞吐量+功耗数据复算),非二手 Kaggle 聚合。但须限定:'唯一可核验口径'应表述为'可从一手披露的 65.5 TOPS/78W 复算的口径',而非厂商直接给出的 TOPS/W 字面值;0.81–0.84 随分母是否计光功耗浮动。 | Lightmatter 官方博客 &#x27;A New Kind of Computer&#x27; 介绍 Envise 架构与发布。 | [来源](https://lightmatter.com/blog/a-new-kind-of-computer) |
+| 48 | P3 光计算能效口径 | 0.84 TOPS/W 站得住,一手出处是 Nature 2025 论文(经 NSR 原始吞吐量+功耗数据复算),非二手 Kaggle 聚合。但须限定:'唯一可核验口径'应表述为'可从一手披露的 65.5 TOPS/78W 复算的口径',而非厂商直接给出的 TOPS/W 字面值;0.81–0.84 随分母是否计光功耗浮动。 | 冲突数据:mirrorfrog 称 Envise 30 TOPS/W(INT8,4 POPS,TDP 65W),与 0.84 差 30 倍以上,口径不明。 | [来源](https://mirrorfrog.com/lightmatter-envise/) |
+| 49 | P3 光计算能效口径 | 找到原始论文 Science 2025-12, DOI 10.1126/science.adv7434,数字(3.57×10^4 TOPS/6.64×10^2 TOPS/W/2.62×10^2 TOPS/mm²/210万神经元)在多个转述源一致且方向正确,但未逐字核对原文(Science 页被挡)。重大澄清:LightGen 是上海交大陈一彤团队成果,非清华;清华团队为合作方且另发量化标准论文。 | LightGen 原始论文:&#x27;All-optical synthesis chip for large-scale intelligent semantic v | [来源](https://doi.org/10.1126/science.adv7434) |
+| 50 | P3 光计算能效口径 | 找到原始论文 Science 2025-12, DOI 10.1126/science.adv7434,数字(3.57×10^4 TOPS/6.64×10^2 TOPS/W/2.62×10^2 TOPS/mm²/210万神经元)在多个转述源一致且方向正确,但未逐字核对原文(Science 页被挡)。重大澄清:LightGen 是上海交大陈一彤团队成果,非清华;清华团队为合作方且另发量化标准论文。 | LightGen 数字:面积 136.5 mm²、&gt;210万光学神经元、端到端 3.57×10^4 TOPS、能效 6.64×10^2 TOPS/W、计算密度  | [来源](https://baike.baidu.com/item/LightGen/67112849) |
+| 51 | P3 光计算能效口径 | 找到原始论文 Science 2025-12, DOI 10.1126/science.adv7434,数字(3.57×10^4 TOPS/6.64×10^2 TOPS/W/2.62×10^2 TOPS/mm²/210万神经元)在多个转述源一致且方向正确,但未逐字核对原文(Science 页被挡)。重大澄清:LightGen 是上海交大陈一彤团队成果,非清华;清华团队为合作方且另发量化标准论文。 | 清华官网转述：实测系统级算力与能效均较国际顶尖芯片提升两个数量级以上。 | [来源](https://www.tsinghua.edu.cn/info/1182/128225.htm) |
+| 52 | P3 光计算能效口径 | 找到原始论文 Science 2025-12, DOI 10.1126/science.adv7434,数字(3.57×10^4 TOPS/6.64×10^2 TOPS/W/2.62×10^2 TOPS/mm²/210万神经元)在多个转述源一致且方向正确,但未逐字核对原文(Science 页被挡)。重大澄清:LightGen 是上海交大陈一彤团队成果,非清华;清华团队为合作方且另发量化标准论文。 | EurekAlert 科研新闻稿报道 LightGen 全光生成式AI芯片成果。 | [来源](https://www.eurekalert.org/news-releases/1109809) |
+| 53 | P3 光计算能效口径 | Q.ANT '比GPU高X倍'口径 = 相对倍数:100x 是'数据中心容量潜力'(非实测能效),30x 能效/50x 性能为对自家第一代或单应用内部测试;LRZ 第三方实测主要为对一代 NPU 的倍数(>50x 矩阵乘、25x ResNet-18、6x 能效),且给出绝对功耗(系统350–420W)。无任何绝对 TOPS/W,与立项书表述一致,无需改口径。 | Q.ANT 官方新闻稿(2026-03-17):&#x27;up to 90x lower power consumption per workload and up t | [来源](https://qant.com/press-releases/higher-performance-less-energy-q-ant-deploys-second-generation-photonic-processors-at-supercomputing-center-lrz) |
+| 54 | P3 光计算能效口径 | Q.ANT '比GPU高X倍'口径 = 相对倍数:100x 是'数据中心容量潜力'(非实测能效),30x 能效/50x 性能为对自家第一代或单应用内部测试;LRZ 第三方实测主要为对一代 NPU 的倍数(>50x 矩阵乘、25x ResNet-18、6x 能效),且给出绝对功耗(系统350–420W)。无任何绝对 TOPS/W,与立项书表述一致,无需改口径。 | 立项书所引 Q.ANT 新闻(2026-05-19):LRZ 独立评估最高 100x 性能、内部测试最高 30x 能效/50x 单应用性能;产品定位 GPU 协 | [来源](https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges) |
+| 55 | P3 光计算能效口径 | Q.ANT '比GPU高X倍'口径 = 相对倍数:100x 是'数据中心容量潜力'(非实测能效),30x 能效/50x 性能为对自家第一代或单应用内部测试;LRZ 第三方实测主要为对一代 NPU 的倍数(>50x 矩阵乘、25x ResNet-18、6x 能效),且给出绝对功耗(系统350–420W)。无任何绝对 TOPS/W,与立项书表述一致,无需改口径。 | Q.ANT 白皮书 PDF(2025-11):&#x27;Up to 30x higher energy efficiency and 50x performance g | [来源](https://qant.com/wp-content/uploads/2025/11/20251111_QANT-Photonic-AI-Accelerator-Gen-2.pdf) |
+| 56 | P3 光计算能效口径 | Q.ANT '比GPU高X倍'口径 = 相对倍数:100x 是'数据中心容量潜力'(非实测能效),30x 能效/50x 性能为对自家第一代或单应用内部测试;LRZ 第三方实测主要为对一代 NPU 的倍数(>50x 矩阵乘、25x ResNet-18、6x 能效),且给出绝对功耗(系统350–420W)。无任何绝对 TOPS/W,与立项书表述一致,无需改口径。 | LRZ 官方实测页:Q.ANT 系统功耗 350–420W、卡 25–100W,对比 GPU 达 1000W。给出绝对功耗但无 TOPS/W。 | [来源](https://www.lrz.de/en/news/detail/photonic-computers-in-real-world-test) |
+| 57 | P3 光计算能效口径 | 确认未覆盖:公开资料只有'累计出货量全球第一'的排名宣称,无具体出货片数/卡数;第三方独立实测能效(TOPS/W)未找到,现有 PACE能耗/性能数据均为厂商或合作方来源。 | 招股书口径:2024 与 2025 年曦智光计算芯片累计出货量均位居全球第一(排名宣称,无绝对片数/卡数)。 | [来源](https://finance.ifeng.com/c/8sKMERSrEQR) |
+| 58 | P3 光计算能效口径 | 确认未覆盖:公开资料只有'累计出货量全球第一'的排名宣称,无具体出货片数/卡数;第三方独立实测能效(TOPS/W)未找到,现有 PACE能耗/性能数据均为厂商或合作方来源。 | 36氪同口径报道曦智光计算芯片出货量全球第一。 | [来源](https://m.36kr.com/p/3785865036111108) |
+| 59 | P3 光计算能效口径 | 确认未覆盖:公开资料只有'累计出货量全球第一'的排名宣称,无具体出货片数/卡数;第三方独立实测能效(TOPS/W)未找到,现有 PACE能耗/性能数据均为厂商或合作方来源。 | 客户数:2023 新增11、2024 新增10、2025 新增22。 | [来源](https://www.huxiu.com/article/4850630.html) |
+| 60 | P3 光计算能效口径 | 确认未覆盖:公开资料只有'累计出货量全球第一'的排名宣称,无具体出货片数/卡数;第三方独立实测能效(TOPS/W)未找到,现有 PACE能耗/性能数据均为厂商或合作方来源。 | PACE 技术数据来自厂商/合作方:PACE Nature 论文(64×64 矩阵、16000 光子器件);NSR 综述给 PACE 3ns/cycle、7.6 | [来源](https://www.xztech.ai/community/papers/3) |
+| 61 | P3 光计算能效口径 | 没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。 | IEEE P1959 &#x27;Draft Standard for Metrics for Energy Efficiency in Machine Learning | [来源](https://standards.ieee.org/ieee/1959/11831/) |
+| 62 | P3 光计算能效口径 | 没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。 | IEEE P1960 &#x27;Guide for Energy Efficiency in Machine Learning Hardware Architectur | [来源](https://standards.ieee.org/ieee/1960/11832/) |
+| 63 | P3 光计算能效口径 | 没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。 | Nature Nanotechnology 2026-09-09 &#x27;How nanophotonics can drive optical computing  | [来源](https://doi.org/10.1038/s41565-026-02264-4) |
+| 64 | P3 光计算能效口径 | 没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。 | arXiv 2604.10841 &#x27;Harnessing Photonics for Machine Intelligence&#x27;(2026-04-12,Hanq | [来源](https://arxiv.org/abs/2604.10841) |
+| 65 | P3 光计算能效口径 | 没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。 | 信通院 CAICT《光计算技术与产业发展研究报告》(2023-11):标准化处于起步阶段,ISO/IEC JTC1、IEEE、ITU-T、TC578 主要做术语 | [来源](https://www.caict.ac.cn/kxyj/qwfb/ztbg/202311/P020231122389415230856.pdf) |
+| 66 | P3 光计算能效口径 | 没有专门针对'光计算能效口径/基准'的标准组织标准在推进(该细分仍为空),但相邻空位被显著挤压:①IEEE P1959/P1960 通用 ML 硬件能效指标草案在推进(PAR 2024-11-12,明确不做 benchmark,且不针对光计算);②Nature Nanotech 2026-09 已发表光计算'量化标准'方法学;③arXiv 2604 跨层 benchmark 框架。P3 立项依据必须调整:不能再笼统说'方法学空位/无公认口径',应改为'光计算专用 L1/L2/L3 分层能效口径 + 含转换开销记账的可复现评测基准仍无标准组织推进,但通用 ML 能效标准与学术量化方法学已出现,P3 须明确定位为差异化/对接而非空白占位'。 | OIF:Energy Efficient Photonic Interconnects for AI Compute Scale-up 白皮书 + 3.2T C | [来源](https://www.oiforum.com/wp-content/uploads/OIF-EEI-COI-WP-01.0.pdf) |
+| 67 | P4 AI逆向设计光子器件 | 一手出处已钉死：题名、8 位作者、DOI、日期与四项效率数字均与立项书一致，可把 [1] 升级为'已二次核验'。'后续流片实测版本'确认未覆盖。注意原文为 early-access 版本，定稿前宜复核最终版。 | 原文题名/作者/日期/DOI 全部核实：Agentic AI for inverse design in nanophotonics and meta-opti | [来源](https://www.nature.com/articles/s41598-026-78977-2) |
+| 68 | P4 AI逆向设计光子器件 | 一手出处已钉死：题名、8 位作者、DOI、日期与四项效率数字均与立项书一致，可把 [1] 升级为'已二次核验'。'后续流片实测版本'确认未覆盖。注意原文为 early-access 版本，定稿前宜复核最终版。 | 摘要原句核实立项书全部四项数字：四种 metagrating 策略自同一初始化得 79.4–90.9% 最终衍射效率；按峰值优化目标与按最终二值效率筛选得到不同 | [来源](https://www.nature.com/articles/s41598-026-78977-2) |
+| 69 | P4 AI逆向设计光子器件 | 一手出处已钉死：题名、8 位作者、DOI、日期与四项效率数字均与立项书一致，可把 [1] 升级为'已二次核验'。'后续流片实测版本'确认未覆盖。注意原文为 early-access 版本，定稿前宜复核最终版。 | 两轮检索未找到该论文的任何后续流片实测版本，也未找到其他团队对该框架器件的实测复现；原文方法止于 &#x27;separate forward evaluation of | [来源](https://www.nature.com/articles/s41598-026-78977-2) |
+| 70 | P4 AI逆向设计光子器件 | 需分层改写立项书的'公开资料未覆盖'：对 Sci Rep 该智能体框架器件确实未覆盖；但'逆向设计超表面的仿真—实测差距'本身已有公开实测数据（50.4% 仿真 vs 50.2% 实测，差距约 0.2 个百分点，FWHM 1.53 vs 1.56 μm）。不能笼统写未覆盖。 | 已发表的同口径仿真—实测对照（非 LLM/Agent 驱动，但是逆向设计超表面）：objective-first 逆设计 + 双光子聚合 3D 打印的近红外高  | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC12152600) |
+| 71 | P4 AI逆向设计光子器件 | 需分层改写立项书的'公开资料未覆盖'：对 Sci Rep 该智能体框架器件确实未覆盖；但'逆向设计超表面的仿真—实测差距'本身已有公开实测数据（50.4% 仿真 vs 50.2% 实测，差距约 0.2 个百分点，FWHM 1.53 vs 1.56 μm）。不能笼统写未覆盖。 | 另一篇已实验实现的深度学习大规模自由曲面超表面逆设计：预测光场比所训练电磁求解器快四个数量级以上，实验实现自由曲面 metagrating（衍射角达 75°）及 | [来源](https://arxiv.org/abs/2610.05021) |
+| 72 | P4 AI逆向设计光子器件 | 找到相邻公开案例：跨求解器/跨物理问题迁移（仿真）、跨三种逆设计器件的 >90% 图形转移保真度（工艺实测）、跨尺度跨波长实验实现。但未见'LLM/Agent 驱动 + 超表面→片上器件 + 实测效率对照'三者齐备的公开案例；立项书针对该具体命题的'公开资料未覆盖'确认成立。 | 跨求解器 + 跨问题迁移（仿真层，非实测）：agent-driven cross-validated pipeline 用 RCWA 与 Meep FDTD 互 | [来源](https://arxiv.org/abs/2611.08127) |
+| 73 | P4 AI逆向设计光子器件 | 找到相邻公开案例：跨求解器/跨物理问题迁移（仿真）、跨三种逆设计器件的 >90% 图形转移保真度（工艺实测）、跨尺度跨波长实验实现。但未见'LLM/Agent 驱动 + 超表面→片上器件 + 实测效率对照'三者齐备的公开案例；立项书针对该具体命题的'公开资料未覆盖'确认成立。 | 跨器件/跨工艺的工艺保真度实测：通用两步纳米制造流程对三种不同的逆向设计纳米光子器件，在不做任何器件专属工艺优化的条件下逐一达到 &gt;90% 的图形转移保真度。这 | [来源](https://arxiv.org/abs/2609.13460) |
+| 74 | P4 AI逆向设计光子器件 | 找到相邻公开案例：跨求解器/跨物理问题迁移（仿真）、跨三种逆设计器件的 >90% 图形转移保真度（工艺实测）、跨尺度跨波长实验实现。但未见'LLM/Agent 驱动 + 超表面→片上器件 + 实测效率对照'三者齐备的公开案例；立项书针对该具体命题的'公开资料未覆盖'确认成立。 | 跨尺度/跨波长实验实现：同一深度学习逆设计框架实验实现自由曲面 metagrating（衍射角至 75°）与毫米尺度自由曲面全息超表面（&gt;1000 波长、1.6 | [来源](https://arxiv.org/abs/2610.05021) |
+| 75 | P4 AI逆向设计光子器件 | 截至 2026-11-24 的公开检索未见《信息光子技术发展与应用研究报告（2026年）》发布；最新可得仍为 2025 年版（2025-12-13 索引 / 2025-12-15 发布报道）。立项书'截至2026-11-23仅2025版可得'确认成立。 | 信通院白皮书发布索引中可见《信息光子技术发展与应用研究报告（2025年）》，日期 2025-12-13；索引中未见 2026 年版条目。 | [来源](https://caict.ac.cn/kxyj/qwfb/bps/index_1.htm) |
+| 76 | P4 AI逆向设计光子器件 | 截至 2026-11-24 的公开检索未见《信息光子技术发展与应用研究报告（2026年）》发布；最新可得仍为 2025 年版（2025-12-13 索引 / 2025-12-15 发布报道）。立项书'截至2026-11-23仅2025版可得'确认成立。 | 行业媒体原文：在&#x27;2026 中国信通院深度观察报告会&#x27;上，《信息光子技术发展与应用研究报告（2025年）》正式发布，聚焦空芯光纤（2024 年 0.11 dB/ | [来源](https://m.c114.com.cn/w5472-1302264.html) |
+| 77 | P4 AI逆向设计光子器件 | P4 不是无人区，框架层已有明确竞品：MetaChat（Sci Adv，代码+数据开源）、MCP-LLM（Nanophotonics 2025-12）、arXiv:2611.08127（2026-11，已把二值化与 ±10 nm 鲁棒性内建）。新颖性必须从'做智能体闭环'收缩到'最终二值结构性能为统一筛选判据 + 经流片实测界定的仿真—实测差距 + 跨器件迁移'；这三项目标在已查工作中确认未覆盖。 | MetaChat：多智能体框架（AIM 设计智能体 + 材料专家智能体 + FiLM WaveY-Net 毫秒级代理求解器），自动设计多目标多波长 metale | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC12577674/) |
+| 78 | P4 AI逆向设计光子器件 | P4 不是无人区，框架层已有明确竞品：MetaChat（Sci Adv，代码+数据开源）、MCP-LLM（Nanophotonics 2025-12）、arXiv:2611.08127（2026-11，已把二值化与 ±10 nm 鲁棒性内建）。新颖性必须从'做智能体闭环'收缩到'最终二值结构性能为统一筛选判据 + 经流片实测界定的仿真—实测差距 + 跨器件迁移'；这三项目标在已查工作中确认未覆盖。 | MCP-enabled LLM for meta-optics inverse design：LLM 通过 Model Context Protocol 调用可 | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC12717938/) |
+| 79 | P4 AI逆向设计光子器件 | P4 不是无人区，框架层已有明确竞品：MetaChat（Sci Adv，代码+数据开源）、MCP-LLM（Nanophotonics 2025-12）、arXiv:2611.08127（2026-11，已把二值化与 ±10 nm 鲁棒性内建）。新颖性必须从'做智能体闭环'收缩到'最终二值结构性能为统一筛选判据 + 经流片实测界定的仿真—实测差距 + 跨器件迁移'；这三项目标在已查工作中确认未覆盖。 | An Agent-Driven, Cross-Validated Inverse-Design Pipeline for Dielectric Metasurf | [来源](https://arxiv.org/abs/2611.08127) |
+| 80 | P4 AI逆向设计光子器件 | P4 不是无人区，框架层已有明确竞品：MetaChat（Sci Adv，代码+数据开源）、MCP-LLM（Nanophotonics 2025-12）、arXiv:2611.08127（2026-11，已把二值化与 ±10 nm 鲁棒性内建）。新颖性必须从'做智能体闭环'收缩到'最终二值结构性能为统一筛选判据 + 经流片实测界定的仿真—实测差距 + 跨器件迁移'；这三项目标在已查工作中确认未覆盖。 | Sci Rep 论文本身亦为可复现竞品：公开了文献复现—人工批准策略—伴随优化—二值候选独立前向评估四模块及工作流评估规模（5/7/5）。 | [来源](https://www.nature.com/articles/s41598-026-78977-2) |
+| 81 | P5 新型电光材料晶圆级集成 | DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核） | 原文标题与 DOI 核验一致：&#x27;Wafer-scale thin-film PZT photonic integrated circuits enabling  | [来源](https://www.nature.com/articles/s41467-026-79721-0) |
+| 82 | P5 新型电光材料晶圆级集成 | DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核） | 原文摘要确认核心数字：8 英寸 SiO2/Si、化学溶液沉积+磁控溅射、DUV stepper 晶圆级制造；低传输损耗与低面内光学各向异性支撑 AWG；铁电畴工 | [来源](https://www.nature.com/articles/s41467-026-79721-0) |
+| 83 | P5 新型电光材料晶圆级集成 | DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核） | 资助与平台：CAS 战略先导专项 XDB1440000、NSFC 62505312、国家重点研发 2025YFA1411700；器件在中科院半导体所共享工艺平台 | [来源](https://www.nature.com/articles/s41467-026-79721-0) |
+| 84 | P5 新型电光材料晶圆级集成 | DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核） | 可访问正文中&#x27;均匀性&#x27;仅为定性表述（&#x27;Uniform, high-quality PZT thin films&#x27;、&#x27;low in-plane optical a | [来源](https://www.nature.com/articles/s41467-026-79721-0) |
+| 85 | P5 新型电光材料晶圆级集成 | DOI/标题/核心器件数字已一手核验为真；但'晶圆级良率、批间均匀性、CMOS 兼容性'三项定量数据在该文可访问正文中确认未披露（补充材料需人工下载再核） | 二次报道口径：3.2 Tbps 为&#x27;aggregate laboratory capacity, not a deployed&#x27;（实验室聚合容量，非已部署）；再 | [来源](https://newtqnia.com/en/news/360-an-8-inch-pzt-photonics-platform-reaches-32-tbps-across-16-channels) |
+| 86 | P5 新型电光材料晶圆级集成 | 立项书'公开资料未覆盖'的判断需修正：TFLN 异质集成(MTP)晶圆级良率(>95%)与均匀性/变异建模已公开；但 PZT 单片 8 英寸的器件级 VπL/带宽/插损全片分布、良率百分比、批间标准差仍未找到公开数据——P5 核心研究空间对 PZT 仍成立，对 TFLN 部分被抢占 | 重要反证——TFLN 晶圆级良率/均匀性已有公开定量数据：imec/根特大学在 4 片完整 200 mm 硅光晶圆上用微转移印刷(MTP)集成预图形化 TFLN | [来源](https://arxiv.org/html/2605.28971) |
+| 87 | P5 新型电光材料晶圆级集成 | 立项书'公开资料未覆盖'的判断需修正：TFLN 异质集成(MTP)晶圆级良率(>95%)与均匀性/变异建模已公开；但 PZT 单片 8 英寸的器件级 VπL/带宽/插损全片分布、良率百分比、批间标准差仍未找到公开数据——P5 核心研究空间对 PZT 仍成立，对 TFLN 部分被抢占 | 重要反证——已有面向晶圆级 heterogeneous LN 调制器的&#x27;变异感知(variability-aware)&#x27;设计与统计方法：用 TRANSVERSE | [来源](https://arxiv.org/html/2605.28765) |
+| 88 | P5 新型电光材料晶圆级集成 | 立项书'公开资料未覆盖'的判断需修正：TFLN 异质集成(MTP)晶圆级良率(>95%)与均匀性/变异建模已公开；但 PZT 单片 8 英寸的器件级 VπL/带宽/插损全片分布、良率百分比、批间标准差仍未找到公开数据——P5 核心研究空间对 PZT 仍成立，对 TFLN 部分被抢占 | PZT 薄膜厚度均匀性定量线索（非器件级）：某 PZT 光子论文补充材料称&#x27;The thickness uniformity of the PZT thin f | [来源](https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-61536-0/MediaObjects/41467_2025_61536_MOESM1_ESM.pdf) |
+| 89 | P5 新型电光材料晶圆级集成 | 立项书'公开资料未覆盖'的判断需修正：TFLN 异质集成(MTP)晶圆级良率(>95%)与均匀性/变异建模已公开；但 PZT 单片 8 英寸的器件级 VπL/带宽/插损全片分布、良率百分比、批间标准差仍未找到公开数据——P5 核心研究空间对 PZT 仍成立，对 TFLN 部分被抢占 | 比较基线：更早的 4/6 英寸单片 LN PIC 工作明确把&#x27;在大面积上均匀、高通量地实现低损耗&#x27;列为待解挑战（2020），佐证晶圆级均匀性是长期公开难题 | [来源](https://arxiv.org/html/2007.06498) |
+| 90 | P5 新型电光材料晶圆级集成 | 犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据 | 硅光异质集成 TFLN 单波 400Gbps 差分调制芯片（CIOE 现场展示）：8 英寸晶圆级硅光异质集成 TFLN 工艺 + 成熟 CMOS 硅光 + Di | [来源](https://www.eet-china.com/mp/a440906.html) |
+| 91 | P5 新型电光材料晶圆级集成 | 犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据 | TFLN 已实测承载 3.2T：Ciena+HyperLight+McGill 在 OFC 2025 post-deadline（Th4B.1）报告 8 通道  | [来源](https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1) |
+| 92 | P5 新型电光材料晶圆级集成 | 犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据 | Ciena 官方新闻稿佐证上述 3.2T/448G-per-lane IM-DD 2km 结果及测试细节 | [来源](https://www.ciena.com/about/newsroom/press-releases/ciena-hyperlight-and-mcgill-university-achieve-first-3.2tbs-448gbs-per-lane-imdd-2km-transmission) |
+| 93 | P5 新型电光材料晶圆级集成 | 犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据 | HyperLight 2026-03 推出 145 GHz 封装强度调制器，面向 448 Gbps/通道 IM-DD 与 260 GBaud 相干开发 | [来源](https://www.businesswire.com/news/home/20260312319685/en/HyperLight-Introduces-145-GHz-Reference-Modulators-to-Enable-448Gbps-per-Lane-Datacom-and-260GBaud-Telecom-Development) |
+| 94 | P5 新型电光材料晶圆级集成 | 犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据 | 产业盘点：铌奥光电 1.6T DR8/800G DR4 用 TFLN 调制器 3dB 带宽标称 70 GHz，3.2T DR8 标称 110 GHz；中国移动把 | [来源](https://zhuanlan.zhihu.com/p/2096186564032336971) |
+| 95 | P5 新型电光材料晶圆级集成 | 犀里光电 Pre-A 之外确有实测：单波 400G 实测芯片(易缆微，>110GHz/Vπ~3V)、TFLN 承载净 3.2 Tbps 的同行评审系统实验(Ciena/HyperLight/McGill, OFC 2025)、145GHz 封装调制器(HyperLight 2026-03)。但'2026 下半年 3.2T 量产商用模块实测'仍未找到公开数据 | OFC 2026 分析：TFLN 到达 1.6T/3.2T 的&#x27;inflection point&#x27;；行业判断 3.2T 属中长期高端路线、约 2028 后规模化 | [来源](https://www.simpletechtrend.com/en/post/ofc2026-tfln-scaling-1-6t-deployment-analysis-en) |
+| 96 | P5 新型电光材料晶圆级集成 | 立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用 | 同口径对照硬数字（Nature Communications 2026-10-22 原文 Introduction 逐字）：传统载流子耗尽 p-n 相移器 Vπ | [来源](https://www.nature.com/articles/s41467-026-78128-1) |
+| 97 | P5 新型电光材料晶圆级集成 | 立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用 | 同文给出对照基线器件（硅光子晶体慢光调制器）：器件长 320 µm，140 Gb/s OOK、能耗 26 fJ/bit、FinFET 兼容 CMOS 驱动电压； | [来源](https://www.nature.com/articles/s41467-026-78128-1) |
+| 98 | P5 新型电光材料晶圆级集成 | 立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用 | 硅基载流子耗尽 SOI 平台先进值：220-nm SOI 载流子耗尽 VπL &lt;1 V·cm、EO 带宽 &gt;30 GHz、消光比 &gt;20 dB；全硅 MZM 带 | [来源](https://arxiv.org/html/2510.25530) |
+| 99 | P5 新型电光材料晶圆级集成 | 立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用 | 插损硬数字：CMOS 兼容 foundry 的超紧凑硅调制器，carrier-depletion 谐振调制器插损 IL=2.8 dB、Q=2930、3dB 带宽 | [来源](https://www.nature.com/articles/s41467-025-67826-x) |
+| 100 | P5 新型电光材料晶圆级集成 | 立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用 | 150 Gbaud O 波段硅微环调制器：L 形 PN 结调制效率 51 pm/V，为常规横向 PN 结的约 2 倍 | [来源](https://pubmed.ncbi.nlm.nih.gov/42071730) |
+| 101 | P5 新型电光材料晶圆级集成 | 立项书'缺同口径硅基对照硬数字'已补齐：VπL 2–5 V·cm(常规耗尽)/<1 V·cm(先进 220nm SOI)、带宽 <50 GHz(常规 MZM)/>100 GHz(微环)、插损 2.8 dB，均可一手引用 | 低寄生电阻载流子耗尽微环调制器工作频率 &gt;100 GHz（Optics Letters, doi 10.1364/ol.614071） | [来源](https://doi.org/10.1364/ol.614071) |
+| 102 | P5 新型电光材料晶圆级集成 | 有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据 | TFLN 与 CMOS 不兼容的公开原因与规避路径（imec 原文逐字）：&#x27;TFLN is not compatible with CMOS fabricati | [来源](https://arxiv.org/html/2605.28971) |
+| 103 | P5 新型电光材料晶圆级集成 | 有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据 | 有机 SOH 在代工光子工艺中的可扩展极化：铁电向列液晶-on-silicon 在 foundry photonic process 中实现 DC-to-GHz | [来源](https://arxiv.org/html/2602.20406v1) |
+| 104 | P5 新型电光材料晶圆级集成 | 有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据 | 垂直硅-有机混合(SOH) EO 调制器：无背栅实现 3dB 带宽 &gt;110 GHz，同 Pockels 系数下 VπL 比经典 SOH 降低 2 倍（根特大学 | [来源](https://photonics.intec.ugent.be/download/pub_5537.pdf) |
+| 105 | P5 新型电光材料晶圆级集成 | 有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据 | NLM Photonics 与 SilOriX 2026-09-21 签 JDA：SilOriX 硅-有机混合(SOH)调制器设计 + NLM Selerion | [来源](https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries) |
+| 106 | P5 新型电光材料晶圆级集成 | 有公开进展但多为'异质集成规避兼容性'而非'PZT/TFLN 直接进 CMOS 后段'：TFLN 因锂污染不兼容、imec 用 MTP-BEOL 规避；有机 SOH 已解决可扩展极化并在代工工艺演示。PZT 含铅/高温与后段兼容的晶圆级工艺规范仍未找到公开数据 | AlN-on-insulator(AlNOI)通过高温退火增强 EO 响应、无载流子调制，作为 CMOS 友好替代路线之一 | [来源](https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349) |
+| 107 | P5 新型电光材料晶圆级集成 | 2026 H2 确有新体系活跃：钽酸锂(TFLT, 460 Gbit/s, 2026-11)最强并正向晶圆级靠近；BTO(溶液法+纳米压印/综述)、AlN(退火增强EO)、铁电向列液晶/有机 SOH 均有进展。但没有一个在 2026 H2 达到 PZT 8 英寸或 MTP-TFLN 200 mm 那种'全晶圆量产级'公开演示 | 薄膜铌酸锂钽酸盐(TFLT)成为 2026 H2 强新兴体系：悬浮钽酸锂 MZM 实现 460 Gbit/s 净数据率（arXiv:2607.17436）；另有 | [来源](https://arxiv.org/pdf/2607.17436) |
+| 108 | P5 新型电光材料晶圆级集成 | 2026 H2 确有新体系活跃：钽酸锂(TFLT, 460 Gbit/s, 2026-11)最强并正向晶圆级靠近；BTO(溶液法+纳米压印/综述)、AlN(退火增强EO)、铁电向列液晶/有机 SOH 均有进展。但没有一个在 2026 H2 达到 PZT 8 英寸或 MTP-TFLN 200 mm 那种'全晶圆量产级'公开演示 | BaTiO3(BTO)综述（NUS/NJU，arXiv:2609.16616）：超大 Pockels 系数、低光损、兼容异质集成；外延生长/晶向控制/畴工程/可 | [来源](https://arxiv.org/html/2609.16616) |
+| 109 | P5 新型电光材料晶圆级集成 | 2026 H2 确有新体系活跃：钽酸锂(TFLT, 460 Gbit/s, 2026-11)最强并正向晶圆级靠近；BTO(溶液法+纳米压印/综述)、AlN(退火增强EO)、铁电向列液晶/有机 SOH 均有进展。但没有一个在 2026 H2 达到 PZT 8 英寸或 MTP-TFLN 200 mm 那种'全晶圆量产级'公开演示 | 溶液法 BaTiO3 单片 EO 调制器（软纳米压印，ECIO 2026 M1A.5）与溶液衍生 BTO 波导（arXiv:2601.14938）——低成本可规 | [来源](https://opg.optica.org/abstract.cfm?uri=ECIO-2026-M1A.5) |
+| 110 | P5 新型电光材料晶圆级集成 | 2026 H2 确有新体系活跃：钽酸锂(TFLT, 460 Gbit/s, 2026-11)最强并正向晶圆级靠近；BTO(溶液法+纳米压印/综述)、AlN(退火增强EO)、铁电向列液晶/有机 SOH 均有进展。但没有一个在 2026 H2 达到 PZT 8 英寸或 MTP-TFLN 200 mm 那种'全晶圆量产级'公开演示 | AlN/AlNOI 靠高温退火增强 EO（2026-04-27）；有机 SOH 与铁电向列液晶-on-Si 在代工工艺推进（见 G5）——新体系活跃但未达 PZ | [来源](https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349) |
+| 111 | P6 硅光健康监测临床验证 | 确认未覆盖：未发现 SPADE/剑桥光谱/InnoPIC 任一路线的 >100 例或多中心人体临床样本；实际公开样本为健康志愿者小队列、n=1 追踪、概念阶段。P6 以'人体大规模临床证据缺失'为核心研究空间的立论成立。 | SPADE 论文本体仅在健康志愿者前臂做器件级验证（原文：&#x27;tested on the distal forearm of healthy volunteers | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC13680363/) |
+| 112 | P6 硅光健康监测临床验证 | 确认未覆盖：未发现 SPADE/剑桥光谱/InnoPIC 任一路线的 >100 例或多中心人体临床样本；实际公开样本为健康志愿者小队列、n=1 追踪、概念阶段。P6 以'人体大规模临床证据缺失'为核心研究空间的立论成立。 | 剑桥卷积光谱仪（Nature Photonics，2026-04-15）血糖部分为模拟生理环境 + 单名受试者长期追踪（n=1），无大规模人体临床；Scienc | [来源](https://www.nature.com/articles/s41566-026-01891-6) |
+| 113 | P6 硅光健康监测临床验证 | 确认未覆盖：未发现 SPADE/剑桥光谱/InnoPIC 任一路线的 >100 例或多中心人体临床样本；实际公开样本为健康志愿者小队列、n=1 追踪、概念阶段。P6 以'人体大规模临床证据缺失'为核心研究空间的立论成立。 | InnoPIC（SiN PIC+拉曼+SPAD+AI 无创连续血糖）仍为竞赛孵化/概念阶段，未见 2026 下半年任何临床或产品里程碑。 | [来源](https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical) |
+| 114 | P6 硅光健康监测临床验证 | 确认未覆盖：未发现 SPADE/剑桥光谱/InnoPIC 任一路线的 >100 例或多中心人体临床样本；实际公开样本为健康志愿者小队列、n=1 追踪、概念阶段。P6 以'人体大规模临床证据缺失'为核心研究空间的立论成立。 | 相邻路线参照：Happy Ring 无袖带血压 510(k) 临床为 85 例（见 Gap4），仍 &lt;100 例；未改变本缺口结论。 | [来源](https://fda.innolitics.com/device/K254000) |
+| 115 | P6 硅光健康监测临床验证 | 已补：立项书标注'未覆盖'的无创血糖上市时间表有实质进展——NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市；FDA 侧 2026 下半年为 De Novo/510(k) 的 CGM 类进展。须严格区分'纯光学无创'与'经皮/无针 CGM'。 | NMPA 已批准乐普医疗指环式无创血糖仪（NeoGlu 01 / GluRing）上市，为公司公告的国内首款&#x27;无创+连续监测&#x27;三类医疗器械；注册证编号 国械注准 | [来源](http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=10526383&stockid=300003) |
+| 116 | P6 硅光健康监测临床验证 | 已补：立项书标注'未覆盖'的无创血糖上市时间表有实质进展——NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市；FDA 侧 2026 下半年为 De Novo/510(k) 的 CGM 类进展。须严格区分'纯光学无创'与'经皮/无针 CGM'。 | 中国医药报/每经网证实该指环式无创血糖仪 2026-06 获国家药监局批准，2026-08-06 京东首发上市；国内此前至少 2 款无创血糖仪取得三类证（博邦芳 | [来源](https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html) |
+| 117 | P6 硅光健康监测临床验证 | 已补：立项书标注'未覆盖'的无创血糖上市时间表有实质进展——NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市；FDA 侧 2026 下半年为 De Novo/510(k) 的 CGM 类进展。须严格区分'纯光学无创'与'经皮/无针 CGM'。 | FDA 端 2026-08-25 以 De Novo 授权 Abbott Libre Duo 10 Day（首个连续双葡萄糖-酮体可穿戴，2岁+）。 | [来源](http://fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar) |
+| 118 | P6 硅光健康监测临床验证 | 已补：立项书标注'未覆盖'的无创血糖上市时间表有实质进展——NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市；FDA 侧 2026 下半年为 De Novo/510(k) 的 CGM 类进展。须严格区分'纯光学无创'与'经皮/无针 CGM'。 | FDA 2026-09-24 授予 Biolinq Shine 510(k) OTC 无针 CGM（22岁+，前臂经皮/皮内微针阵列）。注意：上述 FDA 产品 | [来源](https://healio.com/news/endocrinology/20261002/fda-grants-510k-clearance-for-otc-sale-of-needlefree-cgm) |
+| 119 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到'硅光健康监测芯片'这一独立品类的权威市场规模数据；公开的只有整硅光/硅光传感器/生物光子学的 umbrella 或相邻口径，且各家数值差异巨大（2030/2032 预测从 5.87B 到 16.85B 不等），不可直接相减或充当独立规模。 | 广义硅光市场有多家口径（不可直接比较）：MarketsandMarkets USD 2.16B(2024)→9.65B(2030)、CAGR 29.5%；Res | [来源](https://marketsandmarkets.com/Market-Reports/silicon-photonics-116.html) |
+| 120 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到'硅光健康监测芯片'这一独立品类的权威市场规模数据；公开的只有整硅光/硅光传感器/生物光子学的 umbrella 或相邻口径，且各家数值差异巨大（2030/2032 预测从 5.87B 到 16.85B 不等），不可直接相减或充当独立规模。 | 相邻细分：硅光 IC 传感器市场 USD 1.4B(2025)→7.2B(2034)、CAGR 19%（marketintelo）；硅光成像系统市场 USD 1 | [来源](https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market) |
+| 121 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到'硅光健康监测芯片'这一独立品类的权威市场规模数据；公开的只有整硅光/硅光传感器/生物光子学的 umbrella 或相邻口径，且各家数值差异巨大（2030/2032 预测从 5.87B 到 16.85B 不等），不可直接相减或充当独立规模。 | 立项书原引用的生物光子学整体市场 USD 130.6B(2032)（ResearchAndMarkets, 2026-11-03）为 umbrella 口径，涵 | [来源](https://finance.yahoo.com/news/biophotonics-global-strategic-business-report-144500628.html) |
+| 122 | P6 硅光健康监测临床验证 | 已补并纠正：编号 K254000 属实，且 FDA 原始数据库给出完整临床数据（85 例/850 次/动脉内金标准）。立项书'编号待核'的反面教材应升级为'编号已核=K254000，且批准范围窄于宣传'——它不再是'无法核验'，而是'核验后发现证据边界清晰'。 | 核验成功：编号 K254000， trade name &#x27;Happy Health Blood Pressure Monitor&#x27;，申请人 Happy Heal | [来源](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000) |
+| 123 | P6 硅光健康监测临床验证 | 已补并纠正：编号 K254000 属实，且 FDA 原始数据库给出完整临床数据（85 例/850 次/动脉内金标准）。立项书'编号待核'的反面教材应升级为'编号已核=K254000，且批准范围窄于宣传'——它不再是'无法核验'，而是'核验后发现证据边界清晰'。 | 510(k) 摘要全文：临床按 ISO 81060-2:2018+A1+A2，85 名受试者（无剔除）、850 次测定，全部用有创动脉内压对照；criterio | [来源](https://fda.innolitics.com/device/K254000) |
+| 124 | P6 硅光健康监测临床验证 | 已补并纠正：编号 K254000 属实，且 FDA 原始数据库给出完整临床数据（85 例/850 次/动脉内金标准）。立项书'编号待核'的反面教材应升级为'编号已核=K254000，且批准范围窄于宣传'——它不再是'无法核验'，而是'核验后发现证据边界清晰'。 | 独立分析指出口号与批准范围有落差：实际批准范围为软件点测、测量显示、不做诊断，且禁用于运动/低灌注——&#x27;首款无袖带免校准持续被动血压&#x27;的营销措辞被 FDA 记录 | [来源](https://sahha.ai/blog/fda-cleared-vs-approved-wearables) |
+| 125 | P6 硅光健康监测临床验证 | 已核边界：突破性设备认定（2026-09-04）≠上市批准。现有临床证据仅 10 例单中心安全性 pilot；美国正式临床拟 2027 年中启动（视 FDA 反馈），无任何获批。立项书'认定只是通道资格、仍处认定与试验通道阶段'的表述准确，应保留并补上 10 例 pilot 与 2027 时间表。 | FDA 于 2026-09-04 授予 Neola® 突破性设备认定（用于早产儿无创连续肺监测、支持及时检测气胸/肺塌陷）。公司明确措辞为&#x27;strengthen | [来源](https://neolamedical.com/mfn_news/neola-medical-receives-fda-breakthrough-device-designation) |
+| 126 | P6 硅光健康监测临床验证 | 已核边界：突破性设备认定（2026-09-04）≠上市批准。现有临床证据仅 10 例单中心安全性 pilot；美国正式临床拟 2027 年中启动（视 FDA 反馈），无任何获批。立项书'认定只是通道资格、仍处认定与试验通道阶段'的表述准确，应保留并补上 10 例 pilot 与 2027 时间表。 | 首个临床 pilot 研究结果（2026-04-21 公布）：仅 10 名早产儿（胎龄≥28周、体重1000–3000g），单中心（瑞典 Borås 的 Söd | [来源](https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development) |
+| 127 | P6 硅光健康监测临床验证 | 已核边界：突破性设备认定（2026-09-04）≠上市批准。现有临床证据仅 10 例单中心安全性 pilot；美国正式临床拟 2027 年中启动（视 FDA 反馈），无任何获批。立项书'认定只是通道资格、仍处认定与试验通道阶段'的表述准确，应保留并补上 10 例 pilot 与 2027 时间表。 | 公司计划就临床与监管策略与 FDA 沟通，&#x27;在监管反馈的前提下&#x27;拟于 2027 年中在美国启动早产儿临床研究——说明美国正式临床尚未启动、更无 PMA/510( | [来源](https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development) |
+| 128 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究。现有最强证据仍是 NEO-BP 的 42 例新生儿单中心回顾性亚组分析；新增的 Sensors 2026 为探索性研究，rPPG 的肤色退化提示问题普遍存在。立项书'跨人群泛化尚未验证'的判断成立。 | NEO-BP 原文（Adv Sci 2026-07-27，DOI 10.1002/advs.76775）：42 名新生儿、9378 片段、G+R+IR 模型 M | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542) |
+| 129 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究。现有最强证据仍是 NEO-BP 的 42 例新生儿单中心回顾性亚组分析；新增的 Sensors 2026 为探索性研究，rPPG 的肤色退化提示问题普遍存在。立项书'跨人群泛化尚未验证'的判断成立。 | 新增相关研究：&#x27;Multi-Wavelength PPG Amplitude Ratio Features for Cuffless Blood Pressur | [来源](https://pubmed.ncbi.nlm.nih.gov/43029695) |
+| 130 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究。现有最强证据仍是 NEO-BP 的 42 例新生儿单中心回顾性亚组分析；新增的 Sensors 2026 为探索性研究，rPPG 的肤色退化提示问题普遍存在。立项书'跨人群泛化尚未验证'的判断成立。 | 跨肤色泛化的旁证来自 rPPG 领域：性能&#x27;degrades systematically across skin tones&#x27;，在头动/光照变化/非实验室条件 | [来源](https://pmc.ncbi.nlm.nih.gov/articles/PMC13372377) |
+| 131 | P6 硅光健康监测临床验证 | 确认未覆盖：未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究。现有最强证据仍是 NEO-BP 的 42 例新生儿单中心回顾性亚组分析；新增的 Sensors 2026 为探索性研究，rPPG 的肤色退化提示问题普遍存在。立项书'跨人群泛化尚未验证'的判断成立。 | 综述性证据：npj Digital Medicine &#x27;Towards trustworthy AI-driven cuffless blood pressur | [来源](https://nature.com/articles/s41746-026-02898-7) |
+
+
+## 来源分区
+以下为全部唯一来源（方括号外链标记后紧跟 URL）：
+
+1. [外]（出处：https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf）https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf
+
+2. [外]（出处：https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html）https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html
+
+3. [外]（出处：https://photondelta.com/blog/what-is-the-yield-rate-for-photonic-chip-manufacturing）https://photondelta.com/blog/what-is-the-yield-rate-for-photonic-chip-manufacturing
+
+4. [外]（出处：https://trendforce.com/presscenter/news/20260727-13151.html）https://trendforce.com/presscenter/news/20260727-13151.html
+
+5. [外]（出处：https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide）https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide
+
+6. [外]（出处：https://www.molex.com/en-us/blog/co-packaged-optics-vs-pluggable）https://www.molex.com/en-us/blog/co-packaged-optics-vs-pluggable
+
+7. [外]（出处：https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling）https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling
+
+8. [外]（出处：https://news.futunn.com/en/post/74584585/will-the-race-for-next-generation-optical-modules-avoid-a）https://news.futunn.com/en/post/74584585/will-the-race-for-next-generation-optical-modules-avoid-a
+
+9. [外]（出处：https://www.hyc-system.com/news/Industry/7178.html）https://www.hyc-system.com/news/Industry/7178.html
+
+10. [外]（出处：https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one）https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one
+
+11. [外]（出处：https://www.laserfocusworld.com/directory/fiber-optic-optoelectronic-components-equipment-systems/automatic-alignment-systems-fiber-optic/press-release/55389004/pi-americas-physik-instrumente-fau-alignment-faster-cost-optimized）https://www.laserfocusworld.com/directory/fiber-optic-optoelectronic-components-equipment-systems/automatic-alignment-systems-fiber-optic/press-release/55389004/pi-americas-physik-instrumente-fau-alignment-faster-cost-optimized
+
+12. [外]（出处：https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html）https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html
+
+13. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC5445873）https://pmc.ncbi.nlm.nih.gov/articles/PMC5445873
+
+14. [外]（出处：https://doi.org/10.1109/jstqe.2022.3223641）https://doi.org/10.1109/jstqe.2022.3223641
+
+15. [外]（出处：https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf）https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf
+
+16. [外]（出处：https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate）https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate
+
+17. [外]（出处：https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit）https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit
+
+18. [外]（出处：https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput）https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput
+
+19. [外]（出处：https://www.jenoptik.com/-/media/websitedocuments/optics/microoptics/presentation-webinar-ufo-probe.pdf）https://www.jenoptik.com/-/media/websitedocuments/optics/microoptics/presentation-webinar-ufo-probe.pdf
+
+20. [外]（出处：https://trendforce.com/presscenter/news/20251208-12823.html）https://trendforce.com/presscenter/news/20251208-12823.html
+
+21. [外]（出处：https://www.tmtpost.com/8090088.html）https://www.tmtpost.com/8090088.html
+
+22. [外]（出处：https://doi.org/10.1117/12.3123229）https://doi.org/10.1117/12.3123229
+
+23. [外]（出处：https://doi.org/10.1109/icept71373.2026.11690061）https://doi.org/10.1109/icept71373.2026.11690061
+
+24. [外]（出处：https://doi.org/10.3390/electronics10222734）https://doi.org/10.3390/electronics10222734
+
+25. [外]（出处：https://doi.org/10.1016/j.microrel.2018.06.058）https://doi.org/10.1016/j.microrel.2018.06.058
+
+26. [外]（出处：https://www.ctee.com.tw/news/20260708700075-439901）https://www.ctee.com.tw/news/20260708700075-439901
+
+27. [外]（出处：https://www.trendforce.com/news/2026/07/08/news-tsmc-pic-capacity-seen-surging-to-25k-wafersmonth-by-2028-nvidia-broadcom-eyed-as-early-coupe-customers）https://www.trendforce.com/news/2026/07/08/news-tsmc-pic-capacity-seen-surging-to-25k-wafersmonth-by-2028-nvidia-broadcom-eyed-as-early-coupe-customers
+
+28. [外]（出处：https://doi.org/10.1117/12.3043449）https://doi.org/10.1117/12.3043449
+
+29. [外]（出处：https://www.researching.cn/ArticlePdf/m00001/2025/52/16/1603014.pdf）https://www.researching.cn/ArticlePdf/m00001/2025/52/16/1603014.pdf
+
+30. [外]（出处：https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377）https://www.lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377
+
+31. [外]（出处：https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance）https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance
+
+32. [外]（出处：https://www.viksnewsletter.com/p/why-cpo-uses-external-lasers）https://www.viksnewsletter.com/p/why-cpo-uses-external-lasers
+
+33. [外]（出处：https://oiforum.com/wp-content/uploads/OIF-Co-Packaging-FD-01.0.pdf）https://oiforum.com/wp-content/uploads/OIF-Co-Packaging-FD-01.0.pdf
+
+34. [外]（出处：https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf）https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf
+
+35. [外]（出处：https://doi.org/10.1126/science.adl1203）https://doi.org/10.1126/science.adl1203
+
+36. [外]（出处：https://www.tsinghua.edu.cn/info/1175/110690.htm）https://www.tsinghua.edu.cn/info/1175/110690.htm
+
+37. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/）https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/
+
+38. [外]（出处：https://www.researching.cn/ArticlePdf/m00098/2026/47/6/060401.pdf）https://www.researching.cn/ArticlePdf/m00098/2026/47/6/060401.pdf
+
+39. [外]（出处：https://tspasemiconductor.substack.com/p/lightmatter-passage-a-comprehensive）https://tspasemiconductor.substack.com/p/lightmatter-passage-a-comprehensive
+
+40. [外]（出处：https://www.nature.com/articles/s41586-025-08854-x）https://www.nature.com/articles/s41586-025-08854-x
+
+41. [外]（出处：https://lightmatter.com/blog/a-new-kind-of-computer）https://lightmatter.com/blog/a-new-kind-of-computer
+
+42. [外]（出处：https://mirrorfrog.com/lightmatter-envise/）https://mirrorfrog.com/lightmatter-envise/
+
+43. [外]（出处：https://doi.org/10.1126/science.adv7434）https://doi.org/10.1126/science.adv7434
+
+44. [外]（出处：https://baike.baidu.com/item/LightGen/67112849）https://baike.baidu.com/item/LightGen/67112849
+
+45. [外]（出处：https://www.tsinghua.edu.cn/info/1182/128225.htm）https://www.tsinghua.edu.cn/info/1182/128225.htm
+
+46. [外]（出处：https://www.eurekalert.org/news-releases/1109809）https://www.eurekalert.org/news-releases/1109809
+
+47. [外]（出处：https://qant.com/press-releases/higher-performance-less-energy-q-ant-deploys-second-generation-photonic-processors-at-supercomputing-center-lrz）https://qant.com/press-releases/higher-performance-less-energy-q-ant-deploys-second-generation-photonic-processors-at-supercomputing-center-lrz
+
+48. [外]（出处：https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges）https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges
+
+49. [外]（出处：https://qant.com/wp-content/uploads/2025/11/20251111_QANT-Photonic-AI-Accelerator-Gen-2.pdf）https://qant.com/wp-content/uploads/2025/11/20251111_QANT-Photonic-AI-Accelerator-Gen-2.pdf
+
+50. [外]（出处：https://www.lrz.de/en/news/detail/photonic-computers-in-real-world-test）https://www.lrz.de/en/news/detail/photonic-computers-in-real-world-test
+
+51. [外]（出处：https://finance.ifeng.com/c/8sKMERSrEQR）https://finance.ifeng.com/c/8sKMERSrEQR
+
+52. [外]（出处：https://m.36kr.com/p/3785865036111108）https://m.36kr.com/p/3785865036111108
+
+53. [外]（出处：https://www.huxiu.com/article/4850630.html）https://www.huxiu.com/article/4850630.html
+
+54. [外]（出处：https://www.xztech.ai/community/papers/3）https://www.xztech.ai/community/papers/3
+
+55. [外]（出处：https://standards.ieee.org/ieee/1959/11831/）https://standards.ieee.org/ieee/1959/11831/
+
+56. [外]（出处：https://standards.ieee.org/ieee/1960/11832/）https://standards.ieee.org/ieee/1960/11832/
+
+57. [外]（出处：https://doi.org/10.1038/s41565-026-02264-4）https://doi.org/10.1038/s41565-026-02264-4
+
+58. [外]（出处：https://arxiv.org/abs/2604.10841）https://arxiv.org/abs/2604.10841
+
+59. [外]（出处：https://www.caict.ac.cn/kxyj/qwfb/ztbg/202311/P020231122389415230856.pdf）https://www.caict.ac.cn/kxyj/qwfb/ztbg/202311/P020231122389415230856.pdf
+
+60. [外]（出处：https://www.oiforum.com/wp-content/uploads/OIF-EEI-COI-WP-01.0.pdf）https://www.oiforum.com/wp-content/uploads/OIF-EEI-COI-WP-01.0.pdf
+
+61. [外]（出处：https://www.nature.com/articles/s41598-026-78977-2）https://www.nature.com/articles/s41598-026-78977-2
+
+62. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC12152600）https://pmc.ncbi.nlm.nih.gov/articles/PMC12152600
+
+63. [外]（出处：https://arxiv.org/abs/2610.05021）https://arxiv.org/abs/2610.05021
+
+64. [外]（出处：https://arxiv.org/abs/2611.08127）https://arxiv.org/abs/2611.08127
+
+65. [外]（出处：https://arxiv.org/abs/2609.13460）https://arxiv.org/abs/2609.13460
+
+66. [外]（出处：https://caict.ac.cn/kxyj/qwfb/bps/index_1.htm）https://caict.ac.cn/kxyj/qwfb/bps/index_1.htm
+
+67. [外]（出处：https://m.c114.com.cn/w5472-1302264.html）https://m.c114.com.cn/w5472-1302264.html
+
+68. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC12577674/）https://pmc.ncbi.nlm.nih.gov/articles/PMC12577674/
+
+69. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC12717938/）https://pmc.ncbi.nlm.nih.gov/articles/PMC12717938/
+
+70. [外]（出处：https://www.nature.com/articles/s41467-026-79721-0）https://www.nature.com/articles/s41467-026-79721-0
+
+71. [外]（出处：https://newtqnia.com/en/news/360-an-8-inch-pzt-photonics-platform-reaches-32-tbps-across-16-channels）https://newtqnia.com/en/news/360-an-8-inch-pzt-photonics-platform-reaches-32-tbps-across-16-channels
+
+72. [外]（出处：https://arxiv.org/html/2605.28971）https://arxiv.org/html/2605.28971
+
+73. [外]（出处：https://arxiv.org/html/2605.28765）https://arxiv.org/html/2605.28765
+
+74. [外]（出处：https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-61536-0/MediaObjects/41467_2025_61536_MOESM1_ESM.pdf）https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-61536-0/MediaObjects/41467_2025_61536_MOESM1_ESM.pdf
+
+75. [外]（出处：https://arxiv.org/html/2007.06498）https://arxiv.org/html/2007.06498
+
+76. [外]（出处：https://www.eet-china.com/mp/a440906.html）https://www.eet-china.com/mp/a440906.html
+
+77. [外]（出处：https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1）https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1
+
+78. [外]（出处：https://www.ciena.com/about/newsroom/press-releases/ciena-hyperlight-and-mcgill-university-achieve-first-3.2tbs-448gbs-per-lane-imdd-2km-transmission）https://www.ciena.com/about/newsroom/press-releases/ciena-hyperlight-and-mcgill-university-achieve-first-3.2tbs-448gbs-per-lane-imdd-2km-transmission
+
+79. [外]（出处：https://www.businesswire.com/news/home/20260312319685/en/HyperLight-Introduces-145-GHz-Reference-Modulators-to-Enable-448Gbps-per-Lane-Datacom-and-260GBaud-Telecom-Development）https://www.businesswire.com/news/home/20260312319685/en/HyperLight-Introduces-145-GHz-Reference-Modulators-to-Enable-448Gbps-per-Lane-Datacom-and-260GBaud-Telecom-Development
+
+80. [外]（出处：https://zhuanlan.zhihu.com/p/2096186564032336971）https://zhuanlan.zhihu.com/p/2096186564032336971
+
+81. [外]（出处：https://www.simpletechtrend.com/en/post/ofc2026-tfln-scaling-1-6t-deployment-analysis-en）https://www.simpletechtrend.com/en/post/ofc2026-tfln-scaling-1-6t-deployment-analysis-en
+
+82. [外]（出处：https://www.nature.com/articles/s41467-026-78128-1）https://www.nature.com/articles/s41467-026-78128-1
+
+83. [外]（出处：https://arxiv.org/html/2510.25530）https://arxiv.org/html/2510.25530
+
+84. [外]（出处：https://www.nature.com/articles/s41467-025-67826-x）https://www.nature.com/articles/s41467-025-67826-x
+
+85. [外]（出处：https://pubmed.ncbi.nlm.nih.gov/42071730）https://pubmed.ncbi.nlm.nih.gov/42071730
+
+86. [外]（出处：https://doi.org/10.1364/ol.614071）https://doi.org/10.1364/ol.614071
+
+87. [外]（出处：https://arxiv.org/html/2602.20406v1）https://arxiv.org/html/2602.20406v1
+
+88. [外]（出处：https://photonics.intec.ugent.be/download/pub_5537.pdf）https://photonics.intec.ugent.be/download/pub_5537.pdf
+
+89. [外]（出处：https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries）https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries
+
+90. [外]（出处：https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349）https://opg.optica.org/ome/abstract.cfm?doi=10.1364/OME.596349
+
+91. [外]（出处：https://arxiv.org/pdf/2607.17436）https://arxiv.org/pdf/2607.17436
+
+92. [外]（出处：https://arxiv.org/html/2609.16616）https://arxiv.org/html/2609.16616
+
+93. [外]（出处：https://opg.optica.org/abstract.cfm?uri=ECIO-2026-M1A.5）https://opg.optica.org/abstract.cfm?uri=ECIO-2026-M1A.5
+
+94. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13680363/）https://pmc.ncbi.nlm.nih.gov/articles/PMC13680363/
+
+95. [外]（出处：https://www.nature.com/articles/s41566-026-01891-6）https://www.nature.com/articles/s41566-026-01891-6
+
+96. [外]（出处：https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical）https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical
+
+97. [外]（出处：https://fda.innolitics.com/device/K254000）https://fda.innolitics.com/device/K254000
+
+98. [外]（出处：http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=10526383&stockid=300003）http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=10526383&stockid=300003
+
+99. [外]（出处：https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html）https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html
+
+100. [外]（出处：http://fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar）http://fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar
+
+101. [外]（出处：https://healio.com/news/endocrinology/20261002/fda-grants-510k-clearance-for-otc-sale-of-needlefree-cgm）https://healio.com/news/endocrinology/20261002/fda-grants-510k-clearance-for-otc-sale-of-needlefree-cgm
+
+102. [外]（出处：https://marketsandmarkets.com/Market-Reports/silicon-photonics-116.html）https://marketsandmarkets.com/Market-Reports/silicon-photonics-116.html
+
+103. [外]（出处：https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market）https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market
+
+104. [外]（出处：https://finance.yahoo.com/news/biophotonics-global-strategic-business-report-144500628.html）https://finance.yahoo.com/news/biophotonics-global-strategic-business-report-144500628.html
+
+105. [外]（出处：https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000）https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000
+
+106. [外]（出处：https://sahha.ai/blog/fda-cleared-vs-approved-wearables）https://sahha.ai/blog/fda-cleared-vs-approved-wearables
+
+107. [外]（出处：https://neolamedical.com/mfn_news/neola-medical-receives-fda-breakthrough-device-designation）https://neolamedical.com/mfn_news/neola-medical-receives-fda-breakthrough-device-designation
+
+108. [外]（出处：https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development）https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development
+
+109. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542）https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542
+
+110. [外]（出处：https://pubmed.ncbi.nlm.nih.gov/43029695）https://pubmed.ncbi.nlm.nih.gov/43029695
+
+111. [外]（出处：https://pmc.ncbi.nlm.nih.gov/articles/PMC13372377）https://pmc.ncbi.nlm.nih.gov/articles/PMC13372377
+
+112. [外]（出处：https://nature.com/articles/s41746-026-02898-7）https://nature.com/articles/s41746-026-02898-7
+

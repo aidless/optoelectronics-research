@@ -1,0 +1,77 @@
+{
+  "direction": "生物医学光子学与硅光健康监测",
+  "definition": "该赛道把光的产生、操控、探测与生物组织相互作用用于疾病诊断、治疗和生理监测，涵盖光学相干断层成像（OCT）、荧光/光声成像、光动力治疗（PDT）、光谱与拉曼检测等。硅光健康监测是其在可穿戴与植入场景的分支：用波导、微环/布拉格光栅、干涉仪、SPAD 等集成器件把激光发射、组织光学采样与弱信号探测压缩到芯片级，实现血压、血糖、血氧等指标的连续无袖带/无创测量。产业形态一端是医院与药械结合的高端光学诊疗设备，另一端是消费级与医用级可穿戴光学传感器。",
+  "tech_core": "成像侧利用低相干干涉（OCT）、组织自发/外源荧光和光声效应（脉冲光激发→超声回波）获得微米级断层与功能信息；光声的‘光激发-声探测’关系使血管直径等血压直接相关量可被测量。治疗侧以光敏剂+特定波长光产生活性氧杀伤病变组织（PDT），并向荧光导航、诊疗一体化扩展。硅光侧采用硅/氮化硅波导与谐振腔：SPADE 用硅光声学探测器在 100 Hz 读取桡动脉光声信号，噪声等效压力约 2 mPa/√Hz、−6 dB 带宽 125 MHz；无创血糖方向则探索 SiN 低荧光平台上的拉曼光谱 + 单光子雪崩二极管（SPAD）+ AI 降噪反演。多波长 PPG + 深度学习与误差分层是新生儿连续血压的落地路线。",
+  "status_2025_2026": "市场数据：MRFR 统计 2025 年全球生物光子学市场 643 亿美元，预计 2035 年 1608.1 亿美元、CAGR 9.6%（https://www.marketresearchfuture.com/reports/biophotonics-market-11550，2026-10-27）；Mordor Intelligence 估计 2026 年 757.4 亿美元，激光类产品占 2025 年 35.88%，成像系统 2031 年前 CAGR 11.23%，亚太增速 10.96%（https://www.mordorintelligence.com/industry-reports/biophotonics-market，2026-09）。OCT 细分 2025 年约 25 亿美元、2033 年 85 亿美元（CAGR 16.5%），眼科占 53.7%（https://www.grandviewresearch.com/industry-analysis/optical-coherence-tomography-oct-market，未标注）。厂商实绩：卡尔蔡司医疗 FY2024/25 营收 22.28 亿欧元（+7.8%），眼科板块 17.24 亿欧元（+8.5%）（https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2025/annual-report.html，2025-12-11）。中国 PDT：产业规模每年约数十亿元，业内预计未来五年 CAGR 不低于 20%（财联社，https://www.cls.cn/detail/2058888，2025-06-16）；复旦张江 2025 年报称其拥有盐酸氨酮戊酸、海姆泊芬等光敏化合物，艾拉®与复美达®已在中国上市（https://www.cnpharm.com/upload/resources/file/2026/03/31/186943.pdf，2026-03）。技术里程碑：2026-09-17 Nature Communications 报道以色列理工单探测元硅光光声血压传感器；2026-09-22 上海交大公布 42 名新生儿、110.66 小时同步有创血压数据的柔性多波长 PPG 连续血压验证。消费端 Apple 无创血糖仍处研发阶段，报道称‘距离产品化还有多年’（MacRumors，2025-03-31）。⚠ 公开资料未覆盖：无创血糖/无袖带血压可穿戴设备的已上市出货量与销售额、硅光健康监测芯片的独立市场规模。",
+  "key_players": [
+    "Carl Zeiss Meditec（眼科 OCT/眼科光学诊断，FY2024/25 眼科营收 €1,724m）",
+    "Abbott（OCT 成像平台与连续血糖监测 CGM 双线布局）",
+    "Thermo Fisher Scientific / Hamamatsu Photonics / Olympus（荧光显微、探测器与内窥成像供应链）",
+    "复旦张江（688505.SH，艾拉®、复美达®光敏剂与光动力治疗系统）",
+    "Technion — Israel Institute of Technology（Amir Rosenthal 团队，SPADE 硅光光声血压传感器，Nature Communications 2026）",
+    "上海交通大学集成电路学院王国兴/陈诚团队 + 上海儿童医学中心（柔性多波长 PPG 新生儿无创连续血压，Advanced Science 2026）",
+    "InnoPIC / PhotonDelta / AIM Photonics / IMEC（SiN 拉曼无创 CGM 概念与硅光 PIC 代工平台）",
+    "Sun Pharmaceutical（BLU-U® 蓝光 PDT 照射器，2025 年获 FDA 批准新适应症设备）"
+  ],
+  "employment_roles": [
+    "生物医学光学/光子学研发工程师（OCT、荧光、光声系统光路与信号链设计）",
+    "硅光/光电集成工程师（SiN 与 SOI 波导、微环与光栅耦合器、封装与耦合）",
+    "光电器件与弱信号探测工程师（SPAD/APD/TIA、锁相与光谱降噪）",
+    "医学影像算法与 AI 工程师（OCT 重建、拉曼/PPG 反演、误差分层与可信度评估）",
+    "临床验证与法规事务专员（医疗器械临床评价、FDA/NMPA 注册、ISO 13485）",
+    "光敏剂/光动力药物研发与医学物理师（剂量学、光剂量与疗效评估）"
+  ],
+  "skills": [
+    "光学：干涉测量与低相干成像、荧光/拉曼光谱、光声激发与超声换能",
+    "集成光子学：硅/氮化硅波导设计、微环与布拉格光栅传感、PDK 与流片（AIM Photonics/IMEC）",
+    "弱信号电子学：SPAD/APD 读出、跨阻放大、锁相检测、时钟同步与 100 Hz 级实时采样",
+    "算法：光谱预处理、1D-EfficientNet/深度学习回归、运动伪影抑制、信号质量指数（SQI）与误差分层",
+    "医疗系统：光功率与皮肤热安全、生物相容封装、BLE 低功耗无线、临床金标准对照设计",
+    "药械组合：光敏剂药理与光剂量学、荧光导航、PDT 适应症与注册路径",
+    "工具链：Python/C++、MATLAB/Zemax/Lumerical、COMSOL 光-热-声多物理仿真、LabVIEW"
+  ],
+  "future_outlook": "未来 3–5 年三条主线并行：①OCT/荧光光声从眼科和皮肤扩展到术中导航、心血管与肿瘤早筛，GVR 预测 OCT 2026–2033 年 CAGR 16.5%；②PDT 在中国以≥20% 增速扩张适应症，药械联合与免疫联合疗法成为价值增量；③硅光把血压/血糖监测从实验室推向腕戴与 NICU：单元件光声传感器以对准容差（±10 mm 平移、30° 偏航）解决可穿戴一致性痛点，多波长 PPG 通过 SQI≥0.85 将新生儿 SBP/DBP MAE 降至 8.22/4.98 mmHg。真正商业化仍取决于临床级校准、跨人群泛化、低功耗封装与监管审批；无创血糖是最具想象空间但确定性最低的方向（Apple 项目仍被报道为多年期）。",
+  "risks": "技术风险：无创光学测量受肤色、脂肪厚度、灌注、运动伪影和温度影响，PPG 血压在高运动组误差升至 14.23/11.08 mmHg，模型跨人群泛化不足；拉曼血糖信号极弱，需高灵敏 SPAD 与 AI，临床级精度尚未公开验证。监管风险：无创血糖/无袖带血压属于高审评门槛器械，需前瞻性临床与持续校准；PDT 涉及药械组合审批与适应症扩展。商业风险：市场预测口径分歧大（生物光子学 2025 年 643 亿 vs 2026 年 757 亿美元，不同机构区间不可直接比较），硅光产能与封装成本、医疗支付与报销路径未定。数据与隐私风险：连续生理波形属敏感健康数据。⚠ 公开资料未覆盖：SPADE 与 InnoPIC 的人体大规模临床样本数、无创血糖产品上市时间表。",
+  "key_claims": [
+    {
+      "claim": "MRFR：2025 年全球生物光子学市场规模 643 亿美元，2035 年达 1608.1 亿美元，2026–2035 CAGR 9.6%；激光占 2025 年产品份额 33.6%，医学诊断占应用份额 51.8%。",
+      "url": "https://www.marketresearchfuture.com/reports/biophotonics-market-11550",
+      "date": "2026-10-27"
+    },
+    {
+      "claim": "Mordor Intelligence：2026 年全球生物光子学市场 757.4 亿美元；激光占 2025 年份额 35.88%，成像系统 2031 年前 CAGR 11.23%，亚太为增速最快区域（10.96% CAGR）。",
+      "url": "https://www.mordorintelligence.com/industry-reports/biophotonics-market",
+      "date": "2026-09"
+    },
+    {
+      "claim": "Grand View Research：OCT 市场 2025 年 25 亿美元、2026 年 29 亿美元、2033 年 85 亿美元（CAGR 16.5%）；2025 年眼科应用占 53.7%、FD-OCT 占 38.0%、手持设备占 47.2%。",
+      "url": "https://www.grandviewresearch.com/industry-analysis/optical-coherence-tomography-oct-market",
+      "date": "未标注"
+    },
+    {
+      "claim": "卡尔蔡司医疗 FY2024/25 营收 22.28 亿欧元、同比 +7.8%，其中眼科业务 17.24 亿欧元、+8.5%，订单额 22.88 亿欧元、+18.2%（公司年报新闻稿）。",
+      "url": "https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2025/annual-report.html",
+      "date": "2025-12-11"
+    },
+    {
+      "claim": "财联社 IPA 2025 大会报道：中国为全球光动力技术临床应用最大增量市场，每年产业规模约数十亿元，未来 5 年 CAGR 预计不低于 20%；复旦张江艾拉®/复美达®已惠及近百万人次患者。",
+      "url": "https://www.cls.cn/detail/2058888",
+      "date": "2025-06-16"
+    },
+    {
+      "claim": "Nature Communications（卷 17，文章 10931）：硅光光声传感器 SPADE 以单探测元实现无袖带血压监测，NEP 2 mPa/√Hz、−6 dB 带宽 125 MHz、100 Hz 采样，对 ±10 mm 平移与 30° 偏航保持鲁棒，并与袖带参考血压一致。",
+      "url": "https://www.nature.com/articles/s41467-026-77580-3",
+      "date": "2026-09-17"
+    },
+    {
+      "claim": "上海交大团队在 Advanced Science 报告 8.3 g 无线柔性三波长 PPG 腕带：42 名新生儿、110.66 小时与有创动脉血压同步数据（NEO-BP），9378 个测试片段 SBP/DBP MAE 9.67/6.17 mmHg；红光 SQI≥0.85 时降至 8.22/4.98 mmHg。",
+      "url": "https://news.sjtu.edu.cn/jdzh/20260922/226182.html",
+      "date": "2026-09-22"
+    },
+    {
+      "claim": "PhotonDelta 报道 InnoPIC 无创连续血糖方案：采用 AIM Photonics 氮化硅（SiN）PIC 平台、拉曼光谱、SPAD 单光子探测与 AI 降噪；SiN 的低荧光与近红外透射是选型依据，目前仍属竞赛孵化/概念阶段。",
+      "url": "https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical",
+      "date": "2025-08-26"
+    }
+  ]
+}

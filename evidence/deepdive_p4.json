@@ -1,0 +1,171 @@
+{
+  "direction": "P4 AI逆向设计光子器件",
+  "generated_at": "2026-11-24",
+  "gaps": [
+    {
+      "gap": "G1｜Scientific Reports 2026-11-07 Agentic AI 逆向设计论文：核对原题名/DOI/作者，并查是否存在后续流片实测版本",
+      "queries_tried": [
+        "\"Agentic AI for inverse design in nanophotonics and meta-optics\" Scientific Reports",
+        "s41598-026-78977-2",
+        "agentic AI inverse design metasurface 40.0% 65.2% metagrating 81.2% 94.6%",
+        "Kang Chung agentic AI inverse design metasurface fabrication experimental measurement follow-up 2026",
+        "\"Agentic AI for inverse design\" fabricated measured efficiency metalens",
+        "site:nature.com agentic AI nanophotonics inverse design fabricated device measured",
+        "\"s41598-026-78977-2\" fabrication measured",
+        "\"Agentic AI for inverse design\" Kang Chung fabricated experimental measured device arxiv 2026",
+        "\"Haejun Chung\" agentic inverse design fabrication measured metasurface follow-up",
+        "site:arxiv.org agentic inverse design nanophotonics fabrication experiment Chung 2026"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "原文题名/作者/日期/DOI 全部核实：Agentic AI for inverse design in nanophotonics and meta-optics；作者 Chanik Kang（共同一作）、Jinseong Bae（共同一作）、Munseong Bae、Junseo Han、Hyewon Suk、Jiwoo Kim、Ikbeom Jang、Haejun Chung（通讯）；Sci Rep (2026)；Received 2026-09-20 / Accepted 2026-10-29 / Published 2026-11-07；DOI 10.1038/s41598-026-78977-2。页面自述为 early-access 版本，将来会被最终 Version of Record 自动替换。机构：Hanyang University（AI/电子工程/AI半导体工程）+ Hankuk University of Foreign Studies。",
+          "url": "https://www.nature.com/articles/s41598-026-78977-2",
+          "date": "2026-11-07",
+          "strength": "一手来源（Nature 原页全文深读 + Crossref DOI + web_search/advanced_search 三方交叉印证）"
+        },
+        {
+          "claim": "摘要原句核实立项书全部四项数字：四种 metagrating 策略自同一初始化得 79.4–90.9% 最终衍射效率；按峰值优化目标与按最终二值效率筛选得到不同排序；单独 metagrating 重设计 81.2%→94.6%；二维 metalens 三个可见波长最小聚焦效率相对对称化复现参考 40.0%→65.2%（matched lossless evaluation）；Bayer color router 平均通道路由 50.3%→54.7%（125 nm 最小特征）。工作流评估：5 个可复现性筛查例、7 个文献到仿真案例、5 类求解器错误修复，其中特定求解器检索解决了一个所有独立配置都未解决的接口错误。全部为数值/仿真结果，原文无流片或实测段。",
+          "url": "https://www.nature.com/articles/s41598-026-78977-2",
+          "date": "2026-11-07",
+          "strength": "一手来源（原文 Abstract 逐句）；仿真值，非实测；多引擎搜索摘要同文交叉印证"
+        },
+        {
+          "claim": "两轮检索未找到该论文的任何后续流片实测版本，也未找到其他团队对该框架器件的实测复现；原文方法止于 'separate forward evaluation of binary candidates'（数值前向评估）。",
+          "url": "https://www.nature.com/articles/s41598-026-78977-2",
+          "date": "2026-11-24",
+          "strength": "确认未覆盖（两轮 10 组关键词，仅命中原文本身；单源判断，标未验证）"
+        }
+      ],
+      "verdict": "一手出处已钉死：题名、8 位作者、DOI、日期与四项效率数字均与立项书一致，可把 [1] 升级为'已二次核验'。'后续流片实测版本'确认未覆盖。注意原文为 early-access 版本，定稿前宜复核最终版。",
+      "note": "相邻线索（仅搜索摘要、未深读/未验证）：Chung 组 arXiv:2609.28000《Inverse-Designed Chiral Metasurfaces for Enhanced Helical Dichroism》(2026-09-23) 与 PMC13673514《Neural Adjoint Inverse Design of Three-Dimensional Nanophotonic Devices》(2026-10-16)，均非该 Sci Rep 论文的流片实测后续，不作为补证。"
+    },
+    {
+      "gap": "G2｜智能体逆向设计超表面从仿真效率到流片实测效率的差距：是否有已发表的实测数据（哪怕别的团队）",
+      "queries_tried": [
+        "metasurface inverse design simulation to fabrication measured focusing efficiency gap published 2025 2026",
+        "inverse designed metalens experimental efficiency versus simulated efficiency measured",
+        "adjoint optimized metagrating fabricated measured diffraction efficiency 2026",
+        "machine learning inverse design metasurface experimental verification efficiency"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "已发表的同口径仿真—实测对照（非 LLM/Agent 驱动，但是逆向设计超表面）：objective-first 逆设计 + 双光子聚合 3D 打印的近红外高 NA 消色差 metalens；1510–1610 nm 波段内仿真平均聚焦效率 50.4%、实测平均 50.2%（文中 Discussion 另写实测 50.4%，实测区间 48–54%）；仿真平均 FWHM 1.53 μm vs 实测 1.56 μm；Figure 4B/4C 直接给出 sim-vs-measured 效率与 FWHM 对照，4D/4E 给出焦面强度对照。差距归因：制造容差、玻璃基底、入射光斑大于透镜导致的散射；实验为单次测量、未取平均。器件 NA 0.79、f=19 μm、D=50 μm。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12152600",
+          "date": "2025-05-11",
+          "strength": "一手来源（原文 Results/Experiments/Fig.4 深读）；单篇论文，标未验证（无第二篇独立复现）"
+        },
+        {
+          "claim": "另一篇已实验实现的深度学习大规模自由曲面超表面逆设计：预测光场比所训练电磁求解器快四个数量级以上，实验实现自由曲面 metagrating（衍射角达 75°）及毫米尺度、跨度 >1000 波长、1.6  billion 自由度的自由曲面全息超表面。属'仿真→实测'闭环案例，但摘要未给 sim-vs-measured 效率数字。",
+          "url": "https://arxiv.org/abs/2610.05021",
+          "date": "2026-10-04",
+          "strength": "一手来源（arXiv 摘要页深读）；单源未验证；未给效率对照数值"
+        }
+      ],
+      "verdict": "需分层改写立项书的'公开资料未覆盖'：对 Sci Rep 该智能体框架器件确实未覆盖；但'逆向设计超表面的仿真—实测差距'本身已有公开实测数据（50.4% 仿真 vs 50.2% 实测，差距约 0.2 个百分点，FWHM 1.53 vs 1.56 μm）。不能笼统写未覆盖。",
+      "note": "两篇案例均非 LLM/Agent 驱动，不能替 P4 支撑'智能体设计实测'主张；只能用来证明'实测差距可被量化'在方法上可行，并为 P4 提供可引用的误差归因维度（容差/基底/光斑散射）。"
+    },
+    {
+      "gap": "G3｜跨工艺/跨波长/跨器件（超表面→片上器件）可迁移性的实测验证：找公开案例",
+      "queries_tried": [
+        "inverse design metasurface cross-process cross-wavelength cross-device transfer fabricated measured experimental demonstration 2025 2026",
+        "transferable inverse design from metasurface to photonic integrated device measured experiment",
+        "LLM agent inverse design fabricated measured metalens metagrating transfer process"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "跨求解器 + 跨问题迁移（仿真层，非实测）：agent-driven cross-validated pipeline 用 RCWA 与 Meep FDTD 互验；metagrating v4 s2 的 x 偏振 η+1 为 RCWA 80.6% / FDTD 80.1%，y 偏振 63.6% / 62.8%；优化截断处 y 偏振曾高估 5.1%，加谐波到 [70,12] 后降至 0.8%。金属透镜 NA 0.5 聚焦效率 RCWA 81.7% / FDTD 77.3%（4% 差距归因近场耦合），NA 0.25 为 88.4% / 90.1%。另用全新 agent 会话（无先验上下文）迁移到 TM quasi-BIC（Q≈1000，1550 nm）并做独立 FDTD 验证。",
+          "url": "https://arxiv.org/abs/2611.08127",
+          "date": "2026-11-05",
+          "strength": "一手来源（arXiv HTML 全文深读，Table 1 + S12）；单源未验证；仅仿真，无流片实测"
+        },
+        {
+          "claim": "跨器件/跨工艺的工艺保真度实测：通用两步纳米制造流程对三种不同的逆向设计纳米光子器件，在不做任何器件专属工艺优化的条件下逐一达到 >90% 的图形转移保真度。这是'同一工艺迁移到多个逆设计器件'的公开案例，但对象未明确为超表面→片上器件，也未给光学效率实测对照。",
+          "url": "https://arxiv.org/abs/2609.13460",
+          "date": "2026-09-11",
+          "strength": "一手来源（arXiv 摘要页深读）；单源未验证"
+        },
+        {
+          "claim": "跨尺度/跨波长实验实现：同一深度学习逆设计框架实验实现自由曲面 metagrating（衍射角至 75°）与毫米尺度自由曲面全息超表面（>1000 波长、1.6 billion 自由度），展示设计方法跨器件尺度与波长的可迁移性；摘要未给两类的实测效率对照表。",
+          "url": "https://arxiv.org/abs/2610.05021",
+          "date": "2026-10-04",
+          "strength": "一手来源（arXiv 摘要页深读）；单源未验证"
+        }
+      ],
+      "verdict": "找到相邻公开案例：跨求解器/跨物理问题迁移（仿真）、跨三种逆设计器件的 >90% 图形转移保真度（工艺实测）、跨尺度跨波长实验实现。但未见'LLM/Agent 驱动 + 超表面→片上器件 + 实测效率对照'三者齐备的公开案例；立项书针对该具体命题的'公开资料未覆盖'确认成立。",
+      "note": "建议把立项书 G3 从笼统未覆盖改为：'跨器件工艺保真度已有案例（>90%，3 种器件），但跨器件类别的光学效率实测迁移仍公开资料未覆盖'，避免被审稿人用 arXiv:2609.13460 反驳。"
+    },
+    {
+      "gap": "G4｜中国信通院《信息光子技术发展与应用研究报告》2026 年版是否已发布（立项书标'截至2026-11-23仅2025版可得'）",
+      "queries_tried": [
+        "中国信通院 信息光子技术发展与应用研究报告 2026年",
+        "信息光子技术发展与应用研究报告 2026 版 发布 信通院",
+        "site:caict.ac.cn 信息光子技术发展与应用研究报告 2026",
+        "\"信息光子技术发展与应用研究报告（2026年）\"",
+        "caict 白皮书 2025年12月 信息光子技术发展与应用研究报告",
+        "\"信息光子技术发展与应用研究报告（2025年）\" 发布 2026中国信通院深度观察报告会"
+      ],
+      "found": false,
+      "findings": [
+        {
+          "claim": "信通院白皮书发布索引中可见《信息光子技术发展与应用研究报告（2025年）》，日期 2025-12-13；索引中未见 2026 年版条目。",
+          "url": "https://caict.ac.cn/kxyj/qwfb/bps/index_1.htm",
+          "date": "2025-12-13",
+          "strength": "官方站点索引（搜索结果摘要）/单源未验证；直接 WebFetch 触发访问防护（事件ID 6136-4008-1401）与证书校验失败，未能深读原页"
+        },
+        {
+          "claim": "行业媒体原文：在'2026 中国信通院深度观察报告会'上，《信息光子技术发展与应用研究报告（2025年）》正式发布，聚焦空芯光纤（2024 年 0.11 dB/km 首次低于实芯单模光纤 0.1397 dB/km，2025 年我国企业刷新至 0.05 dB/km）。页面正文时间为 2025-12-15（搜索摘要曾显示 2026-11-22，以正文为准）；未见 2026 年版发布报道。",
+          "url": "https://m.c114.com.cn/w5472-1302264.html",
+          "date": "2025-12-15",
+          "strength": "二手媒体原文深读/未验证；与官方索引摘要互证但非官方一手"
+        }
+      ],
+      "verdict": "截至 2026-11-24 的公开检索未见《信息光子技术发展与应用研究报告（2026年）》发布；最新可得仍为 2025 年版（2025-12-13 索引 / 2025-12-15 发布报道）。立项书'截至2026-11-23仅2025版可得'确认成立。",
+      "note": "信心有限：信通院官网栏目页抓取被访问防护与证书问题拦截，结论基于官方索引搜索摘要 + 权威行业媒体原文两条，均标未验证。建议官网恢复后复核再定稿。"
+    },
+    {
+      "gap": "G5｜其他团队做 LLM/Agent 驱动光子器件逆向设计的可复现工作（判断 P4 是否已有竞品抢占、新颖性）",
+      "queries_tried": [
+        "\"Agentic AI for inverse design in nanophotonics and meta-optics\" Scientific Reports",
+        "agentic AI inverse design metasurface 40.0% 65.2% metagrating 81.2% 94.6%",
+        "MCP-enabled LLM for meta-optics inverse design differentiable solver",
+        "multi-agentic framework real-time autonomous freeform metasurface design MetaChat",
+        "agent-driven cross-validated inverse-design pipeline dielectric metasurfaces reproducible code",
+        "\"Haejun Chung\" agentic inverse design fabrication measured metasurface follow-up",
+        "LLM agent inverse design fabricated measured metalens metagrating transfer process"
+      ],
+      "found": true,
+      "findings": [
+        {
+          "claim": "MetaChat：多智能体框架（AIM 设计智能体 + 材料专家智能体 + FiLM WaveY-Net 毫秒级代理求解器），自动设计多目标多波长 metalens/deflector；Stanford 101 题纳光子基准，GPT-4o 作为驱动模型得 81%；代码开源 https://github.com/jonfanlab/metachat ，数据 Zenodo https://doi.org/10.5281/zenodo.15802727 ；Sci Adv DOI 10.1126/sciadv.adx8006；2026-02-06 发布 Erratum（参考文献重编号）。已具备可复现要素（代码+数据+基准），但所读正文未见流片实测。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12577674/",
+          "date": "2025",
+          "strength": "一手来源（PMC 全文深读 + 代码/Zenodo 链接）；单源未验证"
+        },
+        {
+          "claim": "MCP-enabled LLM for meta-optics inverse design：LLM 通过 Model Context Protocol 调用可微求解器 TorchRDIT（仅 5 个 API 的极简服务器），在 Huygens meta-atom 任务上做 100 次试验；结构化提示在设计质量、工作流效率、计算成本与错误减少上均优于自然语言提示；并做 RAG 基线对比。Nanophotonics 14(27):5589–5602，DOI 10.1515/nanoph-2025-0507，PMID 41426127。属明确可复现的 LLM 驱动逆设计工作，无流片实测。",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12717938/",
+          "date": "2025-12-04",
+          "strength": "一手来源（PMC 全文深读）；单源未验证；出版商页被 Cloudflare 验证拦截"
+        },
+        {
+          "claim": "An Agent-Driven, Cross-Validated Inverse-Design Pipeline for Dielectric Metasurfaces：智能体驱动 + RCWA/FDTD 交叉验证 + 精确 ±10 nm 边缘位移鲁棒优化 + 分析清单（能量守恒、高截断收敛、二值化、最差情况、最小特征、损耗通道、局部最优）；从 metagrating/meta-atom 库/metalens 迁移到全新 quasi-BIC 问题。arXiv:2611.08127，2026-11-05。这是时间上最接近、且把'最终二值结构/可制造性'内建进闭环的竞品，但仍是仿真层，无实测。",
+          "url": "https://arxiv.org/abs/2611.08127",
+          "date": "2026-11-05",
+          "strength": "一手来源（arXiv abs + HTML 全文深读）；单源未验证"
+        },
+        {
+          "claim": "Sci Rep 论文本身亦为可复现竞品：公开了文献复现—人工批准策略—伴随优化—二值候选独立前向评估四模块及工作流评估规模（5/7/5）。",
+          "url": "https://www.nature.com/articles/s41598-026-78977-2",
+          "date": "2026-11-07",
+          "strength": "一手来源（Nature 原页深读，见 G1）"
+        }
+      ],
+      "verdict": "P4 不是无人区，框架层已有明确竞品：MetaChat（Sci Adv，代码+数据开源）、MCP-LLM（Nanophotonics 2025-12）、arXiv:2611.08127（2026-11，已把二值化与 ±10 nm 鲁棒性内建）。新颖性必须从'做智能体闭环'收缩到'最终二值结构性能为统一筛选判据 + 经流片实测界定的仿真—实测差距 + 跨器件迁移'；这三项目标在已查工作中确认未覆盖。",
+      "note": "arXiv:2611.08127 对 P4 威胁最大：它已覆盖可制造性内建与跨求解器交叉验证，立项书应对照其 ±10 nm 边缘位移、agree/marginal/disagree 判定协议写差异化，否则'创新点2'可能被认为已被抢占。"
+    }
+  ],
+  "overall": "5 个缺口逐条联网核实，4 个找到一手出处、1 个（G4 信通院 2026 版）确认未覆盖。G1 原论文题名/8 位作者/DOI/日期/四项效率数字全部核实无误，且为 early-access 版本；其后续流片实测版本两轮检索未命中。G2 需改写：别的团队已有逆向设计超表面的同口径仿真—实测对照（仿真 50.4% vs 实测 50.2%，FWHM 1.53 vs 1.56 μm），'差距无法量化'已不成立，但智能体框架器件本身仍无实测。G3 找到跨求解器迁移、跨三器件 >90% 图形转移保真度、跨尺度实验实现等相邻案例，'LLM/Agent + 超表面→片上器件 + 实测效率'三者齐备者确认未覆盖。G5 竞品明确：MetaChat/MCP-LLM/arXiv:2611.08127 均已公开可复现框架，其中 arXiv:2611.08127 已内建二值化与 ±10 nm 鲁棒性，P4 新颖性必须落在'统一筛选判据+实测边界+跨器件迁移'。全部外部结论附 URL；单源或仅搜索摘要者均标未验证；未补写、未臆造。深读来源：Nature 原页、PMC12152600、PMC12717938、PMC12577674、arXiv 2611.08127 HTML、C114 原文。"
+}
