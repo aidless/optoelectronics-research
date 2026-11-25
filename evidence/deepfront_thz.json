@@ -1,0 +1,204 @@
+{
+  "direction": "前沿盲区——太赫兹与中红外光子学（THz / mid-infrared photonics，2-30 μm）",
+  "generated_at": "2026-11-25",
+  "mechanisms": [
+    {
+      "name": "硅在>2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台",
+      "physics": "硅带隙Eg≈1.12 eV对应本征吸收边~1.1 μm；在1.1-2.2 μm窗口虽线性透明，但双光子吸收(TPA)阈值hν≥Eg/2即λ≤2.2 μm，自由载流子吸收(FCA)随波长平方增长，构成>2.2 μm的非线性/掺杂吸收天花板。真正卡住2.5-3.6 μm的不是硅本身（晶体硅透明的声子多光子吸收边在~6-8 μm），而是标准SOI的埋氧SiO2——非晶SiO2在>3.6 μm因Si-O声子吸收急升(attenuation high beyond 3.6 μm)，使SOI波导在>2.5-3.6 μm不可用。替代机制三条：(1)去掉SiO2——悬浮硅/狭缝波导、Si-on-sapphire、全硅无衬底平台；(2)换低声子能量材料——Ge-on-Si(透明1.9-14.7 μm)、SiGe梯度、InP/InGaAs、SiN(化学气相沉积SiN在MIR低损耗但受N-H/O-H键吸收限制)、AlN(宽禁带、无TPA)、硫系玻璃Ge28Sb12Se60(声子边延伸远、可溅射集成)；(3)离子注入/再结晶工程化硅的缺陷与应力带隙调控。"
+          ,
+      "numbers": {
+        "TPA_coefficient_Si_1.5um_cm_per_GW": 0.45,
+        "TPA_cutoff_um": 2.2,
+        "silica_SiO2_high_loss_beyond_um": 3.6,
+        "SOI_rib_loss_at_3.8um_dB_per_cm": 2.0,
+        "Si_on_sapphire_MIR_waveguide_ref": "arXiv:1705.10038",
+        "Ge_on_Si_transparent_window_um": "1.9-14.7",
+        "Ge28Sb12Se60_chalcogenide_loss_mitigation": "IOP J Phys D 2024, DOI 10.1088/1361-6463/ad43f5",
+        "low_loss_silicon_platform_removed_SiO2": "arXiv:1703.03517",
+        "Si_waveguided_long_wave_IR_Soref": "J Opt A 2006;8:S154 / DOI 10.1088/1464-4258/8/10/004"
+      },
+      "urls": [
+        "https://www.nature.com/articles/nphoton.2010.171",
+        "http://lib.fibopt.ru/Articles/Bi/JOptA_2006_8_840.pdf",
+        "https://doi.org/10.1088/1464-4258/8/10/004",
+        "https://arxiv.org/abs/1703.03517",
+        "https://arxiv.org/abs/1705.10038",
+        "https://doi.org/10.1088/1361-6463/ad43f5",
+        "https://doi.org/10.1002/lpor.202501738",
+        "https://research.cuhk.edu.hk/en/publications/two-photon-absorption-and-self-phase-modulation-in-silicon-wavegu-3/"
+      ],
+      "status": "单源未验证",
+      "maturity": "实验室",
+      "link_to_existing": "直接复用既有可见-近红外硅光平台（SOI波导/光栅耦合器/CMOS产线），把工作波长从1.3/1.55 μm平移到2-8 μm：需将埋氧SiO2换为悬浮/蓝宝石/Ge/SiN/硫系玻璃，耦合器与波导截面按长波长等比放大。此前项目只覆盖可见-近红外，这条补的是2-30 μm材料边界与波导物理机制。"
+    },
+    {
+      "name": "太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)",
+      "physics": "THz QCL靠半导体量子井子带间跃迁(intersubband)辐射，激射波长由量子阱厚度/势垒设计而非材料带隙决定(3-300 μm可调)。核心是上能级寿命/布居反转与下能级快速抽运：resonant-phonon(共振声子)抽运利用LO声子(~36 meV in GaAs)快速清空下能级，宽温区最优；bound-to-continuum在长波(低频)最高工作温度最佳；two-well direct-phonon在~4 THz把Tmax推到261 K。限制来自高温热声子反向填充、自由载流子损耗与波导/接触电阻发热——CW功率与Tmax受散热(wafer bonding、厚有源区)制约。THz QCL本身线宽窄可作外差本振；微梳/环形QCL通过超模(symmetry control)锁定产生梳，拍频线宽350 kHz。光混频(photomixing)另走光频差频产生THz，效率受光导天线/UTC-PD饱和限制。"
+          ,
+      "numbers": {
+        "highest_pulsed_THz_QCL_T_K": 250,
+        "pulsed_T_at_4THz_reference": "Khalatpour 2021, Jth 1.54 kA/cm2, max 2.60 kA/cm2",
+        "highest_T_261K_reference": "Khalatpour 2023",
+        "highest_CW_T_K": 129,
+        "CW_129K_output_W": 0.3,
+        "wafer_bonded_470mW_at_5K_Tmax_122K_THz": "3.9",
+        "pulsed_2.4W_at_4.4THz_10K_active_region_um": 19,
+        "CW_dissipation_limit_W_for_19um_AR": 30,
+        "thick_AR_23um_stripe_output_mW": 4.3,
+        "thick_AR_Jth_A_per_cm2_at_5K": 475,
+        "thick_AR_lasing_max_T_K": 45,
+        "thick_AR_tuning_THz": "5.15-5.23",
+        "thick_AR_portionB_11.6mm_output_mW": 57.3,
+        "thick_AR_portionB_Jth_A_per_cm2": 258,
+        "thick_AR_gain_region_THz": "4.06-5.02",
+        "heterodyne_target_THz": 4.745,
+        "RT_CW_WPE_midIR_percent": 31,
+        "coupled_QCL_ring_comb_beat_linewidth_kHz": 350,
+        "QCL_WPE_decomposition": "eta_i * eta_o * eta_v * eta_e"
+      },
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12297514",
+        "https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13451205",
+        "http://cqd.ece.northwestern.edu/pubs/files/4eb310d8828e561d11e927a3966b64b3.pdf",
+        "https://arxiv.org/abs/2610.06391",
+        "https://doi.org/10.1038/s41377-025-01935-6"
+      ],
+      "status": "已核验",
+      "maturity": "原型",
+      "link_to_existing": "此前项目把中红外QCL(3-12 μm)当气体传感光源；这条补的是往长波THz端的机制差异——室温CW中红外QCL WPE已达~31%(商用级)，而THz QCL仍受低温制冷约束(Tmax脉冲261 K/CW 129 K)、未商用。厚有源区/晶圆键合是散热放量的工程主线，可对接既有热管理/封装工艺。"
+    },
+    {
+      "name": "中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度",
+      "physics": "比探测率D*=R√A/i_n (cm·Hz^1/2/W, Jones)，NEP=i_n/R (W/Hz^1/2)，二者受暗电流(热激发/隧穿/产生-复合)与量子效率共同约束；BLIP上限D*_BLIP=(λ/hc)√(η/2Φ_B)。低温HgCdTe/InSb靠制冷压暗电流达高D*；T2SL(InAs/GaSb)用能带工程替代HgCdTe但受短少子寿命限制；2D vdW异质结用垂直输运(sock tens of nm)缩短载流子渡越时间、内建电场抑制暗电流，室温逼近BLIP；CQD靠量子限域调带隙、溶液加工可CoMEMS集成但 hopping输运暗电流与EVET非辐射复合压低D*。温度是硬约束：同一材料D*随T升急剧下降。"
+          ,
+      "numbers": {
+        "Gr_BP_MoS2_Gr_peak_Dstar_Jones": "2.38e11 @3.6um, 300K (逼近BLIP)",
+        "Gr_BP_MoS2_Gr_Dstar_broadband": ">3.88e10 over 325-3800nm",
+        "Gr_BP_MoS2_Gr_NEP_W_per_sqrtHz": "1.72e-14 @3.6um",
+        "Gr_BP_MoS2_Gr_rise_decay_ns": "10.4 / 15.6 @1550nm",
+        "Gr_BP_MoS2_Gr_minus3dB_MHz": 12,
+        "Gr_BP_MoS2_Gr_peak_responsivity_A_per_W": "0.66 @3600nm, EQE>15%",
+        "Ag2Te_CQD_Dstar_Jones": "1.2e9 @78K, 0.02V",
+        "Ag2Te_CQD_responsivity_A_per_W": "0.3 @78K/0.2V (IDE)",
+        "Ag2Te_CQD_band_um": "3-5, onset 6.9",
+        "Ag2Te_CQD_vertical_rise_fall_ns": "211 / 523 @200kHz QCL",
+        "Ag2Te_CQD_minus3dB_kHz": 69.6,
+        "Ag2Te_CQD_NETD_K": "0.3 (37-40C fever)",
+        "HgTe_CQD_290K_EQE_percent": "10 / 21 (top/back)",
+        "HgTe_CQD_290K_Dstar_Jones": "5.1e8 / 9.4e8",
+        "InSb_77K_Dstar_Jones": "2.2e11",
+        "InSb_77K_NEP_W_per_sqrtHz": "5e-12",
+        "Hamamatsu_T2SL_P15409_901_Dstar": "5.0e9 / 1.6e10 cm Hz^1/2/W",
+        "Hamamatsu_T2SL_P15409_901_NEP": "5.5e-12 / 1.8e-11 W/Hz^1/2",
+        "Hamamatsu_T2SL_Topr_C": "-40..+60"
+      },
+      "urls": [
+        "https://www.nature.com/articles/s41467-025-55887-x",
+        "https://www.nature.com/articles/s41467-026-71374-3",
+        "https://doi.org/10.1038/s41467-026-78047-1",
+        "https://par.nsf.gov/servlets/purl/10590314",
+        "https://hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/p15409-901_kird1137e.pdf",
+        "https://doi.org/10.1109/ted.2022.3164373"
+      ],
+      "status": "已核验",
+      "maturity": "商用",
+      "link_to_existing": "既有探测器覆盖Si/InGaAs可见-近红外；这条把口径扩展到3-14 μm并给出同口径D*/NEP/温度对照。最重要的新证据：Gr/BP/MoS2/Gr室温D*=2.38×10^11 Jones(3.6 μm)已追平甚至超过商用制冷HgCdTe，且速度(10.4 ns/12 MHz)比此前2D中红外探测器(微秒级)快两个数量级——指向'非制冷室温MIR'这一可判定拐点。"
+    },
+    {
+      "name": "片上太赫兹波导/超材料/等离激元——损耗、耦合、色散与系统集成瓶颈(薄膜铌酸锂TFLN vs 硅)",
+      "physics": "THz片上传输的损耗分导体损耗αc∝√f(趋肤效应/金属粗糙度)与介质损耗αd∝f(材料声子/偶极吸收)，总损耗决定传输距离与调制深度。硅在300 GHz附近介质损耗高(高阻硅仍有残余自由载流子)，石英/石英玻璃更低；TFLN(薄膜铌酸锂)靠Pockels效应做THz-optic调制与差频产生THz，Vπ低、带宽高，且衬底换成石英把THz传播损耗降到14 dB/cm。等离激元/超材料可把模场压到亚波长增强光-THz重叠，但金属欧姆损耗(0.4-0.5 dB/μm)与硅-有机槽波导(40 dB/cm)成为瓶颈。耦合瓶颈：THz自由空间波长(0.6-1 mm)与片上微米波导的尺寸失配，需天线/光栅/探针耦合；色散管理靠传输线几何。系统集成瓶颈是THz源-调制-传输-探测单片化与散热/封装。"
+          ,
+      "numbers": {
+        "TFLN_continuous_THz_generation_up_to_GHz": 500,
+        "TFLN_cw_efficiency_at_500GHz_per_W": "4.8e-6 (10x prior LN)",
+        "TFLN_gen_efficiency_per_W": "2.90e-6@300GHz, 4.13e-6@400GHz, 4.86e-6@500GHz @10mm",
+        "TFLN_THz_power_dBm": "-65 @8dBm optical pump",
+        "TFLN_Vpi": "6V@300GHz, 8V@500GHz (vs 28V prior on Si)",
+        "TFLN_bandwidth": "3dB 145GHz / 6dB 310GHz",
+        "THz_prop_loss_quartz_dB_per_cm": "14 @300GHz",
+        "THz_prop_loss_silicon_dB_per_cm": "22 @300GHz",
+        "THz_prop_loss_at_500GHz": "~2 dB/mm",
+        "conductor_loss_alpha_c_dB_per_cm_per_sqrtGHz": 0.264,
+        "dielectric_loss_alpha_d_dB_per_cm_per_GHz": 0.028,
+        "electro_THz_modulation_GHz": 65,
+        "optical_waveguide_loss_dB_per_cm": "<0.1",
+        "EO_polymer_plasmonic_modulator_loss_dB_per_um": "0.4-0.5",
+        "silicon_organic_slot_loss_dB_per_cm": 40,
+        "all_silicon_substrateless_THz_platform": "APL Photonics 2023;8:091101"
+      },
+      "urls": [
+        "https://www.nature.com/articles/s41467-025-65293-y",
+        "https://doi.org/10.1038/s41467-025-65293-y",
+        "https://doi.org/10.1038/s41467-025-62267-y"
+      ],
+      "status": "已核验",
+      "maturity": "实验室",
+      "link_to_existing": "既有项目覆盖硅光调制器与波导；这条补THz频段特有的损耗分解(αc∝√f, αd∝f)、TFLN替代硅的低Vπ/低损耗优势，以及亚波长等离激元的欧姆损耗代价。可直接对接既有Pockels/薄膜铌酸锂与COMSOL/HFSS电磁仿真工具链。"
+    },
+    {
+      "name": "中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用",
+      "physics": "中红外'指纹区'(3-5 μm, 8-12 μm)分子振转吸收线强(比近红外强1-3个数量级)，QCL/ICL作窄线宽光源+TDLAS/QEPAS/光腔增强实现ppb级痕量检测；呼出气VOC(如呼气NO/CO/酮体)经激光吸收光谱做无创诊断，但受水汽干扰/临床验证门槛限制。THz(0.1-10 THz)对生物组织水分敏感、非电离，可成像皮肤癌边界，但穿透深度浅(~数百μm)、需接触/反射式。THz自由空间通信用微梳多载波或电子源，容量高但大气吸收(水汽)与链路距离受限。商用成熟度由可靠性/成本/体积/法规决定，而非单纯器件指标。"
+          ,
+      "numbers": {
+        "trace_gas_commercial": "MIRO Analytical multi-QCL ambient air monitoring (envirotech-online, 2025-08-07)",
+        "breath_diagnostics": "Empa Exhalomics laser absorption spectroscopy; Photonics Spectra 2025: some breath tests in clinical trials",
+        "skin_cancer_THz_trial": "NIH Terabotics trial ID 51604",
+        "PicoBot_THz_in_vivo_skin_imaging": "DOI 10.1007/s10762-025-01055-7 (2025)",
+        "THz_comms_km_scale": "Light Sci Appl 2026, DOI 10.1038/s41377-026-02321-6 (surpassing kilometer-scale beyond 300GHz)",
+        "soliton_comb_300GHz_10Gbps_BER": "<1e-9, IM-DD OOK, no FEC, back-to-back (arXiv:2605.12348)",
+        "W_band_THz_receiver": "106GHz carrier, 2.97Gb/s OOK, soliton dual carriers (arXiv:2510.22549)"
+      },
+      "urls": [
+        "https://www.envirotech-online.com/news/item/industry-news/2025/08/07/miro-analytical-multi-qcl-ambient-air-monitoring",
+        "https://www.empa.ch/web/s503/laser-standard",
+        "https://bepartofresearch.nihr.ac.uk/",
+        "https://doi.org/10.1007/s10762-025-01055-7",
+        "https://doi.org/10.1038/s41377-026-02321-6",
+        "https://arxiv.org/abs/2605.12348",
+        "https://arxiv.org/abs/2510.22549"
+      ],
+      "status": "单源未验证",
+      "maturity": "商用",
+      "link_to_existing": "既有项目把MIR气体传感当'已商用'成熟应用；这条做成熟度分层——痕量气体在线监测确为商用(MIRO)，呼气无创诊断仅在临床试验、THz皮肤癌在NIH早期试验(原型)，THz通信10 Gbps BER<1e-9仍是背靠背实验室演示(离公里级/商用有距离)。避免把原型当商用高估。"
+    },
+    {
+      "name": "3-5年最值得下注、可判定Go/No-Go的科学与工程问题(判据化)",
+      "physics": "把'前沿盲区'转成可证伪阈值：(1)室温非制冷MIR探测器能否规模化——判据D*≥1e11 Jones@室温且响应<20 ns且CMOS兼容，Gr/BP/MoS2/Gr已在193 μm器件达2.38e11 Jones/10.4 ns，但BP环境稳定性与晶圆均匀性是No-Go风险；(2)THz QCL能否突破制冷天花板——判据CW工作T≥200 K且WPE>5%，现CW Tmax=129 K、脉冲261 K，室温仍无解，group-IV(SiGe)NEGF预测室温但无实验；(3)片上THz损耗能否压到<10 dB/cm并单片集成源-调制-探测——TFLN石英已达14 dB/cm@300GHz，逼近但未达标；(4)THz通信能否走出背靠背做到>100 m实质链路——10 Gbps BER<1e-9已在波导背靠背实现，自由空间/大气窗口未验证。Go/No-Go标准必须锚定可复算数字而非定性宣称。"
+          ,
+      "numbers": {
+        "G1_ROOM_TEMP_Dstar_threshold_Jones": ">=1e11 (best 2.38e11 @3.6um)",
+        "G1_response_threshold_ns": "<20 (best 10.4)",
+        "G2_THz_QCL_CW_T_threshold_K": ">=200 (best CW 129K, pulsed 261K)",
+        "G2_WPE_threshold_percent": ">5 (midIR RT already 31%)",
+        "G3_onchip_THz_loss_threshold_dB_per_cm": "<10 (TFLN quartz 14 @300GHz)",
+        "G4_THz_link_free_space_target_m": ">100 (demo only back-to-back)",
+        "time_horizon_years": "3-5"
+      },
+      "urls": [
+        "https://www.nature.com/articles/s41467-025-55887-x",
+        "https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full",
+        "https://www.nature.com/articles/s41467-025-65293-y",
+        "https://arxiv.org/abs/2605.12348"
+      ],
+      "status": "已核验",
+      "maturity": "理论",
+      "link_to_existing": "把前5条机制的数字折算成投资/研发可判定的门槛，供项目在'可见-近红外→2-30 μm'扩张时做资源取舍。最值得下注：室温非制冷MIR探测器(已见拐点证据)；最大No-Go风险：THz QCL室温CW(需材料体系突破，非渐进工程)。"
+    }
+  ],
+  "key_insights": [
+    "硅在>2.2 μm的根本限制是TPA(hν≥Eg/2, λ≤2.2 μm, β=0.45 cm/GW@1.5μm)与SOI埋氧SiO2在>3.6 μm的声子吸收；真正的解决路径是去SiO2(悬浮/蓝宝石)、换Ge(1.9-14.7 μm)/硫系玻璃/SiN/AlN，而非改良硅掺杂。",
+    "THz QCL 2025-26的硬指标已清晰：脉冲最高T=261 K@4 THz、CW最高129 K(0.3 W)、2.4 W脉冲@4.4 THz、室温CW中红外WPE~31%；THz端仍卡在制冷(Tmax<室温)与散热(厚有源区/晶圆键合)，未商用。",
+    "最重要的新证据：Gr/BP/MoS2/Gr垂直vdW异质结在室温3.6 μm达D*=2.38×10^11 Jones(逼近BLIP)、NEP=1.72×10^-14 W/√Hz、10.4 ns/12 MHz，同口径追平/超过商用制冷HgCdTe——'非制冷室温MIR探测器'从概念变为可判定拐点。",
+    "片上THz损耗机制被TFLN芯片量化：石英衬底14 dB/cm@300 GHz(硅22 dB/cm)、导体损耗αc=0.264 dB/cm/√GHz、效率4.8×10^-6/W@500 GHz、Vπ 6 V——逐个给出可优化的物理量，但等离激元0.4-0.5 dB/μm的欧姆损耗仍是集成瓶颈。",
+    "应用成熟度必须分层：痕量气体在线监测已商用，呼气无创诊断在临床试验，THz皮肤成像/THz通信仍原型(10 Gbps BER<1e-9仅背靠背、无FEC)；把原型当商用是本项目此前的主要高估风险。"
+  ],
+  "open_questions": [
+    "SiN/AlN/离子注入硅在2-8 μm波导的本征损耗下限(尤其N-H/O-H、残余杂质吸收)缺同口径实测，需补一组统一厚度/粗糙度的loss benchmark。",
+    "group-IV(SiGe/Ge)THz QCL的NEGF室温预测(Grange 2019)至今无实验验证——3-5年内能否出室温CW原型是最大No-Go不确定性。",
+    "室温MIR 2D/CQD探测器的晶圆级均匀性、BP环境长期稳定性、CQD的EVET非辐射复合抑制尚无量产数据，D*能否在阵列上保持单器件值未知。",
+    "THz自由空间链路的大气窗口(水汽吸收)与实际>100 m传输、跟瞄、天线增益组合的链路预算未经系统实测，背靠背BER结果不可直接外推。",
+    "光子混频源(photomixing)与微梳源在THz波段的功率/线宽/效率缺少与QCL的同口径对照表，本轮仅覆盖QCL与微梳拍频。",
+    "Soref 2006、Laser Photonics Rev 2025(Ge基MIR综述)、NSF HgTe CQD PDF正文未完整抓取，部分数字来自搜索摘要，标记为单源未验证待原文复核。"
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "direction": "前沿盲区——二维材料光子学（2D-material photonics: graphene, hBN, MoS2, WS2, black phosphorus）",
+  "generated_at": "2026-11-25",
+  "scope_note": "外部真实检索与一手深读截至2026-11-24；每主题关键词检索不超过2轮，剩余为命中URL深读。status口径：已核验=论文号-题一致且深读一手全文/官方全文，单源未验证=仅摘要、检索片段或站点受挑战未取到正文，未覆盖=检索上限内未找到可引用硬数据。maturity按最成熟可核验器件计。数值保留原文条件，不把历史数据冒充2025-2026新测；机制最多6条，逐项覆盖题面6项。",
+  "mechanisms": [
+    {
+      "id": "M1",
+      "covers": ["1"],
+      "name": "石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠",
+      "physics": "电栅压改变石墨烯载流子密度和费米能级E_F：在通信波段，当2E_F跨过光子能量时带间跃迁被Pauli阻塞，改变复电导的实部（吸收）和虚部（相位）；双层石墨烯加电压可进一步降低噪声和插损。把石墨烯贴到硅槽波导的50 nm空气槽内可把原子薄吸收层与模场强重叠，以短器件长度换取GHz带宽和低能耗。若偏压主要落在接触电阻/电容而非石墨烯，RC成为带宽天花板；光热探测则走另一条慢机制——吸收导致升温，改变电导/Seebeck/热电势，换来高响应度但牺牲速度；等离激元探测利用高E_F下的Drude带内响应强化局域场。",
+      "numbers": {
+        "2026_silicon_slot_EAM_device": "双层石墨烯+50 nm空气槽硅波导，6 μm长，集总电极",
+        "2026_2um_3dB_bandwidth_GHz": ">40（设备受限）",
+        "2026_2um_modulation_dB_per_um": 0.22,
+        "2026_2um_insertion_loss_dB": 0.6,
+        "2026_2um_eye_Gbit_s": 25,
+        "2026_1p55um_3dB_bandwidth_GHz": ">70（70 GHz VNA上限受限）",
+        "2026_1p55um_modulation_dB_per_um": 0.2,
+        "2026_1p55um_eye_Gbit_s": 50,
+        "2026_energy_per_bit_fJ": "约10（CV²/4）",
+        "2026_calculated_bandwidth_GHz": 150,
+        "2026_grating_coupler_loss_dB": "4-6；模式转换损耗0.3-0.45 dB；RTA使金属接触电阻降约68%",
+        "OFC2026_postdeadline_single_source": "67 GHz EO 3 dB带宽，80 Gb/s C-band NRZ、40 Gb/s O-band NRZ（仅摘要级）",
+        "IPC2025_single_source": "双层石墨烯-SiN EAM，调制深度>7 dB，1.2 dB/V@10 V（仅摘要级）",
+        "graphene_baseline_from_2025_review": "单层透光97.7%，迁移率约200000 cm²/V·s，可饱和吸收恢复约200 fs",
+        "historical_detector_numbers_not_new": "105 Gbit/s NRZ、120 Gbit/s PAM4光热探测（2021 Nat Commun）；110 GHz石墨烯等离激元探测器（2020 Nanophotonics）",
+        "coverage_gap": "检索上限内未找到经全文核验的2025-2026新石墨烯光电探测器带宽/响应度硬数字；上述探测器数字均明确为历史基线"
+      },
+      "evidence": [
+        {
+          "source": "arXiv:2604.03153 (2026-04-03), Wideband integrated high-speed graphene-silicon slot-waveguide electro-absorption modulator at 2 μm and 1.5 μm wavebands",
+          "url": "https://arxiv.org/html/2604.03153",
+          "access": "号-题一致已验，HTML全文深读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "OFC 2026 post-deadline / IEEE, 67 GHz graphene electro-absorption modulators on silicon with 80 Gb/s C-band and 40 Gb/s O-band NRZ data rates",
+          "url": "https://doi.org/10.1364/ofc.2026.th2a.12",
+          "access": "IEEE页HTTP 202空正文，数字来自检索摘要",
+          "evidence_status": "单源未验证"
+        },
+        {
+          "source": "2025 IEEE Photonics Conference, High-Efficiency Graphene Electro-Absorption Modulator on Silicon Nitride Photonic Platform",
+          "url": "https://doi.org/10.1109/ipc65510.2025.11282028",
+          "access": "摘要级",
+          "evidence_status": "单源未验证"
+        },
+        {
+          "source": "npj Nanophotonics 2, 31 (2025), Graphene-advanced functional devices for integrated photonic platforms",
+          "url": "https://www.nature.com/articles/s44310-025-00072-7",
+          "access": "官方全文可读；综述与历史引用",
+          "evidence_status": "已核验"
+        }
+      ],
+      "urls": [
+        "https://arxiv.org/html/2604.03153",
+        "https://doi.org/10.1364/ofc.2026.th2a.12",
+        "https://ieeexplore.ieee.org/document/11524369",
+        "https://doi.org/10.1109/ipc65510.2025.11282028",
+        "https://www.nature.com/articles/s44310-025-00072-7",
+        "https://doi.org/10.1364/oe.582307"
+      ],
+      "status": "已核验",
+      "maturity": "原型",
+      "decision": {
+        "Go": "把石墨烯-硅槽波导EAM作为近期最可下注的2D主动器件：1.55 μm实测>70 GHz、50 Gbit/s、约10 fJ/bit，2 μm也已跨过40 GHz。",
+        "No_Go": "不把综述转引的2021/2020探测器数字包装成2025-2026新突破；也不把4-6 dB光栅耦合损耗忽略在链路预算外。",
+        "kill_threshold": "若封装后系统插损（含耦合与模式转换）吞掉>预期链路预算、或VNA实测带宽不随接触电阻降低而提升，停止按高速调制器放大。"
+      },
+      "link_to_existing": "既有项目把石墨烯当可饱和吸收体/透明电极背景；本机制把它升级为硅光波导内主动电吸收层，并直接对接既有硅波导、光栅耦合与高速封装工具链。"
+    },
+    {
+      "id": "M2",
+      "covers": ["2"],
+      "name": "TMD激子与缺陷单光子源：局激子/价带自旋谷物理、hBN封装高温激活与亮度-线宽-效率权衡",
+      "physics": "单层TMD的强库仑束缚和二维限域带来几meV本征激子线宽与显著谷-自旋选择定则；缺陷或应变势阱可把激子局域为低温锐线单光子发射体，但同一器件的原子起源常未定论，非均匀展宽会掩盖自然线宽。hBN封装抑制表面吸附与电荷噪声，悬空SiC微加热膜允许原位高温退火“写入/激活”局域激子；发射强度、g²(0)与线宽不在同一最优泵浦点：接近饱和时多激子与背景荧光抬高g²(0)，降低泵浦虽收窄线宽却牺牲计数率。",
+      "numbers": {
+        "WS2_2025_preprint_platform": "hBN/单层WS2/hBN干转移到120 nm悬空SiC微加热膜；3.6-3.72 K测量",
+        "WS2_activation_temperature": "约1100 K原位退火30 min后出现XL_L",
+        "WS2_redshift_meV": "75/86（摘要约80）",
+        "WS2_linewidth_meV": "<0.2（200 μeV，受光谱仪分辨率限制；本征激子仅几meV）",
+        "WS2_excitation_probability_per_incident_photon": 2.13e-6,
+        "WS2_estimated_quantum_yield_percent": 5,
+        "WS2_TRPL_lifetime_ns": 0.9,
+        "WS2_g2_0_uncorrected": 0.4,
+        "WS2_thermal_stability": ">1273 K Raman消失；约1220 K仍有Raman",
+        "WS2_encapsulation_necessity": "非封装仅见约220 meV红移缺陷线且时间/脉冲不稳定；hBN封装是稳定窄线必要条件",
+        "TMD_SPE_general": "低温尖锐谱线；亮度约kHz量级，显著低于hBN的MHz量级；原子起源未定；非均匀展宽超过自然线宽；长期稳定性仅少数跨冷却循环个案",
+        "others": "Er注入>200 nm WS2+400°C退火有telecom PL、室温寿命4.5 ms；Cr⁺注入单层MoSe2只见sub-gap PL未见SPE",
+        "uncovered": "WSe2可调低噪声量子发射体（PRX Quantum 6,040339 (2025)）被Cloudflare挑战未取到数值；MoS2/WS2光电流探测的2025-2026效率/带宽硬数字本轮未覆盖"
+      },
+      "evidence": [
+        {
+          "source": "arXiv:2512.16579v1 (2025-12-18), High-Temperature Activation of Single-Photon Emitters in monolayer WS2",
+          "url": "https://arxiv.org/html/2512.16579",
+          "access": "号-题一致已验，HTML全文深读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "arXiv:2504.19815v2 (2025-07-21), Creation and Microscopic Origins of Single-Photon Emitters in Transition Metal Dichalcogenides and Hexagonal Boron Nitride",
+          "url": "https://arxiv.org/html/2504.19815v2",
+          "access": "号-题一致已验，HTML全文深读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "PRX Quantum 6, 040339 (2025), Tunable and Low-Noise WSe2 Quantum Emitters for Quantum Photonics",
+          "url": "https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j",
+          "access": "Cloudflare挑战，未取到正文数值",
+          "evidence_status": "单源未验证"
+        }
+      ],
+      "urls": [
+        "https://arxiv.org/html/2512.16579",
+        "https://arxiv.org/html/2504.19815v2",
+        "https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j",
+        "https://par.nsf.gov/servlets/purl/10416123"
+      ],
+      "status": "已核验",
+      "maturity": "实验室",
+      "decision": {
+        "Go": "支持hBN封装TMD局域激子源作为低温片上量子光源研究臂，重点优化封装/退火的一致性和收集效率。",
+        "No_Go": "不把TMD SPE称为室温可部署或高亮度源；kHz量级计数与未定原子起源使其暂不适合作为规模化量子光源。",
+        "kill_threshold": "若封装-退火后线宽不能稳定在亚meV、g²(0)在泵浦提升时显著恶化，或多次热循环后发射位置不可复现，则停止该实现放大。"
+      },
+      "link_to_existing": "既有量子光源以量子点/SPDC/SFWM为主；本机制补入TMD作为电中性局域激子源，并指出其亮度比既有量子点路线低数个量级。"
+    },
+    {
+      "id": "M3",
+      "covers": ["3"],
+      "name": "hBN缺陷中心量子光源与声子辅助退相干：室温高纯度NIR发射 vs 电子束激发下的fs级退相位",
+      "physics": "hBN宽带隙中的碳/氧/氮相关缺陷可在禁带中形成局域能级，产生室温可寻址的单光子发射；氧等离子体和高温退火可批量生成NIR发射体。发射的零声子线(ZPL)与声子边带由电子-声子耦合决定，Debye-Waller因子给出ZPL占比；局域缺陷的固态环境使其在光致发光下可有ns寿命和无闪烁，但电子束激发会产生声子极化激元和更强非平衡声子浴，使T2降到fs量级——两种激发条件下的相干时间不可混用。",
+      "numbers": {
+        "hBN_NIR_2026_preprint": "氧等离子体+1000°C/20 min RTA；>300个发射体；700-971 nm，近一半>800 nm；面密度2×10⁶ cm⁻²",
+        "single_photon_purity": "最高99.9%；示例未校正g²(0)=0.0078±0.0155",
+        "linewidth_lowest": "准共振低温11.1 μeV=2.7 GHz",
+        "brightness": "MHz级；Debye-Waller因子近50%；寿命1-2 ns",
+        "stability": "约80%发射体无闪烁，亚nm光谱稳定3天/1 h",
+        "Huang_Rhys_factor": "2.43(770 nm) / 1.73(856 nm)",
+        "candidate_defects": "理论候选(ONVN)+ ZPL 1.62 eV/767 nm、(ONVNH)0 1.48 eV/840 nm；计算τrad 75/127 ns与实测τPL约2 ns差异以非辐射通道解释",
+        "spin_status": "spin属性仅为理论预测，未经ODMR验证",
+        "electron_beam_dephasing": "T2=200 fs（图3d另处220 fs），T1≈585 fs（摘要另处写T1=200 fs、T2=580 fs，文内口径冲突）；远快于光致发光ns级",
+        "phonon_sidebands": "880 nm主峰+797/670 nm边带；LE-EELS声子157/169/186 meV"
+      },
+      "evidence": [
+        {
+          "source": "arXiv:2512.16197v2 (v2 2026-04-23), High-Performance Near-Infrared Quantum Emission from Color Centers in hBN",
+          "url": "https://arxiv.org/html/2512.16197v2",
+          "access": "号-题一致已验，HTML全文深读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "Nature Communications 16, 2326 (2025), Ultrafast phonon-mediated dephasing of color centers in hexagonal boron nitride probed by electron beams",
+          "url": "https://www.nature.com/articles/s41467-025-57584-1",
+          "access": "官方全文深读；T1/T2文内口径冲突已标注",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "ACS Photonics (2025), Temporal coherence of single photons emitted by hexagonal Boron Nitride defects at room temperature",
+          "url": "https://doi.org/10.1021/acsphotonics.5c02227",
+          "access": "Cloudflare挑战，未取到正文数值",
+          "evidence_status": "单源未验证"
+        }
+      ],
+      "urls": [
+        "https://arxiv.org/html/2512.16197v2",
+        "https://www.nature.com/articles/s41467-025-57584-1",
+        "https://doi.org/10.1021/acsphotonics.5c02227"
+      ],
+      "status": "已核验",
+      "maturity": "实验室",
+      "decision": {
+        "Go": "把hBN NIR缺陷中心作为室温/近室温高纯度单光子源的优先探索臂：纯度、密度、稳定性和Debye-Waller因子均有批量统计。",
+        "No_Go": "不把fs级电子束退相干当成PL条件下的相干上限，也不把理论spin属性当成已验证量子比特。",
+        "kill_threshold": "若封装后99%级g²(0)和亚nm稳定性不可复现，或低温窄线在目标工作温区消失，则停止器件化投入。"
+      },
+      "link_to_existing": "既有量子项目没有hBN缺陷中心；本机制补入室温可制备光源，并提醒与量子点路线的不可区分性/不可控源差异。"
+    },
+    {
+      "id": "M4",
+      "covers": ["4"],
+      "name": "黑磷墨水膜中红外光伏/光导探测：窄带隙宽光谱、柔性阵列与封装决定寿命",
+      "physics": "黑磷层状puckered晶格带隙约0.33 eV且随层数可调，可覆盖可见-NIR-MWIR；各向异性晶格带来本征二向色性和偏振敏感，但本轮偏振比硬数字未取到正文。BP墨水膜与PEDOT:PSS/Y6/ITO构成零偏压异质结，内建场分离光生载流子；零偏压抑制暗电流，缺点是小响应度和μs级速度。BP在空气/光/热下氧化是寿命主因，N2+石英窗+UV胶封装把氧水与强光热隔离，直接改变可用寿命数量级。",
+      "numbers": {
+        "device": "Au/PEDOT:PSS/BP/Y6/ITO柔性墨水膜，零偏压；BP带隙0.33 eV，MWIR探测至约4 μm",
+        "zero_bias_responsivity_uA_per_W": "45@1.55 μm；20@3.0 μm；4.2@3.3 μm LED",
+        "minus_2p5V_responsivity": "2.0 mA/W@1.55 μm",
+        "rise_fall_us": "4.1/2.5",
+        "minus_3dB_bandwidth_kHz": 44,
+        "array_uniformity": "6×6阵列像素响应度23±7 μA/W",
+        "encapsulation_lifetime": "N2+石英窗+UV胶：空气储存3600 h（150天）保持全响应；未封装312 h降至48%",
+        "thermal_stress": "400°C黑体连续照射：封装120 h稳定；未封装25 h降至40%",
+        "mechanical": "25 μm PI上2.5 mm弯折半径稳定；125 μm PI上1 cm半径5000次循环稳定",
+        "film_morphology": "纳米片416±124 nm横向、24±15 nm厚；膜约1.1 μm厚、8×8 mm均匀",
+        "polarization_gap": "BP/Ta2NiS5偏振敏感中红外DOI 10.1002/adom.202501297被Cloudflare挑战，各向异性偏振比硬数字单源未验证"
+      },
+      "evidence": [
+        {
+          "source": "Nature Communications 16, 5972 (2025), Mechanically flexible mid-wave infrared imagers using black phosphorus ink films",
+          "url": "https://www.nature.com/articles/s41467-025-60942-8",
+          "access": "Nature HTML官方全文深读（PDF直取失败后改用HTML）",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "Nano Research 19(2), 94908140 (2026), Performance optimization strategies for black phosphorus infrared photodetectors: A review",
+          "url": "https://doi.org/10.26599/nr.2025.94908140",
+          "access": "SciOpen官方全文可读摘要与元数据",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "Advanced Optical Materials (2025), BP/Ta2NiS5 polarization-sensitive mid-infrared detector",
+          "url": "https://doi.org/10.1002/adom.202501297",
+          "access": "Wiley Cloudflare挑战，未取到正文",
+          "evidence_status": "单源未验证"
+        }
+      ],
+      "urls": [
+        "https://www.nature.com/articles/s41467-025-60942-8",
+        "https://doi.org/10.26599/nr.2025.94908140",
+        "https://doi.org/10.1002/adom.202501297"
+      ],
+      "status": "已核验",
+      "maturity": "原型",
+      "decision": {
+        "Go": "下注封装型BP墨水膜作为非制冷柔性MWIR成像臂，已有6×6阵列、3600 h储存和5000次弯折实测。",
+        "No_Go": "不把裸BP/未封装器件列为可部署产品；响应度仅几十μA/W、44 kHz带宽适合成像不适合高速通信。",
+        "kill_threshold": "若封装后1000 h内响应度衰减>20%，或 array 像素离散性继续超过±7 μA/W，则不进入工程样机。"
+      },
+      "link_to_existing": "既有中红外线关注QCL/T2SL/HgCdTe；本机制补入BP作为室温柔性低成本吸收层，并给出此前缺失的封装寿命对照。"
+    },
+    {
+      "id": "M5",
+      "covers": ["5"],
+      "name": "200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位",
+      "physics": "MoS2从生长衬底到200 mm Si的目标晶圆靠分子直接键合：无PMMA/中间层可减少残留与界面污染；湿法释放是化学剥离，干法刀片机械开层则要控制裂纹、褶皱与 insertion 处破坏。转移率由开层速度、表面能、原始生长均匀性和水处理时间共同决定；Raman A1g线宽与AFM粗糙度是材料完整性代理量，XPS氧化信号提示水/空气暴露风险。材料覆盖率≠光子器件良率，后者还需图形化、接触、光学耦合和寿命验证。",
+      "numbers": {
+        "wafer": "200 mm MoS2 donor → 200 mm Si，无聚合物/中间层",
+        "wet_release": "约55%转移，伴随孔/裂/皱",
+        "automated_blade_optimum": "开层速度10→1 μm/s，最佳转移93%",
+        "seven_wafer_batch": "目标Si转移率96%；一片因原始生长不均较低",
+        "process_loss": "PL/图像处理损失3%；水中损失约1%",
+        "material_quality": "Raman A1g FWHM仅增加0.2 cm⁻¹；粗糙度0.2→0.3/0.36 nm",
+        "defects": "全片无裂皱，但刀片插入起点两片有裂；XPS提示轻微氧化，需非氧化液体/缩短水暴露",
+        "independent_industry_claim": "CEA-Leti新闻称转移良率>95%、全晶圆Raman/XPS/AFM/SEM表征、无裂皱残留",
+        "uncovered": "未检索到公开的200 mm二维材料光子器件级良率、封装寿命或湿热可靠性数据；相关论文明确指出仍需可复现性与器件验证"
+      },
+      "evidence": [
+        {
+          "source": "2D Materials 12, 035013 (2025), 2D material fab-scale transfer of 200 mm wafer using molecular direct bonding",
+          "url": "https://doi.org/10.1088/2053-1583/addf5b",
+          "access": "IOP官方全文深读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "CEA-Leti news (2025-05-20), Direct Bonding Technique for Industry-Scalable 2D materials",
+          "url": "https://www.leti-cea.com/cea-tech/leti/english/Pages/What's-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx",
+          "access": "机构新闻全文可读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "Nature Electronics (2024), 200 mm polycrystalline MoS2 transistors; IEDM 2025, 200 mm直接生长MoS2 FET",
+          "url": "https://www.nature.com/articles/s41928-024-01158-4",
+          "access": "命中链接；本机制只作晶圆级背景，不转引未核验器件数字",
+          "evidence_status": "单源未验证"
+        }
+      ],
+      "urls": [
+        "https://doi.org/10.1088/2053-1583/addf5b",
+        "https://www.leti-cea.com/cea-tech/leti/english/Pages/What's-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx",
+        "https://www.nature.com/articles/s41928-024-01158-4",
+        "https://doi.org/10.1109/iedm50572.2025.11353501",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11829894/"
+      ],
+      "status": "已核验",
+      "maturity": "原型",
+      "decision": {
+        "Go": "采用200 mm分子直接键合作为2D材料上硅的材料级工艺基线，优先解决开层速度、水暴露与生长均匀性。",
+        "No_Go": "不把93-96%材料转移率写成光子器件良率，也不据此宣称寿命/可靠性已达标。",
+        "kill_threshold": "至少要看到连续3批200 mm晶圆的光子器件级电/光测试良率、>1000 h湿热/热循环寿命与耦合对准统计，否则不进入产品化。"
+      },
+      "link_to_existing": "既有项目只有分立器件与材料假设；本机制补给晶圆级制造口径，并把材料覆盖率和器件良率严格分开。"
+    },
+    {
+      "id": "M6",
+      "covers": ["6"],
+      "name": "异质集成路线分工：石墨烯-硅高速调制、石墨烯-LN慢速高增益/声电/等离激元、石墨烯超表面THz-MIR可重构",
+      "physics": "平台选择本质是“把二维材料放在哪个场增强位置”：(1) 硅槽波导把模场压入石墨烯，适合Pauli阻塞高速电吸收；(2) LN的铁电极化与热光/声光/非线性系数强，Fe/P+畴壁或光诱导电荷可非易失地改石墨烯载流子密度，透明电极、SPP、SAW和光热探测互补，但PMMA残留/应变/湿热稳定性是老问题；(3) 超表面用亚波长谐振放大单层2.3%吸收，THz/MIR下石墨烯Drude带内电导提供动态相位/幅度，NIR/可见则受带间Universal absorption限制，适合可重构波前而非替换高速波导。",
+      "numbers": {
+        "silicon": "石墨烯-硅槽EAM 1.55 μm >70 GHz / 50 Gbit/s / 约10 fJ/bit；2 μm >40 GHz / 25 Gbit/s（详见M1）",
+        "LN_basics": "透明400 nm-5 μm；n_o=2.211、n_e=2.138@1550 nm",
+        "LN_interface": "石墨烯-TFLN范德华间隙<0.25 nm，降低波导模式吸收；LN自发极化可n型掺杂石墨烯至2.51×10¹⁴ cm⁻²（实验引用值）",
+        "LN_transfer": "自动转移较手动：迁移率+70%、非故意掺杂-30%、应变-10%",
+        "LN_device_examples": "TO开关VπL=1.12 V·cm、开关功率2.85 mW；405-2000 nm光热探测响应度2.92×10⁶ A/W但响应23 ms；综述转引LN波导石墨烯探测器NPDR 3×10⁶ W⁻¹、3 dB光电带宽40 GHz（未回原文验证）",
+        "metasurface": "单层可见-NIR本征吸收2.3%；光栅-石墨烯THG效率最高1%、奇次谐波至9次；双层独立E_F在2.6 THz实现360°相位、幅度0-0.8；MIR约8 μm多级光束切换directivity>95%(2级)/>90%(3级)、衍射效率接近50%",
+        "manufacturing_gap": "PMMA残留、应变、污染、规模重复性、长期湿热可靠性；直接石墨烯生长于LN尚未实用；APL异质集成综述正文被Cloudflare挑战未取到"
+      },
+      "evidence": [
+        {
+          "source": "Front. Phys. 20, 044301 (2025), Review on graphene-lithium niobate integration-based acoustoelectric, photonic, and optic devices",
+          "url": "https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301",
+          "access": "官方全文可读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "Nanophotonics 14(12), 2103-2132 (2025), Graphene-based metasurface: dynamic optical control in ultrathin flat optics",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/",
+          "access": "PMC官方全文深读",
+          "evidence_status": "已核验"
+        },
+        {
+          "source": "APL 127, 130401 (2025), Hybrid and heterogeneous integration in photonics",
+          "url": "https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics",
+          "access": "Cloudflare挑战，未取到正文",
+          "evidence_status": "单源未验证"
+        }
+      ],
+      "urls": [
+        "https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/",
+        "https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics",
+        "https://arxiv.org/html/2604.03153"
+      ],
+      "status": "单源未验证",
+      "maturity": "原型",
+      "decision": {
+        "Go": "3-5年按功能分工下注：硅+石墨烯做高速调制；LN+石墨烯做高增益慢探测、SAW/SPP与非易失可重构；超表面做THz/MIR动态波前与非线性增强。",
+        "No_Go": "不把石墨烯超表面当作替换TFLN高速Pockels调制或硅光波导的主路线；不把单一文献的40 GHz/NPDR数字当产品保证。",
+        "kill_threshold": "3-5年Go/No-Go判据应设为：晶圆级器件良率、1000 h湿热/热循环封装寿命、系统级插损与耦合重复性三项同时达标；任一缺位则维持实验室投入而非产品线投入。"
+      },
+      "link_to_existing": "既有项目分别覆盖硅光、TFLN与超表面，但二维材料只作背景吸收层；本机制给出三平台的物理分工与可判定的Go/No-Go门槛。"
+    }
+  ],
+  "key_insights": [
+    "石墨烯主动器件已不再是背景材料：1.55 μm硅槽波导EAM实测>70 GHz、50 Gbit/s、约10 fJ/bit，2 μm也跨过40 GHz；真正的系统瓶颈转向4-6 dB耦合损耗、接触/RC与封装。",
+    "TMD单光子源的线宽可做到亚meV，hBN封装+高温退火提供稳定窄线路径，但亮度仍约kHz、原子起源未定、g²(0)≈0.4未校正，尚不能替代量子点或参量源。",
+    "hBN缺陷中心在批量统计上给出99.9%纯度、2×10⁶ cm⁻²密度、MHz亮度和3天亚nm稳定，是最接近可用的2D量子光源；但电子束下fs级声子退相干与理论spin属性必须和PL/ODMR实测分开。",
+    "BP的独特价值是室温MWIR+柔性+低成本墨水膜，但封装把空气寿命从312 h（降至48%）拉到3600 h全响应，热应力下也从25 h拉到120 h稳定——封装决定产品形态。",
+    "200 mm MoS2直接键合达到93-96%材料转移率与>95%机构口径，但这是材料覆盖/PL良率，不是光子器件良率，也不是寿命；公开器件级可靠性数据仍缺位。",
+    "异质集成应按功能分工：硅抓高速、LN抓强场与慢速高增益、超表面抓THz/MIR可重构；3-5年最值得下注的Go/No-Go不是材料参数，而是良率、封装寿命与系统插损三项同时过线。"
+  ],
+  "open_questions": [
+    "2025-2026是否有经全文核验的石墨烯光电探测器新带宽/响应度数字，能替代综述转引的2021/2020历史基线？",
+    "TMD单光子源的原子缺陷身份、 kHz→MHz亮度提升路径，以及封装后多次热循环的稳定性是否可复现？",
+    "hBN NIR缺陷中心是否有ODMR/自旋相干验证，以及室温下光子不可区分性和时间相干性的直接测量？",
+    "BP及其异质结的偏振消光比、晶圆均匀性与长期封装退化模型，能否从单器件扩展到阵列产品？",
+    "200 mm二维材料是否能给出光子器件级良率、1000 h湿热/热循环可靠性、耦合与图形化良率的公开统计？",
+    "石墨烯-LN/超表面在真实封装后的插损、湿热稳定性和规模重复性，能否支撑系统级Go决策？"
+  ]
+}

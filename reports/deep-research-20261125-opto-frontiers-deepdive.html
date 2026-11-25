@@ -1,0 +1,874 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>光电信息工程：前沿盲区深挖</title>
+<style>body{font-family:-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;max-width:1000px;margin:40px auto;padding:0 24px;line-height:1.75;color:#222}h1{font-size:1.9em;border-bottom:3px solid #2c6fbb;padding-bottom:10px}h2{font-size:1.4em;margin-top:2em;color:#2c6fbb;border-left:5px solid #2c6fbb;padding-left:12px}h3{font-size:1.15em;margin-top:1.6em}h4{font-size:1em;margin:1.1em 0 .4em}table{border-collapse:collapse;width:100%;font-size:.9em}th,td{border:1px solid #ccc;padding:6px 8px;text-align:left}th{background:#eef4fb}a{color:#2c6fbb;word-break:break-all}.ext{color:#c0392b;font-weight:bold}.front{border-left:4px solid #ddd;padding-left:14px;margin:14px 0}.meta{color:#666;font-size:.9em}</style></head><body>
+<h1>光电信息工程：前沿盲区深挖</h1>
+<p class="meta">生成日期：2026-11-25　｜　前 13 赛道未系统覆盖的新机制、新器件与新成熟度曲线</p>
+<h2>范围</h2><p>六个前沿盲区：超表面/平面光学、光频梳/微腔光频梳、集成量子光子学、非线性光子与拓扑光子、二维材料光子学、太赫兹与中红外光子学。重点判断可复算实测性能、成熟度、与现有赛道的接口，以及未来 3–5 年值得下注的问题。</p>
+<h2>研究方法</h2><p>deep-research-pro 外部检索闭环：每主题换词≤2轮；深读 Top3-5 篇一手资料；单源标未验证；严格区分仿真/实测、器件/系统、实验室/原型/商用。每条主张附出处链接（例：<span class="ext">[外]</span> <a href="https://www.nature.com/">https://www.nature.com/</a> 示例主张）。</p>
+<p>共梳理 <b>36</b> 条前沿机制：一手核验 <b>27</b> 条，确认未覆盖 <b>1</b> 条，汇集唯一来源 <b>119</b> 个。</p>
+<h2>核心结论</h2>
+<h3>超表面 / 平面光学</h3><ul>
+<li>口径混引是最大陷阱：80.39%（低NA 0.155 消色差单镜）、81.2%绝对效率（单波长550nm/NA0.2晶圆级）、约10%（高NA0.9宽带整镜）三者口径完全不同，禁止跨条比较；单元效率、相对效率、仿真效率、整镜实测效率必须分列。</li>
+<li>效率-带宽-NA-角度-偏振是不可兼得的多目标帕累托前沿：TBP上界与FOV-带宽上界给出理论天花板，SPDC阶梯层补齐13.60pi群延迟缺口才换来650-1000nm/NA0.9但牺牲效率到约10%。</li>
+<li>制造已跨过‘能不能做’进入‘能不能便宜且稳定做’：8英寸UV-NIL每片约1000颗4mm镜、压印&lt;5min、印章复用&gt;=10次是量产信号；但4英寸约95%转移良率随晶圆增大下降、相邻单元耦合与容差数据集仍是公开缺口。</li>
+<li>光谱/偏振/AR器件多停留在实验室原型：1nm分辨率光谱仪只能识别预设计波长且等离激元效率低；光谱偏振仪仅在商用CMOS上做集成样机；OCT与光加密本轮无可核验一手数字（未覆盖）。</li>
+<li>系统级&#x27;&#x27;超表面 vs 折射/衍射&#x27;&#x27;的同口径实测对照表缺失，SWaP-C优势目前多为定性/综述断言，需按整镜效率+全视场像差+全系统体积重量统一口径补证。</li>
+<li>最值得下注的判决点：高NA宽带整镜效率能否从约10%突破到&gt;=30%、仿真-实测差能否压到&lt;5个百分点、大晶圆良率曲线能否被抑制、可调超表面能否达百万态+全可见+120Hz。</li>
+</ul>
+<h3>光频梳 / 微腔光频梳</h3><ul>
+<li>物理机制已收敛为三条主线：反常色散 Kerr DKS 亮孤子（宽谱、低单线功率）、正常色散暗脉冲/platicon（高效率、高单线功率、可微波率）、Pockels 电光梳（微波率间距、窄谱）；混合 Kerr-EO 用一条 410.319 GHz DKS 经 N=14 分频到 29.308 GHz、2589 线跨 75.9 THz，正面突破 spacing–span 权衡（已核验，LSA 2025）。</li>
+<li>2025–2026 的『可锁模/免调』突破集中在自注入锁定(SIL)与光折射辅助自稳定：DFB 直驱无 EDFA、片上泵仅 25 mW、200 GHz 重频、线宽 44.1→4.7 kHz、墙插效率约 1.1%、方波电流可重复 turnkey（Nanophotonics 2025）；Z-cut TFLN 无控温无反馈 12 小时自由运转（LSA 2025）——这是公开少有的长时稳定性硬数据。</li>
+<li>转换效率出现数量级跃升：暗脉冲 SIL 集中供电梳泵→梳 61.5%、16 条线宽 &lt;600 Hz；对比早期 TFLN DFB 直驱 5.2% 与微波率暗脉冲 4%，说明高效率路线（暗脉冲+SIL）已明显优于传统亮孤子，直接利好 WDM 单线功率。</li>
+<li>通信侧已有系统级硬证据而非仅器件演示：160 km 16 波 70 GBaud DP-16QAM 达 8.37 Tbps 净速率、24 芯 MCF 达 200.97 Tbps 净速率、单波 110 GBaud DP-32QAM 1.008 Tbps；同 EVM 下 OSNR 需求比 10 kHz ECL 低 3 dB，但商用化仍卡在 SOA 放大导致的线宽恶化 3–10× 与 OCNR 门限（已核验，Nat Commun 2025）。</li>
+<li>测距/光谱进入单光子与纳米级：Vernier 锁定反向传播孤子在 7 pW 接收功率（衰减 67 dB）下实现 0.5 nm·√s 精度、0.1 fs@0.1 s 定时稳定；FMCW LiDAR 用 128 通道 OPA 达 80° FOV、7 波长并行 3D 点云——均为实验室原型，尚无商用整机。</li>
+<li>制造是最大短板：300 mm PECVD SiN 全片厚度 ±2%，但可起亮孤子的 reticle 仅 26/64（约 41%），13/64 完全不起梳，10 nm 厚度差即可翻转色散；Qi 最概然仅 0.84×10^6（远低于实验室超高 Q）——『晶圆级可锁模』与『实验室高性能』之间仍有明显良率/性能鸿沟（已核验，arXiv:2506.20895）。</li>
+<li>光钟/频率合成已达zeptosecond级：Si3N4 孤子梳+双 MgF2 参考实现 25 GHz、-141 dBc/Hz@10 kHz(546 zs/√Hz)，但依赖外部超高 Q 晶体参考，尚未全单片集成（Nat Photon 2025）。</li>
+<li>与窄线宽/可调激光器的公开对标只有体积 100×、OSNR 低 3 dB 等性能数字，缺美元单价、MTBF、FTY 与现场可靠性——这是把微梳判定为『可投资赛道』前必须补的证据（未覆盖）。</li>
+</ul>
+<h3>集成量子光子学</h3><ul>
+<li>insight：最重要新证据是确定性QD源在2025年实现71.2±1.8%系统效率、g2(0)=0.0205(6)、不可区分性0.9856(13)，首次在器件层面越过特定线性光学架构的1/3损耗容忍阈值；它改变的是光源可行性，不是整机容错就绪度。；urls：https://www.nature.com/articles/s41566-025-01639-8</li>
+<li>insight：2025—2026真正的工程分水岭是“条件内指标”与“无条件系统指标”分离：PsiQuantum SFWM的99.50±0.25%源间HOM对应约26%最大Klyshko效率；Jiuzhang 4.0的92%源效率对应51%系统效率。所有Go判断都必须使用交付到探测器/逻辑操作的完整账本。；urls：https://www.nature.com/articles/s41586-025-08820-7；https://www.nature.com/articles/s41586-026-10523-6</li>
+<li>insight：片上探测已出现99.73%@1550 nm SNSPD最佳器件结果，但需约1.5 K；SPAD在60% PDE工作点约340 kcps DCR，在2.5 GHz/44 ps抖动工作点仅21% PDE。探测路线应按系统误判率和占空比选择，不按单项纪录选择。；urls：https://pmc.ncbi.nlm.nih.gov/articles/PMC12533016/；https://arxiv.org/html/2408.06921</li>
+<li>insight：mesh校准已从“逐器件精确标定”转向模型+在线扰动，但2025实测仅4×4达到约98%保真，28端口高保真仍是仿真；大规模量子mesh的插损、热功耗、监测和控制开销尚未被同类实验闭环验证。；urls：https://www.nature.com/articles/s42005-025-02247-2；https://www.nature.com/articles/s42005-025-02135-9</li>
+<li>insight：网络成熟度分层清晰：QKD已有12小时城域现场运行（18 dB下26.6 kbit/s，40 dB下有限密钥115 bit/s），属于工程原型/商用试点；存储中继在14.5 km实现78.6±2.0% Bell保真和3.7σ CHSH违反，仍是原型；420 km存储 preprint 只是单源推进。；urls：https://arxiv.org/abs/2510.17659；https://arxiv.org/abs/2508.17940；https://arxiv.org/abs/2504.05660</li>
+</ul>
+<h3>非线性光子与拓扑光子</h3><ul>
+<li>最重要的新证据（2026-04-08, Nat Commun 17, 4995）：未极化 InGaP χ²=220 pm/V 波导配 15 段纳米加热器，在仅 20 mW 泵浦下取得 27% 内部效率（2.5 mm 器件 55%），噪声 10^-4 cps/Hz，且保持纠缠可见度 76% 与 time-bin 量子比特 96.2±0.6% 保真度——证明『高效率+低泵浦+低噪声+宽带』可同时成立，不必在微环高 Q 与体块高功率之间二选一。</li>
+<li>片上非线性效率的瓶颈已从材料系数转移到系统层：TFLN 直波导片内 538 %/W 但光纤到光纤只有 152 %/W；失败源于膜厚不均匀和耦合损耗（−1.3/−2.9 dB/面），双谐振微环虽达 9941 %/W 系统效率却有数百 MHz 线宽且不可独立调谐。</li>
+<li>拓扑保护的可用范围比宣传窄：局域长度由带隙宽度（非拓扑量）决定；2D 边缘态 vs 无边缘态的对比无效；在 valley-Hall 与优化 W1 的公平对比中 W1 慢光散射更低。真优势目前最扎实的是 SSH 波导阵列 SPDC 共振波长涨落 &gt;10× 降低，而不是泛化的『抗散射互连』。</li>
+<li>χ² 拓扑孤子梳（Nature 2026，60 fs @2 μm）绕开了 χ³ Kerr 梳对反常色散、高 Q 和高速调制器的依赖，是拓扑/非线性交叉最直接的新光源机制；但仍是单篇实验室演示。</li>
+<li>可重构 χ²（0.47 pm/V、1–20 Hz、1000 V）适合原位逆设计与漂移补偿，不适合做主转换/激活层；其定位应与 PPLN/InGaP 的高 χ² 固定层互补。</li>
+<li>光计算『转换税』的判定要分层：单元全光激活已达 4–120 fJ / 1–4.5 ps，系统全光 RNN 已 &gt;100 GHz；但 10^6 TOPs/W/mm² 是依赖 150 fs 片上光源的投影，不能当成实测能力。</li>
+</ul>
+<h3>二维材料光子学</h3><ul>
+<li>石墨烯主动器件已不再是背景材料：1.55 μm硅槽波导EAM实测&gt;70 GHz、50 Gbit/s、约10 fJ/bit，2 μm也跨过40 GHz；真正的系统瓶颈转向4-6 dB耦合损耗、接触/RC与封装。</li>
+<li>TMD单光子源的线宽可做到亚meV，hBN封装+高温退火提供稳定窄线路径，但亮度仍约kHz、原子起源未定、g²(0)≈0.4未校正，尚不能替代量子点或参量源。</li>
+<li>hBN缺陷中心在批量统计上给出99.9%纯度、2×10⁶ cm⁻²密度、MHz亮度和3天亚nm稳定，是最接近可用的2D量子光源；但电子束下fs级声子退相干与理论spin属性必须和PL/ODMR实测分开。</li>
+<li>BP的独特价值是室温MWIR+柔性+低成本墨水膜，但封装把空气寿命从312 h（降至48%）拉到3600 h全响应，热应力下也从25 h拉到120 h稳定——封装决定产品形态。</li>
+<li>200 mm MoS2直接键合达到93-96%材料转移率与&gt;95%机构口径，但这是材料覆盖/PL良率，不是光子器件良率，也不是寿命；公开器件级可靠性数据仍缺位。</li>
+<li>异质集成应按功能分工：硅抓高速、LN抓强场与慢速高增益、超表面抓THz/MIR可重构；3-5年最值得下注的Go/No-Go不是材料参数，而是良率、封装寿命与系统插损三项同时过线。</li>
+</ul>
+<h3>太赫兹与中红外光子</h3><ul>
+<li>硅在&gt;2.2 μm的根本限制是TPA(hν≥Eg/2, λ≤2.2 μm, β=0.45 cm/GW@1.5μm)与SOI埋氧SiO2在&gt;3.6 μm的声子吸收；真正的解决路径是去SiO2(悬浮/蓝宝石)、换Ge(1.9-14.7 μm)/硫系玻璃/SiN/AlN，而非改良硅掺杂。</li>
+<li>THz QCL 2025-26的硬指标已清晰：脉冲最高T=261 K@4 THz、CW最高129 K(0.3 W)、2.4 W脉冲@4.4 THz、室温CW中红外WPE~31%；THz端仍卡在制冷(Tmax&lt;室温)与散热(厚有源区/晶圆键合)，未商用。</li>
+<li>最重要的新证据：Gr/BP/MoS2/Gr垂直vdW异质结在室温3.6 μm达D*=2.38×10^11 Jones(逼近BLIP)、NEP=1.72×10^-14 W/√Hz、10.4 ns/12 MHz，同口径追平/超过商用制冷HgCdTe——&#x27;非制冷室温MIR探测器&#x27;从概念变为可判定拐点。</li>
+<li>片上THz损耗机制被TFLN芯片量化：石英衬底14 dB/cm@300 GHz(硅22 dB/cm)、导体损耗αc=0.264 dB/cm/√GHz、效率4.8×10^-6/W@500 GHz、Vπ 6 V——逐个给出可优化的物理量，但等离激元0.4-0.5 dB/μm的欧姆损耗仍是集成瓶颈。</li>
+<li>应用成熟度必须分层：痕量气体在线监测已商用，呼气无创诊断在临床试验，THz皮肤成像/THz通信仍原型(10 Gbps BER&lt;1e-9仅背靠背、无FEC)；把原型当商用是本项目此前的主要高估风险。</li>
+</ul>
+<h2>关键要点：未来 3–5 年值得下注的问题</h2>
+<h3>超表面 / 平面光学</h3><ul>
+<li>光加密（metasurface-based optical encryption/security）与 OCT 超表面器件：本轮未获一手可核验数字，需专门检索 Nature/Science/Optica 一手并区分仿真与实测。</li>
+<li>4英寸约95%转移良率随晶圆增大下降的完整数据集、单颗成本/每片成本曲线未在公开一手文中给出（s41378 正文抓取被截短，仅片段）。</li>
+<li>相邻 meta-atom 近场耦合/非局域串扰的定量容差阈值（线宽/侧壁角/RI 偏差-&gt;相位误差-&gt;效率损失）缺可复算的一手数据。</li>
+<li>&#x27;&#x27;超表面 vs 传统折射/衍射镜组&#x27;&#x27;同口径系统级实测对照（整镜效率、全视场MTF/像差、体积重量、成本）尚未找到，SWaP-C 优势缺可复算支撑。</li>
+<li>可调超表面（液晶/2D材料/相变材料）在全可见波段、大FOV、&gt;=120Hz 下能否达到百万级独立可调态，尚属理论/实验室呼吁而非实测。</li>
+<li>仿真-实测系统性差距（消色差低NA约11个百分点、高NA宽带仿真29%-&gt;实测10%）的主要归因（制造偏差 vs 模型不足）缺统一归因实验。</li>
+</ul>
+<h3>光频梳 / 微腔光频梳</h3><ul>
+<li>Go/No-Go 问题 1（良率门）：能否把 300 mm 晶圆上 single-DKS 可锁模比例从 26/64（约 41%）提升到 &gt;90%，同时 Qi 最概然值从 0.84×10^6 提到 &gt;5×10^6？判据：同一 foundry 流程下随机抽取 ≥100 颗裸片，室温固定泵功率下 turnkey 起梳成功率 &gt;90%、片内 FSR 偏差 &lt;100 MHz。若三年内达不到，晶圆级 WDM 光源的 Go 判为 No-Go。</li>
+<li>Go/No-Go 问题 2（泵浦/效率门）：能否在无 EDFA、DFB 直驱条件下把墙插效率从 1.1% 提升到 &gt;10%、泵功率降到 &lt;10 mW/线，同时保持线宽 &lt;1 kHz？判据：暗脉冲+SIL 路线在封装后实测；这决定微梳能否替代可调 ECL 进入相干模块。</li>
+<li>Go/No-Go 问题 3（集成/自参考门）：能否把 Kerr 梳、EO 分频、PPLN 倍频与泵浦激光单片异构集成，实现 f-2f 自参考且 Δf 锁定线宽 &lt;10 kHz、自由运转 uptime &gt;24 h？判据：无需外部 MgF2/原子参考即可给出可溯源频率；这是光钟/频率合成从原型走向商用的分水岭。</li>
+<li>Go/No-Go 问题 4（可靠性/成本门）：能否拿到公开的封装后寿命/老化数据（1000 h 以上连续工作、漂移 &lt;1%/年）与可对比的美元 BOM/TCO？判据：至少一个厂商或联盟发布可复核的 FTY/MTBF 与每信道成本，并与 10 kHz ECL 同口径对比；缺失则商业价值无法证伪或证实。</li>
+<li>Go/No-Go 问题 5（应用选择门）：在四条应用（WDM 通信、双梳光谱、LiDAR、光钟/频率合成）中，哪条最先跨过『原型→商用』？当前证据强度排序为 WDM 通信（系统级 Tbps 硬指标最完整）&gt; 光钟/OFD（相噪最优但依赖外参考）&gt; 双梳测距 &gt; FMCW LiDAR（功率预算受限）。判据：未来 3–5 年是否出现商用现货（明确型号、量产认证、现场部署），而非仅有论文演示。</li>
+</ul>
+<h3>集成量子光子学</h3><ul>
+<li>QD/LN/SFWM/SPDC四种源在相同光纤后效率、原始多源HOM、长时稳定性和每秒可用事件口径下，哪一种在目标架构中占优？现有头条数字缺少同尺比较。</li>
+<li>99.73%片上SNSPD的晶圆良率、低温封装功耗、阵列一致性和系统暗计数是多少？最佳器件与可制造系统之间仍缺公开数据。</li>
+<li>2025年4×4 mesh校准方法扩展到64/256端口单光子线路时，重构时间、热漂移和控制线数量如何标度？</li>
+<li>Jiuzhang 4.0的51%系统效率中，源、滤波器、线路、探测器各占多少？原始数据和代码是否足以让独立团队复现完整验证统计？</li>
+<li>最新经典近似算法对2026年实验的适用边界在哪里？2604.12330只验证到1152模式，不能直接外推到8176模式。</li>
+<li>QD-LN 20源系统的双光子可见度0.73是否可在不去相位修正、不后选择的条件下随阵列规模稳定保持？</li>
+<li>硅T中心电注入能否把209 cps计数率与非后选择SPAM同时提升，并完成远程自旋纠缠？当前论文只证明单节点初始化。</li>
+<li>城域QKD的现场优势是否来自去除同步硬件本身，而非单纯更高密钥率？需要与常规方案做同链路、同探测器、同安全参数的对照。</li>
+<li>14.5 km Bell nonlocality中继与420 km存储 preprint 的每秒可用纠缠率、存储等待成功率和连续运行时长尚未形成可商业化的运维指标。</li>
+</ul>
+<h3>非线性光子与拓扑光子</h3><ul>
+<li>GO/NO-GO-1（首选下注）：系统级效率而非片内效率作为唯一验收指标——未来 3 年能否把 TFLN/InGaP 的单器件光纤-光纤效率稳定做到 &gt;1000 %/W 且晶圆级良率可复现？判据：同一封装下 ≥3 片芯片、片间差异 &lt;3 dB、无逐器件加热器调参。当前基线 152 %/W（TFLN）与 11–22% 外效率（InGaP）。</li>
+<li>GO/NO-GO-2：拓扑波导阵列的谱鲁棒性能否转成有实际价值的系统指标？判据：在同等耦合/制造无序下，拓扑 SSH SPDC 源的多源干涉可见度与高维纠缠保真度相对优化过的非拓扑阵列保持优势（当前证据只有共振波长涨落 &gt;10×）。若不能，则『拓扑抗散射互连』不予下注。</li>
+<li>GO/NO-GO-3：χ² 拓扑孤子梳能否搬到 1550 nm 并与现有 WDM/光计算生态集成？判据：在 C 波段、无外部微波/高速调制器条件下实现 &lt;100 fs 孤子且与片上 χ² 转换器单片集成。当前仅 2 μm、单篇 Nature。</li>
+<li>GO/NO-GO-4：全光激活级联是否引入不可接受的噪声/能量累积？判据：≥10 级非线性激活级联后端到端能量/比特误差仍优于电子非线性对应方案；现有论文只给单级 4–120 fJ 与架构投影。</li>
+<li>GO/NO-GO-5（未覆盖，需补证）：硅、SiN、AlN 平台的 2025–2026 实测 χ³/FWM 系数、损耗与转换效率缺少同口径一手数据（AlN 仅找到 2018 年 17,000 %/W SHG 旧数据）；在给出三平台统一 baseline 之前，不下『χ³ 平台已越过转换税临界点』的结论。</li>
+</ul>
+<h3>二维材料光子学</h3><ul>
+<li>2025-2026是否有经全文核验的石墨烯光电探测器新带宽/响应度数字，能替代综述转引的2021/2020历史基线？</li>
+<li>TMD单光子源的原子缺陷身份、 kHz→MHz亮度提升路径，以及封装后多次热循环的稳定性是否可复现？</li>
+<li>hBN NIR缺陷中心是否有ODMR/自旋相干验证，以及室温下光子不可区分性和时间相干性的直接测量？</li>
+<li>BP及其异质结的偏振消光比、晶圆均匀性与长期封装退化模型，能否从单器件扩展到阵列产品？</li>
+<li>200 mm二维材料是否能给出光子器件级良率、1000 h湿热/热循环可靠性、耦合与图形化良率的公开统计？</li>
+<li>石墨烯-LN/超表面在真实封装后的插损、湿热稳定性和规模重复性，能否支撑系统级Go决策？</li>
+</ul>
+<h3>太赫兹与中红外光子</h3><ul>
+<li>SiN/AlN/离子注入硅在2-8 μm波导的本征损耗下限(尤其N-H/O-H、残余杂质吸收)缺同口径实测，需补一组统一厚度/粗糙度的loss benchmark。</li>
+<li>group-IV(SiGe/Ge)THz QCL的NEGF室温预测(Grange 2019)至今无实验验证——3-5年内能否出室温CW原型是最大No-Go不确定性。</li>
+<li>室温MIR 2D/CQD探测器的晶圆级均匀性、BP环境长期稳定性、CQD的EVET非辐射复合抑制尚无量产数据，D*能否在阵列上保持单器件值未知。</li>
+<li>THz自由空间链路的大气窗口(水汽吸收)与实际&gt;100 m传输、跟瞄、天线增益组合的链路预算未经系统实测，背靠背BER结果不可直接外推。</li>
+<li>光子混频源(photomixing)与微梳源在THz波段的功率/线宽/效率缺少与QCL的同口径对照表，本轮仅覆盖QCL与微梳拍频。</li>
+<li>Soref 2006、Laser Photonics Rev 2025(Ge基MIR综述)、NSF HgTe CQD PDF正文未完整抓取，部分数字来自搜索摘要，标记为单源未验证待原文复核。</li>
+</ul>
+<h2>前沿机制逐条核实</h2>
+<h3>超表面 / 平面光学</h3>
+<div class="front">
+<h4>1. 相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束</h4>
+<p><b>物理机制</b>：亚波长 meta-atom 通过传播相位（几何尺寸/高宽比）与 Pancharatnam-Berry（PB）几何相位（旋转角）分别提供 0-2pi 相控与偏振选择；高折射率介质（TiO2/Si3N4 n≈2、c-Si）用 Mie 共振/波导模获得高透射与低损耗，金属等离激元用偏振转换但本征吸收大。联合调控的物理代价来自三条硬约束：(1) 色散工程的时间-带宽积上界（TBP, j*DeltaT*DeltaX）把消色差带宽与单元可提供的群延迟绑定，带宽越大或口径越大，所需群延迟越难由有限高度纳米柱实现；(2) 大 NA / 大角度下相位对入射角强依赖，产生 off-axis 像差（尤其 coma），视场-带宽不能同时拉满；(3) 非局域（nonlocal）耦合/导模共振虽能突破单元效率极限，却引入角度选择性；振幅与偏振通道复用会牺牲正交通道效率。故效率-带宽-角度-偏振四者构成多目标帕累托前沿，不可同时最优。</p>
+<p><b>可复算性能</b>：2pi 相控（PMC12617707）；消色差需 13.60pi 群延迟补偿而 meta-atom 仅能提供 2.20pi（LSA 14:204），缺口迫使加六阶 SPDC 阶梯层；TBP 上界见 DOI 10.1063/5.0177734；非局域金属透镜透射效率上限 DOI 10.1002/lpor.202300201；FOV-带宽上界 EPJ Appl. Metamater. 9:16 (2022)；AR/VR 目标 FOV 达 160°、帧率&gt;=120Hz，全 2pi 波前控制或需数百万可调态，单 meta-element 级寻址目前不可行（Nanophotonics 14(23):3813）。</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：理论</p>
+<p><b>与现有赛道接口</b>：延伸 deeplens_display.json 的 SRG/VHG/PVG 衍射波导与 AR/VR 近眼显示路线：衍射波导受限于衍射效率-视场-彩虹纹耦合，超表面提供 2pi 相控与偏振复用的新自由度但同样受帕累托约束；并衔接 deeptool_fab.json 的侧壁粗糙度/套刻误差（直接决定相控精度）。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-025-01858-2">https://www.nature.com/articles/s41377-025-01858-2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://epjam.edp-open.org/articles/epjam/full_html/2022/01/epjam210028/epjam210028.html">https://epjam.edp-open.org/articles/epjam/full_html/2022/01/epjam210028/epjam210028.html</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1002/lpor.202300201">https://doi.org/10.1002/lpor.202300201</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1063/5.0177734">https://doi.org/10.1063/5.0177734</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>2. 2025-2026 metalens 实测效率纪录与口径区分（消色差/宽带/大NA/高效率不可混引）</h4>
+<p><b>物理机制</b>：聚焦效率口径必须区分：绝对效率=焦斑内功率/入射功率；相对效率=焦斑内功率/透射功率。单元（meta-atom）透射/转换效率、仿真效率与整镜实测聚焦效率是三个不同量；消色差（多波长）、宽带、大 NA、单波长高效率是互相制约的设计目标，不可跨口径比较。</p>
+<p><b>可复算性能</b>：【A 低NA消色差+高效率】Zhang et al. Nat. Commun. 16:7485 (2025-08-12)：Si3N4 PECVD 200C、柱高1300nm/最小feature 40nm/周期350nm/深宽比43.33，NA=0.155、直径30um，460-650nm 焦距97.33um+/-5%、Strehl 0.88，实测平均聚焦效率80.39%（仿真91.2%，定义为3xFWHM半径圆内功率/入射功率），自称可见光消色差金属透镜纪录；5x5阵列单镜直径90um/f=980um/NA=0.046，平均效率67%+/-2%。【B 高NA宽带但低效率】Lin J.G. et al. LSA 14:110 (2025)，评述见 LSA 14:204：650-1000nm、NA 0.9(半径20.1um)/NA 0.7(半径30um)，仿真效率22.4-29.1%，实测约10%（阶梯色散层制造偏差），白光成像分辨率1.10um。【C 单波长高效率+晶圆级】Jung et …</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：校正 deeplens_display.json 中所有&#x27;&#x27;效率&#x27;&#x27;类表述：显示波导的效率口径须与 metalens 的绝对/相对/单元/整镜口径一一对应；并衔接 deeptool_fab.json 的 PECVD 低温工艺（Si3N4 200C 兼容 CMOS 后道）与 deeptool_metrology.json 的焦斑/Strehl 测量判据。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-62539-7">https://www.nature.com/articles/s41467-025-62539-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-025-01858-2">https://www.nature.com/articles/s41377-025-01858-2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>3. 超表面光谱仪/偏振成像/AR显示真实器件进展（实验室 vs 量产分界）</h4>
+<p><b>物理机制</b>：超表面同时承担分光与聚焦：多焦点金属透镜把波长映射到焦平面焦点方位角；可调/级联超表面把光谱与 Stokes 参量编码进空间强度分布，再由神经网络/算法解码；AR/VR 近眼显示用全息/衍射超表面在亚波长尺度控制相位振幅偏振以减轻重量与体积。等离激元偏振转换效率低（需换介质或反射式），是光谱仪走向实用的关键瓶颈。</p>
+<p><b>可复算性能</b>：【光谱仪-实验室】Wang et al. LSA 12:103 (2023)：单层 Au 纳米棒(200x80x40nm/周期300nm/300x300um2/1000x1000像素/EBL)，180焦点版500-679nm、1nm间隔、环半径40um、工作距离300um，实测502/533/591/621nm -&gt; 504.1/533.6/591.4/619.8nm，相对误差&lt;0.5%，但只能识别预设计波长，离开设计波长失效，作者明说偏振转换效率低。【角度分辨光谱仪】Cai et al. Nat. Mater. 23:71 (2023, 2025-02 有更正)：4x4um2 footprint、波长精度0.17nm、光谱分辨率0.4nm、线性动态范围149dB、探测极限1.2fJ、角分辨率4.88e-3 rad（超表面光谱仪阵列置于金属透镜后焦面）。【光谱偏振仪-原型】arXiv:2507.20229 -&gt; Optica 13(4):737 (2026)：超表面衍射光网络+深度学习单…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：光谱/偏振成像衔接 deeplens_sensing.json 与 deeplens_display.json 的图像传感器/光谱传感条目；AR/VR 全息/衍射超表面直接对接 deeplens_display.json 的光波导与 MicroLED 近眼显示；芯片集成光谱仪衔接 deepmech_modulator.json 的硅光/CMOS 集成工艺。光加密与 OCT 为本项目未覆盖子方向，建议后续单列。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-023-01148-9">https://www.nature.com/articles/s41377-023-01148-9</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41563-023-01710-1">https://www.nature.com/articles/s41563-023-01710-1</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2507.20229">https://arxiv.org/abs/2507.20229</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>4. 大尺寸晶圆级制造、相邻单元耦合、容差、良率与成本</h4>
+<p><b>物理机制</b>：晶圆级量产依赖 NIL/深紫外光刻的母版复用与转移，成本随母版一次制作、多次复制而摊薄；相邻 meta-atom 间的近场耦合与非局域导模共振既可能造成串扰/角度敏感，也可被利用来突破单单元效率上限；高深宽比纳米柱在显影/刻蚀中的收缩、侧壁角与线宽粗糙度直接改变有效折射率与相位，是容差与良率的主因。</p>
+<p><b>可复算性能</b>：【晶圆级实测】Jung et al. Adv. Mater. 37:2500327 (2025)：8英寸晶圆、UV-NIL 直接打印全无机 TiO2 纳米颗粒墨水，压印&lt;5min、每片约1000颗4mm金属透镜、PDMS 弹性印章复用&gt;=10次；10nm+20nm TiO2 NP 按4:6混合使煅烧后 RI约2.0，25循环 ALD 回填把 RI 提到2.3（孔隙率约30-32% -&gt; 12.3%/5.3%），450C 煅烧去有机物。【良率数据-单源】综述 s41378-025-01064-5 检索片段：4英寸晶圆金属透镜转移良率约95%，但随晶圆尺寸增大良率下降（正文抓取被截短，标单源未验证）。【非局域鲁棒性】Wafer-Scale All-Dielectric Quasi-BIC Metasurfaces, Nano Lett. (2026-02), DOI 10.1021/acs.nanolett.5c05226：深紫外光刻晶圆级 qBIC，导模共振的非局域特性带来对剂量/深度变化…</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：直接对接 deeptool_fab.json 的 NIL sub-10nm、EVG SmartNIL 200mm sub-20nm overlay、ICP-RIE 侧壁粗糙度、胶折射率1.5-1.6/纳米颗粒1.8-2.0 等工艺基线；TiO2 纳米颗粒墨水+ALD 回填是 deeplens_display.json 波导材料之外的新增量产路线。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41378-025-01064-5">https://www.nature.com/articles/s41378-025-01064-5</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1021/acs.nanolett.5c05226">https://doi.org/10.1021/acs.nanolett.5c05226</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13683382">https://pmc.ncbi.nlm.nih.gov/articles/PMC13683382</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>5. 与传统折射/衍射光学的系统级优劣判据（体积/视场/效率/重量/像差）</h4>
+<p><b>物理机制</b>：超表面以单层亚波长结构替代多片研磨/模塑透镜，SWaP-C（尺寸/重量/功耗/成本）占优；但色散、角度依赖与非局域效应使大视场+宽带同时实现困难，多功能（消色差/大NA/偏振）常以成像性能为代价，需计算成像联合设计补偿。判据须按系统级口径（整镜/整机效率、全视场像差）比较，而非单元效率。</p>
+<p><b>可复算性能</b>：Brongersma et al. Nat. Rev. Electrical Eng. 2:125 (2025)：明确 SWaP-C 优于研磨玻璃/模塑塑料透镜，路线为 R2R 纳米压印产业化，应用含结构色/光电探测/生物传感/深度传感/多模态计算成像/热辐射管理（正文付费墙，具体对比数字标单源未验证）。Nanophotonics 14(23):3813 (2025)：人眼 FOV 可达160°，近眼显示需&gt;=120Hz，off-axis 彗差随相位-角度依赖恶化；传统光学靠多片组合消像差但体积/对准开销大。Computational imaging with meta-optics (Princeton Heide 组, Optica)：微型化与多功能牺牲成像性能，必须与计算成像联合设计（定性结论，无系统级实测对照数字）。本项目未找到可复算的&#x27;&#x27;超表面 vs 折射/衍射镜组&#x27;&#x27;同口径系统级实测对照表，属公开数据缺口。</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：理论</p>
+<p><b>与现有赛道接口</b>：为 deeplens_display.json / deeplens_sensing.json 提供&#x27;&#x27;超表面 vs 传统折射/衍射&#x27;&#x27;的选型判据框架，补充 deeptool_sim.json 的联合仿真/逆向设计与 deeptool_metrology.json 的像差测量口径。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s44287-024-00136-4">https://www.nature.com/articles/s44287-024-00136-4</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.cs.princeton.edu/~fheide/papers/CompImaging-MetaOptics-Optica.pdf">https://www.cs.princeton.edu/~fheide/papers/CompImaging-MetaOptics-Optica.pdf</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>6. 未来3-5年最值得下注且可判定 Go/No-Go 的科学问题</h4>
+<p><b>物理机制</b>：基于前述证据，可用同一判据在3-5年内做机械判决的核心问题集中在四条：(1) 效率-带宽-NA 三角能否突破 TBP/FOV 上界（决定消色差大 NA 镜头是否可行）；(2) 单元效率到整镜效率、仿真到实测的转化率能否收敛（决定&#x27;&#x27;纪录效率&#x27;&#x27;能否工程化）；(3) 晶圆级良率-成本曲线是否随尺寸恶化（决定量产经济性）；(4) 非局域耦合/可调超表面能否在保持效率下实现百万级可调态与全可见大 FOV（决定动态显示/成像落地）。</p>
+<p><b>可复算性能</b>：Go/No-Go 判据（可由现有数字锚定）：① 高NA(&gt;=0.7)且宽带(&gt;=300nm)下实测整镜效率能否从约10%提升到&gt;=30%（基线 Lin LSA 14:110 实测约10%、TBP 上界 DOI 10.1063/5.0177734）；② 单元-&gt;整镜效率转化率：消色差低NA 已实测80.39%但仿真91.2%（差约11个百分点，Nat. Commun. 16:7485），能否把仿真-实测差压到&lt;5个百分点；③ 8英寸晶圆(Yield/成本基线：约1000颗4mm镜/片、压印&lt;5min、印章&gt;=10次，Adv. Mater. 37:2500327)下随尺寸增大的良率下降(s41378 片段4英寸约95%)能否被抑制；④ 可调超表面能否达到百万级可调态+全可见+&gt;=120Hz(Nanophotonics 14(23):3813 指出目前不可行)。</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：理论</p>
+<p><b>与现有赛道接口</b>：统合全部既有赛道：与 deeplens_display.json（AR/VR/显示）、deeplens_sensing.json（光谱/成像）、deeptool_fab.json（量产工艺）、deeptool_sim.json（逆向设计）、deepmech_modulator.json（可调/集成）形成可判定下注清单，供 lead 汇总为跨赛道盲区优先级。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-025-01858-2">https://www.nature.com/articles/s41377-025-01858-2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-62539-7">https://www.nature.com/articles/s41467-025-62539-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1063/5.0177734">https://doi.org/10.1063/5.0177734</a>）来源链接</li>
+</ul>
+</div>
+<h3>光频梳 / 微腔光频梳</h3>
+<div class="front">
+<h4>1. Kerr 耗散孤子（DKS）亮孤子 + 自注入锁定（SIL）免调启动</h4>
+<p><b>物理机制</b>：微环内 Kerr 三阶非线性四波混频的参量增益，与反常群速度色散(GVD)及腔损耗达到双重平衡，形成 sech² 型亮孤子脉冲串；重复频率由腔自由光谱范围(FSR)决定。Z-cut TFLN 中光折射(photorefraction)与热光效应温度系数相反、在红失谐区部分抵消，形成天然热稳定区，使 DKS 一旦手动触发即可长时间自由运转。自注入锁定(SIL)利用腔模瑞利背散射引起的反向传播模耦合提供光反馈，把泵浦激光频率钉扎在孤子存在区间，实现 turnkey（上电即锁、与扫频方向/速度无关）并把激光线宽压窄。劣势：泵浦功率通常随 1/FSR 标度上升，亮孤子单线功率偏低，需 EDFA/SOA 补偿，放大又引入线宽恶化。</p>
+<p><b>可复算性能</b>：Z-cut TFLN 混合梳论文(Light Sci Appl 2025, 14:270)：片上泵 189 mW 得纯 sech² 单孤子、间距约 504 GHz；倍频程单 DKS 覆盖 131.3–263.8 THz、间距 660 GHz、片上泵 372 mW；手动触发后无 TEC、无芯片/泵反馈，梳功率连续 12 小时稳定，仅下降约 11%（源于透镜光纤耦合漂移）。电泵浦 TFLN(Nanophotonics 2025, 14(26):4813)：DFB 激光(Shijia DC-1550-HP-02)直驱、无光放大；片上泵约 25 mW，Qo=2.93×10^6、Qe=6.57×10^6、η≈0.3、理论阈值 Pth=5.4 mW；FSR=200.17 GHz、D2/2π=3.25 MHz(反常色散)；谱宽 1480–1660 nm(&gt;180 nm)，中心梳线 -7.4 dBm，排除残余泵的泵→梳转换效率 5.2%，墙插效率约 1.1%(DFB 电光 20.8%×5.2%)；SIL…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：直接对接现有相干光通信的多波长 WDM 光源、光钟/微波光子低噪声参考、片上光谱学；与窄线宽激光器赛道共享 SIL/超高 Q 微腔技术栈。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-025-01906-x">https://www.nature.com/articles/s41377-025-01906-x</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12714037">https://pmc.ncbi.nlm.nih.gov/articles/PMC12714037</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>2. 暗孤子/暗脉冲（platicon、dark pulse）与耗散工程</h4>
+<p><b>物理机制</b>：在正常 GVD 微腔中，Kerr 非线性与正常色散平衡、增益与损耗再平衡，形成连续波背景上的平顶暗脉冲（时域凹口），频谱较 sech² 更平、单梳线功率高、泵→梳转换效率高，且更易低重频（大腔）工作。LiNbO3 的强受激拉曼散射(SRS)会与 Kerr 四波混频竞争、产生 CW 拉曼激光并破坏锁模：用 pulley（滑轮）耦合器设计波长相关相位匹配，使拉曼激活波长的外耗散率远大于泵附近 Stokes/anti-Stokes 模式，把拉曼激光阈值抬高到不干扰 Kerr 梳的程度，从而在正常色散 LN 微腔中实现暗脉冲。劣势：对色散与耦合几何极敏感、存在避免模交叉(spikes)、需要反馈稳定失谐。</p>
+<p><b>可复算性能</b>：Nat Commun 2025, 16:2389(Lv 等)：Z-cut TFLN 570 nm 厚、R=817 μm、刻蚀 300 nm、顶宽 2.2 μm，正常色散 D2/2π=-6.2 kHz，FSR=24.803 GHz；pulley 耦合器(总线宽 1.756 μm、包角 15°、gap 450 nm)使 1600 nm 处总耗散率达 2π×350 MHz，为 1563.2 nm 泵附近的 3 倍，拉曼阈值相应提高 3 倍；观测到 153 cm⁻¹(E(TO)1) 与 628 cm⁻¹(A(TO)4) 拉曼峰；梳谱 1440–1640 nm(200 nm)，间距单 FSR 至 4 FSR 可调，单 FSR 拍频 24.8038 GHz；片上总线泵 260 mW、泵→梳线转换效率最高 4%；平顶脉宽随失谐从 5.4 ps 变到 2.4 ps；通过梳功率反馈锁失谐，重频可调 292 kHz，数小时稳定；重频相噪 -101 dBc/Hz@10 kHz、-143 dBc/Hz@1 MH…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：高单线功率天然适配高阶调制 coherent WDM 与微波光子；正常色散方案覆盖 LN 全透明窗口，可对接可见光原子跃迁光钟/天文光谱仪；与硅光调制器共用 CMOS 代工。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-57736-3">https://www.nature.com/articles/s41467-025-57736-3</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-67603-w">https://www.nature.com/articles/s41467-025-67603-w</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>3. 电光频梳（EO comb）与混合 Kerr-电光梳（微波率间距 × 宽带）</h4>
+<p><b>物理机制</b>：纯 EO 梳利用 Pockels 效应由微波相位调制产生等间隔边带，线间距直接等于微波驱动频率（通常 &lt;100 GHz），可直接与电子电路接口，但带宽受 EO 相互作用强度、光 Q 与色散限制；Kerr DKS 可达倍频程但线间距数百 GHz 以上，存在 spacing–span 权衡。混合方案：先用 Z-cut TFLN 的近 THz 间距 DKS 产生宽带梳，再让每条 DKS 梳线通过 X-cut TFLN 非谐振高速 EO 相位调制器产生边带，用一个调制器把近 THz 间距向下分频到微波率，同时保持宽带；Δf=f_DKS−N·f_RF 可拍频检测并锁相到微波参考，实现对近 THz 梳距的电子学控制。劣势：需要数瓦电驱功率，双芯片耦合/插损大。</p>
+<p><b>可复算性能</b>：Light Sci Appl 2025, 14:270：X-cut TFLN 2 cm 共面传输线 EO 相位调制器，29.158 GHz 单音驱动、电功率 4.47 W(36.5 dBm)；6 GHz 处 Vπ 与 3 dB EO 带宽在约 30 THz 光带宽内仅变化约 1.4 V 和 8 GHz。混合梳：410.319 GHz DKS 经 N=14 分频到 29.308 GHz，2589 条线、端到端 75.9 THz(588 nm)；光泵 125 mW(21 dBm)、电驱 2.51 W(34.5 dBm)，均为片上；失谐频率 Δf 锁到 65.865 MHz×32=2.107 GHz，锁定时拍频线宽约 30 kHz，并能跟随参考正弦调制。损耗预算：1550 nm 处 EO 载波抑制约 10 dB（近单位效率的边带转换，非损耗）、DKS 芯片出耦约 6 dB、EO 芯片插损约 8 dB、&lt;150 THz 因光纤弯曲另约 12 dB。Z-cut DKS 自由运转 uptime &gt;1…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：密集 WDM 信道源（微波率间距匹配 ITU 栅格）、激光光谱学频率参考、微波/毫米波与雷达波形合成、光计算/张量核多波长源；可与 TFLN 高效 PPLN 倍频衔接做 f-2f 自参考。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-025-01906-x">https://www.nature.com/articles/s41377-025-01906-x</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>4. 晶圆级制造偏差、色散/热管理、自启动与寿命</h4>
+<p><b>物理机制</b>：微梳能否锁模由集成色散 D_int 决定，而 D_int 对膜厚、波导宽、刻蚀深度极敏感，因此晶圆内厚度均匀性直接决定可锁模芯片比例（yield）；热光漂移与光折射既提供红失谐自稳定、也是长期漂移源；确定性启动依赖 SIL、辅助冷却光或蓝光辅助/触发脉冲。可靠性与寿命（老化、FTY、FIT、封装后长期漂移）公开数据极少，是本方向最大证据缺口。</p>
+<p><b>可复算性能</b>：arXiv:2506.20895(NIST/AIM Photonics，2025-06，300 mm PECVD SiN ≈700 nm)：全片膜厚偏差 ±2%；64 个 reticle field(各 26×32 mm，含 36 个 2.25×4.5 mm 芯片)；透镜光纤插损 2.02±0.11 dB/facet(20 器件)；173 个 TE0 谐振 Qi 集中于约 1×10^6、最概然 0.84×10^6，121 个 TM0 集中于约 0.65×10^6、最概然 0.69×10^6；283 THz(1060 nm)泵、片上约 250 mW；关键良率分布：single 亮 DKS 仅 26/64 field、近零色散(switching wave interlocking)30/64、无梳 13/64、5/64 两者兼有；两个 field 厚度差约 10 nm 就使 D_int 由反常转正常、决定能否起梳；最宽梳跨 210–380 THz，覆盖 Cs D2 852 nm、Cs D1…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：可复用 CMOS 晶圆代工(300 mm PECVD/LPCVD SiN)、与电子及 III-V 有源器件异构集成；良率/色散分布数据是从实验室走向可量产 WDM 光源与光钟的直接接口；寿命数据缺口阻断车规/电信级认证。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2506.20895">https://arxiv.org/html/2506.20895</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2502.10941">https://arxiv.org/abs/2502.10941</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>5. 四类系统级应用证据：WDM 通信 / 双梳光谱与测距 / FMCW LiDAR / 光钟与频率合成</h4>
+<p><b>物理机制</b>：微梳以单泵+无源微环替代多路激光器：(1) WDM 用高功率平坦梳线作多载波，配合相干调制与 DSP；(2) 双梳/ Vernier 用两把梳的拍频实现无移动部件的宽带光谱与绝对测距，单光子级接收；(3) FMCW LiDAR 用梳的多波长并行调频配合光学相控阵(OPA)实现 3D 点云；(4) 光钟/频率合成用两把超稳激光把梳稳定后光电探测，把光学频率分频到微波（OFD）。四类的共通瓶颈是单梳线功率与放大器引入的噪声。</p>
+<p><b>可复算性能</b>：(1) WDM(Nat Commun, s41467-025-67603-w)：集中供电 SIL 暗脉冲微梳，泵→梳 61.5%、16 条线宽 &lt;600 Hz；110 GBaud DP-32QAM 单波 raw/net 1.1/1.008 Tbps、BER 7×10⁻³(低于 9.1% FEC)；160 km SMF 16 波 70 GBaud DP-16QAM raw/net 8.96/8.37 Tbps；同 EVM 下 OSNR 需求比 10 kHz 商用 ECL 低 3 dB；24 芯 MCF 2 km、16 波 70 GBaud raw/net 215.04/200.97 Tbps；芯片级发射机(SOA+硅光 IWC 波长整形，12 个微环、FSR≈1.3 THz、IWC 插损 8 dB)10 km 达 5.12 Tbps、体积缩小约 100×。(2) 双梳测距(Nat Commun 2025, 16:6853, s41467-025-62022-3)：反向传播孤子+Vernie…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：WDM 直接对接相干光模块/数据中心互联；双梳与 LiDAR 对接精密光谱、工业测距、自动驾驶传感；光钟/OFD 对接导航、卫星通信、雷达；与现有可调激光器/窄线宽 ECL 赛道形成替代与互补。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-67603-w">https://www.nature.com/articles/s41467-025-67603-w</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-62022-3">https://www.nature.com/articles/s41467-025-62022-3</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-56483-9">https://www.nature.com/articles/s41467-025-56483-9</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41566-025-01669-2">https://www.nature.com/articles/s41566-025-01669-2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41566-025-01662-9">https://www.nature.com/articles/s41566-025-01662-9</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>6. 相对窄线宽/可调激光器的系统级成本与可靠性对标（公开硬数字缺口）</h4>
+<p><b>物理机制</b>：微梳主张用一条泵浦激光+无源微环替代 N 台可调/窄线宽 ECL，从而在体积、功耗、信道数上取得规模优势；但为达到调制所需单线功率常需 SOA/EDFA，放大会把线宽恶化 3–10 倍并抬高 OCNR 门限，削弱相干通信优势。公开文献多报性能指标，极少给出美元单价、MTBF、现场失效率或全生命周期成本。</p>
+<p><b>可复算性能</b>：可核实的量化对比仅有：芯片级发射机体积缩小约 100×；同 EVM 下 OSNR 需求比 10 kHz ECL 低 3 dB；160 km 后 OSNR penalty 差异由 1 dB 扩大到 3 dB（微梳脉冲格式抗非线性更强）；SOA 放大到 10 dBm 时梳线宽 EDFA 增约 3×、SOA 增约 10×；双 SOA+IWC+调制器在 2 dBm 输出时 OCNR 下降约 13 dB；输入 OCNR&lt;25 dB 时 SOA ASE 淹没载波，即泵/梳线宽与光信噪比是硬门槛。对标基线为 10 kHz 线宽商用 ECL 与常规可调激光器。[⚠ 未覆盖]未检索到公开美元单价/BOM、MTBF、FTY 良率、长周期现场可靠性或与 ECL 的 TCO 硬数字对比。</p>
+<p><b>证据状态</b>：未覆盖</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：决定微梳能否从科研原型切入现有可调激光器/窄线宽 ECL 的商用市场；成本与可靠性硬数字缺失是当前投资决策的关键盲区。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-67603-w">https://www.nature.com/articles/s41467-025-67603-w</a>）来源链接</li>
+</ul>
+</div>
+<h3>集成量子光子学</h3>
+<div class="front">
+<h4>1. 确定性量子点单光子源：微腔Purcell增强与波形整形激发</h4>
+<p><b>物理机制</b>：半导体量子点激子级联辐射近似确定性产生单光子；蝶形/整形激光脉冲提高激子准备效率并抑制多光子；高量子效率量子点与可调开放微腔增强零声子线并提高收集效率。亮度、纯度和不可区分性并非同一最优工作点：提高泵浦/ Purcell增强会增加复用误差或载流子占据噪声，光谱过滤可提升纯度但牺牲亮度，载流子噪声和电荷环境造成退相干并降低原始HOM可见度。</p>
+<p><b>可复算性能</b>：2025_02_Nature_Photonics_Ding：system_efficiency：0.712(18)，即71.2±1.8%；multiphoton_error_g2_0：0.0205(6)；indistinguishability：0.9856(13)；intensity_squeezing：1.89(14) dB；forty_photon_events：1.67 mHz；interpretation：上述效率、g2(0)与不可区分性为同文报道的器件结果；40光子事件频率提示当前速率仍低。超过特定线性光学架构的1/3损耗容忍阈值不等于容错量子机。；2025_10_telecom_O_band_preprint：wavelength_range_nm：1260—1360；representative_lifetime_ps：150(2)；lifetime_limited_linewidth_GHz：1.08(1)；rf_linewidth_GHz：1.15(5)；pi_exc…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：深化 outputs/deep-research/research_track_quantum.json 的 tech_core：此前只有高效率光源与光子损耗概述；本机制补齐QD/SFWM/SPDC的亮度—纯度—不可区分性权衡、2025实测和可执行Go/No-Go。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41566-025-01639-8">https://www.nature.com/articles/s41566-025-01639-8</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2510.09251">https://arxiv.org/abs/2510.09251</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2511.23232">https://arxiv.org/abs/2511.23232</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>2. 概率性光子对源：SiN/Si3N4/LN中的SFWM与SPDC</h4>
+<p><b>物理机制</b>：SFWM由三阶非线性产生信号—闲频光子对，SPDC由有效二阶非线性产生光子对。两者都是概率性过程：提高泵浦可提高亮度和 heralding rate，但多对产生、coincidence-to-accidental ratio（CAR）和光谱相关性恶化。干涉耦合多环/级联谐振腔可展平相位、扩大双源匹配窗口，以额外腔长/损耗/热稳定性换取低滤波损失和高纯度。铌酸锂强χ2和可调谐相位匹配有利于高 pair brightness；硅氮化物SPDC依赖光镓基诱导的有效χ2，空间电荷光栅的长期稳定性是独立工程问题。</p>
+<p><b>可复算性能</b>：2025_02_Nature_PsiQuantum_SFWM：wafer_mm：300；spectral_purity_without_filtering：99.5±0.1%；independent_source_HOM：99.50±0.25%；heralded_g2_0：0.00358±0.00024；source_CAR：929±4；maximum_Klyshko_efficiency：约26%；pump_repetition_MHz：125；cascaded_resonators：24；cascade_purity_upper_bound：99.35%（假设光谱相位平坦）；cascade_pair_probability：5%，泵浦脉冲约100 pJ；cascade_two_source_indistinguishability：±400 pm共振偏移时&gt;99%；单环对应窗口&lt;±40 pm；component_losses：SiN单模1.8±0.2 dB/m；多模0.5±0.3 d…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：把 outputs/deep-research/research_track_quantum.json 的 SPDC/OPO与PsiQuantum Omega条目升级为可核算的源级效率、器件损耗和级联校准数据。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-025-08820-7">https://www.nature.com/articles/s41586-025-08820-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-025-08662-3">https://www.nature.com/articles/s41586-025-08662-3</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2506.23625">https://arxiv.org/abs/2506.23625</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1364/ol.547100">https://doi.org/10.1364/ol.547100</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>3. 可重构MZI/Mach-Zehnder mesh与光子量子walk</h4>
+<p><b>物理机制</b>：MZI通过两个移相器调节分束比和相位，Reck/Clements网格用O(N²)个MZI实现任意N×N酉变换；可重构性来自热光/电光相移器。制造分束不平衡、初始相位误差、热串扰和插损会沿网格累积；校准需要相移曲线、端口监测和反复矩阵重构。量子walk把单光子或多光子演化映射为图上传播，可用较少物理元件产生大状态空间，但多光子符合计数随模式数指数稀疏，损耗与不可区分性会抹平干涉。</p>
+<p><b>可复算性能</b>：2025_08_Communications_Physics_HOOC：experimental_matrix_size：4×4；phase_shifters_Clements：48；phase_shifters_FFT：28；offline_only_fidelity：0.79和0.71；after_calibration_fidelity：0.98±0.06和0.98±0.08；iterations_to_fidelity_over_0_97：≤10；time_per_iteration_s：约1.0（Clements）和0.6（FFT）；voltage_source_update_rate：100 Sa/s；caveat：经典相干光校准，不是单光子量子mesh性能；4阶实验结果不能外推为大规模量子校准开销已解决。；2025_05_off_chip_configuration：experimental_ports：4；unitary_matrices：100；experimental…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：将 outputs/deep-research/research_track_quantum.json 的低损耗干涉仪/FBQC概述补齐为MZI数量标度、损耗部件账本、重构速度和2025校准实测。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s42005-025-02247-2">https://www.nature.com/articles/s42005-025-02247-2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s42005-025-02135-9">https://www.nature.com/articles/s42005-025-02135-9</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-024-01627-7">https://www.nature.com/articles/s41377-024-01627-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-025-08820-7">https://www.nature.com/articles/s41586-025-08820-7</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>4. 片上SNSPD与SPAD：效率、暗计数、抖动和带宽的联合预算</h4>
+<p><b>物理机制</b>：SNSPD利用纳米线超导态被单光子扰动后形成电阻区的检测机制，效率受吸收/耦合与纳米线占空比影响，暗计数和抖动低但需低温；级联两根纳米线可用第二根的在位响应校准第一根效率。SPAD在盖革模式发生雪崩，易与CMOS/控制电路集成且可在较高温度工作，但效率—暗计数—后脉冲—抖动强耦合，门控可压低平均暗计数却牺牲占空比，自由运行受恢复/后脉冲限制。</p>
+<p><b>可复算性能</b>：2025_10_Light_Science_Applications_cascaded_SNSPD：on_chip_efficiency_1550_nm：99.73%（计入0.22%反射）；structure：同一Si波导上异质转移两条横向comb NbN纳米线；temperature_K：约1.5；calibration：级联结构提供原位自校准，去除光纤耦合和绝对功率标定不确定性；caveat：最佳器件结果，不是晶圆良率或整套系统效率。；2025_02_PsiQuantum_foundry_SNSPD：baseline_temperature_K：约2；baseline_median_on_chip_efficiency：93.4%；baseline_mean_efficiency：88.9±3.5%；next_gen_PNRD_median：98.9%；next_gen_PNRD_mean：96.2±4.3%；photon_number_resolution：0—4光子；2025_0…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：深化 outputs/deep-research/research_track_quantum.json 的SNSPD与低温探测岗位描述，加入效率/暗计数/抖动/带宽硬约束及与SPAD的路线取舍。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12533016/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12533016/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-025-08820-7">https://www.nature.com/articles/s41586-025-08820-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://iopscience.iop.org/article/10.1088/1361-6463/add946">https://iopscience.iop.org/article/10.1088/1361-6463/add946</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2408.06921">https://arxiv.org/html/2408.06921</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>5. 量子点—铌酸锂混合线路与硅T中心自旋—光子接口</h4>
+<p><b>物理机制</b>：量子点作为低噪声光学发射体，LN波导提供低损耗路由和压电局域应变调谐；可寻址调谐用于把不同发射体波长/声子边带拉到可干涉区间，但调谐范围、双光子可见度和耦合损失共同决定网络可用性。硅T中心以电子自旋作为通信接口、核自旋作为存储，p-i-n电注入可实现并行触发和光子 herald；电注入也激发其他缺陷，因此光谱/时间过滤与背景扣除决定SPAM保真度。LN本身还可通过χ2产生概率性光子对，必须与QD-LN混合发射线路区分。</p>
+<p><b>可复算性能</b>：2025_11_Nature_Materials_QD_LN：deterministic_QD_waveguide_sources：20；piezoelectric_local_strain_tuning_meV：最高7.7；two_photon_interference_visibility_separated_QDs：0.73；interpretation：混合发射体—路由平台的就绪证据，不是纯LN自发单光子源。；2025_09_Nature_Photonics_silicon_T_center：single_photon_EL_g2_0：0.05(2)；postselected_spin_initialization_fidelity：92(8)%；preprint_detail_operation_temperature_K：1.5；preprint_detail_EL_count_rate_cps：209；preprint_detail_electrical_drive：8 V…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：在 outputs/deep-research/research_track_quantum.json 的量子点/硅光子/量子通信总览之外，新增自旋—光子接口、LN压电调谐、纯LN光子对源三条可独立判断的工程支路。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41563-025-02398-1">https://www.nature.com/articles/s41563-025-02398-1</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2503.23755">https://arxiv.org/abs/2503.23755</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41566-025-01752-8">https://www.nature.com/articles/s41566-025-01752-8</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2501.10597">https://arxiv.org/html/2501.10597</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2506.23625">https://arxiv.org/abs/2506.23625</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>6. 光子量子优势的可复现验证与城域QKD/量子存储网络</h4>
+<p><b>物理机制</b>：GBS以压缩态注入线性光学网络，输出光子数分布是多光子永久子干涉的采样任务；其困难性依赖模式、损耗、噪声和探测器模型，经典模拟必须针对具体实验版本评估。量子网络则分别面临QKD的帧同步/偏振/有限密钥安全率，以及量子存储的波长转换、相位稳定、存储寿命与纠缠成功率；QKD商用设备和存储中继原型属于不同成熟度，不能互相代表。</p>
+<p><b>可复算性能</b>：2026_05_Nature_Jiuzhang_4_0：squeezed_states：1024；modes：8176；maximum_detected_photons：3050；source_efficiency：92%；overall_system_efficiency：51%；connectivity：16^3=4096，立方连接；sample_time_us_from_preprint：25.6；classical_MPS_estimate_from_preprint：El Capitan构建所需tensor network &gt;10^42年；raw_data：https://quantum.ustc.edu.cn/web/node/1227；caveat：25.6 μs与&gt;10^42年是特定采样任务和特定MPS基线估计，不是通用应用加速比；Hilbert-space维数的HTML上标转写异常，故不引用该指数。；2026_04_classical_counterevidence_p…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：修正 outputs/deep-research/research_track_quantum.json 中九章四号与Xanadu Borealis的宽泛“量子优势”表述，增加验证口径；在QKD/网络条目中区分商用设备、城域现场系统和量子存储中继原型。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-026-10523-6">https://www.nature.com/articles/s41586-026-10523-6</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2508.09092">https://arxiv.org/abs/2508.09092</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2604.12330">https://arxiv.org/abs/2604.12330</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2510.17659">https://arxiv.org/abs/2510.17659</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2508.17940">https://arxiv.org/abs/2508.17940</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2504.05660">https://arxiv.org/abs/2504.05660</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-024-07308-0">https://www.nature.com/articles/s41586-024-07308-0</a>）来源链接</li>
+</ul>
+</div>
+<h3>非线性光子与拓扑光子</h3>
+<div class="front">
+<h4>1. M1 薄膜铌酸锂 χ² 准相位匹配 SHG/SFG/DFG：自适应极化 + 低损耗耦合把『片内效率』变成系统效率</h4>
+<p><b>物理机制</b>：d33≈25 pm/V 的 χ² 二阶非线性在亚微米 TFLN 波导中用周期极化实现准相位匹配（QPM），PSH=η_SHG·P_FH²；片内效率 η_SHG∝d33²L²/A_eff 并受膜厚不均匀导致的相位失配制约，系统效率 η_sys=η_SHG·η_coup,FH²·η_coup,SH。泵浦功率极限由耦合损耗、传播损耗和器件损伤/热漂移决定：体块 PPLN 需数瓦泵浦，片上把功率降到 mW–百 mW 级，但反向受限的是耦合与膜厚，而非材料 nonlinearity。SFG/DFG 与 SHG 共享 χ² 同一机制，可用于波长转换与量子接口。</p>
+<p><b>可复算性能</b>：platform_coefficient：LN d33≈25 pm/V；直波导周期极化 TFLN 归一化效率 2500–5000 %/W/cm²（文献汇总）；system_demo_2025：arXiv:2511.17327（21 Nov 2025）：7 mm 极化区、~1.5 cm 器件，光纤到光纤 η_sys=152 %/W；η_coup,FH=0.74（−1.3 dB/面），η_coup,SH=0.516（−2.9 dB/面），推导片内 η_SHG=538 %/W；同表普通单波导恒定周期 η_sys 仅 0.03–1.1 %/W；adapted_poling：Nat Nanotechnol 19, 44–50 (2024)：21 mm 自适应极化，片内 9500 %/W、系统 162 %/W；resonator_tradeoff：双谐振微环片内高达 5,000,000 %/W、系统最高 9941 %/W，但线宽仅数百 MHz、FH/SH 谐振不可独立调，扩展到多器件困难；热调谐 0…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：直接对应此前项目『光计算非线性难题/转换税』：χ² 波长转换可承担光计算读写/缓存的频率搬运，但系统效率由光纤-芯片耦合和膜厚均匀性（非材料 χ²）卡住，说明『转换税』首先是一个封装与工艺问题。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2511.17327">https://arxiv.org/html/2511.17327</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12714032/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12714032/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2508.08599">https://arxiv.org/abs/2508.08599</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1038/s41565-023-01525-w">https://doi.org/10.1038/s41565-023-01525-w</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>2. M2 未极化 III-V（InGaP）模态相位匹配 + 纳米加热器自适应相匹配的双向低噪声量子频率转换</h4>
+<p><b>物理机制</b>：不依赖极化/微环谐振，利用 InGaP 大 χ²（220 pm/V）与 modal phase matching（TE00@1550 nm + TM00@780 nm）实现 SFG/DFG 双向转换，以 1550 nm 辅助泵浦避免长波泵带来的 SPDC 噪声；沿波导的 15 个纳米加热器逐段补偿薄膜厚度起伏造成的相位失配，牺牲少量归一化效率换取宽带宽、可调谐与低噪声。峰值效率随 e^{−(α+β)L/2} 衰减，达到峰值所需泵浦∝1/(L²η_SFG)，故短器件抗损耗但需更高泵浦。</p>
+<p><b>可复算性能</b>：coefficient：InGaP χ(2)=220 pm/V；无损耗理想 η_SFG=520,000 %/W/cm²；device_6mm：6 mm：内部效率 27%（外部 11%），泵浦 20 mW，带宽 31 GHz，拟合 η_SFG=70,000 %/W/cm²；780 nm TM00 损耗 ~20 dB/cm，1550 nm TE00 ~1 dB/cm；15 个纳米加热器，电压仅数伏；device_2.5mm：2.5 mm：内部 55%（外部 22%），泵浦 50 mW，带宽 50 GHz，η_SFG=175,000 %/W/cm²；noise_and_quantum：20 mW 泵浦、偏离泵 20 nm 处噪声 10^-4 cps/Hz；上转换保持时-能纠缠可见度 83%→76%（&gt;1/√2）；下转换 time-bin 量子比特六基态平均保真度 96.2±0.6%；venue：Nature Communications 17, 4995 (2026)，published 20…</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：给出光计算『转换税』的一条替代路径：把 χ² 转换器与 III-V 泵浦激光器/量子点光源同片集成，减少电→光→不同波段再转换的级数和泵浦功耗；但需第三方复现 55% 内部效率与低噪声才可写入设计基线。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-026-71688-2">https://www.nature.com/articles/s41467-026-71688-2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-024-01653-5">https://www.nature.com/articles/s41377-024-01653-5</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>3. M3 χ² 拓扑孤子频率梳（LN 片上 OPO）：以相位缺陷代替高 Q 腔与高速调制器</h4>
+<p><b>物理机制</b>：在 χ² 光学参量振荡器中，泵浦半频处的两个相位差 π 的连续波解之间的相位缺陷（domain-wall / topological soliton）形成耗散孤子；其存在对色散符号不敏感，因而绕开 χ³ Kerr 微梳对反常色散、高 Q 与精确色散工程的依赖。低精细度腔 + 混合集成半导体激光器即可 turn-key 起振，是『非线性+拓扑』在频率转换/片内光源上的直接产物。注意此处的『topological』指非线性相位拓扑缺陷，不是电子能带拓扑边缘态。</p>
+<p><b>可复算性能</b>：soliton：短至 60 fs 的拓扑孤子，中心波长 ~2 μm；architecture：χ² 片上纳米光子 OPO、低精细度、混合集成半导体激光器、与色散区（正常/反常）无关；不需要高 Q 微腔与高速电光调制器；venue：Nature 652, 76–81 (2026)，published 2026-03-25</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：对光计算的意义：片上多波长光源可由单个低精细度 χ² 器件提供（梳齿作并行 WDM 通道），降低电调制器与多激光器的『电子非线性/接口税』；但 60 fs 孤子与 2 μm 波段离现有 1550 nm 计算生态尚有距离。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-026-10292-2">https://www.nature.com/articles/s41586-026-10292-2</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>4. M4 光生/电偏置可重构 χ²（SiN + χ³ + 直流偏置）：把非线性做成可原位反设计的器件参数</h4>
+<p><b>物理机制</b>：在 SiN 波导上集成 7.5 μm 硅富氮光导层与 20 nm ITO 电极，外加偏置打破反演对称，由 χ³ 经强直流场有效产生 χ²：χ²(x,z)=3χ³E_bias(x,z)。通过空间编程 E_bias 就地写入准相位匹配图样，可用逆设计补偿制造误差与波长随机游走，把原本一次性固定的非线性器件变成可重构、可校准的功能层。</p>
+<p><b>可复算性能</b>：stack：SiN 芯 2.05 μm / SiO2 包层 1 μm；7.5 μm silicon-rich-nitride 光导；20 nm ITO 电极；偏置最高 1000 V；programmable_chi2：诱导 χ² 动态范围 0.47 pm/V；空间分辨率 7.5 μm；有效面积 ~0.7×0.4 cm；更新 ~1 Hz（RC 极限 ~20 Hz）；标称极化周期 16.65 μm；1560 nm 处 GVM −92 fs/mm；pump：CW 片上泵浦 2.2–4.5 mW；脉冲 60 fs/100 MHz，平均片上泵浦 6 mW（时空调制下 40 mW）；limitation：0.47 pm/V 远低于 PPLN 的 25 pm/V；刷新率 1–20 Hz，仅适合慢速重配置/校准，不能逐次推理切换；venue：Nature 649, 330–337 (2025)，published 2025-10-08，open access</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：把『光计算非线性单元制造公差』问题转化为可软件补偿问题：若自发随机游走可实时补偿，则对 M1 的膜厚不均匀、M2 的加热器逐段校准形成通用方法论；但慢刷新与低 χ² 决定它只做标定层，不做主转换层。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41586-025-09620-9">https://www.nature.com/articles/s41586-025-09620-9</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>5. M5 拓扑保护的边界与可判定优势：SSH 波导-array SPDC 谱鲁棒性，以及 chiral edge vs 优化 W1 反例</h4>
+<p><b>物理机制</b>：拓扑光子能真正容忍的是『保持带隙与拓扑不变量不变』的扰动：SSH 阵列中相互作用模式的能带结构使 SPDC 共振谱对耦合无序稳定；而二维边缘态相对普通二维结构的强局域只是维度差异，不能算拓扑增益；局域长度由带隙宽度（非拓扑量）决定。公平判据是同维度下 chiral 单向边缘态 vs 非手性边缘/一维体态，且需与经过数十年优化的 W1 光子晶体波导对比；2023 年反例中 W1 在慢光区散射损耗反而更低。结论：拓扑带结构是设计的起点，必须与微调/逆设计结合。</p>
+<p><b>可复算性能</b>：topological_SPDC：arXiv:2510.23796 / PRX Quantum 7, 043030 (2026)：uniform、trivial、topological SSH 阵列系统对比，只有拓扑构型在耦合无序下保持 SPDC 共振谱，共振波长涨落降低超过一个数量级（&gt;10×）；数值显示多源干涉与高维纠缠高保真；v3 2026-11-18；limits：Nat Rev Phys 8, 55–64 (2025) Perspective：拓扑保护是近似的；局域长度由带隙宽度决定；公平对比须用 PRL 113, 087403 (2014) 的 chiral vs non-chiral 判据；2023 年 valley-Hall vs 优化 W1：W1 慢光散射损耗更低；ripe_areas：作者明确点名 photonic crystal waveguides/fibers、integrated lasers、frequency combs 为最可能出真突破的三块</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：纠正此前项目可能隐含的『拓扑=抗散射万能药』假设：抗散射互连的 Go/No-Go 必须先做同维度、同优化程度的非拓扑基线对比；只有谱稳定性这类由带隙/能带结构决定的指标已有 &gt;10× 的实测拓扑增益。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s42254-025-00889-3">https://www.nature.com/articles/s42254-025-00889-3</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://dleykam.blogspot.com/2025/11/topological-photonics-limitations-and.html">https://dleykam.blogspot.com/2025/11/topological-photonics-limitations-and.html</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2510.23796">https://arxiv.org/abs/2510.23796</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1103/PhysRevLett.113.087403">https://doi.org/10.1103/PhysRevLett.113.087403</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>6. M6 超快全光非线性激活与全光循环计算：飞焦阈值激活 + &gt;100 GHz 时钟直接绕过电子非线性</h4>
+<p><b>物理机制</b>：用 Kerr 非线性与可饱和吸收在硅/石墨烯光子晶体微腔中实现光-光直接控制的全光激活函数：Δλ=(Δn_eff/n_g)λ0=n2_eff·Q·P_peak·λ0，Q 放大非线性相移，石墨烯可饱和吸收提供低能量阈值与非单调/可重构传递函数；进一步把线性运算、非线性函数、存储全部放在光域构成端到端全光循环神经网络，时钟不受 ~5 GHz 电子时钟约束。能否消除『转换税』取决于能否把光域激活与存储、IO 闭合在同一芯片上。</p>
+<p><b>可复算性能</b>：activator：Light Sci Appl 15, 128 (2026)（2026-02-27）：石墨烯-硅光子晶体腔，腔 Q 数百；可饱和吸收阈值 4 fJ、响应 1.05 ps FWHM；可重构 sigmoid 阈值 30 fJ（1534 nm）、ReLU 阈值 120 fJ（1541 nm），激活时间 &lt;4.5 ps，尺寸 15 μm×10 μm；文中称比其它片上 ANA 的优值高 &gt;2 个数量级（另一处表述 ≥4 个数量级）；projection_caveat：架构投影 10^6 TOPs/W/mm² 依赖 100 GHz 时钟与 150 fs 片上光源——该光源仍是挑战，属推算而非实测；all_optical_compute：arXiv:2501.05756 v2（25 Jan 2025）：端到端全光 RNN，线性/非线性/存储全在光域，实测时钟 &gt;100 GHz；演示噪声波形分类、集成微腔孤子态实时分析、基于量子涨落的生成式图像；电子时钟近二十年停滞在 ~5 GHz；a…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：正面回答此前项目『光计算非线性瓶颈』：单元级飞焦/皮秒全光激活已可跑，系统级 &gt;100 GHz 全光计算已有实验演示；但『消除转换税』只在全光闭环内成立，电-光/光-电边界、片上超短脉冲源与激活级联噪声仍未打通。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41377-025-02175-4">https://www.nature.com/articles/s41377-025-02175-4</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2501.05756">https://arxiv.org/abs/2501.05756</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-026-70834-0">https://www.nature.com/articles/s41467-026-70834-0</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12338876/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12338876/</a>）来源链接</li>
+</ul>
+</div>
+<h3>二维材料光子学</h3>
+<div class="front">
+<h4>1. 石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</h4>
+<p><b>物理机制</b>：电栅压改变石墨烯载流子密度和费米能级E_F：在通信波段，当2E_F跨过光子能量时带间跃迁被Pauli阻塞，改变复电导的实部（吸收）和虚部（相位）；双层石墨烯加电压可进一步降低噪声和插损。把石墨烯贴到硅槽波导的50 nm空气槽内可把原子薄吸收层与模场强重叠，以短器件长度换取GHz带宽和低能耗。若偏压主要落在接触电阻/电容而非石墨烯，RC成为带宽天花板；光热探测则走另一条慢机制——吸收导致升温，改变电导/Seebeck/热电势，换来高响应度但牺牲速度；等离激元探测利用高E_F下的Drude带内响应强化局域场。</p>
+<p><b>可复算性能</b>：2026_silicon_slot_EAM_device：双层石墨烯+50 nm空气槽硅波导，6 μm长，集总电极；2026_2um_3dB_bandwidth_GHz：&gt;40（设备受限）；2026_2um_modulation_dB_per_um：0.22；2026_2um_insertion_loss_dB：0.6；2026_2um_eye_Gbit_s：25；2026_1p55um_3dB_bandwidth_GHz：&gt;70（70 GHz VNA上限受限）；2026_1p55um_modulation_dB_per_um：0.2；2026_1p55um_eye_Gbit_s：50；2026_energy_per_bit_fJ：约10（CV²/4）；2026_calculated_bandwidth_GHz：150；2026_grating_coupler_loss_dB：4-6；模式转换损耗0.3-0.45 dB；RTA使金属接触电阻降约68%；OFC2026_postdeadli…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：既有项目把石墨烯当可饱和吸收体/透明电极背景；本机制把它升级为硅光波导内主动电吸收层，并直接对接既有硅波导、光栅耦合与高速封装工具链。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2604.03153">https://arxiv.org/html/2604.03153</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1364/ofc.2026.th2a.12">https://doi.org/10.1364/ofc.2026.th2a.12</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://ieeexplore.ieee.org/document/11524369">https://ieeexplore.ieee.org/document/11524369</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1109/ipc65510.2025.11282028">https://doi.org/10.1109/ipc65510.2025.11282028</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s44310-025-00072-7">https://www.nature.com/articles/s44310-025-00072-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1364/oe.582307">https://doi.org/10.1364/oe.582307</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>2. TMD激子与缺陷单光子源：局激子/价带自旋谷物理、hBN封装高温激活与亮度-线宽-效率权衡</h4>
+<p><b>物理机制</b>：单层TMD的强库仑束缚和二维限域带来几meV本征激子线宽与显著谷-自旋选择定则；缺陷或应变势阱可把激子局域为低温锐线单光子发射体，但同一器件的原子起源常未定论，非均匀展宽会掩盖自然线宽。hBN封装抑制表面吸附与电荷噪声，悬空SiC微加热膜允许原位高温退火“写入/激活”局域激子；发射强度、g²(0)与线宽不在同一最优泵浦点：接近饱和时多激子与背景荧光抬高g²(0)，降低泵浦虽收窄线宽却牺牲计数率。</p>
+<p><b>可复算性能</b>：WS2_2025_preprint_platform：hBN/单层WS2/hBN干转移到120 nm悬空SiC微加热膜；3.6-3.72 K测量；WS2_activation_temperature：约1100 K原位退火30 min后出现XL_L；WS2_redshift_meV：75/86（摘要约80）；WS2_linewidth_meV：&lt;0.2（200 μeV，受光谱仪分辨率限制；本征激子仅几meV）；WS2_excitation_probability_per_incident_photon：2.13e-06；WS2_estimated_quantum_yield_percent：5；WS2_TRPL_lifetime_ns：0.9；WS2_g2_0_uncorrected：0.4；WS2_thermal_stability：&gt;1273 K Raman消失；约1220 K仍有Raman；WS2_encapsulation_necessity：非封装仅见约220 meV红移缺陷线…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：既有量子光源以量子点/SPDC/SFWM为主；本机制补入TMD作为电中性局域激子源，并指出其亮度比既有量子点路线低数个量级。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2512.16579">https://arxiv.org/html/2512.16579</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2504.19815v2">https://arxiv.org/html/2504.19815v2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j">https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://par.nsf.gov/servlets/purl/10416123">https://par.nsf.gov/servlets/purl/10416123</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>3. hBN缺陷中心量子光源与声子辅助退相干：室温高纯度NIR发射 vs 电子束激发下的fs级退相位</h4>
+<p><b>物理机制</b>：hBN宽带隙中的碳/氧/氮相关缺陷可在禁带中形成局域能级，产生室温可寻址的单光子发射；氧等离子体和高温退火可批量生成NIR发射体。发射的零声子线(ZPL)与声子边带由电子-声子耦合决定，Debye-Waller因子给出ZPL占比；局域缺陷的固态环境使其在光致发光下可有ns寿命和无闪烁，但电子束激发会产生声子极化激元和更强非平衡声子浴，使T2降到fs量级——两种激发条件下的相干时间不可混用。</p>
+<p><b>可复算性能</b>：hBN_NIR_2026_preprint：氧等离子体+1000°C/20 min RTA；&gt;300个发射体；700-971 nm，近一半&gt;800 nm；面密度2×10⁶ cm⁻²；single_photon_purity：最高99.9%；示例未校正g²(0)=0.0078±0.0155；linewidth_lowest：准共振低温11.1 μeV=2.7 GHz；brightness：MHz级；Debye-Waller因子近50%；寿命1-2 ns；stability：约80%发射体无闪烁，亚nm光谱稳定3天/1 h；Huang_Rhys_factor：2.43(770 nm) / 1.73(856 nm)；candidate_defects：理论候选(ONVN)+ ZPL 1.62 eV/767 nm、(ONVNH)0 1.48 eV/840 nm；计算τrad 75/127 ns与实测τPL约2 ns差异以非辐射通道解释；spin_status：spin属性仅为理论预测，未经ODM…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：既有量子项目没有hBN缺陷中心；本机制补入室温可制备光源，并提醒与量子点路线的不可区分性/不可控源差异。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2512.16197v2">https://arxiv.org/html/2512.16197v2</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-57584-1">https://www.nature.com/articles/s41467-025-57584-1</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1021/acsphotonics.5c02227">https://doi.org/10.1021/acsphotonics.5c02227</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>4. 黑磷墨水膜中红外光伏/光导探测：窄带隙宽光谱、柔性阵列与封装决定寿命</h4>
+<p><b>物理机制</b>：黑磷层状puckered晶格带隙约0.33 eV且随层数可调，可覆盖可见-NIR-MWIR；各向异性晶格带来本征二向色性和偏振敏感，但本轮偏振比硬数字未取到正文。BP墨水膜与PEDOT:PSS/Y6/ITO构成零偏压异质结，内建场分离光生载流子；零偏压抑制暗电流，缺点是小响应度和μs级速度。BP在空气/光/热下氧化是寿命主因，N2+石英窗+UV胶封装把氧水与强光热隔离，直接改变可用寿命数量级。</p>
+<p><b>可复算性能</b>：device：Au/PEDOT:PSS/BP/Y6/ITO柔性墨水膜，零偏压；BP带隙0.33 eV，MWIR探测至约4 μm；zero_bias_responsivity_uA_per_W：45@1.55 μm；20@3.0 μm；4.2@3.3 μm LED；minus_2p5V_responsivity：2.0 mA/W@1.55 μm；rise_fall_us：4.1/2.5；minus_3dB_bandwidth_kHz：44；array_uniformity：6×6阵列像素响应度23±7 μA/W；encapsulation_lifetime：N2+石英窗+UV胶：空气储存3600 h（150天）保持全响应；未封装312 h降至48%；thermal_stress：400°C黑体连续照射：封装120 h稳定；未封装25 h降至40%；mechanical：25 μm PI上2.5 mm弯折半径稳定；125 μm PI上1 cm半径5000次循环稳定；film_morpholo…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：既有中红外线关注QCL/T2SL/HgCdTe；本机制补入BP作为室温柔性低成本吸收层，并给出此前缺失的封装寿命对照。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-60942-8">https://www.nature.com/articles/s41467-025-60942-8</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.26599/nr.2025.94908140">https://doi.org/10.26599/nr.2025.94908140</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1002/adom.202501297">https://doi.org/10.1002/adom.202501297</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>5. 200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位</h4>
+<p><b>物理机制</b>：MoS2从生长衬底到200 mm Si的目标晶圆靠分子直接键合：无PMMA/中间层可减少残留与界面污染；湿法释放是化学剥离，干法刀片机械开层则要控制裂纹、褶皱与 insertion 处破坏。转移率由开层速度、表面能、原始生长均匀性和水处理时间共同决定；Raman A1g线宽与AFM粗糙度是材料完整性代理量，XPS氧化信号提示水/空气暴露风险。材料覆盖率≠光子器件良率，后者还需图形化、接触、光学耦合和寿命验证。</p>
+<p><b>可复算性能</b>：wafer：200 mm MoS2 donor → 200 mm Si，无聚合物/中间层；wet_release：约55%转移，伴随孔/裂/皱；automated_blade_optimum：开层速度10→1 μm/s，最佳转移93%；seven_wafer_batch：目标Si转移率96%；一片因原始生长不均较低；process_loss：PL/图像处理损失3%；水中损失约1%；material_quality：Raman A1g FWHM仅增加0.2 cm⁻¹；粗糙度0.2→0.3/0.36 nm；defects：全片无裂皱，但刀片插入起点两片有裂；XPS提示轻微氧化，需非氧化液体/缩短水暴露；independent_industry_claim：CEA-Leti新闻称转移良率&gt;95%、全晶圆Raman/XPS/AFM/SEM表征、无裂皱残留；uncovered：未检索到公开的200 mm二维材料光子器件级良率、封装寿命或湿热可靠性数据；相关论文明确指出仍需可复现性与器件验证</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：既有项目只有分立器件与材料假设；本机制补给晶圆级制造口径，并把材料覆盖率和器件良率严格分开。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1088/2053-1583/addf5b">https://doi.org/10.1088/2053-1583/addf5b</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.leti-cea.com/cea-tech/leti/english/Pages/What&#x27;s-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx">https://www.leti-cea.com/cea-tech/leti/english/Pages/What&#x27;s-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41928-024-01158-4">https://www.nature.com/articles/s41928-024-01158-4</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1109/iedm50572.2025.11353501">https://doi.org/10.1109/iedm50572.2025.11353501</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11829894/">https://pmc.ncbi.nlm.nih.gov/articles/PMC11829894/</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>6. 异质集成路线分工：石墨烯-硅高速调制、石墨烯-LN慢速高增益/声电/等离激元、石墨烯超表面THz-MIR可重构</h4>
+<p><b>物理机制</b>：平台选择本质是“把二维材料放在哪个场增强位置”：(1) 硅槽波导把模场压入石墨烯，适合Pauli阻塞高速电吸收；(2) LN的铁电极化与热光/声光/非线性系数强，Fe/P+畴壁或光诱导电荷可非易失地改石墨烯载流子密度，透明电极、SPP、SAW和光热探测互补，但PMMA残留/应变/湿热稳定性是老问题；(3) 超表面用亚波长谐振放大单层2.3%吸收，THz/MIR下石墨烯Drude带内电导提供动态相位/幅度，NIR/可见则受带间Universal absorption限制，适合可重构波前而非替换高速波导。</p>
+<p><b>可复算性能</b>：silicon：石墨烯-硅槽EAM 1.55 μm &gt;70 GHz / 50 Gbit/s / 约10 fJ/bit；2 μm &gt;40 GHz / 25 Gbit/s（详见M1）；LN_basics：透明400 nm-5 μm；n_o=2.211、n_e=2.138@1550 nm；LN_interface：石墨烯-TFLN范德华间隙&lt;0.25 nm，降低波导模式吸收；LN自发极化可n型掺杂石墨烯至2.51×10¹⁴ cm⁻²（实验引用值）；LN_transfer：自动转移较手动：迁移率+70%、非故意掺杂-30%、应变-10%；LN_device_examples：TO开关VπL=1.12 V·cm、开关功率2.85 mW；405-2000 nm光热探测响应度2.92×10⁶ A/W但响应23 ms；综述转引LN波导石墨烯探测器NPDR 3×10⁶ W⁻¹、3 dB光电带宽40 GHz（未回原文验证）；metasurface：单层可见-NIR本征吸收2.3%；光栅-石墨烯THG效率最高…</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：既有项目分别覆盖硅光、TFLN与超表面，但二维材料只作背景吸收层；本机制给出三平台的物理分工与可判定的Go/No-Go门槛。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301">https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics">https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/html/2604.03153">https://arxiv.org/html/2604.03153</a>）来源链接</li>
+</ul>
+</div>
+<h3>太赫兹与中红外光子</h3>
+<div class="front">
+<h4>1. 硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</h4>
+<p><b>物理机制</b>：硅带隙Eg≈1.12 eV对应本征吸收边~1.1 μm；在1.1-2.2 μm窗口虽线性透明，但双光子吸收(TPA)阈值hν≥Eg/2即λ≤2.2 μm，自由载流子吸收(FCA)随波长平方增长，构成&gt;2.2 μm的非线性/掺杂吸收天花板。真正卡住2.5-3.6 μm的不是硅本身（晶体硅透明的声子多光子吸收边在~6-8 μm），而是标准SOI的埋氧SiO2——非晶SiO2在&gt;3.6 μm因Si-O声子吸收急升(attenuation high beyond 3.6 μm)，使SOI波导在&gt;2.5-3.6 μm不可用。替代机制三条：(1)去掉SiO2——悬浮硅/狭缝波导、Si-on-sapphire、全硅无衬底平台；(2)换低声子能量材料——Ge-on-Si(透明1.9-14.7 μm)、SiGe梯度、InP/InGaAs、SiN(化学气相沉积SiN在MIR低损耗但受N-H/O-H键吸收限制)、AlN(宽禁带、无TPA)、硫系玻璃Ge28Sb12Se60(声子边延伸远、可溅射集成)；(3)离子注入/再结晶工程化硅的缺陷与应力带隙调控。</p>
+<p><b>可复算性能</b>：TPA_coefficient_Si_1.5um_cm_per_GW：0.45；TPA_cutoff_um：2.2；silica_SiO2_high_loss_beyond_um：3.6；SOI_rib_loss_at_3.8um_dB_per_cm：2.0；Si_on_sapphire_MIR_waveguide_ref：arXiv:1705.10038；Ge_on_Si_transparent_window_um：1.9-14.7；Ge28Sb12Se60_chalcogenide_loss_mitigation：IOP J Phys D 2024, DOI 10.1088/1361-6463/ad43f5；low_loss_silicon_platform_removed_SiO2：arXiv:1703.03517；Si_waveguided_long_wave_IR_Soref：J Opt A 2006;8:S154 / DOI 10.1088/1464-4258/8/10/00…</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：直接复用既有可见-近红外硅光平台（SOI波导/光栅耦合器/CMOS产线），把工作波长从1.3/1.55 μm平移到2-8 μm：需将埋氧SiO2换为悬浮/蓝宝石/Ge/SiN/硫系玻璃，耦合器与波导截面按长波长等比放大。此前项目只覆盖可见-近红外，这条补的是2-30 μm材料边界与波导物理机制。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/nphoton.2010.171">https://www.nature.com/articles/nphoton.2010.171</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="http://lib.fibopt.ru/Articles/Bi/JOptA_2006_8_840.pdf">http://lib.fibopt.ru/Articles/Bi/JOptA_2006_8_840.pdf</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1088/1464-4258/8/10/004">https://doi.org/10.1088/1464-4258/8/10/004</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/1703.03517">https://arxiv.org/abs/1703.03517</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/1705.10038">https://arxiv.org/abs/1705.10038</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1088/1361-6463/ad43f5">https://doi.org/10.1088/1361-6463/ad43f5</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1002/lpor.202501738">https://doi.org/10.1002/lpor.202501738</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://research.cuhk.edu.hk/en/publications/two-photon-absorption-and-self-phase-modulation-in-silicon-wavegu-3/">https://research.cuhk.edu.hk/en/publications/two-photon-absorption-and-self-phase-modulation-in-silicon-wavegu-3/</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>2. 太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</h4>
+<p><b>物理机制</b>：THz QCL靠半导体量子井子带间跃迁(intersubband)辐射，激射波长由量子阱厚度/势垒设计而非材料带隙决定(3-300 μm可调)。核心是上能级寿命/布居反转与下能级快速抽运：resonant-phonon(共振声子)抽运利用LO声子(~36 meV in GaAs)快速清空下能级，宽温区最优；bound-to-continuum在长波(低频)最高工作温度最佳；two-well direct-phonon在~4 THz把Tmax推到261 K。限制来自高温热声子反向填充、自由载流子损耗与波导/接触电阻发热——CW功率与Tmax受散热(wafer bonding、厚有源区)制约。THz QCL本身线宽窄可作外差本振；微梳/环形QCL通过超模(symmetry control)锁定产生梳，拍频线宽350 kHz。光混频(photomixing)另走光频差频产生THz，效率受光导天线/UTC-PD饱和限制。</p>
+<p><b>可复算性能</b>：highest_pulsed_THz_QCL_T_K：250；pulsed_T_at_4THz_reference：Khalatpour 2021, Jth 1.54 kA/cm2, max 2.60 kA/cm2；highest_T_261K_reference：Khalatpour 2023；highest_CW_T_K：129；CW_129K_output_W：0.3；wafer_bonded_470mW_at_5K_Tmax_122K_THz：3.9；pulsed_2.4W_at_4.4THz_10K_active_region_um：19；CW_dissipation_limit_W_for_19um_AR：30；thick_AR_23um_stripe_output_mW：4.3；thick_AR_Jth_A_per_cm2_at_5K：475；thick_AR_lasing_max_T_K：45；thick_AR_tuning_THz：5.15-5.23；thick_AR_…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：原型</p>
+<p><b>与现有赛道接口</b>：此前项目把中红外QCL(3-12 μm)当气体传感光源；这条补的是往长波THz端的机制差异——室温CW中红外QCL WPE已达~31%(商用级)，而THz QCL仍受低温制冷约束(Tmax脉冲261 K/CW 129 K)、未商用。厚有源区/晶圆键合是散热放量的工程主线，可对接既有热管理/封装工艺。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12297514">https://pmc.ncbi.nlm.nih.gov/articles/PMC12297514</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full">https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13451205">https://pmc.ncbi.nlm.nih.gov/articles/PMC13451205</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="http://cqd.ece.northwestern.edu/pubs/files/4eb310d8828e561d11e927a3966b64b3.pdf">http://cqd.ece.northwestern.edu/pubs/files/4eb310d8828e561d11e927a3966b64b3.pdf</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2610.06391">https://arxiv.org/abs/2610.06391</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1038/s41377-025-01935-6">https://doi.org/10.1038/s41377-025-01935-6</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>3. 中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</h4>
+<p><b>物理机制</b>：比探测率D*=R√A/i_n (cm·Hz^1/2/W, Jones)，NEP=i_n/R (W/Hz^1/2)，二者受暗电流(热激发/隧穿/产生-复合)与量子效率共同约束；BLIP上限D*_BLIP=(λ/hc)√(η/2Φ_B)。低温HgCdTe/InSb靠制冷压暗电流达高D*；T2SL(InAs/GaSb)用能带工程替代HgCdTe但受短少子寿命限制；2D vdW异质结用垂直输运(sock tens of nm)缩短载流子渡越时间、内建电场抑制暗电流，室温逼近BLIP；CQD靠量子限域调带隙、溶液加工可CoMEMS集成但 hopping输运暗电流与EVET非辐射复合压低D*。温度是硬约束：同一材料D*随T升急剧下降。</p>
+<p><b>可复算性能</b>：Gr_BP_MoS2_Gr_peak_Dstar_Jones：2.38e11 @3.6um, 300K (逼近BLIP)；Gr_BP_MoS2_Gr_Dstar_broadband：&gt;3.88e10 over 325-3800nm；Gr_BP_MoS2_Gr_NEP_W_per_sqrtHz：1.72e-14 @3.6um；Gr_BP_MoS2_Gr_rise_decay_ns：10.4 / 15.6 @1550nm；Gr_BP_MoS2_Gr_minus3dB_MHz：12；Gr_BP_MoS2_Gr_peak_responsivity_A_per_W：0.66 @3600nm, EQE&gt;15%；Ag2Te_CQD_Dstar_Jones：1.2e9 @78K, 0.02V；Ag2Te_CQD_responsivity_A_per_W：0.3 @78K/0.2V (IDE)；Ag2Te_CQD_band_um：3-5, onset 6.9；Ag2Te_CQD_vertical_rise…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：商用</p>
+<p><b>与现有赛道接口</b>：既有探测器覆盖Si/InGaAs可见-近红外；这条把口径扩展到3-14 μm并给出同口径D*/NEP/温度对照。最重要的新证据：Gr/BP/MoS2/Gr室温D*=2.38×10^11 Jones(3.6 μm)已追平甚至超过商用制冷HgCdTe，且速度(10.4 ns/12 MHz)比此前2D中红外探测器(微秒级)快两个数量级——指向&#x27;非制冷室温MIR&#x27;这一可判定拐点。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-55887-x">https://www.nature.com/articles/s41467-025-55887-x</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-026-71374-3">https://www.nature.com/articles/s41467-026-71374-3</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1038/s41467-026-78047-1">https://doi.org/10.1038/s41467-026-78047-1</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://par.nsf.gov/servlets/purl/10590314">https://par.nsf.gov/servlets/purl/10590314</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/p15409-901_kird1137e.pdf">https://hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/p15409-901_kird1137e.pdf</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1109/ted.2022.3164373">https://doi.org/10.1109/ted.2022.3164373</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>4. 片上太赫兹波导/超材料/等离激元——损耗、耦合、色散与系统集成瓶颈(薄膜铌酸锂TFLN vs 硅)</h4>
+<p><b>物理机制</b>：THz片上传输的损耗分导体损耗αc∝√f(趋肤效应/金属粗糙度)与介质损耗αd∝f(材料声子/偶极吸收)，总损耗决定传输距离与调制深度。硅在300 GHz附近介质损耗高(高阻硅仍有残余自由载流子)，石英/石英玻璃更低；TFLN(薄膜铌酸锂)靠Pockels效应做THz-optic调制与差频产生THz，Vπ低、带宽高，且衬底换成石英把THz传播损耗降到14 dB/cm。等离激元/超材料可把模场压到亚波长增强光-THz重叠，但金属欧姆损耗(0.4-0.5 dB/μm)与硅-有机槽波导(40 dB/cm)成为瓶颈。耦合瓶颈：THz自由空间波长(0.6-1 mm)与片上微米波导的尺寸失配，需天线/光栅/探针耦合；色散管理靠传输线几何。系统集成瓶颈是THz源-调制-传输-探测单片化与散热/封装。</p>
+<p><b>可复算性能</b>：TFLN_continuous_THz_generation_up_to_GHz：500；TFLN_cw_efficiency_at_500GHz_per_W：4.8e-6 (10x prior LN)；TFLN_gen_efficiency_per_W：2.90e-6@300GHz, 4.13e-6@400GHz, 4.86e-6@500GHz @10mm；TFLN_THz_power_dBm：-65 @8dBm optical pump；TFLN_Vpi：6V@300GHz, 8V@500GHz (vs 28V prior on Si)；TFLN_bandwidth：3dB 145GHz / 6dB 310GHz；THz_prop_loss_quartz_dB_per_cm：14 @300GHz；THz_prop_loss_silicon_dB_per_cm：22 @300GHz；THz_prop_loss_at_500GHz：~2 dB/mm；conductor_loss_alph…</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：实验室</p>
+<p><b>与现有赛道接口</b>：既有项目覆盖硅光调制器与波导；这条补THz频段特有的损耗分解(αc∝√f, αd∝f)、TFLN替代硅的低Vπ/低损耗优势，以及亚波长等离激元的欧姆损耗代价。可直接对接既有Pockels/薄膜铌酸锂与COMSOL/HFSS电磁仿真工具链。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-65293-y">https://www.nature.com/articles/s41467-025-65293-y</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1038/s41467-025-65293-y">https://doi.org/10.1038/s41467-025-65293-y</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1038/s41467-025-62267-y">https://doi.org/10.1038/s41467-025-62267-y</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>5. 中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</h4>
+<p><b>物理机制</b>：中红外&#x27;指纹区&#x27;(3-5 μm, 8-12 μm)分子振转吸收线强(比近红外强1-3个数量级)，QCL/ICL作窄线宽光源+TDLAS/QEPAS/光腔增强实现ppb级痕量检测；呼出气VOC(如呼气NO/CO/酮体)经激光吸收光谱做无创诊断，但受水汽干扰/临床验证门槛限制。THz(0.1-10 THz)对生物组织水分敏感、非电离，可成像皮肤癌边界，但穿透深度浅(~数百μm)、需接触/反射式。THz自由空间通信用微梳多载波或电子源，容量高但大气吸收(水汽)与链路距离受限。商用成熟度由可靠性/成本/体积/法规决定，而非单纯器件指标。</p>
+<p><b>可复算性能</b>：trace_gas_commercial：MIRO Analytical multi-QCL ambient air monitoring (envirotech-online, 2025-08-07)；breath_diagnostics：Empa Exhalomics laser absorption spectroscopy; Photonics Spectra 2025: some breath tests in clinical trials；skin_cancer_THz_trial：NIH Terabotics trial ID 51604；PicoBot_THz_in_vivo_skin_imaging：DOI 10.1007/s10762-025-01055-7 (2025)；THz_comms_km_scale：Light Sci Appl 2026, DOI 10.1038/s41377-026-02321-6 (surpassing kilometer-scale…</p>
+<p><b>证据状态</b>：单源未验证</p>
+<p><b>成熟度</b>：商用</p>
+<p><b>与现有赛道接口</b>：既有项目把MIR气体传感当&#x27;已商用&#x27;成熟应用；这条做成熟度分层——痕量气体在线监测确为商用(MIRO)，呼气无创诊断仅在临床试验、THz皮肤癌在NIH早期试验(原型)，THz通信10 Gbps BER&lt;1e-9仍是背靠背实验室演示(离公里级/商用有距离)。避免把原型当商用高估。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.envirotech-online.com/news/item/industry-news/2025/08/07/miro-analytical-multi-qcl-ambient-air-monitoring">https://www.envirotech-online.com/news/item/industry-news/2025/08/07/miro-analytical-multi-qcl-ambient-air-monitoring</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.empa.ch/web/s503/laser-standard">https://www.empa.ch/web/s503/laser-standard</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://bepartofresearch.nihr.ac.uk/">https://bepartofresearch.nihr.ac.uk/</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1007/s10762-025-01055-7">https://doi.org/10.1007/s10762-025-01055-7</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://doi.org/10.1038/s41377-026-02321-6">https://doi.org/10.1038/s41377-026-02321-6</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2605.12348">https://arxiv.org/abs/2605.12348</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2510.22549">https://arxiv.org/abs/2510.22549</a>）来源链接</li>
+</ul>
+</div>
+<div class="front">
+<h4>6. 3-5年最值得下注、可判定Go/No-Go的科学与工程问题(判据化)</h4>
+<p><b>物理机制</b>：把&#x27;前沿盲区&#x27;转成可证伪阈值：(1)室温非制冷MIR探测器能否规模化——判据D*≥1e11 Jones@室温且响应&lt;20 ns且CMOS兼容，Gr/BP/MoS2/Gr已在193 μm器件达2.38e11 Jones/10.4 ns，但BP环境稳定性与晶圆均匀性是No-Go风险；(2)THz QCL能否突破制冷天花板——判据CW工作T≥200 K且WPE&gt;5%，现CW Tmax=129 K、脉冲261 K，室温仍无解，group-IV(SiGe)NEGF预测室温但无实验；(3)片上THz损耗能否压到&lt;10 dB/cm并单片集成源-调制-探测——TFLN石英已达14 dB/cm@300GHz，逼近但未达标；(4)THz通信能否走出背靠背做到&gt;100 m实质链路——10 Gbps BER&lt;1e-9已在波导背靠背实现，自由空间/大气窗口未验证。Go/No-Go标准必须锚定可复算数字而非定性宣称。</p>
+<p><b>可复算性能</b>：G1_ROOM_TEMP_Dstar_threshold_Jones：&gt;=1e11 (best 2.38e11 @3.6um)；G1_response_threshold_ns：&lt;20 (best 10.4)；G2_THz_QCL_CW_T_threshold_K：&gt;=200 (best CW 129K, pulsed 261K)；G2_WPE_threshold_percent：&gt;5 (midIR RT already 31%)；G3_onchip_THz_loss_threshold_dB_per_cm：&lt;10 (TFLN quartz 14 @300GHz)；G4_THz_link_free_space_target_m：&gt;100 (demo only back-to-back)；time_horizon_years：3-5</p>
+<p><b>证据状态</b>：已核验</p>
+<p><b>成熟度</b>：理论</p>
+<p><b>与现有赛道接口</b>：把前5条机制的数字折算成投资/研发可判定的门槛，供项目在&#x27;可见-近红外→2-30 μm&#x27;扩张时做资源取舍。最值得下注：室温非制冷MIR探测器(已见拐点证据)；最大No-Go风险：THz QCL室温CW(需材料体系突破，非渐进工程)。</p>
+<ul>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-55887-x">https://www.nature.com/articles/s41467-025-55887-x</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full">https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://www.nature.com/articles/s41467-025-65293-y">https://www.nature.com/articles/s41467-025-65293-y</a>）来源链接</li>
+<li><span class="ext">[外]</span>（出处：<a href="https://arxiv.org/abs/2605.12348">https://arxiv.org/abs/2605.12348</a>）来源链接</li>
+</ul>
+</div>
+<h2>证据清单</h2><table><tr><th>#</th><th>前沿主题</th><th>结论摘要</th><th>成熟度</th></tr>
+<tr><td>1</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束</a></td><td>理论</td></tr>
+<tr><td>2</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41377-025-01858-2">相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束</a></td><td>理论</td></tr>
+<tr><td>3</td><td>超表面 / 平面光学</td><td><a href="https://epjam.edp-open.org/articles/epjam/full_html/2022/01/epjam210028/epjam210028.html">相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束</a></td><td>理论</td></tr>
+<tr><td>4</td><td>超表面 / 平面光学</td><td><a href="https://doi.org/10.1002/lpor.202300201">相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束</a></td><td>理论</td></tr>
+<tr><td>5</td><td>超表面 / 平面光学</td><td><a href="https://doi.org/10.1063/5.0177734">相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束</a></td><td>理论</td></tr>
+<tr><td>6</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41467-025-62539-7">2025-2026 metalens 实测效率纪录与口径区分（消色差/宽带/大NA/高效率不可混引）</a></td><td>实验室</td></tr>
+<tr><td>7</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41377-025-01858-2">2025-2026 metalens 实测效率纪录与口径区分（消色差/宽带/大NA/高效率不可混引）</a></td><td>实验室</td></tr>
+<tr><td>8</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">2025-2026 metalens 实测效率纪录与口径区分（消色差/宽带/大NA/高效率不可混引）</a></td><td>实验室</td></tr>
+<tr><td>9</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41377-023-01148-9">超表面光谱仪/偏振成像/AR显示真实器件进展（实验室 vs 量产分界）</a></td><td>实验室</td></tr>
+<tr><td>10</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41563-023-01710-1">超表面光谱仪/偏振成像/AR显示真实器件进展（实验室 vs 量产分界）</a></td><td>实验室</td></tr>
+<tr><td>11</td><td>超表面 / 平面光学</td><td><a href="https://arxiv.org/abs/2507.20229">超表面光谱仪/偏振成像/AR显示真实器件进展（实验室 vs 量产分界）</a></td><td>实验室</td></tr>
+<tr><td>12</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">超表面光谱仪/偏振成像/AR显示真实器件进展（实验室 vs 量产分界）</a></td><td>实验室</td></tr>
+<tr><td>13</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">大尺寸晶圆级制造、相邻单元耦合、容差、良率与成本</a></td><td>原型</td></tr>
+<tr><td>14</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41378-025-01064-5">大尺寸晶圆级制造、相邻单元耦合、容差、良率与成本</a></td><td>原型</td></tr>
+<tr><td>15</td><td>超表面 / 平面光学</td><td><a href="https://doi.org/10.1021/acs.nanolett.5c05226">大尺寸晶圆级制造、相邻单元耦合、容差、良率与成本</a></td><td>原型</td></tr>
+<tr><td>16</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13683382">大尺寸晶圆级制造、相邻单元耦合、容差、良率与成本</a></td><td>原型</td></tr>
+<tr><td>17</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s44287-024-00136-4">与传统折射/衍射光学的系统级优劣判据（体积/视场/效率/重量/像差）</a></td><td>理论</td></tr>
+<tr><td>18</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">与传统折射/衍射光学的系统级优劣判据（体积/视场/效率/重量/像差）</a></td><td>理论</td></tr>
+<tr><td>19</td><td>超表面 / 平面光学</td><td><a href="https://www.cs.princeton.edu/~fheide/papers/CompImaging-MetaOptics-Optica.pdf">与传统折射/衍射光学的系统级优劣判据（体积/视场/效率/重量/像差）</a></td><td>理论</td></tr>
+<tr><td>20</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41377-025-01858-2">未来3-5年最值得下注且可判定 Go/No-Go 的科学问题</a></td><td>理论</td></tr>
+<tr><td>21</td><td>超表面 / 平面光学</td><td><a href="https://www.nature.com/articles/s41467-025-62539-7">未来3-5年最值得下注且可判定 Go/No-Go 的科学问题</a></td><td>理论</td></tr>
+<tr><td>22</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">未来3-5年最值得下注且可判定 Go/No-Go 的科学问题</a></td><td>理论</td></tr>
+<tr><td>23</td><td>超表面 / 平面光学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">未来3-5年最值得下注且可判定 Go/No-Go 的科学问题</a></td><td>理论</td></tr>
+<tr><td>24</td><td>超表面 / 平面光学</td><td><a href="https://doi.org/10.1063/5.0177734">未来3-5年最值得下注且可判定 Go/No-Go 的科学问题</a></td><td>理论</td></tr>
+<tr><td>25</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41377-025-01906-x">Kerr 耗散孤子（DKS）亮孤子 + 自注入锁定（SIL）免调启动</a></td><td>原型</td></tr>
+<tr><td>26</td><td>光频梳 / 微腔光频梳</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12714037">Kerr 耗散孤子（DKS）亮孤子 + 自注入锁定（SIL）免调启动</a></td><td>原型</td></tr>
+<tr><td>27</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41467-025-57736-3">暗孤子/暗脉冲（platicon、dark pulse）与耗散工程</a></td><td>实验室</td></tr>
+<tr><td>28</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41467-025-67603-w">暗孤子/暗脉冲（platicon、dark pulse）与耗散工程</a></td><td>实验室</td></tr>
+<tr><td>29</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41377-025-01906-x">电光频梳（EO comb）与混合 Kerr-电光梳（微波率间距 × 宽带）</a></td><td>实验室</td></tr>
+<tr><td>30</td><td>光频梳 / 微腔光频梳</td><td><a href="https://arxiv.org/html/2506.20895">晶圆级制造偏差、色散/热管理、自启动与寿命</a></td><td>原型</td></tr>
+<tr><td>31</td><td>光频梳 / 微腔光频梳</td><td><a href="https://arxiv.org/abs/2502.10941">晶圆级制造偏差、色散/热管理、自启动与寿命</a></td><td>原型</td></tr>
+<tr><td>32</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41467-025-67603-w">四类系统级应用证据：WDM 通信 / 双梳光谱与测距 / FMCW LiDAR / 光钟与频率合成</a></td><td>原型</td></tr>
+<tr><td>33</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41467-025-62022-3">四类系统级应用证据：WDM 通信 / 双梳光谱与测距 / FMCW LiDAR / 光钟与频率合成</a></td><td>原型</td></tr>
+<tr><td>34</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41467-025-56483-9">四类系统级应用证据：WDM 通信 / 双梳光谱与测距 / FMCW LiDAR / 光钟与频率合成</a></td><td>原型</td></tr>
+<tr><td>35</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41566-025-01669-2">四类系统级应用证据：WDM 通信 / 双梳光谱与测距 / FMCW LiDAR / 光钟与频率合成</a></td><td>原型</td></tr>
+<tr><td>36</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41566-025-01662-9">四类系统级应用证据：WDM 通信 / 双梳光谱与测距 / FMCW LiDAR / 光钟与频率合成</a></td><td>原型</td></tr>
+<tr><td>37</td><td>光频梳 / 微腔光频梳</td><td><a href="https://www.nature.com/articles/s41467-025-67603-w">相对窄线宽/可调激光器的系统级成本与可靠性对标（公开硬数字缺口）</a></td><td>原型</td></tr>
+<tr><td>38</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41566-025-01639-8">确定性量子点单光子源：微腔Purcell增强与波形整形激发</a></td><td>原型</td></tr>
+<tr><td>39</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2510.09251">确定性量子点单光子源：微腔Purcell增强与波形整形激发</a></td><td>原型</td></tr>
+<tr><td>40</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2511.23232">确定性量子点单光子源：微腔Purcell增强与波形整形激发</a></td><td>原型</td></tr>
+<tr><td>41</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41586-025-08820-7">概率性光子对源：SiN/Si3N4/LN中的SFWM与SPDC</a></td><td>原型</td></tr>
+<tr><td>42</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41586-025-08662-3">概率性光子对源：SiN/Si3N4/LN中的SFWM与SPDC</a></td><td>原型</td></tr>
+<tr><td>43</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2506.23625">概率性光子对源：SiN/Si3N4/LN中的SFWM与SPDC</a></td><td>原型</td></tr>
+<tr><td>44</td><td>集成量子光子学</td><td><a href="https://doi.org/10.1364/ol.547100">概率性光子对源：SiN/Si3N4/LN中的SFWM与SPDC</a></td><td>原型</td></tr>
+<tr><td>45</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s42005-025-02247-2">可重构MZI/Mach-Zehnder mesh与光子量子walk</a></td><td>原型</td></tr>
+<tr><td>46</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s42005-025-02135-9">可重构MZI/Mach-Zehnder mesh与光子量子walk</a></td><td>原型</td></tr>
+<tr><td>47</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41377-024-01627-7">可重构MZI/Mach-Zehnder mesh与光子量子walk</a></td><td>原型</td></tr>
+<tr><td>48</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41586-025-08820-7">可重构MZI/Mach-Zehnder mesh与光子量子walk</a></td><td>原型</td></tr>
+<tr><td>49</td><td>集成量子光子学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12533016/">片上SNSPD与SPAD：效率、暗计数、抖动和带宽的联合预算</a></td><td>原型</td></tr>
+<tr><td>50</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41586-025-08820-7">片上SNSPD与SPAD：效率、暗计数、抖动和带宽的联合预算</a></td><td>原型</td></tr>
+<tr><td>51</td><td>集成量子光子学</td><td><a href="https://iopscience.iop.org/article/10.1088/1361-6463/add946">片上SNSPD与SPAD：效率、暗计数、抖动和带宽的联合预算</a></td><td>原型</td></tr>
+<tr><td>52</td><td>集成量子光子学</td><td><a href="https://arxiv.org/html/2408.06921">片上SNSPD与SPAD：效率、暗计数、抖动和带宽的联合预算</a></td><td>原型</td></tr>
+<tr><td>53</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41563-025-02398-1">量子点—铌酸锂混合线路与硅T中心自旋—光子接口</a></td><td>实验室</td></tr>
+<tr><td>54</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2503.23755">量子点—铌酸锂混合线路与硅T中心自旋—光子接口</a></td><td>实验室</td></tr>
+<tr><td>55</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41566-025-01752-8">量子点—铌酸锂混合线路与硅T中心自旋—光子接口</a></td><td>实验室</td></tr>
+<tr><td>56</td><td>集成量子光子学</td><td><a href="https://arxiv.org/html/2501.10597">量子点—铌酸锂混合线路与硅T中心自旋—光子接口</a></td><td>实验室</td></tr>
+<tr><td>57</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2506.23625">量子点—铌酸锂混合线路与硅T中心自旋—光子接口</a></td><td>实验室</td></tr>
+<tr><td>58</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41586-026-10523-6">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>59</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2508.09092">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>60</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2604.12330">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>61</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2510.17659">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>62</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2508.17940">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>63</td><td>集成量子光子学</td><td><a href="https://arxiv.org/abs/2504.05660">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>64</td><td>集成量子光子学</td><td><a href="https://www.nature.com/articles/s41586-024-07308-0">光子量子优势的可复现验证与城域QKD/量子存储网络</a></td><td>原型</td></tr>
+<tr><td>65</td><td>非线性光子与拓扑光子</td><td><a href="https://arxiv.org/html/2511.17327">M1 薄膜铌酸锂 χ² 准相位匹配 SHG/SFG/DFG：自适应极化 + 低损耗耦合把『片内效率』变成系统效率</a></td><td>原型</td></tr>
+<tr><td>66</td><td>非线性光子与拓扑光子</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12714032/">M1 薄膜铌酸锂 χ² 准相位匹配 SHG/SFG/DFG：自适应极化 + 低损耗耦合把『片内效率』变成系统效率</a></td><td>原型</td></tr>
+<tr><td>67</td><td>非线性光子与拓扑光子</td><td><a href="https://arxiv.org/abs/2508.08599">M1 薄膜铌酸锂 χ² 准相位匹配 SHG/SFG/DFG：自适应极化 + 低损耗耦合把『片内效率』变成系统效率</a></td><td>原型</td></tr>
+<tr><td>68</td><td>非线性光子与拓扑光子</td><td><a href="https://doi.org/10.1038/s41565-023-01525-w">M1 薄膜铌酸锂 χ² 准相位匹配 SHG/SFG/DFG：自适应极化 + 低损耗耦合把『片内效率』变成系统效率</a></td><td>原型</td></tr>
+<tr><td>69</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s41467-026-71688-2">M2 未极化 III-V（InGaP）模态相位匹配 + 纳米加热器自适应相匹配的双向低噪声量子频率转换</a></td><td>实验室</td></tr>
+<tr><td>70</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s41377-024-01653-5">M2 未极化 III-V（InGaP）模态相位匹配 + 纳米加热器自适应相匹配的双向低噪声量子频率转换</a></td><td>实验室</td></tr>
+<tr><td>71</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s41586-026-10292-2">M3 χ² 拓扑孤子频率梳（LN 片上 OPO）：以相位缺陷代替高 Q 腔与高速调制器</a></td><td>实验室</td></tr>
+<tr><td>72</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s41586-025-09620-9">M4 光生/电偏置可重构 χ²（SiN + χ³ + 直流偏置）：把非线性做成可原位反设计的器件参数</a></td><td>实验室</td></tr>
+<tr><td>73</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s42254-025-00889-3">M5 拓扑保护的边界与可判定优势：SSH 波导-array SPDC 谱鲁棒性，以及 chiral edge vs 优化 W1 反例</a></td><td>实验室</td></tr>
+<tr><td>74</td><td>非线性光子与拓扑光子</td><td><a href="https://dleykam.blogspot.com/2025/11/topological-photonics-limitations-and.html">M5 拓扑保护的边界与可判定优势：SSH 波导-array SPDC 谱鲁棒性，以及 chiral edge vs 优化 W1 反例</a></td><td>实验室</td></tr>
+<tr><td>75</td><td>非线性光子与拓扑光子</td><td><a href="https://arxiv.org/abs/2510.23796">M5 拓扑保护的边界与可判定优势：SSH 波导-array SPDC 谱鲁棒性，以及 chiral edge vs 优化 W1 反例</a></td><td>实验室</td></tr>
+<tr><td>76</td><td>非线性光子与拓扑光子</td><td><a href="https://doi.org/10.1103/PhysRevLett.113.087403">M5 拓扑保护的边界与可判定优势：SSH 波导-array SPDC 谱鲁棒性，以及 chiral edge vs 优化 W1 反例</a></td><td>实验室</td></tr>
+<tr><td>77</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s41377-025-02175-4">M6 超快全光非线性激活与全光循环计算：飞焦阈值激活 + &gt;100 GHz 时钟直接绕过电子非线性</a></td><td>原型</td></tr>
+<tr><td>78</td><td>非线性光子与拓扑光子</td><td><a href="https://arxiv.org/abs/2501.05756">M6 超快全光非线性激活与全光循环计算：飞焦阈值激活 + &gt;100 GHz 时钟直接绕过电子非线性</a></td><td>原型</td></tr>
+<tr><td>79</td><td>非线性光子与拓扑光子</td><td><a href="https://www.nature.com/articles/s41467-026-70834-0">M6 超快全光非线性激活与全光循环计算：飞焦阈值激活 + &gt;100 GHz 时钟直接绕过电子非线性</a></td><td>原型</td></tr>
+<tr><td>80</td><td>非线性光子与拓扑光子</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12338876/">M6 超快全光非线性激活与全光循环计算：飞焦阈值激活 + &gt;100 GHz 时钟直接绕过电子非线性</a></td><td>原型</td></tr>
+<tr><td>81</td><td>二维材料光子学</td><td><a href="https://arxiv.org/html/2604.03153">石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</a></td><td>原型</td></tr>
+<tr><td>82</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1364/ofc.2026.th2a.12">石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</a></td><td>原型</td></tr>
+<tr><td>83</td><td>二维材料光子学</td><td><a href="https://ieeexplore.ieee.org/document/11524369">石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</a></td><td>原型</td></tr>
+<tr><td>84</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1109/ipc65510.2025.11282028">石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</a></td><td>原型</td></tr>
+<tr><td>85</td><td>二维材料光子学</td><td><a href="https://www.nature.com/articles/s44310-025-00072-7">石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</a></td><td>原型</td></tr>
+<tr><td>86</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1364/oe.582307">石墨烯波导电吸收调制与光热/等离激元探测：费米能级移动、Pauli阻塞与槽波导强重叠</a></td><td>原型</td></tr>
+<tr><td>87</td><td>二维材料光子学</td><td><a href="https://arxiv.org/html/2512.16579">TMD激子与缺陷单光子源：局激子/价带自旋谷物理、hBN封装高温激活与亮度-线宽-效率权衡</a></td><td>实验室</td></tr>
+<tr><td>88</td><td>二维材料光子学</td><td><a href="https://arxiv.org/html/2504.19815v2">TMD激子与缺陷单光子源：局激子/价带自旋谷物理、hBN封装高温激活与亮度-线宽-效率权衡</a></td><td>实验室</td></tr>
+<tr><td>89</td><td>二维材料光子学</td><td><a href="https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j">TMD激子与缺陷单光子源：局激子/价带自旋谷物理、hBN封装高温激活与亮度-线宽-效率权衡</a></td><td>实验室</td></tr>
+<tr><td>90</td><td>二维材料光子学</td><td><a href="https://par.nsf.gov/servlets/purl/10416123">TMD激子与缺陷单光子源：局激子/价带自旋谷物理、hBN封装高温激活与亮度-线宽-效率权衡</a></td><td>实验室</td></tr>
+<tr><td>91</td><td>二维材料光子学</td><td><a href="https://arxiv.org/html/2512.16197v2">hBN缺陷中心量子光源与声子辅助退相干：室温高纯度NIR发射 vs 电子束激发下的fs级退相位</a></td><td>实验室</td></tr>
+<tr><td>92</td><td>二维材料光子学</td><td><a href="https://www.nature.com/articles/s41467-025-57584-1">hBN缺陷中心量子光源与声子辅助退相干：室温高纯度NIR发射 vs 电子束激发下的fs级退相位</a></td><td>实验室</td></tr>
+<tr><td>93</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1021/acsphotonics.5c02227">hBN缺陷中心量子光源与声子辅助退相干：室温高纯度NIR发射 vs 电子束激发下的fs级退相位</a></td><td>实验室</td></tr>
+<tr><td>94</td><td>二维材料光子学</td><td><a href="https://www.nature.com/articles/s41467-025-60942-8">黑磷墨水膜中红外光伏/光导探测：窄带隙宽光谱、柔性阵列与封装决定寿命</a></td><td>原型</td></tr>
+<tr><td>95</td><td>二维材料光子学</td><td><a href="https://doi.org/10.26599/nr.2025.94908140">黑磷墨水膜中红外光伏/光导探测：窄带隙宽光谱、柔性阵列与封装决定寿命</a></td><td>原型</td></tr>
+<tr><td>96</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1002/adom.202501297">黑磷墨水膜中红外光伏/光导探测：窄带隙宽光谱、柔性阵列与封装决定寿命</a></td><td>原型</td></tr>
+<tr><td>97</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1088/2053-1583/addf5b">200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位</a></td><td>原型</td></tr>
+<tr><td>98</td><td>二维材料光子学</td><td><a href="https://www.leti-cea.com/cea-tech/leti/english/Pages/What&#x27;s-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx">200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位</a></td><td>原型</td></tr>
+<tr><td>99</td><td>二维材料光子学</td><td><a href="https://www.nature.com/articles/s41928-024-01158-4">200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位</a></td><td>原型</td></tr>
+<tr><td>100</td><td>二维材料光子学</td><td><a href="https://doi.org/10.1109/iedm50572.2025.11353501">200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位</a></td><td>原型</td></tr>
+<tr><td>101</td><td>二维材料光子学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11829894/">200 mm二维材料晶圆级直接键合转移：材料覆盖率已近量产，器件良率与寿命公开数据缺位</a></td><td>原型</td></tr>
+<tr><td>102</td><td>二维材料光子学</td><td><a href="https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301">异质集成路线分工：石墨烯-硅高速调制、石墨烯-LN慢速高增益/声电/等离激元、石墨烯超表面THz-MIR可重构</a></td><td>原型</td></tr>
+<tr><td>103</td><td>二维材料光子学</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/">异质集成路线分工：石墨烯-硅高速调制、石墨烯-LN慢速高增益/声电/等离激元、石墨烯超表面THz-MIR可重构</a></td><td>原型</td></tr>
+<tr><td>104</td><td>二维材料光子学</td><td><a href="https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics">异质集成路线分工：石墨烯-硅高速调制、石墨烯-LN慢速高增益/声电/等离激元、石墨烯超表面THz-MIR可重构</a></td><td>原型</td></tr>
+<tr><td>105</td><td>二维材料光子学</td><td><a href="https://arxiv.org/html/2604.03153">异质集成路线分工：石墨烯-硅高速调制、石墨烯-LN慢速高增益/声电/等离激元、石墨烯超表面THz-MIR可重构</a></td><td>原型</td></tr>
+<tr><td>106</td><td>太赫兹与中红外光子</td><td><a href="https://www.nature.com/articles/nphoton.2010.171">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>107</td><td>太赫兹与中红外光子</td><td><a href="http://lib.fibopt.ru/Articles/Bi/JOptA_2006_8_840.pdf">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>108</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1088/1464-4258/8/10/004">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>109</td><td>太赫兹与中红外光子</td><td><a href="https://arxiv.org/abs/1703.03517">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>110</td><td>太赫兹与中红外光子</td><td><a href="https://arxiv.org/abs/1705.10038">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>111</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1088/1361-6463/ad43f5">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>112</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1002/lpor.202501738">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>113</td><td>太赫兹与中红外光子</td><td><a href="https://research.cuhk.edu.hk/en/publications/two-photon-absorption-and-self-phase-modulation-in-silicon-wavegu-3/">硅在&gt;2.2 μm的本征吸收限制与SiGe/Ge/InP/SiN/AlN/硫系玻璃/离子注入硅替代波导平台</a></td><td>实验室</td></tr>
+<tr><td>114</td><td>太赫兹与中红外光子</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12297514">太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</a></td><td>原型</td></tr>
+<tr><td>115</td><td>太赫兹与中红外光子</td><td><a href="https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full">太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</a></td><td>原型</td></tr>
+<tr><td>116</td><td>太赫兹与中红外光子</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13451205">太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</a></td><td>原型</td></tr>
+<tr><td>117</td><td>太赫兹与中红外光子</td><td><a href="http://cqd.ece.northwestern.edu/pubs/files/4eb310d8828e561d11e927a3966b64b3.pdf">太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</a></td><td>原型</td></tr>
+<tr><td>118</td><td>太赫兹与中红外光子</td><td><a href="https://arxiv.org/abs/2610.06391">太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</a></td><td>原型</td></tr>
+<tr><td>119</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1038/s41377-025-01935-6">太赫兹量子级联激光器(QCL)——子带跃迁/声子散射工程、量子井设计、光混频与微梳的功率/温度/线宽/效率(2025-2026)</a></td><td>原型</td></tr>
+<tr><td>120</td><td>太赫兹与中红外光子</td><td><a href="https://www.nature.com/articles/s41467-025-55887-x">中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</a></td><td>商用</td></tr>
+<tr><td>121</td><td>太赫兹与中红外光子</td><td><a href="https://www.nature.com/articles/s41467-026-71374-3">中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</a></td><td>商用</td></tr>
+<tr><td>122</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1038/s41467-026-78047-1">中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</a></td><td>商用</td></tr>
+<tr><td>123</td><td>太赫兹与中红外光子</td><td><a href="https://par.nsf.gov/servlets/purl/10590314">中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</a></td><td>商用</td></tr>
+<tr><td>124</td><td>太赫兹与中红外光子</td><td><a href="https://hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/p15409-901_kird1137e.pdf">中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</a></td><td>商用</td></tr>
+<tr><td>125</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1109/ted.2022.3164373">中红外探测器同口径比较——InSb/HgCdTe/T2SL/2D vdW/胶体量子点(CQD)的D*、NEP、响应波长与温度</a></td><td>商用</td></tr>
+<tr><td>126</td><td>太赫兹与中红外光子</td><td><a href="https://www.nature.com/articles/s41467-025-65293-y">片上太赫兹波导/超材料/等离激元——损耗、耦合、色散与系统集成瓶颈(薄膜铌酸锂TFLN vs 硅)</a></td><td>实验室</td></tr>
+<tr><td>127</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1038/s41467-025-65293-y">片上太赫兹波导/超材料/等离激元——损耗、耦合、色散与系统集成瓶颈(薄膜铌酸锂TFLN vs 硅)</a></td><td>实验室</td></tr>
+<tr><td>128</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1038/s41467-025-62267-y">片上太赫兹波导/超材料/等离激元——损耗、耦合、色散与系统集成瓶颈(薄膜铌酸锂TFLN vs 硅)</a></td><td>实验室</td></tr>
+<tr><td>129</td><td>太赫兹与中红外光子</td><td><a href="https://www.envirotech-online.com/news/item/industry-news/2025/08/07/miro-analytical-multi-qcl-ambient-air-monitoring">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>130</td><td>太赫兹与中红外光子</td><td><a href="https://www.empa.ch/web/s503/laser-standard">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>131</td><td>太赫兹与中红外光子</td><td><a href="https://bepartofresearch.nihr.ac.uk/">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>132</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1007/s10762-025-01055-7">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>133</td><td>太赫兹与中红外光子</td><td><a href="https://doi.org/10.1038/s41377-026-02321-6">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>134</td><td>太赫兹与中红外光子</td><td><a href="https://arxiv.org/abs/2605.12348">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>135</td><td>太赫兹与中红外光子</td><td><a href="https://arxiv.org/abs/2510.22549">中红外光谱/痕量气体/无创诊断/自由空间通信的真实应用成熟度——原型 vs 商用</a></td><td>商用</td></tr>
+<tr><td>136</td><td>太赫兹与中红外光子</td><td><a href="https://www.nature.com/articles/s41467-025-55887-x">3-5年最值得下注、可判定Go/No-Go的科学与工程问题(判据化)</a></td><td>理论</td></tr>
+<tr><td>137</td><td>太赫兹与中红外光子</td><td><a href="https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full">3-5年最值得下注、可判定Go/No-Go的科学与工程问题(判据化)</a></td><td>理论</td></tr>
+<tr><td>138</td><td>太赫兹与中红外光子</td><td><a href="https://www.nature.com/articles/s41467-025-65293-y">3-5年最值得下注、可判定Go/No-Go的科学与工程问题(判据化)</a></td><td>理论</td></tr>
+<tr><td>139</td><td>太赫兹与中红外光子</td><td><a href="https://arxiv.org/abs/2605.12348">3-5年最值得下注、可判定Go/No-Go的科学与工程问题(判据化)</a></td><td>理论</td></tr>
+</table><h2>来源分区</h2><h3>公开信息</h3>
+<h4><span class="ext">[外]</span> 来源1：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/</a></h4>
+<h4><span class="ext">[外]</span> 来源2：<a href="https://www.nature.com/articles/s41377-025-01858-2">https://www.nature.com/articles/s41377-025-01858-2</a></h4>
+<h4><span class="ext">[外]</span> 来源3：<a href="https://epjam.edp-open.org/articles/epjam/full_html/2022/01/epjam210028/epjam210028.html">https://epjam.edp-open.org/articles/epjam/full_html/2022/01/epjam210028/epjam210028.html</a></h4>
+<h4><span class="ext">[外]</span> 来源4：<a href="https://doi.org/10.1002/lpor.202300201">https://doi.org/10.1002/lpor.202300201</a></h4>
+<h4><span class="ext">[外]</span> 来源5：<a href="https://doi.org/10.1063/5.0177734">https://doi.org/10.1063/5.0177734</a></h4>
+<h4><span class="ext">[外]</span> 来源6：<a href="https://www.nature.com/articles/s41467-025-62539-7">https://www.nature.com/articles/s41467-025-62539-7</a></h4>
+<h4><span class="ext">[外]</span> 来源7：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/</a></h4>
+<h4><span class="ext">[外]</span> 来源8：<a href="https://www.nature.com/articles/s41377-023-01148-9">https://www.nature.com/articles/s41377-023-01148-9</a></h4>
+<h4><span class="ext">[外]</span> 来源9：<a href="https://www.nature.com/articles/s41563-023-01710-1">https://www.nature.com/articles/s41563-023-01710-1</a></h4>
+<h4><span class="ext">[外]</span> 来源10：<a href="https://arxiv.org/abs/2507.20229">https://arxiv.org/abs/2507.20229</a></h4>
+<h4><span class="ext">[外]</span> 来源11：<a href="https://www.nature.com/articles/s41378-025-01064-5">https://www.nature.com/articles/s41378-025-01064-5</a></h4>
+<h4><span class="ext">[外]</span> 来源12：<a href="https://doi.org/10.1021/acs.nanolett.5c05226">https://doi.org/10.1021/acs.nanolett.5c05226</a></h4>
+<h4><span class="ext">[外]</span> 来源13：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13683382">https://pmc.ncbi.nlm.nih.gov/articles/PMC13683382</a></h4>
+<h4><span class="ext">[外]</span> 来源14：<a href="https://www.nature.com/articles/s44287-024-00136-4">https://www.nature.com/articles/s44287-024-00136-4</a></h4>
+<h4><span class="ext">[外]</span> 来源15：<a href="https://www.cs.princeton.edu/~fheide/papers/CompImaging-MetaOptics-Optica.pdf">https://www.cs.princeton.edu/~fheide/papers/CompImaging-MetaOptics-Optica.pdf</a></h4>
+<h4><span class="ext">[外]</span> 来源16：<a href="https://www.nature.com/articles/s41377-025-01906-x">https://www.nature.com/articles/s41377-025-01906-x</a></h4>
+<h4><span class="ext">[外]</span> 来源17：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12714037">https://pmc.ncbi.nlm.nih.gov/articles/PMC12714037</a></h4>
+<h4><span class="ext">[外]</span> 来源18：<a href="https://www.nature.com/articles/s41467-025-57736-3">https://www.nature.com/articles/s41467-025-57736-3</a></h4>
+<h4><span class="ext">[外]</span> 来源19：<a href="https://www.nature.com/articles/s41467-025-67603-w">https://www.nature.com/articles/s41467-025-67603-w</a></h4>
+<h4><span class="ext">[外]</span> 来源20：<a href="https://arxiv.org/html/2506.20895">https://arxiv.org/html/2506.20895</a></h4>
+<h4><span class="ext">[外]</span> 来源21：<a href="https://arxiv.org/abs/2502.10941">https://arxiv.org/abs/2502.10941</a></h4>
+<h4><span class="ext">[外]</span> 来源22：<a href="https://www.nature.com/articles/s41467-025-62022-3">https://www.nature.com/articles/s41467-025-62022-3</a></h4>
+<h4><span class="ext">[外]</span> 来源23：<a href="https://www.nature.com/articles/s41467-025-56483-9">https://www.nature.com/articles/s41467-025-56483-9</a></h4>
+<h4><span class="ext">[外]</span> 来源24：<a href="https://www.nature.com/articles/s41566-025-01669-2">https://www.nature.com/articles/s41566-025-01669-2</a></h4>
+<h4><span class="ext">[外]</span> 来源25：<a href="https://www.nature.com/articles/s41566-025-01662-9">https://www.nature.com/articles/s41566-025-01662-9</a></h4>
+<h4><span class="ext">[外]</span> 来源26：<a href="https://www.nature.com/articles/s41566-025-01639-8">https://www.nature.com/articles/s41566-025-01639-8</a></h4>
+<h4><span class="ext">[外]</span> 来源27：<a href="https://arxiv.org/abs/2510.09251">https://arxiv.org/abs/2510.09251</a></h4>
+<h4><span class="ext">[外]</span> 来源28：<a href="https://arxiv.org/abs/2511.23232">https://arxiv.org/abs/2511.23232</a></h4>
+<h4><span class="ext">[外]</span> 来源29：<a href="https://www.nature.com/articles/s41586-025-08820-7">https://www.nature.com/articles/s41586-025-08820-7</a></h4>
+<h4><span class="ext">[外]</span> 来源30：<a href="https://www.nature.com/articles/s41586-025-08662-3">https://www.nature.com/articles/s41586-025-08662-3</a></h4>
+<h4><span class="ext">[外]</span> 来源31：<a href="https://arxiv.org/abs/2506.23625">https://arxiv.org/abs/2506.23625</a></h4>
+<h4><span class="ext">[外]</span> 来源32：<a href="https://doi.org/10.1364/ol.547100">https://doi.org/10.1364/ol.547100</a></h4>
+<h4><span class="ext">[外]</span> 来源33：<a href="https://www.nature.com/articles/s42005-025-02247-2">https://www.nature.com/articles/s42005-025-02247-2</a></h4>
+<h4><span class="ext">[外]</span> 来源34：<a href="https://www.nature.com/articles/s42005-025-02135-9">https://www.nature.com/articles/s42005-025-02135-9</a></h4>
+<h4><span class="ext">[外]</span> 来源35：<a href="https://www.nature.com/articles/s41377-024-01627-7">https://www.nature.com/articles/s41377-024-01627-7</a></h4>
+<h4><span class="ext">[外]</span> 来源36：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12533016/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12533016/</a></h4>
+<h4><span class="ext">[外]</span> 来源37：<a href="https://iopscience.iop.org/article/10.1088/1361-6463/add946">https://iopscience.iop.org/article/10.1088/1361-6463/add946</a></h4>
+<h4><span class="ext">[外]</span> 来源38：<a href="https://arxiv.org/html/2408.06921">https://arxiv.org/html/2408.06921</a></h4>
+<h4><span class="ext">[外]</span> 来源39：<a href="https://www.nature.com/articles/s41563-025-02398-1">https://www.nature.com/articles/s41563-025-02398-1</a></h4>
+<h4><span class="ext">[外]</span> 来源40：<a href="https://arxiv.org/abs/2503.23755">https://arxiv.org/abs/2503.23755</a></h4>
+<h4><span class="ext">[外]</span> 来源41：<a href="https://www.nature.com/articles/s41566-025-01752-8">https://www.nature.com/articles/s41566-025-01752-8</a></h4>
+<h4><span class="ext">[外]</span> 来源42：<a href="https://arxiv.org/html/2501.10597">https://arxiv.org/html/2501.10597</a></h4>
+<h4><span class="ext">[外]</span> 来源43：<a href="https://www.nature.com/articles/s41586-026-10523-6">https://www.nature.com/articles/s41586-026-10523-6</a></h4>
+<h4><span class="ext">[外]</span> 来源44：<a href="https://arxiv.org/abs/2508.09092">https://arxiv.org/abs/2508.09092</a></h4>
+<h4><span class="ext">[外]</span> 来源45：<a href="https://arxiv.org/abs/2604.12330">https://arxiv.org/abs/2604.12330</a></h4>
+<h4><span class="ext">[外]</span> 来源46：<a href="https://arxiv.org/abs/2510.17659">https://arxiv.org/abs/2510.17659</a></h4>
+<h4><span class="ext">[外]</span> 来源47：<a href="https://arxiv.org/abs/2508.17940">https://arxiv.org/abs/2508.17940</a></h4>
+<h4><span class="ext">[外]</span> 来源48：<a href="https://arxiv.org/abs/2504.05660">https://arxiv.org/abs/2504.05660</a></h4>
+<h4><span class="ext">[外]</span> 来源49：<a href="https://www.nature.com/articles/s41586-024-07308-0">https://www.nature.com/articles/s41586-024-07308-0</a></h4>
+<h4><span class="ext">[外]</span> 来源50：<a href="https://arxiv.org/html/2511.17327">https://arxiv.org/html/2511.17327</a></h4>
+<h4><span class="ext">[外]</span> 来源51：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12714032/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12714032/</a></h4>
+<h4><span class="ext">[外]</span> 来源52：<a href="https://arxiv.org/abs/2508.08599">https://arxiv.org/abs/2508.08599</a></h4>
+<h4><span class="ext">[外]</span> 来源53：<a href="https://doi.org/10.1038/s41565-023-01525-w">https://doi.org/10.1038/s41565-023-01525-w</a></h4>
+<h4><span class="ext">[外]</span> 来源54：<a href="https://www.nature.com/articles/s41467-026-71688-2">https://www.nature.com/articles/s41467-026-71688-2</a></h4>
+<h4><span class="ext">[外]</span> 来源55：<a href="https://www.nature.com/articles/s41377-024-01653-5">https://www.nature.com/articles/s41377-024-01653-5</a></h4>
+<h4><span class="ext">[外]</span> 来源56：<a href="https://www.nature.com/articles/s41586-026-10292-2">https://www.nature.com/articles/s41586-026-10292-2</a></h4>
+<h4><span class="ext">[外]</span> 来源57：<a href="https://www.nature.com/articles/s41586-025-09620-9">https://www.nature.com/articles/s41586-025-09620-9</a></h4>
+<h4><span class="ext">[外]</span> 来源58：<a href="https://www.nature.com/articles/s42254-025-00889-3">https://www.nature.com/articles/s42254-025-00889-3</a></h4>
+<h4><span class="ext">[外]</span> 来源59：<a href="https://dleykam.blogspot.com/2025/11/topological-photonics-limitations-and.html">https://dleykam.blogspot.com/2025/11/topological-photonics-limitations-and.html</a></h4>
+<h4><span class="ext">[外]</span> 来源60：<a href="https://arxiv.org/abs/2510.23796">https://arxiv.org/abs/2510.23796</a></h4>
+<h4><span class="ext">[外]</span> 来源61：<a href="https://doi.org/10.1103/PhysRevLett.113.087403">https://doi.org/10.1103/PhysRevLett.113.087403</a></h4>
+<h4><span class="ext">[外]</span> 来源62：<a href="https://www.nature.com/articles/s41377-025-02175-4">https://www.nature.com/articles/s41377-025-02175-4</a></h4>
+<h4><span class="ext">[外]</span> 来源63：<a href="https://arxiv.org/abs/2501.05756">https://arxiv.org/abs/2501.05756</a></h4>
+<h4><span class="ext">[外]</span> 来源64：<a href="https://www.nature.com/articles/s41467-026-70834-0">https://www.nature.com/articles/s41467-026-70834-0</a></h4>
+<h4><span class="ext">[外]</span> 来源65：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12338876/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12338876/</a></h4>
+<h4><span class="ext">[外]</span> 来源66：<a href="https://arxiv.org/html/2604.03153">https://arxiv.org/html/2604.03153</a></h4>
+<h4><span class="ext">[外]</span> 来源67：<a href="https://doi.org/10.1364/ofc.2026.th2a.12">https://doi.org/10.1364/ofc.2026.th2a.12</a></h4>
+<h4><span class="ext">[外]</span> 来源68：<a href="https://ieeexplore.ieee.org/document/11524369">https://ieeexplore.ieee.org/document/11524369</a></h4>
+<h4><span class="ext">[外]</span> 来源69：<a href="https://doi.org/10.1109/ipc65510.2025.11282028">https://doi.org/10.1109/ipc65510.2025.11282028</a></h4>
+<h4><span class="ext">[外]</span> 来源70：<a href="https://www.nature.com/articles/s44310-025-00072-7">https://www.nature.com/articles/s44310-025-00072-7</a></h4>
+<h4><span class="ext">[外]</span> 来源71：<a href="https://doi.org/10.1364/oe.582307">https://doi.org/10.1364/oe.582307</a></h4>
+<h4><span class="ext">[外]</span> 来源72：<a href="https://arxiv.org/html/2512.16579">https://arxiv.org/html/2512.16579</a></h4>
+<h4><span class="ext">[外]</span> 来源73：<a href="https://arxiv.org/html/2504.19815v2">https://arxiv.org/html/2504.19815v2</a></h4>
+<h4><span class="ext">[外]</span> 来源74：<a href="https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j">https://journals.aps.org/prxquantum/pdf/10.1103/cynh-ql3j</a></h4>
+<h4><span class="ext">[外]</span> 来源75：<a href="https://par.nsf.gov/servlets/purl/10416123">https://par.nsf.gov/servlets/purl/10416123</a></h4>
+<h4><span class="ext">[外]</span> 来源76：<a href="https://arxiv.org/html/2512.16197v2">https://arxiv.org/html/2512.16197v2</a></h4>
+<h4><span class="ext">[外]</span> 来源77：<a href="https://www.nature.com/articles/s41467-025-57584-1">https://www.nature.com/articles/s41467-025-57584-1</a></h4>
+<h4><span class="ext">[外]</span> 来源78：<a href="https://doi.org/10.1021/acsphotonics.5c02227">https://doi.org/10.1021/acsphotonics.5c02227</a></h4>
+<h4><span class="ext">[外]</span> 来源79：<a href="https://www.nature.com/articles/s41467-025-60942-8">https://www.nature.com/articles/s41467-025-60942-8</a></h4>
+<h4><span class="ext">[外]</span> 来源80：<a href="https://doi.org/10.26599/nr.2025.94908140">https://doi.org/10.26599/nr.2025.94908140</a></h4>
+<h4><span class="ext">[外]</span> 来源81：<a href="https://doi.org/10.1002/adom.202501297">https://doi.org/10.1002/adom.202501297</a></h4>
+<h4><span class="ext">[外]</span> 来源82：<a href="https://doi.org/10.1088/2053-1583/addf5b">https://doi.org/10.1088/2053-1583/addf5b</a></h4>
+<h4><span class="ext">[外]</span> 来源83：<a href="https://www.leti-cea.com/cea-tech/leti/english/Pages/What&#x27;s-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx">https://www.leti-cea.com/cea-tech/leti/english/Pages/What&#x27;s-On/News/Direct-Bonding-Technique-for-Industry-Scalable-2D-materials.aspx</a></h4>
+<h4><span class="ext">[外]</span> 来源84：<a href="https://www.nature.com/articles/s41928-024-01158-4">https://www.nature.com/articles/s41928-024-01158-4</a></h4>
+<h4><span class="ext">[外]</span> 来源85：<a href="https://doi.org/10.1109/iedm50572.2025.11353501">https://doi.org/10.1109/iedm50572.2025.11353501</a></h4>
+<h4><span class="ext">[外]</span> 来源86：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11829894/">https://pmc.ncbi.nlm.nih.gov/articles/PMC11829894/</a></h4>
+<h4><span class="ext">[外]</span> 来源87：<a href="https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301">https://journal.hep.com.cn/fop/EN/10.15302/frontphys.2025.044301</a></h4>
+<h4><span class="ext">[外]</span> 来源88：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12147551/</a></h4>
+<h4><span class="ext">[外]</span> 来源89：<a href="https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics">https://pubs.aip.org/aip/apl/article/127/13/130401/3365603/Hybrid-and-heterogeneous-integration-in-photonics</a></h4>
+<h4><span class="ext">[外]</span> 来源90：<a href="https://www.nature.com/articles/nphoton.2010.171">https://www.nature.com/articles/nphoton.2010.171</a></h4>
+<h4><span class="ext">[外]</span> 来源91：<a href="http://lib.fibopt.ru/Articles/Bi/JOptA_2006_8_840.pdf">http://lib.fibopt.ru/Articles/Bi/JOptA_2006_8_840.pdf</a></h4>
+<h4><span class="ext">[外]</span> 来源92：<a href="https://doi.org/10.1088/1464-4258/8/10/004">https://doi.org/10.1088/1464-4258/8/10/004</a></h4>
+<h4><span class="ext">[外]</span> 来源93：<a href="https://arxiv.org/abs/1703.03517">https://arxiv.org/abs/1703.03517</a></h4>
+<h4><span class="ext">[外]</span> 来源94：<a href="https://arxiv.org/abs/1705.10038">https://arxiv.org/abs/1705.10038</a></h4>
+<h4><span class="ext">[外]</span> 来源95：<a href="https://doi.org/10.1088/1361-6463/ad43f5">https://doi.org/10.1088/1361-6463/ad43f5</a></h4>
+<h4><span class="ext">[外]</span> 来源96：<a href="https://doi.org/10.1002/lpor.202501738">https://doi.org/10.1002/lpor.202501738</a></h4>
+<h4><span class="ext">[外]</span> 来源97：<a href="https://research.cuhk.edu.hk/en/publications/two-photon-absorption-and-self-phase-modulation-in-silicon-wavegu-3/">https://research.cuhk.edu.hk/en/publications/two-photon-absorption-and-self-phase-modulation-in-silicon-wavegu-3/</a></h4>
+<h4><span class="ext">[外]</span> 来源98：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12297514">https://pmc.ncbi.nlm.nih.gov/articles/PMC12297514</a></h4>
+<h4><span class="ext">[外]</span> 来源99：<a href="https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full">https://www.frontiersin.org/journals/advanced-optical-technologies/articles/10.3389/aot.2025.1431573/full</a></h4>
+<h4><span class="ext">[外]</span> 来源100：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13451205">https://pmc.ncbi.nlm.nih.gov/articles/PMC13451205</a></h4>
+<h4><span class="ext">[外]</span> 来源101：<a href="http://cqd.ece.northwestern.edu/pubs/files/4eb310d8828e561d11e927a3966b64b3.pdf">http://cqd.ece.northwestern.edu/pubs/files/4eb310d8828e561d11e927a3966b64b3.pdf</a></h4>
+<h4><span class="ext">[外]</span> 来源102：<a href="https://arxiv.org/abs/2610.06391">https://arxiv.org/abs/2610.06391</a></h4>
+<h4><span class="ext">[外]</span> 来源103：<a href="https://doi.org/10.1038/s41377-025-01935-6">https://doi.org/10.1038/s41377-025-01935-6</a></h4>
+<h4><span class="ext">[外]</span> 来源104：<a href="https://www.nature.com/articles/s41467-025-55887-x">https://www.nature.com/articles/s41467-025-55887-x</a></h4>
+<h4><span class="ext">[外]</span> 来源105：<a href="https://www.nature.com/articles/s41467-026-71374-3">https://www.nature.com/articles/s41467-026-71374-3</a></h4>
+<h4><span class="ext">[外]</span> 来源106：<a href="https://doi.org/10.1038/s41467-026-78047-1">https://doi.org/10.1038/s41467-026-78047-1</a></h4>
+<h4><span class="ext">[外]</span> 来源107：<a href="https://par.nsf.gov/servlets/purl/10590314">https://par.nsf.gov/servlets/purl/10590314</a></h4>
+<h4><span class="ext">[外]</span> 来源108：<a href="https://hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/p15409-901_kird1137e.pdf">https://hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/ssd/p15409-901_kird1137e.pdf</a></h4>
+<h4><span class="ext">[外]</span> 来源109：<a href="https://doi.org/10.1109/ted.2022.3164373">https://doi.org/10.1109/ted.2022.3164373</a></h4>
+<h4><span class="ext">[外]</span> 来源110：<a href="https://www.nature.com/articles/s41467-025-65293-y">https://www.nature.com/articles/s41467-025-65293-y</a></h4>
+<h4><span class="ext">[外]</span> 来源111：<a href="https://doi.org/10.1038/s41467-025-65293-y">https://doi.org/10.1038/s41467-025-65293-y</a></h4>
+<h4><span class="ext">[外]</span> 来源112：<a href="https://doi.org/10.1038/s41467-025-62267-y">https://doi.org/10.1038/s41467-025-62267-y</a></h4>
+<h4><span class="ext">[外]</span> 来源113：<a href="https://www.envirotech-online.com/news/item/industry-news/2025/08/07/miro-analytical-multi-qcl-ambient-air-monitoring">https://www.envirotech-online.com/news/item/industry-news/2025/08/07/miro-analytical-multi-qcl-ambient-air-monitoring</a></h4>
+<h4><span class="ext">[外]</span> 来源114：<a href="https://www.empa.ch/web/s503/laser-standard">https://www.empa.ch/web/s503/laser-standard</a></h4>
+<h4><span class="ext">[外]</span> 来源115：<a href="https://bepartofresearch.nihr.ac.uk/">https://bepartofresearch.nihr.ac.uk/</a></h4>
+<h4><span class="ext">[外]</span> 来源116：<a href="https://doi.org/10.1007/s10762-025-01055-7">https://doi.org/10.1007/s10762-025-01055-7</a></h4>
+<h4><span class="ext">[外]</span> 来源117：<a href="https://doi.org/10.1038/s41377-026-02321-6">https://doi.org/10.1038/s41377-026-02321-6</a></h4>
+<h4><span class="ext">[外]</span> 来源118：<a href="https://arxiv.org/abs/2605.12348">https://arxiv.org/abs/2605.12348</a></h4>
+<h4><span class="ext">[外]</span> 来源119：<a href="https://arxiv.org/abs/2510.22549">https://arxiv.org/abs/2510.22549</a></h4>
+</body></html>

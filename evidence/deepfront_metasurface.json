@@ -1,0 +1,106 @@
+{
+  "direction": "光电信息工程前沿盲区：超表面/平面光学（metasurface / flat optics）",
+  "generated_at": "2026-11-25",
+  "mechanisms": [
+    {
+      "name": "相位-振幅-偏振联合调控与效率-带宽-角度-偏振不可兼得约束",
+      "physics": "亚波长 meta-atom 通过传播相位（几何尺寸/高宽比）与 Pancharatnam-Berry（PB）几何相位（旋转角）分别提供 0-2pi 相控与偏振选择；高折射率介质（TiO2/Si3N4 n≈2、c-Si）用 Mie 共振/波导模获得高透射与低损耗，金属等离激元用偏振转换但本征吸收大。联合调控的物理代价来自三条硬约束：(1) 色散工程的时间-带宽积上界（TBP, j*DeltaT*DeltaX）把消色差带宽与单元可提供的群延迟绑定，带宽越大或口径越大，所需群延迟越难由有限高度纳米柱实现；(2) 大 NA / 大角度下相位对入射角强依赖，产生 off-axis 像差（尤其 coma），视场-带宽不能同时拉满；(3) 非局域（nonlocal）耦合/导模共振虽能突破单元效率极限，却引入角度选择性；振幅与偏振通道复用会牺牲正交通道效率。故效率-带宽-角度-偏振四者构成多目标帕累托前沿，不可同时最优。",
+      "numbers": "2pi 相控（PMC12617707）；消色差需 13.60pi 群延迟补偿而 meta-atom 仅能提供 2.20pi（LSA 14:204），缺口迫使加六阶 SPDC 阶梯层；TBP 上界见 DOI 10.1063/5.0177734；非局域金属透镜透射效率上限 DOI 10.1002/lpor.202300201；FOV-带宽上界 EPJ Appl. Metamater. 9:16 (2022)；AR/VR 目标 FOV 达 160°、帧率>=120Hz，全 2pi 波前控制或需数百万可调态，单 meta-element 级寻址目前不可行（Nanophotonics 14(23):3813）。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/",
+        "https://www.nature.com/articles/s41377-025-01858-2",
+        "https://epjam.edp-open.org/articles/epjam/full_html/2022/01/epjam210028/epjam210028.html",
+        "https://doi.org/10.1002/lpor.202300201",
+        "https://doi.org/10.1063/5.0177734"
+      ],
+      "status": "已核验",
+      "maturity": "理论",
+      "link_to_existing": "延伸 deeplens_display.json 的 SRG/VHG/PVG 衍射波导与 AR/VR 近眼显示路线：衍射波导受限于衍射效率-视场-彩虹纹耦合，超表面提供 2pi 相控与偏振复用的新自由度但同样受帕累托约束；并衔接 deeptool_fab.json 的侧壁粗糙度/套刻误差（直接决定相控精度）。"
+    },
+    {
+      "name": "2025-2026 metalens 实测效率纪录与口径区分（消色差/宽带/大NA/高效率不可混引）",
+      "physics": "聚焦效率口径必须区分：绝对效率=焦斑内功率/入射功率；相对效率=焦斑内功率/透射功率。单元（meta-atom）透射/转换效率、仿真效率与整镜实测聚焦效率是三个不同量；消色差（多波长）、宽带、大 NA、单波长高效率是互相制约的设计目标，不可跨口径比较。",
+      "numbers": "【A 低NA消色差+高效率】Zhang et al. Nat. Commun. 16:7485 (2025-08-12)：Si3N4 PECVD 200C、柱高1300nm/最小feature 40nm/周期350nm/深宽比43.33，NA=0.155、直径30um，460-650nm 焦距97.33um+/-5%、Strehl 0.88，实测平均聚焦效率80.39%（仿真91.2%，定义为3xFWHM半径圆内功率/入射功率），自称可见光消色差金属透镜纪录；5x5阵列单镜直径90um/f=980um/NA=0.046，平均效率67%+/-2%。【B 高NA宽带但低效率】Lin J.G. et al. LSA 14:110 (2025)，评述见 LSA 14:204：650-1000nm、NA 0.9(半径20.1um)/NA 0.7(半径30um)，仿真效率22.4-29.1%，实测约10%（阶梯色散层制造偏差），白光成像分辨率1.10um。【C 单波长高效率+晶圆级】Jung et al. Adv. Mater. 37:2500327 (2025)：TiO2 UV-NIL，550nm设计、NA约0.2，绝对聚焦效率最高81.2%、相对效率90.4%（仿真83%/91%）。三条口径不同：A 是低NA消色差、B 是高NA宽带、C 是单波长NA0.2，禁止混引。",
+      "urls": [
+        "https://www.nature.com/articles/s41467-025-62539-7",
+        "https://www.nature.com/articles/s41377-025-01858-2",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/"
+      ],
+      "status": "已核验",
+      "maturity": "实验室",
+      "link_to_existing": "校正 deeplens_display.json 中所有''效率''类表述：显示波导的效率口径须与 metalens 的绝对/相对/单元/整镜口径一一对应；并衔接 deeptool_fab.json 的 PECVD 低温工艺（Si3N4 200C 兼容 CMOS 后道）与 deeptool_metrology.json 的焦斑/Strehl 测量判据。"
+    },
+    {
+      "name": "超表面光谱仪/偏振成像/AR显示真实器件进展（实验室 vs 量产分界）",
+      "physics": "超表面同时承担分光与聚焦：多焦点金属透镜把波长映射到焦平面焦点方位角；可调/级联超表面把光谱与 Stokes 参量编码进空间强度分布，再由神经网络/算法解码；AR/VR 近眼显示用全息/衍射超表面在亚波长尺度控制相位振幅偏振以减轻重量与体积。等离激元偏振转换效率低（需换介质或反射式），是光谱仪走向实用的关键瓶颈。",
+      "numbers": "【光谱仪-实验室】Wang et al. LSA 12:103 (2023)：单层 Au 纳米棒(200x80x40nm/周期300nm/300x300um2/1000x1000像素/EBL)，180焦点版500-679nm、1nm间隔、环半径40um、工作距离300um，实测502/533/591/621nm -> 504.1/533.6/591.4/619.8nm，相对误差<0.5%，但只能识别预设计波长，离开设计波长失效，作者明说偏振转换效率低。【角度分辨光谱仪】Cai et al. Nat. Mater. 23:71 (2023, 2025-02 有更正)：4x4um2 footprint、波长精度0.17nm、光谱分辨率0.4nm、线性动态范围149dB、探测极限1.2fJ、角分辨率4.88e-3 rad（超表面光谱仪阵列置于金属透镜后焦面）。【光谱偏振仪-原型】arXiv:2507.20229 -> Optica 13(4):737 (2026)：超表面衍射光网络+深度学习单次测量同时重建光谱与 Stokes 参量，已在商用 CMOS 图像传感器上做芯片集成样机（实验验证，未量产）。【AR/VR-综述/实验室】Nanophotonics 14(23):3813 (2025)：可调全息超表面（液晶/2D材料/相变材料），市场2023年约70亿美元、年增最高50%；全可见+大FOV+单元件寻址仍未解决。【光加密 / OCT】本轮检索未获得可核验的一手器件数字，标未覆盖。",
+      "urls": [
+        "https://www.nature.com/articles/s41377-023-01148-9",
+        "https://www.nature.com/articles/s41563-023-01710-1",
+        "https://arxiv.org/abs/2507.20229",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/"
+      ],
+      "status": "已核验",
+      "maturity": "实验室",
+      "link_to_existing": "光谱/偏振成像衔接 deeplens_sensing.json 与 deeplens_display.json 的图像传感器/光谱传感条目；AR/VR 全息/衍射超表面直接对接 deeplens_display.json 的光波导与 MicroLED 近眼显示；芯片集成光谱仪衔接 deepmech_modulator.json 的硅光/CMOS 集成工艺。光加密与 OCT 为本项目未覆盖子方向，建议后续单列。"
+    },
+    {
+      "name": "大尺寸晶圆级制造、相邻单元耦合、容差、良率与成本",
+      "physics": "晶圆级量产依赖 NIL/深紫外光刻的母版复用与转移，成本随母版一次制作、多次复制而摊薄；相邻 meta-atom 间的近场耦合与非局域导模共振既可能造成串扰/角度敏感，也可被利用来突破单单元效率上限；高深宽比纳米柱在显影/刻蚀中的收缩、侧壁角与线宽粗糙度直接改变有效折射率与相位，是容差与良率的主因。",
+      "numbers": "【晶圆级实测】Jung et al. Adv. Mater. 37:2500327 (2025)：8英寸晶圆、UV-NIL 直接打印全无机 TiO2 纳米颗粒墨水，压印<5min、每片约1000颗4mm金属透镜、PDMS 弹性印章复用>=10次；10nm+20nm TiO2 NP 按4:6混合使煅烧后 RI约2.0，25循环 ALD 回填把 RI 提到2.3（孔隙率约30-32% -> 12.3%/5.3%），450C 煅烧去有机物。【良率数据-单源】综述 s41378-025-01064-5 检索片段：4英寸晶圆金属透镜转移良率约95%，但随晶圆尺寸增大良率下降（正文抓取被截短，标单源未验证）。【非局域鲁棒性】Wafer-Scale All-Dielectric Quasi-BIC Metasurfaces, Nano Lett. (2026-02), DOI 10.1021/acs.nanolett.5c05226：深紫外光刻晶圆级 qBIC，导模共振的非局域特性带来对剂量/深度变化的鲁棒性（ACS 正文被 Cloudflare 拦截，仅摘要/片段，标单源未验证）。【共形晶圆】Wafer-scale conformal metasurface optics, PMC13683382 (2026-09)：6英寸玻璃晶圆上 EBL 做 5x5 阵列（每单元2mmx2mm），热成型转移。成本/良率的完整公开数据集仍是缺口。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/",
+        "https://www.nature.com/articles/s41378-025-01064-5",
+        "https://doi.org/10.1021/acs.nanolett.5c05226",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13683382"
+      ],
+      "status": "单源未验证",
+      "maturity": "原型",
+      "link_to_existing": "直接对接 deeptool_fab.json 的 NIL sub-10nm、EVG SmartNIL 200mm sub-20nm overlay、ICP-RIE 侧壁粗糙度、胶折射率1.5-1.6/纳米颗粒1.8-2.0 等工艺基线；TiO2 纳米颗粒墨水+ALD 回填是 deeplens_display.json 波导材料之外的新增量产路线。"
+    },
+    {
+      "name": "与传统折射/衍射光学的系统级优劣判据（体积/视场/效率/重量/像差）",
+      "physics": "超表面以单层亚波长结构替代多片研磨/模塑透镜，SWaP-C（尺寸/重量/功耗/成本）占优；但色散、角度依赖与非局域效应使大视场+宽带同时实现困难，多功能（消色差/大NA/偏振）常以成像性能为代价，需计算成像联合设计补偿。判据须按系统级口径（整镜/整机效率、全视场像差）比较，而非单元效率。",
+      "numbers": "Brongersma et al. Nat. Rev. Electrical Eng. 2:125 (2025)：明确 SWaP-C 优于研磨玻璃/模塑塑料透镜，路线为 R2R 纳米压印产业化，应用含结构色/光电探测/生物传感/深度传感/多模态计算成像/热辐射管理（正文付费墙，具体对比数字标单源未验证）。Nanophotonics 14(23):3813 (2025)：人眼 FOV 可达160°，近眼显示需>=120Hz，off-axis 彗差随相位-角度依赖恶化；传统光学靠多片组合消像差但体积/对准开销大。Computational imaging with meta-optics (Princeton Heide 组, Optica)：微型化与多功能牺牲成像性能，必须与计算成像联合设计（定性结论，无系统级实测对照数字）。本项目未找到可复算的''超表面 vs 折射/衍射镜组''同口径系统级实测对照表，属公开数据缺口。",
+      "urls": [
+        "https://www.nature.com/articles/s44287-024-00136-4",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/",
+        "https://www.cs.princeton.edu/~fheide/papers/CompImaging-MetaOptics-Optica.pdf"
+      ],
+      "status": "单源未验证",
+      "maturity": "理论",
+      "link_to_existing": "为 deeplens_display.json / deeplens_sensing.json 提供''超表面 vs 传统折射/衍射''的选型判据框架，补充 deeptool_sim.json 的联合仿真/逆向设计与 deeptool_metrology.json 的像差测量口径。"
+    },
+    {
+      "name": "未来3-5年最值得下注且可判定 Go/No-Go 的科学问题",
+      "physics": "基于前述证据，可用同一判据在3-5年内做机械判决的核心问题集中在四条：(1) 效率-带宽-NA 三角能否突破 TBP/FOV 上界（决定消色差大 NA 镜头是否可行）；(2) 单元效率到整镜效率、仿真到实测的转化率能否收敛（决定''纪录效率''能否工程化）；(3) 晶圆级良率-成本曲线是否随尺寸恶化（决定量产经济性）；(4) 非局域耦合/可调超表面能否在保持效率下实现百万级可调态与全可见大 FOV（决定动态显示/成像落地）。",
+      "numbers": "Go/No-Go 判据（可由现有数字锚定）：① 高NA(>=0.7)且宽带(>=300nm)下实测整镜效率能否从约10%提升到>=30%（基线 Lin LSA 14:110 实测约10%、TBP 上界 DOI 10.1063/5.0177734）；② 单元->整镜效率转化率：消色差低NA 已实测80.39%但仿真91.2%（差约11个百分点，Nat. Commun. 16:7485），能否把仿真-实测差压到<5个百分点；③ 8英寸晶圆(Yield/成本基线：约1000颗4mm镜/片、压印<5min、印章>=10次，Adv. Mater. 37:2500327)下随尺寸增大的良率下降(s41378 片段4英寸约95%)能否被抑制；④ 可调超表面能否达到百万级可调态+全可见+>=120Hz(Nanophotonics 14(23):3813 指出目前不可行)。",
+      "urls": [
+        "https://www.nature.com/articles/s41377-025-01858-2",
+        "https://www.nature.com/articles/s41467-025-62539-7",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12306388/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12617707/",
+        "https://doi.org/10.1063/5.0177734"
+      ],
+      "status": "已核验",
+      "maturity": "理论",
+      "link_to_existing": "统合全部既有赛道：与 deeplens_display.json（AR/VR/显示）、deeplens_sensing.json（光谱/成像）、deeptool_fab.json（量产工艺）、deeptool_sim.json（逆向设计）、deepmech_modulator.json（可调/集成）形成可判定下注清单，供 lead 汇总为跨赛道盲区优先级。"
+    }
+  ],
+  "key_insights": [
+    "口径混引是最大陷阱：80.39%（低NA 0.155 消色差单镜）、81.2%绝对效率（单波长550nm/NA0.2晶圆级）、约10%（高NA0.9宽带整镜）三者口径完全不同，禁止跨条比较；单元效率、相对效率、仿真效率、整镜实测效率必须分列。",
+    "效率-带宽-NA-角度-偏振是不可兼得的多目标帕累托前沿：TBP上界与FOV-带宽上界给出理论天花板，SPDC阶梯层补齐13.60pi群延迟缺口才换来650-1000nm/NA0.9但牺牲效率到约10%。",
+    "制造已跨过‘能不能做’进入‘能不能便宜且稳定做’：8英寸UV-NIL每片约1000颗4mm镜、压印<5min、印章复用>=10次是量产信号；但4英寸约95%转移良率随晶圆增大下降、相邻单元耦合与容差数据集仍是公开缺口。",
+    "光谱/偏振/AR器件多停留在实验室原型：1nm分辨率光谱仪只能识别预设计波长且等离激元效率低；光谱偏振仪仅在商用CMOS上做集成样机；OCT与光加密本轮无可核验一手数字（未覆盖）。",
+    "系统级''超表面 vs 折射/衍射''的同口径实测对照表缺失，SWaP-C优势目前多为定性/综述断言，需按整镜效率+全视场像差+全系统体积重量统一口径补证。",
+    "最值得下注的判决点：高NA宽带整镜效率能否从约10%突破到>=30%、仿真-实测差能否压到<5个百分点、大晶圆良率曲线能否被抑制、可调超表面能否达百万态+全可见+120Hz。"
+  ],
+  "open_questions": [
+    "光加密（metasurface-based optical encryption/security）与 OCT 超表面器件：本轮未获一手可核验数字，需专门检索 Nature/Science/Optica 一手并区分仿真与实测。",
+    "4英寸约95%转移良率随晶圆增大下降的完整数据集、单颗成本/每片成本曲线未在公开一手文中给出（s41378 正文抓取被截短，仅片段）。",
+    "相邻 meta-atom 近场耦合/非局域串扰的定量容差阈值（线宽/侧壁角/RI 偏差->相位误差->效率损失）缺可复算的一手数据。",
+    "''超表面 vs 传统折射/衍射镜组''同口径系统级实测对照（整镜效率、全视场MTF/像差、体积重量、成本）尚未找到，SWaP-C 优势缺可复算支撑。",
+    "可调超表面（液晶/2D材料/相变材料）在全可见波段、大FOV、>=120Hz 下能否达到百万级独立可调态，尚属理论/实验室呼吁而非实测。",
+    "仿真-实测系统性差距（消色差低NA约11个百分点、高NA宽带仿真29%->实测10%）的主要归因（制造偏差 vs 模型不足）缺统一归因实验。"
+  ]
+}
