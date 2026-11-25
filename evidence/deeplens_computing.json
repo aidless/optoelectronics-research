@@ -1,0 +1,108 @@
+{
+  "direction": "光计算技术路线与商业化成败史",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "全光计算 vs 光电混合：非线性必须靠电、无光存储是关键物理判据",
+      "physics": "竞争逻辑：光的线性矩阵乘(MAC)天然低延迟低功耗，但『全光非线性』缺乏可级联、低功耗、可规模化的器件，且没有光存储，必须在光-电-光之间转换。因此工业界收敛到光电混合：光做线性、电做非线性激活/存储/控制。成败判据=能否把非线性与存储的电学代价压到不吞掉光学增益；以及能否在量产线上做出大规模、可校准、低误差的光电集成。宣称vs可核验：MIT 2025宣称『全光网络』，原文与Ars解读证实其非线性实为抽少量光进光电二极管测功率后再电调制剩余光，本质仍是电非线性——所以纯光路线未成立，混合路线才是可兑现妥协。",
+      "numbers": "MIT全光原型(Nature Photonics, DOI 10.1038/s41566-024-01567-z)：3层6神经元、仅2个非线性单元、132参数、端到端DNN延迟410 ps、元音识别92%——规模远小于LLM(GPT-4约10^12参数，团队目标约10^5参数)。曦智PACE(Nature 2025)混合方案：64×64矩阵、>16,000光器件、1 GHz时钟/3 ns周期、实测8.19 TOPS；能效4.21 TOPS/W(不含激光口径)→2.38 TOPS/W(含激光口径)，激光功耗使能效下降约43%；30,000随机向量点积误差均值0.06 LSB、σ1.18 LSB，25 MHz下平均7.61 ENOB，±5°C温漂掉约1 bit(口径：PACE整系统实测)。",
+      "urls": [
+        "https://www.nature.com/articles/s41586-025-08786-6",
+        "https://arstechnica.com/science/2025/01/getting-an-all-optical-ai-to-handle-non-linear-math",
+        "https://news.mit.edu/2017/new-system-allows-optical-deep-learning-0612"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "创业公司路线分化：Lightmatter从光计算转向光互连，曦智双线并行",
+      "physics": "竞争逻辑：纯光计算芯片要同时解决非线性、精度、封装、良率、软件栈，兑现周期长；光互连只需替换数据搬运，接口标准清晰、可逐步替换、量测标准成熟，故资本与产品先向互连倾斜。成败判据=是否有真实出货/量产客户(而非原型或未来宣称)。宣称vs可核验：Lightmatter的Envise曾商品化为4U服务器(含16块光子AI推理芯片)，但2024年D轮后明确把Passage晶圆级光互连interposer作为主线，Envise与Idiom软件栈仍在官网却已移出products类；Passage首批集群『2025年底上线』属CEO未来宣称，非已交付。曦智则计算器(PACE2/Gazelle)与光互连(Photowave CXL、Lightsphere X)双线并行。",
+      "numbers": "Lightmatter：2024-10 D轮$400M、投后估值$4.4B、累计融资$850M、约200员工；Passage最多48个compute die、晶圆级interposer、集成激光/调制器/探测器(公司宣称)。曦智PACE2官网规格：128×128可配置光矩阵、8 bit光计算输出精度、>40,000光子器件、3D TSV先进封装；PACE(2021发布)二进制编码、利用噪声反馈求解Ising/Max-cut。",
+      "urls": [
+        "https://www.eetimes.com/lightmatter-raises-400-million-series-d/",
+        "https://lightelligence.ai/products/photon-computing/pace2",
+        "https://lightelligence.ai/community/papers/9"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光互连派：Ayar Labs / Celestial AI 靠CPO先兑现并被产业资本整合",
+      "physics": "竞争逻辑：铜互连在>800 Gbps时受限到数米且需retimer；可插拔光模块距离远但功耗/延迟高；CPO(共封装光学)把光I/O直接并入GPU/加速器，带宽与能效兼得。成败判据=聚合带宽、能效、量产可得性与产业资本背书。宣称vs可核验：Ayar的>200 Tbps/封装为公司宣称(参考设计，8颗下一代TeraPHY)，1万GPU die scale-up域为CTO目标；NVIDIA $4B投向Coherent/Lumentum、Marvell收购Celestial AI为已发生事件(多方报道金额有分歧：$3.25B已成交 vs 最高$5.5B含对价)。",
+      "numbers": "Ayar Labs：2026-03完成$500M E轮(Neuberger Berman领投，NVIDIA/MediaTek参投)；Alchip参考设计用8颗TeraPHY，公司宣称每封装>200 Tbps聚合带宽(对比NVIDIA Rubin双向28.8 Tbps，约7倍)；目标10,000 GPU die scale-up域、机柜约100 kW；Ayar 2015年成立即做互连，非从计算转型。Celestial AI：2025-03 C1轮$250M、估值$2.5B；Marvell于2026-02完成收购(The Register口径约$3.25B；datadeep口径最高$5.5B，存在冲突)。CPO能效口径：约5.4 W/800G vs 2×FR4可插拔约15 W(Meta ECOC 2025/datadeep转述)。",
+      "urls": [
+        "https://www.theregister.com/on-prem/2026/03/03/ayar-labs-raises-500m-to-mass-produce-cpo-chiplets/4889700",
+        "https://datadeep.tech/photonic-neural-networks/",
+        "https://siliconangle.com/2025/03/11/celestial-ai-raises-250m-optical-interconnect-technology"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "相干光计算 vs 强度(非相干)光计算 / 自由空间 vs 波导集成：精度与规模口径之争",
+      "physics": "竞争逻辑：相干(MZI干涉网格，光场幅相)精度高但相位噪声/热漂移敏感、难大规模；非相干WDM广播-权重强度方案抗噪、易调矩阵、利于商用部署；自由空间(衍射/超表面)靠传播零能耗但难重构、集成度低；波导集成可量产但受 Thermal 串扰与ENOB上限约束。成败判据=有效精度(ENOB)、面积/能效口径是否含激光与电子外围、规模化是否与量产工艺兼容。宣称vs可核验：曦智明确选择非相干架构(精度控制/调矩阵灵活/抗噪利商用)，源于创始人2017相干开创论文后的工程路线调整；Taichi用『干涉-衍射混合』波导方案；LightGen自由空间全光则是团队宣称，需按理论/实测区分。",
+      "numbers": "曦智PACE(Nature 2025)：非相干、4.21/2.38 TOPS/W(不含/含激光)、7.61 ENOB@25 MHz、±5°C掉约1 bit。清华Taichi(Science 2024-04-12, DOI 10.1126/science.adl1203)：干涉-衍射混合、64×64输入输出维度、160 TOPS/W片上能效口径、879 T MACS/mm²面积效率、片上网络达约10^10光神经元、1623类Omniglot分类91.89%、100类mini-ImageNet 87.74%(口径：清华官方新闻，能效为片上、是否含激光未在该页标明)。热漂移硬约束口径：硅热光系数约1.8×10^-4 /K→80–100 pm/K谐振漂移(二手datadeep)。",
+      "urls": [
+        "https://www.nature.com/articles/s41586-025-08786-6",
+        "https://media.au.tsinghua.edu.cn/info/1016/1231.htm",
+        "https://dx.doi.org/10.1126/science.adl1203",
+        "https://datadeep.tech/photonic-neural-networks/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "自由空间全光生成式原型 LightGen：宣传口径与可核验口径存在落差",
+      "physics": "竞争逻辑：自由空间全光做端到端视觉生成，试图绕开电非线性与光存储，卖点是『无ground truth训练、全光维度变换』。成败判据=是否给出独立可复现的墙插能效/延迟与量产路径。宣称vs可核验：团队宣称单芯片百万光神经元、支持3D/高清视频/语义生成、质量可比Stable Diffusion/NeRF；能效『较数字芯片提升2个数量级』标为当前器件口径，『算力7个数量级、能效8个数量级』明确标为先进器件理论值——均为宣称，不能当实测。SCMP原文被Cloudflare拦截未能深读，故单源。",
+      "numbers": "LightGen(Science 2025-12-18)宣称：单芯片百万光神经元；当前器件端到端时间/能效较顶级数字芯片提升2个数量级；先进器件理论算力提升7个数量级、能效提升8个数量级(理论口径，非实测)；实验任务为高分辨率图像语义生成/3D/高清视频/去噪/特征迁移。",
+      "urls": [
+        "https://www.chinadaily.com.cn/a/202512/20/WS6945ede4a310d6866eb2f9ad.html",
+        "https://scmp.com/news/china/science/article/3336918/chinese-team-builds-optical-chip-ai-100-times-faster-nvidias-market-leader"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "应用场景之争：组合优化(Ising/Max-cut)先于AI训练落地，训练仍电子主导",
+      "physics": "竞争逻辑：光计算最擅长快速重复矩阵乘+噪声反馈，正好契合Ising/Max-cut等组合优化(可用低精度、迭代求解)，故比通用AI训练更容易出可核验优势；AI训练需高精度、反向传播、频繁权重更新与存储，仍是电子GPU主导。成败判据=收敛率/迭代次数/单周期延迟的真实对比口径，是否端到端优于GPU。宣称vs可核验：PACE在Max-cut上单周期5 ns vs NVIDIA A10 >2300 ns(作者宣称近500×单周期)，但PACE平均537次迭代 vs A10 347次，总耗时优势需按完整求解口径折算，不能只看单周期。Taichi演示的是千类分类与AIGC(音乐/绘画)，非大模型训练。",
+      "numbers": "曦智PACE(Nature 2025)：20,000次测试(10批×2,000)、5 ns循环下平均收敛率>92.72%；平均537次迭代 vs NVIDIA A10平均347次；单步周期5 ns vs A10 >2300 ns。Taichi(Science 2024)：1623类Omniglot 91.89%、100类mini-ImageNet 87.74%、片上AIGC(作曲/高分辨率风格画)。训练侧：片上光反向传播仍停留在Science 2023 (Pai et al., Science 380, 398)演示级，未规模化(datadeep转述)。",
+      "urls": [
+        "https://www.nature.com/articles/s41586-025-08786-6",
+        "https://media.au.tsinghua.edu.cn/info/1016/1231.htm",
+        "https://datadeep.tech/photonic-neural-networks/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "历史教训：2010s光计算泡沫退潮与2020s AI算力需求重启",
+      "physics": "竞争逻辑：2010s光计算『过度承诺』(over-promise)——声称矩阵乘零能耗、快几个数量级，但制造成本/非线性/精度/封装未解，兑现失败后热度退潮；2020s大模型算力与互连功耗墙重启需求，资本与CPO产业链真正兑现的是互连而非计算。成败判据=演示是否从『关键构建块』走到『整系统量产实测』，以及承诺是否被可复现数据支撑。宣称vs可核验：MIT 2017学者自述『people dramatically over-promised, and it backfired』，当时仅验证构建块非完整系统，元音识别77% vs 电子约90%；MIT TechReview 2016指光的优势长期未抵消额外制造成本；2025年PACE成为首个在商业产线制造、给出整系统实测的Nature级成果。",
+      "numbers": "MIT 2017可编程纳米光子处理器：元音识别77% vs 常规系统约90%；宣称理论能效<1/1000为愿景口径。2016年MIT TechReview：光处理优势一直未抵过额外制造成本(定性)。2024–2025重启口径：光互连派融资>Ayar $500M E轮 + Lightmatter $400M D轮 + Celestial $250M C1；datadeep称2024–2025领域风投>$2B、三笔Tier-1并购；Yole预测首批光处理器出货2027–2028、2034年约100万颗(预测非实绩)。",
+      "urls": [
+        "https://news.mit.edu/2017/new-system-allows-optical-deep-learning-0612",
+        "https://technologyreview.com/2016/11/18/155929/silicon-photonic-neural-network-unveiled",
+        "https://datadeep.tech/photonic-neural-networks/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "Luminous Computing现状：2023年光子团队裁员、退出计算类别",
+      "physics": "竞争逻辑：Luminous 2022年以系统级硅光互连(而非纯光非线性)切入，主打训练规模扩大100–1000倍，但一直pre-revenue、只有原型。失败判据=长期无产品出货且团队收缩。宣称vs可核验：2022年A轮$105M、约90人、宣称24个月内发开发套件、距商用5–10年；datadeep(2026二手)称其2023-05光子团队裁员后实质退出该类别——单一二手来源，未找到公司一手或权威媒体确认关停/转向，故不写成定论。",
+      "numbers": "Luminous(VentureBeat 2022-03-03)：A轮$105M、投后估值$2–3亿、累计$115M、约90人、pre-revenue；宣称训练模型规模扩大100–1000倍、带宽每距离提升10–100倍；计划24个月内出开发套件。退出说法(datadeep 2026)：2023-05光子团队裁员(单源)。",
+      "urls": [
+        "https://venturebeat.com/ai/luminous-computing-which-is-developing-a-light-based-ai-accelerator-chip-raises-105m",
+        "https://datadeep.tech/photonic-neural-networks/"
+      ],
+      "status": "单源未验证"
+    }
+  ],
+  "key_insights": [
+    "全光计算屡屡商业化失败的物理根因不是线性MAC，而是缺可级联全光非线性器件与光存储：MIT 2025『全光网络』的实际非线性仍靠光电二极管+电调制，纯光路线至今未成立，工业界收敛到光做线性+电做非线性的混合架构。",
+    "最强成败判据是能效『口径』：曦智PACE 4.21 TOPS/W(不含激光)一旦计入激光降到2.38 TOPS/W，降幅约43%——厂商普遍用不含激光的口径报数，全系统墙插效率才是能否商用的一致标尺。",
+    "第二条判据是精度天花板：PACE 7.61 ENOB且±5°C掉约1 bit，模拟精度止步8–10 bit，决定了光计算只能做推理/组合优化，难以做需高精度与频繁权重更新的训练。",
+    "兑现已从『光计算』转移到『光互连』：Ayar $500M E轮、Lightmatter转向Passage、Marvell约$3.25B收购Celestial，都是CPO/光I/O；原因是互连接口标准清晰、可逐步替换、量测成熟、量产可行性远高于全光计算芯片。",
+    "最先落地的应用是组合优化(Ising/Max-cut)而非AI训练：PACE在5 ns循环下平均收敛率>92.72%，但迭代次数(537)多于A10(347)，宣称近500×只是单周期口径——评估必须用完整求解时间而非单步延迟。",
+    "历史周期：2010s『over-promised and it backfired』(MIT 2017元音识别仅77% vs电子90%、只验证构建块)，2020s由大模型算力与互连功耗墙重启，资本与并购真正落地在互连，计算仍处pilot/首批客户阶段。"
+  ],
+  "open_questions": [
+    "Taichi 160 TOPS/W的精确口径(是否含激光、DAC/ADC与电子外围)在Science正文与清华官方新闻页均未标明，需读全文核实；本文件按清华官方『片上能效』口径记录。",
+    "LightGen百万光神经元与7–8个数量级能效/算力提升属团队宣称，SCMP原文被Cloudflare拦截、Science正文未深读，需独立可复现的墙插数据才能从『单源未验证』升级。",
+    "Celestial AI收购对价存在冲突：The Register称约$3.25B已成交，datadeep称最高$5.5B(现金+股票)，需一手并购公告厘清。",
+    "Luminous Computing是否确于2023-05裁员并退出光计算类别，仅有datadeep单一二手来源，缺公司一手/权威媒体确认。",
+    "NSR综述《Prospects of photonic computing for artificial intelligence》(doi 10.1093/nsr/nwag089)PMC镜像被reCAPTCHA拦截未能深读，其系统性判据未纳入本文件。"
+  ]
+}

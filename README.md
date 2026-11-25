@@ -1,6 +1,13 @@
 # 光电信息工程：研究方向深度调研与立项包
 
-对「光电信息工程」学科的系统性深度调研成果，从学科总览 → 13 条赛道全景 → 5 方向最新成果对齐 → 公开资料缺口深挖 → 6 个研究方向立项，逐步收敛为可执行的研究计划。全部结论附可追溯的公开来源 URL，未查到的缺口如实标注「未覆盖」，不做臆造。
+对「光电信息工程」学科的系统性深度调研成果。调研分七层递进，前四层收敛为 6 个可执行研究方向并立项，后三层向下追问赛道背后的物理极限、方法工具与路线成败判据：
+
+1. **产业层**：学科总览 → 13 赛道全景 → 5 方向最新成果对齐 → 立项缺口核实。
+2. **机理层**：决定赛道天花板的物理极限（效率/容量/带宽/探测能效/线宽）。
+3. **工具层**：怎么算、怎么做、怎么测、怎么验可靠（仿真/工艺/表征/可靠性/AI 设计/标准计量）。
+4. **路线史层**：为何某技术路线胜出或被证伪，背后的可判定判据。
+
+全部结论附可追溯的公开来源 URL，未查到的缺口如实标注「未覆盖」，不做臆造；已被新证据推翻的旧表述在立项书中逐一回写订正。
 
 > 生成日期：2026-11-23 ~ 2026-11-24。检索方法：deep-research-pro 外部检索闭环（换词重试 ≤2 轮、Top 3-5 原文深读、单源标「未验证」、近 12 个月优先）。
 
@@ -8,17 +15,31 @@
 
 | 路径 | 内容 |
 | --- | --- |
-| `reports/` | 4 份深度检索报告，各有 `.md` 底稿 + 单文件 `.html`（自检 ERROR 0 / WARN 0） |
-| `proposals/` | 6 份立项书 + 立项总览 + 立项自检脚本 |
-| `evidence/` | 16 份结构化证据 JSON（赛道取证 / 最新成果 / 缺口深挖，每条含 claim + url + date + strength） |
+| `reports/` | 7 份深度检索报告，各有 `.md` 底稿 + 单文件 `.html`（自检 ERROR 0 / WARN 0） |
+| `proposals/` | 6 份立项书（已按后三层深挖证据回写订正）+ 立项总览 + 立项自检脚本 |
+| `evidence/` | 34 份结构化证据 JSON（赛道取证 / 最新成果 / 缺口深挖 / 机理 / 工具链 / 路线史，每条含 claim + url + date + strength） |
 | `scripts/` | 报告整合脚本（读 evidence JSON → 生成 md + 单文件 HTML） |
 
-## 四份报告（按调研推进顺序）
+## 七份报告（按调研推进顺序）
+
+**产业层**
 
 1. **`deep-research-20261123-topic-3cc30113`｜学科总览**：现名光电信息科学与工程（080705），「光电信息工程」为 2010–2013 旧名；光学 + 光电子 + 微电子 + 通信 + 计算机交叉；本科以深造为主，2025 增量在光电融合 + 硅光 + 光子计算。
 2. **`deep-research-20261123-optoelectronics-13tracks`｜13 赛道全景**：硅光子、CPO/光互连、光通信、激光、LiDAR、光计算、成像传感、新型显示、精密测量、生物医学光子、光伏、量子光学、光电融合——13 赛道 105 条结论、101 个唯一来源。
 3. **`deep-research-20261123-opto-latest-5tracks`｜最新成果对齐**：47 条 2026H2 新突破、25 条基线刷新、53 个唯一来源。CPO 首批规模化从 2028–2030 提前到 2026H2；Nature Communications 2026-11-20 晶圆级 PZT 光子 IC；曦智 IPO 辅导；医疗光子 FDA 密集落地。
 4. **`deep-research-20261124-opto-gaps-deepdive`｜缺口深挖**：对 6 份立项书标注的「公开资料未覆盖」逐条联网核实，35 个缺口 / 131 条带 URL 证据 / 112 个唯一来源。
+
+**机理层**
+
+5. **`deep-research-20261124-opto-mechanisms-deepdive`｜物理极限**：6 主题 44 条机理 / 143 来源——单结 Shockley–Queisser 极限 33.7% @1.34 eV；光纤非线性香农极限约 100 Tb/s（非硬极限）；Soref–Bennett 载流子色散（原始论文 1987，纠正误引的 1993）；SNSPD 探测效率约 98% @20 cps；光计算「转换税」ADC/DAC 25–80 fJ/sample、跨域流量超光核 10×；激光绝对频率稳定度 7×10⁻¹⁸ / 线宽 2.5 mHz。
+
+**工具层**
+
+6. **`deep-research-20261124-opto-methods-toolchain-deepdive`｜方法工具链**：6 主题 75 条方法 / 188 来源——Lumerical 64 层 PML / 0.1 nm 网格与 Mie 差 0.15%；高 NA EUV（NA 0.55）8 nm 分辨率；混合键合对准 100–250 nm；激光线宽鉴别法 0.7 Hz；S21 光 3 dB = VNA 电 6 dB 带宽差 1.4–4.7×；Telcordia GR-468 85 °C/2000 h；伴随法把 257 次全波仿真降到 2 次；OIF 3.2T CPO IA（2023-03）；GUM U=k·u_c（k≈2）。含 S21/自外差/Soref 年份等多处口径陷阱。
+
+**路线史层**
+
+7. **`deep-research-20261124-opto-route-contest-deepdive`｜路线竞争史**：6 主题 43 条路线判据 / 128 来源——CPO 相对可插拔把 1.6T 端口 DSP 功耗 22 W→10.2 W（13.8→6.4 pJ/bit）；PACE 能效 4.21→2.38 TOPS/W（计入激光降 43%）；Micro LED 需 six-nines 良率、4K 屏仍约 2 坏点；光纤激光电光效率 50–55% vs CO₂ 10–15%，寿命 >10 万 h 替代 CO₂；晶硅占组件产量 >95%；车载 LiDAR AEC-Q102 车规 FIT<0.8。
 
 ## 六个立项方向
 
@@ -49,10 +70,13 @@
 # 立项书自检（无需外部依赖）
 python3 proposals/check_proposals.py
 
-# 从 evidence JSON 重建三份聚合报告（工作目录设为仓库根）
+# 从 evidence JSON 重建聚合报告（工作目录设为仓库根）
 python3 scripts/build_all_tracks_report.py
 python3 scripts/build_latest_report.py
 python3 scripts/build_deepdive_report.py
+python3 scripts/build_mech_report.py
+python3 scripts/build_tool_report.py
+python3 scripts/build_lens_report.py
 ```
 
 `build_*.py` 默认从 `outputs/deep-research/` 读取；在本仓库内复现时把脚本里的 `BASE` 改为 `evidence`，输出目录按需调整即可。

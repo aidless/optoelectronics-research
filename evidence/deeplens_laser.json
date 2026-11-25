@@ -1,0 +1,91 @@
+{
+  "direction": "激光与光源技术路线之争",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "半导体激光器材料体系：InP vs GaAs vs GaN 的波长归属",
+      "physics": "胜负判据=带隙决定的发光波长与衬底外延质量的可得性。GaAs/AlGaAs 晶格匹配好、折射率差大、氧化孔径(oxide aperture)技术成熟，红→近红外(约650–980nm)易做，VCSEL 垂直腔需要高反射率 DBR 与可靠电流/光限制，GaAs 全部占优；但把发射波长拉到 1310/1550nm 极难。1.55μm 传统体系是 InP–InGaAsP，其在 VCSEL 上的死穴：折射率对比度低、热导率低、价带间吸收(intervalence band absorption)大、俄歇复合(Auger)强，且没有类似 GaAs 氧化的 Robust 孔径工艺。蓝光则靠 GaN/InGaN 宽禁带(约3.4eV)直接覆盖 450nm 附近，Nakamura 用 p 型 GaN 解决掺杂与异质外延后，蓝光 LD 才量产并催生光盘/固态照明。结论：不是材料\"最优\"，而是\"波长窗口×外延/腔工艺成熟度\"的绑定胜出——电信长波长归 InP，短距高速 VCSEL 归 GaAs，蓝光/绿光归 GaN。",
+      "numbers": "GaN 禁带≈3.4eV（IOP Conf. Ser. 2426 012008 摘要片段，宽禁带口径）；Nakamura 蓝光 InGaN LD 波长≈450nm（Appl. Phys. Lett./J. Appl. Phys., doi 10.1063/1.125643，Nichia 2000，实验室首颗量产级蓝光 LD 口径）；IEEE JSTQE 2001 (doi 10.1109/2944.954127) 明确 1.55μm VCSEL 的四大限制：低折射率对比、低热导、高价带间吸收、高俄歇复合；OFC2015 Tu2H.1 长波长 VCSEL 40Gbps 传输 1km（单模通信口径，说明 InP 长波 VCSEL 仍未取代 InP 边发射）；GaAs VCSEL 覆盖红→近红外、\"very challenging to stretch emission to 1310/1550nm\"（feezellgroup VCSEL 综述 PDF 片段）。",
+      "urls": [
+        "https://doi.org/10.1109/2944.954127",
+        "https://doi.org/10.1109/2944.788414",
+        "https://doi.org/10.1063/1.125643",
+        "https://doi.org/10.1002/andp.201500801",
+        "https://iopscience.iop.org/article/10.1088/1742-6596/2426/1/012008/pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "硅基光源路线之争：异质集成 III-V vs 键合 vs 外延直接生长 vs 拉曼激光",
+      "physics": "判据=理想片上光源四条硬指标：①1310/1550nm 发光 ②电泵浦 ③高功率效率 ④CMOS 兼容制造。逐条淘汰：多孔硅/硅纳米晶波长不对且发光效率超低；Si 拉曼激光本质是光泵浦非线性，需外部泵浦源、不能电注入、系统效率极低；掺 Er 硅光泵下最高 Er 浓度 1.6e22 cm^-3、寿命 540μs、光泵增益>100dB/cm，但电激发 Er3+ 比例≤20%、效率仅 10^-2%，从未做出电泵浦 Er 激光器，无电泵净增益；Ge-on-Si 靠应变/重掺杂把 Γ-L 谷差 136meV 补上(0.25% 张应变+n 掺杂 7.6e19 cm^-3，δ 掺杂>4e19 cm^-3 才有增益)，却带来高自由载流子吸收与-room 温度可靠性问题。胜出路线：III-V 材料通过晶圆键合(heterogeneous integration/bonding)混合集成到硅上，四条里唯一同时满足电泵浦+1550nm+高功率+与 CMOS 后段兼容，故\"近期商业化最佳\"。长期看选择性/单片外延 III-V-on-Si(尤其 QD 量子点，对温度不敏感、缺陷容忍)以降成本提良率。AOP2022 把当前技术归入四大类：Group IV on Si / 异质 III-V(键合) /  blanket 异质外延 / 选择性异质外延。",
+      "numbers": "电泵 Er 激光\"从未实现\"；Er3+ 电激发≤20%、效率≈10^-2%；Er 硅光泵增益>100dB/cm、Er 浓度 1.6e22 cm^-3、寿命 540μs（Nature LSA 2015 vol4 e358 综述口径）；Ge-on-Si Γ-L=136meV、0.25% 张应变+7.6e19 cm^-3 n 掺杂→直接带隙、δ 掺杂>4e19 cm^-3（同综述，材料物理口径）；键合 III-V 被明确判为\"best performance and best opportunity for commercial usage in near future\"（结论口径）；300mm 硅上 QD 激光器(s41377-022-00982-7)、SOI 单片嵌入 III-V(s41377-023-01128-z)、InP-on-Si 1.55μm CW(s41377-024-01389-2)为后续量产化验证。",
+      "urls": [
+        "https://nature.com/articles/lsa2015131",
+        "https://doi.org/10.1364/AOP.455976",
+        "https://opg.optica.org/aop/abstract.cfm?uri=aop-14-3-404",
+        "https://www.nature.com/articles/s41377-022-00982-7",
+        "https://www.nature.com/articles/s41377-023-01128-z",
+        "https://www.nature.com/articles/s41377-024-01389-2"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光纤激光器 vs 固体激光器 vs 半导体激光器：工业加工/通信/医疗归属",
+      "physics": "判据=功率-光束质量(M²)-电光效率-寿命-总拥有成本(TCO)五维。光纤激光器全光纤结构取消自由空间腔/镜片/气体，1.07μm 波长对钢吸收率远高于 CO2 的 10.6μm，配合 50%+ 电光效率与>10万小时寿命，5 年 TCO 最低——在高功率金属切割/焊接上把 CO2(气体、镜片、20k 小时寿命)和 Nd:YAG(灯泵 3-5% 效率、M²10-25、500-1k 小时)挤出主流。半导体激光器本身不做高功率束加工主光源，但凭体积/效率/调制速度独占泵浦源与光通信/医疗(皮肤、牙科)低功率段。死穴：单模光纤功率>SRS/SBS 阈值，>10kW 需多模(M²2-6)，牺牲光束质量换功率。历史判据：2000 年千瓦级光纤激光改变金属加工，2013 年 IPG 8 亿美元营收标志光纤替代 CO2。",
+      "numbers": "波长 1.07 / 10.6 / 1.064μm；电光效率 50-55% / 10-15% / 3-5%；M² <1.1(单模) / 1.1-1.3 / 10-25；CW 功率 1W-120kW / 10W-20kW / 10W-6kW；钢吸收率 35-40%@1.07μm vs 5-10%@10.6μm；寿命 >100,000h / ~20,000h / 500-1,000h；6kW 设备成本 $80-150k / $50-100k / $30-70k；5 年 TCO 光纤最低（IPG Photonics 官网技术对比页，厂商一手，2024 datasheet 口径）。IPG YLS-SM 单模最高 10kW、M²1.1/1.15/1.2<2.0（datasheet 口径）。>10kW 多模 M²2-6（SRS/SBS 限制口径）。2013 年光纤激光营收≈$800M（产业口径）。",
+      "urls": [
+        "https://ipgphotonicsus.com/technology.html",
+        "https://cdn.ipgphotonics.com/3694f393-6e4c-49e4-9374-b1400126ebba/IPG_YLS-SM-Series_DS_EN_LTR.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "超快激光器路线：钛宝石 vs 光纤 vs SESAM 可饱和吸收",
+      "physics": "判据=工业化要\"simplicity/maintenance/reliability\"(简单/免维护/可靠)。传统钛宝石固体超快激光依赖自由空间腔、精密对准、昂贵泵浦，2004 年 IEEE 已判定其无法满足工业级简洁性/维护/可靠性；SESAM(低损耗、快速腔内半导体可饱和吸收体)让被动锁模在数百 kHz 重频下稳定自启动、参数可按需设计，把超快激光从科研推向工程。掺稀土(ER/Yb)多组分玻璃光纤提高增益系数，光纤超快凭高光束质量、可靠性、散热效率与紧凑体积，在加工/生物医学工业化场景胜出；钛宝石退守需要超短脉宽/高峰值功率的实验室与科学装置。注意：SESAM 本身是锁模机制而非与光纤对立的整体路线——二者结合(fiber+SESAM)才是工业化主流。",
+      "numbers": "SESAM 使稳定被动锁模重频达数百 kHz(100s kHz)、吸收体参数可设计（IEEE 9484726, 2021 USP for Microfabrication review 摘要口径）；掺稀土多组分玻璃光纤提升增益系数、光纤激光高光束质量/可靠/散热好/紧凑（PubMed 29716015, 2018 摘要口径）；传统固体超快\"不能\"满足 simplicity/maintenance/reliability（IEEE 1308612, 2004 摘要口径）。注意：三篇均为摘要级证据，正文付费墙；optics.org 相关综述文章已 404。硬数字(脉宽 fs 级、平均功率 W 级)未从一手正文取到，标单源未验证。",
+      "urls": [
+        "https://ieeexplore.ieee.org/document/9484726",
+        "https://pubmed.ncbi.nlm.nih.gov/29716015/",
+        "https://ieeexplore.ieee.org/document/1308612"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "窄线宽光源路线：外腔半导体 ECL vs 光纤激光 vs 硅光集成（2026）",
+      "physics": "判据=洛伦兹线宽×无跳模调谐范围×输出功率×集成度/体积×温漂，且不同应用匹配不同路线。2026 年 Nature LSA 的谐振器增强 DBR(RE-DBR)把高 Q 外腔与 DBR 结合：用 finesse F 把常规 DBR 的线宽-调谐权衡 Δν/Δν0>4(n_ga·L_a/(n_g·η0)·η)^2 改写为 (π²/F²)(...)²，当 F>π/2 时同时拿到 Hz 级线宽与大范围无跳模调谐，且单片<4mm²。与注入锁定(SIL)相比，SIL 虽可 Hz 级、Q 达百万级(6.19M)，但需要精确注入电流设定点、线宽∝R^-1，RE-DBR 依赖 (lnR)^2 更宽容、免外部伺服。光纤激光/光纤外腔窄线宽仍在长相干长度(干涉/传感)与高功率段占优；硅光外腔 ECDL(arxiv 2601.18609 硅条形波导外反馈)与亚 Hz 硅芯片(Q=3.46e9, arxiv 2610.22596)证明集成化路线逼近甚至达到亚 Hz，但实验室成熟度与温漂/封装仍未达量产。结论：2026 年\"窄线宽+可调+小尺寸\"由 RE-DBR/集成外腔拿下；\"极限线宽+\u7a33干长度\"仍属光纤与超高质量因子微腔。",
+      "numbers": "RE-DBR：24 Hz 洛伦兹线宽(白噪声基底 3.89 Hz²/Hz)；34 GHz 无跳模调谐(=33×纵模间隔 FSR 1.02GHz)；片上输出 22mW@174mA；SMSR 60dB；加载 Q≈0.56×10^6；finesse 90.7；尺寸<4mm²；>100mA 电流扫频免调；15–50°C 温漂<0.5nm（Nature LSA 2026 vol15 art142，实验室样片口径）。SIL 对比：加载 Q≈6.19×10^6 却线宽更宽、需精确电流设定点（同文对比口径）。Jin 等 Nat. Photonics 15, 346 (2021) Hz 线宽 CMOS 兼容超高 Q 微腔；Pockels 激光 Nat. Photonics 19, 709 (2025)；硅光亚 Hz 本征线宽 Q=3.46×10^9(arxiv 2610.22596, 2026-11, 实验室口径)。",
+      "urls": [
+        "https://nature.com/articles/s41377-026-02249-x",
+        "https://www.nature.com/articles/s41377-026-02249-x",
+        "https://arxiv.org/abs/2610.22596",
+        "https://arxiv.org/abs/2601.18609"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "淘汰路线复盘：染料激光器退场与气体激光器(He-Ne/CO2)份额萎缩",
+      "physics": "判据=替代的净收益：当固体激光(钛宝石等)拿到同等波长覆盖而不必处理有毒染料溶液、寿命长、输出功率高时，染料激光被\"替代逻辑\"挤出——其曾长期垄断可调谐/超短脉冲，仅因特定光谱波段仍留在光谱学。气体激光(He-Ne/CO2/准分子/He-Cd)的萎缩来自：需气体/放电管、镜片/腔维护、效率低、寿命有限，而在工业加工被光纤激光(50%+效率、10万小时、免维护)替代，在低功率对准/计量被半导体激光二极管替代。反向证据：2002 年 OPN 仍列 CO2/准分子/He-Ne/He-Cd 在工业/科研/医疗在用，二极管芯片才是\"最活跃角色\"——说明这是份额转移而非物理淘汰，气体在特定波段/功率仍有存量。判据提炼：①毒性与运维成本 ②效率/寿命 ③光束质量与功率 ④是否被免维护固态方案覆盖。",
+      "numbers": "染料激光：上能级寿命仅数 ns、增益≈10^3/cm、功率效率数%–~50%、平均输出 10mW–1W(脉冲峰值>1kW 可行)、调谐范围数十 nm（SPIE Field Guide to Lasers, Paschotta 2008, 典型值口径）；染料\"largely replaced by solid-state (often Ti:sapphire)\"因有毒溶液/有限寿命/有限输出（同书口径）；NASA 2003 年染料激光 532nm 泵浦→紫外 30mJ/脉冲（历史应用口径）；二极管激光被称 playing the liveliest role，而 CO2/excimer/He-Ne/He-Cd 仍用于工业/科研/医疗（Optics & Photonics News 13(5) 24-27, 2002, doi 10.1364/OPN.13.5.000024，摘要口径）。",
+      "urls": [
+        "https://spie.org/publications/fg12_p79-80_dye_lasers",
+        "https://doi.org/10.1364/OPN.13.5.000024"
+      ],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "路线胜负判据不是单一物理极限，而是多维权衡：波长/带隙可得性 × 电泵浦可行性 × 效率 × 光束质量 × 寿命/运维 × 成本/CMOS 兼容。谁在目标应用占的权重最大，谁胜出。",
+    "硅光源之争的分水岭是\"电泵浦+1550nm+CMOS 兼容\"三条同时满足：拉曼/多孔硅/掺 Er 各因光泵本质、低效率、无电泵净增益出局；键合 III-V 成近期商用最优，单片外延 QD 是长期方向。",
+    "工业加工的决定性数字是电光效率 50-55%(光纤) vs 10-15%(CO2) vs 3-5%(Nd:YAG) 与钢吸收率 35-40%@1.07μm vs 5-10%@10.6μm——这直接决定 5 年 TCO，光纤因此替代 CO2。",
+    "\"固态化/免维护化\"是跨主题的统一替代逻辑：染料→钛宝石(避有毒溶液)、气体→光纤/半导体(避气体放电与镜片维护)、固体超快→光纤+SESAM(避自由空间对准)。",
+    "2026 窄线宽开始从\"极限线宽单一指标\"转向\"线宽×无跳模调谐×集成度\"的系统判据：RE-DBR 用 finesse 改写权衡，24Hz/34GHz/<4mm² 是这一转向的量化标志。",
+    "材料体系归属高度绑定工艺成熟度而非纯带隙最优：InP 拿 1310/1550(尽管 VCSEL 死穴多)、GaAs 拿 VCSEL(氧化孔径成熟)、GaN 拿蓝光(p 型 GaN 突破)。"
+  ],
+  "open_questions": [
+    "主题4(超快)三篇仅摘要级证据，正文付费墙，SESAM 脉宽/平均功率/重频一手硬数字未取到；optics.org 综述 404，需补 Optica/IEEE 全文或厂商(如 Coherent/Menlo)白皮书。",
+    "主题1 中 GaAs/InP 精确带隙数值(约 1.42/1.35eV@300K)仅来自片段，未从一手表格核实；GaN 3.4eV 来自会议摘要片段，需权威数据表复核。",
+    "主题6 染料/气体激光的份额萎缩缺市场份额年份序列(如全球激光营收按类型占比)，目前仅定性替代逻辑+2002 年定性证据。",
+    "主题5 硅光亚 Hz(arxiv 2610.22596)与集成外腔 ECDL(arxiv 2601.18609)为预印本/实验室口径，量产一致性与温漂封装数据未覆盖。",
+    "Photonic21/Photonics.com \"50 Years of the Laser Industry\" 被 Cloudflare 拦截，产业史量化节点(2013 $800M 之后)未取到。"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "direction": "光计算物理瓶颈",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "理论能效优势来源：RC-free 传播 + 波分/空分/时分的玻色子复用 + 模拟域计算",
+      "physics": "优势并非来自『光速快』。UT Austin/ASU 综述(Harnessing Photonics for Machine Intelligence)明确指出光在硅/氮化硅波导中的群速度仅 0.3–0.5c，与优质电传输线相当；真正机制有三：(1) 光波导『RC-free』——延迟几乎只取决于几何路径长度(线性缩放)，与电容负载无关，而 CMOS 长互连的分布 RC 延迟随线长超线性增长且需插入 repeater 增加面积/功耗，故光可在厘米级芯片上以亚百皮秒飞越时间完成高扇出广播；(2) 光载波在 THz–PHz，且光子呈电中性、玻色子性，多模式(波分 WDM/偏振/空间模/时分)可在同一波导共存而无库仑排斥或互斥，正交信道可低串扰密集复用，这是电子被 RC 延迟与焦耳热限制在数 GHz 的根本差异；(3) 光在传播中完成线性 MVM 是无源/被动的(傅立叶光学或 MZI 网格)，乘加在光学域内不需逐次充放电电容。McMahon 在 Nature Reviews Physics 的系统性 Perspective(11 features of optics)亦强调『光速快』被误解为关键差异特性，优势来自需组合利用多个光学特性并规避陷阱。",
+      "numbers": "群速度 0.3–0.5c；厘米级芯片亚 100 ps 飞越；光载波 THz–PHz vs 电互连≤数 GHz。系统级实测标杆：Nature 2023 ACCEL 全模拟光电芯片 74.8 peta-ops/s/W、4.6 peta-ops/s(>99% 由光学实现)、单帧延迟 72 ns、低光强 0.14 fJ/μm²/frame——该 74.8 POPS/W 是全系统口径(含电子)，比当时 SOTA 处理器高 3 个数量级。理论上限口径：Nature Photonics 2026 补充材料(s41566-026-01987-z)按 10⁴/35 估光学能效约 285 TMAC/W，计入光源插头效率(~40%)后每 MAC 全系统能量下限约 10 fJ/MAC。MIT LightCode 汇总：硅光张量核 <1 pJ/MAC、>10 TOPS/mm²；2×2 相干交叉阵列 20 GBd+16λ WDM 达 0.2 pJ/MAC(0.8 TOPS/0.04 mm²)；微环广播阵列 7.3 TOPS/mm²、同 0.2 pJ/MAC@25 Gb/s；>20 次流片统计 MZI 网格中位 0.3–3 pJ/MAC、有效 6-bit 线性精度。",
+      "urls": [
+        "https://arxiv.org/html/2604.10841v1",
+        "https://www.nature.com/articles/s42254-023-00645-5",
+        "https://www.nature.com/articles/s41586-023-06558-8",
+        "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41566-026-01987-z/MediaObjects/41566_2026_1987_MOESM1_ESM.pdf",
+        "https://arxiv.org/html/2509.16443"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "『转换税』(conversion tax)：DAC/ADC + E/O 调制 + O/E 探测吃掉理论优势（核心瓶颈）",
+      "physics": "光核只在光学域内做线性 MVM 是高效/无源的，但全系统必须反复跨越电→光与光→电边界。输入向量以数字电子形式到达，需逐元素 DAC + 电光调制写入光振幅；输出需光电探测 + ADC 数字化。这些转换在每个边界重复，且随层数/扇出放大。MIT LightCode 明确指出：光子学不是 LLM 的独立计算平台，首要限制即数据转换器开销；非线性(激活、归一化、attention indexing、控制逻辑)仍必须在电子域完成，迫使每个光输出转回电域。因此模拟光核的高能效被外围 mixed-signal 与存储流量抵消——这正是『为什么光计算没兑现理论能效优势』的量化答案。Nature 2023 ACCEL 之所以达到系统级 74.8 POPS/W，关键正在于用光诱导光电流直接进片上模拟计算、绕过了下游 ADC。Stanford Miller 的 attojoule optoelectronics 教程综述(DOI 10.1109/JLT.2017.2647779)系统给出光互连/计算的 fJ/bit 器件能量目标(低电容探测器~10 fJ、光调制器需向~fJ 甚至数十 aJ 推进)，指出只有超低电容光电器件才可能让光学在能量上优于 CMOS。",
+      "numbers": "MIT LightCode 硬数字：单个 6 GS/s、8-bit ADC/DAC 对耗 25–80 fJ/sample；在全系统模型中跨域转换 + DRAM 流量常主导能量预算，超过光计算本身能耗达 10×(十倍)；模拟精度天花板——工艺偏差 + 散粒噪声把实用动态范围限制在约 6 ENOB，未补偿时实验见高达 15% 精度损失。Stanford/Miller 器件能量目标：光互连 fJ/bit 量级，低电容探测器~10 fJ，未来逻辑操作需~数十 aJ。口径提示：25–80 fJ 是单 sample 转换器能耗，与光核 0.2–0.3 pJ/MAC 同量级甚至更高，故成为主导项；这是模拟/接口口径，非纯光学口径。",
+      "urls": [
+        "https://arxiv.org/html/2509.16443",
+        "https://arxiv.org/html/2604.10841v1",
+        "https://www.nature.com/articles/s41586-023-06558-8",
+        "https://doi.org/10.1109/JLT.2017.2647779",
+        "http://ee.stanford.edu/~dabm/370.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "模拟光计算的精度–能效权衡：散粒噪声/RIN/工艺偏差限制 bit 精度，低精度换能效",
+      "physics": "模拟光计算把 16/32/64-bit 浮点 MAC 搬到模拟域，能量优势来自『一次光学操作即完成乘加』且可用低精度表示；但模拟域的信噪比(SNR)决定可分辨 bit 数。光学噪声源包括激光相对强度噪声(RIN)、探测散粒噪声(shot noise)、热噪声，加上 MZI/微环的工艺制造偏差与热漂移，共同压低有效位数(ENOB)。Nature 2023 ACCEL 摘要直指『易受噪声与系统误差影响』是部署级优势的挑战之一。Nature Communications 2025 数字-模拟混合处理器(HOP)工作反过来证明『足够数值精度对高置信检测是必需的』——其 16-bit 精度用于高清图像与目标检测。权衡的物理依据：提高光功率可压低散粒噪声相对占比(SNR∝光功率)却线性推高能耗，故精度与能效直接冲突；工程上普遍接受 4–8 bit 低精度换能效，配合噪声感知训练/补偿。RIN 对编码位数的定量限制见 AnalogVNN：用 RIN=−165 dB/Hz 的低噪激光时，8-bit 模拟输入的调制频率被限制在约 4 GHz 或更低，与光功率无关——说明低 RIN 与高精度共同约束带宽/功率。",
+      "numbers": "MIT LightCode/综述实测口径：散粒噪声 + 工艺偏差把实用动态范围限制在约 6 ENOB(有效位)，未补偿非理想性导致高达 15% 精度损失；已流片 MZI 网格有效线性精度约 6-bit。AnalogVNN：RIN=−165 dB/Hz 激光下 8-bit 模拟编码的调制频率上限约 4 GHz(不随光功率提升)。对照：Nature Commun. 2025 HOP 以 16-bit 精度实现高清图像处理、像素误差可控，说明高精度场景仍需数字/混合方案。口径提示：6 ENOB 为当前集成光子典型值(实测/统计)，非物理硬上限；RIN 限制为特定激光参数下的模型结论(单源，标未验证)。",
+      "urls": [
+        "https://arxiv.org/html/2509.16443",
+        "https://www.nature.com/articles/s41586-023-06558-8",
+        "https://arxiv.org/pdf/2210.10048",
+        "https://www.nature.com/articles/s41467-025-62586-0"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "非线性激活的物理难题：χ²/χ³ 非线性弱且需高功率、难级联、难信号恢复",
+      "physics": "光传播与 MZI 网格本质是线性效应；深度学习的表达力依赖非线性激活，而光学非线性是扰动性的弱效应，只在足够高的光强下才显现，且需满足级联性(cascadability)、信号恢复、扇出与波长保持等严苛条件，这使全光神经网络长期受限于浅层/小规模。常规 plotform 有三条路线：(1) 体块 χ³(Kerr)——需要极高光强；(2) 二维可饱和吸收(石墨烯)——阈值低些但仍需可观功率；(3) 电光/线性+电子非线性混合——引入 O/E/O 转换税。2026 arXiv《Quantum Nonlinearity for Optical Neural Computing》给出定量基线：以数字 MLP 每层曲率增加 rdigital≈1.045–1.095 为目标，硅 50μm 波导 Kerr 需 I>72.6 W/μm²、堆叠石墨烯(15nm)需~0.02 W/μm²；对 GPT-2→DeepSeek-V3 级 LLM，硅/石墨烯方案的非线性受限光功率迅速超过 10⁸ W(天文数字)，作者提出用量子(二能级/激子)非线性把阈值降到~0.24 nW/μm²、全模型<1.2 W。另一条 2026 路线用 PPLN χ² 波导做无源全光非线性神经元(ScienceDirect/底板文章)，或以二次谐波(SHG)增强衍射网络非线性，避免每层 O/E/O。信号在层间传播主要是线性、非线性只在强光下出现，是难以级联的根源。",
+      "numbers": "硅(50μm 波导, Kerr) I>72.6 W/μm²；石墨烯(15nm 可饱和吸收)~0.02 W/μm²；量子激活单元~0.24 nW/μm²(相对石墨烯提升~8.3×10⁷、相对硅~3.0×10¹¹)。外推到 LLM：硅/石墨烯非线性所需光功率>10⁸ W；量子方案<1.2 W。ONN 非线性受限功率随参数量次线性 P∝N_param^0.66(对比电子线性)，A100 热设计功耗~400 W 仅作参考。口径提示：以上为 2026 arXiv 单篇理论模型/仿真(非实测系统)，且量子阈值与其 8.3×10⁷ 倍增益标『单源未验证』；PPLN/SHG 为另一独立技术路线。",
+      "urls": [
+        "https://arxiv.org/html/2601.01690v2",
+        "https://link.springer.com/article/10.1186/s43593-026-00125-0",
+        "https://arxiv.org/html/2603.25162v2",
+        "https://pubs.aip.org/aip/app/article/9/1/011102/3161086/Photonic-neural-networks-and-optics-informed-deep"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "可逆性与热力学极限：光计算是否受 Landauer 极限约束、无耗散计算条件",
+      "physics": "Landauer 原理：任何逻辑不可逆操作(如信息擦除)伴随熵产生与散热，单比特擦除的热耗散下限 k_B T ln2。可逆计算在原理上不增加信息熵，故无此最小能耗；但物理实现可逆门需要能量守恒幺正变换。光学的可逆性争论可追到 1990 Optica/OL《Reversibility and energetics in optical computing》：能量守恒的计算机作不增熵，信息守恒操作必须可逆，而可逆光门必然引入损耗(Optical Letters 1990 摘要)，耗能来自实现层面的损耗而非 Landauer 下界本身。2016 Nature Communications《All-optical design for inherently energy-conserving reversible gates and circuits》给出用幺正矩阵 formalism 设计 Fredkin 门(通用可逆门)的方法，仅用本质能量守恒的光学元件(方向耦合器 + 受控非线性相移器)实现，从数学上证明可行——但这是原理证明，规模/损耗未达实用。2025 arXiv 综述《Landauer Principle and Thermodynamics of Computation》系统梳理不可逆擦除下界与量子/非平衡推广。关键区分：模拟光计算(MZI 网格)多为无源线性/幺正操作，原则上可低耗散；但为兑现通用计算，必须有非线性、状态恢复、输入输出与存储，这些不可逆环节(尤其探测/擦除/重置)使整系统仍受热力学约束——故『光计算无耗散』只在可逆子过程成立，端到端不能规避 Landauer。2026 Zenodo 预印《Photon Reuse versus Reversible, Bounded-Dissipation Optical Computing》讨论有限耗散光学计算的边界条件(单源、未验证)。",
+      "numbers": "Landauer 下限：单比特擦除 k_B T ln2；室温 T=300 K 时约 2.87×10⁻²¹ J/bit(2.87 zJ)，是当前 CMOS 开关能量(~aJ 级)之下几个数量级的目标极限。可逆光门仅本质能量守恒光学元件即可构造(2016 Nat. Commun. 概念验证，非实测能耗)。口径提示：2.87 zJ 为 k_B T ln2 在 300K 的物理常数推导值，非某系统实测；可逆_light 论文多为原理/仿真，无系统级能耗数字；Zenodo 预印本一文标『单源未验证』。",
+      "urls": [
+        "https://doi.org/10.1364/ol.15.000912",
+        "https://www.nature.com/articles/ncomms11424",
+        "https://arxiv.org/abs/2506.10876",
+        "https://doi.org/10.5281/zenodo.18442929"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "2026 前沿：光子 Ising 机/相干伊辛在组合优化上的物理加速证据",
+      "physics": "Ising 机把 NP-hard 组合优化(最大割、数划分、蛋白折叠)映射到自旋耦合能量最小化，用物理系统的自然演化代替数字搜索，是光计算在优化类问题上展示『物理加速』的主战场。2025 Nature 论文(Nayem Al-Kayed, Bhavin Shastri 等, McGill/女王大学等)提出基于光电振荡器(OEO)的可编程 Hopfield 启发光子 Ising 机(CMIM)：在循环时编码环路中级联薄膜铌酸锂(TFLN)调制器 + 半导体光放大器(SOA) + DSP，自旋表示线性缩放(优于 D-Wave 量子退火器的二次量子比特缩放)，并在室温稳定工作。其物理加速来自高波特率内禀噪声帮助跳出局部极小、加速收敛，以及把通信用 DSP 嵌入光计算提升收敛与解质量。另有相干 Ising 机(CIM)基于时间复用 DOPO 线路，2026 Light: Science & Applications 展示从微波到可见/电信波段、多波段通用的大规模 CIM；2026 Nature Reviews Physics 展望『Photonic Ising machines towards and beyond a million spins』。需注意：这些是专用模拟加速，非通用计算；相干伊辛需低温/参量振荡等条件，OEO 方案室温但依赖 DSP。",
+      "numbers": "Nature 2025 CMIM：全连接问题最多 256 自旋(65,536 耦合)，稀疏连接 >41,000 自旋(>205,000 耦合)；自旋耦合与非线性潜在吞吐 >200 GOPS(即标题『200 GOPS』)；在 2,000 与 20,000 自旋最大割问题上获 photonic Ising 机中最佳解质量，并首次在光子系统上取得数划分与格点蛋白折叠基态解。CIM 多波段版本与『百万自旋』路线见 2026 LSA/Nat. Rev. Phys.(综述/展望，非实测数字)。口径提示：200 GOPS 是自旋耦合+非线性的潜在吞吐(非端到端 wall-clock 求解速度)；全连接 256/稀疏 4.1万 是实验规模，『百万自旋』为展望非已实现。",
+      "urls": [
+        "https://www.nature.com/articles/s41586-025-09838-7",
+        "https://pubmed.ncbi.nlm.nih.gov/41407903",
+        "https://www.nature.com/articles/s41377-026-02225-5",
+        "https://www.nature.com/articles/s42005-024-01658-x",
+        "https://www.nature.com/articles/s42254-026-01010-y"
+      ],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "最重要瓶颈：光计算的理论能效只在『光学线性核内』成立，端到端被转换税吞噬——MIT LightCode 实测口径单个 6 GS/s 8-bit ADC/DAC 对耗 25–80 fJ/sample，跨域转换+DRAM 流量在完整系统中超过光计算本身能耗达 10×；非线性仍在电子域，强迫每个光输出转回电域。这是『为什么没兑现理论优势』的核心量化答案。",
+    "理论优势来源被普遍误解：UT Austin/ASU 综述与 McMahon(Nat. Rev. Phys.)均指出光速快不是关键(波导群速度仅 0.3–0.5c)，真正来源是 RC-free 传播(延迟只随路径长度线性、不随电容负载超线性)、光的玻色子性允许 WDM/偏振/空间/时分复用在同一波导无排斥共存、以及无源线性 MVM。",
+    "精度与能效直接对抗：工艺偏差+散粒噪声把实用动态范围压到约 6 ENOB，未补偿时最高 15% 精度损失；提高光功率压低散粒噪声相对占比却线性增能耗。故当前光计算只能靠低精度(4–8 bit)换能效，高精度场景(16-bit HOP)必须回到数字/混合方案。",
+    "非线性是全光计算的硬障碍：硅 Kerr 需 >72.6 W/μm²、石墨烯~0.02 W/μm²，外推到 LLM 级模型所需光功率 >10⁸ W(天文数字)；即便用量子非线性降到 0.24 nW/μm²(<1.2 W/模型)也只是单篇 2026 理论模型、未经系统实测。",
+    "热力学上『光计算无耗散』只在可逆子过程成立：幺正/无源线性光学可低耗散，但探测、擦除、状态重置与非线性等不可逆环节使端到端仍受 Landauer 下界(k_B T ln2 ≈ 2.87 zJ @300K)约束；可逆 Fredkin 光门有 2016 原理证明但无系统级能耗实测。",
+    "2026 前沿的物理加速证据集中在专用优化：Nature 2025 OEO 光子 Ising 机 256 全连接自旋/65,536 耦合、>200 GOPS 潜在自旋耦合吞吐，室温用高波特率噪声跳出局部极小；但 200 GOPS 是耦合+非线性吞吐而非端到端求解速度，通用 AI 加速仍受前述转换税/非线性限制。"
+  ],
+  "open_questions": [
+    "转换税能否被架构级创新(如 ACCEL 式光电流直接进模拟计算、光延迟线缓存部分和、模拟存储重用)系统性消除，从而让端到端能效真正逼近光核理论值(285 TMAC/W 光学 / ~10 fJ/MAC 全系统下限)？",
+    "要在保持 cascadability + 信号恢复 + 低功率的同时实现 ≥8-bit 有效精度的全光非线性激活，何种物理机制(χ² PPLN / 量子非线性 / 相位型编码)可在实测系统中同时达标？当前数字几乎都来自理论模型或单篇仿真。",
+    "散粒噪声 + RIN + 工艺偏差共同决定的有效 ENOB 物理硬上限在哪里(而非当前工程值 ~6 bit)？低 RIN 光源与高光功率的能耗代价如何折中到系统级最优？",
+    "可逆光学计算能否在包含探测/存储/擦除的完整系统中绕开 Landauer 下界，还是仅能在幺正子过程成立？可逆光门的插入损耗与规模化的热力学代价缺少系统级实测。",
+    "光子 Ising 机的『物理加速』何时能在端到端 wall-clock + 解质量上系统性超越 GPU/量子退火器(而非仅自旋耦合 GOPS 或单一基准)？相干伊辛的低温/DOPO 条件与 OEO 的 DSP 依赖各能推进到多大规模。"
+  ]
+}

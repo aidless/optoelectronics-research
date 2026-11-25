@@ -1,0 +1,152 @@
+{
+  "direction": "光电微纳制造工艺方法",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "EUV 光刻 (13.5nm, 高NA 0.55) 在光子器件图形化中的分辨率极限",
+      "physics": "极紫外投影光刻: 13.5nm 波长由锡等离子体光源产生, 全部光路为反射式(多层膜反射镜), 40-50 对 Si/Mo 多层膜(~300nm 总厚)+Ru 顶帽层, TaBN 吸收层 60-70nm 构成掩模。分辨率遵循 Rayleigh 判据 R=k1·λ/NA; 高 NA 采用变形镜(anamorphic, x 方向 4×/y 方向 8× 缩倍), 把 x 与 y 方向 NA 解耦。0.33NA→0.55NA 使 NA 提升 67%, 单次曝光分辨率理论达 8nm/16nm pitch。焦深 DOF∝λ/NA², 因此 NA 从 0.33→0.55 时 DOF 缩减 2-3 倍, 要求极薄光刻胶(<20nm, 2:1 纵横比)与超平整晶圆。适用于先进 CMOS 驱动的光子集成、高密度光子晶体/超表面若需 CMOS 产线级套刻; 但光子器件特征尺寸通常>50nm, 多数场景 DUV/EBL/NIL 更经济。",
+      "numbers": "λ=13.5nm; NA 0.33→0.55(+67%); 高NA理论单次曝光 8nm 线宽 / 16nm pitch; 已打印 24nm pitch lines/spaces 与 28nm pitch contact holes; NXE:3400B(0.33NA)单次曝光 28nm pitch; HVM 实用分辨极限约 13nm(26nm pitch); 7nm 逻辑节点 metal pitch 36-40nm; 反射镜多层膜~300nm(40-50 层 Si/Mo+Ru); TaBN 吸收层 60-70nm; 胶厚<20nm(纵横比 2:1); DOF 随 NA² 下降, 高NA减少 2-3 倍; CNT pellicle 可承受>600W。口径: imec 官方技术文章(研究机构一手口径, 非 ASML 产品规格书)。",
+      "urls": ["https://www.imec-int.com/en/articles/high-na-euvl-next-major-step-lithography"],
+      "status": "已核验"
+    },
+    {
+      "name": "DUV 193nm 浸没式光刻 (ArFi) 在光子器件中的分辨率与吞吐",
+      "physics": "193nm ArF 准分子激光经高 NA 投影物镜, 镜头与晶圆间以去离子水浸没(水 n≈1.44)把有效 NA 提到 1.35, 等效缩短波长。配合 OPC/相移掩模/离轴照明等分辨率增强技术。是硅光(sub-100nm 波导/光栅)主流量产图形化手段, 套刻与吞吐优于 EBL, 分辨率次于 EUV。",
+      "numbers": "193nm ArFi; ASML NXT:1970Ci 分辨率≤38nm, NA=1.35, 吞吐≥250 wph; NXT:2000i NA=1.35, 40nm(C-quad 照明)/38nm(dipole 照明)。口径: ASML 官网产品规格页(仅搜索片段, 正文页被 404 拦截, 未逐字核验)。",
+      "urls": ["https://asml.com/en/products/duv-lithography-systems/twinscan-nxt1970ci", "https://asml.com/en/en/products/duv-lithography-systems/twinscan-nxt2000i"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "电子束光刻 EBL / 多电子束 (CEBL) 的分辨率-吞吐权衡",
+      "physics": "聚焦电子束直接在电子胶上扫描写入, 无掩模, 分辨率可达 sub-10nm, 是科研级光子晶体、光栅耦合器、超表面原型的首选。缺点是串行逐点/逐特征写入, throughput 极低; 多电子束(CEBL, 多柱阵列)通过并行化提升产率但系统复杂。常用于制作 NIL 母版。",
+      "numbers": "MAPPER 多电子束平台 13,000 束并行(片段); 单柱 CEBL 逐特征写入吞吐显著低于光学曝光(片段)。未获得可逐字核验的 EBL 对准/套刻精度与 wafer/hour 硬数字。口径: 公开片段, 未深读原始论文正文。",
+      "urls": ["https://repository.tudelft.nl/file/File_4570eb9d-759c-47b8-a9d3-8af3ba1cf531?preview=1", "https://doi.org/10.1117/12.916118"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "纳米压印 NIL (UV/热/卷对卷) 的分辨率、套刻与在光子器件中的应用",
+      "physics": "机械方式把母模纳米图形压入抗蚀剂并固化: 热 NIL 在 Tg 以上(100-200°C)加压 1-10MPa 使热塑胶流动填充模腔, 冷却脱模; UV-NIL 在室温低压(几 bar)下用 365/405nm 紫外固化光敏胶。变体含 P2P/R2P/R2R、反向压印(R-NIL)、对准多层压印、刻蚀转移。母模多为硅/石英(刻蚀 EBL 图形), 可复制到 PDMS/Topas 软模。适合光栅、光子晶体、超表面、波导与大面积柔性光子, 高吞吐低成本。局限: 母模磨损、多层对准、脱模缺陷、胶折射率偏低(1.5-1.6)。",
+      "numbers": "UV-NIL 分辨率 sub-100nm; 综述称 NIL 达 sub-10nm 分辨率; 热 NIL 压力 1-10MPa、温度 100-200°C(>Tg); UV-NIL 低压几 bar、室温; 对准多层压印套刻<100nm; EVG SmartNIL(2014 起)200mm 晶圆 sub-20nm overlay; 常规 NIL 胶折射率 1.5-1.6, 纳米颗粒填充胶(PER, TiO2/ZrO2)达 1.8-2.0; sol-gel 波导 45µm×35µm 损耗~0.5dB/cm@1550nm; UV 压印单模聚合物波导 0.35dB/cm。口径: IOP Nanotechnology 综述(同行评审, 开放获取, 已深读)。",
+      "urls": ["https://iopscience.iop.org/article/10.1088/1361-6528/ae150a", "https://doi.org/10.1088/1361-6528/ae150a"],
+      "status": "已核验"
+    },
+    {
+      "name": "ICP-RIE 干法刻蚀 SiO2 硬掩模: 侧壁角控制与各向异性",
+      "physics": "电感耦合等离子体反应离子刻蚀: 高密度等离子体与独立偏压解耦, 氟基气体(SF6/CF4)物理溅射+化学反应协同实现各向异性刻蚀。SF6/CF4 比例调控侧壁倾角, CF4/O2 刻蚀 SiO2 可平滑波导侧壁, SiO2 硬掩模降低线边缘粗糙度转移到硅芯。是 SOI 硅光波导定义的核心工艺, 侧壁质量直接决定传播损耗。",
+      "numbers": "采用 SiO2 硬掩模+氟基 RIE 优化后最小传播损耗 0.89 dB/cm; SF6/CF4 混气控制侧壁角; CF4/O2 平滑 SiO2 侧壁。口径: IOP J. Micromech. Microeng. 25 015003 (2015, Lee et al., DOI 10.1088/0960-1317/25/1/015003, 已深读)。",
+      "urls": ["https://iopscience.iop.org/article/10.1088/0960-1317/25/1/015003"],
+      "status": "已核验"
+    },
+    {
+      "name": "侧壁粗糙度→散射损耗的定量关系",
+      "physics": "刻蚀导致的波导侧壁线边缘粗糙度(LER)把导模耦合到辐射模与反向模, 产生散射损耗。散射损耗近似随粗糙度 RMS 的平方与模场在侧壁的强度增长; 因此>10nm rms 的侧壁起伏显著抬高 dB/cm 损耗。抑制手段: 氧化平滑(牺牲氧化消耗粗糙层)、优化刻蚀化学、抗蚀剂回流/热回流、SiO2 硬掩模。",
+      "numbers": "SOI RIE 波导侧壁粗糙度 σ≈10nm (Optics Letters 36, 2480, 2011, DOI 10.1364/ol.36.002480, 片段); 粗糙度>10nm rms 时散射损耗显著(IEEE doc 4895221, 2009, 片段); 常规/氧化平滑/各向异性刻蚀三法的散射对比(Optics Letters 26(23) 1888, 片段)。口径: 均为题录/片段, 未深读正文。",
+      "urls": ["https://doi.org/10.1364/ol.36.002480", "https://ieeexplore.ieee.org/document/4895221", "https://opg.optica.org/abstract.cfm?URI=ol-26-23-1888"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "湿法刻蚀的各向异性/选择比 (缺口)",
+      "physics": "湿法刻蚀依靠化学腐蚀, 通常各向同性; 特定晶面相关的各向异性湿刻(如 KOH 刻 Si 的{111}面停止、TMAH)与晶圆键合/减薄、V 槽制作有关; 选择比由腐蚀液化学体系决定。在光子器件中主要用于 SOI 释放、V 槽与牺牲层去除。",
+      "numbers": "未覆盖: 两轮检索未取得可核验的湿法刻蚀各向异性比/选择比硬数字(如 KOH/TMAH 各晶面刻蚀速率比、BOE 刻 SiO2 对 Si 选择比具体数值)。仅确认其为各向同性/晶面依赖的常规工艺事实。",
+      "urls": [],
+      "status": "未覆盖"
+    },
+    {
+      "name": "PECVD 沉积光学薄膜的折射率控制与均匀性",
+      "physics": "等离子增强化学气相沉积在较低温度下(通常<400°C)解离前驱体成膜, 用于波导芯层/包层与掺杂玻璃(如 Ge 掺杂 SiO2)。通过气体流量比控制组分→折射率, 均匀性由腔体气流/温度场决定。低温使其适合 back-end 与聚合物/异质集成。",
+      "numbers": "Ge 掺杂 PECVD 低损耗波导膜: 折射率控制 ±0.0005、折射率均匀性 ±0.0002 (SPIE DOI 10.1117/12.483242, 2002, 片段)。厚 SiN PECVD vs LPCVD 特性对比见 Southampton eprints TSM3583925(2025), 正文被 Anubis 拦截未深读。口径: 仅题录/片段。",
+      "urls": ["https://doi.org/10.1117/12.483242", "https://eprints.soton.ac.uk/504148/1/TSM3583925.pdf"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "LPCVD 化学计量 Si3N4 薄膜的应力与折射率",
+      "physics": "低压化学气相沉积在高温(约 700-800°C)下热解前驱体, 膜致密、均匀性/台阶覆盖优异、光学损耗低, 是低损耗 SiN 波导与光栅的主流。但化学计量 Si3N4 固有张应力大, 厚膜易开裂, 需应力工程(富硅配比/退火/图形化释放)。",
+      "numbers": "LPCVD 化学计量 Si3N4 残余张应力约 1000 MPa, 需工艺优化实现 crack-free (arXiv 2610.15754, 片段)。口径: 仅片段, 未深读正文。",
+      "urls": ["https://arxiv.org/html/2610.15754v1"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "ALD 原子层沉积在光学薄膜/保形涂覆中的作用",
+      "physics": "自限制表面反应逐原子层沉积, 厚度可按循环数亚纳米级精确控制, 保形性极佳, 用于高折射率涂覆(如 TiO2/HfO2 包覆 NIL 压印结构提升折射率对比)、精确厚度调谐与温度敏感器件的低温成膜。缺点是沉积速率慢。",
+      "numbers": "ALD 用于光学镀膜精密控制与降低温度诱导形变(Optics Letters 34(13) 1958, 2009, 题录); ALD 膜表征方法(UMN MNC 设备资料)。未取得可核验的厚度均匀性/应力硬数字。口径: 题录与设备资料片段。",
+      "urls": ["https://opg.optica.org/abstract.cfm?URI=ol-34-13-1958", "https://apps.mnc.umn.edu/pub/equipment/ald-film-characterization.pdf"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "溅射沉积光学薄膜的厚度/应力 (缺口)",
+      "physics": "磁控溅射用高能离子轰击靶材, 原子沉积成膜, 附着力好、可沉积金属与氧化物/氮化物, 用于反射镜、金属电极与部分电光薄膜。厚度由溅射速率×时间控制, 应力与腔压/功率/气氛强相关。",
+      "numbers": "未覆盖: 两轮检索未取得可核验的溅射光学薄膜厚度均匀性/折射率/应力硬数字。",
+      "urls": [],
+      "status": "未覆盖"
+    },
+    {
+      "name": "混合键合 (hybrid bonding) 的对准精度、热预算与良率",
+      "physics": "Cu-Cu 直接键合+介质(如 SiCN)熔融键合一体化: 铜 CMP 达到极高平坦度并留微小铜凹陷(recess), 等离子激活介质表面产生悬挂 Si-O- 键, DI 水水合后面对面贴合, 退火使 Cu 与介质同时成键。实现最短垂直互连、亚微米间距。分 W2W(晶圆到晶圆)与 D2W(芯片到晶圆, 含 collective D2W)。关键瓶颈: CMP 平坦/铜凹陷、对准、颗粒/空洞、热预算、翘曲、吞吐。",
+      "numbers": "常规炉退火 350°C/2h; SiCN 介质工艺可从 350°C 降到 200°C 区间(HBM); Applied Materials 300°C/5min 退火使吞吐提升两个数量级, 满足 250nm copper CD @ 500nm pitch; 铜 CMP 晶圆 TTV 平坦+约 1nm copper recess variation; EVG 无机 adhesive bonding+laser release 使硅载片 TTV=100nm、精度 far less than 100nm; HVM 倒装键合机对准±3µm(3σ)→1µm(3σ); 经验法则: 键合机精度=pad 直径的 0.1-0.25×(1µm pad→100-250nm); Intel 指出 sub-1µm pitch 对准超出当前设备、D2W attach 是最慢最贵步骤; 流体自对准(CEA-Leti+Intel)把 D2W misalignment 降到 200nm、吞吐预估 10×; imec: W2W 路径到 400nm 并向 200nm pitch 推进, D2W 处于 10-1µm 区间; collective D2W 对 50µm-775µm 芯片 transfer yield 与 bond yield 达 100%。口径: Semiconductor Engineering 访谈文章(imec/EVG/Intel/Adeia/AMAT 一手引述, 已深读)。",
+      "urls": ["https://semiengineering.com/hybrid-bonding-makes-strides-toward-manufacturability/", "https://arxiv.org/abs/2611.18713"],
+      "status": "已核验"
+    },
+    {
+      "name": "微转印 (micro-transfer printing, µTP) 的对准精度与粘附切换",
+      "physics": "用弹性印章(通常 PDMS)从供体晶圆拾取微器件 coupon, 再精准印到目标晶圆/光子芯片上, 实现不同材料体系(InP/Si/TFLN/GaN)异质集成。核心是粘附力可切换: 通过动力学速度、热释放胶、溶剂/光敏/仿生微结构在拾取时高粘附、释放时低粘附。可在晶圆级并行转移已知良品 die。",
+      "numbers": "商用 TP 工具对准精度 ±1.5µm(器件阵列)、±0.5µm(单个 coupon); 动力学 TP 拾取速度~10cm/s、印刷速度~1mm/s; 热释放带~100°C; 粘附切换比: kinetic~3、solvent>200、photo-sensitive 117.5、gecko~204、aphid>1000、octopus~293、PVA>10^6; 器件实例: C 波段 SOA gain 17-23dB、DFB 激光 SMSR>40dB、InGaAs PD 3dB 带宽 17.5GHz、TFLN 调制器 IL 3.3dB / ER 39dB / >50GHz。口径: Light: Science & Applications 2025;14:396 综述(中科院长春光机所, 已深读)。",
+      "urls": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC12680666", "https://doi.org/10.1038/s41377-025-02064-w"],
+      "status": "已核验"
+    },
+    {
+      "name": "单片集成 (monolithic integration) 的对准/热预算 (缺口)",
+      "physics": "在同一晶圆上顺序外延/沉积并图形化多种功能层(如直接在硅上外延 III-V 激光器), 避免键合/转移的对准误差, 但受晶格失配、热预算累积与工艺兼容限制。区别于混合键合/转印的异质路线。",
+      "numbers": "未覆盖: 两轮检索未取得可核验的单片集成专门对准精度/热预算硬数字; 仅有定性结论(混合键合把前端与后端拉到一起、顺序 3D 集成为下一代方向)。",
+      "urls": ["https://semiengineering.com/hybrid-bonding-makes-strides-toward-manufacturability/"],
+      "status": "未覆盖"
+    },
+    {
+      "name": "FAU 光纤阵列附着与单模耦合对准容差",
+      "physics": "光纤阵列单元(FAU)在 V 槽基板中按固定 pitch 排布, 用被动/主动对准贴装到光子芯片的光栅或边缘耦合器, 以 UV 胶固化固定。耦合损耗由横向偏移、角度倾斜、轴向间隙与模场失配决定; Marcuse 近似给出单模 1dB 容差约为 d=0.48w(=0.24×MFD)。pitch 累积误差、胶固化收缩、热失配是长期可靠性关键。",
+      "numbers": "FAU pitch 127µm/250µm; V 槽间距±0.5µm、纤芯位置±0.7µm(≤16ch)/±1.0µm(48ch)/±1.5µm(72ch, Corning OEM-039); SMF-28 Ultra 包层 125.0±0.7µm、同心度≤0.5µm、MFD@1550nm 10.4±0.5µm(Corning PI1424); 1dB 容差(横向/倾角/气隙): MFD10.4µm→±2.5µm/1.8°/55µm(空气), 6µm→±1.4µm/3.1°/18µm, 4µm→±1.0µm/4.7°/8µm, 3.2µm UHNA-7→±0.8µm/5.9°/5µm; 实测(Avdeev 2024, arXiv:2405.11980): ±2.8µm SMF-28 / ±1.4µm 4µm / ±1.2µm UHNA-7; pitch 误差 0.05%(127.06 vs 127.00µm)→第 16 通道偏 0.9µm; 被动贴装: 通用 die bonder±10µm、单模±1-2µm、专用 0.2-0.3µm@3σ(Barwicz 2018); 胶 n=1.526-1.569、Tg 78-131°C、CTE 55-206ppm/°C、收缩 0.39%-1.5%; 1.5% 收缩×20µm 键合线=0.3µm(占 4µm 耦合器 1dB 预算 1/3); 固化附加损耗 0.05dB、全流程 0.15dB(Wang 2025, Photonics 12, 545); 8 通道 facet 损耗 1.1-1.5dB±0.2dB(Nauriyal 2023)。口径: Photonica 技术文章(引 Corning/Tyndall/Telcordia 数据, 已深读)。",
+      "urls": ["https://photonica.io/articles/fiber-array-attach"],
+      "status": "已核验"
+    },
+    {
+      "name": "光栅耦合器 vs 边缘耦合器的对准容差与封装成本",
+      "physics": "光栅耦合器通过周期光栅把芯片模式衍射到近垂直/倾斜光纤, 无需切端面、可在晶圆级测试, 但带宽窄、偏振敏感、对角度与波长敏感(峰波长随角度漂移)。边缘耦合器用倒锥/spot-size converter 把模场扩展到匹配光纤, 带宽宽、耦合效率高, 但需切割/抛光端面且对准容差更严(sub-micron)。",
+      "numbers": "光栅耦合器: <0.5dB@1µm 横向偏移、0.5dB@2°倾角、峰波长漂移~9nm/度(Taillaert 2006); 1dB 窗: 光栅±2.5µm vs 边缘±0.5µm(Carroll 2016); 端面抛光 0.3°角度误差=3nm 波长偏移; 边缘耦合器需 sub-micron 对准, 常配 SiON/polymer mode-adapter(IEEE 8054676, 2017, 片段); 封装占光模块成本最高约 80%(Tyndall IPIC 引述)。口径: Photonica 深读(引 Taillaert/Carroll)+MDPI Appl Sci 10(4)1538 片段(正文 403 未深读)。",
+      "urls": ["https://photonica.io/articles/fiber-array-attach", "https://doi.org/10.3390/app10041538", "https://nature.com/articles/s41377-025-02048-w"],
+      "status": "已核验"
+    },
+    {
+      "name": "气密/非气密封装的可靠性判据 (水汽率缺口)",
+      "physics": "光子器件封装分气密(hermetic, 金属/陶瓷腔体)与非气密(塑封/胶封)。可靠性按 Telcordia GR-1221 等标准做温度循环、湿热、机械冲击与保持力测试, 以插损变化 ΔIL 判定通过。",
+      "numbers": "Telcordia GR-1221: -40~+85°C 500 次循环 / 85°C 85%RH 2000h / 500g 1ms 冲击 / 20g 振动 / 保持力 0.45-0.5kgf, 通过判据 ΔIL≤0.5dB(严格 0.2dB); Kumagai 2019: damp heat -0.11~+0.11dB、500 次循环±0.07dB。未覆盖: 气密 vs 非气密封装的水汽透过率(WVTR)/泄漏率硬数字未取得。口径: Photonica 深读引 Telcordia/文献。",
+      "urls": ["https://photonica.io/articles/fiber-array-attach"],
+      "status": "未覆盖"
+    },
+    {
+      "name": "工艺变异 (process variation) 对硅光器件性能的影响与鲁棒设计补偿",
+      "physics": "光刻/刻蚀/沉积的线宽(CD)、层厚、折射率存在 die 间(global/D2D)与 die 内(local/WID)、空间相关与随机确定性变异。微环/环形谐振器对波导有效折射率极敏感: 1nm 级线宽/厚度偏差→有效折射率变化→谐振波长漂移, 使 DWDM 通道失配、插损上升。补偿手段: 后工艺微调(post-fabrication trimming, 如激光退火/热光相变)、variation-aware 设计(加宽波导降低群折射率敏感度)、两臂模式限制差异被动补偿、变容匹配与冗余调谐、统计建模+PDK 蒙特卡洛。",
+      "numbers": "microring 波导 1nm 偏差→谐振波长漂移, 需 post-fabrication trimming(IEEE 6621507, 2013, 片段); 变异分类: Global(inter-die/D2D)/Local(intra-die/WID)/spatially correlated/random deterministic(Synopsys 白皮书 2022-07-19, PDF 402 未深读); 补偿: 全硅 FIR 滤波器用两臂模式限制差异被动补偿 linewidth/热变化而不改工艺(IEEE 7029048, 2015)、DWDM microring variation-aware matching(IEEE 9252537, 2020)、variation-tolerant 片上光网络(ACM 10.1145/3208073, 2018)。口径: 均为题录/片段, 未深读正文。",
+      "urls": ["https://pubs.acs.org/doi/full/10.1021/acsphotonics.2c01194", "https://ieeexplore.ieee.org/document/6621507", "https://www.synopsys.com/content/dam/synopsys/photonic-solutions/documents/whitepapers/modeling-silicon-photonics-wp.pdf", "https://dev.photonicsmanufacturing.org/sites/default/files/documents/2024_ipsr-i_silicon_photonics_updated_v2.pdf"],
+      "status": "单源未验证"
+    }
+  ],
+  "key_insights": [
+    "目标层是工艺方法而非产能新闻: 决定光子器件极限的是图形化(光刻/NIL)、图形转移(刻蚀)、成膜(沉积)与集成/封装(键合/转印/耦合)四条工艺链, 各自有独立的精度/损耗/良率瓶颈。",
+    "EUV(尤其高NA)把 CMOS 图形化推到单次曝光 8nm/16nm pitch, 但焦深随 NA² 下降(高NA减 2-3 倍)、胶厚需<20nm, 且光子器件特征多>50nm, 量产主力仍是 193nm 浸没式与 NIL; EBL 用于原型与母版。",
+    "NIL 是光子器件最具性价比的图形化路线: sub-20nm overlay(200mm)、sub-10nm 分辨率、低压室温 UV 压印, 但胶折射率(1.5-1.6)与母模寿命/多层对准是瓶颈, PER 填充胶(1.8-2.0)正在补折射率短板。",
+    "刻蚀侧壁粗糙度是硅光损耗主因: σ≈10nm 即显著散射, 用 SiO2 硬掩模+优化氟基 RIE 可把传播损耗压到 0.89dB/cm; 氧化平滑是关键抑损手段。",
+    "异质集成三条路各有精度-成本定位: 混合键合对准到亚微米(pad 1µm 需 100-250nm 键合机精度, W2W 向 200nm pitch), 微转印对准±0.5-1.5µm 但材料兼容性最好, 单片集成对准最优但热预算/晶格失配受限。",
+    "耦合与封装是光子集成的隐性主导成本(封装占模块成本可达 80%): 光栅对准容差宽(1dB±2.5µm)适合晶圆级测试, 边缘耦合效率高但需 sub-micron 对准; 胶固化收缩 1.5%×20µm=0.3µm 已占 4µm 耦合器 1dB 预算 1/3。",
+    "工艺变异下微环对 1nm 线宽偏差即产生谐振漂移, 必须从'工艺完美'转向'统计鲁棒设计'+后工艺微调。",
+    "单源/片段证据(EBL 吞吐、湿法刻蚀选择比、溅射应力、ALD 均匀性、气密水汽率、单片集成热预算、工艺变异敏感度)尚需一手正文深读才能升级为可引用硬数字。"
+  ],
+  "open_questions": [
+    "EBL/CEBL 的分辨率-套刻-throughput 三方硬数字(如最小线宽 nm、overlay nm、wafer/hour)未逐字核验, 需读 MAPPER/CEBL 原始论文正文。",
+    "湿法刻蚀各向异性比与选择比(KOH/TMAH 晶面速率比、BOE 对 Si/SiO2 选择比)未覆盖, 需权威工艺手册一手数据。",
+    "溅射光学薄膜的厚度均匀性/折射率/应力硬数字未覆盖。",
+    "ALD 光学镀膜厚度均匀性与应力硬数字未取得(正文被付费墙/题录限制)。",
+    "气密 vs 非气密封装的水汽透过率/氦漏率硬数字未覆盖, 仅有 Telcordia GR-1221 可靠性判据。",
+    "单片(monolithic)异质集成专门的对准精度与热预算硬数字未覆盖。",
+    "工艺变异→波长漂移/插损的敏感度系数(nm 偏差→nm 波长漂移、dB 插损)缺可核验正文; Synopsys 白皮书 PDF 被 402 拦截, 需换通道获取。",
+    "ASML DUV/EUV 官方产品规格页正文被 404 拦截, 现有 DUV 数字来自搜索片段, 需用 ASML 产品手册或权威 foundry 白皮书复核。"
+  ]
+}

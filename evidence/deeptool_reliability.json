@@ -1,0 +1,131 @@
+{
+  "direction": "光电器件可靠性与失效分析方法",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "半导体激光器：Burn-in筛选、Arrhenius温度加速、FIT/MTTF推算与Telcordia GR-468-CORE",
+      "physics": "方法原理：早夭期由制造缺陷（位错增殖、腔面氧化、电极金属扩散、键合/热沉退化）主导，用100%器件的短时通电老化（burn-in, <100 h）在出厂前消耗，判据为阈值电流Ith、给定电流下光功率Pop@Iop、给定功率下电流Iop@Pop及斜效率的漂移（典型5–30%）；稳态失效率FIT用加速老化+Arrhenius外推，寿命L=At*exp(Ea/kT)，k=8.6173e-5 eV/K；恒失效率下P(存活到t)=exp(-FIT*1e-9*t)，MTTF(MTBF)=1e9/FIT [h]。跨机理/跨温度外推必须先证明确是同一失效机理；子系统的FIT按独立组件FIT求和。Telcordia GR-468-CORE给出器件级筛选、加速老化、TC、湿热、机械等统一鉴定框架。",
+      "numbers": "口径：MKS/ILX厂商白皮书：Ea典型0.2–0.7 eV；Ea=0.7 eV时中位寿命1e5 h@室温→约2300 h@70°C；burn-in典型<100 h，判据漂移5–30%；16只DFB 75°C/1000 h加速老化（EOL判据电流变化20%），个体外推寿命360–16460 h、Weibull MTTF 2200 h；老化设备稳定度需0.1%/1000 h量级、TO-can热阻5–10°C/W，腔温波动0.1°C即可见功率噪声。Agiltron GR-468-CORE Issue 2（2004-09）合格报告：逐只85°C/48 h burn-in+10次-40↔+85°C温循；12组×11只并联试验、零失效；通过判据ΔP≤10%或0.5 dB、Δλ≤0.1 nm、ΔSMSR≤5 dB；加速老化CO 25/70°C 2000 h(min)/5000 h(info)、UNC 25/85°C 2000 h(min)/5000 h(info)。IEEE 802 HSSG：1 FIT=1次失效/1e9器件小时，MTTF=1e9/FIT；10 million device hours零失效只能宣称FIT<100，且99%置信下单次失效估计差近一个数量级，需约100次失效才有稳定统计。Intel 2026 SPIE论文：>55000只激光器ALT得<0.1 FIT；>6百万只混合激光器3年现场、100%失效分析确认0.05 FIT；45000 h/32只HTOL退化可忽略。",
+      "urls": [
+        "https://api.p1.mks.com/medias/sys_master/images/images/h44/h10/8797304946718/WP-Laser-Diode-Burn-In-and-Reliability-Testing.pdf",
+        "https://cdn-agl.agiltron.com/dlc/certificates/SWLDlaserGR468-qualificationreport2021-03-16__Agiltron.pdf",
+        "https://ieee802.org/3/hssg/public/jan07/winzer_01_0107.pdf",
+        "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2026-09/spie-pw-2026-published-1-.pdf",
+        "https://electrontest.com/telcordia-bellcore-gr-468-core"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "硅光/光子集成：相移器与加热器的TDDB、电迁移(EM)与应力迁移应力加速",
+      "physics": "方法原理：TDDB由栅/介质场强与缺陷产生导致漏电流漂移乃至击穿，寿命模型含电场指数与温度Arrhenius项并做面积缩放；EM由电子风+焦耳热驱动，阴极空洞/阳极挤出，Black方程型TTF∝J^-n*exp(Ea/kT)，n为电流指数；硅光加热器存在温度梯度，教科书式均匀温度EM模型需修正。应力迁移(SM)源于CTE失配应力梯度；热循环(TC)主要打击芯片-封装界面与通孔，相移/加热结构的局部电场、局部温度必须分开加速。鉴定用加速应力+基于物理的寿命投影（电压、温度、电流密度、面积缩放），并保持应力不跨失效机理边界。",
+      "numbers": "口径：IEEE IRPS 2026综述（Marvell）：先进封装主导机理为TDDB、EM、SM、TC；TDDB受间距缩小、等离子损伤、liner变薄、low-k脆弱放大；Si CTE≈2.6 ppm/°C，基板/聚合物/焊料≈10–50 ppm/°C；SiPh封装特有失效：PD暗电流漂移、波导光损耗上升、相移器/加热器TDDB与EM、激光器退化、激光-SiPho与光纤-SiPho耦合损耗。imec IEEE REPP 2022报告：W加热器150 µm×0.6 µm，300°C/12.5 mA应力，Ea=0.94±0.08 eV、电流指数n≈2.7、t50=235±25 h(UCUT)对181±13 h，M2注入器比M1寿命>10×；热梯度使EM不适用简单手册模型。",
+      "urls": [
+        "https://eps.ieee.org/wp-content/uploads/2026/04/Reliability-TC-Article-2025-IEEE-International-Reliability-Physics-Symposium-_Richard-Rao.pdf",
+        "https://attend.ieee.org/repp/wp-content/uploads/sites/244/croes22.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "硅光Ge光电探测器暗电流退化：热载流子/缺陷产生与电压-温度双应力外推",
+      "physics": "方法原理：反偏Ge VPIN中缺陷产生与载流子俘获改变暗电流，监测I(t)相对初始值的漂移ΔI/I0=k*t^m；m负=缺陷/载流子俘获导致的退化率下降(DFR)，m正=缺陷持续产生(DGR)。应在单一机理区内施加电压与温度双应力，用TTF∝exp(Ea/kBT)*V^-m拟合；须检查应力电压是否跨过机理拐点（拐点后外推失效），并用不同温度/电压组验证Ea与m的一致性。",
+      "numbers": "口径：imec REPP 2022：Ge VPIN PD在V>3.8 V暗电流漂移趋平、4 V出现不同机理，因此最大应力限于3.8 V以内；局部Ea=0.05–0.60 eV（低温/扩散约Ge带隙Ebg≈0.66 eV，SRH中心约0.33 eV）；1 V→2 V加速2.7–3.2×；取保守Ea=0.6 eV、m=2.5时，1 V/90°C/5年寿命需175°C/2 V应力约460 h；相移器175°C/-5 V应力最长5000 h，另设85/85与150°C组，VπL退化由偏压驱动而非温度驱动；籽晶退火可降低穿位错密度。IRPS 2026独立确认SiPh封装中PD暗电流漂移为关键失效模式（未给同组数字）。",
+      "urls": [
+        "https://attend.ieee.org/repp/wp-content/uploads/sites/244/croes22.pdf",
+        "https://eps.ieee.org/wp-content/uploads/2026/04/Reliability-TC-Article-2025-IEEE-International-Reliability-Physics-Symposium-_Richard-Rao.pdf"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "光致退化(photodarkening)与热漂白的可逆退化加速方法",
+      "physics": "方法原理：掺杂光纤在高功率/紫外泵浦下产生色心导致附加吸收（光致退化），其归一化吸收系数的时间演化符合幂律；升温可热漂白恢复到光照前状态。用不同温度下的复原曲线按Erdogan热衰减分布模型反演激活能谱，从而区分缺陷种类并预测给定温度下的退化/恢复速率；-vs-永久性损耗需以“可否热漂白”作为判据。该机理属高功率掺稀土光纤/光纤激光器，不等同于硅波导的稳态光致退化，迁移到SiPh需另做机理确认。",
+      "numbers": "口径：Optics Letters 34(17), 2637–2639 (2009), DOI 10.1364/OL.34.002637，Söderlund等：热漂白符合Erdogan等[J. Appl. Phys. 76, 73 (1994)]幂律热衰减模型；表1两根商用大模场Yb光纤的激活能分布峰分别1.32 eV、1.50 eV，FWHM分别0.31 eV、0.34 eV（对应漂白特征温度979 K、1129 K，前处理指数因子2.0 GHz；初始致暗损耗栏1750 / 600 dB/m，页面表格表头符号在抓取中丢失，数值需以原PDF复核）。WebFetch仅得到摘要与表1，正文方程受订阅限制，且未找到第二篇交互验证来源。",
+      "urls": [
+        "https://opg.optica.org/abstract.cfm?URI=ol-34-17-2637",
+        "https://doi.org/10.1364/OL.34.002637"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "氢逃逸/氢外扩散(hydrogen out-diffusion)对波导与光纤损耗的影响及加速测试",
+      "physics": "方法原理（待验证）：氢在石英/锗硅网络中的扩散与逃逸会改变Si-H/Ge-H缺陷钝化状态，可能引起光吸收与折射率漂移；通常用高温烘烤/氢气氛暴露做加速，并对损耗谱或暗电流前后对比。两轮关键词检索未取得可核验的一手标准/论文与硬数字，故不填方法细节与数字，避免臆造。",
+      "numbers": "未覆盖：两轮检索（换关键词≤2轮）未获得可引用的氢逃逸激活能、加速倍数或JEDEC/Telcordia试验条件；不臆造数字。",
+      "urls": [],
+      "status": "未覆盖"
+    },
+    {
+      "name": "封装可靠性：温度循环、湿热85/85、机械冲击(JESD22)与光引擎特有失效",
+      "physics": "方法原理：温度循环利用CTE失配在焊点/界面产生剪切疲劳，按Coffin-Manson型循环寿命外推；湿热（85/85、 biased HAST/HAST）以温度+湿度+偏压加速离子污染、腐蚀与界面分层；机械冲击/变频振动验证焊点、键合与封装完整性。光引擎额外以“光参数”为失效判据：热湿和残余应力改变折射率→相位误差、插损、眼图与BER劣化；翘曲导致光纤耦合失准，光纤贴装与光子引线键合退化。需组件级(CLR)/板级(BLR)/系统级(SLR)分层评价，FEA用于找应力热点。",
+      "numbers": "口径：JEDEC JESD22-A104官方PDF需登录，条件数取自厂商鉴定计划：TI DMD鉴定JESD22-A104 -55↔125°C/1000 cyc，77只×3批=231只；JESD22-B104机械冲击1500g、5次，15×3=45只；JESD22-B103振动20g峰值；JESD22-A101/A110 110°C/85%RH/264h（231只）；JESD22-A118 110°C/85%RH/264h；JESD22-A108 120°C/500h；早期失效120°C/48h；6面1.2 m跌落。onsemi PCN：JESD22-A101 85°C/85%RH反偏1008h；A104 -55~150°C/1000 cyc；A118 130°C/85%RH/18.8 psig/96h；HTS 150°C/1008h。Agiltron GR-468报告：UNC TC -40↔85°C 500 cyc(pass/fail)/1000(info)，CO -40↔70°C 100 cyc；停留≥15 min（报告用30 min），变温≥10°C/min；湿热85°C/85%RH 1000h(qual)/2000h(report)/5000h(info)；机械冲击带TEC 500g/1ms、无TEC 1500g/0.5ms、每方向5次×6方向；振动20g、20–2000 Hz、4 min/cycle×4 cycles/axis。IRPS 2026给出Si encapsulation等关键失效模式与CTE数字（见第2条）。以上判据均为厂商/标准公开条件，非本实验实测。",
+      "urls": [
+        "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/94/PPAP_5F00_EXTERNAL_5F00_Qual_5F00_Memo_5F00_DLP5530SAFYSQ1.pdf",
+        "https://mouser.com/PCN/onsemi_Generic_IPCN25638X.pdf",
+        "https://cdn-agl.agiltron.com/dlc/certificates/SWLDlaserGR468-qualificationreport2021-03-16__Agiltron.pdf",
+        "https://eps.ieee.org/wp-content/uploads/2026/04/Reliability-TC-Article-2025-IEEE-International-Reliability-Physics-Symposium-_Richard-Rao.pdf",
+        "https://jedec.org/sites/default/files/docs/22a104d.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光纤连接器端面污染与清洁的量化检验(IEC 61300-3-35:2022)",
+      "physics": "方法原理：把端面分区（纤芯A区/包层B区）并对碎屑(debris)、划痕(scratch)、缺陷(defect)分类计数，显微镜需按标准规定的视场与最小可检出尺寸验证；先做清洁度检验，再做缺陷/划痕判定。目视检验是性能检验的补充，不能替代插损/回损测量；清洁后用IEC TR 62627-01等规定流程。该方法是把“端面污染→插损/回损劣化→激光端面损伤”的定性经验变成可复现判据。",
+      "numbers": "口径：IEC 61300-3-35:2022 Ed3：SFOV视场≥250 µm，需检出2 µm颗粒与3 µm宽划痕；LFOV视场≥6.4×2.5 mm，需检出10 µm颗粒；圆柱插芯中心250 µm区，135–250 µm环带建议≤10颗5–10 µm颗粒、不得有>10 µm颗粒；矩形插芯建议≤10颗10–25 µm颗粒、不得有>25 µm；单模PC A区(核心25 µm)：缺陷≥2–3 µm最多1个、>3 µm不允许（RL≥26 dB及fiber-stub收发器）；RL≥35 dB时核心区3–4 µm划痕最多1条；B区25–110 µm：≤25 µm缺陷不限、>25 µm不允许；2022版取消C/D区要求，并明确“目视不合格但光性能合格仍可使用”。Rayoptic列出GR-326-Core Issue 4条件：85°C/85%RH 168h、-40↔+75°C 21循环/168h等（实验室能力页，二手转述）。",
+      "urls": [
+        "https://webstore.iec.ch/en/publication/64254",
+        "https://cdn.standards.iteh.ai/samples/102780/60eef617872d4d05ab4d1ca0d7e30692/IEC-61300-3-35-2022.pdf",
+        "https://www.rayopticcom.com/quality-control/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光纤弯曲损耗与连接器插拔寿命：机械耐久试验的口径缺口",
+      "physics": "方法原理：宏弯损耗随弯曲半径指数上升，工程上通过规定最小弯曲半径与绕轴试验控制；插拔寿命用规定次数重复插拔后测插损/回损漂移来表征端面磨损与对准结构退化，清洁常作为循环中的规定步骤。Telcordia GR-326/GR-3120与GR-468对光纤处理给出条件，但不同报告引用的判据（循环数、拉力、清洁间隔）并不一致，必须逐条核对标准原文。",
+      "numbers": "口径：Agiltron GR-468-CORE合格报告：光纤弯曲半径绝对最大限值30 mm（安装/处理限）；光纤拉力1 kg/5 s×3次。Rayoptic实验室页（转述GR-326-Core Issue 4）：直线拉力68 N/300 s、90°侧拉34 N/300 s；加固连接器GR-3120为450 N/67 N；IL≤0.3 dB、RL>50 dB(UPC)/>60 dB(APC)。Verizon QAPS文件VZ-TPR-9431搜索摘要仅给“50次耐久循环、每5次清洁、每10次测量”的试验序列，未获全文，插拔循环数标准值（常见500次说法）在本轮检索中未核验。",
+      "urls": [
+        "https://cdn-agl.agiltron.com/dlc/certificates/SWLDlaserGR468-qualificationreport2021-03-16__Agiltron.pdf",
+        "https://www.rayopticcom.com/quality-control/",
+        "http://verizonnebs.com/TPRs/VZ-TPR-9431.pdf"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "相干/可插拔光模块：现场数据 vs 加速测试、浴盆曲线与冗余设计",
+      "physics": "方法原理：浴盆曲线分早夭（工厂burn-in消耗）、稳态恒定失效率(FIT)与磨损失效三段；加速老化用于压缩前两段并预测第三段，而现场数据用于校验加速模型是否高估/低估。现场数据短板：器件不运行在最坏允许极限，样本暴露量与失效数通常不足；因此加速试验给出早期与稳态上界、现场失效分析确认真实机理。并行/多波长系统的FIT按失效独立性求和或加冗余通道（N+1）降低系统级失效率，但集成度不足时可能出现超线性。",
+      "numbers": "口径：Intel 2026 SPIE：>6百万只混合激光器、3年现场、100%FA确认0.05 FIT；>55000只ALT <0.1 FIT；45k h/32只HTOL退化可忽略。Cisco博客（2019表述）：光模块遵循Telcordia GR-468，另加扩展功耗循环/加速老化，量产随机抽样ORT，现场返修率<100 ppm。IEEE 802 HSSG：FIT归一化到1e9小时，10 million device hours零失效→FIT<100但99%置信区间近一个数量级，需≈100次失效；10×10G并行转发器若失效独立则FIT≈N×单波长FIT，增加1个冗余波长可显著降低系统失效率；SR-332 Issue 2 (2006-09)为FIT预算依据。MKS白皮书给出浴盆曲线三段。IEC TR 62721:2012检索摘要涉及bathtub curve、design vs field reliability、Weibull/lognormal与加速试验，正文未取到。",
+      "urls": [
+        "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2026-09/spie-pw-2026-published-1-.pdf",
+        "https://blogs.cisco.com/sp/peace-of-mind-with-cisco-optics-part-2-of-3",
+        "https://ieee802.org/3/hssg/public/jan07/winzer_01_0107.pdf",
+        "https://api.p1.mks.com/medias/sys_master/images/images/h44/h10/8797304946718/WP-Laser-Diode-Burn-In-and-Reliability-Testing.pdf",
+        "https://standards.iteh.ai/catalog/standards/iec/42e28adc-f7b5-4914-9245-6c890fe63626/iec-tr-62721-2012"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "加速寿命试验统计：零失效样本量、置信下界与威布尔少样本外推风险",
+      "physics": "方法原理：给定目标可靠度R、置信水平CL、威布尔形状参数β与加速倍数AF，零失效试验需满足(1-CL)≥(1-R)^(n*AF^β)以反解样本量n或等效试验时长；零失效只给单边置信下界，出现1次失效则必须改用比例法/序贯抽样。威布尔拟合用中位秩回归或MLE，少样本时β与特征寿命的置信区间极宽；若应力跨越机理、或外推超过观测时间的数量级，β的微小误差会被幂律放大成寿命数量级误差；不同批次/不同加速应力的合并需先检验机理一致性。",
+      "numbers": "口径：reliability.readthedocs零失效样本量表：目标R=0.999、95%单侧置信、β=1、等效试验=1倍寿命→n=2995（若4.5万小时等效产品寿命则可能不适用），等效3倍寿命→n=999；1次失效使该下界失效。复算：ln(0.05)/ln(exp(-1))≈2996、ln(0.05)/ln(exp(-3))≈999，与页面一致（取整口径）。IEEE 802 HSSG：1e7器件小时零失效宣称FIT<100，但99%置信下单失效估计不确定度近10×，需≈100次失效；类比BER需100次错误。MKS例子16只DFB、75°C/1000 h外推360–16460 h、Weibull MTTF 2200 h——跨度约45×，直接展示小样本外推离散度。",
+      "urls": [
+        "https://reliability.readthedocs.io/en/stable/Sample%20size%20required%20for%20no%20failures.html",
+        "https://ieee802.org/3/hssg/public/jan07/winzer_01_0107.pdf",
+        "https://api.p1.mks.com/medias/sys_master/images/images/h44/h10/8797304946718/WP-Laser-Diode-Burn-In-and-Reliability-Testing.pdf"
+      ],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "方法层主线：先界定失效机理→选不跨机理的加速应力（温度/电压/电流/湿度/机械）→用Arrhenius/Eyring/Black/Coffin-Manson/威布尔模型外推→用现场失效分析回校；没有机理确认的外推只是曲线拟合。",
+    "Telcordia GR-468-CORE把激光器可靠性变成可审计流程：逐只85°C/48h burn-in + 12组×11只加速试验零失效、ΔP≤10%（或0.5 dB）/Δλ≤0.1 nm；GR-468加速老化CO 70°C/2000 h、UNC 85°C/2000 h是方法中最核心的标准硬数字。",
+    "Intel混合激光器给出“加速试验<0.1 FIT（>55000只）”与“现场0.05 FIT（>6百万只、3年、100%FA确认）”的同向印证，说明光模块FIT应同时给加速上界与现场点估计，而不是二选一。",
+    "硅光失效的新增维度是光参数本身：PD暗电流、波导插损、VπL相移效率与耦合效率都进入失效判据；热应力通过折射率变化直接变成相位误差/BER退化，IRPS 2026称其为系统级多物理场问题。",
+    "统计是薄弱环节：R=0.999/CL=95%/β=1/1倍寿命零失效要求2995只；16只激光器1000 h加速外推个体寿命360–16460 h（约45×离散），少数样本外推必须同时报告β、置信区间与加速模型适用边界。",
+    "标准正文可得性缺口：JEDEC JESD22-A104官方PDF需登录，IEC TR 62721正文未取到，GR-326插拔寿命循环数未核验——这三类数字只能引用厂商认定计划或摘要，并在报告中标注口径。"
+  ],
+  "open_questions": [
+    "氢逃逸/氢外扩散在硅光波导与掺锗光纤中的激活能、加速试验条件与损耗量化关系未覆盖（两轮检索上限）。",
+    "连接器插拔寿命的权威循环数（GR-326/IEC 61300-2-22原文）与端面污染—插损退化—损伤的定量映射未取得一手标准全文。",
+    "JEDEC JESD22-A104/A101条件字母与光引擎适用判据的完整表（官方PDF受限），当前仅有TI/onsemi等厂商计划转述。",
+    "光致退化论文的Erdogan模型数字取自Optica摘要页的表格抓取（表头符号丢失），需原PDF复核1.32/1.50 eV与FWHM 0.31/0.34 eV的列含义，并补第二来源。",
+    "热载流子效应在硅光相移器/调制器中的独立加速模型与硬数字（区别于Ge PD缺陷产生）未找到可核验来源。",
+    "IEC TR 62721:2012正文中的浴盆曲线分段假设、Weibull/lognormal选择与现场-设计可靠性对应关系未取到，仅检索摘要。"
+  ]
+}

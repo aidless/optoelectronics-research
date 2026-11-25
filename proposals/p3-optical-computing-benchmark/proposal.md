@@ -6,7 +6,7 @@
 
 ## 摘要（约300字）
 
-光计算与光子AI芯片的能效宣称在快速抬高，可比性却没有同步建立。证据显示，清华"太极"报告160 TOPS/W（879 T MACS/mm²）、另有65.5 TOPS/W等数字，但这类亮眼数值被指来自未同时公布吞吐与整机功耗的研究芯片，无法做苹果对苹果比较；可核验口径只有Lightmatter Envise约0.84 TOPS/W，两者相差约两个数量级。与此同时，量产落地集中在光互连与光交换器件（OCS硅光PIC、共封装光引擎），全光计算芯片仍处实验室验证，光电反复转换的额外功耗还会抵消部分光子能效优势。口径混乱使路线选择、采购评估与标准制定缺少共同基准。本项目拟在三年内建立分层能效口径（器件级／光矩阵核级／系统级）、可复现基准套件与跨架构对照实验，把不可比宣称转化为可核验区间，明确在何种边界与负载下光计算确有能效增益，并形成工具链接口与标准建议稿。成果以方法、数据与开源工具交付，不承诺新器件流片，也不以统一业界标准为目标。
+光计算与光子AI芯片的能效宣称在快速抬高，可比性却没有同步建立。一手NSR综述记载，Lightmatter Envise以65.5 TOPS吞吐量消耗78 W电功耗与1.6 W光功耗，据此复算能效约0.84 TOPS/W（计入光功耗约0.82；中文综述平均口径0.81），65.5不是TOPS/W（[NSR综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/)；[Nature原始论文](https://www.nature.com/articles/s41586-025-08854-x)）。清华"太极"160 TOPS/W未在同处给出整机功耗与系统边界，不能与Envise并列为同口径能效（[清华大学](https://www.tsinghua.edu.cn/info/1175/110690.htm)）；上海交大陈一彤团队LightGen的6.64×10² TOPS/W属Science论文转述、仍处实验室验证（[Science DOI](https://doi.org/10.1126/science.adv7434)）。与此同时，量产落地集中在光互连与光交换器件，光电反复转换的额外功耗还会抵消部分光核优势。IEEE P1959/P1960通用ML硬件能效标准已立项但明确不做benchmark，Nature Nanotechnology亦已发表光计算量化方法学（[IEEE P1959](https://standards.ieee.org/ieee/1959/11831/)；[IEEE P1960](https://standards.ieee.org/ieee/1960/11832/)；[Nature Nanotech](https://doi.org/10.1038/s41565-026-02264-4)）。本项目不宣称方法学空白，而定位为光计算专用L1/L2/L3分层口径＋转换开销记账基准，三年内建立可复现基准套件与跨架构对照实验，把不可比宣称转化为可核验区间，并形成与通用标准对接的工具链接口与建议稿。成果以方法、数据与开源工具交付，不承诺新器件流片，也不以统一业界标准为目标。
 
 **关键词**：光计算；光子AI芯片；能效口径；评测基准；可复现性；共封装；异质集成
 
@@ -16,11 +16,11 @@
 
 光计算正从实验室走向早期商用。2026年公开资料显示，曦智科技已完成港股上市并启动A股IPO辅导，2026年上半年营收7978万元、光互连收入6070万元占76%（[新浪，2026-11](https://k.sina.cn/article_6583770931_1886c5f3300101q10k.html)；[凤凰网，2026-11-18](https://i.ifeng.com/c/8y9xksprxK2)）；WAIC 2026上硅基光计算芯片、空间光计算方案同台亮相（[36氪，2026-07-28](https://m.36kr.com/p/3915125003703680)）。但产业的进展与评测的可信度并不同步，具体表现为三个可被证据指向的问题。
 
-其一，**能效数字之间不可比**。聚合数据集归纳指出，仅Lightmatter Envise约0.84 TOPS/W具有可核验口径，160 TOPS/W（清华"太极"）、65.5 TOPS/W等数字来自未同时公布吞吐与功耗的研究芯片，"苹果对苹果比较尚不可能"（[Kaggle/Mind Lab数据集，2026-07-15](https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus)）。清华官网确实给出"太极"160 TOPS/W与879 T MACS/mm²，并说明论文发表于Science（[清华大学，2024](https://www.tsinghua.edu.cn/info/1175/110690.htm)）；这些是机构发布值，其系统边界与整机功耗并未在同一处给出。
+其一，**能效数字之间不可比**。一手NSR综述逐字记载Envise"Operating at 65.5 TOPS while consuming only 1.6 W of optical and 78 W of electrical power"，因此65.5是吞吐量而非TOPS/W；按78 W电功耗复算约0.84 TOPS/W，按79.6 W总功耗复算约0.82 TOPS/W，中文综述另给平均口径0.81 TOPS/W（[NSR综述，2026-05-27](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/)；[Nature原始论文，2025-04-09](https://www.nature.com/articles/s41586-025-08854-x)；[中文综述PDF，2026](https://www.researching.cn/ArticlePdf/m00098/2026/47/6/060401.pdf)）。清华官网给出"太极"160 TOPS/W与879 T MACS/mm²（[清华大学，2024](https://www.tsinghua.edu.cn/info/1175/110690.htm)），但同源未给整机功耗与系统边界；两值边界不同，不能并列为同口径能效。二手聚合曾把65.5误标为65.5 TOPS/W（[Kaggle，2026-07-15](https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus)），本报告不再采纳该标法；另一二手来源给出30 TOPS/W但口径冲突且未验证，亦不采纳（[mirrorfrog，2025](https://mirrorfrog.com/lightmatter-envise/)）。
 
-其二，**原型与量产被混为一谈**。上海交大LightGen全光计算芯片端到端3.57×10⁴ TOPS、能效6.64×10² TOPS/W、计算密度2.62×10² TOPS/mm²、集成超210万光学神经元，但公开资料明确其"仍属实验室验证"；中科院上海光机所"流星一号"并行度>100亦属原型（[百度百科词条，2026-11](https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663)）。真正可核验量产的只是光互连／光交换器件：曦智OCS硅光PIC已量产，Lightmatter公开重心转向Passage系列（M1000总光带宽114Tbps，L200／L200X为32／64Tbps），公开资料未覆盖其2026下半年Envise新品（[insidedeeptech，2026-11](https://www.insidedeeptech.com/lightmatter-passage-photonic-interconnect-full-guide)）。
+其二，**原型与量产被混为一谈**。上海交大集成电路学院陈一彤课题组的LightGen全光计算芯片（Science 2025-12，[DOI](https://doi.org/10.1126/science.adv7434)；清华团队为合作方而非主导方）据论文转述端到端3.57×10⁴ TOPS、能效6.64×10² TOPS/W、计算密度2.62×10² TOPS/mm²、集成超210万光学神经元，但数字未逐字核对原文，公开资料明确其"仍属实验室验证"；中科院上海光机所"流星一号"并行度>100亦属原型（[百度百科词条，2026-11](https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663)）。真正可核验量产的只是光互连／光交换器件：曦智OCS硅光PIC已量产，Lightmatter公开重心转向Passage系列（M1000总光带宽114Tbps，L200／L200X为32／64Tbps），公开资料未覆盖其2026下半年Envise新品（[insidedeeptech，2026-11](https://www.insidedeeptech.com/lightmatter-passage-photonic-interconnect-full-guide)）。
 
-其三，**卡点本身就是评测问题**。行业归纳的四大短板包括"光电反复转换额外功耗抵消光子能效优势""软件生态零散、适配与落地成本高"，并指出共封装＋异质集成＋协同设计工具链仍未打通（[36氪，2026-07-28](https://m.36kr.com/p/3915125003703680)）。这些短板的共同特征是：缺少一个各方承认的、把转换开销与系统边界计入的能效尺子。
+其三，**卡点本身就是评测问题**。行业归纳的四大短板包括"光电反复转换额外功耗抵消光子能效优势""软件生态零散、适配与落地成本高"，并指出共封装＋异质集成＋协同设计工具链仍未打通（[36氪，2026-07-28](https://m.36kr.com/p/3915125003703680)）。机理报告进一步给出可入账的数字：MIT LightCode的单个6 GS/s、8-bit ADC/DAC对耗25–80 fJ/sample，跨域转换＋DRAM流量在完整系统中可超过光核本身能耗10×（[arXiv:2509.16443](https://arxiv.org/html/2509.16443)）；Nature 2023 ACCEL的74.8 POPS/W是含电子的全系统口径，关键在于绕过下游ADC（[Nature，2023](https://www.nature.com/articles/s41586-023-06558-8)）。这些短板的共同特征是：缺少一个各方承认的、把转换开销与系统边界计入的能效尺子。
 
 本项目的意义落在方法层面：给出一把可复算的尺，使宣称值能被还原为同口径的可核验区间。这直接服务于评审专家对方向价值的判断、导师对课题边界的把关，以及后续标准讨论有据可依；它不改变器件物理，但决定哪些物理进步能被领域共同确认。
 
@@ -32,10 +32,10 @@
 
 | # | 公开数字 | 出处与日期 | 口径缺陷 | 证据强度 |
 |---|---|---|---|---|
-| 1 | Envise约0.84 TOPS/W，被指为唯一可核验口径 | [Kaggle数据集，2026-07-15](https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus) | 本身来自聚合数据集而非原始测试报告，仍需回原始文档核对负载、精度、边界 | 中（聚合） |
+| 1 | Envise约0.81–0.84 TOPS/W（65.5 TOPS ÷ 78 W电功耗复算；计1.6 W光功耗约0.82） | [NSR综述，2026-05-27](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/)；[Nature原始论文，2025-04-09](https://www.nature.com/articles/s41586-025-08854-x) | 65.5是吞吐量不是能效；0.84是复算值而非厂商字面TOPS/W；分母边界须披露 | 高（一手数据＋复算） |
 | 2 | 清华"太极"160 TOPS/W、879 T MACS/mm² | [清华大学，2024](https://www.tsinghua.edu.cn/info/1175/110690.htm) | 机构发布值；系统边界与整机功耗未在同处给出，聚合数据集据此把160列入"未同时公布吞吐／功耗"之列 | 中（发布，非第三方实测） |
-| 3 | 65.5 TOPS/W | [Kaggle数据集，2026-07-15](https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus) | 与第1、2项同列，被归纳为未同时公布吞吐与功耗的研究芯片数字；对应芯片、负载、精度公开资料未覆盖 | 低—中（归纳） |
-| 4 | LightGen：3.57×10⁴ TOPS、6.64×10² TOPS/W、2.62×10² TOPS/mm²、210万+光学神经元 | [百度百科词条，2026-11](https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663) | 实验室验证；数字经百科转述，需回Science原文核对是否含转换与主机开销 | 中（转述） |
+| 3 | 65.5 TOPS（Envise平均吞吐量），非65.5 TOPS/W | [NSR综述，2026-05-27](https://pmc.ncbi.nlm.nih.gov/articles/PMC13637580/) | 曾被Kaggle误标为65.5 TOPS/W；一手原文给吞吐＋电功耗，不能作为独立能效值与160并列 | 高（一手逐字核对） |
+| 4 | LightGen（上海交大陈一彤团队，非清华）：3.57×10⁴ TOPS、6.64×10² TOPS/W、2.62×10² TOPS/mm²、210万+光学神经元 | [Science DOI，2025-12](https://doi.org/10.1126/science.adv7434)；[百度百科转述，2026-11](https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663) | 实验室验证；数字来自转述未逐字核对原文，是否含转换与主机开销公开资料未覆盖 | 中（转述；一手DOI可定位） |
 | 5 | "流星一号"并行度>100 | [百度百科词条，2026-11](https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663) | 原型；不是TOPS/W，无法与第1—4项同量纲比较 | 低 |
 | 6 | Q.ANT第二代NPU：LRZ独立评估较一代最高100倍性能、内部测试最高30倍能效／50倍单应用性能 | [Q.ANT，2026-05-19](https://qant.com/news/q-ant-takes-photonic-ai-computing-commercial-as-ais-power-demand-surges) | "倍"是相对值，未给绝对TOPS/W；内部测试与第三方评估边界不同；定位为GPU协处理器而非替代 | 中 |
 | 7 | 曦智PACE 2：128×128光矩阵、超4万光子器件、600mm²、PCIe Gen4×16；PACE 3升至256×256 | [曦智科技，2026-11-17](https://www.xztech.ai/about-us/news/dynamic/137) | 厂商自述的硬件参数，未给TOPS/W；矩阵规模与有效算力之间缺换算口径 | 中（厂商发布） |
@@ -43,7 +43,7 @@
 | 9 | 光本位256×256硅基光计算芯片、单晶粒超6.5万光计算单元、玻璃基光计算芯片 | [博客园行业盘点，2026-11-03](https://www.cnblogs.com/GEO-AI-20260730/p/23531781) | 被称为"全球最大／最高"属自我宣称；第三方实测流片良率、出货量、能效公开资料未覆盖 | 低—中 |
 | 10 | 曦智2025年营收中光计算约20%、光互连约80%；2026H1光互连收入6070万元占76% | [华尔街见闻，2026-10-27](https://wallstreetcn.com/articles/3784581)；[新浪，2026-11](https://k.sina.cn/article_6583770931_1886c5f3300101q10k.html) | 说明量产收入来自互连而非计算，但营收结构不能反推能效 | 中 |
 
-**缺口归纳**。第一，缺边界定义：同一TOPS/W可能指MZI器件级、光矩阵核级或含主机与ADC/DAC的系统级。第二，缺强制披露项：吞吐、功耗、精度、负载定义常不同时出现。第三，缺含转换开销的记账规则：光电反复转换的额外功耗被明确列为短板，却未进入能效分子分母的统一约定。第四，缺跨架构同任务对照：硅基MZI相干、光子存内计算、自由空间光计算与电子GPU基线之间没有共同负载套件。第五，缺第三方复现：高TOPS/W数字多为机构或厂商发布，公开资料未覆盖独立实测。已有的标准化努力集中在互连侧——OIF于2023-04-05发布首个3.2T共封装模块实施协议（[OIF，2023-04-05](https://www.oiforum.com/oif-launches-the-industrys-first-co-packaging-standard-the-3-2t-co-packaged-module-implementation-agreement/)），NVIDIA Spectrum-X Photonics以单端口1.6Tbps、整机能效提升3.5倍为宣称（[NVIDIA，2025-03-18](https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/default.aspx)），但"计算能效"没有对应的公认口径。这就是本项目要占的方法学空位。
+**缺口归纳**。第一，缺边界定义：同一TOPS/W可能指MZI器件级、光矩阵核级或含主机与ADC/DAC的系统级。第二，缺强制披露项：吞吐、功耗、精度、负载定义常不同时出现。第三，缺含转换开销的记账规则：光电反复转换的额外功耗被明确列为短板，却未进入能效分子分母的统一约定。第四，缺跨架构同任务对照：硅基MZI相干、光子存内计算、自由空间光计算与电子GPU基线之间没有共同负载套件。第五，缺第三方复现：高TOPS/W数字多为机构或厂商发布，公开资料未覆盖独立实测。已有的标准化努力不只集中在互连侧：IEEE P1959（Active PAR，2024-11-12）与P1960均为通用ML硬件能效指标／指南，P1959明确把benchmarks排除在范围外且不针对光计算（[IEEE P1959](https://standards.ieee.org/ieee/1959/11831/)；[IEEE P1960](https://standards.ieee.org/ieee/1960/11832/)）；Nature Nanotechnology 2026-09已提出光计算走向实际应用的量化方法学（[Nature Nanotech，2026-09-09](https://doi.org/10.1038/s41565-026-02264-4)）。因此"计算能效没有对应的公认口径"和"本项目要占的方法学空位"两种表述均不成立；P3只收窄定位为光计算专用L1/L2/L3分层口径＋含转换开销记账的可复现基准，与通用标准对接而非宣称空白。
 
 ---
 
@@ -78,7 +78,7 @@
 路线分四段，**先证据、后口径、再基准、最后对照与建议**。
 
 1. **证据冻结与 canon 建立**：锁定本立项书使用的公开来源与日期，逐条登记 claim、URL、证据强度与风险；对"未同时公布吞吐／功耗""未覆盖第三方实测"等否定性表述保留出处，不改写为肯定。
-2. **口径建模**：以Envise 0.84 TOPS/W为可核验锚点，以160／65.5 TOPS/W为不可比对立面，反推需要哪些字段才能把后者还原为前者口径；形成L1/L2/L3定义草案。
+2. **口径建模**：以Envise"65.5 TOPS／78 W电功耗"的一手披露及其复算值0.81–0.84 TOPS/W为锚点，以清华"太极"160 TOPS/W（缺系统边界）为边界对照样本，不再把65.5误当能效值；反推需要哪些字段才能把两者置于同一披露框架；形成L1/L2/L3定义草案。
 3. **基准设计与预注册**：在收集结果前固定负载、精度、容差与判定规则，避免按结论挑负载；对Envise案例做回溯复现，作为套件有效性的自检。
 4. **对照与建议**：运行跨架构矩阵，区分"实测／参数复算／不可比"三态；按三态结果形成工具链接口与标准建议稿。
 
@@ -98,7 +98,7 @@
 
 ## 七、可行性与已有基础
 
-**已有基础**：本立项已完成证据冻结，形成research_canon与evidence_table（见附录A、B），核心数字均有真实URL与日期；已核验清华官网160 TOPS/W与879 T MACS/mm²的原始表述、Kaggle数据集对Envise 0.84 TOPS/W与"未同时公布吞吐／功耗"的归纳、36氪对四大短板的归纳。论证地图（附录C）已明确中心张力与反论证，写作按"证据先于文字"推进。
+**已有基础**：本立项已完成证据冻结，形成research_canon与evidence_table（见附录A、B），核心数字均有真实URL与日期；已核验清华官网160 TOPS/W与879 T MACS/mm²的原始表述、NSR综述对Envise 65.5 TOPS／78 W的一手数据、IEEE P1959/P1960项目页与Nature Nanotech光计算量化方法学DOI；Kaggle仅作65.5 TOPS/W误标的溯源，不再作为Envise锚点；36氪仅作行业短板归纳。论证地图（附录C）已明确中心张力、差异化定位与反论证，写作按"证据先于文字"推进。
 
 **假设能力（需落实，均标[PLACEHOLDER]）**：[PLACEHOLDER：团队是否具备光电同测与功耗采样能力]；[PLACEHOLDER：可获得的实物平台——PACE系列／光立方／其他光电混合卡，或仅能取得公开参数]；[PLACEHOLDER：第三方复现合作方与复现次数]；[PLACEHOLDER：计算与存储资源，用于参数级复算与套件运行]。
 
@@ -144,9 +144,9 @@
 
 ## 参考文献
 
-1. Kaggle / Mind Lab, *Photonic AI Accelerators vs GPUs*（聚合数据集，含Envise约0.84 TOPS/W与不可比口径归纳），2026-07-15. https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus
+1. Kaggle / Mind Lab, *Photonic AI Accelerators vs GPUs*（仅作"65.5 TOPS/W"误标溯源，不再作为Envise 0.84 TOPS/W锚点），2026-07-15. https://www.kaggle.com/datasets/kylefengkfeng209/photonic-ai-accelerators-vs-gpus
 2. 清华大学，《电子系团队合作研发智能光芯片"太极" 赋能大模型算力》（160 TOPS/W、879 T MACS/mm²），2024-04-12. https://www.tsinghua.edu.cn/info/1175/110690.htm
-3. 百度百科，《全光计算芯片》词条（LightGen 3.57×10⁴ TOPS／6.64×10² TOPS/W／2.62×10² TOPS/mm²；"流星一号"并行度>100），2026-11. https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663
+3. 百度百科，《全光计算芯片》词条（LightGen数字属转述，原始论文见[21]；"流星一号"并行度>100），2026-11. https://baike.baidu.com/item/%E5%85%A8%E5%85%89%E8%AE%A1%E7%AE%97%E8%8A%AF%E7%89%87/67112663
 4. 36氪，《光计算芯片，走到量产门口了吗？》（四大短板、WAIC 2026），2026-07-28. https://m.36kr.com/p/3915125003703680
 5. Inside Deep Tech, *Lightmatter Passage Photonic Interconnect Full Guide*（M1000 114Tbps；L200 32Tbps／L200X 64Tbps），2026-11. https://www.insidedeeptech.com/lightmatter-passage-photonic-interconnect-full-guide
 6. 新浪，《曦智科技2026H1营收与OCS硅光PIC量产》，2026-11. https://k.sina.cn/article_6583770931_1886c5f3300101q10k.html

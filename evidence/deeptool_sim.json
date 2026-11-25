@@ -1,0 +1,162 @@
+{
+  "direction": "光电电磁仿真与设计工具链",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "FDTD 原理与数值误差来源（Yee 网格 / Courant / 色散 / 阶梯化 / PML / 材料拟合）",
+      "physics": "把空间离散成 Yee 网格，在时间上显式推进 E/H；二阶精度格式在均匀介质中对网格分辨率呈二次收敛，但材料界面不连续会把 O(Δx²) 降为 O(Δx)。误差不是只由网格大小决定：PML 反射及倏逝场接触 PML 会移动/压低谐振 Q；网格色散使有限 dx/dt 下色散关系偏离自由空间；阶梯化带来几何误差；色散材料须拟合为多系数模型(MCM)才能在时域更新，拟合本身有残差；有限 dt 下数值介电常数与 MCM 极限不同；非均匀网格的渐变区会产生微弱增益/损耗与散射，细网格区易困住高频并产生下采样混叠；源的模式轮廓只在中心频率精确，宽带仿真偏离中心频率会引入反射；监视器默认场插值也有误差。",
+      "numbers": "Meep：Courant 因子默认 S=0.5，cΔt=SΔx，稳定条件 S≤n_min/sqrt(维数)；resolution 默认 10 pixel/距离单位；双精度计算，HDF5 可改单精度输出省 2 倍空间；亚像素平滑把无平滑的一阶收敛恢复到近似二阶，仅适用于无损、频率无关介质（硅 1.55 μm 是典型例子），界面处仍至多一阶。Ansys Lumerical：时间步默认取理论最大步长的 0.99（由 Courant 稳定判据算得）；mesh accuracy 1–2 用于初算，4 档对应每波长约 18 个网格点。网格细分下限：单精度约 dx~λ/1e7、双精度约 λ/1e16（1000 nm 光对应约 1e-4 nm），实际远未触及。2D Mie 金纳米线实例中，64 层 PML + dx=0.1 nm + mesh accuracy 4 + 2 μm 仿真域，消光截面与 Mie 理论差 0.15%。",
+      "urls": [
+        "https://meep.readthedocs.io/en/latest/Scheme_User_Interface/",
+        "https://meep.readthedocs.io/en/latest/Subpixel_Smoothing/",
+        "https://kb.lumerical.com/en/layout_analysis_test_convergence_fdtd.html",
+        "https://kb.lumerical.com/redirect/fdtd-fix-divergence.html",
+        "https://kb.lumerical.com/en/ref_sim_obj_simulation_fdtd.html"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "FDTD 典型光子器件仿真精度与算力开销",
+      "physics": "精度靠逐项收敛扫描量化：Ansys 官方定义 Δσ(i)=sqrt(∫(σ_i-σ_{i-1})²dλ/∫σ_i²dλ) 作为相邻参数步的相对差，Δσ_N(i)=sqrt(∫(σ_i-σ_N)²dλ/∫σ_N²dλ) 作无解析解时的绝对误差估计；先扫便宜的 PML 距离/层数，最后才扫最贵的网格。算力开销随网格点数与步数上升（3D 尤为受限）。对高 Q 慢衰减腔，直接时域需追到场衰减，可用 Harminv 信号处理和频域迭代求解器替代。",
+      "numbers": "2D 金纳米线 Mie 案例（直径 140 nm，300–1000 nm）：PML 距离约 1 μm 时误差<1e-3(0.1%)；PML 层数 2–32 层贡献约 3e-5(0.03%)；mesh accuracy 4 贡献约 1e-3；内网格 dx=1 nm 时绝对误差约 1%，3 nm 处 Δσ 走平（其他误差主导）；加到 64 层 PML 后 dx=0.1 nm 误差降至约 2.5e-3(0.25%)。改用 Johnson-Christy 原始材料数据而非作者 MCM 拟合，误差跃至约 4.2%，且不同文献金光学常数彼此差异更大；mesh accuracy 2 + 1 nm 网格的算例 '可在几秒内完成'。Meep 环形腔 Q~1e7：直接时域需约 4×10^7 个光周期解析衰减，Harminv 只用约 1000 个周期，运行时长约降低 4 个数量级；Meep 频域求解器 BiCGSTAB-L，默认 tol=1e-8、maxiters=1e4、L=2。",
+      "urls": [
+        "https://r.jina.ai/https://kb.lumerical.com/en/layout_analysis_test_convergence_fdtd.html",
+        "https://kb.lumerical.com/en/layout_analysis_test_convergence_fdtd.html",
+        "https://meep.readthedocs.io/en/latest/Subpixel_Smoothing/",
+        "https://meep.readthedocs.io/en/latest/Scheme_User_Interface/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "FEM（COMSOL Wave Optics）适用边界与网格口径",
+      "physics": "有限元解频域时谐 Maxwell 方程（电场为未知量），适合复杂几何、各向异性/多物理场、窄带高 Q 与模式本征值问题；对传播方向快速振荡的光波代价高，故 COMSOL 提供 Beam Envelopes（包络场）接口把快振荡解析提出来，只求解慢变包络，适合长距离波导/透镜；模式分析则用 FEM + 本征值求解器解 Helmholtz 方程。瞬态波动问题用二阶二次单元，需空间与时间同时分辨波。",
+      "numbers": "COMSOL 官方 KB1118：默认二阶(quadratic)单元，Nyquist 最低 2 个单元/局部波长但精度不可接受；实用建议每个局部波长至少 5 个二阶单元、很少超过 10 个；时间步 Δt=CFL/(N·f_max)，二阶单元 CFL<0.2、0.1 接近最优；声学瞬态接口默认手动步长 1/(60·f_max)，对应 6 单元/波长时 CFL=0.1。推荐 Generalized alpha 时间步进。",
+      "urls": [
+        "https://www.comsol.com/support/knowledgebase/1118",
+        "https://comsol.com/blogs/how-to-use-the-beam-envelopes-method-for-wave-optics-simulations",
+        "https://comsol.com/blogs/mode-analysis-for-electromagnetic-waveguides-in-comsol",
+        "https://blogs.ethz.ch/ps_comsol/files/2020/05/WaveOpticsModuleUsersGuide.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "BPM（RSoft BeamPROP）适用边界与取舍",
+      "physics": "光束传播法把 Maxwell 方程化为沿传播方向 z 的初值问题，原始 BPM 基于慢变包络近似/近轴单向模型，只能算前向传播、不能严格处理强反射、大角度散射与背向耦合；后续有广义/双向改进版。RSoft 工具链中 BeamPROP 面向集成与光纤波导器件，配套 FullWAVE(FDTD)、DiffractMOD(RCWA) 与有效折射率法(EIM)把 3D 近似降为 2D 以省算力。",
+      "numbers": "Synopsys 官方资料称 BeamPROP 为 'industry-leading' BPM 工具，并给出 EIM 白名单式用途：3D→2D 近似大幅降低时间与内存（未给具体加速倍数）；本次未取到 BeamPROP 官方页面的可核验精度/速度硬数字（页面 HTTP 403）。方法学上 BPM 与 FDTD/RCWA 的取舍属单向传播近似 vs 严格全波。",
+      "urls": [
+        "https://www.synopsys.com/photonic-solutions/rsoft-photonic-device-tools/passive-device-beamprop.html",
+        "https://www.synopsys.com/photonic-solutions/rsoft-photonic-device-tools/rsoft-products.html",
+        "https://qacf-www.synopsys.com/content/dam/synopsys/photonic-solutions/documents/whitepapers/rsoft-effective-index-method.pdf",
+        "https://en.wikipedia.org/wiki/Beam_propagation_method"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "RCWA / 傅里叶模态法（S4）用于光栅与超表面",
+      "physics": "Stanford S4 是频域求解器：对 2D 周期、分层平面结构把 Maxwell 方程按 Fourier 级数展开（RCWA/FMM），用 S 矩阵算法递推层间散射，直接给透射/反射/吸收谱、场分布及线/体积积分；周期天然满足，谱极光滑，适合周期超表面与局部/全局优化。能力边界：要求分层 + 2D 周期；截断的 Fourier 阶数决定精度；非周期/任意 3D 结构不适用，需改用 FDTD/FEM。",
+      "numbers": "S4 1.1.1 为最新 Lua 5.2.x/Python 版，1.0 为 CPR 论文原版；CPC 183, 2233 (2012) 为其一手论文。GitHub 接口注释以 n 为 Fourier 阶数（2n/4n 展开）。2026 年一篇预印本报告 529 个 Fourier harmonics 下 GPU 上 BCM 层构建比传统特征分解快 22.8 倍（单源、预印本，非 S4 官方）。",
+      "urls": [
+        "https://web.stanford.edu/group/fan/S4",
+        "https://web.stanford.edu/group/fan/publication/Liu_ComputerPhysicsCommunications_183_2233_2012.pdf",
+        "https://doi.org/10.1016/j.cpc.2012.04.026",
+        "https://github.com/victorliu/S4/blob/master/S4/rcwa.h",
+        "https://arxiv.org/pdf/2608.06185"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "主流商用/开源工具能力矩阵与授权模式",
+      "physics": "Lumerical(Ansys)：FDTD 全波 + MODE(FDE/EME/varFDTD) + INTERCONNECT 线路级 + CHARGE/HEAT 多物理 + lumopt/lumopt2 逆设计，商业授权；COMSOL Multiphysics + Wave Optics，FEM 为主、全耦合多物理，商业授权；RSoft(Synopsys)：BeamPROP(BPM)/FullWAVE(FDTD)/DiffractMOD(RCWA) + CAD，商业授权；CST Studio Suite(Dassault)：FIT/频域与瞬态及 FEM 多求解器，商业授权；MEEP：GPL FDTD（Python/Scheme/C++，MPI 并行，含 adjoint solver 与 GDS import），MPB：GPL 平面波展开求周期结构能带/模式（支持 MPI、各向异性、目标频率本征求解，不支持损耗/色散），S4：GPL RCWA + S 矩阵。",
+      "numbers": "MEEP、MPB、S4 均为 GPL v2 或更高（官方 License 页逐字确认；S4 用户自写 Lua 脚本不算衍生作品，MEEP 用户自写 Python/Scheme 控制脚本同理，链接 MEEP C++ 库分发则受 GPL 约束）；MPB 官方案例：3D 介质球金刚石晶格最低 10 条能带、16×16×16 网格、31 个 k 点共 8 秒（2.8 GHz AMD Opteron，ATLAS BLAS），即每 k 点 81920 自由度 0.26 秒。Lumerical lumopt2 示例明确要求有效 Lumerical FDTD 授权且 2026 R1.2 及以上。商用工具授权条款为商业许可，本次未逐项抓取报价。",
+      "urls": [
+        "https://meep.readthedocs.io/en/latest/License_and_Copyright/",
+        "https://mpb.readthedocs.io/en/latest/",
+        "https://web.stanford.edu/group/fan/S4/license.html",
+        "https://lumerical.docs.pyansys.com/version/stable/examples/lumopt2/y_branch/pylumerical_y_branch.html",
+        "https://www.synopsys.com/photonic-solutions/rsoft-photonic-device-tools/rsoft-products.html",
+        "https://www.3ds.com/products/simulia/cst-studio-suite/electromagnetic-simulation-solvers",
+        "https://www.comsol.com/products/licensing/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光-热-电-应力多物理场耦合与 Lumerical↔Ansys 互操作",
+      "physics": "CPO/封装翘曲链路：Ansys Mechanical 用 HEX20 实体单元解热-结构（CTE 失配 → 翘曲 + 应力 σ=EαΔT），把节点的变形/应力用 Python 插值到笛卡尔网格，转成空间 (n,k) 材料对象喂给 Lumerical FDTD；弹性光效应与热光效应共同改变有效折射率，进而移动微环谐振波长。其他链路：Mechanical 应变 → MODE FDE 求 Δn_eff 与相位 → INTERCONNECT 系统级噪声/探测；Icepak 温度图 → FDTD 光栅耦合器；RHSC ET/SIwave 温度图 → 折射率扰动。边界：插值只能内插不能外推，需区分网格点是否在结构内；不同材料弹性光系数不同；大芯片中心到边缘变形不均与插值速度仍是待改进项。",
+      "numbers": "Ansys 2025 CPO 互操作 webinar：应力-free 参考 25 °C，回流峰值 260 °C；MRR 变形约 0.3 nm；ΔT=50 K 时 Si 应力 19.5 MPa（E=150 GPa, α=2.6e-6/K）、SiO2 1.75 MPa（E=70 GPa, α=0.5e-6/K）；仅应力的谐振波长 22→75 °C 位移 +0.25 nm、22→125 °C +0.5 nm，FSR 约 8.4 nm（公式给出，谱读数约 9 nm）；若叠加热光 dn/dT=1.8e-4/K，ΔT=50 K 给 Δn=0.009，位移可达 nm 量级。DFOS 示例：15 mm 光纤嵌 SS360，压力扫描脚本约 10 分钟，噪声标准差 0.495 mW 时 >35 MPa 才正确定位扰动（1.112 km）。",
+      "urls": [
+        "https://ansys.com/content/dam/web/webinars/ansys-cpo-multiphysics-lumerical-mechanical-interop-flow.pdf",
+        "https://r.jina.ai/https://ansys.com/content/dam/web/webinars/ansys-cpo-multiphysics-lumerical-mechanical-interop-flow.pdf",
+        "https://optics.ansys.com/hc/en-us/articles/46499056867603",
+        "https://r.jina.ai/https://optics.ansys.com/hc/en-us/articles/46499056867603",
+        "https://optics.ansys.com/hc/en-us/articles/5258777726227-Thermally-aware-photonic-circuit-simulation-of-a-WDM-transceiver-Icepak-integration",
+        "https://kb.lumerical.com/en/ref_scripts_addimportheat.html"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光子器件逆向设计：伴随法、拓扑优化、遗传算法与 ML 代理模型",
+      "physics": "伴随法把 N 维参数梯度压缩为每轮固定两次全波仿真（前向 + 伴随），与参数个数近似无关；拓扑优化把设计区每个像素的介电常数当变量，经滤波/二值化转成可制造版图；形状/参数优化用有限维控制点；遗传算法等无梯度方法每代需大量正演；ML 代理模型用于替代重复正演或生成紧凑模型。前置条件：正演本身必须已收敛，否则优化的是数值误差。边界：伴随梯度要求 FOM 光滑；二值化、制造约束和工艺扰动会改变最优解。",
+      "numbers": "lumopt2（Ansys Lumerical 2026 R1.2+）官方示例：每轮 adjoint gradient = 1 次 forward + 1 次 adjoint，宣称每迭代成本与无梯度法相同但收敛更好；Y 分支例用 L-BFGS-B、max_iter=30、11 个波长(1300–1800 nm)、25 nm 优化网格、mesh accuracy 3，输出 GDSII；梯度校验扰动 1e-9。旧版 lumopt 4 通道解复用器拓扑优化示例约 1000 次迭代，视算力需数小时到数天。Meep 也提供 Python Adjoint Solver 与像素密度不低于 FDTD resolution 的建议。",
+      "urls": [
+        "https://lumerical.docs.pyansys.com/version/stable/examples/lumopt2/y_branch/pylumerical_y_branch.html",
+        "https://support.lumerical.com/hc/en-us/articles/1500007188582",
+        "https://support.lumerical.com/hc/en-us/articles/360050995394",
+        "https://support.lumerical.com/hc/en-us/articles/360052044913",
+        "https://meep.readthedocs.io/en/latest/Python_Tutorials/Adjoint_Solver/",
+        "https://arxiv.org/pdf/2410.07353v1"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "仿真正确性验证与仿真-实测差距来源",
+      "physics": "四层核验：①网格/PML/仿真域收敛（用 Δσ(i)、Δσ_N(i) 量化）；②能量守恒（Parseval 定理比对时域与频域能量；Poynting 矢量面积分得到净透射功率，功率箱检查净流出）；③与解析解/互易/对称性等独立解比对（Mie 散射、偶极源源功率解析值）；④与实测比对并分解误差：材料光学常数本身的不确定性、工艺线宽/膜厚偏差、侧壁粗糙度与散射损耗、温度/应力、耦合与测量误差。关键纪律是让数值误差低于工艺与测量误差即可，不要为 1% 数值精度付出不成比例的算力。",
+      "numbers": "Ansys 示例：工艺只能做到 10 nm 精度时没必要把 dx 设到 1 nm；实验误差约 5% 时无需强求仿真误差<1%；数值 dt=1.17e-17 s（内网格 5 nm）引起的有限 dt 差异仅 0.01%；FDTD 对 MCM 拟合数据的误差 1.3%，但换成 Johnson-Christy 原始数据误差约 4.2%，且超过 3 组文献金数据彼此的差异；最终精细设置与 Mie 理论差 0.15%。硅光综述指出 'last nanometer' 灵敏度使容差分析（线宽/厚度）成为必需。",
+      "urls": [
+        "https://kb.lumerical.com/en/layout_analysis_test_convergence_fdtd.html",
+        "https://r.jina.ai/https://kb.lumerical.com/en/layout_analysis_test_convergence_fdtd.html",
+        "https://optics.ansys.com/hc/en-us/articles/360034394274-Using-Parseval-s-theorem-to-check-for-energy-conservation-between-the-time-and-frequency-domain",
+        "https://optics.ansys.com/hc/en-us/articles/1500007397442-Integrating-the-Poynting-Vector",
+        "https://onlinelibrary.wiley.com/doi/10.1002/lpor.201700237",
+        "https://arxiv.org/pdf/2410.07353v1"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "与 EDA 工具链的衔接（GDSII → 全波 → 紧凑模型 → 系统级）",
+      "physics": "逆设计/版图优化结果直接导出 GDSII 进入流片；全波得到的 S 参数/模式与热-光系数被压缩成 compact model（如 CML Compiler 生成），再由 INTERCONNECT 做链路级 Monte-Carlo 与良率分析；Python API（PyLumerical/PyAnsys）把 CAD 建模、求解、后处理串成脚本；Meep 支持 GDS import 便于直接读取版图仿真。",
+      "numbers": "lumopt2 Y 分支示例：优化结束后 gdsopen/gdsbegincell/gdsaddstencil/gdsendcell/gdsclose 导出最终 GDSII；CPO 其他流程示例用 optiSLang 驱动 Lumerical+Zemax 生成单光纤耦合损失矩阵 ROM，CML Compiler 做统计紧凑模型，INTERCONNECT 做 MC 扫角算多光纤耦合良率，Mechanical 做光纤附着错位 MC 并抽取相关矩阵。",
+      "urls": [
+        "https://lumerical.docs.pyansys.com/version/stable/examples/lumopt2/y_branch/pylumerical_y_branch.html",
+        "https://r.jina.ai/https://ansys.com/content/dam/web/webinars/ansys-cpo-multiphysics-lumerical-mechanical-interop-flow.pdf",
+        "https://meep.readthedocs.io/en/latest/Python_Tutorials/GDS_Import/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "CST 在光子器件上的专项精度/算力基准",
+      "physics": "CST Studio Suite 提供 FIT/时域、频域与 FEM 等多求解器，文献中常与 HFSS(FEM) 对比：FIT/时域偏宽带，FEM/频域偏高 Q 窄带。但本次两轮换词只拿到通用天线/微波对比与厂商总览页，没有拿到面向光子/纳米光学器件的、带明确网格口径的一手基准数字。",
+      "numbers": "未覆盖：未取得 CST 用于光电/光子器件的一手精度百分比、网格/自由度或运行时间硬数字；仅能标定性取舍。检索到的是通用 EM 求解器对比（CST 时域 FIT/FDTD vs HFSS 频域 FEM）与厂商求解器总览页。",
+      "urls": [
+        "https://www.3ds.com/products/simulia/cst-studio-suite/electromagnetic-simulation-solvers",
+        "https://onlinelibrary.wiley.com/doi/10.1155/ijap/2733569",
+        "https://arxiv.org/abs/0907.3570"
+      ],
+      "status": "未覆盖"
+    }
+  ],
+  "key_insights": [
+    "FDTD 的主流误差预算不是网格色散，而是 PML、阶梯化/亚像素、材料数据拟合与有限仿真域；Ansys 2D Mie 案例中精细网格后 FDTD-Mie 差 0.15%，但换材料数据源就到 4.2%，说明仿真-实测差距常被材料与工艺主导。",
+    "算力口径要成对报：mesh accuracy 4≈18 点/波长；Meep 高 Q 腔 Q~1e7 需 4e7 光周期，Harminv 用约 1000 周期带来约 4 个数量级运行时收益；MPB 3D 10 能带×31 k 点×16³ 网格 8 秒（2.8 GHz Opteron）。",
+    "方法选择由结构决定：FDTD 宽带全波、FEM 复杂几何/多物理/窄带、BPM 单向波导近似、RCWA 分层二维周期；COMSOL 二阶单元实用网格 5–10 个/波长、CFL≈0.1，与 FDTD 的 Courant 口径不可混用。",
+    "逆向设计的成本结构是每轮 1 次前向 + 1 次伴随仿真，与参数维度近似无关；lumopt 4 通道实例约 1000 次迭代、数小时到数天；优化前必须先做正演收敛测试。",
+    "多物理耦合的关键是可信数据桥梁：Mechanical HEX20 应力/变形经 Python 插值成 Lumerical (n,k) 网格；只算应力使 MRR 位移 0.25–0.5 nm，叠加 dn/dT=1.8e-4/K 后可达 nm 量级，温度项不可省略。",
+    "开源三件套 MEEP/MPB/S4 均 GPL v2+，可脚本化、可并行且适配逆设计；商用工具价值在多物理互操作、EDA 衔接（GDSII/compact model/MC 良率）与工程化支持。"
+  ],
+  "open_questions": [
+    "CST 在光子/纳米光学器件上的一手精度与运行时基准未覆盖；两轮换词后停止。",
+    "Lumerical Courant 时间步 0.99 理论上限与 lumopt 约 1000 次迭代/数小时至数天来自 Ansys 官方搜索摘要（原页 Cloudflare 拦截），按单源未验证处理。",
+    "RCWA 529 harmonics / 22.8× GPU 加速来自 2026 预印本单源，尚未用 S4 官方或同行评审版本交叉验证。",
+    "商用工具（Ansys/COMSOL/RSoft/CST）的具体授权计价与算力限额本次未纳入，只核实授权类型。",
+    "未获取 BPM 与 FDTD/RCWA 在同一光子器件上的同口径数值误差对照实验。"
+  ]
+}

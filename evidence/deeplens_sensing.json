@@ -1,0 +1,75 @@
+{
+  "direction": "光电传感与测量技术路线之争",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "车载LiDAR扫描架构：机械旋转 vs 半固态(MEMS/转镜) vs 纯固态(OPA/Flash/VCSEL)",
+      "physics": "竞争逻辑不是'谁更先进'，而是车载量产的三硬约束：150–350 m主探测距离、车规可靠性(AEC-Q102)、单件成本。Nature Communications工业综述给出的三分类是：机械式=激光器/透镜/传感器整体运动；混合固态=仅MEMS或转镜运动；全固态=电学扫描、无运动部件。结论是纯机械式在L2/L3 ADAS中'has nearly phased out of existence'，混合固态成为 centre stage；原因是有运动件的机械总成在振动、温循、寿命、体积和成本上劣于只保留一维扫描镜的方案，而全固态OPA/Flash短期又达不到远距与量产良率。胜负判据：先过150–350 m与车规，再把BOM降到约$100；不过可靠性就出局，不过成本就无法从~0.5%乘用车渗透率跳到>10%。",
+      "numbers": "主LiDAR需求距离150–350 m；机械式在L2/L3 ADAS近乎退出；LiDAR单价从>$10,000降到$500–$1,000，作者估约$100才能把渗透率从~0.5%推到>10%；1550 nm光纤激光虽眼安全功率上限高但InGaAs探测器/激光成本高、散热与可靠性风险大；905 nm EEL典型~200 m上限。口径：工业综述归纳的量产与成本判断，不是单厂实测。",
+      "urls": ["https://www.nature.com/articles/s41467-024-51975-6", "https://www.nature.com/articles/s41467-025-62027-y", "https://www.nature.com/articles/s41467-026-71867-1"],
+      "status": "已核验"
+    },
+    {
+      "name": "混合固态内部路线：905 nm EEL+二维MEMS vs 905 nm多结VCSEL+一维转镜",
+      "physics": "第一代混合固态用EEL+2D MEMS，需多颗EEL拼接视场且要对激光源与MEMS做精密对准，电机数多、热与校准负担重。新路线用电扫描VCSEL阵列+一颗1D多边形/转镜：电机从2个降到1个，取消激光-MEMS精密对准；VCSEL的0.07 nm/°C本征温稳、圆斑、冗余发光单元、6英寸GaAs晶圆成本基础成为胜出判据，历史短板是功率密度/亮度，由多结堆叠补上。实验室/器件级验证不等于整车量产：多结AR-VCSEL是器件数据，Hesai AT128用Lumentum 905 nm 5结VCSEL才进入产品。",
+      "numbers": "Robosense M1用5颗EEL模块覆盖120° FOV；新方案电机2→1；VCSEL温漂0.07 nm/°C；6结AR-VCSEL阵列2.6 mm长×85 µm发光宽，50 kHz/3 ns/50°C下峰值400 W、D86=16°；EEL LiDAR典型~200 m，6结AR-VCSEL>200 m，预测8–10结达300–400 m；分辨率判据Δx=4(BPP/D)R，200 m处10 cm分辨率、5 cm准直镜需~0.03°角分辨与BPP~6.25；AEC-Q102项目含1000 h HTOL、1000 h 85°C/85%RH、500 h LTOL；42颗AR-VCSEL阵列芯片全部通过6000 h HTOL(5 ns/600 kHz/85°C环境/~130°C结温/~50 W初始峰值，失效阈值>20%功率退化)，作者折算>300年车载使用；数万颗芯片FIT研究约30亿等效器件小时零失效，FIT<0.8@90%置信。口径：前段为工业综述归纳的器件与产品数据，'>300年'为作者外推。",
+      "urls": ["https://www.nature.com/articles/s41467-024-51975-6"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "直接ToF vs FMCW相干LiDAR：抗干扰/测速 vs 光源复杂度",
+      "physics": "ToF靠短脉冲往返时间，链简单但易受环境光、多径和他车激光干扰，速度只能靠帧间差分。FMCW发线性调频连续波，回波与本振拍频编码距离，升降斜坡同时给出多普勒速度，故抗干扰、直接测速、距离分辨率高；代价是激光器相位噪声/线宽、啁啾线性度、输出功率和25 GHz级采集电子学。Nature评论明确：1%啁啾非线性对距离分辨率的损害等价于线宽放大5倍；对超窄线宽自注入锁激光，继续压线宽收益有限，改善线性度才有效。胜负判据不是处处FMCW赢，而是'每次点都要速度+强干扰环境'时FMCW赢；追求最低BOM的普通车载ToF仍占量产。",
+      "numbers": "理想FMCW距离分辨率δR=c/2B；1%啁啾非线性≈线宽×5的分辨率损害；三角啁啾最大无模糊距离MUR=cT/4，f_max=βT/2；按25 GHz探测器带宽，啁啾率>10^17 Hz/s只对极短距有用；PIC FMCW因集成光源功率低，多数用途限几百米，航天场景≤1 km测高；已演示月球下降载荷FoV 25°×25°、1 km最大测距、500 m处5.8 mm点精度；航天PIC-FMCW整体TRL4–5，尚未验证振动/冲击/辐射。关键修正：2025原稿式(1)漏掉因子6，正确式δR=c√[(6√5 τ(2τ/T−1)σ_RMS)^2+(γ/β)^2]；不得引用修正前数值。口径：Nature评论+作者更正的模型和演示值。",
+      "urls": ["https://www.nature.com/articles/s41467-025-62027-y", "https://www.nature.com/articles/s41467-026-71867-1"],
+      "status": "已核验"
+    },
+    {
+      "name": "纯固态OPA/Flash LiDAR的边缘化：有样机≠量产",
+      "physics": "OPA/LCM(液晶)与Flash曾被当作'无运动件=车规天然赢家'，但判据是视场×距离×功率孔径积的净能量账。Nature工业综述判定OPA和LCM已有商用产品但未实现量产，其他固态转向方案仍在研究阶段；Flash VCSEL通常只做短距；可寻址VCSEL阵列才在逐步进入量产。FMCW独立来源进一步给出集成光子方案的TRL4–5、几百米限制、需要大收集孔径与密集数据处理，说明'全固态'在长距车载上被混合固态反超的原因：省掉机械件省不下光子功率、热与成本。",
+      "numbers": "OPA、LCM：commercially available但未mass production；其他固态转向=research phase；Flash VCSEL=usually short range；混合固态VCSEL+1D转镜已把电机2→1并通过6000 h HTOL；PIC-FMCW航天TRL4–5、几百米级、≤1 km测高；主车载仍需150–350 m、成本目标~$100。口径：量产状态为工业综述判断，TRL为独立Nature评论判断；本次未取得OPA失败率或良率的量化字段，标为定性判据。",
+      "urls": ["https://www.nature.com/articles/s41467-024-51975-6", "https://www.nature.com/articles/s41467-025-62027-y", "https://www.nature.com/articles/s41467-026-71867-1"],
+      "status": "已核验"
+    },
+    {
+      "name": "光纤传感：FBG点式 vs 分布式Rayleigh/Brillouin/Raman vs 干涉型OFDR/phase-OTDR",
+      "physics": "三条路线的物理分工由'空间分辨率—量程—被测量'三角决定。FBG是点式波长编码，应变~1 pm/µε、温度~10 pm/°C，1 mm–1 cm点空间分辨率，WDM/放大可达数米–100 km，但每个光栅>€50且解调仪>€5000，适合关键点的长期、高精度、多点复用监测。分布式Rayleigh(OFDR/phase-OTDR)靠 Rayleigh 相干/相位实现mm–cm级空间分辨，量程通常≤30 m(专门系统到2 km)、振动响应350–500 Hz，适合裂缝萌生、局部高分辨；Brillouin靠布里渊频移~10–11 GHz，背向散射比Rayleigh弱16–20 dB，声子寿命+SNR/频率估计折中把空间分辨率锁在0.2–3 m，但量程10–100 km，适合长距离应变/温度；Raman频移~13 THz，Stokes/anti-Stokes比测温，背散弱20/30 dB，Planck标定难、不能测应变，量程ROTDR 20+ km，适合分布式温度。干涉型OFDR/phase-OTDR本质是Rayleigh路线的高分辨子类：mm级分辨率以量程和采集时间为代价。胜负判据：点精度与复用数选FBG；长距离覆盖选Brillouin/Raman；mm级局部细节选Rayleigh。",
+      "numbers": "FBG：应变~1 pm/µε、温度~10 pm/°C、点空间1 mm–1 cm、数米–100 km、>€50/栅+>€5000解调仪。Rayleigh：应变~0.5–1 µε、温度~0.05–0.1°C、空间1 mm–1 cm(或数m)、通常≤30 m/专用≤2 km、振动350–500 Hz。Brillouin：应变10–50 µε、温度~0.28–1.3°C、空间0.2–3 m、10–100 km、振动55–60 Hz、频移10–11 GHz(1550 nm约0.05–0.08 nm)、比Rayleigh弱16–20 dB。Raman：温度~0.1°C(ROFDR)~1.8°C(ROTDR)、空间~1 m(长距)/1 cm@3 m、≤10 km ROFDR或20+ km ROTDR、应变N/A、频移~13 THz(~100 nm@1500 nm)、Stokes/anti-Stokes弱20/30 dB。成本：分布式解调仪>€100,000，FWD>€50,000，分布式光纤~€0.3–数€/m；综述称Rayleigh单点成本比Raman低100×。现场案例：728,000次重车荷载前以<1 cm分辨检出裂缝萌生，早于肉眼可见。口径：Sensors 2025综述汇总表，含文献区间与厂商价位，不是单一厂商报价。",
+      "urls": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC12430957"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "医学成像：共聚焦 vs OCT vs 超声的分辨率—穿透深度权衡",
+      "physics": "竞争不是替代而是互补：散射随深度指数上升，分辨率与穿透深度不可同时最大化。共聚焦用针孔抑制离焦光，1 µm级细胞形态但只到~100–200 µm(综述表列~500 µm上限)；OCT用低相干干涉做2–10 µm的B-mode式层析，到1–2 mm(~2 mm)，看不到单个癌细胞形态；超声用MHz声学对比，150 µm分辨但可到~10 cm，能看深部范围与血管；CT/MRI再往全身。判据：要细胞学超浅层选共聚焦，要1–2 mm组织结构选OCT，要深部边界/血管选超声；line-field confocal OCT试图用~1 µm各向同性分辨填到~500 µm，是融合而非消灭原路线。",
+      "numbers": "皮肤成像表：共聚焦1 µm/~500 µm；OCT 2–10 µm/~2 mm；超声150 µm/~10 cm；高分辨CT 300 µm/全身；MRI 1 mm/全身。正文口径：共聚焦可达100–200 µm@1 µm；OCT 1–2 mm@2–10 µm；line-field confocal OCT ~1 µm各向同性到~500 µm；RCM在2016年已有美国CPT计费码；超声7–15 MHz测BCC厚度与组织学ICC=0.9(25例)，70 MHz用于细节。口径： Frontiers in Medicine 2019综述汇总，ICC为25例小样本。",
+      "urls": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC6883721"],
+      "status": "单源未验证"
+    },
+    {
+      "name": "无创血糖光谱：NIR/PPG vs Raman vs 光声/光热 vs THz——为何难商用及FDA硬门槛",
+      "physics": "四条光谱路线共享同一物理死结：葡萄糖在复杂皮肤基质中的吸收/散射特征被水、蛋白、脂质、温度、血流、肤色/黑色素与环境光淹没，且测到的是组织液而非血液，稀释与滞后使'相关性'不等于'可治疗决策的准确度'。NIR/PPG信号强、可穿戴化最好但特异性最差；Raman有分子指纹、特异性较强但信号弱需长积分与复杂算法；光声/光热(QCL 8–12 µm指纹区)能做深度门控、对血流层选择性更好，但热/黏滞损失、功率与标定难；THz(300 GHz–10 THz/3 mm–30 µm)只作用于表皮，穿透浅、矩阵效应大。FDA硬门槛是'不许把未验证的无创claims当血糖测量卖'：截至2024-02-21，任何声称无创测血糖的智能手表/戒指都未获authorized/cleared/approved，错误读数可致胰岛素过量、低血糖、昏迷甚至数小时内死亡；2025 MIT workshop也确认no noninvasive device has achieved FDA clearance for direct glucose measurement。",
+      "numbers": "2023综述：筛243篇纳入124篇(54光学/37电磁/29纳米/4生理)；PPG研究5项，最低SEP 17.02 mg/dL，MARD 4.4321%–12.19%，Pearson r=0.91，100%点落CEG A–B(实验室/小样本，非FDA)；47个产品中无FDA批准，4个有CE(GlucoTrack/GWave/Glutrac/Egm1000)；NIR间歇产品10个、Raman 5个；ISO 15197:2013门槛：<100 mg/dL时≥95%在±15 mg/dL内，≥100 mg/dL时≥95%在±15%内；THz=300 GHz–10 THz(3 mm–30 µm)。2026 workshop：DiaMonTech MIR光热D-Base在36人单中心两轮，最佳算法MARD 20.7%/19.6%，3次有创校准可维持≥1周，D-Pocket原型30–50次/充电、计划2026年中上市；血管化皮肤模体葡萄糖扩散系数≈260–310 µm²/s，R²>0.9，脉动流量58 mL/min维持>3周。FDA iCGM(21 CFR 862.1355)对照：Class II特殊控制，成人单侧95%置信下界要求<70:<±15 mg/dL >85%、70–180:<±15% >70%、>180:<±15% >80%；<70:<±40 mg/dL >98%、70–180:<±40% >99%、>180:<±40% >99%；全程±20% >87%；变化率符号错误≤1%。口径：iCGM是体液/多为微创规则，不是纯无创光谱的专属审批路径，此处仅作准确度标尺。",
+      "urls": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC10674292", "https://pmc.ncbi.nlm.nih.gov/articles/PMC13186910", "https://www.fda.gov/medical-devices/safety-communications/do-not-use-smartwatches-or-smart-rings-measure-blood-glucose-levels-fda-safety-communication", "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-862/subpart-B/section-862.1355"],
+      "status": "已核验"
+    },
+    {
+      "name": "淘汰/边缘化路线复盘：被挤出的机械旋转、GlucoWatch/Pendra式无创、以及消费级'无创血糖'智能穿戴",
+      "physics": "提炼出的通用判据是三条：①可靠性/成本硬约束先筛掉路线(机械旋转、未量产OPA)；②准确率必须达到可治疗决策的置信界而不是相关系数(GlucoWatch/Pendra因准确度与校准失败退出；早期PPG/NIR的r=0.91低SEP仍不够)；③监管允许的症状/claim边界决定商用资格(任何无创手表/戒指血糖claims在FDA处为零授权)。被替代不是因为原理错，而是更优路线在同一判据上给出可复算的更好数字：混合固态用单电机+VCSEL通过车规，微量/微创CGM用iCGM置信界达标。",
+      "numbers": "机械LiDAR在L2/L3 ADAS近乎退出；OPA/LCM有商用但未量产；LiDAR成本>$10,000→$500–$1,000，~$100才是渗透率>10%的门槛；47个无创血糖产品中0个FDA批准、4个CE；GlucoWatch与Pendra因准确度/校准问题退出，Pendra上市后对所有用户失败且需复杂校准；ISO 15197最低95%在±15 mg/dL或±15%；FDA 2024-02-21确认无任何无创智能手表/戒指获授权；iCGM 70–180 mg/dL区间±15%需>70%且单侧95%置信，全程±20%需>87%。口径：综述+监管原文交叉，'退出/失败'为文献结论。",
+      "urls": ["https://www.nature.com/articles/s41467-024-51975-6", "https://pmc.ncbi.nlm.nih.gov/articles/PMC10674292", "https://www.fda.gov/medical-devices/safety-communications/do-not-use-smartwatches-or-smart-rings-measure-blood-glucose-levels-fda-safety-communication", "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-862/subpart-B/section-862.1355"],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "车载LiDAR的胜出路线不是'最固态'，而是在150–350 m量程、车规、成本三重约束下把可动件和BOM一起压下来的905 nm VCSEL+一维转镜混合固态；纯机械在L2/L3近乎退出，OPA/Flash未量产。",
+    "AEC-Q102式可靠性是比实验室峰值功率更硬的淘汰判据：42颗AR-VCSEL阵列6000 h HTOL零失效、FIT<0.8@90%置信，才把多结VCSEL从器件论文推到AT128级产品。",
+    "FMCW的胜负判据是'每点速度+抗干扰'场景，不是通用替代ToF；其瓶颈已从线宽转到啁啾线性度与功率/封装，且2025原稿距离分辨率公式漏因子6，必须用2026更正式。",
+    "光纤传感没有单一赢家：FBG赢点精度与复用(1 pm/µε、100 km)，Brillouin赢10–100 km长距(0.2–3 m分辨)，Rayleigh/OFDR赢mm级局部细节(≤30 m)，判据是分辨率—量程—被测量的三角而非路线标签。",
+    "医学成像与无创血糖共同说明：分辨率/穿透深度或相关度/置信界的物理权衡不会因为算法而消失；无创血糖商用失败的根因是ISO/iCGM级可治疗决策准确度和FDA授权门槛，而非缺一个更好的光谱峰。"
+  ],
+  "open_questions": [
+    "VCSEL+一维转镜方案在整车生命周期(>15年、振动+沙尘+温循)的现场失效率是否真能复现6000 h HTOL外推的FIT<0.8？需要车队级售后数据而非外推。",
+    "当$100 BOM门槛被满足时，混合固态与FMCW在L4 Robotaxi的实际TCO(含数据处理与冗余)谁更低？现有Nature评论只给分立成本/复杂度判断，没有整车账。",
+    "Rayleigh OFDR声称的单点成本比Raman低100×，在>10 km分布式部署中是否仍成立？综述未给同口径现场报价。",
+    "DiaMonTech MIR光热MARD 20.7%/19.6%离iCGM 70–180 mg/dL ±15% >70%的置信门槛仍远；其'adjunctive'定位能否转成FDA正式许可，2026年中上市计划后需复查。"
+  ]
+}

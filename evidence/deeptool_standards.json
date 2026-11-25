@@ -1,0 +1,190 @@
+{
+  "direction": "光电标准计量与测试规范体系",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "IEEE 802.3 以太网光接口（光 PHY / PMD 规范层）",
+      "physics": "IEEE 802.3 是以太网物理层的国际标准族，光接口由 PMD（Physical Medium Dependent）与 PCS 子层定义：规定光模块的中心波长、速率、链路距离、光纤类型与光眼图/功率预算，使不同厂商的光模块互操作。按速率演进：10G(802.3ae)、40G/100G(802.3ba)、200G/400G(802.3bs)、800G(802.3df)。光模块 MSA（QSFP-DD/OSFP）在机械与电接口层引用并声明符合对应 IEEE 802.3bs 光 PMD。口径：IEEE 标准正文在 IEEE Xplore 付费墙内，本次以标准编号体系 + MSA 合规声明交叉印证，未逐条读取功率/眼图限值原文。",
+      "numbers": "速率档：10G/40G/100G/200G/400G/800 GbE；关键修订 802.3ae(10G)、802.3ba(40/100G)、802.3bs(200/400G)、802.3df(800G)。QSFP-DD 光模块合规声明明确引用 IEEE 802.3bs（ATGBics、FS.com 二手佐证）。具体波长/距离限值（如 400GBASE-FR4/DR4）本次未从 IEEE 一手正文核到，不写死数值。",
+      "urls": [
+        "https://ieeexplore.ieee.org/Xplore/home.jsp",
+        "https://atgbics.com/pages/qsfp-dd-optical-transceiver-technology-overview",
+        "https://fs.com/eu-en/blog/differences-between-qsfpdd-and-qsfp-qsfp28-qsfp56-osfp-cfp8-cobo-b1217.html"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "OIF 400ZR / 800ZR 相干光接口实施协议（IA）",
+      "physics": "OIF（Optical Internetworking Forum）用 Implementation Agreement（实施协议，IA）定义相干光模块电/光接口与 DSP-FEC 框架，是厂商互操作的实用标准层。400ZR 面向数据中心互联(DCI)/城域，规定相干调制、FEC、光接口与达到 120 km 左右的无电中继链路。IA 由 OIF 成员投票批准，非 ISO/IEC 法定标准但产业事实标准。",
+      "numbers": "OIF-400ZR-02.0 实施协议，批准日期 2022-11-03；400ZR IA Update 项目 oif2020.194.03 于 2023-01-12 启动。800ZR/800G ZR+ 相干模块：800ZR 用于放大 DWDM 链路约 120 km，800G ZR+ 超过 1000 km（Cisco 800G 相干模块数据手册，厂商口径）。400ZR 具体 FEC/波特率数值本次未从 OIF 一手 PDF 深读到（PDF 抓取被 challenge 拦截），不臆造。",
+      "urls": [
+        "https://oiforum.com/wp-content/uploads/OIF-400ZR-02.0.pdf",
+        "https://lightwaveonline.com/optical-tech/transmission/article/14175125/oif-releases-400zr-optical-interface-implementation-agreement",
+        "https://cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/qsfp-dd-osfp-800g-zr-zr-plus-coherent-optics.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "Telcordia GR-468-CORE 光电器件可靠性认证测试规范",
+      "physics": "GR-468-CORE 是光电器件（激光二极管、LED、光电二极管 PD、探测器/发射器组件）的通用可靠性保证要求（Reliability Assurance Requirements），规定器件级 qualification 测试：机械、环境、电应力、完整性与长时老化测试，采用抽样方案（sampling plan）与加速应力筛选，定义失效率与可接受判据。是光模块/器件产品验收的事实可靠性基线（Bellcore/Telcordia 体系）。",
+      "numbers": "测试族：器件级 qual（Laser diode/LED/PD）、机械/环境/电、完整性 harsh 测试、长时老化、抽样 plan（electrontest 综述 2018-07-26）。Hamamatsu 对 Koheras 光纤激光器的 GR-468 合规声明：15 个代表性样品做严苛环境与可靠性测试（2024-04-08，厂商口径）。具体测试时长/温度/抽样数需查 GR-468 原文，本次未深读全文，不写死。",
+      "urls": [
+        "https://electrontest.com/telcordia-bellcore-gr-468-core",
+        "https://lf.hamamatsu.com/certified-reliability"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "Telcordia GR-2854-CORE 光纤色散补偿器通用要求（澄清范围）",
+      "physics": "GR-2854-CORE 易被误当作通用光接口规范；实测其一手标题为 GENERIC REQUIREMENTS FOR FIBER OPTIC DISPERSION COMPENSATORS，即光纤色散补偿器（DCM）的通用要求，规定 DCM 在 Bellcore Client Company(BCC)系统与电信网络中的性能与可靠性判据（插损、偏振模色散 PMD、C 波段斜率补偿、可靠性符合性）。产品 datasheet 常写“性能/可靠性符合 GR-2854-CORE”。这是本次纠偏的关键点。",
+      "numbers": "GR-2854-CORE Issue 2，发布日期 2013-01-12（Intertek Inform 标准发行记录）。产品口径：低插损、低 PMD、C 波段 100% 斜率补偿，性能与可靠性均声明符合 GR-2854-CORE（GIGALIGHT DCM 2023-07-11；FS 80 km 无源 DCM 2021-03-01）。",
+      "urls": [
+        "https://intertekinform.com/en-au/standards/gr-2854-core-issue-2-1063776_saig_tel_tel_2474337",
+        "https://gigalight.com/ols-dcm.html",
+        "https://img-en.fs.com/file/datasheet/80-km-passive-dispersion-compensation.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "OIF 3.2T 共封装光学（CPO）模块实施协议与共封装框架",
+      "physics": "OIF 于 2023 年发布业界首个共封装标准 3.2T Co-Packaged Module IA，属于 Co-packaging Framework Document  umbrella 下的首个项目。它定义 3.2 Tb/s 光引擎与交换 ASIC 共封装的光电接口、光引擎模块形态与互操作约定，把光 I/O 从面板可插拔移到封装边缘，是 CPO 互操作的标准基线。LPO（Linear Pluggable Optics，线性直驱可插拔）是与之并行的低功耗路线，去除 DSP，本次未核到 OIF 一手 LPO IA 编号（见开放问题）。",
+      "numbers": "OIF-Co-Packaging-3.2T-Module-01.0，2023-03-29；3.2 Tb/s 共封装模块；新闻发布日期 2023-04-05，称为业界首个共封装标准。LPO/448G 相关的 OIF 448Gbps Signaling for AI Workshop 于 2025-04-15/16 举办（OIF 官网），但未见正式 LPO IA 编号，标为缺口。",
+      "urls": [
+        "https://www.oiforum.com/oif-launches-the-industrys-first-co-packaging-standard-the-3-2t-co-packaged-module-implementation-agreement",
+        "https://www.oiforum.com/wp-content/uploads/OIF-Co-Packaging-3.2T-Module-01.0.pdf",
+        "https://www.oiforum.com/meetings-events/448gbps-signaling-for-ai-workshop-apr-2025/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "OSFP MSA 光模块形态/电接口规范",
+      "physics": "OSFP（Octal Small Form Factor Pluggable）MSA 定义可插拔光模块的机械尺寸、连接器与电接口，使多厂商 800G 模块互换。规范规定 60 触点 edge connector、8 对高速差分收发，新增 800G PMD 与电接口章节，是 800G 光模块的主流形态标准之一。",
+      "numbers": "OSFP Module Specification Rev 4.1（2021-08-02）新增 800G OSFP 规范（PMD 见 Sec.10.2，电接口见 Sec.11.4）；电接口为 60 触点 edge connector，含 8 对高速差分发送（16 触点）。Arista 800G 支持 OSFP 与 QSFP-DD 两种形态，OSFP-800G-2VSR4 双 MPO-12 APC，达 50 m（厂商口径 2026-09-14）。",
+      "urls": [
+        "https://osfpmsa.org/assets/pdf/OSFP_Module_Specification_Rev4_1.pdf",
+        "https://arista.com/assets/data/pdf/Datasheets/Arista-800G_Optics_FAQ.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "QSFP-DD MSA 高密度可插拔光模块规范",
+      "physics": "QSFP-DD（Quad Small Form Factor Pluggable Double Density）MSA 通过把高速电接口数量加倍（8 收 8 发）在相近体积实现 400G/800G，定义机械、电、热与管理接口，并声明符合 IEEE 802.3bs。2017 年发布首个规范集，定义机械、电与光学参数。",
+      "numbers": "QSFP-DD 连接器 76 触点、两排 edge 设计（38+38 触点分两段插入），8 对高速差分发送 + 8 对接收（canjinoptics 2026-10-30）；符合 IEEE 802.3bs 与 QSFP-DD MSA（ATGBics 2026-09-20）。首个规范集发布于 2017-03-16（Lightwave）。",
+      "urls": [
+        "https://lightwaveonline.com/optical-tech/transmission/article/16673333/qsfpdd-msa-group-releases-optical-transceiver-form-factor-specification",
+        "https://canjinoptics.com/qsfp-dd-msa-hardware-walkthrough",
+        "https://fs.com/eu-en/blog/differences-between-qsfpdd-and-qsfp-qsfp28-qsfp56-osfp-cfp8-cobo-b1217.html"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "LPO / LRO 线性直驱可插拔光模块互操作框架（缺口标注）",
+      "physics": "LPO（Linear Pluggable Optics）/LRO 通过去除光模块内 DSP、把均衡上移到交换 ASIC SerDes 降低功耗与时延，需要主机-模块电接口链路预算与 FFE/DFE 协同规范。产业上由 OIF、OIF CMIS 与多家 MSA 推动，但本次两轮关键词检索未核到一份一手、带编号的 LPO Implementation Agreement 原文（OIF 3.2T CPO IA 与 448G workshop 是相关但非 LPO IA）。按方法纪律到顶标未覆盖。",
+      "numbers": "未核到一手 LPO IA 编号/正式发布日期。相关一手线索：OIF 448Gbps Signaling for AI Workshop 2025-04-15/16；OIF CMIS（Common Management Interface Specification）教程系列。无硬数字可引用，标未覆盖。",
+      "urls": [
+        "https://www.oiforum.com/meetings-events/448gbps-signaling-for-ai-workshop-apr-2025/",
+        "https://www.oiforum.com/meetings-events/cmis-tutorial-webinar-series/"
+      ],
+      "status": "未覆盖"
+    },
+    {
+      "name": "光伏效率认证标准：AM1.5G 光谱与 STC 标准测试条件",
+      "physics": "光伏器件效率在统一标准光谱与条件下测量才可比。STC（Standard Test Conditions）定义为辐照度 1000 W/m²、光谱 AM1.5G、电池温度 25 °C。AM1.5G 是 ASTM 定义的大气质量 1.5 全球（global，含散射）太阳光谱，ASTM G173-03 为当前标准光谱文件（取代早期 G159）。测试用太阳模拟器或 EQE 积分，并用标准电池/标准组件定标。真实工况光谱与 STC 差异导致效率偏差（spectral mismatch），是认证与研究的基础口径。",
+      "numbers": "STC：1000 W/m²，AM1.5G，25 °C（Solener 2018/2021 论文口径；NLR Solar Module Efficiency Data Guide 2020-03-11）。标准光谱 ASTM G173-03（2013 版），早期为 ASTM G-159（1980s 推导，NREL/Preprint 2002）。",
+      "urls": [
+        "https://doi.org/10.1016/j.solener.2021.01.024",
+        "https://doi.org/10.1016/j.solener.2018.02.071",
+        "https://nlr.gov/media/docs/libraries/pv/solar-module-efficiency-data-guide.pdf",
+        "https://docs.nlr.gov/docs/fy02osti/32284.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光伏效率认证的跨实验室比对与不确定度（NREL / Fraunhofer ISE / ESTI）",
+      "physics": "权威效率认证由具备资质的参考实验室完成，并通过国际/全球比对保证量值一致。NREL 组织 world-wide PV module calibration intercomparison，用传递标准组件在多个参考实验室间循环测量；Fraunhofer ISE CalLab PV Modules 建立 c-Si 与薄膜组件的测量流程与完整不确定度预算（I-V 曲线、辐照度、温度、光谱失配）。ESTI（欧盟 JRC）为另一权威认证机构，但本次未核到 ESTI 一手不确定度文档。",
+      "numbers": "NREL 全球比对（2017 报告 fy18osti/70016）：7 块 PV 组件、4 个参考实验室、3 大洲循环校准（含 Fraunhofer ISE，Heidenhofstr. 2, 79110 Freiburg）。Fraunhofer ISE 降低 c-Si 与薄膜组件测量不确定度流程与不确定度分析（publica-rest 2013-08-14，PDF 正文抓取被 challenge 拦截，仅摘要片段）。ESTI 独立不确定度数字本次未核到，标缺口。",
+      "urls": [
+        "https://nrel.gov/docs/fy18osti/70016.pdf",
+        "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/45de307b-9a27-4c48-8d75-a646807cde3d/content",
+        "https://nlr.gov/media/docs/libraries/pv/solar-module-efficiency-data-guide.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "IEC 60825-1 激光产品安全等级与可达发射限值（AEL）",
+      "physics": "IEC 60825-1:2014（Ed.3.0）是激光产品安全的国际主标准，适用波长 180 nm–1 mm。按可达发射限值 AEL 与观看条件分级：AEL = MPE × 限制光阑(LA)面积，LA 基于瞳孔(7 mm)与热点(1 mm)等物理因素；M 类还需用光学仪器条件（50 mm@2 m、7 mm@14 mm）判定。等级约束光电系统的功率/波长设计：Class 1 在合理可预见使用下安全（含光学仪器）；Class 2 限可见光靠 0.25 s 眨眼反射；Class 3R/3B/4 逐级危险。对功率/波长设计是直接硬约束。",
+      "numbers": "IEC 60825-1:2014 适用 180 nm–1 mm（IEC webstore 3587）。典型 CW AEL：Class 1≈40 µW(蓝光)、Class 2=1 mW(400–700 nm,0.25 s)、Class 3R=5 mW(可见 Class2 的 5×/不可见 Class1 的 5×)、Class 3B=500 mW、Class 4>0.5 W 无上限（RLI/Chart Courtesy David Sliney）。Class 1M 波长 302.5–4000 nm；Class 3R 302.5 nm–106 nm（RLI 原文疑为 1 µm 量级，此处照录源文并标注存疑）。Class 1 AEL 点源 0.39 mW(HeNe 例)。测量光阑 7 mm/50 mm/1 mm；眨眼时间 0.25 s；长时 100 s 或 30000 s。",
+      "urls": [
+        "https://webstore.iec.ch/en/publication/3587",
+        "https://assets.vde-verlag.de/iec-normen/preview-pdf/info_iec60825-1%7Bed3.0%7Db.pdf",
+        "https://rli.com/resources/articles/classification.aspx",
+        "https://drs.illinois.edu/Page/SafetyLibrary/LaserClassification",
+        "https://seibersdorf-laboratories.at/fileadmin/user_upload/docs/le/las/publ/whitepaper_iec-60825-1.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光功率/波长/响应度计量溯源（NIST 国家计量院标准与量值传递）",
+      "physics": "光电量的量值溯源链：NIST 用标准探测器（硅/锗光电二极管）建立光谱辐射功率响应度标尺（基于探测器测量的绝对标尺，不依赖标准光源），通过校准服务把量值传递给二级标准与客户仪表。光纤功率计通过绝对功率校准（平行光或光纤连接器条件）与光谱响应度校准溯源到 SI。校准周期通常 12 个月。",
+      "numbers": "NIST SP 250-41e（2008，NIST Measurement Services: Spectroradiometric Detector Measurements）：校准光谱辐射功率响应度 200–1800 nm，Service ID 39071S–39081S。NIST SP 250-53：激光与光纤功率计光谱响应度校准服务 0.4–1.8 µm（1999）。光纤功率计绝对功率校准服务（NIST pub 706，2012-10-12）。Newport 建议光探测器 12 个月复校并维持 NIST 溯源（2026-08-28）。",
+      "urls": [
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication250-41e2008.pdf",
+        "https://doi.org/10.6028/nist.sp.250-41",
+        "https://doi.org/10.6028/nist.sp.250-53",
+        "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=706",
+        "https://newport.com/t/nist-traceable-spectral-responsivity-calibration-of-photodiode-detectors"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "多国国家计量院（NIST / PTB / NIM）高功率光计量比对与电替代辐射计",
+      "physics": "各国 NMI 用不同原理复现光功率单位并通过双边/多边比对验证等效度。NIST 用光子动量（photon momentum）原理的功率计测高功率激光；PTB 用另一套标准；NIM（罗马尼亚国家计量院）用电流替代辐射计（electrical substitution，constant power sum）作光辐射基准。比对结果进入 CIPM MRA 的 CMC，实现量值国际互认。",
+      "numbers": "首个 NMI 间千瓦级(cw)光功率比对：NIST 用基于光子动量的功率计与 PTB 比对（NIST pub 956830，2024-02-08）。NIM-Romania 基准辐射计 ESERAD 1：电替代法(constant power sum)，7 mm 直径×40 mm 长空腔，吸收比理论估计并部分实测 0.998±0.001（IEEE IMTC 1999, doi 10.1109/imtc.1999.776144）。引力波观测台位移校准以激光功率为被测量，溯源到 NMI 的 SI 一级标准（NIST pub 932473，2021-07-29）。",
+      "urls": [
+        "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=956830",
+        "https://doi.org/10.1109/imtc.1999.776144",
+        "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=932473"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "国际光电计量比对组织与关键比对（BIPM CCPR / APMP）",
+      "physics": "BIPM 下设 CCPR（Consultative Committee for Photometry and Radiometry，光度与辐射度咨询委员会）组织关键比对（Key Comparison, KC），确保各国 NMI 量值等效。KC 结果存入 KCDB，支撑 CIPM MRA 的校准与测量能力(CMC)互认。APMP 是 BIPM 认可的亚太区域计量组织(RMO)，其 PR（光度辐射度）比对遵循 CCPR-G6 指南并与 CCPR KC 关联。光电计量比对包含光谱辐照度、光功率等被测量。",
+      "numbers": "CCPR-K1.a 关键比对：光谱辐照度，波长 250–2500 nm；CCPR-K1.a.1：250–1600 nm（BIPM KCDB 报告 2015-09-24，各波长独立分析）。CCPR-G6 Guidelines for RMO Key Comparisons in Photometry and Radiometry（2014-10-14，version 1.9）规范 RMO 关键比对并与 CCPR KC 链接。CCPR 主席 Dr M.L. Rastello，执行秘书 Dr J. Viallon（BIPM）。APMP 列为 BIPM 区域计量组织之一。",
+      "urls": [
+        "https://bipm.org/kcdb/comparison/download/published-section-block-file/106/384/degree/384/ccpr-k1a_pdf_2015.pdf",
+        "https://bipm.org/documents/20126/2071034/CCPR-G6+Guidelines+for+RMO+key+comparisons+in+PR.pdf/ee7147f6-26a4-3af2-9f18-f3c7dce8c8d4?download=true&t=1731063340983&version=1.9",
+        "https://www.bipm.org/en/committees/cc/ccpr",
+        "https://www.bipm.org/en/liaison/regional/apmp"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "测量不确定度评定：GUM（JCGM 100:2008）",
+      "physics": "GUM（Guide to the Expression of Uncertainty in Measurement）由 JCGM-WG1 维护，是全球统一的不确定度评定框架，从 NMI 到工业全链条使用。核心流程：建立被测量 Y 与输入量 Xi 的数学模型 Y=f(X1,…,XN)；评定各输入标准不确定度 u(xi)（A 类统计/B 类先验）；按不确定度传播律合成 uc(y)（含协方差项）；给出扩展不确定度 U=k·uc（k≈2 对应约 95%）；报告结果。是光电计量比对与产品认证不确定度声明的通用语言。",
+      "numbers": "GUM 正式编号 JCGM 100:2008（GUM 1995 含少量修正），JCGM-WG1 维护（BIPM）。2025 年发布 Amendment 1: Non-linearity in measurement models（JCGM-WG1:GUM-2025-01，2025  circulating）。合成标准不确定度 uc(y)、扩展不确定度 U=k·uc，包含因子 k 典型取 2（GUM 第 8 章程序）。WG1 下次会议 2027-04-20。",
+      "urls": [
+        "https://www.bipm.org/en/jcgm-wg1-gum",
+        "https://www.bipm.org/en/committees/jc/jcgm/wg/jcgm-wg1-gum",
+        "https://iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/08_e.html",
+        "https://iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/04_e.html"
+      ],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "标准分层：IEEE 802.3 定义光 PHY 的波长/速率/距离，OIF IA 定义相干/CPO 的互操作协议，MSA（OSFP/QSFP-DD）定义形态与电接口——三者共同构成光模块可互换的规范栈；产品验收须逐层对齐，缺一层即不互操作。",
+    "GR-2854-CORE 的关键纠偏：它实际是『光纤色散补偿器通用要求』(Issue 2, 2013-01-12)，不是通用光接口规范；真正的光电器件可靠性基线是 GR-468-CORE。把两者混用是研究/验收的典型错误。",
+    "CPO 标准化已落地：OIF 3.2T Co-Packaged Module IA（OIF-Co-Packaging-3.2T-Module-01.0, 2023-03-29）是业界首个共封装标准，标志光电接口从可插拔走向封装内定义；但 LPO 尚无一手带编号 IA，仍是开放标准缺口。",
+    "光伏效率的可比性建立在 STC=1000 W/m²+AM1.5G(ASTM G173-03)+25 °C 的刚性口径上，并靠 NREL/Fraunhofer ISE 跨实验室循环比对（7 组件×4 实验室×3 大洲）压缩不确定度；真实工况光谱失配是效率偏差主因。",
+    "激光安全是直接的设计约束：IEC 60825-1:2014 用 AEL=MPE×限制光阑面积分级（Class2=1 mW/0.25 s/400–700 nm、3R=5 mW、3B=500 mW、4>0.5 W），决定光功率/波长/封装的可允许工作点。",
+    "量值可复算是计量根基：NIST 光谱响应度标尺 200–1800 nm、千瓦级 NIST-PTB 光子动量比对、CCPR-K1.a 光谱辐照度 250–2500 nm 比对，经 GUM(JCGM 100:2008, U=k·uc) 评定不确定度，再由 CIPM MRA/KCDB 互认把量值传到产业仪表（建议 12 个月复校）。"
+  ],
+  "open_questions": [
+    "LPO（Linear Pluggable Optics）是否有正式、带编号的 OIF/MSA Implementation Agreement？本次两轮检索未核到一手原文，仅有 448G workshop 与 CMIS 线索——需查 OIF Implementation Agreements 列表页与 OIF 2024–2026 新闻稿确认。",
+    "ESTI（欧盟 JRC 光伏认证）的具体测量不确定度预算与认证流程文档未核到一手来源；NREL 与 Fraunhofer ISE 已核，ESTI 待补。",
+    "IEEE 802.3bs/df 光 PMD 的具体波长与功率/眼图限值（如 400GBASE-FR4/DR4、800GBASE）未从 IEEE Xplore 一手正文核到（付费墙）；当前仅有标准编号体系与 MSA 合规声明交叉印证。",
+    "OIF 400ZR-02.0、3.2T CPO IA、Telcordia GR-468/GR-2854、IEC 60825-1 AEL 表、Fraunhofer ISE 不确定度 PDF 的一手 PDF 正文抓取被 challenge/付费墙拦截，本次引用以一手页面摘要 + 搜索片段 + 权威二手交叉印证为主；逐条限值数值需在可下载原文中复核。",
+    "GR-2854-CORE 与 GR-468-CORE 在产业 datasheet 中常被笼统写为『Telcordia 合规』，二者适用范围差异（DCM vs 光电器件可靠性）在验收条款中是否被正确区分，需按具体产品规范逐项确认。"
+  ]
+}

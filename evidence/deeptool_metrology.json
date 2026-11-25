@@ -1,0 +1,180 @@
+{
+  "direction": "光电表征测试方法学",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "波导插损 cut-back（截断法）测量与不确定度",
+      "physics": "在相同输入/输出耦合条件下测一系列不同长度 L 的直波导透射功率，按 P(L)=P0·ηc²·10^(−αL/10) 线性拟合 log P–L 斜率得传播损耗 α(dB/cm)，截距含两端耦合效率 ηc²，从而把耦合损耗与传输损耗分离。设备口径：稳定光源(±0.02 dB)+功率计(线性度±0.05 dB、动态范围≥60 dB)。验耦合漂移判据=最短波导复测差<0.1 dB；充分长度判据 α(Lmax−Lmin)>10σP。参考 ITU-T G.650.1、Vermeulen et al. 2016 环形谐振法。",
+      "numbers": "典型 α@1550nm：SOI 220nm ridge 0.3–1 dB/cm、strip 1–3 dB/cm；SiN 200nm 0.05–0.2 dB/cm、SiN 800nm 0.001–0.05 dB/cm；InP shallow ridge 1.5–4 dB/cm；doped silica on Si 0.01–0.05 dB/cm。实测例 L=1/5/25/100 cm→P=−15.3/−15.6/−17.0/−22.1 dBm，拟合 α=0.069 dB/cm、95%CI ±0.002 dB/cm、R²>0.999、每耦合器≈7.6 dB。误差口径：长度误差10%→α误差10%；耦合变化好≈0.5 dB/差>2 dB；激光漂移0.01–0.05 dB/min；偏振漂移0.1–1 dB。",
+      "urls": [
+        "https://photonica.io/articles/cutback-propagation-loss",
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication637v2.pdf",
+        "https://photonica.io/articles/waveguide-loss-measurement-methods-compared"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "耦合损耗与波导传输损耗的无歧义分离（add-drop ring / 阵列波导法）",
+      "physics": "cut-back 的截距法依赖耦合在多长度间恒定；对低损耗(<0.05 dB/cm)或耦合不可复现的器件，改测 add-drop 环形谐振腔的直通/下载端口，用谐振处 Power Area Method 同时反演本征损耗与耦合系数 κ，无需截断样品即可分离耦合与传输损耗。",
+      "numbers": "搜索命中：add-drop ring 同时无歧义测定传播损耗与耦合系数（PubMed 40219451, 2025-03-27）；Power Area Method 在白噪声+闪烁噪声下估计误差<7%（Micromachines 2025 综述，已核）。阵列波导结构精确表征 Opt. Express 26(14):18082 (2018)、低损耗螺旋波导 in situ Opt. Lett. 35(17):2849 —— 后者正文抓取失败(Optica JS 挑战)，仅搜索片段。",
+      "urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40219451",
+        "https://opg.optica.org/abstract.cfm?uri=oe-26-14-18082",
+        "https://opg.optica.org/abstract.cfm?URI=ol-35-17-2849"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "调制器 Vπ / Vπ·L 测量（DC 拟合、Bessel 零点、小信号法）",
+      "physics": "DC 传输曲线 P(V)=C+Bcos(πV/Vπ+φb) 全曲线拟合；Bessel 载波零点法用正弦驱动 β=πVm/Vπ，找 J0 首个零点 β=2.40483→Vπ=πVm,null/2.40483，推挽再除以2；小信号正交偏置斜率法 Vπ=πVm(Pmax−Pmin)/ΔPpp。半波电压×长度 Vπ·L 归一化器件效率。误差源：LiNbO3 DC 漂移、硅等离子色散非线性(须在指定偏置定义 Vπ)、RF 电平须在电缆末端实测。",
+      "numbers": "全曲线拟合优于两点读数：峰值两点法使 Vπ 偏低 10–50%。Bessel 首零点 J0=2.40483；实测 15mm x-cut TFLN MZM：18.4 dBm 入 50Ω→Vm=2·50·0.0692=2.63 V→Vπ=1.72 V，拟合 Vπ=1.73 V/消光27 dB/φb=0.4 rad，Vπ·L≈2.6 V·cm。一手器件例：polymer-clad silicon slot Vπ=8 V@1mm→VπL=1.6 V·cm(单端)/0.8 V·cm(推挽, PubMed 20720943)；L型PN结 VπL=0.89 V·cm vs 横向 1.76 V·cm @10.5 dB/cm。参考 Wooten IEEE JSTQE 6,69(2000)、Wang et al. Nature 562,101(2018)。",
+      "urls": [
+        "https://www.photonica.io/articles/modulator-vpi-measurement",
+        "https://pubmed.ncbi.nlm.nih.gov/20720943",
+        "https://iopscience.iop.org/article/10.35848/1347-4065/abeedd",
+        "https://optoelectronics.ece.ucsb.edu/sites/default/files/2017-03/16OL-zhang.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "调制器电光带宽 S21（VNA + 校准 PD）与口径陷阱",
+      "physics": "VNA 驱动调制器、已校准高速 PD 接收：测得 S21=Hmod+HPD+Hpath(dB)，扣除 PD rolloff 与路径响应后得调制器本征 Hmod；频变半波电压 Vπ(f)=Vπ,DC/|m(f)|。设备=VNA+光波元件分析仪(内嵌工厂校准调制器/接收机)。",
+      "numbers": "口径陷阱：VNA 读电功率∝调制深度²，故光 3 dB 对应 VNA 6 dB，两种『3dB 带宽』定义可差 1.4–4.7×；探测器/放大器饱和、PD rolloff 未扣是直接误差源。需在报告中标明用的是光功率 3dB 还是电 S21 3dB。",
+      "urls": [
+        "https://www.photonica.io/articles/how-to-measure-modulator-bandwidth",
+        "https://www.photonica.io/articles/modulator-vpi-measurement",
+        "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Attachments/pdf/8177_5992-2481EN.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "眼图 / BER / EVM 与光调制分析器",
+      "physics": "高速调制信号经 CDR 采样叠加成眼图(眼高/眼宽/抖动)，BERT 统计误码率(BER)，相干系统用光调制分析器(OM A)测 EVM/星座/光 SNR，并通过 S 参数嵌入-去嵌入把探针/夹具响应移出。设备：Keysight N4391A OMA、采样示波器、BERT。",
+      "numbers": "Keysight N4391A 光调制分析器产品页与 datasheet(5990-3509)存在，但 datasheet 直抓只返回导航壳、无规格数字 → 具体 EVM 精度/带宽数字标单源未验证。100Gb/s QCSE 调制器实测例 Nat. Commun. s44172-025-00421-6（搜索命中，正文未深读）。",
+      "urls": [
+        "https://www.keysight.com/us/en/product/N4391A/optical-modulation-analyzer.html",
+        "https://www.keysight.com/us/en/assets/7018-02043/data-sheets/5990-3509.pdf",
+        "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Attachments/pdf/8177_5992-2481EN.pdf",
+        "https://nature.com/articles/s44172-025-00421-6"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "激光线宽延迟自外差（delay self-heterodyne）与测量下限",
+      "physics": "激光分两臂，一臂经长光纤延迟 τd 再与另一臂拍频，ESA 看拍频线型。两臂须非相干：延迟 > ~6×相干时间才得洛伦兹线型，满足 Δf=1/(π·τc)。为测 Hz/mHz 级窄线宽需极长延迟(数十 km)，但长延迟同时把 1/f 频率噪声积分进来造成虚高；改进为短延迟(100 m)+拍频包络极值幅度差反演，或用自外差(加声光移频)替代自零差以避开低频噪声。参考 Okoshi 1980、Richter IEEE JQE 22,2070(1986)、Mercer JLT 9,485(1991)。",
+      "numbers": "相干条件 τd>6τc。长延迟虚高实例：50 km 光纤把标称 5.1 kHz 积分线宽的 RIO0175-5-07-1 激光器读成 31.77 kHz。短延迟法：100 m 延迟，仿真 5.5 kHz→反演 5.504/5.502 kHz；实验近中心极值对(m=1,k=0)得 6.61 kHz，远中心(m=1,k=2)得 17.34 kHz，差异源于 ESA 噪声底淹没远端极小值。极窄线宽参照：Kessler et al. Nat. Photon. 2012 亚 40 mHz、Gundavarapu et al. Nat. Photon. 2019 亚 Hz。出处 Micromachines 2022 13(8):1311, doi 10.3390/mi13081311。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9416656/",
+        "https://arxiv.org/pdf/1307.2417",
+        "https://opg.optica.org/abstract.cfm?uri=oe-30-17-30600"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "激光线宽多方法学全景（GHz→亚 Hz）与口径选择",
+      "physics": "按线宽量级选方法：宽线宽用自外差洛伦兹拟合；窄线宽用频率鉴别法(延迟干涉+相位噪声谱积分)、光相干接收(120°干涉)、交叉相关+β 算法；THz QCL 等用频率梳拍频或自混合干涉(OFI)。结论=无单一方法通吃全区间，测量技术落后于窄线宽光源发展。",
+      "numbers": "方法表硬数字：交叉相关+β 算法 26.9 kHz；频率鉴别法 0.7 Hz / 269 Hz / 45 Hz；光相干接收(120°干涉) 4.36 kHz 积分 / 3.58 kHz 洛伦兹；延迟自零差/自外差相干接收 50 kHz、20 kHz–2 MHz。频率梳拍频测 THz QCL 本征线宽 230 Hz@2 mW(Ravaro)；自混合干涉测中红外 QCL 280 kHz(Caldiroli，局限：光反馈致线宽低估、热效应>1kHz)。应用口径要求：4-PSK<100 kHz；40Gbps 8/16/64-QAM≤1.2 kHz；FMCW 激光雷达<100 Hz。出处 Micromachines 2025 16(9):990, doi 10.3390/mi16090990。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12471392/",
+        "https://www.mdpi.com/1424-8220/23/1/122"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光电探测器带宽测量与光外差自校准",
+      "physics": "定义 H(f)=单位光调制的 RF 光电流归一化，3dB=20log10|H|=−3dB(电流幅值0.707)。三法：①校准调制器+VNA，S21=Hmod+HPD+Hpath 去嵌得 HPD(lightwave component analyzer)；②光外差——两单频激光拍频，等偏振等功率 iac=2R√(P1P2)，|H(f)|²=实测RF功率/低频预期，无需光参考、是校准①的基准；③脉冲响应——fs/ps 脉冲+采样示波器，傅里叶变换后除以光脉冲与示波器响应。",
+      "numbers": "外差例：R=0.8 A/W、各 1 mW→iac=1.6 mA→入 50Ω 功率 64 μW(−11.9 dBm)，若探测器内置 50Ω 端接则分流成 1/4=−18.0 dBm；1550nm 拍频随波长 125 MHz/pm，100 GHz=0.80 nm。带宽极限：RC f=1/(2πRLCd)，1 pF@50Ω→3.2 GHz、0.1 pF→32 GHz；渡越 f≈0.45vs/w，1μm 耗尽+vs≈6e4 m/s→≈27 GHz。陷阱：偏压改变耗尽电容/渡越时间、高光电流空间电荷屏蔽使响应变慢(须≥2个光电流取不再变小信号值)、扩散慢尾在低频先滚降、参考曲线取标称 datasheet 会传递误差、外差偏振漂移伪装滚降。参考 Derickson 1998、Tan/Jungerman/Elliott IEEE MTT 37,1217(1989)、Kato IEEE MTT 47,1265(1999)。",
+      "urls": [
+        "https://www.photonica.io/articles/how-to-measure-photodetector-bandwidth",
+        "https://www.photonica.io/articles/photodetector-characterization",
+        "https://www.nature.com/articles/s41566-021-00893-w"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "响应度 / 量子效率 / NEP 测量与量级陷阱",
+      "physics": "R(λ)=Iphoto/Pin，量子限 R=qλ/hc=λ[μm]/1.24 (A/W)，含内量子效率 ηIQE 与面反射：R=ηIQE(1−Rfac)Rquantum。用 NIST 可溯源校准参考功率计+分束器(互换位置校准分束比)扫波长。NEP=SI^1/2/R，SI 含散粒(2qIphoto)、暗电流散粒(2qIdark)、热噪声(4kBTR/RL)。比探测率 D*=A^1/2/NEP。",
+      "numbers": "量子限 R@1550nm=1.25 A/W；ηIQE=0.85+AR 膜→实测≈1.0 A/W，商用 InGaAs PIN 0.85–0.95 A/W；量子效率反推 η=R·1.24/λ。NEP 量级：低噪声 InGaAs PIN 1–10 pW/√Hz，高速 PIN 23–36 pW/√Hz，Si APD 0.05–0.5、InGaAs APD 0.1–1 pW/√Hz。10 nA 暗电流+1 A/W→暗电流散粒 NEP=0.06 pW/√Hz，但 50Ω 热噪声=18 pW/√Hz(主导300×)，须用 TIA(10kΩ–1MΩ)才接近散粒限。误差口径：参考表校准不确定度±2–5%、偏振相关响应 PDR 自由空间<0.1 dB/波导耦合 0.5–2 dB、放大器噪声主导系统 NEP(须按部署态报)。计量权威：NIST SP250-41 光谱响应度校准 200–1800 nm、NIST SP250-95 低温辐射计不确定度 0.02%(k=2)。",
+      "urls": [
+        "https://www.photonica.io/articles/photodetector-characterization",
+        "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication250-41e2008.pdf",
+        "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.250-95.pdf",
+        "https://www.bipm.org/documents/20126/44556012/CCPR-K2.b.2016.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "暗电流测量与瞬态效应诊断（Nature Photonics 共识）",
+      "physics": "暗电流 Idark 常规用 I-V 扫描；但当存在电荷俘获、电容充放电、离子/缺陷迁移等瞬态时 I-V 扫描不适用，须加偏压后充分稳定再读，并报告阶跃电压下的暗电流瞬态。双向扫描回滞与扫速依赖是诊断信号。响应度线性度须在接近 NEP 的光功率下验证，只在远高于 NEP 处测线性不足以支撑结论。",
+      "numbers": "Nature Photonics 共识声明 2025-11-03, vol.19 pp.1178–1188, doi 10.1038/s41566-025-01759-1（59位学界/业界作者、13张补充表格）。无单一硬数字阈值，给出的是测量有效性判据：瞬态未稳定则 I-V 读数无效；回滞/扫速依赖=瞬态存在的判据。相关比探测率 D* 指南 Nat. Rev. Mater. s41578-025-00830-1。",
+      "urls": [
+        "https://www.nature.com/articles/s41566-025-01759-1",
+        "https://www.nature.com/articles/s41578-025-00830-1"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "近场扫描光学显微镜（NSOM）用于光子器件表征",
+      "physics": "光纤探针(孔径/散射型)在样品表面纳米尺度扫描，探针-样品间距由剪切力反馈锁定，突破远场衍射极限直接成像近场光场分布，可定位波导/弯曲/耦合器中的光传播与损耗点，也用于晶圆级在路(in-circuit)失效定位。",
+      "numbers": "搜索命中硬数字：collection-mode NSOM 可分辨 0.25 μm 铝线、线间隔 0.25 μm、边缘锐度 0.07 μm（Appl. Phys. Lett. 1987, doi 10.1063/1.98956）；InZiv Omni-SiPh LightView 用近场探针在路成像，宣称把迭代周期从数周缩到数小时（厂商口径）。AIP 原文页被 Cloudflare 拦截、NSOM 综述(1996)与光伏应用(2004)正文未深读 → 分辨率数字按单源未验证处理；光子器件专用分辨率极限未获一手核实。",
+      "urls": [
+        "https://doi.org/10.1063/1.98956",
+        "https://sciencedirect.com/science/article/pii/S1359028696800623",
+        "https://inziv.com/content/wafer-level-optical-testing-how-to-separate-device-variation-from-coupling",
+        "https://photonics.com/Articles/Near-Field_Scanning_Optical_Microscopy_and/a18134"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "共聚焦显微与超分辨成像的光子器件表征极限",
+      "physics": "共聚焦用针孔抑制离焦光提高轴向分辨率，但仍受 Abbe 衍射极限约束；STED/PALM/STORM 等超分辨技术突破衍射极限。用于光子器件的形貌/场分布表征时，横向分辨率与工作波长、NA 直接相关。",
+      "numbers": "未覆盖：共聚焦受 Abbe 衍射极限≈200 nm 约束(搜索片段口径)，STED 突破极限的引用 doi 10.1117/12.2000807 与综述 PMC4823800 抓取遇 reCAPTCHA，未取得可核实的正文硬数字；未找到针对光子器件(而非生物样品)的一手分辨率极限实测数字。两轮关键词到顶，标未覆盖。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4823800",
+        "https://doi.org/10.1117/12.2000807",
+        "https://iopscience.iop.org/article/10.1088/2050-6120/aaae0c"
+      ],
+      "status": "未覆盖"
+    },
+    {
+      "name": "晶圆级光电同测与 Known Good Die（KGD）方法",
+      "physics": "在有源/无源探针台或自动化晶圆测试机上，把电探针卡(ATE，如标准 93k)与光纤阵列 FAU 同时接到 PIC，逐 die 测 IV/LIV/波长与每通道光插损，做全晶圆 pass/fail 与良率/均匀性图，从而在封装前筛出 KGD。端口读数是『探针→芯片界面→电路→出去』的单一光功率值，混叠了耦合与器件损耗；先建立测量重复性，再降耦合变化，端口数据无法解释时用近场在路成像定位。测试插入点：键合前晶圆→键合后(PIC/EIC)晶圆→切割后单 die。",
+      "numbers": "厂商规格口径(InZiv Glide-SiPh PIC，2026-11-01，厂商自述 AI 辅助撰写并审校)：被动对准、每器件数秒、无六轴台/无逐器件光反馈搜索；玻璃深沟槽 FAU 可进窄至 30 μm 的沟槽、pitch 低至 30 μm；支持 200/300 mm 晶圆、FOUP 兼容；多通道光电同测+每通道光插损+全晶圆 pass/fail+良率均匀性图。FormFactor 全自动硅光晶圆测试用 KGD probe card、电 wafer sort 用标准 93k ATE。以上均厂商/产品资料，缺独立第三方实测吞吐数字 → 单源未验证。",
+      "urls": [
+        "https://inziv.com/content/wafer-level-optical-testing-how-to-separate-device-variation-from-coupling",
+        "https://inziv.com/content/which-wafer-level-test-systems-handle-die-to-die-optical-alignment",
+        "https://formfactor.com/download/fully-automated-integrated-silicon-photonic-wafer-test?wpdmdl=82376",
+        "https://swtestasia.org/2024proc/pdf/F05_02_ROTTOLI_SWTestAsia2024.pdf"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "晶圆级光测试吞吐瓶颈与对准策略",
+      "physics": "主动对准(每 die 用光反馈搜索耦合)把对准时间累加到每个测试点，成为量产吞吐主瓶颈；被动对准用预先标定几何+晶圆 fiducials 定位探针，跳过逐器件搜索。对比维度：每器件对准时间、光可达性(表面光栅 vs 沟槽内边耦合)、耦合重复性、自动化程度。CPO/高密集成下每晶圆数千光 I/O 使光测试成为高量产瓶颈。",
+      "numbers": "被动对准每器件数秒(InZiv 口径，见上条)；每晶圆数千光 I/O、光测试成最大瓶颈(Micromachines 2026 17(5):592 与 siliconcodesign 2026-10-07 搜索命中、正文抓取 Access Denied，仅片段)；smart sensor-augmented probe card for CPO(Micromachines 2026 5(3):21, 2026-08-02, MDPI Access Denied)仅有标题。缺可复算的吞吐(uph/die)硬数字 → 单源未验证。",
+      "urls": [
+        "https://inziv.com/content/which-wafer-level-test-systems-handle-die-to-die-optical-alignment",
+        "https://www.mdpi.com/2072-666X/17/5/592",
+        "https://www.mdpi.com/2674-0729/5/3/21",
+        "https://siliconcodesign.com/p/why-optical-high-volume-test-is-10x"
+      ],
+      "status": "单源未验证"
+    }
+  ],
+  "key_insights": [
+    "测量口径比测量本身更容易出错：调制器『3dB带宽』用光功率还是电 S21 读数可差 1.4–4.7×（光3dB=VNA 6dB）；探测器带宽用电流幅值还是功率定义差 3dB；这类口径混用是最大系统误差源。",
+    "全部损耗类测量(cut-back、晶圆端口插损)的本质困难是『耦合/对准变化』与『器件本征变化』混叠在一个读数里；解法共同指向——先证明重复性、把界面变稳，再用长度扫描或近场在路成像把两者拆开。",
+    "窄线宽测量存在方法学天花板与陷阱：延迟自外差要够长延迟才满足非相干(>6τc)却同时引入 1/f 频率噪声虚高(50km 把 5.1kHz 读成 31.77kHz)；短延迟+包络极值反演可抑制，频率鉴别法可下探到 0.7 Hz，但综述明确『测量技术落后于光源发展』、无单一方法通吃 GHz→亚Hz。",
+    "探测器量级陷阱：50Ω 未放大时热噪声 NEP≈18 pW/√Hz，比 10nA 暗电流的散粒限 0.06 pW/√Hz 高约300倍；报 NEP 必须注明是裸探测器还是含部署态放大器、负载阻抗与带宽。",
+    "计量可溯源性决定绝对精度上限：响应度靠 NIST 可溯源参考表(±2–5% 常规)，光功率绝对定标靠低温辐射计(0.02%, k=2)；相对测量(拍频、cut-back 斜率)精度可远高于绝对测量。",
+    "瞬态效应让标准方法失效：暗电流 I-V 扫描在有电荷俘获/离子迁移时不适用，回滞与扫速依赖是诊断信号；线性度须在接近 NEP 的低功率端验证。",
+    "厂商与二手技术手册(inZiv/Photonica/Keysight 产品页)提供了大量可复算的实测数字，但缺独立第三方验证，已在 status 中标单源未验证；一手论文/权威(Nature/PMC/NIST)正文核实的才标已核验。"
+  ],
+  "open_questions": [
+    "Keysight N4391A/N4391B 光调制分析器的 EVM 精度与带宽规格未取到(datasheet 直抓只有导航壳)；BERT 的 BER 测量下限与眼图抖动分解精度需以原版 datasheet/应用笔记补齐。",
+    "光子器件专用的共聚焦/超分辨分辨率极限一手实测数字缺失(PMC 综述遇 reCAPTCHA)，两轮关键词到顶标未覆盖；若需精确口径应换出版商原文或 DOI 直连重取。",
+    "晶圆级光测试的吞吐硬指标(每小时 uph、每 die 对准时间分布、KGD 判据良率相关)只有厂商自述，缺独立基准测试；CPO 高密度下每晶圆数千光 I/O 的具体数字仅搜索片段。",
+    "add-drop ring 法与 cut-back 法测同一低损耗波导的交叉比对(一致性/偏差)未见直接一手数据，Vermeulen 2016 ring 法正文未深读。",
+    "NSOM 分辨率数字(0.25 μm 线宽/0.07 μm 边缘锐度)来自 1987 AIP 搜索片段，原文被 Cloudflare 拦截未核；现代 s-SNOM 在集成光子器件中的定量损耗成像精度待补。"
+  ]
+}

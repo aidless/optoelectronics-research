@@ -1,0 +1,106 @@
+{
+  "direction": "光模块与光互连技术路线之争",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "可插拔光模块 vs CPO（共封装光学）：从反复狼来了到2026兑现",
+      "physics": "路线对立：可插拔把光引擎做成独立、可热插拔的模块，CPO 把光引擎与交换 ASIC 封在同一基板/中介层。胜负判据是四条物理/工程约束的此消彼长——(1)信号完整性：CPO 让 ASIC 用低功耗 XSR/VSR SerDes 直驱光引擎，去掉模块 DSP 与 retimer，电损耗从约22dB降到约4dB（Nvidia 官方口径）；(2)功耗：51.2T 系统里光互连占总系统功耗约50%、光相关占系统成本约80%（IEEE EPS 引述），省 DSP 与长距 SerDes 可降系统功耗约25-30%；(3)可维护性：可插拔可30秒现场更换，CPO 除激光源（ELSFP 可热插拔）外的光引擎在机内，故障需整板返修，FIT 必须做到与 ASIC 同级；(4)散热：光引擎紧贴高功耗 ASIC 造成热密度与热串扰，需 TIM/热通道/分离散热盖，早期不可解。为什么2024前屡次狼来了：Cisco 在 OFC2023 演示 25.6T CPO（8×3.2T 光引擎、64×400G FR4）反响冷淡，SemiAnalysis 指出部署级产品到2025才出现，期间可插拔一直跟得上速率、且互通/可修性/长期可靠性未被证明。转折点是 AI 集群的电力与可靠性双约束：Broadcom 2025-10 报 Meta 平台累计100万 400G-equiv 端口设备小时 flap-free、65% 省电；Nvidia 报 CPO 使 AI 集群 resiliency 提升10x、GPU 利用率提升5x；叠加 OIF ELSFP 把激光源外置并标准化，可修性瓶颈被拆掉，2026 进入出货（Nvidia Quantum-X/Spectrum-X、Broadcom Tomahawk 6 Davisson 102.4Tb/s）。判据本质是：当省电与可靠性带来的集群级收益超过可插拔的可维护性溢价，且 ELS 把最大失效源移出封装，CPO 才越过采用阈值。",
+      "numbers": "电损耗约22dB→约4dB（Nvidia 技术博客2025-09-04，厂商口径）；系统功耗可降约25-30%、51.2T 光互连约占系统功耗50%/成本约80%（IEEE EPS CPO 综述引述）；1.6T 每端口 DSP可插拔22W≈13.8pJ/bit vs CPO≈10.2W≈6.4pJ/bit，网络级3.5x 能效（Photonica 聚合估算，非厂商实测）；Broadcom/Meta 100万 400G-equiv 端口设备小时 flap-free、65% 省电（厂商宣称）；Nvidia CPO resiliency 10x→GPU 利用率5x（厂商宣称）；CPO 市场2026 $34M→2031 $10B+，2026 数十万端口→2031 超300万端口（Lumentum 引 LightCounting 预测）；LightCounting 预测仅假设2030-31 有10-15% scale-up 互连迁往 NPO/CPO，机架内仍以铜为主（机构预测口径）。",
+      "urls": [
+        "https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf",
+        "https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance",
+        "https://eps.ieee.org/wp-content/uploads/2025/11/Photonics_TC_Co-Packaged_Optics_Final.pdf",
+        "https://photonica.io/articles/pluggable-lpo-lro-cpo",
+        "https://lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377",
+        "https://newsletter.semianalysis.com/p/co-packaged-optics-cpo-book-scaling",
+        "https://datacenterdynamics.com/en/analysis/optical-illusion-is-co-packaged-optics-the-savior-the-data-center-industry-has-been-waiting-for",
+        "https://theregister.com/special-features/2025/11/22/copackaged-optics-have-officially-found-their-killer-app/2014010"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "硅光 vs InP vs VCSEL：中短距/长距的路线归属与物理经济判据",
+      "physics": "路线对立根源在材料能带与工艺经济。硅是间接带隙，不能高效发光，但可导光/调制/分光/探测，且复用成熟 CMOS 产线，密度高、成本低、可大规模集成，因而在数据中心短距（DR/FR、500m-2km）调制器侧胜出——判据是单位 bit 成本与产能，而非发光能力，CW 光源靠外置 InP 激光补齐。InP 是直接带隙，在1550nm/1310nm 低损耗窗口能产生/放大/调制/接收光且电子迁移率高，是长距相干、可调激光与 CW 光源不可替代者——判据是1550nm 唯一可全功能材料 + 长距链路预算。VCSEL+多模光纤（850nm、50μm OM2-5）以低成本低功耗守极短距（100m 级 AI 机内/机架内），判据是耦合容差大、无需精密对准；但其带宽距离积受限，200G/lane 时铜逼近极限、VCSEL  shortening。历史反转：Nvidia 从 800G SR8（VCSEL 多模）转 DR8（单模）直接终结2024中的 VCSEL 短缺，说明速率抬升会把路线从中短距多模推到单模硅光；同时 InP 激光因 CPO ELS 需求反而扩产紧俏。硅光赢数据中心是 CMOS 规模经济 + 外置激光补短板的组合胜利，InP 守长途是物理不可替，VCSEL 守多模短距是成本/容差胜利。",
+      "numbers": "2026 首次硅光调制器收发器销售额超过全部约$40B 收发器市场的50%，硅光从起步到起量耗时近十年（LightCounting 2026-05）；光芯片市场2025 $4B→2031 $15B（近4倍），硅光芯片占比约1/3→42%(约$6.3B)，InP 激光(CW/可调/PIC)占比58%→46%(约$6.9B)仍为最大细分（机构预测）；AI 光市场2025 $16.5B→2026 $26B（连续两年约60%增长），VCSEL 短缺因 Nvidia 800G SR8→DR8 于2024中消失、InP 激光扩产2026中缓解（LightCounting 2026-01）；10G SFP+ 单价2001 >$1000→2010 <$100→2023约$10（LightCounting 2023-11，说明硅化/规模经济压价）；Intel 研发硅光20+年、2016-17 推100G PSM4/CWDM4、2018 抢份额；VCSEL MMF 50μm OM2-5、25Gbaud 经济生态（Cisco 白皮书）。",
+      "urls": [
+        "https://lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377",
+        "https://lightcounting.com/newsletter/en/january-2026-optics-for-ai-clusters-366",
+        "https://lightcounting.com/research-note/november-2023-lumentum-is-back-in-intel-is-out-315",
+        "https://doi.org/10.1117/12.630237",
+        "https://trendforce.com/news/2026/08/06/news-inp-shortage-emerges-as-ai-optical-interconnect-bottleneck",
+        "https://cisco.com/c/dam/en/us/products/collateral/interfaces-modules/transceiver-modules/wp8350-hdr-mmf.pdf",
+        "https://blog.sumitomoelectriclightwave.com/vcsel-applications-for-ai-factory"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "LPO（线性直驱） vs DSP 可插拔 vs CPO：功耗/成本/链路预算三方之争",
+      "physics": "三路线争的是把均衡与 CDR 放在哪。DSP 可插拔在模块内做完整均衡，代价是模块功耗的一半来自 DSP，但换来 any-to-any 互通与成熟链路预算（主 FEC RS(544,514) 终止在交换 ASIC，非模块）。LPO 用高线性 TIA 去掉 DSP/CDR，把均衡分摊给 switch ASIC+driver+TIA，省功耗降时延、保持可热插拔；代价是 BER 升高导致距离缩短、依赖 host-module 组合难多厂商互通、标准未定、SerDes 复杂度上升。CPO 把同样的去 DSP 逻辑封进厂商交换机，功耗最低但丧失现场可修与多厂商互通。LPO 在2024-2026重新升温的直接原因：DSP 模块在200G/lane 已达23-25W、散热逼近极限，而交换 ASIC 的 SerDes 能力已足以承接均衡；OFC2024/2025 Eoptolink、MACOM、Marvell、Innolight 与 OIF 互通展示把生态补齐。但 LRO（收端去 DSP、保发端 DSP 满足 IEEE 802.3）成为更现实的折中：CPO 阵营以可靠性/节能为主张，LPO 阵营以可插拔+省电为主张，判据是每 bit 功耗、链路预算(dB)与现场可维护性的乘积。IEEE/Cignal 判断：100G/lane 的800G LPO 因存量基础设施为 DSP 设计只是小众；1.6T 初始方案>30W，LRO 降到<20W 是更可行近期解。",
+      "numbers": "1.6T 每端口：DSP 可插拔22W≈13.8pJ/bit、LPO≈12.6W≈7.9pJ/bit(省43%)、CPO≈10.2W≈6.4pJ/bit(省54%)（Photonica 聚合估算，非实测）；200G/lane：DSP 模块23-25W(下一代约20W)、LRO/RTLR 约16W(下一代14-15W)、LPO 目标约10W（Semtech 厂商口径）；512口 Tomahawk-6 级交换机 DSP→LPO 模块级省约500W、含散热近1kW；LPO 光距离目标500m≈3dB，条件好可达约2km/4dB(DR)；die-to-die 电损耗预算 LPO 22dB vs DSP 32dB，OIF/Semtech 争取扩到26dB；1.6T LPO 初始>30W、LRO<20W（IEEE EPS/Cignal）；OFC2024 Eoptolink 200G/λ 4并口、MACOM PURE DRIVE 支持212Gbps/lane、OFC2025 OIF 100G/200G/lane 互通。",
+      "urls": [
+        "https://eps.ieee.org/wp-content/uploads/2026/03/Linear-Pluggable-Optics_V2-UPDATED.pdf",
+        "https://blog.semtech.com/200g-lpo-power-reach-and-loss-real-numbers",
+        "https://photonica.io/articles/pluggable-lpo-lro-cpo",
+        "https://lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "CW 光源路线：外置激光源 ELS/ELSFP vs 片上集成激光",
+      "physics": "对立是「把激光放在哪」。CPO 当前普遍用 ELS，判据有三：(1)热——交换 ASIC 盖温高，激光在高温下阈值升高、WPE 下降、波长漂移并按 Arrhenius 加速磨损；(2)统计——激光主导失效预算，坏激光在 CPO 内等于整板返修，外置可热插拔更换；(3)经济——解耦光学引擎与激光两个都不成熟的良率，避免良率相乘。OIF 2023 定义 ELSFP IA（盲插+保偏光纤输出+管理），CW-WDM MSA 定义 O 波段8/16/32波，使 ELS 可多供应商化。片上集成激光（异质集成 III-V 或量子点梳）的瓶颈是可靠性与每线功率/效率：要满足 CPO 激光源50 FIT（可插拔约300 FIT）的目标，且高温下保持低噪声与足够出光。共享光源方案（一分多+micro-ring）用8波每调制器约1mW、总插损约11.7dB 反推每波需约15mW，15% WPE 下8波约0.8W电≈0.5pJ/bit，说明光源预算本身可行，真正卡点在热与 FIT。量子点梳可直接电泵、每线噪声低；Kerr 微梳线数多但转换效率/每线功率历史偏弱（2020 turnkey soliton、2021 激光+微梳单芯片、正常色散改善效率）——判据是每线功率×可靠性×集成良率。",
+      "numbers": "OIF CPO IA 目标激光源50 FIT vs 可插拔约300 FIT（>5x，Lumentum 引 OIF）；Lumentum UHP 额定20 FIT@400mW，加速测试外推9 FIT@60%置信/23 FIT@90%，>1亿加速设备小时零失效；其 Raman 泵浦平台近50万颗部署、>200亿设备小时、<1 FIT、2014年来零激光二极管现场失效（厂商宣称）；100 FIT→20 FIT 在7x24下约每年9次→1.75次故障（5x 服务调用下降）；ELS 算例：1x8 分配9.0dB+插损0.5dB+PM跳线0.2dB+耦合1.5dB+过剩0.5dB=11.7dB，每波出光源约15mW，15% WPE 下8波约0.8W≈0.5pJ/bit（Photonica 计算示例）；ECOC2026 Lumentum 展示 DWDM ELSFP 供 OCI MSA。",
+      "urls": [
+        "https://photonica.io/articles/co-packaged-optics-light-sources",
+        "https://lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf",
+        "https://www.lumentum.com/en/blog/reliability-becomes-new-currency-how-cpo-rewriting-laser-performance",
+        "https://eps.ieee.org/wp-content/uploads/2025/11/Photonics_TC_Co-Packaged_Optics_Final.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光互连调制格式路线：NRZ vs PAM4 vs 相干（相干下沉）",
+      "physics": "速率提升时 NRZ（1bit/符号）要求翻倍波特率与带宽，在112G→224G SerDes 时不可持续；PAM4（2bit/符号）以约112GBaud 承载224Gbps/lane，代价是 SNR 代价与对 FEC/均衡的依赖，成为 800G/1.6T 数据中心以太网的事实选择（802.3df 2024 批准800G，802.3dj 定义8×224G SerDes）。相干用双偏振 DP-16QAM（4bit/符号×2偏振）+DSP 补偿色散/PMD，需更高 DSP 功耗但换来长距与频谱效率，OIF 400ZR 把它做成单载波相干可插拔。相干下沉的判据是 DSP 工艺节点：Marvell 用2nm 相干 DSP 把1.6T ZR 做到 campus20km/metro120km/regional1000km，800G 相干到1000km/600G 2000km/400G 3000km，说明相干从长途向 DCI/campus 渗透。判据总结：距离与带宽决定调制复杂度，短距用 PAM4 换低功耗低成本，长距用相干换灵敏度与色散容忍；NRZ 退守低速与部分芯片间接口。802.3dv 已在讨论400G/lane 的 PAM4/PAM6 选项，说明格式之争仍随每 lane 速率延续。",
+      "numbers": "1.6T 由8×224Gbps SerDes 构成，800G 由8×112Gbps/lane 构成（Teledyne LeCroy 白皮书）；800G 标准 IEEE 2024 批准、1.6T 在802.3dj 制定（标准口径）；OIF 400ZR IA：单载波相干 DP-16QAM、120km 以内放大点到点 DWDM（100GHz/75GHz）、C-FEC 后错误底<1.0E-15、约60Gbaud（OIF 标准原文）；Marvell COLORZ 1600 为业界首个1.6T ZR/ZR+ 可插拔+2nm Electra DSP，覆盖20km/120km/1000km、C+L 波段 OSFP、带 MACsec；COLORZ 800 用2nm Libra，800G到1000km/600G到2000km/400G到3000km（厂商新闻稿宣称）；ADTRAN 400ZR 点到点 DWDM 到120km。",
+      "urls": [
+        "https://oiforum.com/wp-content/uploads/OIF-400ZR-03.0.1.pdf",
+        "https://cdn.teledynelecroy.com/files/whitepapers/800ge-vs-1-6te.pdf",
+        "https://investor.marvell.com/_assets/_88edfb3f52300551f17c1e541972f365/marvell/news/2026-03-05_Marvell_Extends_ZR_ZR_Leadership_with_Industry_1010.pdf",
+        "https://ieee802.org/3/dv/public/2611/shrikhande_3dv_01a_2611.pdf",
+        "https://ieee802.org/3/dj/public/25_01/shrikhande_3dj_01_2501.pdf",
+        "https://adtran.com/en/products-and-services/open-optical-networking/pluggables-and-subsystems/coherent-zr-series/coherent-400zr-series",
+        "https://fibermall.com/blog/800g-in-data-center-pam4-or-coherent.htm"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "淘汰/边缘化路线复盘：LiDAR 机械→固态、硅光由看衰到翻盘",
+      "physics": "从失败/边缘化路线提炼判据。LiDAR：机械旋转式因活动件多、可靠性/成本/车规量产不达标被边缘化，路线演化为机械→混合固态(MEMS 微镜/转镜)→全固态(flash/OPA)；判据是 OEM 的四条硬指标——高性能、可负担、可靠、可量产，核心是 fewer moving parts。术语陷阱：「solid-state」被滥用，含 MEMS 微镜者仍属机械（Ouster 观点），2016 Velodyne 把 spin 传感器称 solid-state hybrid；Ouster 认为真正固态 flash 是终局但受功率/散斑/距离限制。硅光翻盘：1980s末起长期被看衰（间接带隙不发光、耦合/封装难、良率），Intel 2004 做出首个类晶体管硅光器件、2011 50Gb/s 硅光链路，2016-17 推100G 产品、2018 抢份额逼对手认真；Cisco/Huawei/Intel 的早期决策加速采用；2023 Intel 把收发器制造/客户支持卖给 Jabil、保留 SiP 设计与 CPO 开发。翻盘判据不是物理全能，而是 CMOS 规模经济+外置激光补短板+头部厂商背书共同越过成本/产能阈值，2026 硅光调制器收发器首超市场50%。两条失败路线的共同教训：赢家不是单项参数最优，而是在系统约束（可靠性、可量产、单位成本、可维护性）下综合阈值最低者。",
+      "numbers": "2026 硅光调制器收发器销售额首超约$40B 市场50%、起量耗时近十年（LightCounting 2026-05）；Intel 2004 首个类晶体管硅光器件、2011 50Gb/s 硅光链路、研发20+年、2023 出售制造业务保留 SiP/CPO（LightCounting 2023-11 / VentureBeat）；LiDAR 三类：机械/混合固态/全固态（Nature Communications 2024-09 综述标题与摘要，全文抓取超时未核）；固态 LiDAR <$100/颗（IEEE 文献搜索摘要，单源未验证）；OEM 四指标：高性能/可负担/可靠/可量产（Ouster 厂商观点）；2016-12 Velodyne 从机械转固态。",
+      "urls": [
+        "https://lightcounting.com/newsletter/en/may-2026-silicon-photonics-lpolro-and-npocpo-377",
+        "https://lightcounting.com/research-note/november-2023-lumentum-is-back-in-intel-is-out-315",
+        "https://venturebeat.com/2021/05/24/intel-sees-bright-future-for-silicon-photonics-moving-information-at-light-speed-in-datacenters-and-beyond",
+        "https://www.nature.com/articles/s41467-024-51975-6",
+        "https://ouster.com/insights/blog/what-is-the-end-state-of-automotive-lidar",
+        "https://blog.leddartech.com/velodyne-shift-toward-solid-state-lidar-for-automotive-applications",
+        "https://ieeexplore.ieee.org/document/10234174",
+        "https://ieeexplore.ieee.org/ielx7/5/8540482/08438526.pdf"
+      ],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "CPO 的胜负手不是功耗单点，而是「省电+可靠性」在 AI 集群被同时定价：22dB→4dB 的电损耗与 ELS 把最大失效源外置，共同越过可维护性阈值；2024前屡次落空正是因为可插拔一直跟得上且 FIT/可修性未被证明。",
+    "材料路线的归属由物理不可替与经济规模共同决定：硅光赢数据中心靠 CMOS 规模经济+外置 InP 激光补发光短板，InP 守长途因1550nm 唯一可全功能，VCSEL 守多模短距靠成本/耦合容差，但速率抬升（SR8→DR8）会把它推出高速率段。",
+    "LPO/LRO 是「DSP 放哪里」的连续谱，不是三选一：DSP 换互通与链路预算，LPO 换功耗与可插拔，CPO 换最低功耗但弃可修；100G/lane 的 LPO 因存量 DSP 生态只是小众，1.6T 因>30W 散热转向 LRO（<20W）。",
+    "CPO 采用 ELS 的本质是把光学引擎与激光两个不成熟良率解耦、把主导失效的激光变成可热插拔件，50 FIT vs 300 FIT 的可靠性目标比每 bit 功耗更能决定能否规模部署。",
+    "调制格式由距离与 DSP 工艺共同驱动：短距 PAM4 换低功耗，长距相干 DP-16QAM 换灵敏度与频谱效率；2nm 相干 DSP 让1.6T ZR 下沉到20km campus，说明「相干下沉」是工艺事件而非协议事件。",
+    "淘汰路线的共同判据：赢家不是单项参数最优，而是可靠性/可量产/单位成本/可维护性综合阈值最低者；术语也会误导（MEMS 固态仍属机械、硅光被看衰是因不发光而非无前景）。"
+  ],
+  "open_questions": [
+    "Nature Communications 汽车 LiDAR 综述全文抓取超时（仅标题/摘要可见），机械→固态的量化分歧未从一手正文核实；LiDAR <$100/颗为 IEEE 文献摘要单源，未验证。",
+    "1.6T 各路线 pJ/bit 数字来自 Photonica 聚合估算，非厂商或测量实测；Nvidia 3.5x/10x、Broadcom 65%/100万端口小时均为厂商宣称，缺独立复测。",
+    "LightCounting 的10-15% scale-up 互连迁 NPO/CPO 与$52.1B(2031) 为机构预测口径，真实渗透率取决于 2026-2027 出货兑现；400G/lane serdes 与 PAM6 走向未定（802.3dv）。",
+    "Broadcom Tomahawk 6 Davisson 与 Nvidia Quantum-X/Spectrum-X 的批量出货/客户名单主要来自厂商与媒体，缺运营商侧独立验证。"
+  ]
+}

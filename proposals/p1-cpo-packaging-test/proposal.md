@@ -7,13 +7,13 @@
 - 目标读者：评审专家 / 导师
 - 周期：4 年
 - 起草日期：2026-11-23
-- 数字来源：`outputs/deep-research/latest_silicon_cpo.json`、`outputs/deep-research/latest_comm_laser.json`，缺口数字来自 `outputs/deep-research/research_tracks_partial.json`；全文不自造数字。
+- 数字来源：`outputs/deep-research/latest_silicon_cpo.json`、`outputs/deep-research/latest_comm_laser.json`，缺口数字来自 `outputs/deep-research/research_tracks_partial.json`；纠偏证据来自 `outputs/deep-research/deep-research-20261124-opto-gaps-deepdive.md`（P1 章节，新增主张均带其给出的一手/厂商 URL）；全文不自造数字。
 
 ---
 
 ## 摘要（约 300 字）
 
-共封装光学（CPO）已从技术验证跨入量产与首批规模部署：机构预测 CPO 市场 2026 年约 9.5 亿美元、2036 年约 204 亿美元（CAGR 32.4%），2026 年 11 月 NVIDIA 与 Lambda 已在加拿大魁北克用 Quantum-X CPO 连接 1 万余张 Blackwell Ultra GPU 实现全球首个规模化商用部署；但机构判断真正放量窗口在 2027—2028 年，工程攻关正当其时。与此同时，近封装光引擎的良率瓶颈集中在三处：COUPE 式"PIC+EIC+硅基板"三明治键合存在纳米级应力与晶圆翘曲、8 芯保偏 FAU 光纤阵列对位偏差需 <0.1° 且熟练工一天仅做 1—2 个、单台高端测试设备日测仅个位数晶圆且光电同测吞吐不足。上述缺口数字来自本地证据文件，公开资料未见一手权威测量口径。本项目围绕一个中心科学问题展开：键合应力场与 FAU 对准误差如何跨工序耦合为光学插损与良率损失，能否用光电协同的工序间在测—建模闭环把这一耦合辨识出来并用于良率预测。研究拟建立应力—对准—光电的耦合可辨识模型、自动化对位方法与光电协同在测平台，形成跨工序良率预测与 Go/No-Go 判据。预期产出可测的敏感系数量化、对准一致性数据、良率预测区分度与测试吞吐提升读数，为近封装光引擎量产提供一种"测试前移 + 物理信息建模"的良率工程方法。
+共封装光学（CPO）已从技术验证跨入量产与首批规模部署：机构预测 CPO 市场 2026 年约 9.5 亿美元、2036 年约 204 亿美元（CAGR 32.4%），2026 年 11 月 NVIDIA 与 Lambda 已在加拿大魁北克用 Quantum-X CPO 连接 1 万余张 Blackwell Ultra GPU 实现全球首个规模化商用部署；但机构判断真正放量窗口在 2027—2028 年，工程攻关正当其时。与此同时，近封装光引擎的良率瓶颈集中在三处：COUPE 式"PIC+EIC+硅基板"三明治键合存在纳米级应力与晶圆翘曲、8 芯保偏 FAU 光纤阵列对位偏差需 <0.1° 且熟练工一天仅做 1—2 个、单台高端测试设备日测仅个位数晶圆且光电同测吞吐不足。上述缺口数字来自本地证据文件；深挖后，前两处补到间接公开读数：台积电 COUPE/imec 讲座一手会议 PDF 给出硅光**芯片测试良率 10%–70%**、光纤—硅耦合损耗 >±2.5 dB、晶圆级共振波长漂移控制 1.5 nm；FAU 自动对位厂商口径为 <90 秒/件、相对手工 3× 吞吐、位置公差 ±0.5 µm。口径必须区分：10%–70% 是硅光**芯片测试**良率，光引擎**整机**良率仍未找到一手数字；"对位 <0.1°、熟练工 1—2 个/天"两轮换词检索无任何一手 URL（公开口径为保偏偏振轴 ±1°、V 槽位置 ±0.5 µm，与之量级冲突），继续标本地证据来源。本项目围绕一个中心科学问题展开：键合应力场与 FAU 对准误差如何跨工序耦合为光学插损与良率损失，能否用光电协同的工序间在测—建模闭环把这一耦合辨识出来并用于良率预测。研究拟建立应力—对准—光电的耦合可辨识模型、自动化对位方法与光电协同在测平台，形成跨工序良率预测与 Go/No-Go 判据。预期产出可测的敏感系数量化、对准一致性数据、良率预测区分度与测试吞吐提升读数，为近封装光引擎量产提供一种"测试前移 + 物理信息建模"的良率工程方法。
 
 **关键词**：共封装光学（CPO）；近封装光学（NPO）；三明治键合应力；FAU 保偏光纤阵列对位；光电协同测试；良率预测；可辨识性
 
@@ -33,13 +33,13 @@
 
 ### 1.2 核心缺口：三处卡点都指向"耦合"与"在测"
 
-本地证据文件 `research_tracks_partial.json`（硅光赛道 risks 字段）给出三处缺口，均标注为本地证据文件来源，公开资料未见独立一手 URL：
+本地证据文件 `research_tracks_partial.json`（硅光赛道 risks 字段）给出三处缺口；深挖后，键合应力与 FAU 两处补到了相邻的一手/厂商口径，但对位原始数字与测试吞吐原始数字仍只有本地证据来源：
 
-- **键合应力与翘曲**：COUPE 式"PIC+EIC+硅基板"三明治键合存在纳米级应力与晶圆翘曲，良率仍在爬坡。
-- **FAU 对准瓶颈**：8 芯保偏 FAU 对位偏差需 <0.1°，熟练工一天仅 1—2 个，FAU 产能与成本直接卡光引擎规模化交付。
-- **测试吞吐瓶颈**：单台高端测试设备日测仅个位数晶圆，光电同测吞吐不足；测试集中在终检，难以反馈到工序。
+- **键合应力与翘曲**：COUPE 式"PIC+EIC+硅基板"三明治键合存在纳米级应力与晶圆翘曲，良率仍在爬坡。一手会议资料给出相邻规格：12 英寸 65 nm 硅光、10 µm 对准容差对应 0.3 dB 垂直耦合损耗、76 GHz 微环调制器、晶圆级中心共振波长漂移控制 1.5 nm（台积电 COUPE/imec 讲座 PDF，https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf ；IEEE HIR 9.0 Photonics 路线图亦在做翘曲建模，https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf）。但这些是规格/控制目标，**不是**"应力/翘曲 → 插损 dB / 波长漂移 nm"的可复算敏感系数。
+- **FAU 对准瓶颈**：8 芯保偏 FAU 对位偏差需 <0.1°，熟练工一天仅 1—2 个，FAU 产能与成本直接卡光引擎规模化交付。该两句原始数字经两轮中英换词检索未找到任何一手 URL，维持本地证据来源（plausible-inference）；公开厂商口径为自动对位 6 自由度、单件 <90 秒、相对手工 3× 吞吐、生产级位置公差 ±0.5 µm（https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one ，二手估算），保偏 FAU 偏振轴误差口径为 ±1°（https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html），与 <0.1° 量级冲突，不可混引。
+- **测试吞吐瓶颈**：单台高端测试设备日测仅个位数晶圆，光电同测吞吐不足；测试集中在终检，难以反馈到工序。公开资料只到"high-throughput 光电同测设备已商用"（ficonTEC 300 mm 双面测试，https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate）与"测试左移 / Known Good Optical Engine 是产业共识"（SemiVision，https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit），以及 <1 s/die 的目标值（https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput），**没有** wafers/day 的一手硬基准。
 
-三处缺口并非彼此独立：键合应力改变波导有效折射率与光纤—波导耦合条件，FAU 对准误差直接调制耦合损耗与偏振串扰，热—电—光参数在终检才被观测，导致良率损失无法回溯到具体工序。**公开资料未覆盖** 2026Q3/Q4 具体的量产良率与单位成本权威硬数字，也未覆盖 CPO 渗透率的最新精确百分比口径；本项目不引用任何来自股吧或自媒体的良率数字，相关量化一律作为"目标值"在本项目中自行测定。
+三处缺口并非彼此独立：键合应力改变波导有效折射率与光纤—波导耦合条件，FAU 对准误差直接调制耦合损耗与偏振串扰，热—电—光参数在终检才被观测，导致良率损失无法回溯到具体工序。深挖后口径需精确化：台积电 COUPE/imec 讲座一手 PDF 已给出硅光**芯片测试良率 10%–70%**（https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf），故"良率硬数字公开未覆盖"不再笼统成立；但**光引擎整机良率**、**键合应力/晶圆翘曲→插损/波长漂移的可复算敏感系数**、**光电同测日测晶圆吞吐基准**经两轮检索确认**公开资料仍未覆盖**，这三条是本项目要用实测数据填补的科学空白。成本侧仍只有二手估算（ELS 模块约 USD 500、CW 激光芯片约 USD 32，https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html），CPO 渗透率仅见二手转引的 0.5%（2026）→35%（2030，https://www.vitextech.com/blogs/blog/co-packaged-optics-cpo-2026-the-complete-technical-guide）。防混引警示：检索命中的"50%"多为**硅光调制器**渗透率而非 CPO（https://news.futunn.com/en/post/74584585/will-the-race-for-next-generation-optical-modules-avoid-a），"±1°"是**保偏 FAU 偏振轴**误差而非本文的 <0.1° 对位（https://www.fiber-mart.com/news/fiber-array-unit-fau-everything-you-need-to-know-a-6842.html），二者均不可混引。本项目不引用任何来自股吧或自媒体的良率数字，相关量化一律作为"目标值"在本项目中自行测定。
 
 ### 1.3 研究意义
 
@@ -67,14 +67,14 @@
 - **标准组织**：OIF 2023 年发布首个 3.2T CPO 实施协议，2026Q2 立项《12.8 Tb/s 光电近封装模块》，由中国信通院、华为、腾讯、阿里云、美团、中国移动联合提交（见 [13]）。华为 2026-07 牵头 20 余家启动 OPEN NPO 项目并发布国内首个 NPO MSA（见 [13]）。
 - **器件级工艺**：京瓷与东北大学用激光退火把光隔离器直接集成到硅光芯片，背反射降约 95%；NLM Photonics 与 SilOriX 签 JDA 推进硅—有机混合调制器（见 [10]）。这些属材料/器件层进展，尚未构成封装良率与测试的方案。
 
-### 2.3 未覆盖 / 公开资料未覆盖
+### 2.3 未覆盖 / 公开资料未覆盖（深挖后精确化）
 
-- **键合应力—翘曲—光学性能的定量耦合**：本地证据文件指出纳米级应力与晶圆翘曲存在且"良率仍在爬坡"，但公开资料未覆盖其到插损/波长漂移的可复算敏感系数。
-- **FAU 自动对位的可公开指标**："对位需 <0.1°、熟练工 1—2 个/天"来自本地证据文件综述条目，无一手公开 URL；公开资料未覆盖自动化对位相对手工的可比节拍与一致性分布。
-- **光电同测吞吐**："单台日测个位数晶圆"同样来自本地证据文件，公开资料未覆盖光电协同在测平台的吞吐与良率预测精度的公开基准。
-- **量产良率硬数字**：见 1.2，公开资料未覆盖。
+- **键合应力—翘曲—光学性能的定量耦合**：一手讲座 PDF 只给出规格/控制目标（共振波长漂移 1.5 nm、10 µm→0.3 dB，https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf），IEEE HIR 9.0 路线图确认业界在做翘曲建模（https://eps.ieee.org/wp-content/uploads/2026/05/HIR_9_Photonics_rev0.9.pdf）；X 射线键合应变测量给出 0.188°→41.68 µm 弓形→64.12 µm 翘曲（https://pmc.ncbi.nlm.nih.gov/articles/PMC5445873），InP/Si 倒装混合集成给出 sub-300 nm→<2 dB（https://doi.org/10.1109/jstqe.2022.3223641）。**公开资料仍未覆盖**"键合应力/晶圆翘曲 → 插损 dB / 波长漂移 nm"的可复算敏感系数（如 nm/MPa、dB/µm warp），此为本项目科学空白。
+- **FAU 自动对位的可公开指标**："对位需 <0.1°、熟练工 1—2 个/天"来自本地证据文件综述条目，两轮换词检索**无任何一手公开 URL**；公开口径（保偏偏振轴 ±1°、V 槽位置 ±0.5 µm）与之量级冲突。间接公开读数仅限厂商口径 <90 秒/件、3× 吞吐、位置公差 ±0.5 µm（https://en.hongjing-optech.com/fiber-array-unit-explained-types-specs-and-how-to-choose-the-right-one），**无**严格可复算的自动化 vs 手工一致性分布。
+- **光电同测吞吐**："单台日测个位数晶圆"来自本地证据文件，**公开资料仍未覆盖** wafers/day 硬基准；公开只到商用设备与"测试左移"共识（https://www.ficontec.com/ficontec-releases-innovative-wafer-level-test-cell-to-complement-existing-ate ； https://tspasemiconductor.substack.com/p/cpos-biggest-bottleneck-is-not-opticsit）及 <1 s/die 目标值（https://eureka.patsnap.com/report-improve-wafer-level-silicon-photonics-testing-throughput）。
+- **良率硬数字**：已部分覆盖，须按口径区分——**硅光芯片测试良率 10%–70% 有一手出处**（台积电 COUPE/imec 讲座 PDF，https://swissphotonics.net/libraries.files/Swissphotonics_Lunch_Chat_EmmaXu_1014.pdf）；FAU 穿线良率 70%–75%（24/36 芯）/ 90%–95%（天孚产线）为二手行业媒体口径（https://global.eefocus.com/article/npo-cpo-industrialization-pm-fiber-fau-yield-and-vcsel-technical-route.html）；**光引擎整机良率百分比公开资料仍未覆盖一手数字**，TrendForce 官方新闻稿只确认"高制造良率"是瓶颈、未给百分比（https://trendforce.com/presscenter/news/20260727-13151.html）。
 
-**缺口判定**：产业界在量产与标准上领先，但"应力—对准—光电—良率"的跨工序可辨识模型与把测试前移的仪器方法，在本证据集范围内**未见公开覆盖**。本立项定位为这一空白的方向级攻关，不宣称国内外完全无人做，只声明在所给证据范围内未被覆盖。
+**缺口判定**：产业界在量产与标准上领先，且"硅光芯片测试良率"已有一手量化；但"应力—对准—光电—良率"的跨工序可辨识模型、应力→插损/波长漂移可复算敏感系数、光电同测日测晶圆吞吐基准，在本证据集范围内**未见公开覆盖**（后两者经两轮换词检索确认为真空白）。本立项定位为这一空白的方向级攻关，不宣称国内外完全无人做，只声明在所给证据范围内未被覆盖。
 
 ---
 

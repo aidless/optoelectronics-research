@@ -6,7 +6,7 @@
 
 ## 摘要（约 300 字）
 
-光互连已成为 AI 数据中心与超大规模交换的核心使能技术。2026 年硅光调制器收发器销售额首次超过 400 亿美元整体市场的一半（LightCounting，2026-05），而硅基载流子耗尽型调制器在 Vπ·L、带宽与插损之间长期难以兼得，成为 1.6T/3.2T 单波速率的瓶颈。2026 年 11 月 Nature Communications 报道在 8 英寸 SiO2/Si 晶圆上用 DUV stepper 制备薄膜锆钛酸铅（PZT）电光调制器，Vπ·L=1.19 V·cm、电光响应至 70 GHz、单波 224 Gbps、16 通道 WDM 指向 3.2 Tbps 光互连；薄膜铌酸锂（TFLN）单波 400G 及 1.6T/3.2T 路线亦在推进（犀里光电 2026-09）。但晶圆级薄膜材料的 CMOS 兼容、晶圆级均匀性与良率仍属未解难题，公开资料未覆盖。本项目以中心问题为"晶圆级新型电光材料如何在 CMOS 兼容、晶圆级一致性下同时实现低驱动电压与带宽"，设 3 项可检验子目标与 4 个子课题，目标值标注，缺证据的承诺按"审慎探索"降级并给出 Go/No-Go 判据。
+光互连已成为 AI 数据中心与超大规模交换的核心使能技术。2026 年硅光调制器收发器销售额首次超过 400 亿美元整体市场的一半（LightCounting，2026-05），而硅基载流子耗尽型调制器在 Vπ·L、带宽与插损之间长期难以兼得，成为 1.6T/3.2T 单波速率的瓶颈。2026 年 11 月 Nature Communications 报道在 8 英寸 SiO2/Si 晶圆上用 DUV stepper 制备薄膜锆钛酸铅（PZT）电光调制器，Vπ·L=1.19 V·cm、电光响应至 70 GHz、单波 224 Gbps、16 通道 WDM 指向 3.2 Tbps 光互连；薄膜铌酸锂（TFLN）单波 400G 及 1.6T/3.2T 路线亦在推进（犀里光电 2026-09）。但深挖证据表明："晶圆级良率没人公开"这一前提已被推翻——imec/根特大学在 4 片 200 mm 晶圆上用微转移印刷（MTP）集成 TFLN 的印刷良率已公开 >95%（3σ 420 nm、600 调制器插损 <2 dB，https://arxiv.org/html/2605.28971 ）。因此本项目差异化须收窄到 PZT 铁电畴器件的晶圆级一致性与良率—成本模型；PZT 器件级 Vπ·L/带宽积（订阅墙）与晶圆级良率、批间均匀性、后段 CMOS 兼容的定量数据仍未覆盖。本项目以中心问题为"晶圆级新型电光材料如何在 CMOS 兼容、晶圆级一致性下同时实现低驱动电压与带宽"，设 3 项可检验子目标与 4 个子课题，目标值标注，缺证据的承诺按"审慎探索"降级并给出 Go/No-Go 判据。
 
 **关键词**：薄膜锆钛酸铅（PZT）；薄膜铌酸锂（TFLN）；电光调制器；晶圆级集成；光互连；CMOS 兼容
 
@@ -18,9 +18,9 @@
 
 硅基载流子耗尽型调制器（Si 基 PN 结色散调制）是当前硅光调制器的主流，但其电光系数依赖自由载流子色散，存在驱动电压、带宽与插损难以同时兼顾的内在限制，是 1.6T/3.2T 单波速率的主要障碍。2026 年 11 月 20 日 Nature Communications 报道的晶圆级薄膜 PZT 光子 IC 给出了另一条路径：在 8 英寸 SiO2/Si 晶圆上用 DUV stepper 制备 PZT 电光调制器，Vπ·L=1.19 V·cm、电光响应至 70 GHz、单波 224 Gbps，单片集成 16 通道 WDM 发射机、指向 3.2 Tbps 级光互连（URL: https://www.nature.com/articles/s41467-026-79721-0 ）。同期 Nature Communications（2026-07-23）报道的 PZT 拓扑调制器光子处理加速器（266 TOPS/mm²、重构速度提升 1000 倍、近零静态功耗、数字识别 95.64%、时变 PDE 94.5%，URL: https://www.nature.com/articles/s41467-026-75993-8 ）从另一器件形态印证了铁电 PZT 材料的电光响应潜力。两条工作共同说明：以铁电材料电光效应（Pockels 效应）替代硅的载流子色散，有潜力在更低驱动电压下获得更高带宽。Nature Nanotechnology（2026-09-09）的实用化路线图进一步指出，可编程、高集成密度与稳定的纳米光子平台已具备，并给出纳米材料、架构、纳米制造与大规模集成要求（URL: https://www.nature.com/articles/s41565-026-02264-4 ），为"材料—工艺—集成"协同提供了领域共识。
 
-薄膜铌酸锂（TFLN）是另一条被产业界重点押注的路线。犀里光电 2026-09-19 完成亿元级 Pre-A 轮融资（孚腾资本领投、上海未来产业基金等跟投），技术方向为单波 400G 及 1.6T/3.2T 高速光模块/光互连用 TFLN 调制器（URL: https://www.chinastarmarket.cn/detail/2487874 ）。产业判断 TFLN CPO 3.2T 属中长期高端路线、约 2028 年后规模化；该判断与 LightCounting 在 OCP 全球峰会给出的 CPO/NPO 端口预测一致（CPO 端口约在 2030 年前后接近并超过 NPO，2026-10，URL: https://www.simpletechtrend.com/en/post/ocp-2026-lightcounting-cpo-npo-forecast-scenarios-en ）。该 3.2T 的 2026 下半年实测商用数据公开资料未覆盖。
+薄膜铌酸锂（TFLN）是另一条被产业界重点押注的路线。犀里光电 2026-09-19 完成亿元级 Pre-A 轮融资（孚腾资本领投、上海未来产业基金等跟投），技术方向为单波 400G 及 1.6T/3.2T 高速光模块/光互连用 TFLN 调制器（URL: https://www.chinastarmarket.cn/detail/2487874 ）。产业判断 TFLN CPO 3.2T 属中长期高端路线、约 2028 年后规模化；该判断与 LightCounting 在 OCP 全球峰会给出的 CPO/NPO 端口预测一致（CPO 端口约在 2030 年前后接近并超过 NPO，2026-10，URL: https://www.simpletechtrend.com/en/post/ocp-2026-lightcounting-cpo-npo-forecast-scenarios-en ）。需区分口径：实验级净 3.2 Tbps 已有 OFC 2025 同行评审结果（Ciena/HyperLight/McGill，https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1 ），仅"2026 下半年量产商用级模块实测"这一口径公开资料未覆盖。同时 TFLN 晶圆级良率已有 imec/根特 4×200 mm 中试线一手公开基线（https://arxiv.org/html/2605.28971 ），不能再笼统写"晶圆级良率没人公开"。
 
-本项目意义在于：把上述"材料层突破"推进到"晶圆级集成与可制造性"，回答评审最关心的三个现实问题——材料与 CMOS 工艺如何兼容、晶圆级均匀性如何保证、良率与成本如何可控。这三点正是当前公开资料未覆盖、也是从单点演示走向 3.2T 级量产所必须回答的。
+本项目意义在于：把上述"材料层突破"推进到"晶圆级集成与可制造性"，回答评审最关心的三个现实问题——材料与 CMOS 工艺如何兼容、晶圆级均匀性如何保证、良率与成本如何可控。其中"晶圆级均匀性/良率已有公开基线"这一点在 TFLN 印刷转移路线上已被 imec 中试线证实（https://arxiv.org/html/2605.28971 ），但 PZT 铁电畴器件的器件级 Vπ·L/带宽/插损全片分布、片内/片间良率与批间标准差，以及 PZT 含铅/高温工艺的后段 CMOS 兼容定量规范与良率—成本模型仍公开未覆盖——这才是本项目真正要补的缺口，也是从单点演示走向 3.2T 级量产必须回答的。
 
 ## 二、国内外研究现状与缺口
 
@@ -29,11 +29,11 @@
 | 维度 | 硅基载流子耗尽型（已报道、量产主力） | 薄膜 PZT（已报道、晶圆级突破） | 薄膜铌酸锂 TFLN（已报道、产业推进） |
 |---|---|---|---|
 | 电光机制 | 自由载流子色散（PN 结耗尽） | 铁电 Pockels 效应 | 铌酸锂 Pockels 效应 |
-| 代表数据 | 公开资料未覆盖本项目采用的硅基同口径 Vπ·L/带宽对照硬数字（LightCounting 给出的是市场与集成度数据，非器件指标） | 8 英寸晶圆、Vπ·L=1.19 V·cm、70 GHz、单波 224 Gbps、16 通道 WDM→3.2 Tbps（Nat Commun 2026-11-20） | 单波 400G、1.6T/3.2T 目标（犀里光电 Pre-A，2026-09）；具体器件实测公开资料未覆盖 |
-| 晶圆/工艺 | 与 CMOS 同平台、成熟 | DUV stepper 于 8 英寸 SiO2/Si，CMOS 兼容性仍待验证 | 与硅光平台集成方案在推进，晶圆级数据公开资料未覆盖 |
+| 代表数据 | Vπ·L 典型 1–2.5 V·cm、带宽 30–60 GHz、损耗 5–30 dB/cm（载流子耗尽同口径，机理报告，https://www.kithminrw.com/silicon-photonics-lasers-tutorial/part-5/ch19/ ）；另有一手期刊值 2–5 V·cm、带宽 <50 GHz（https://www.nature.com/articles/s41467-026-78128-1 ） | 8 英寸晶圆、Vπ·L=1.19 V·cm、70 GHz、单波 224 Gbps、16 通道 WDM→3.2 Tbps（Nat Commun 2026-11-20）；器件级 Vπ·L/带宽全片分布与良率仍公开未覆盖 | 推挽 MZI Vπ·L≈2.6 V·cm（间隙 5 µm、Γ=0.5，https://www.nature.com/articles/s41586-018-0551-y ）；单波 400G 实测芯片 >110 GHz/Vπ~3V（易缆微，2025-09，https://www.eet-china.com/mp/a440906.html ）；3.2T 实验级已实测（OFC 2025）、量产商用级 2026 H2 未覆盖 |
+| 晶圆/工艺 | 与 CMOS 同平台、成熟 | DUV stepper 于 8 英寸 SiO2/Si，CMOS 兼容性仍待验证 | 与硅光平台异质集成方案在推进；晶圆级良率已有 imec/根特 4×200 mm MTP 中试线公开基线（https://arxiv.org/html/2605.28971 ），但对应关系仍属 TFLN，不与 PZT 混写 |
 | 成熟度 | 量产、市占率第一 | 晶圆级制造首报（2026-11） | 产业化初期（Pre-A 轮） |
 
-注：不同材料体系的数字不得混写为同一器件。上表 PZT 行的器件指标只属于 2026-11-20 Nature Communications 的晶圆级 PZT 光子 IC；TFLN 行只列产业目标与融资事实，不引用 PZT 的 Vπ·L 或带宽。
+注：不同材料体系的数字不得混写为同一器件。上表 PZT 行的器件指标只属于 2026-11-20 Nature Communications 的晶圆级 PZT 光子 IC；TFLN 行只列 TFLN 自身的推挽 Vπ·L、实测芯片与产业目标，不引用 PZT 的 Vπ·L 或带宽。晶圆级良率口径需分材料：TFLN 印刷转移路线已有 imec 中试线 >95% 公开基线，PZT 器件级良率/均匀性仍公开未覆盖；硅基 Vπ·L 为 MZM 半波电压长度积，与微环 pm/V 效率不同量纲，勿混。
 
 ### 2.2 硅基调制器：市场主导与物理极限
 
@@ -41,11 +41,11 @@
 
 ### 2.3 薄膜 PZT：晶圆级突破已现，可制造性待答
 
-2026-11-20 Nature Communications 的晶圆级 PZT 光子 IC 是本方向最关键的证据：8 英寸 SiO2/Si 晶圆、DUV stepper、Vπ·L=1.19 V·cm、70 GHz、单波 224 Gbps、16 通道 WDM 指向 3.2 Tbps（URL: https://www.nature.com/articles/s41467-026-79721-0 ）。该工作把此前"小片 PZT 工艺"推进到晶圆级制造，是"已报道"层面最强的起点。但公开资料未覆盖其晶圆级良率、批间均匀性、与后段 CMOS/封装工艺的兼容性细节——这恰恰是本项目要补的缺口。另一篇 2026-07-23 Nature Communications 的 PZT 拓扑调制器光子加速器（266 TOPS/mm²、1000× 重构、近零静态功耗、95.64%/94.5% 精度，URL: https://www.nature.com/articles/s41467-026-75993-8 ）说明 PZT 材料在高密度光子计算上同样有潜力，但其指标属"光子计算加速器"器件，不得与调制器互连指标混用。
+2026-11-20 Nature Communications 的晶圆级 PZT 光子 IC 是本方向最关键的证据：8 英寸 SiO2/Si 晶圆、DUV stepper、Vπ·L=1.19 V·cm、70 GHz、单波 224 Gbps、16 通道 WDM 指向 3.2 Tbps（URL: https://www.nature.com/articles/s41467-026-79721-0 ）。该工作把此前"小片 PZT 工艺"推进到晶圆级制造，是"已报道"层面最强的起点。但就 PZT 自身口径而言仍公开未覆盖：原文可访问正文未披露晶圆级良率百分比、片内/片间 Vπ·L 分布、批间均匀性标准差与后段 CMOS 温度预算/污染控制数据（补充材料需人工下载再核）；器件级 Vπ·L—带宽积的独立可引用数字此前受订阅墙限制（ACS Photonics 2024, DOI 10.1021/acsphotonics.4c02113，https://doi.org/10.1021/acsphotonics.4c02113 ；机理报告亦标"未覆盖"）。需注意：TFLN 印刷转移路线的晶圆级良率已被 imec/根特公开（https://arxiv.org/html/2605.28971 ），故"公开资料未覆盖"只针对 PZT 器件级均匀性/良率/兼容性，不再泛指所有薄膜材料。这恰是本项目要补的缺口。另一篇 2026-07-23 Nature Communications 的 PZT 拓扑调制器光子加速器（266 TOPS/mm²、1000× 重构、近零静态功耗、95.64%/94.5% 精度，URL: https://www.nature.com/articles/s41467-026-75993-8 ）说明 PZT 材料在高密度光子计算上同样有潜力，但其指标属"光子计算加速器"器件，不得与调制器互连指标混用。
 
 ### 2.4 薄膜铌酸锂：产业化推进，晶圆级数据稀缺
 
-TFLN 被视为 3.2T+ 单波/CPO 的中长期高端路线（约 2028 后规模化），犀里光电 Pre-A 融资指向单波 400G 及 1.6T/3.2T（URL: https://www.chinastarmarket.cn/detail/2487874 ）。其挑战在于铌酸锂薄膜转移、刻蚀侧壁粗糙度、与硅光平台的异质集成，以及晶圆级一致性。当前公开资料对 TFLN 晶圆级良率与 3.2T 实测商用数据未覆盖，属"实验室/产业化初期"阶段。更广义地，"以新材料电光效应替代硅载流子色散"已形成多条并行路线：NLM Photonics 与 SilOriX 于 2026-09-21 签署联合开发协议，结合 SilOriX 的硅-有机混合（SOH）调制器设计与 NLM 的 Selerion-HTX 电光材料，目标提升调制性能、带宽与能效并支持可扩展硅光制造（URL: https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries ）。这类努力与 PZT/TFLN 方向一致，均把"材料—器件—可扩展制造"作为共同命题，也说明晶圆级一致性是待解的共性难题。
+TFLN 被视为 3.2T+ 单波/CPO 的中长期高端路线（约 2028 后规模化），犀里光电 Pre-A 融资指向单波 400G 及 1.6T/3.2T（URL: https://www.chinastarmarket.cn/detail/2487874 ）。其挑战在于薄膜转移、刻蚀侧壁粗糙度、与硅光平台的异质集成，以及晶圆级一致性。需纠偏两处口径：其一，TFLN 晶圆级良率已有 imec/根特大学 4 片完整 200 mm 硅光晶圆微转移印刷（MTP）的一手中试线公开基线——3σ 贴装精度 420 nm、印刷良率 >95%、600 个相位调制器插损 <2 dB、Vπ=4 V（推挽）、带宽 >70 GHz（arXiv:2605.28971，https://arxiv.org/html/2605.28971 ）；已有面向晶圆级 heterogeneous LN 的"变异感知"统计设计与 Sobol 方差分解方法（arXiv:2605.28765，https://arxiv.org/html/2605.28765 ）。其二，3.2T 实验级净吞吐已有 OFC 2025 同行评审结果（https://opg.optica.org/abstract.cfm?URI=OFC-2025-Th4B.1 ），仅"2026 下半年量产商用级实测"公开资料未覆盖。因此"公开资料未覆盖"在 TFLN 上已不成立，应保留在 PZT 器件级。更广义地，"以新材料电光效应替代硅载流子色散"已形成多条并行路线：NLM Photonics 与 SilOriX 于 2026-09-21 签署联合开发协议，结合 SilOriX 的硅-有机混合（SOH）调制器设计与 NLM 的 Selerion-HTX 电光材料，目标提升调制性能、带宽与能效并支持可扩展硅光制造（URL: https://www.openpr.com/news/4694210/silicon-photonics-market-gains-momentum-as-globalfoundries ）。这类努力与 PZT/TFLN 方向一致，均把"材料—器件—可扩展制造"作为共同命题，也说明晶圆级一致性是待解的共性难题。
 
 ### 2.5 缺口总结
 

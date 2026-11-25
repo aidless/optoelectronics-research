@@ -1,0 +1,153 @@
+{
+  "direction": "光电探测物理极限",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "散粒噪声极限与NEP的物理推导",
+      "physics": "光生载流子是离散的泊松过程，电流涨落功率谱密度为双边散粒噪声 ⟨i_sh²⟩=2qIΔf（谱密度 2qI A²/Hz，q=1.602e-19 C），故均方根噪声电流 ∝√(2qI·Δf)，这是探测器灵敏度的量子底线。NEP 定义为信噪比 SNR=1 时所需的入射光功率：NEP = i_n / R_res（i_n 为噪声电流谱密度 A/√Hz，R_res 为响应度 A/W）。比探测率 D* = R√(A_d·Δf)/i_n，把面积与带宽归一化，单位 Jones = cm·√Hz/W。光伏(pn)探测器零偏时 ⟨i_sh²⟩=2q(I₀e^{qV/kT}+I₀)Δf，V=0 退化为 4qI₀Δf = 4k_BTΔf/R_d，即零偏散粒噪声等价于热噪声。高温/高频下白噪声(散粒+热)主导；低频必须计入 1/f 与产生-复合噪声，否则 D* 被严重高估。",
+      "numbers": "q=1.602e-19 C；⟨i_sh²⟩=2qIΔf（散粒噪声）；零偏 ⟨i_sh²⟩=4qI₀Δf=4k_BTΔf/R_d；NEP=i_n/R_res [W/√Hz]；D*=R√(A_d Δf)/i_n [Jones=cm·√Hz/W]；光电导G-R噪声 ⟨i_gr²⟩=4qIGΔf。",
+      "urls": [
+        "https://www.nature.com/articles/s41467-023-37635-1",
+        "https://cdr.lib.unc.edu/downloads/1n79h9606",
+        "https://doi.org/10.1364/ao.1.000627"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "理想探测器的极限D*与BLIP背景限",
+      "physics": "当噪声仅剩背景光子散粒噪声(光子噪声极限)时达到背景限制红外性能 BLIP；理想无暗电流探测器的 D* 由背景辐射而非器件决定。D* 随波长、背景温度、视场变化，故必须标注口径(波长/带宽/面积/背景温度)。实际器件若忽略 1/f 与 g-r 噪声或用错有效面积/光功率密度，会算出超过 BLIP 的虚高 D*，这在低维探测器文献中是系统性问题。",
+      "numbers": "Ge/InGaAs/PbS/HgCdTe 等无机半导体 D* 接近或高于 10^10 Jones (Adv. Mater. 2020)； ignoring g-r/1/f 噪声会算出超过 BLIP 的 D* (Nat. Commun. 2023)；BLIP 判据需固定背景温度与视场。",
+      "urls": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/adma.202003818",
+        "https://www.nature.com/articles/s41467-023-37635-1",
+        "https://spie.org/samples/PM280.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "暗电流来源与散粒噪声底线的差距",
+      "physics": "暗电流在无光照时提供散粒噪声基底 I_dark，直接抬高噪声底线(NEP=I_n/R)。五类机制：(1)扩散电流——中性区少数载流子扩散，激活能≈Eg；(2)SRH 产生-复合——耗尽区中近中隙陷阱是高效产生中心(载流子被扫空，产生远大于复合)，激活能≈Eg/2；(3)陷阱辅助隧穿 TAT(Hurkx 模型)——强场下经中间陷阱隧穿，随电场陡升；(4)带间隧穿 BTBT(Kane 模型)——直接价带→导带隧穿，∝exp(−B/F)，窄带隙材料(InGaAs/HgCdTe/GeSn)尤甚；(5)表面漏电——悬空键/污染/应变在界面引入产生中心，随周长/面积比增大而更重要。实际器件暗电流远高于理想扩散极限，因此实际噪声底线显著高于纯散粒噪声极限；制冷(指数抑制热激活机制)与钝化/保护环/吸杂是主要抑制手段。",
+      "numbers": "HgCdTe 中 TAT 在反偏>≈30 mV 即主导；Si PIN 100–400 K 暗电流变化达数个数量级而光电流基本不变；240 K 以上每降温约15 K 暗电流降约1个数量级；PQED 二极管暗电流从室温 nA 级降至 77 K pA 级(降数个数量级)；≤30 μm 像元节距表面漏电可压倒其他机制；激活能诊断：≈Eg 为扩散主导，≈Eg/2 为 SRH 主导，远低于 Eg/2 提示隧穿。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13117859/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "APD雪崩倍增噪声与过剩噪声因子F",
+      "physics": "APD 靠碰撞电离获得内增益 M，但电离是随机过程，引入过剩噪声因子 F(乘性噪声)。局域模型 McIntyre 公式：F = kM + (2 − 1/M)(1 − k)，其中 k=β/α 为空穴/电子电离系数比；k 越小(纯电子注入) F 越低，增益带宽积也越高。死空间(载流子获得电离能量所需最小距离)可进一步降低 F。Si 在 <1000 nm k 极低、F 小而增益高；SWIR 常用 InGaAs 吸收+InP/InAlAs 倍增，因 α、β 不悬殊，F 随 M 快速上升限制灵敏度。某些新材料(AlGaAsSb)出现低于 McIntyre 预测的反常低 F，需用 Weibull–Fréchet 电离概率分布解释。",
+      "numbers": "McIntyre: F=kM+(2−1/M)(1−k)，k=β/α；厚 AlGaAsSb APD 实测 F=2.2 @ M=38(低于经典 McIntyre 预测)；倍增区宽度 390–1020 nm；电场范围 400–675 kV/cm；Si 适用 <1000 nm，InGaAs/InP 倍增区 F 随 M 快速上升。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10279724/",
+        "https://chem.uci.edu/~unicorn/243/papers/AvalanchePD.pdf",
+        "https://pubs.aip.org/aip/jap/article-lookup/doi/10.1063/1.117205"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "SPAD暗计数率与探测效率权衡",
+      "physics": "SPAD 工作在 Geiger 模式(偏压高于击穿)，单个载流子即可触发自持雪崩；热产生载流子触发的虚假雪崩即暗计数率 DCR。核心权衡：光子探测效率 PDE、DCR、后脉冲(陷阱俘获载流子延迟释放再触发)、定时抖动 jitter、死时间(淬灭与复位)。长波 InGaAs SPAD 需制冷抑制 DCR；Si SPAD 室温即可低 DCR 高 PDE 但受带隙限制只能探可见/近红外。",
+      "numbers": "Si SPD PDE>84% (arXiv:2507.18172, 2025)；InGaAs SPAD PDE≈30%、DCR≈1 kHz–数十 kHz、jitter<100 ps (IOP 2014)；50 μm InGaAs SPAD：死时间40 ns、DCR 1.3 kHz、后脉冲11.7% @ 8% PDE/1550 nm/203 K，最大 PDE 26% (Cell Rep. Phys. Sci. 2025)。以上器件数字各为单篇来源。",
+      "urls": [
+        "https://iopscience.iop.org/article/10.1088/1674-1056/23/12/120308",
+        "https://cell.com/cell-reports-physical-science/pdfExtended/S2666-3864(25)00045-1",
+        "https://arxiv.org/abs/2507.18172",
+        "http://ieeexplore.ieee.org/document/6847158"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "SNSPD系统探测效率/暗计数/恢复时间",
+      "physics": "超导纳米线单光子探测器(SNSPD)在超导转变温度以下偏流工作，光子打破库珀对形成热点→电阻态→可测电压脉冲。系统探测效率 SDE = 内禀探测效率 × 吸收效率(由纳米线填充比/光学腔决定)；暗计数来自黑体辐射、涡旋、噪声；恢复时间由纳米线动能电感与偏流决定，限制最大计数率。近单一效率需同时满足近单一光子响应概率与近单一吸收。",
+      "numbers": "NbN 双层纳米线+介质镜：0.8 K 下 SDE 峰值 98% @1590 nm，1530–1630 nm 全域>95%；2.1 K 紧凑两级制冷机下 SDE 95% @1550 nm；45 只同批器件良率 73%(SDE>80%)/36%(SDE>90%) @2.1 K (Optica 2020 / arXiv:2009.14690)。",
+      "urls": [
+        "https://arxiv.org/abs/2009.14690",
+        "https://opg.optica.org/abstract.cfm?URI=optica-7-12-1649"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光子数分辨SNSPD(2025前沿)",
+      "physics": "双层纳米线+介质镜实现近单一效率，分段设计实现空间复用，脉冲幅度与载入光子数建立映射，从而兼得高 SDE 与光子数分辨(PNR)。探测器层析(detector tomography)给出多光子事件保真度。",
+      "numbers": "单光子 SDE≈98% @暗计数率 20 cps；光子数分辨最高达 32；计数率 41 MHz @3dB-SDE；定时抖动低至 40 ps；2/3/4 光子事件保真度约 87%/73%/40% (arXiv:2504.02202, 2025-04-03)。",
+      "urls": [
+        "https://arxiv.org/abs/2504.02202"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光电导增益与产生-复合噪声",
+      "physics": "光电导探测器增益 g = τ_life/t_transit(载流子寿命/渡越时间)：陷阱延长寿命→多个载流子在一次复合前循环通过电路→高增益。但增益与带宽受 gain-bandwidth 积制约(寿命长则带宽低)。深能级陷阱的俘获/发射随机涨落产生产生-复合(G-R)噪声 ⟨i_gr²⟩=4qIGΔf，当 4π²f²τ²≪1 时 G-R 噪声主导光电导探测器；忽略它会严重高估 D*。",
+      "numbers": "⟨i_gr²⟩=4qIGΔf (光电导增益 G)；响应度 R=η q g λ/(h c)；g=τ_life/t_transit；R(f)=R₀/√(1+4π²f²τ²)，−3dB 带宽 f_c 处降至 0.707 R₀ (Nat. Commun. 2023；ACS Photonics 2023)。",
+      "urls": [
+        "https://www.nature.com/articles/s41467-023-37635-1",
+        "https://pubs.acs.org/doi/10.1021/acsphotonics.2c01672"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "量子效率与响应度理论上限(λ/1.24)",
+      "physics": "若每个能量 hν≥Eg 的入射光子最多产生一个被收集的电子-空穴对，则光电流 I_ph=q·η_QE·(P_opt/hν)，响应度 R_λ=I_ph/P_opt=qη_QE/(hν)=qη_QEλ/(hc)。代入 hc/q≈1.24 μm·V 得 R_λ(A/W)=η_QE·λ(μm)/1.24。故 η_QE=100% 时理论上限即 R=λ(μm)/1.24 A/W——波长越长(单光子能量越低)同样功率含更多光子，响应度越高。",
+      "numbers": "R_λ=qη_QE/(hν)=η_QE·λ[μm]/1.24 A/W；hc/q=1.2398 μm·V；η=100%@1550 nm→R=1.55/1.24≈1.25 A/W；示例 η=0.9@850 nm→R≈0.62 A/W。",
+      "urls": [
+        "https://dmccreary.github.io/semiconductor-physics-course/chapters/18-photodetectors-solar-cells/",
+        "https://courses.ece.ucsb.edu/ECE228/228B_W08Blumenthal/Lecture2.pdf",
+        "https://courses.cit.cornell.edu/ece533/Lectures/handout5.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "内量子效率>100%(雪崩/多激子)",
+      "physics": "当单个高能光子产生不止一个电子-空穴对时，光子→e-h 对转换的内量子效率 η_eh>1(>100%)。两条路径：(1)雪崩/碰撞电离——APD 内增益 M 使每光子输出 M 个载流子(以过剩噪声 F 为代价)；(2)载流子倍增 CM/多激子产生 MEG——一个高能光子经碰撞电离产生多个激子，量子限域放宽动量守恒使阈值降至 2Eg(能量守恒极限)。声子冷却与电离竞争(r_gain/r_loss)限制 CM 产额，可用磁杂质介导的自旋交换加速能量转移。",
+      "numbers": "CM 阈值可降至 2Eg (能量守恒终极极限)；r_gain/r_loss<≈0.3 限制常规 CM 产额 η_CM=η_eh−1；Mn 掺杂 CdSe/HgSe 量子点自旋交换 CM (Nat. Commun. 2025)；锡-铅卤化物钙钛矿纳米晶 MEG 提升光电流量子效率 (Nat. Photonics 2022)。",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11947303/",
+        "https://nature.com/articles/s41566-022-01006-x.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "相干探测vs直接探测与量子极限",
+      "physics": "直接探测只能测光强，弱信号自身散粒噪声与电路热噪声限制灵敏度。相干探测把弱信号与强本振 LO 在分光/混频后探测，信号项∝√(P_sig·P_LO)被 LO 放大，噪声由 LO 散粒噪声主导(可先验已知量子态)，因此能逼近量子(散粒噪声)极限，灵敏度与选择性提升的代价是系统复杂度、需频率/相位锁定。绝对上界是 Holevo 限(信道容量界)，逼近它需量子受限收发机。",
+      "numbers": "相干接收机在散粒噪声受限条件下可逼近 9 photons/bit @BER 10⁻⁹ (IEEE JQE 2006)；Holevo 限界定要达到信道容量上界需量子受限收发机 (arXiv:2604.07087, 2026-05)；相干 vs 直接：灵敏度/选择性↑，复杂度↑ (Berkeley ERL-88-16)。",
+      "urls": [
+        "https://doi.org/10.1109/jqe.2006.881413",
+        "https://arxiv.org/html/2604.07087v1",
+        "http://eecs.berkeley.edu/Pubs/TechRpts/1988/ERL-88-16.pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "2026前沿：逼近标准量子极限的光子探测与成像",
+      "physics": "光子数分辨(PNR)探测结合主动光子数滤波算法，可抑制强背景/多光子噪声，使单光子 LiDAR 逼近标准量子极限；量子启发成像利用纠缠/关联在强噪声背景中提取信号。前沿还包括近单一效率 SNSPD、室温长波单光子探测、面向 Holevo 限的量子受限收发。",
+      "numbers": "PNR LiDAR 逼近标准量子极限，可低至 1 photon/pixel (Light Sci. Appl. 14:206, 2025-05-22)；噪声容忍 LiDAR 逼近标准量子极限精度 (Light Sci. Appl. s41377-025-01790-5, 2025-03-20)；紧凑全光纤量子启发 LiDAR 实现 >100 dB 噪声抑制 (Nat. Commun. 2023)；室温 1550 nm 单光子探测(vdW 异质结, arXiv:2509.05455, 2026-11)。各数字多为单篇来源。",
+      "urls": [
+        "https://nature.com/articles/s41377-025-01880-4",
+        "https://nature.com/articles/s41377-025-01790-5.pdf",
+        "https://preview-www.nature.com/articles/s41467-023-40914-6",
+        "https://arxiv.org/pdf/2509.05455"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "量子照明(Quantum Illumination)协议硬数字",
+      "physics": "Lloyd 量子照明用纠缠光子对(信号+闲置)在高损耗强噪声信道中，通过联合量子测量获得相对经典照明的误差指数优势，理论上在强背景/高损耗下优势显著。本轮两轮关键词检索('quantum illumination LiDAR' / 'quantum limit imaging 2024 2025')命中多为量子启发 LiDAR、噪声容忍激光雷达与量子受限收发，未落到给出 QI 协议硬数字(误差指数增益、纠缠源亮度等)的一手论文。",
+      "numbers": "未覆盖：两轮检索未取得量子照明协议的一手硬数字；可参照的相邻结果为量子启发 LiDAR >100 dB 噪声抑制(Nat. Commun. 2023)，但不能替代 QI 协议数字。",
+      "urls": [],
+      "status": "未覆盖"
+    }
+  ],
+  "key_insights": [
+    "散粒噪声底线是 ∝√(2qI)：NEP=i_n/R，D*=R√(A·Δf)/i_n [Jones]，理想无暗电流探测器的 D* 由背景散粒噪声(BLIP)决定，Ge/InGaAs/PbS/HgCdTe 可达 ~10^10 Jones 量级；低频忽略 1/f 与 g-r 噪声会把 D* 算到虚假地超过 BLIP。",
+    "实际探测器噪声底线由暗电流抬高，远高于理想散粒极限：SRH 产生-复合(激活能≈Eg/2)、TAT(HgCdTe 反偏>30 mV 即主导)、BTBT(窄带隙严重)、表面漏电(≤30 μm 像元可压倒其他)；制冷是最普适的抑制手段(每降 ~15 K 暗电流约降一个数量级)。",
+    "APD 用内增益换灵敏度但付出过剩噪声 F=kM+(2−1/M)(1−k)；k=β/α 小(纯电子注入)才低噪，InGaAs/InP 因 k 不悬殊 F 随 M 快速上升；光子数分辨 SNSPD 2025 已达 SDE≈98% @DCR 20 cps、抖动 40 ps，几乎触及单光子探测极限。",
+    "量子效率 100% 对应响应度上限 R=λ(μm)/1.24 A/W(源于 hc/q≈1.24 μm·V)；载流子倍增/多激子可使内量子效率>100%(CM 阈值可低至 2Eg)，但要以过剩噪声或复杂材料体系为代价。",
+    "相干探测借强本振把信号放大到 LO 散粒噪声受限，可逼近 9 photons/bit 与 Holevo 量子极限；单光子 LiDAR 借光子数分辨已逼近标准量子极限(低至 1 photon/pixel)。"
+  ],
+  "open_questions": [
+    "量子照明(Lloyd QI)协议在 2026 年的一手硬数字(误差指数增益、纠缠源亮度、损耗阈值)未取得，两轮检索只命中量子启发 LiDAR——需定向检索 Optica/Phys. Rev. Lett. 的 QI 实验论文。",
+    "SPAD 各器件 DCR/PDE/后脉冲数字目前各为单篇来源，未做同条件交叉核验；Si SPD PDE>84% 与 InGaAs 低温 DCR 数据的口径(温度/波长/死时间)需统一后再列对比表。",
+    "'理想探测器极限 D*' 的唯一确定数字依赖背景温度、波长与视场口径，未找到单一权威'普适常数'；10^10 Jones 是材料类量级而非绝对上限，引用时须附口径。",
+    "两篇 PDF(arXiv:1208.4205、Polish Acad. PDF)抓取失败，SPAD 门控细节与探测综述的部分数字未直接读到原文，现有结论取自其他可访问来源。"
+  ]
+}

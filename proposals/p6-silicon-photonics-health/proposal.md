@@ -18,7 +18,7 @@
 
 器件侧的三项代表性成果给出了灵敏度的下界证明。硅光光声路线以单探测元读取桡动脉光声信号（NEP 2 mPa/√Hz、125 MHz 带宽、100 Hz 采样），并用对准容差实验回应用户佩戴一致性质疑（Nature Communications，2026-09-17）。宽带光谱路线以低成本卷积光谱仪在模拟生理环境中测得皮肤水分、血醇、血乳酸与血糖，并对一名受试者进行长时间无创血糖追踪（Nature Photonics；ScienceDaily 2026-10-26 再报道）。多波长 PPG 路线在 42 名新生儿上取得 9378 个测试片段、SBP/DBP MAE 9.67/6.17 mmHg，SQI≥0.85 时降至 8.22/4.98 mmHg（Advanced Science；上海交大，2026-09-22）。
 
-监管侧的进展改变了转化语境。Conavi OCTIV 混合冠脉成像系统（OCT+IVUS）已获 FDA 510(k) 批准，并于 2026-11 完成美国首台商业化装机，上市前两周约 25 例临床使用（StockTitan，2026-11-19，二手公司新闻稿聚合）。Neola 近红外无创早产儿肺监测于 2026 年 9 月获 FDA 突破性设备认定，季度结束后进入 FDA TAP Pilot（公司 Q3 报告，2026-11-18）。需明确：**突破性设备认定不等同于上市批准**，Neola 仍处认定与试验通道阶段。
+监管侧的进展改变了转化语境。Conavi OCTIV 混合冠脉成像系统（OCT+IVUS）已获 FDA 510(k) 批准，并于 2026-11 完成美国首台商业化装机，上市前两周约 25 例临床使用（StockTitan，2026-11-19，二手公司新闻稿聚合）。Neola 近红外无创早产儿肺监测于 2026 年 9 月获 FDA 突破性设备认定，季度结束后进入 FDA TAP Pilot（公司 Q3 报告，2026-11-18）。但**突破性设备认定不等同于上市批准**：公司已报道的首个临床 pilot 仅 10 名早产儿、单中心安全性与耐受性结果，美国正式临床拟在监管反馈前提下于 2027 年中启动，目前无任何上市批准（Neola，2026-04-21，https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development ）。Neola 仍处认定与试验通道阶段。
 
 意义落在证据而非概念：当器件性能已不是主要瓶颈，能否把"单受试者/小规模/模拟环境"的演示，升级为跨人群、真实佩戴条件下可复核的临床可靠性证据，并据此选择监管路径，是决定这类技术能否进入临床的关键。市场侧多家机构给出 2032 年约 1306 亿美元（ResearchAndMarkets，2026-11-03）等预测，但各家口径不一、不可直接比较，仅作背景，不构成本项目的立论依据。
 
@@ -30,12 +30,13 @@
 |---|---|---|---|
 | **已获 FDA 批准并已装机** | Conavi OCTIV 混合冠脉成像（OCT+IVUS） | FDA 510(k) 已批；2026-11 完成美国首台商业装机；上市前两周约 25 例临床使用（StockTitan，2026-11-19，二手聚合，细节以官方后续披露为准） | 腔内光子成像的"批准—装机—临床反馈"闭环已跑通，可作为转化路径的对照样本 |
 | **已获 FDA 批准（治疗类，非监测）** | Ameluz 红光 PDT 治疗浅表基底细胞癌 | 2026-09-14 经 sNDA 扩适应症获批，为美国首个获批治疗皮肤癌的 PDT（BioSpace，2026-09-14） | 光子治疗监管先例成熟，但与本项目无创监测的证据要求不同，不直接外推 |
-| **FDA 突破性设备认定（≠上市批准）** | Neola 近红外早产儿肺监测 | 2026-09 获突破性设备认定；2026-11 进入 TAP Pilot；可检测气胸与肺塌陷（Neola Q3，2026-11-18） | 新生儿/ICU 是伦理友好型临床验证的优先场景；认定只是通道资格，不是批准 |
-| **FDA 510(k)（二手报道，编号待核）** | Happy Ring 无袖带血压智能戒指 | 2026-10 报道获 510(k)，号称首款无需袖带与外部校准的持续被动血压可穿戴；具体编号、型号与临床验证数据公开资料未覆盖，需查 FDA 510(k) 原始数据库（动脉网，2026-10-14） | 不纳入确证证据；作为"必须回原始数据库核验"的反面教材写入证据纪律 |
+| **FDA 突破性设备认定（≠上市批准）** | Neola 近红外早产儿肺监测 | 2026-09 获突破性设备认定；2026-11 进入 TAP Pilot；可检测气胸与肺塌陷（Neola Q3，2026-11-18）。首个临床 pilot 仅 10 例早产儿单中心安全性结果，美国正式临床拟 2027 年中启动（Neola，2026-04-21，https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development ） | 新生儿/ICU 是伦理友好型临床验证的优先场景；认定只是通道资格，不是批准 |
+| **FDA 510(k)（编号已核实，但批准范围窄）** | Happy Ring 无袖带血压智能戒指（Happy Health Blood Pressure Monitor） | FDA 510(k)=K254000，产品码 DXN（21 CFR 870.1130，Class II），2026-09-03 决定 SESE；临床按 ISO 81060-2 做 85 例/850 次有创动脉内压对照；但适应症限 22–50 岁、点测、仅测量与显示不做诊断，禁用于运动/低灌注（FDA 原始库 https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000 ；摘要全文 https://fda.innolitics.com/device/K254000 ） | 不再是"编号待核"反面教材；改用"营销措辞≠批准范围"的证据边界案例 |
 | **论文级器件/小规模临床验证** | SPADE；剑桥卷积光谱仪；上海交大 NEO-BP；InnoPIC | SPADE 器件性能见上；剑桥光谱仪为模拟环境+单受试者追踪；NEO-BP 为 42 例/110.66 h；InnoPIC 的 SiN+拉曼+SPAD+AI 方案仍属竞赛孵化/概念阶段（PhotonDelta，2025-08-26） | 共同瓶颈是样本规模、跨人群泛化与长期安全性，而非灵敏度 |
-| **公开资料未覆盖** | 上述路线的人体大规模多中心临床样本数；无创血糖上市时间表；硅光健康监测芯片独立市场规模 | 两份 deep-research 报告一致标注"公开资料未覆盖"；下半年未见更大规模多中心临床更新 | 这就是本立项的核心研究空间 |
+| **仍确认未覆盖（核心研究空间）** | 上述路线的人体大规模多中心临床样本数；按肤色/灌注/运动分层的 >100 例多中心误差数据；硅光健康监测芯片"独立品类"市场规模 | 两轮换词检索后仍确认未覆盖：SPADE 仅健康志愿者前臂器件级验证（https://pmc.ncbi.nlm.nih.gov/articles/PMC13680363/ ），剑桥光谱为模拟环境+n=1，InnoPIC 仍概念阶段；跨分层最强公开证据仅 NEO-BP 42 例新生儿单中心（https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542 ） | 这些是本项目要用实测填补的研究空间，禁止以推测值填充 |
+| **已补（原"未覆盖"项被新证据更新）** | 无创血糖上市时间表；硅光 IC 传感器相邻市场规模 | NMPA 2026-06 批准国产指环式无创+连续血糖仪并于 8 月上市，仍需指尖血校准（中国医药报 https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html ）；须严格区分"纯光学无创"与"经皮/无针 CGM"（FDA 侧为 De Novo/510(k) 的 CGM 类进展）。相邻细分已有公开数据：硅光 IC 传感器 USD 1.4B(2025)→7.2B(2034)、CAGR 19%（marketintelo https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market ），但非"健康监测芯片"专门口径，仅作背景、不作规模测算 | 更新口径但不外推：独立品类规模仍未覆盖，不得据相邻数字做规模论证 |
 
-跨人群泛化已有可量化的警示：多波长 PPG 血压在高运动组误差升至 14.23/11.08 mmHg，模型跨人群泛化不足；拉曼血糖信号极弱，临床级精度尚未公开验证；无创光学测量受肤色、脂肪厚度、灌注、运动伪影与温度影响。监管侧 FDA 已发布无袖带血压设备临床性能测试指南草案，意味着后续产品须按统一性能标准竞争，而非单点宣发。
+跨人群泛化已有可量化的警示：多波长 PPG 血压在高运动组误差升至 14.23/11.08 mmHg，模型跨人群泛化不足；拉曼血糖信号极弱，临床级精度尚未公开验证；无创光学测量受肤色、脂肪厚度、灌注、运动伪影与温度影响。深挖复核进一步确认：截至 2026-11 未找到 >100 例、多中心、按肤色/灌注/运动系统分层的多波长 PPG 血压公开研究，最强证据仍是 NEO-BP 的 42 例单中心回顾性亚组（https://pmc.ncbi.nlm.nih.gov/articles/PMC13679542 ），新增 Sensors 2026 论文标题即标注 exploratory（https://pubmed.ncbi.nlm.nih.gov/43029695 ），rPPG 领域另有性能"degrades systematically across skin tones"的旁证（https://pmc.ncbi.nlm.nih.gov/articles/PMC13372377 ）。监管侧 FDA 已发布无袖带血压设备临床性能测试指南草案，意味着后续产品须按统一性能标准竞争，而非单点宣发。
 
 ## 三、关键科学问题与研究目标
 
@@ -57,7 +58,7 @@
 
 **子课题 3｜人体临床队列设计。** 本项目的核心。设计前瞻性、分层入组、以有创动脉血压或参考级设备为对照的临床验证方案。新生儿/ICU 场景因临床刚需明确、伦理路径相对成熟被优先考虑（对应 Neola 与 NEO-BP 的场景选择）。**样本量、中心数、入组标准、对照金标准均为待定 [PLACEHOLDER]，须在伦理审批与临床合作协议签署后依方案确定，本立项书不预先给出任何具体数值。** 交集配置：临床合作单位 [PLACEHOLDER]、伦理审批状态 [PLACEHOLDER]。
 
-**子课题 4｜数据/算法与监管路径。** 建立误差分层算法与 SQI 可信度评估（对应 NEO-BP 中 SQI≥0.85 的降误差机制），并同步开展监管路径研究：梳理 FDA 无袖带血压临床性能测试指南草案的要求，对照 Happy Ring 报道中"编号待核"的证据缺陷，形成可提交的临床证据包模板。产出为算法流程与监管决策树，不宣称任何注册结果。
+**子课题 4｜数据/算法与监管路径。** 建立误差分层算法与 SQI 可信度评估（对应 NEO-BP 中 SQI≥0.85 的降误差机制），并同步开展监管路径研究：梳理 FDA 无袖带血压临床性能测试指南草案的要求，对照 Happy Ring 案例（编号已核实=K254000，但 22–50 岁/点测/仅显示不诊断/禁运动与低灌注的批准范围窄于宣传）的"营销措辞≠批准范围"证据边界，形成可提交的临床证据包模板。产出为算法流程与监管决策树，不宣称任何注册结果。
 
 ## 五、技术路线与实验方案（方向级）
 
@@ -74,7 +75,7 @@
 
 1. **双模态同点可靠性对照方法**：把光声（SPADE 型）与宽带光谱（剑桥型）两条原本独立发展的路线放到同一佩戴位点、同一分层协议下比较，产出跨模态一致性与误差分解报告。可检验判据：两条路线在四类协变量上的方差贡献比可被独立复算。这不是"提出一个新传感器"，而是提出一个可复用的对照方法。
 2. **面向跨人群泛化的分层验证设计**：针对 NEO-BP 高运动组误差升至 14.23/11.08 mmHg 的公开缺口，把 SQI 阈值与分层入组绑定为可检验假设，产出"SQI 分层前后 MAE 对比曲线"。可检验判据：高运动组 MAE 是否在预设 SQI 阈值下向静息组收敛。
-3. **监管路径作为研究变量**：把 Neola 型（突破性认定→TAP Pilot）与 Conavi 型（直接 510(k)）两条路径作为对照，产出无创连续监测的证据包结构决策树。可检验判据：决策树能否对 Happy Ring 型"编号待核"报道给出明确的证据缺口判定。**特别约束：本贡献绝不等于宣称任何产品已获批上市。**
+3. **监管路径作为研究变量**：把 Neola 型（突破性认定→TAP Pilot）与 Conavi 型（直接 510(k)）两条路径作为对照，产出无创连续监测的证据包结构决策树。可检验判据：决策树能否对 Happy Ring 型"营销措辞宽于批准范围"的报道给出明确的证据边界判定（以 FDA 原始库 K254000 为准）。**特别约束：本贡献绝不等于宣称任何产品已获批上市。**
 
 ## 七、可行性与已有基础
 
@@ -109,7 +110,7 @@
 | **伦理审批延期** | 首轮伦理未在计划节点获批 | 先完成体模/动物与算法仿真，把队列阶段整体后移；同步准备多中心伦理互认方案 [PLACEHOLDER]；不提前开展任何人体采集 |
 | **跨人群泛化不足** | 高运动组 MAE 未随 SQI 阈值收敛（复现 14.23/11.08 mmHg 型退化） | 收窄适用人群声明，把结论降级为"边界确认"；公开标注失效子群，不做泛化承诺 |
 | **无创血糖信号过弱** | 光谱路线在体模上无法达到可分辨信噪比（InnoPIC 型风险） | 该路线降为审慎探索，主线转向光声血压与肺监测；保留光谱路线为对照臂而非核心交付 |
-| **监管语义误读** | 外部传播把突破性认定写成"获批上市" | 全文与对外材料强制使用"突破性设备认定（≠上市批准）"；引用 Happy Ring 型二手报道时标注编号待核，须回 FDA 510(k) 原始库核验 |
+| **监管语义误读** | 外部传播把突破性认定写成"获批上市" | 全文与对外材料强制使用"突破性设备认定（≠上市批准）"；引用 Happy Ring 型报道一律以 FDA 原始库 K254000 为准（https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000 ），并区分营销措辞与批准范围（22–50 岁/点测/不诊断/禁运动与低灌注），不得沿用旧稿"编号待核"口径 |
 | **数据隐私** | 连续生理波形属敏感健康数据 | 数据去标识与访问控制写入采集协议；存储与共享方案 [PLACEHOLDER] |
 
 ## 十一、经费与条件概要
@@ -126,10 +127,14 @@
 4. Neola Medical，Q3 Report 2026 – FDA Breakthrough Device Designation（认定≠批准），2026-11-18。https://neolamedical.com/mfn_news/neola-medical-q3-report-2026-fda-breakthrough-device-designation-strengthens-u-s-regulatory-pathway
 5. 上海交通大学，柔性多波长 PPG 新生儿无创连续血压（Advanced Science，NEO-BP），2026-09-22。https://news.sjtu.edu.cn/jdzh/20260922/226182.html
 6. PhotonDelta，InnoPIC 无创连续血糖（SiN PIC+拉曼+SPAD+AI，概念阶段），2025-08-26。https://www.photondelta.com/news/integrated-photonics-for-healthcare-and-biomedical
-7. 动脉网（信源：器械之家），Happy Ring 智能戒指 FDA 510(k) 报道（二手，编号待核），2026-10-14。https://www.vbdata.cn/intelDetail/1118328
+7. FDA 510(k) 原始数据库，Happy Health Blood Pressure Monitor（Happy Ring），K254000、产品码 DXN/Class II，决定日 2026-09-03（一手）。https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K254000 （二手报道对照：动脉网 https://www.vbdata.cn/intelDetail/1118328 ，2026-10-14）
 8. Yahoo Finance / ResearchAndMarkets，Biophotonics: Global Strategic Business Report 2026，2026-11-03。https://finance.yahoo.com/healthcare/articles/biophotonics-global-strategic-business-report-144500184.html
 9. ZEISS，EURETINA 2026 扩展 Retina Workflow（ALTA DUO 300、CR3），2026-09-24。https://www.zeiss.com/meditec-ag/en/media-news/press-releases/2026/euretina.html
 10. BioSpace，FDA 批准 Ameluz 红光 PDT 治疗浅表基底细胞癌，2026-09-14。https://www.biospace.com/press-releases/biofrontera-announces-fda-approval-of-ameluz-red-light-pdt-for-the-treatment-of-superficial-basal-cell-carcinoma
+11. Innolitics FDA 510(k) 摘要镜像，K254000 临床全文：85 例/850 次有创动脉内压对照（ISO 81060-2），适应症 22–50 岁、点测、仅显示不诊断、禁运动/低灌注。https://fda.innolitics.com/device/K254000
+12. Neola Medical，首个临床 pilot 安全性结果（10 例早产儿、单中心；拟 2027 年中在美国启动正式临床），2026-04-21。https://neolamedical.com/mfn_news/neola-medical-reports-positive-safety-results-from-first-clinical-pilot-study-and-advances-towards-next-phase-of-clinical-development
+13. MarketIntelo，Silicon Photonic Integrated Circuit Sensors Market（相邻细分，USD 1.4B(2025)→7.2B(2034)、CAGR 19%，非健康监测芯片专门口径），2026-06-24。https://marketintelo.com/report/silicon-photonic-integrated-circuit-sensors-market
+14. 中国医药报，国产指环式无创+连续血糖仪 2026-06 获 NMPA 批准、2026-08-06 上市（仍需指尖血校准），2026-07-11。https://bk.cnpharm.com/zgyyb/2026/07/11/325410.html
 
 ---
 

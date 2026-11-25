@@ -1,0 +1,121 @@
+{
+  "direction": "新型显示与成像技术路线之争",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "Micro LED vs OLED vs LCD：量产胜出判据是像素级良率×转移节拍×晶粒成本，而非单点画质",
+      "physics": "路线对立：LCD靠成熟面板产能/低成本占主流，OLED靠自发光、无限对比度和轻薄夺高端，但有机材料对水氧/热敏感、蓝光子像素寿命短；Micro LED理论兼具高亮、高效率、长寿命与无限对比度，但必须把数千万颗微米级LED逐个转移并修复。判据是每颗die的制造良率、转移良率、检测/修复速度、贴装精度与节拍，以及总成本能否接近OLED。量产与实验室分层：Micro LED 2010年代初已商业化于小尺寸/高端，但通用电视仍未翻盘；SID/Yole 2025指出2020-2023后质量进入平台期、Apple取消10年约30亿美元智能手表Micro LED项目；当前>20台转移设备/15+厂商仅适合中试和首批产品，Fluidic self-assembly仍在研究阶段。LCD早期以更低功耗/重量在2000年代初取代CRT，LC响应5-25ms（overdrive ~1ms）；OLED完美黑但蓝色EQE<25%、1000 nits下寿命<500 h、亮度约10^3 nits制约AR；Micro LED小die效率下降推高功耗，15×30/20×40 µm尺寸已平台化。",
+      "numbers": "口径需区分：①像素数口径：4K >2400万子像素、8K约1亿子像素；即使良率99.99999%，4K屏仍约2颗坏LED（MicroLED Association白皮书，2023-02）。②行业目标口径：KLA称99.9999%（six nines）是经济可行且人眼可接受的显示良率。③节拍口径：8K约1亿芯片、±1 µm贴装、经济可行性要求<10-20分钟/台；现有最佳半导体键合机需约11年/台8K电视，pick-and-place需>5个数量级吞吐提升（SID 2025 Digest/Yole）。④成本口径：原型450-2000 µm² die是成本死路，消费级需接近/低于100 µm²；成本高出OLED约3-4倍（手表）到>10倍（电视）；microLED芯片占显示成本>50%（Insight Media 2025面板/芯片厂圆桌）。⑤改善口径：die成本规模化约降5倍、缩小尺寸可降>30倍；转移吞吐预计提升4-6倍；晶圆缺陷率通常>0.5%；PlayNitride称芯片良率85%→95%→99.5%；AUO G4.5线1660×934 mm²于2025推进，目标G6 1500×1850 mm²。翻盘条件：消费级die ≤100 µm²、转移/检测/修复同步降本、成本追平OLED并进入G6级量产。",
+      "urls": [
+        "https://sid.org/Portals/sid/Files/SID-Digest/docs/59-3.pdf",
+        "https://microledassociation.com/wp-content/uploads/2023/02/MicroLED-yields-2023-02.pdf",
+        "https://electronicdesign.com/technologies/industrial/displays/article/21273604/kla-corp-microled-displays-how-to-achieve-a-999999-yield",
+        "https://insightmedia.info/microled-market-is-developing-but-challenges-remain",
+        "https://www.nature.com/articles/s41377-025-02027-1"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "AR/VR近眼路线：Birdbath/自由曲面 vs 光波导（几何/衍射/全息）——赢在形态，卡在光效与制造",
+      "physics": "路线对立：birdbath和自由曲面属于几何/自由空间组合器，靠分束镜+曲面半反镜或自由曲面棱镜折叠光路，效率高、色彩/FOV好、成本中等，但厚度和重量随eye box/FOV增长；光波导靠入耦-全反射扩瞳-出耦把 projector 做进几毫米镜片，得到眼镜形态和大eye box，成为轻量AR智能眼镜主流，但每次耦入/耦出都有衍射/吸收损耗、波长/角度选择性带来彩虹纹与均匀性问题，且纳米结构制造难、成本高。pancake用偏振折叠把长光路压薄、主导紧凑VR/MR，但偏振折叠丢弃大部分光，不适合透明AR。判据：光效(nit/lm)、真实世界透过率、FOV、eye box、厚度、可制造性/良率和成本；产品定位决定胜者而非绝对画质排名。",
+      "numbers": "同行评审综述口径：几何组合器约4200 nit/lm（汇总表约4000），衍射波导典型50-200 nit/lm；几何组合器FOV 50-120°、eye box约8 mm，衍射波导FOV约50°、eye box约15 mm（Xiong et al. 2021, doi 10.1038/s41377-021-00658-8；经VRARWiki条目整理）。工程估算口径：理想50/50 birdbath 48%×48%≈23%光效，80/20分束≈14%；消费透视birdbath实际约10-15%显示光到眼，真实世界透过率≤25-30%；若调到81%透视，显示光仅约0.3%。尺寸口径：Nreal Light birdbath约25 mm厚（分束镜约18 mm），waveguide仅几毫米；Xreal One Pro以11 mm平面棱镜宣传比传统birdbath薄40.9%、FOV 57°、700 nits（厂商口径）。Sci Rep 2024指出HMD为避纱窗效应需>2000 PPI，即单像素≤12.7 µm。量产/实验室分层：birdbath已在Xreal/Rokid等消费显示眼镜量产；光波导在轻量AR智能眼镜成主流但仍受良率/成本和效率限制；自由曲面多见于研究/特定HUD与企业头显，全息波导在成本/研发周期上有优势但鬼影和色彩问题待解。",
+      "urls": [
+        "https://vrarwiki.com/wiki/Birdbath_optics",
+        "https://paloaltooptics.com/blog/waveguide-vs-birdbath-vs-pancake-near-eye-architectures",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11021499/",
+        "https://www.nature.com/articles/s41377-021-00658-8"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "衍射光波导内部：SRG vs VHG vs PVG——效率/均匀性/色彩/可量产性的三角取舍",
+      "physics": "SRG（表面浮雕光栅）用电子束/刻蚀/纳米压印形成周期结构，工艺成熟（HoloLens 2采用），但波导内的角度/波长选择性导致色散、彩虹纹、高阶漏光；VHG/体积全息光栅用光聚合物干涉曝光形成体折射率调制，研发成本低、生产快，透射式HOE会把真实世界光误衍射形成鬼影，反射式可避免；PVG（偏振体光栅）靠液晶各向异性周期变化，对偏振态选择性衍射，理论衍射效率接近100%，适合与偏振LCoS光机配合，但若光源是非偏振microLED，单片PVG优势会缩水。判据是入耦效率、全FOV最小效率、均匀性、色彩均匀性、鬼影/漏光、工艺窗口与大面积复制能力。",
+      "numbers": "实验室设计口径（Nature Light Sci Appl 2024, doi 10.1038/s41377-024-01537-8）：10 mm高折玻璃蓝波段透过~95%，1 mm波导等效传播50 mm后蓝光吸收~23%；SRG全彩波导在Photonics West 2024展示20° FOV 4500 nits/lm（~10%）、30° FOV 1300 nits/lm（~3%）。70°对角FOV、n=2单色：极端角入耦损失>70%、FOV均匀性下降70%；全彩30° FOV：蓝/红入耦损失>73%/>51.5%、色彩均匀性下降~45%。50° FOV（30°H×40°V）PVG设计：W=3 mm、f=5.598 mm、t=0.55 mm、n=1.7、Λx≈407 nm；传统入耦理论下限~36%，一阶半波PVG（倾斜23°、厚0.7 µm）平均衍射效率~80%、最小入耦61.3%（1.7×），均匀性36%→85.9%（2.39×）；二阶方案63.8%/75.3%。PVG面形起伏厚度变化<25 nm。Sci Rep 2024实验口径：HOE三色原始带效率R/G/B≈5.3%/8.4%/26.0%，亚像素2/3/4 µm调平后≈8.4%/8.7%/8.8%；掩模最小线宽1 µm，对准需纳米级/人工精密调整。量产分层：SRG纳米压印最接近成熟量产；VHG光聚合物曝光成本/速度占优但鬼影需抑制；PVG高效率已在实验室/演示验证，大面积制造与应用绑定偏振光源仍在推进。",
+      "urls": [
+        "https://doi.org/10.1038/s41377-024-01537-8",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11021499/",
+        "https://link.springer.com/article/10.1186/s43593-023-00057-z"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "图像传感器：CMOS vs CCD——集成度/功耗/成本压倒纯画质优势；BSI/堆叠式继续放大优势",
+      "physics": "CCD以高画质电荷转移读出长期占据高端，但需多路时钟、外围驱动与较高功耗；CMOS把放大器/ADC/逻辑集成到标准CMOS工艺，元件更少、功耗更低、制造更便宜、数据吞吐更快。胜出判据从“单像素画质”转为“系统成本×功耗×速度×可集成度”；BSI把感光层置于电路背面，缓解FSI噪声与低照度劣势；堆叠式把像素与逻辑分层，进一步提速降功耗。量子点/有机传感器属于新路线但量产判据未覆盖。",
+      "numbers": "iSuppli/Electronics Weekly口径：2010年全球出货17亿颗图像传感器，CCD份额9.8%（2009年11.4%），预测2014年仅4.7%；CMOS 2010年90.2%（2009年88.6%），卡片机CMOS渗透率2009年14%→2011年24%，2014年99% DSLR机型用CMOS。IHS/EDN口径：2011年CMOS占面积传感器92%≈21亿颗（2010年16亿、+31%）；CCD 8%=1.803亿颗（-2%）；预测2015年CMOS 36亿颗/97%、CCD 9520万/3%；手机占CMOS出货79%。BSI口径：2011年BSI成本比FSI约高20%，预计2012年在智能手机/高端功能机渗透56%、2015年92%；Sony 2012宣布堆叠式BSI样品3月起出货。量产分层：CMOS自2010年代初已主导量产；BSI/堆叠式进入手机主流量产；CCD退守工业/部分 specialty。",
+      "urls": [
+        "https://electronicsweekly.com/business/bye-bye-ccd-2010-10/",
+        "https://edn.com/cmos-image-sensors-continue-march-to-dominance-over-ccds/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "红外探测：制冷型InSb/HgCdTe vs 非制冷微测辐射热计——成本/SWaP/即开即用判定主流，性能高端留给定制冷",
+      "physics": "制冷型是光子探测器，InSb/HgCdTe（以及QWIP/T2SL）需77–200 K低温抑制热噪声，NETD更低、响应微秒级、可覆盖MWIR并做远距离/高温目标识别，但杜瓦+斯特林制冷机带来重量、功耗、开机等待、成本和寿命短板。非制冷微测辐射热计（VOx/a-Si）用吸收膜温升引起电阻变化，室温工作、MEMS/晶圆级封装可规模化，成本/SWaP/MTTF占优，但热时间常数毫秒级、NETD较差。判据是NETD、响应/帧率、波段和目标温度、探测距离、SWaP、成本与MTBF；<3 km人体/常温目标偏非制冷，>5 km/高温目标/激光指示偏制冷。",
+      "numbers": "厂商一手对比口径（SensorMicro/IRmodules，需按厂商来源理解）：制冷NETD <10–15或<20 mK vs 非制冷30–80/30–60 mK（高端<20 mK）；响应1–10 µs vs 8–15 ms，热时间常数8–12 ms、慢约10,000倍；制冷1–14 µm/3–5 µm、人体探测5–20 km，非制冷7.5–14 µm、1–4 km；同一口径下20 mK制冷比50 mK非制冷在同口径延长探测距离30–40%。SWaP口径：非制冷400×300 FPA <50 g/<1 W或模块50–150 g/1.5–3 W；制冷杜瓦+制冷机500–2000 g/5–20 W、降温5–15分钟。成本口径：制冷$10,000–$100,000+，非制冷$500–$5,000（1/5–1/20），制冷模块成本5–30倍，制冷机占成本30–50%、MTBF 5000–20000 h，非制冷MTBF 50000–100000 h；晶圆级封装降制造成本60%。市场口径（Mordor Intelligence）：非制冷红外市场2025年47.5亿美元→2026年51.4亿美元→2031年76.3亿美元，CAGR 8.21%，WLP使pixel pitch <12 µm。量产分层：非制冷主导民用/车载/安防量产；制冷保留高端军事、远程与高温识别。",
+      "urls": [
+        "https://infraredcore.com/cases/cooled-vs-uncooled-infrared-detectors-principles-performance-and-cost-comparison-56968.html",
+        "https://www.irmodules.com/information/knowledge/cooled-mwir-vs-uncooled-lwir-a-buyer-s-guide-for-system-integrators/",
+        "https://www.mordorintelligence.com/industry-reports/uncooled-infrared-imaging-market"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "被淘汰路线复盘：PDP vs LCD——尺寸/价格/功耗/产能的规模化判据",
+      "physics": "PDP在40英寸以上曾凭宽视角、快响应和大屏定价占优；LCD借助更低功耗、更轻薄、更小尺寸覆盖能力、持续降价的面板产能和3D/4K时代生态扩张，从CRT替代战起就占据主流。胜负判据不是单项画质，而是单位英寸成本、功耗、产线规模、消费者尺寸迁移速度与供应链投资。PDP曾在2008-2009 Pioneer退出后短暂复苏，因此“2010年已死”是错误叙述；真正的退出是Panasonic 2013年宣布停产等离子面板。",
+      "numbers": "DisplaySearch/CNET口径：Q4 2010全球PDP面板出货同比+9%至创纪录520万片；2010全年1910万片，2008年1510万片、2009年1480万片；Panasonic 2010份额40.7%（2009年43.1%）、出货量+22%、收入+4%，Samsung SDI份额33.7%、出货+37%、收入+15%，LG份额23.3%。Reuters/NBC口径（2010-04-19）：2009年全球电视约2.10亿台，LCD约70%、CRT<25%、PDP仅7%；42英寸LCD面板价格两年下降约40%，PDP在40英寸以上仍有价格/视角/响应优势。TWICE搜索摘要：Panasonic 2013-11确认12月结束等离子面板生产（正文被Cloudflare拦截，单源）。DLP vs 3LCD并未出现一方淘汰：ViewSonic/TI口径显示DLP（1987）和3LCD（1988）各约半个投影机市场，DLP>90%数字影院/IMAX，判据是对比度/响应/密封可靠性 vs 色彩亮度/维护成本。",
+      "urls": [
+        "https://www.cnet.com/home/smart-home/study-plasma-tv-panel-shipments-hit-record-high/",
+        "https://www.nbcnews.com/id/wbna36645703",
+        "https://www.twice.com/news/industry-reacts-panasonics-plasma-exit-49364",
+        "https://viewsonic.com/library/tech/dlp-vs-3lcd-projector-which-one-is-better/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "量子点/有机图像传感器未覆盖：检索两轮到顶，未拿到可核验的量产良率/暗电流/成本数字",
+      "physics": "原计划比较量子点（胶体QD）与有机光电二极管/ organic sensor 相对硅CMOS的带隙可调、弱光/色彩滤波集成优势，以及暗电流、稳定性、读出集成和量产判据。实际检索命中Nature Photonics《photodetector evaluation guidelines》与2025微显示综述，但两次WebFetch均30秒超时；按方法纪律不第三次重试、不臆造数字。",
+      "numbers": "未覆盖：无可核验的量子点/有机传感器量产线良率、暗电流、EQE、响应度-带宽积、封装寿命或成本数字。仅作开放问题保留，不把实验室EQE当作量产判据。",
+      "urls": [
+        "https://www.nature.com/articles/s41566-025-01759-1",
+        "https://www.nature.com/articles/s44287-025-00199-x"
+      ],
+      "status": "未覆盖"
+    },
+    {
+      "name": "QWIP/II类超晶格红外路线未覆盖：未拿到与MCT/InSb可比的量产良率与成本-性能数字",
+      "physics": "原计划比较QWIP与Type-II superlattice相对HgCdTe/InSb在均匀性、暗电流、工作温度和晶圆成本上的取舍；现有红外资料只确认InSb/MCT/T2SL/QWIP均属制冷光子探测路线，未给出T2SL/QWIP的独立判据数字。",
+      "numbers": "未覆盖：无T2SL/QWIP晶圆良率、_ARRAY均匀性、NETD@工作温度、暗电流或单位成本的可核验数字；仅能引用制冷vs非制冷的共性区间，不能用它替代路线内部比较。",
+      "urls": [
+        "https://teledynevisionsolutions.com/learn/learning-center/scientific-imaging/infrared-detector-sensor-materials",
+        "https://www.infraredcore.com/cases/cooled-vs-uncooled-infrared-detectors-principles-performance-and-cost-comparison-56968.html"
+      ],
+      "status": "未覆盖"
+    },
+    {
+      "name": "早期LCoS失败判据未覆盖：Springer章节被客户端挑战拦截，未获得可核验的良率/成本/量产数据",
+      "physics": "原计划比较LCoS与DLP/LCD在反射式光阀、像素间隙、偏振光效、黑白响应和微显示量产上的竞争；现有材料只显示LCoS仍用于部分光机（如Google Glass与AR光机方案），不足以提炼“早期淘汰”判据。",
+      "numbers": "未覆盖：无可核验的早期LCoS面板良率、开口率、响应时间、光效或成本数据；Springer条目返回Client Challenge，MDPI相关页面Access Denied，Nature微显示综述两次超时。",
+      "urls": [
+        "https://link.springer.com/article/10.1007/978-3-319-14346-0_126",
+        "https://www.mdpi.com/2813-446x/3/4/25",
+        "https://vrarwiki.com/wiki/Birdbath_optics"
+      ],
+      "status": "未覆盖"
+    }
+  ],
+  "key_insights": [
+    "显示/成像路线胜负的通用判据不是单项画质，而是“性能上限×良率×节拍×成本×生态规模”的乘积；Micro LED把画质上限推到极致，却败在亿级像素逐颗转移的统计良率和吞吐。",
+    "像素数把良率要求推到反直觉区间：4K>2400万子像素、8K约1亿；99.99999%良率仍有约2个4K坏点，KLA提出99.9999%（six nines）才是显示业可接受良率。",
+    "AR近眼光学的胜者是形态因子：波导以几毫米眼镜形态和大eye box赢 lightweight AR，但50-200 nit/lm vs 几何组合器约4000 nit/lm说明其效率与制造仍是代价；birdbath靠10-15%显示光和25-30%透视上限换取低成本与量产。",
+    "衍射波导内部没有绝对赢家：SRG成熟但色散/漏光，VHG便宜快速但透射鬼影，PVG效率近理论上限但依赖偏振光源和大面积制造；判据是全FOV最小效率与均匀性，而非峰值效率。",
+    "CMOS击败CCD、非制冷红外挤压制冷红外的共同逻辑是CMOS/MEMS工艺集成、功耗与成本规模化；高端性能路线（CCD、制冷 photon detector）不会立即消失，但被推向窄众高价值场景。",
+    "失败路线复盘需防事后叙述：PDP在2010年出货创纪录、2009年仍占全球电视7%，真正退出在2013年；DLP与3LCD则是长期并存，判据是应用匹配而非技术优劣。"
+  ],
+  "open_questions": [
+    "Micro LED何时翻盘：需跟踪消费级die ≤100 µm²、芯片良率/转移良率、≥G4.5/G6量产线与成本追平OLED的时间点；SID 2025称转移吞吐需>5个数量级提升。",
+    "OLED烧屏量化寿命：RTINGS页面meta仅给出近3年、>10000小时、100台电视的加速测试，正文嵌入Vue未抽取逐面板/逐时长烧屏差异，需另取可解析原始数据。",
+    "量子点/有机图像传感器与QWIP/T2SL红外的路线内部判据未覆盖，需换可访问的一手论文/厂商数据补做。",
+    "早期LCoS失败判据未覆盖，需获取Springer章节、MDPI或其他可访问综述正文，验证开口率、光效、良率与量产成本。",
+    "LCD被动矩阵到主动矩阵的量化淘汰判据未在本次两轮检索内取得可核验数字，只保留LCD响应5-25 ms/overdrive ~1 ms与主流化背景。"
+  ]
+}

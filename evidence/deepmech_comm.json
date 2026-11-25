@@ -1,0 +1,102 @@
+{
+  "direction": "光通信容量物理极限",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "单模光纤的非线性香农容量极限（Kerr: SPM/XPM/FWM 与最佳入纤功率）",
+      "physics": "石英光纤的 Kerr 非线性（折射率 n=n0+n2·I）在大功率/长距离下产生自相位调制(SPM)、交叉相位调制(XPM)与四波混频(FWM)，把信号功率波动转成相位/频率噪声并造成 WDM 串扰。线性 AWGN 信道容量 C=W·log2(1+SNR) 随功率单调增长；非线性信道中提高入纤功率在抬高 SNR 的同时也放大非线性失真，容量在某一'最佳入纤功率'处出现峰值后反而下降——Mitra & Stark(2000)把非线性信道等价为乘性噪声线性信道，严格证明容量不再随功率无限增长而存在最大值。Essiambre 等人的'非线性香农容量'估算方法即把非线性传播效应视作噪声，在给定光纤/距离/放大方案下对 SNR 求最优，得到随距离衰减的容量上界(常称 nonlinear Shannon limit)。注意：该'极限'是基于模型的仿真估算(随非线性均衡技术进步可被上移)，并非香农原始意义上的硬上界。",
+      "numbers": "经典口径(Front. Optoelectron. 2016, Carboni & Li，引 Essiambre)：单模光纤在非线性决定的最佳功率处频谱效率约 5 bit/s/Hz，光放大带宽约 10 THz，计入偏振复用 → SMF 非线性香农容量 ≈ 100 Tb/s。Essiambre 等原文 JLT 2010, 28(4):662-701, doi:10.1109/JLT.2009.2039464（被引约 2368 次）；PRL 2008 101:163901 为前身。IEEE Proc. 2022(Winzer 等, doi:10.1109/jproc.2022.3207920)复核:'C+L 波段 SMF、>1000 km 的实验纪录极少超过 100 Tb/s，故 100 Tb/s 常被当作 SMF 容量极限'，并明确该数值'并非硬极限'。OFC 2012 OW3D.1 给出与仿真吻合的解析近似式。[口径：~100 Tb/s 是 10 THz 带宽×5 bit/s/Hz×2 偏振的估算量级，非精确定理值]",
+      "urls": [
+        "https://ieeexplore.ieee.org/document/5420239",
+        "https://doi.org/10.1109/jlt.2009.2039464",
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.101.163901",
+        "https://arxiv.org/abs/physics/0011016",
+        "https://journal.hep.com.cn/foe/EN/10.1007/s12200-016-0607-2",
+        "https://doi.org/10.1109/jproc.2022.3207920",
+        "https://doi.org/10.1364/ofc.2012.ow3d.1"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "线性香农容量 vs 非线性容量：OSNR—容量关系与实际系统差距",
+      "physics": "线性(硬)香农上界 C=W·log2(1+SNR)，双偏振近似 C=2·W·log2(1+SNR)，其中 SNR 由 OSNR 决定。高 SNR 区忽略'1'后，每多传 1 bit/symbol 需 SNR 翻倍(+3 dB)，等效把可传距离减半，这给出频谱效率的物理上限与'SE—距离'权衡。实际相干系统相对线性香农的差距来自：ASE 噪声、非线性失真、DSP/FEC 实现损耗、整形与调制粒度。ISE(Infinera)2024 指出 7 nm CMOS DSP 的嵌入式光引擎距香农极限约 1–2 dB，未来 SE 提升空间仅约 30–40%。关键澄清：会议论文里的'非线性香农极限'其实是仿真得到的非线性代价下界(lower bound)，可被新的非线性补偿技术突破，但任何系统都无法突破真正的线性香农上界；Optica Open 2024 综述认为当前光纤容量上界估计的不确定度约 1.17 bit/s/Hz。",
+      "numbers": "香农公式 C/B=log2(1+SNR)；每 +1 bit/symbol 需 +3 dB SNR=距离减半。C 波段频谱演化 3.2→4.0→4.4→4.8 THz(extended C)。100G 相干相对 10G 直接检测 SE 提升 10 倍；PM-16QAM 8 bit/symbol、PM-64QAM 12 bit/symbol(相对 16QAM 的 8 bit 提升最多 50% SE)。7 nm DSP 引擎距香农 1–2 dB；下一代 5/3 nm 目标 SE 增益 10–20%。光纤容量上界不确定度约 1.17 bit/s/Hz(Optica Open 2024 preprint)。[口径：1–2 dB 为 2024 年商用引擎典型值，随代际变化]",
+      "urls": [
+        "https://www.isemag.com/fttx-optical-networks/article/14305047/in-the-shadow-of-shannon",
+        "https://doi.org/10.1364/opticaopen.24864648.v2",
+        "https://www.photonica.io/glossary/spectral-efficiency",
+        "https://doi.org/10.1109/jlt.2009.2030693",
+        "https://www.mdpi.com/2673-8732/4/1/6"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "空分复用 SDM/少模/多芯光纤突破单模天花板（Pbit/s 级纪录）",
+      "physics": "单模光纤把所有自由度(WDM、偏振复用)用尽后触及 ~100 Tb/s 天花板。SDM 在单根光纤内增加空间维度使容量近似按空间信道数 N 线性(弱耦合 MCF/FMF)扩展：①模分复用 MDM——少模光纤(FMF)中各正交模式承载独立数据，容量∝模式数；②芯复用——多芯光纤(MCF)每纤芯独立传谱。耦合芯(coupled-core)MCF 故意让相邻芯间串扰，靠接收端大规模 MIMO DSP 解耦，并以循环模式置换在每段中继打乱模式以平均化模式色散与模式相关损耗(MDL)，降低 DSP 复杂度。SDM 与 WDM/高阶调制可乘性叠加。",
+      "numbers": "已实现容量纪录(不同口径勿混)：NTT 2024 ECOC post-deadline——12 芯耦合芯 MCF、现场(filed)环境 455 Tb/s@53.5 km、389 Tb/s@1017 km(约当前系统 50 倍)(NTT 官方新闻稿，已深读核对)；NTT 距离纪录：3 模 6300 km(2018)、多芯少模 3000 km(2018)、6 模 3250 km(2020)。TU/e 等 JLT 2026——3.74 Exabit/s·km，C+L 波段 19 芯随机耦合 MCF、8610 km 跨洋级。ECEOC 2026 We1_A2——10.33 Pb/s(GMI 估计)/9.72 Pb/s(FEC 解码后)，775 路 PDM-256QAM、S+C+L 19.25 THz、26.6 km、标准 250 μm 涂覆 6 模 7 芯光纤(摘要单源)。Opt. Express 2026——概率整形 16-QAM 在 7 芯 3 模光纤达 101.47 bit/s/Hz(单源)。[口径：Pbit/s 多为短距 GMI/净速率估计，与商用量产容量非同一口径]",
+      "urls": [
+        "https://group.ntt/en/newsrelease/2024/12/09/241209a.html",
+        "https://www.rd.ntt/e/research/JN202302_20974.html",
+        "https://www.jstage.jst.go.jp/article/transcom/E97.B/7/E97.B_1259/_article",
+        "https://research.tue.nl/files/420843544/3.74_Exabit_scdotkm_Transatlantic-Class_CL-Band_SDM_Transmission_Over_8610_km_in_a_19-Core_Randomly-Coupled_Multicore_Fiber.pdf",
+        "https://opg.optica.org/abstract.cfm?URI=ECEOC-2026-We1_A2",
+        "https://doi.org/10.1364/oe.578370"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "相干通信 + 高阶调制/概率整形：频谱效率物理上限与 FEC 开销",
+      "physics": "相干检测同时恢复光场幅度与相位，使 QPSK(4 bit/symbol)、16QAM(8)、64QAM(12)等高频效格式与 DSP 均衡成为可能；代价是高阶格式星座点间距缩小、所需 OSNR 升高、可达距离缩短。概率整形(PS)用非均匀星座分布让低能量符号更常出现，在给定平均功率下逼近香农信道容量(整形增益约 1 dB 量级)，是近年 SE 提升的主要手段之一；Nyquist 整形、子载波、增强 FEC 与非线性补偿亦贡献。频谱效率的硬上限仍是香农：C/B=log2(1+SNR)，高 SNR 下每 +1 bit/Hz 需 +3 dB SNR。FEC 开销 OH 定义为校验冗余占线路码率比例，净速率=线路速率/(1+OH)：更强 FEC(如 SD-FEC)以更大 OH 换取更低所需 OSNR(净编码增益)，OH 与 SE 直接此消彼长。",
+      "numbers": "PM-QPSK=4、PM-16QAM=8、PM-64QAM=12 bit/symbol；400ZR/800ZR 相干接口。PS 实测：8×506 Gb/s 16QAM 6000 km(PS+HB-CDM, OFC 2018)；1 Tb/s 超级信道 PS 现场试验(JLT 2017)。纪录级 SE：101.47 bit/s/Hz(PS 16-QAM, 7 芯 3 模, Opt. Express 2026，SDM 聚合口径)。PS 整形增益典型约 1 dB 量级；FEC 净速率=线路速率/(1+OH)，现代 SD-FEC 开销视方案约 15–25%(工程典型值，非论文硬数)。[口径：单载波 SE 与 SDM 聚合 SE 不可直接比较]",
+      "urls": [
+        "https://doi.org/10.1364/ofc.2018.m2c.3",
+        "https://doi.org/10.1109/jlt.2017.2664581",
+        "https://doi.org/10.1364/oe.578370",
+        "https://journal.hep.com.cn/foe/EN/10.1007/s12200-018-0833-x",
+        "https://www.nokia.com/bell-labs/publications-and-media/publications/nonlinear-capacity-limit-to-optical-communications/"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "光纤损耗下限 0.14 dB/km 与 EDFA/拉曼放大噪声(ASE→OSNR 地板)",
+      "physics": "石英光纤在 1550 nm 的损耗由瑞利散射(∝1/λ⁴，非晶密度涨落，本征不可消除)主导，叠加红外吸收尾，形成约 0.14 dB/km 的本征下限——再降只能靠新材料(如空芯光纤)而非改进工艺。周期放大补偿损耗，但放大器同时叠加放大的自发辐射(ASE)噪声，其单边功率谱密度 n_sp·hν·(G−1)，噪声系数 NF≥3 dB(量子极限，n_sp→1)。每段 ASE 累积决定接收端 OSNR=P_sig/P_ASE，经 C=W·log2(1+OSNR·…) 直接设定容量地板。EDFA 为集总放大(NF 典型 4–6 dB)；分布式拉曼放大(DRA)沿传输纤芯分布增益，提高信号在链路中的平均功率、降低等效噪声系数(可比集总放大低数 dB)，从而抬高 OSNR、延长距离——代价是泵浦功率、SRS 串扰与更宽的噪声带宽。",
+      "numbers": "石英本征损耗下限 ≈0.14 dB/km@1550 nm(瑞利散射 1/λ⁴)。Sumitomo 等 JLT 2018 'The First 0.14-dB/km Loss Optical Fiber and its Impact on Submarine Transmission'(doi:10.1109/jlt.2018.2796647，被引约 184)首次实现该损耗。放大器噪声系数量子极限 NF≥3 dB；EDFA 典型 NF 4–6 dB；分布式拉曼降低等效 NF 数 dB(定性口径)。Kanamori 综述(JSTAGE E104.B)记录了 1970 年 Corning 20 dB/km 到现今纪录-low 的演进。[口径：NF 具体 dB 随器件/泵浦方案变化]",
+      "urls": [
+        "https://doi.org/10.1109/jlt.2018.2796647",
+        "https://www.ttifiber.com/blog/fiber-basics/what-makes-light-stay-in-the-fiber-core",
+        "https://doi.org/10.1117/12.633153",
+        "https://ieeexplore.ieee.org/document/5756219",
+        "https://doi.org/10.1049/cp.2019.1119",
+        "https://www.jstage.jst.go.jp/article/transcom/E104.B/8/E104.B_2020EBI0002/_pdf"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "C+L / S+C+L 多波段扩展的带宽物理约束与 2026 年进展",
+      "physics": "在 SE 逼近香农天花板后，扩容主路径转为拓宽光学带宽 W（容量∝W×SE）。受 EDFA 增益带宽限制，传统 C 波段约 4.8 THz(extended C)；C+L 用掺铒放大覆盖两波段把频谱翻倍到约 9.6 THz；Super C 6.1 THz、Super C+Super L 12.2 THz、S+C+L 可达约 19–20 THz。物理约束：①SRS 使短波向长波转移功率，C/L 波段功率倾斜需实时控制；②S 波段光纤损耗更高、缺乏高效 EDFA(需 TDFA/拉曼)、且存在气体吸收线；③拉曼放大在超宽带下噪声系数恶化。2026 年进展把 S+C+L 与 SDM、高阶调制叠加，把单纤容量推到 Pbit/s 量级，并探索 1 μm 新窗口。",
+      "numbers": "频谱口径(勿混)：C 波段 3.2→4.8 THz(extended)；C+L≈9.6 THz(翻倍)；Super C 6.1 THz(+27%)；Super C+Super L 12.2 THz；S+C+L 19.25 THz(ECEOC 2026)。Super C+Super L 短距可 >100 Tb/s；300 条长途链路仿真显示 extended C→Super C 平均多 29.5% 容量仅多 27.6% 转发器。2026 实测：ECEOC 2026 S+C+L 19.25 THz 上 10.33 Pb/s(GMI)/9.72 Pb/s(FEC 后)，6 模 7 芯光纤 26.6 km；arXiv:2611.03354(2026-11)首次同时 1 μm+C+L 相干传输(54×125 GBaud PDM-16QAM C+L + 2×15 GBaud PDM-QPSK 1 μm, 50 km)，开辟 1 μm 新窗口；OFEC/IET 指出 S-C-L 100nm+ 系统受 S 波段高损耗、SRS 能量转移、高 NF 制约。[口径：Pb/s 多为短距 GMI 估计]",
+      "urls": [
+        "https://www.isemag.com/fttx-optical-networks/article/14305047/in-the-shadow-of-shannon",
+        "https://opg.optica.org/abstract.cfm?URI=ECEOC-2026-We1_A2",
+        "https://arxiv.org/pdf/2611.03354.pdf",
+        "https://doi.org/10.1049/cp.2019.1119",
+        "https://doi.org/10.1364/opticaopen.24864648.v2",
+        "https://doi.org/10.1109/jproc.2022.3207920"
+      ],
+      "status": "已核验"
+    }
+  ],
+  "key_insights": [
+    "单模光纤的非线性香农天花板约 100 Tb/s：本质是 Kerr 非线性使容量在最佳入纤功率处见顶(功率再高非线性失真反而压低容量)， Mitra-Stark(2000)用乘性噪声模型证明这一最大值存在；100 Tb/s = ~10 THz 放大带宽 × ~5 bit/s/Hz × 2 偏振的量级估算，IEEE Proc. 2022 明确其'非硬极限'。",
+    "必须区分两类'香农极限'：线性香农上界 C=W·log2(1+SNR) 是硬上界；会议常说的'非线性香农极限'是仿真的非线性代价下界，可被非线性补偿技术突破。高 SNR 下每 +1 bit/s/Hz 需 +3 dB SNR≈距离减半，这是 SE—距离权衡的物理根源；商用 7 nm DSP 引擎已距香农约 1–2 dB，SE 提升空间仅 30–40%。",
+    "突破单模天花板的三条正交路径——空间维度(SDM: 少模/多芯, 容量∝空间信道数并可与 WDM 乘性叠加)、带宽维度(C+L→Super C+L→S+C+L, 最高 19.25 THz)、能效维度(概率整形逼近香农、分布式拉曼抬 OSNR)——2026 年把它们叠加已达单纤 10.33 Pb/s(GMI, S+C+L, 6 模 7 芯, 26.6 km)。",
+    "OSNR 是所有极限的'换算枢纽'：光纤 0.14 dB/km 本征损耗地板决定长距必须放大，放大器 ASE(NF≥3 dB 量子极限)设定 OSNR 地板，OSNR 经香农公式直接决定容量；拉曼分布式放大通过降低等效 NF 抬高 OSNR 是延长距离的主要手段。",
+    "所有 Pb/s/Ebit·km 级纪录多为短距、GMI(广义互信息)或 FEC 前的实验室估计口径(FEC 解码后往往下降，如 10.33→9.72 Pb/s)，与商用净容量非同一量纲，横向引用必须标口径。"
+  ],
+  "open_questions": [
+    "真正的光纤容量'硬'上界仍未知：Optica Open 2024 认为当前各估算的不确定度约 1.17 bit/s/Hz；'非线性香农极限'随非线性均衡/机器学习接收机技术进步而上移，100 Tb/s 是否仍是 2026 年有效天花板需持续复核。",
+    "ECEOC 2026 的 10.33 Pb/s、Opt. Express 2026 的 101.47 bit/s/Hz 等最新纪录的正文被 Optica 反爬拦截，数字取自摘要/搜索片段，属单源待逐字复核；FEC 开销 15–25% 为工程典型值而非论文硬数。",
+    "1 μm 波段(arXiv:2611.03354, 2026-11)刚被验证为可行新窗口，其相对 S+C+L 的容量增益、气体吸收约束与放大方案尚无系统对比数据；空芯光纤(损耗可低于 0.14 dB/km 石英地板)能否商用重塑天花板仍待观察。",
+    "耦合芯 MCF 的大规模 MIMO DSP 功耗/复杂度、模式相关损耗随距离累积、以及 SDM 放大器的噪声系数，是 Pbit/s 从实验室走向长距商用仍未被一手数据闭合的工程瓶颈。"
+  ]
+}

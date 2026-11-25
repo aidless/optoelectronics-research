@@ -1,0 +1,98 @@
+{
+  "direction": "光伏电池技术路线之争",
+  "generated_at": "2026-11-24",
+  "mechanisms": [
+    {
+      "name": "晶硅 vs CdTe/CIGS/非晶硅：成本、效率与产业链的路线筛选",
+      "physics": "胜负判据不是单结极限效率，而是同一场址、同一电价与可靠性约束下的度电成本（LCOE）= 初始投资÷全寿命发电量 + O&M/融资等，并受供应链规模、设备折旧、良率、银行可融资性与政策本地化约束。晶硅凭可共享的半导体级硅料—硅片—电池—组件生态、快速学习曲线、成熟设备与大规模制造取得系统成本优势；CdTe/CIGS/非晶硅虽省硅料、可低温沉积，但产业规模、设备生态和客户认证较小。CdTe没有在通用市场翻盘，而是凭连续大面积镀膜、低材料用量、良好高温/光谱响应、低衰减及美国本地制造，守住炎热、高直射辐照的大型地面电站。First Solar Series 7的商业口径明确显示：组件最高19.7%，但核心卖点是30年线性质保、年衰减0.3%、温度/光谱/遮阴响应、安装BOS与美国本土制造；因此其活命逻辑是系统成本与政策市场适配，而不是效率超过晶硅。判据应表述为：在相同场址DNI/GHI、温度、追踪器与电价结构下，谁把组件价差转化为更低LCOE，并满足25–30年可融资寿命。",
+      "numbers": "OECD 2022供应链报告：晶硅组件占全球产量>95%，CdTe占余下主要部分（产量口径，非2026市占率）；GMInsights估计2025晶硅占组件市场收入90.5%（收入口径，商业市调，非出货量）。First Solar Series 7 TR1：525–550 W、最高19.7%组件效率、30年线性质保、0.3%/年质保衰减（厂商产品口径，非实验室电池纪录）。NLR/DOE 2026 CdTe Core报告：23.1%为认证CdTe电池纪录，并明确CdTe当前是成本领先的薄膜技术、可与规模化硅直接竞争（实验室小电池认证口径，不能等同于量产组件效率）；报告亦指出CdTe主要损失来自低光电压与填充因子，平均光电压提升>100 mV。",
+      "urls": [
+        "https://oecd.org/content/dam/oecd/en/publications/reports/2022/08/special-report-on-solar-pv-global-supply-chains_f884fe79/9e8b0121-en.pdf",
+        "https://gminsights.com/industry-analysis/solar-pv-module-market",
+        "https://firstsolar.com/Products/Series-7",
+        "https://osti.gov/biblio/3025381",
+        "https://cell.com/joule/fulltext/S2542-4351(25)00416-7"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "PERC vs TOPCon vs HJT vs BC：效率溢价能否覆盖改线成本",
+      "physics": "PERC是存量基准，成本最低但提效空间趋窄；TOPCon以隧穿氧化层+掺杂多晶硅钝化接触，在效率、成本、设备兼容与量产良率间取得当前最佳折中，因而成为主流；HJT用非晶硅异质结和本征薄层获得高钝化、低温度系数与双面友好，但低温工艺、靶材/银浆与设备投资构成成本门槛；BC把正负电极全部移到背面，消除正面栅线遮阴，可叠加在TOPCon或HJT上（TBC/HBC/HTBC），获得更高效率，却增加双极性图形化、激光/对准、背面钝化与良率复杂度。因此路线胜负判据是每瓦有效成本：银耗/铜耗、设备改造CAPEX、良率与碎片率、双面率、高温衰减、可追溯质保，以及屋顶等高溢价市场能否消化BC溢价。当前不是BC一次性取代TOPCon，而是TOPCon继续主导、BC从存量TOPCon线升级并共存。",
+      "numbers": "ITRPV 17版（TaiyangNews 2026-09转述）：2025晶硅电池生产中TOPCon约75%、PERC约14%、HJT约5%；这是2025实际产量结构，不能写成2026产能份额。TBC约5%→2036约23%，HBC约0.1%→2036约5%（预测产量份额）。2026量产组件效率预测：TOPCon 23.9%、HJT 23.9%、BC 24.3%；2036分别25.2%、25.3%、25.6%（ITRPV预测口径）。InfoLink/pv magazine 2025-07：xBC产能2025年底预计>80 GW，出货2023约7 GW→2024约23 GW→2025预计35–40 GW（行业预测）；主流TBC电池成本仍比TOPCon高约CNY0.07/W，采用钢网与复合 ribbon 后可缩小至税前电池+组件高CNY0.03/W，而TBC组件溢价约CNY0.05–0.07/W（作者咨询测算，非统一成交价）。2026公开精确产能份额未取得同口径可信表，已用2025实际产量+2026效率预测替代并明确标注。",
+      "urls": [
+        "https://taiyangnews.info/technology/itrpv-expects-topcon-to-lead-as-bc-and-tandem-technologies-expand",
+        "https://jrsttechnology.com/knowledge/back-contact-bc-solar-cells-india",
+        "https://pv-magazine-india.com/2025/07/07/bringing-back-contact-to-the-foreground",
+        "https://infolink-group.com/energy-article/solar-topic-solar-back-contact-technology-industry-progress-outlook--xbc"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "单结钙钛矿 vs 钙钛矿-硅叠层：效率上限与可运营寿命的竞赛",
+      "physics": "单结钙钛矿材料可调、带隙可匹配，低成本溶液/蒸发沉积潜力大，适合室内光伏、柔性与特定BIPV；但单结理论效率低于叠层，且户外组件寿命、铅密封、均匀性和耐候仍是门槛。钙钛矿-硅叠层让宽带隙钙钛矿吸收蓝绿光、硅吸收红光，突破单结硅的Shockley–Queisser限制，是最有望规模翻盘的下一代路线；其死穴不是再提高小电池纪录，而是宽带隙钙钛矿在光/热/湿下的卤化物相分离、离子迁移与界面反应，铅离子的长期泄漏风险，以及平方米级薄膜的成分/厚度均匀性、针孔、良率和封装热管理。胜负判据是：在≥1 m²组件、标准IEC 61215/61730及现场25–30年等效发电条件下，稳定效率、铅浸出、湿热/紫外/热循环通过率、可量产良率和每瓦LCOE同时成立。实验室冠军效率只能证明物理上限，不能证明产业胜负。",
+      "numbers": "Solar Cell Efficiency Tables v67（2026-01）与2025–26综述：单结钙钛矿已超过27%、钙钛矿/硅叠层超过34%（实验室认证/公开纪录口径，面积与认证细节须回到效率表，不可与量产组件混用）。2026年综述《Key Challenges for Commercializing Perovskite–Silicon Tandem Solar Cells》称认证PCE接近约35%，但正文被付费墙阻挡，仅检索摘要级证据，故本项稳定性量化进展标单源未验证。稳定性研究显示相分离由宽带隙混合卤化物中的PbI2晶界偏析等驱动，并提出晶界工程抑制；这些是2025–26研究进展，尚无可核验的统一25–30年户外寿命数字。未查到可信的2026量产良率、$/W与铅浸出同口径公开数据集。",
+      "urls": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/pip.70068",
+        "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202502696",
+        "https://onlinelibrary.wiley.com/doi/10.1002/cey2.70241?af=R",
+        "https://nature.com/articles/s41560-026-02161-z",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11137052/"
+      ],
+      "status": "单源未验证"
+    },
+    {
+      "name": "聚光光伏 CPV vs 常规平板：集中式与分布式的系统级兴衰",
+      "physics": "CPV用透镜/反射镜把高DNI阳光聚到少量III-V多结电池，理论效率高、半导体用量少，看似能绕开硅片成本；但经济成立要求高直射辐照、近乎无云、精密双轴跟踪、散热与光学清洁，系统机械复杂度和运维成本高。分布式屋顶面积小、天空散射光占比高、结构载荷与维护约束强，CPV几乎没有优势；集中式地面电站在高DNI地区一度有机会。退场根因是硅组件价格和学习曲线下降太快，CPV尚未把高效率转成足够低的LCOE，领先厂商又在2015年退出，融资/质保/供应链随之收缩。判据：只能在DNI高且稳定、土地与维护条件合适的大型集中式项目中，以全系统效率、追踪器CAPEX/O&M、光学污染、清洗、失配/热点与25年可用率比较LCOE；不能拿CPV电池43%对硅组件20%作直接胜负判断。",
+      "numbers": "NREL/Fraunhofer ISE 2016状态报告（optics.org转述并链接原始报告）：2012全球CPV新增约120 MW；2015新增约17 MW，而全球常规PV新增约60 GW；2015累计CPV约360 MW。2015 Soitec与Suncore退出，报告称行业陷入严重危机。Fraunhofer ISE 2016四结CPV mini-module认证/报告效率43.4%，但同期商业部署仍崩塌（实验室mini-module口径，非系统效率）。Nature Energy 2016综述明确高精度机械追踪器大型、笨重、建造维护昂贵，排除住宅市场。作为对照，CPV南非Touwsrivier电站44 MW，仅占其累计市场的重要单一项目。",
+      "urls": [
+        "https://optics.org/news/7/2/35",
+        "https://www.ise.fraunhofer.de/en/publications/veroeffentlichungen-pdf-dateien-en/studien-und-konzeptpapiere/current-status-of-concentrator-photovoltaic-cpv-technology.pdf",
+        "https://nature.com/articles/nenergy201618",
+        "https://serdp-estcp.mil/projects/details/95ef08f7-73f3-4554-9693-0f0be9b5ce51"
+      ],
+      "status": "已核验"
+    },
+    {
+      "name": "第三代路线：热载流子、多激子、中间带与量子点谁最接近实用",
+      "physics": "四者都在试图突破单结热化损失或Shockley–Queisser限制：热载流子要在载流子冷却前选择性提取并维持低熵；多激子（MEG/carrier multiplication）要把一个高能光子变成多个电子-空穴对且实际收集倍增电流；中间带要在主带隙内引入受控能带而不引入致命非辐射复合；量子点通过尺寸调带隙、强吸收和溶液加工提供平台，并可能展示MEG。当前最接近材料/器件验证与产业接口的是量子点，尤其铅卤钙钛矿量子点，因为其兼具可溶液加工、缺陷容忍和与钙钛矿工艺相近的稳定性/封装路径；但它仍不是已商业胜出的路线。其余三项最大瓶颈是：热载流子冷却时间ps量级、选择性接触与冷载流子注入难以兼顾；MEG的外量子效率>100%必须在完整器件电流中兑现而非瞬态光谱；中间带的电学占据、复合与光电流分离验证极难。最终判据是在AM1.5G标准光谱、稳定最大功率点与可重复大面积器件上实现超SQ认证效率，同时给出寿命、良率和$/W，而非仅材料级超快光谱。",
+      "numbers": "2025 RSC综述《Moving beyond the Shockley–Queisser limit》把tandem、hot carrier extraction、carrier multiplication、intermediate band absorption、photon upconversion并列为突破路径（综述层级，未提供统一器件纪录）。2026量子点综述给出传统PbS/PbSe体系效率约18.1%量级，并指出钙钛矿量子点是新方向；这些数字来自综述/媒体转述，缺少同面积、同AM1.5G、同认证机构的2026横向纪录表，故不据此排名。热载流子理论需ps级提取、MEG需证明净外量子效率/电流增益、中间带需同时证明子带光电流与 Voc 增益；本项未取得四项在2026统一测试条件下的可直接比较硬数字，明确保留为研究判据而非商用排名。",
+      "urls": [
+        "https://pubs.rsc.org/en/content/articlepdf/2025/el/d5el00053j",
+        "https://mdpi.com/2072-666x/17/4/474",
+        "https://pubs.acs.org/doi/full/10.1021/acsenergylett.3c01983",
+        "https://europepmc.org/article/MED/42076250"
+      ],
+      "status": "未覆盖"
+    },
+    {
+      "name": "2000s泡沫与2010s过剩：政策、成本与技术路线如何共同筛选赢家",
+      "physics": "2000年代欧洲固定上网电价创造确定性需求，硅料一度短缺、价格暴涨，资本于是涌向CdTe/CIGS/非晶硅等‘去硅化’路线，也在硅料端扩张多晶硅产能；随后金融危机、欧洲补贴退坡与硅料产能释放使价格暴跌，技术风险与财务杠杆共同出清。2010年代中国凭借规模化、垂直整合、设备国产化、低融资成本与制造学习曲线，把晶硅组件成本快速压低，PERC→TOPCon迭代进一步摊薄既有硅产业链沉没成本；高补贴/高固定电价曾短期保护高成本地区产能，但需求国削减补贴后，没有成本曲线和资产负债表优势的路线/厂商首先破产。历史结论：政策决定需求窗口与初始资本流向，成本曲线和制造生态决定谁能穿越过剩，技术迭代往往沿既有设备/供应链兼容路径发生，而不是在实验室里‘最高效者胜’。",
+      "numbers": "2008年太阳能级多晶硅现货峰值约US$475/kg（pv magazine/Bernreuter历史市场回顾口径）；随后崩跌并在2010年代推动替代路线失去硅料成本理由。2011年Eurozone危机后欧洲太阳能补贴收缩，CSIS 2026报告指出2009–10中国厂商以债务快速扩产、约90%产出出口，2011需求冲击引发中国第一轮大规模洗牌（历史分析口径）。OECD 2022报告给出晶硅>95%全球产量，作为后来供应链筛选结果；ITRPV 17版给出2025全球电池产能约1.26 TW、全球组件出货约706 GW、安装约668 GW、均价约US$0.09/W（行业统计/预测口径，显示产能约为新增安装的两倍）。这些价格/份额跨年份，不构成因果效应估计。",
+      "urls": [
+        "https://pv-magazine.com/2021/10/30/the-weekend-read-whats-next-for-polysilicon",
+        "https://bernreuter.com/files/data/newsroom/pdf-articles/magazine-reports/2024-05-pv-magazine-D%C3%A9j%C3%A0-vu-on-the-polysilicon-market.pdf",
+        "https://bloomberg.com/news/articles/2011-11-10/solar-costs-drop-so-suddenly-it-hurts-",
+        "https://csis-website-prod.s3.amazonaws.com/s3fs-public/2026-03/260312_Davidson_China_Solar_0.pdf",
+        "https://oecd.org/content/dam/oecd/en/publications/reports/2022/08/special-report-on-solar-pv-global-supply-chains_f884fe79/9e8b0121-en.pdf",
+        "https://thebatterymagazine.com/future-of-solar-module-topcon-hjt-and-perovskite"
+      ],
+      "status": "单源未验证"
+    }
+  ],
+  "key_insights": [
+    "光伏路线竞争的主判据是场址化LCOE与25–30年可融资寿命，不是裸电池冠军效率；效率只有转化为稳定量产良率、低CAPEX/O&M和更低系统成本时才改变产业份额。",
+    "晶硅胜出靠的是产业链共同学习曲线与制造生态，不是硅材料在物理上不可替代；当硅料暴涨时薄膜得到窗口，硅料崩跌后窗口关闭，说明成本冲击会重排路线。",
+    "First Solar的CdTe是‘利基胜出’：在美国大型地面电站，用低衰减、高温表现、本地制造与政策/银行可融资性抵消效率低于晶硅，而不是在通用组件市场效率反超。",
+    "2025–26硅电池内部，TOPCon是成本-效率-设备兼容的当前主场，BC不是简单替代而是可叠加架构；BC能否扩份额取决于背面图形化良率、贵金属降耗和屋顶溢价。",
+    "最有望翻盘的下一代是钙钛矿-硅叠层；它的门槛已从‘小面积效率’转为‘大面积稳定效率+铅阻隔+25年寿命+良率+每瓦成本’，任何单指标破纪录都不构成产业化判决。",
+    "CPV与多数第三代概念的共同教训是：电池物理效率提升若不能覆盖新增光学、机械、热管理和运维复杂度，就不会赢；系统级简化往往比峰值效率更具产业决定性。",
+    "2000s与2010s洗牌均由政策需求脉冲、原料/产能周期和融资杠杆共同触发；能够活下的企业不一定拥有当时最高实验室效率，但一定拥有最低可持续成本、最大规模与最强供应链。"
+  ],
+  "open_questions": [
+    "2026年PERC/TOPCon/HJT/TBC/HBC的‘名义产能、实际投产、有效产量、出货份额’缺少同口径公开表；当前只能以ITRPV的2025实际产量结构和2026量产效率预测替代，需取得VDMA/ITRPV原表后补足。",
+    "钙钛矿-硅叠层尚缺可核验的2026量产组件效率分布、良率、$/W、铅浸出与IEC/现场25年等效数据；实验室约35%纪录不能外推量产。",
+    "热载流子、MEG、中间带与量子点缺少同面积、同光谱、同稳态MPP与同认证机构的最新器件效率对照，故‘谁最接近实用’目前只能做工程成熟度判断，不能给硬排名。",
+    "First Solar CdTe的成本优势来自制造、衰减、BOS、税收抵免与本地化的组合；公开资料没有可跨地区直接比较的统一$/W或LCOE底数，需用具体电站项目敏感性分析验证。",
+    "CPV在高DNI地区是否存在利基复兴，需要2026年在运项目LCOE、追踪器故障率、清洗/运维与组件价格数据；本项只核验了2012–2015退场机制。"
+  ]
+}
